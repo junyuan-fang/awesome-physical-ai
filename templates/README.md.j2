@@ -10,6 +10,21 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ---
 
+## 🆕 Recent additions (last 30 days)
+
+{% set recent = papers | selectattr("date", "ge", recent_cutoff) | sort(attribute="date", reverse=true) | list %}
+{% if recent %}
+{% for p in recent[:10] -%}
+- {{ p.highlight | default("") }} **{{ p.title }}** ({{ p.date }}) · *{{ p.authors }}* · [arXiv]({{ p.links.arxiv }}){% if p.links.project %} · [project]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
+{% endfor %}
+{% else %}
+*No recent additions — see full sections below.*
+{% endif %}
+
+> 🤖 *This section is auto-populated from papers dated within the last 30 days.*
+
+---
+
 ## Contents
 
 {% for cat in categories %}- [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }})

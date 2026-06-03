@@ -1,36 +1,303 @@
-# Papers source of truth
-# Each entry will be rendered into the README under its category.
+# Papers source of truth — extracted from xinmiao's daily paper aggregation pipeline
+# Lead with 2026 papers; landmark older works tagged 📜 (classic).
 # Format:
-#   - arxiv_id: "YYMM.NNNNN"            (use canonical arxiv id, or skip if no arxiv)
+#   - arxiv_id: "YYMM.NNNNN"
 #     title: "Paper Title"
-#     authors: "Author1 et al."          (short form)
-#     date: "YYYY-MM"                    (submission month)
+#     authors: "Author1 et al."
+#     date: "YYYY-MM"
 #     category: vla                      (must match an id in categories.yaml)
 #     tags: [foundation-model, manipulation]
 #     abstract_short: "One-sentence summary."
 #     links:
 #       arxiv: "https://arxiv.org/abs/XXXX.XXXXX"
-#       project: ""                      (optional)
-#       code: ""                          (optional)
-#       demo: ""                          (optional)
-#     highlight: "🔥"                     (🔥 must-read / 👀 worth-knowing / blank)
+#       project: ""
+#       code: ""
+#       demo: ""
+#     highlight: "🔥"                     (🔥 must-read / 👀 worth-knowing / 📜 classic)
 #     added: "YYYY-MM-DD"
-#     source: "seed"                     (seed / dailypaper / pr / manual)
+#     source: "seed | dailypaper | pr | manual"
 
 papers:
-  # ============== VLA ==============
+  # ============== 🔥 June 2026 ==============
+  - arxiv_id: "2606.02486"
+    title: "AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment"
+    authors: "Anonymous (under review)"
+    date: "2026-06"
+    category: vla
+    tags: [wrapper, dynamic-env, vla]
+    abstract_short: "VLA wrapper handling dynamic objects (projectile-catch 19/30 vs baselines 0/30)."
+    links:
+      arxiv: "https://arxiv.org/abs/2606.02486"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== 🔥 May 2026 ==============
+  - arxiv_id: "2605.30834"
+    title: "Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: vla
+    tags: [failure-detection, conformal, runtime-monitor]
+    abstract_short: "Trajectory-level supervision → step-level failure localization; SOTA multi-task pre-deploy monitor."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.30834"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.30280"
+    title: "Qwen-VLA: Alibaba's Embodied Foundation Model"
+    authors: "Alibaba"
+    date: "2026-05"
+    category: vla
+    tags: [foundation-model, alibaba, qwen]
+    abstract_short: "97.9% on LIBERO; 76.9% ALOHA real-world OOD — Alibaba enters VLA foundation model competition with NVIDIA / Google / Physical Intelligence."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.30280"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.28549"
+    title: "SPRINT: Spectral-Priors Reinforced Humanoid Sprinting"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: locomotion
+    tags: [humanoid, sprint, frequency-domain]
+    abstract_short: "Humanoid sprint at 6 m/s — public-data first-tier (vs Optimus Gen 3 1.2 m/s, Figure 03 ~2 m/s)."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.28549"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.26820"
+    title: "Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: vla
+    tags: [continual-learning, replay, real-world]
+    abstract_short: "First empirical study on continual VLA learning in the wild — design factors for experience replay."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.26820"
+    highlight: "👀"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.22812"
+    title: "GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models"
+    authors: "Xuan et al."
+    date: "2026-05"
+    category: vla
+    tags: [gesture, hri, grounding]
+    abstract_short: "Hard-coded pointing-gesture grounding inside VLA — retail / household 'point at it' interaction."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.22812"
+      project: "https://gwxuan.github.io/GesVLA/"
+    highlight: "👀"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.22272"
+    title: "Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: sim2real
+    tags: [hoi, video-prior, zero-shot]
+    abstract_short: "Use video generation as latent prior for human-object interaction; zero-shot mocap deployment, geometry-free."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.22272"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.22183"
+    title: "AVP: Action-Visual Primitives for Decoupled VLA Architecture"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: vla
+    tags: [pi0.5, decoupled-vla, primitives]
+    abstract_short: "+27.61% over π0.5 — visual primitives as interface between VLM and action policy; end-to-end trainable."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.22183"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.21800"
+    title: "stable-worldmodel: A Reproducibility-First Infrastructure for World Models"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: foundation-models
+    tags: [world-model, infrastructure, lerobot, benchmark]
+    abstract_short: "Clean baselines + planning solver + LeRobot-native datasets — the 'HuggingFace moment' for world models."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.21800"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.21572"
+    title: "PhysX-Omni: Simulation-Ready 3D Generation for Robotics"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: scene
+    tags: [sim-ready, 3d-generation, vlm]
+    abstract_short: "Unified rigid/deformable/articulated sim-ready 3D gen via VLM-tailored geometry; releases PhysXVerse dataset + PhysX-Bench (6 dims)."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.21572"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.21133"
+    title: "Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: vla
+    tags: [hierarchical, brain-cerebellum, no-task-data]
+    abstract_short: "Two-tier 'brain + cerebellum' alternative to monolithic VLA — no task-specific real-world data required for deployment."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.21133"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.15157"
+    title: "HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: manipulation
+    tags: [dexterous, interactive-il, teleop]
+    abstract_short: "−99.8% jitter, −87.5% grasp failure; corrections boost downstream policy by +19% on long-horizon tasks."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.15157"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.14712"
+    title: "IntentVLA: History-Conditioned Action Prediction for VLA"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: vla
+    tags: [multimodal-imitation, intent, rollout-stability]
+    abstract_short: "Addresses multimodal nature of imitation data — beats strong VLA baselines on AliasBench / SimplerEnv / LIBERO / RoboCasa."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.14712"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.13925"
+    title: "Dexterous Hand Research: A Comprehensive Survey (2026)"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: manipulation
+    tags: [survey, dexterous, tactile]
+    abstract_short: "Most comprehensive dexterous-hand survey to date — methods, datasets, evaluation; positions tactile as the next-stage key modality."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.13925"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.12334"
+    title: "RAW-Dream: Reward-Aligned World Model Without Task Data"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: foundation-models
+    tags: [world-model, joint-wam, vlm-reward]
+    abstract_short: "Joint WAM: off-the-shelf VLM as reward; zero-shot task adaptation via imagined trajectories; dual-noise verification."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.12334"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2605.12090"
+    title: "World Action Model Survey: Cascaded vs Joint Taxonomy"
+    authors: "Anonymous"
+    date: "2026-05"
+    category: foundation-models
+    tags: [survey, world-model, wam-taxonomy]
+    abstract_short: "Unifies NVIDIA Cosmos / DreamZero / LeVERB / PhysiFlow / HEX in a Cascaded vs Joint framework — the WAM entry-point reference."
+    links:
+      arxiv: "https://arxiv.org/abs/2605.12090"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== 🔥 Early 2026 ==============
+  - arxiv_id: "2604.07993"
+    title: "HEX: Humanoid Embodied World Model"
+    authors: "Anonymous"
+    date: "2026-04"
+    category: foundation-models
+    tags: [world-model, humanoid]
+    abstract_short: "Humanoid-centric world model in the WAM family — see WAM survey 2605.12090 for taxonomy placement."
+    links:
+      arxiv: "https://arxiv.org/abs/2604.07993"
+    highlight: "👀"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2601.12993"
+    title: "Scaling Embodied Pretraining: 35K Hours, 30 Robot Embodiments"
+    authors: "Anonymous"
+    date: "2026-01"
+    category: vla
+    tags: [scale, multi-embodiment, pretraining]
+    abstract_short: "First VLA training at LLM scale — 35,000+ hours of multimodal data, 30 embodiments jointly pretrained."
+    links:
+      arxiv: "https://arxiv.org/abs/2601.12993"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== 📜 Landmarks (pre-2026 reference works) ==============
+  - arxiv_id: "2501.03575"
+    title: "Cosmos World Foundation Model Platform for Physical AI"
+    authors: "NVIDIA"
+    date: "2025-01"
+    category: foundation-models
+    tags: [world-model, nvidia, physical-ai]
+    abstract_short: "NVIDIA's open world model platform for physical AI training data generation."
+    links:
+      arxiv: "https://arxiv.org/abs/2501.03575"
+      project: "https://www.nvidia.com/en-us/ai/cosmos/"
+      code: "https://github.com/NVIDIA/Cosmos"
+    highlight: "📜"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2503.14734"
+    title: "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
+    authors: "NVIDIA"
+    date: "2025-03"
+    category: vla
+    tags: [foundation-model, humanoid, nvidia]
+    abstract_short: "NVIDIA's open foundation model for generalist humanoid manipulation."
+    links:
+      arxiv: "https://arxiv.org/abs/2503.14734"
+      project: "https://developer.nvidia.com/isaac/gr00t"
+    highlight: "📜"
+    added: "2026-06-03"
+    source: seed
+
   - arxiv_id: "2406.09246"
     title: "OpenVLA: An Open-Source Vision-Language-Action Model"
     authors: "Kim et al."
     date: "2024-06"
     category: vla
     tags: [foundation-model, open-source]
-    abstract_short: "7B-parameter open VLA finetuned from Llama-2, trained on Open X-Embodiment."
+    abstract_short: "7B open VLA finetuned from Llama-2, trained on Open X-Embodiment — community baseline."
     links:
       arxiv: "https://arxiv.org/abs/2406.09246"
       project: "https://openvla.github.io"
       code: "https://github.com/openvla/openvla"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed
 
@@ -45,164 +312,80 @@ papers:
       arxiv: "https://arxiv.org/abs/2410.07864"
       project: "https://rdt-robotics.github.io/rdt-robotics/"
       code: "https://github.com/thu-ml/RoboticsDiffusionTransformer"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed
 
-  - arxiv_id: "2503.14734"
-    title: "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
-    authors: "NVIDIA"
-    date: "2025-03"
-    category: vla
-    tags: [foundation-model, humanoid, nvidia]
-    abstract_short: "NVIDIA's open foundation model for generalist humanoid manipulation."
-    links:
-      arxiv: "https://arxiv.org/abs/2503.14734"
-      project: "https://developer.nvidia.com/isaac/gr00t"
-    highlight: "🔥"
-    added: "2026-06-03"
-    source: seed
-
-  # ============== World Models ==============
-  - arxiv_id: "2402.15391"
-    title: "Genie: Generative Interactive Environments"
-    authors: "DeepMind"
-    date: "2024-02"
-    category: foundation-models
-    tags: [world-model, interactive, deepmind]
-    abstract_short: "Foundation world model trained on internet videos, generates controllable 2D environments."
-    links:
-      arxiv: "https://arxiv.org/abs/2402.15391"
-      project: "https://sites.google.com/view/genie-2024/home"
-    highlight: "🔥"
-    added: "2026-06-03"
-    source: seed
-
-  - arxiv_id: "2501.03575"
-    title: "Cosmos World Foundation Model Platform for Physical AI"
-    authors: "NVIDIA"
-    date: "2025-01"
-    category: foundation-models
-    tags: [world-model, nvidia, physical-ai]
-    abstract_short: "NVIDIA's open world model platform for physical AI training data generation."
-    links:
-      arxiv: "https://arxiv.org/abs/2501.03575"
-      project: "https://www.nvidia.com/en-us/ai/cosmos/"
-      code: "https://github.com/NVIDIA/Cosmos"
-    highlight: "🔥"
-    added: "2026-06-03"
-    source: seed
-
-  # ============== Manipulation ==============
   - arxiv_id: "2410.13126"
     title: "ALOHA Unleashed: A Simple Recipe for Robot Dexterity"
     authors: "Zhao et al."
     date: "2024-10"
     category: manipulation
     tags: [bimanual, diffusion, dexterous]
-    abstract_short: "Diffusion policy + large-scale teleop data for dexterous bimanual manipulation."
+    abstract_short: "Diffusion policy + large-scale teleop data for dexterous bimanual manipulation — community baseline."
     links:
       arxiv: "https://arxiv.org/abs/2410.13126"
       project: "https://aloha-unleashed.github.io"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed
 
-  - arxiv_id: "2406.10454"
-    title: "HumanPlus: Humanoid Shadowing and Imitation from Humans"
-    authors: "Fu et al."
-    date: "2024-06"
-    category: manipulation
-    tags: [humanoid, imitation, teleop]
-    abstract_short: "End-to-end shadowing of human motion for full-body humanoid skills."
-    links:
-      arxiv: "https://arxiv.org/abs/2406.10454"
-      project: "https://humanoid-ai.github.io"
-      code: "https://github.com/MarkFzp/humanplus"
-    highlight: "🔥"
-    added: "2026-06-03"
-    source: seed
-
-  # ============== Teleoperation ==============
   - arxiv_id: "2407.01512"
     title: "OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback"
     authors: "Cheng et al."
     date: "2024-07"
     category: teleoperation
     tags: [vr, stereo, open-source]
-    abstract_short: "Open-source VR teleoperation system with binocular stereo feedback."
+    abstract_short: "Open-source VR teleoperation system with binocular stereo feedback — community reference."
     links:
       arxiv: "https://arxiv.org/abs/2407.01512"
       project: "https://robot-tv.github.io"
       code: "https://github.com/OpenTeleVision/TeleVision"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed
 
   - arxiv_id: "2401.02117"
-    title: "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation"
+    title: "Mobile ALOHA: Learning Bimanual Mobile Manipulation"
     authors: "Fu et al."
     date: "2024-01"
     category: teleoperation
     tags: [mobile, bimanual, low-cost]
-    abstract_short: "$32k mobile teleop platform that learns dexterous bimanual mobile tasks."
+    abstract_short: "$32k mobile teleop platform — community baseline for whole-body teleop."
     links:
       arxiv: "https://arxiv.org/abs/2401.02117"
       project: "https://mobile-aloha.github.io"
       code: "https://github.com/MarkFzp/mobile-aloha"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed
 
-  # ============== 3D Scene Understanding ==============
   - arxiv_id: "2308.04079"
     title: "3D Gaussian Splatting for Real-Time Radiance Field Rendering"
     authors: "Kerbl et al."
     date: "2023-08"
     category: scene
     tags: [gaussian-splatting, novel-view-synthesis]
-    abstract_short: "Real-time, high-quality radiance field rendering via differentiable Gaussian splatting."
+    abstract_short: "Real-time, high-quality radiance field rendering — now ubiquitous in 3D scene understanding pipelines."
     links:
       arxiv: "https://arxiv.org/abs/2308.04079"
       project: "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/"
       code: "https://github.com/graphdeco-inria/gaussian-splatting"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed
 
-  # TODO(maintainer): add NVSMask3D once arXiv link is verified
-  # - title: "NVSMask3D: ..."
-  #   authors: "Junyuan Fang et al."
-  #   ...
-
-  # ============== Sim-to-Real ==============
-  - arxiv_id: "2310.12931"
-    title: "Eureka: Human-Level Reward Design via Coding Large Language Models"
-    authors: "Ma et al."
-    date: "2023-10"
-    category: sim2real
-    tags: [reward-design, llm, isaac]
-    abstract_short: "LLM-generated reward functions trained in Isaac Gym, deployed to real robots."
-    links:
-      arxiv: "https://arxiv.org/abs/2310.12931"
-      project: "https://eureka-research.github.io"
-      code: "https://github.com/eureka-research/Eureka"
-    highlight: "👀"
-    added: "2026-06-03"
-    source: seed
-
-  # ============== RL & Imitation ==============
   - arxiv_id: "2303.04137"
     title: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
     authors: "Chi et al."
     date: "2023-03"
     category: rl-il
     tags: [diffusion, imitation, visuomotor]
-    abstract_short: "Action-space diffusion for robust visuomotor policies — now a default baseline."
+    abstract_short: "Action-space diffusion — now the default visuomotor policy baseline."
     links:
       arxiv: "https://arxiv.org/abs/2303.04137"
       project: "https://diffusion-policy.cs.columbia.edu"
       code: "https://github.com/real-stanford/diffusion_policy"
-    highlight: "🔥"
+    highlight: "📜"
     added: "2026-06-03"
     source: seed

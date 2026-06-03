@@ -6,7 +6,7 @@ Usage:
 from __future__ import annotations
 
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 import yaml
@@ -49,6 +49,8 @@ def main() -> int:
         "tools": load_yaml(DATA / "tools.yaml", "tools"),
         "last_updated": date.today().isoformat(),
         "year": date.today().year,
+        # Used by the "Recent additions" section in the template; YYYY-MM cutoff
+        "recent_cutoff": (date.today() - timedelta(days=45)).strftime("%Y-%m"),
     }
     context["stats"] = {
         "papers": len(context["papers"]),

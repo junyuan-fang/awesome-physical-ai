@@ -3,9 +3,26 @@
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
 
 🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
-📅 Last updated: **2026-06-03** · 📊 **12** papers · 🏢 **19** companies · 🎮 **7** simulators
+📅 Last updated: **2026-06-03** · 📊 **27** papers · 🏢 **19** companies · 🎮 **7** simulators
 
 Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## 🆕 Recent additions (last 30 days)
+
+- 🔥 **AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment** (2026-06) · *Anonymous (under review)* · [arXiv](https://arxiv.org/abs/2606.02486) · `vla`
+- 🔥 **Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.30834) · `vla`
+- 🔥 **Qwen-VLA: Alibaba's Embodied Foundation Model** (2026-05) · *Alibaba* · [arXiv](https://arxiv.org/abs/2605.30280) · `vla`
+- 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.28549) · `locomotion`
+- 👀 **Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.26820) · `vla`
+- 👀 **GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models** (2026-05) · *Xuan et al.* · [arXiv](https://arxiv.org/abs/2605.22812) · [project](https://gwxuan.github.io/GesVLA/) · `vla`
+- 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22272) · `sim2real`
+- 🔥 **AVP: Action-Visual Primitives for Decoupled VLA Architecture** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22183) · `vla`
+- 🔥 **stable-worldmodel: A Reproducibility-First Infrastructure for World Models** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21800) · `foundation-models`
+- 🔥 **PhysX-Omni: Simulation-Ready 3D Generation for Robotics** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21572) · `scene`
+
+> 🤖 *This section is auto-populated from papers dated within the last 30 days.*
 
 ---
 
@@ -30,50 +47,67 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="foundation-models"></a>🤖 Foundation Models for Robotics
 
 *Generalist policies, VLA, world models*
-- 🔥 **Cosmos World Foundation Model Platform for Physical AI** (2025-01) — *NVIDIA*
+- 🔥 **stable-worldmodel: A Reproducibility-First Infrastructure for World Models** (2026-05) — *Anonymous*
+  - Clean baselines + planning solver + LeRobot-native datasets — the 'HuggingFace moment' for world models.
+  - [arXiv](https://arxiv.org/abs/2605.21800) · `world-model · infrastructure · lerobot · benchmark`
+- 🔥 **RAW-Dream: Reward-Aligned World Model Without Task Data** (2026-05) — *Anonymous*
+  - Joint WAM: off-the-shelf VLM as reward; zero-shot task adaptation via imagined trajectories; dual-noise verification.
+  - [arXiv](https://arxiv.org/abs/2605.12334) · `world-model · joint-wam · vlm-reward`
+- 🔥 **World Action Model Survey: Cascaded vs Joint Taxonomy** (2026-05) — *Anonymous*
+  - Unifies NVIDIA Cosmos / DreamZero / LeVERB / PhysiFlow / HEX in a Cascaded vs Joint framework — the WAM entry-point reference.
+  - [arXiv](https://arxiv.org/abs/2605.12090) · `survey · world-model · wam-taxonomy`
+- 👀 **HEX: Humanoid Embodied World Model** (2026-04) — *Anonymous*
+  - Humanoid-centric world model in the WAM family — see WAM survey 2605.12090 for taxonomy placement.
+  - [arXiv](https://arxiv.org/abs/2604.07993) · `world-model · humanoid`
+- 📜 **Cosmos World Foundation Model Platform for Physical AI** (2025-01) — *NVIDIA*
   - NVIDIA's open world model platform for physical AI training data generation.
   - [arXiv](https://arxiv.org/abs/2501.03575) · [project](https://www.nvidia.com/en-us/ai/cosmos/) · [code](https://github.com/NVIDIA/Cosmos) · `world-model · nvidia · physical-ai`
-- 🔥 **Genie: Generative Interactive Environments** (2024-02) — *DeepMind*
-  - Foundation world model trained on internet videos, generates controllable 2D environments.
-  - [arXiv](https://arxiv.org/abs/2402.15391) · [project](https://sites.google.com/view/genie-2024/home) · `world-model · interactive · deepmind`
 
 ## <a id="manipulation"></a>🦾 Manipulation
 
 *Grasping, dexterous, bimanual manipulation*
-- 🔥 **ALOHA Unleashed: A Simple Recipe for Robot Dexterity** (2024-10) — *Zhao et al.*
-  - Diffusion policy + large-scale teleop data for dexterous bimanual manipulation.
+- 🔥 **HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation** (2026-05) — *Anonymous*
+  - −99.8% jitter, −87.5% grasp failure; corrections boost downstream policy by +19% on long-horizon tasks.
+  - [arXiv](https://arxiv.org/abs/2605.15157) · `dexterous · interactive-il · teleop`
+- 🔥 **Dexterous Hand Research: A Comprehensive Survey (2026)** (2026-05) — *Anonymous*
+  - Most comprehensive dexterous-hand survey to date — methods, datasets, evaluation; positions tactile as the next-stage key modality.
+  - [arXiv](https://arxiv.org/abs/2605.13925) · `survey · dexterous · tactile`
+- 📜 **ALOHA Unleashed: A Simple Recipe for Robot Dexterity** (2024-10) — *Zhao et al.*
+  - Diffusion policy + large-scale teleop data for dexterous bimanual manipulation — community baseline.
   - [arXiv](https://arxiv.org/abs/2410.13126) · [project](https://aloha-unleashed.github.io) · `bimanual · diffusion · dexterous`
-- 🔥 **HumanPlus: Humanoid Shadowing and Imitation from Humans** (2024-06) — *Fu et al.*
-  - End-to-end shadowing of human motion for full-body humanoid skills.
-  - [arXiv](https://arxiv.org/abs/2406.10454) · [project](https://humanoid-ai.github.io) · [code](https://github.com/MarkFzp/humanplus) · `humanoid · imitation · teleop`
 
 ## <a id="locomotion"></a>🦿 Locomotion
 
 *Humanoid, quadruped, bipedal walking and running*
-*No entries yet — [contribute one!](CONTRIBUTING.md)*
+- 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) — *Anonymous*
+  - Humanoid sprint at 6 m/s — public-data first-tier (vs Optimus Gen 3 1.2 m/s, Figure 03 ~2 m/s).
+  - [arXiv](https://arxiv.org/abs/2605.28549) · `humanoid · sprint · frequency-domain`
 
 ## <a id="teleoperation"></a>🕹️ Teleoperation
 
 *VR, wearable, and exoskeleton-based data collection*
-- 🔥 **OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback** (2024-07) — *Cheng et al.*
-  - Open-source VR teleoperation system with binocular stereo feedback.
+- 📜 **OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback** (2024-07) — *Cheng et al.*
+  - Open-source VR teleoperation system with binocular stereo feedback — community reference.
   - [arXiv](https://arxiv.org/abs/2407.01512) · [project](https://robot-tv.github.io) · [code](https://github.com/OpenTeleVision/TeleVision) · `vr · stereo · open-source`
-- 🔥 **Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation** (2024-01) — *Fu et al.*
-  - $32k mobile teleop platform that learns dexterous bimanual mobile tasks.
+- 📜 **Mobile ALOHA: Learning Bimanual Mobile Manipulation** (2024-01) — *Fu et al.*
+  - $32k mobile teleop platform — community baseline for whole-body teleop.
   - [arXiv](https://arxiv.org/abs/2401.02117) · [project](https://mobile-aloha.github.io) · [code](https://github.com/MarkFzp/mobile-aloha) · `mobile · bimanual · low-cost`
 
 ## <a id="sim2real"></a>🌉 Sim-to-Real
 
 *Domain randomization, sim-to-real transfer, deployment*
-- 👀 **Eureka: Human-Level Reward Design via Coding Large Language Models** (2023-10) — *Ma et al.*
-  - LLM-generated reward functions trained in Isaac Gym, deployed to real robots.
-  - [arXiv](https://arxiv.org/abs/2310.12931) · [project](https://eureka-research.github.io) · [code](https://github.com/eureka-research/Eureka) · `reward-design · llm · isaac`
+- 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) — *Anonymous*
+  - Use video generation as latent prior for human-object interaction; zero-shot mocap deployment, geometry-free.
+  - [arXiv](https://arxiv.org/abs/2605.22272) · `hoi · video-prior · zero-shot`
 
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
 *NeRF, Gaussian Splatting, segmentation for robotics*
-- 🔥 **3D Gaussian Splatting for Real-Time Radiance Field Rendering** (2023-08) — *Kerbl et al.*
-  - Real-time, high-quality radiance field rendering via differentiable Gaussian splatting.
+- 🔥 **PhysX-Omni: Simulation-Ready 3D Generation for Robotics** (2026-05) — *Anonymous*
+  - Unified rigid/deformable/articulated sim-ready 3D gen via VLM-tailored geometry; releases PhysXVerse dataset + PhysX-Bench (6 dims).
+  - [arXiv](https://arxiv.org/abs/2605.21572) · `sim-ready · 3d-generation · vlm`
+- 📜 **3D Gaussian Splatting for Real-Time Radiance Field Rendering** (2023-08) — *Kerbl et al.*
+  - Real-time, high-quality radiance field rendering — now ubiquitous in 3D scene understanding pipelines.
   - [arXiv](https://arxiv.org/abs/2308.04079) · [project](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) · [code](https://github.com/graphdeco-inria/gaussian-splatting) · `gaussian-splatting · novel-view-synthesis`
 
 ## <a id="navigation"></a>🧭 Navigation & Mobility
@@ -84,8 +118,8 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="rl-il"></a>🎯 RL & Imitation Learning
 
 *Diffusion policies, behavior cloning, RL for robotics*
-- 🔥 **Diffusion Policy: Visuomotor Policy Learning via Action Diffusion** (2023-03) — *Chi et al.*
-  - Action-space diffusion for robust visuomotor policies — now a default baseline.
+- 📜 **Diffusion Policy: Visuomotor Policy Learning via Action Diffusion** (2023-03) — *Chi et al.*
+  - Action-space diffusion — now the default visuomotor policy baseline.
   - [arXiv](https://arxiv.org/abs/2303.04137) · [project](https://diffusion-policy.cs.columbia.edu) · [code](https://github.com/real-stanford/diffusion_policy) · `diffusion · imitation · visuomotor`
 
 ## <a id="datasets"></a>📦 Datasets
