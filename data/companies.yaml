@@ -1,0 +1,168 @@
+# Humanoid + Embodied AI startup tracker
+# Updated manually + via scripts/fetch_funding_news.py (TODO)
+
+companies:
+  # ============== US ==============
+  - name: "Physical Intelligence"
+    region: "US"
+    hq: "San Francisco"
+    founded: 2024
+    focus: [vla, manipulation, foundation-model]
+    products: ["π0", "π0.5"]
+    funding:
+      - { round: "Seed", amount_usd: 70000000, date: "2024-03", lead: "Thrive Capital" }
+      - { round: "Series A", amount_usd: 400000000, date: "2024-11", lead: "Jeff Bezos + Thrive" }
+    last_valuation_usd: 2400000000
+    website: "https://www.physicalintelligence.company"
+    notes: "Sergey Levine + Chelsea Finn led, formerly Google Robotics."
+
+  - name: "Skild AI"
+    region: "US"
+    hq: "Pittsburgh"
+    founded: 2023
+    focus: [foundation-model, generalist]
+    funding:
+      - { round: "Series A", amount_usd: 300000000, date: "2024-07", lead: "Lightspeed + Coatue" }
+    last_valuation_usd: 1500000000
+    website: "https://www.skild.ai"
+    notes: "CMU spinout, generalist robot foundation model."
+
+  - name: "Figure"
+    region: "US"
+    hq: "Sunnyvale"
+    founded: 2022
+    focus: [humanoid, manipulation]
+    products: ["Figure 02", "Helix"]
+    funding:
+      - { round: "Series B", amount_usd: 675000000, date: "2024-02", lead: "Microsoft + Nvidia + OpenAI" }
+    last_valuation_usd: 2600000000
+    website: "https://www.figure.ai"
+
+  - name: "Tesla Optimus"
+    region: "US"
+    hq: "Palo Alto (Tesla)"
+    founded: 2021
+    focus: [humanoid]
+    products: ["Optimus Gen 2", "Optimus Gen 3"]
+    notes: "In-house Tesla program, not standalone company."
+    website: "https://www.tesla.com/we-robot"
+
+  - name: "Apptronik"
+    region: "US"
+    hq: "Austin"
+    founded: 2016
+    focus: [humanoid]
+    products: ["Apollo"]
+    funding:
+      - { round: "Series A", amount_usd: 350000000, date: "2025-02", lead: "B Capital + Capital Factory" }
+    website: "https://apptronik.com"
+
+  - name: "Agility Robotics"
+    region: "US"
+    hq: "Salem, Oregon"
+    founded: 2015
+    focus: [humanoid, logistics]
+    products: ["Digit"]
+    funding:
+      - { round: "Series B", amount_usd: 150000000, date: "2024" }
+    website: "https://agilityrobotics.com"
+
+  - name: "Boston Dynamics"
+    region: "US"
+    hq: "Waltham"
+    founded: 1992
+    parent: "Hyundai Motor Group"
+    focus: [humanoid, quadruped]
+    products: ["Atlas (electric)", "Spot", "Stretch"]
+    website: "https://www.bostondynamics.com"
+
+  - name: "Sanctuary AI"
+    region: "CA"
+    hq: "Vancouver"
+    founded: 2018
+    focus: [humanoid]
+    products: ["Phoenix Gen 7"]
+    website: "https://sanctuary.ai"
+
+  # ============== Europe ==============
+  - name: "1X Technologies"
+    region: "Norway"
+    hq: "Moss, Norway / Sunnyvale"
+    founded: 2014
+    focus: [humanoid, world-model]
+    products: ["NEO", "EVE"]
+    funding:
+      - { round: "Series B", amount_usd: 100000000, date: "2024-01", lead: "EQT + Tiger" }
+    last_valuation_usd: 1300000000
+    website: "https://www.1x.tech"
+
+  # ============== China ==============
+  - name: "宇树科技 (Unitree Robotics)"
+    region: "CN"
+    hq: "杭州"
+    founded: 2016
+    focus: [locomotion, humanoid, quadruped]
+    products: ["G1", "H1", "Go2", "B2"]
+    ipo_status: "pre-IPO, expected 2026"
+    website: "https://www.unitree.com"
+
+  - name: "智元机器人 (AgiBot)"
+    region: "CN"
+    hq: "上海"
+    founded: 2023
+    focus: [humanoid, manipulation]
+    products: ["远征 A2", "灵犀 X1"]
+    notes: "By 稚晖君, former Huawei genius youth."
+    website: "https://www.agibot.com"
+
+  - name: "银河通用 (Galbot)"
+    region: "CN"
+    hq: "北京"
+    founded: 2023
+    focus: [humanoid, manipulation, vla]
+    notes: "Wang He, PKU professor + Yu Tianyi."
+    website: "https://www.galbot.com"
+
+  - name: "星海图 (Galaxea AI)"
+    region: "CN"
+    hq: "北京"
+    founded: 2023
+    focus: [humanoid, manipulation]
+    products: ["R1"]
+
+  - name: "月泉仿生"
+    region: "CN"
+    hq: "上海"
+    focus: [humanoid, manipulation]
+
+  - name: "加速进化 (Booster Robotics)"
+    region: "CN"
+    hq: "北京"
+    founded: 2023
+    focus: [humanoid]
+    products: ["Booster T1"]
+
+  - name: "云深处科技 (DeepRobotics)"
+    region: "CN"
+    hq: "杭州"
+    focus: [quadruped, humanoid]
+    products: ["X30", "Lite3"]
+    website: "https://www.deeprobotics.cn"
+
+  - name: "傅利叶智能 (Fourier Intelligence)"
+    region: "CN"
+    hq: "上海"
+    focus: [humanoid, rehabilitation]
+    products: ["GR-1", "GR-2"]
+    website: "https://www.fftai.com"
+
+  - name: "追觅 (Dreame)"
+    region: "CN"
+    hq: "苏州"
+    focus: [service-robot, humanoid]
+
+  - name: "逐际动力 (LimX Dynamics)"
+    region: "CN"
+    hq: "深圳"
+    focus: [humanoid, locomotion]
+    products: ["CL-1"]

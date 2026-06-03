@@ -1,0 +1,43 @@
+tools:
+  - name: "LeRobot"
+    desc: "Hugging Face's end-to-end robotics framework — datasets, models, hardware."
+    links:
+      project: "https://huggingface.co/lerobot"
+      code: "https://github.com/huggingface/lerobot"
+    tags: [framework, hf, end-to-end]
+
+  - name: "Diffusion Policy"
+    desc: "Reference implementation of action-space diffusion policies."
+    links:
+      paper: "https://arxiv.org/abs/2303.04137"
+      code: "https://github.com/real-stanford/diffusion_policy"
+    tags: [diffusion, imitation]
+
+  - name: "OpenVLA"
+    desc: "Open-source 7B Vision-Language-Action foundation model."
+    links:
+      project: "https://openvla.github.io"
+      code: "https://github.com/openvla/openvla"
+    tags: [vla, foundation-model]
+
+  - name: "AnyGrasp SDK"
+    desc: "General object grasping in cluttered scenes."
+    links:
+      project: "https://graspnet.net/anygrasp.html"
+      paper: "https://arxiv.org/abs/2212.08333"
+      code: "https://github.com/graspnet/anygrasp_sdk"
+    tags: [grasping, perception]
+
+  - name: "Curobo"
+    desc: "NVIDIA's GPU-accelerated motion planning library."
+    links:
+      project: "https://curobo.org"
+      code: "https://github.com/NVlabs/curobo"
+    tags: [motion-planning, gpu, nvidia]
+
+  - name: "nvdiffrast"
+    desc: "Modular differentiable rendering primitives from NVIDIA."
+    links:
+      project: "https://nvlabs.github.io/nvdiffrast/"
+      code: "https://github.com/NVlabs/nvdiffrast"
+    tags: [differentiable-rendering, nvidia]

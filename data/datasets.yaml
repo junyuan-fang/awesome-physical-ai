@@ -1,0 +1,47 @@
+datasets:
+  - name: "Open X-Embodiment (RT-X)"
+    desc: "Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories."
+    links:
+      project: "https://robotics-transformer-x.github.io"
+      paper: "https://arxiv.org/abs/2310.08864"
+      code: "https://github.com/google-deepmind/open_x_embodiment"
+    tags: [trajectories, multi-embodiment]
+    size: "1M+ episodes"
+
+  - name: "LIBERO"
+    desc: "Lifelong robot learning benchmark — 130 manipulation tasks."
+    links:
+      project: "https://libero-project.github.io"
+      paper: "https://arxiv.org/abs/2306.03310"
+      code: "https://github.com/Lifelong-Robot-Learning/LIBERO"
+    tags: [lifelong, manipulation, simulation]
+
+  - name: "DROID"
+    desc: "Diverse, real-world manipulation dataset from 564 scenes, 13 institutions."
+    links:
+      project: "https://droid-dataset.github.io"
+      paper: "https://arxiv.org/abs/2403.12945"
+    tags: [real-world, manipulation, multi-institution]
+    size: "76k demonstrations"
+
+  - name: "BridgeData V2"
+    desc: "Large-scale tabletop manipulation dataset for generalization research."
+    links:
+      project: "https://rail-berkeley.github.io/bridgedata"
+      paper: "https://arxiv.org/abs/2308.12952"
+    tags: [tabletop, manipulation]
+    size: "60k trajectories"
+
+  - name: "Habitat-Matterport 3D (HM3D)"
+    desc: "1000+ photorealistic indoor 3D scenes for embodied AI training."
+    links:
+      project: "https://aihabitat.org/datasets/hm3d/"
+      paper: "https://arxiv.org/abs/2109.08238"
+    tags: [3d-scene, indoor, navigation]
+
+  - name: "ARIO (All Robots In One)"
+    desc: "Unified cross-embodiment robot learning dataset."
+    links:
+      project: "https://imaei.github.io/project_pages/ario/"
+      paper: "https://arxiv.org/abs/2408.10899"
+    tags: [multi-embodiment, real-world]

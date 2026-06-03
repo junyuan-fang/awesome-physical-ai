@@ -1,0 +1,38 @@
+benchmarks:
+  - name: "CALVIN"
+    desc: "Long-horizon, language-conditioned manipulation benchmark."
+    links:
+      project: "http://calvin.cs.uni-freiburg.de"
+      paper: "https://arxiv.org/abs/2112.03227"
+      code: "https://github.com/mees/calvin"
+    tags: [language-conditioned, long-horizon]
+
+  - name: "Meta-World"
+    desc: "50 manipulation tasks for multi-task and meta-RL."
+    links:
+      project: "https://meta-world.github.io"
+      paper: "https://arxiv.org/abs/1910.10897"
+      code: "https://github.com/Farama-Foundation/Metaworld"
+    tags: [multi-task, meta-rl]
+
+  - name: "LIBERO"
+    desc: "Lifelong robot learning benchmark — 130 manipulation tasks across 4 task suites."
+    links:
+      project: "https://libero-project.github.io"
+      paper: "https://arxiv.org/abs/2306.03310"
+    tags: [lifelong, manipulation]
+
+  - name: "RLBench"
+    desc: "100 vision-guided manipulation tasks with CoppeliaSim."
+    links:
+      project: "https://sites.google.com/view/rlbench"
+      paper: "https://arxiv.org/abs/1909.12271"
+      code: "https://github.com/stepjam/RLBench"
+    tags: [manipulation, vision]
+
+  - name: "ProcTHOR"
+    desc: "10,000+ procedurally generated household scenes for embodied AI."
+    links:
+      project: "https://procthor.allenai.org"
+      paper: "https://arxiv.org/abs/2206.06994"
+    tags: [navigation, household, procedural]

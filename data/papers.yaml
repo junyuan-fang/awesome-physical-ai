@@ -1,0 +1,208 @@
+# Papers source of truth
+# Each entry will be rendered into the README under its category.
+# Format:
+#   - arxiv_id: "YYMM.NNNNN"            (use canonical arxiv id, or skip if no arxiv)
+#     title: "Paper Title"
+#     authors: "Author1 et al."          (short form)
+#     date: "YYYY-MM"                    (submission month)
+#     category: vla                      (must match an id in categories.yaml)
+#     tags: [foundation-model, manipulation]
+#     abstract_short: "One-sentence summary."
+#     links:
+#       arxiv: "https://arxiv.org/abs/XXXX.XXXXX"
+#       project: ""                      (optional)
+#       code: ""                          (optional)
+#       demo: ""                          (optional)
+#     highlight: "🔥"                     (🔥 must-read / 👀 worth-knowing / blank)
+#     added: "YYYY-MM-DD"
+#     source: "seed"                     (seed / dailypaper / pr / manual)
+
+papers:
+  # ============== VLA ==============
+  - arxiv_id: "2406.09246"
+    title: "OpenVLA: An Open-Source Vision-Language-Action Model"
+    authors: "Kim et al."
+    date: "2024-06"
+    category: vla
+    tags: [foundation-model, open-source]
+    abstract_short: "7B-parameter open VLA finetuned from Llama-2, trained on Open X-Embodiment."
+    links:
+      arxiv: "https://arxiv.org/abs/2406.09246"
+      project: "https://openvla.github.io"
+      code: "https://github.com/openvla/openvla"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2410.07864"
+    title: "RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation"
+    authors: "Liu et al."
+    date: "2024-10"
+    category: vla
+    tags: [foundation-model, bimanual, diffusion]
+    abstract_short: "1B-parameter diffusion transformer trained on multi-robot data for bimanual tasks."
+    links:
+      arxiv: "https://arxiv.org/abs/2410.07864"
+      project: "https://rdt-robotics.github.io/rdt-robotics/"
+      code: "https://github.com/thu-ml/RoboticsDiffusionTransformer"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2503.14734"
+    title: "GR00T N1: An Open Foundation Model for Generalist Humanoid Robots"
+    authors: "NVIDIA"
+    date: "2025-03"
+    category: vla
+    tags: [foundation-model, humanoid, nvidia]
+    abstract_short: "NVIDIA's open foundation model for generalist humanoid manipulation."
+    links:
+      arxiv: "https://arxiv.org/abs/2503.14734"
+      project: "https://developer.nvidia.com/isaac/gr00t"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== World Models ==============
+  - arxiv_id: "2402.15391"
+    title: "Genie: Generative Interactive Environments"
+    authors: "DeepMind"
+    date: "2024-02"
+    category: foundation-models
+    tags: [world-model, interactive, deepmind]
+    abstract_short: "Foundation world model trained on internet videos, generates controllable 2D environments."
+    links:
+      arxiv: "https://arxiv.org/abs/2402.15391"
+      project: "https://sites.google.com/view/genie-2024/home"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2501.03575"
+    title: "Cosmos World Foundation Model Platform for Physical AI"
+    authors: "NVIDIA"
+    date: "2025-01"
+    category: foundation-models
+    tags: [world-model, nvidia, physical-ai]
+    abstract_short: "NVIDIA's open world model platform for physical AI training data generation."
+    links:
+      arxiv: "https://arxiv.org/abs/2501.03575"
+      project: "https://www.nvidia.com/en-us/ai/cosmos/"
+      code: "https://github.com/NVIDIA/Cosmos"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== Manipulation ==============
+  - arxiv_id: "2410.13126"
+    title: "ALOHA Unleashed: A Simple Recipe for Robot Dexterity"
+    authors: "Zhao et al."
+    date: "2024-10"
+    category: manipulation
+    tags: [bimanual, diffusion, dexterous]
+    abstract_short: "Diffusion policy + large-scale teleop data for dexterous bimanual manipulation."
+    links:
+      arxiv: "https://arxiv.org/abs/2410.13126"
+      project: "https://aloha-unleashed.github.io"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2406.10454"
+    title: "HumanPlus: Humanoid Shadowing and Imitation from Humans"
+    authors: "Fu et al."
+    date: "2024-06"
+    category: manipulation
+    tags: [humanoid, imitation, teleop]
+    abstract_short: "End-to-end shadowing of human motion for full-body humanoid skills."
+    links:
+      arxiv: "https://arxiv.org/abs/2406.10454"
+      project: "https://humanoid-ai.github.io"
+      code: "https://github.com/MarkFzp/humanplus"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== Teleoperation ==============
+  - arxiv_id: "2407.01512"
+    title: "OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback"
+    authors: "Cheng et al."
+    date: "2024-07"
+    category: teleoperation
+    tags: [vr, stereo, open-source]
+    abstract_short: "Open-source VR teleoperation system with binocular stereo feedback."
+    links:
+      arxiv: "https://arxiv.org/abs/2407.01512"
+      project: "https://robot-tv.github.io"
+      code: "https://github.com/OpenTeleVision/TeleVision"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  - arxiv_id: "2401.02117"
+    title: "Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation"
+    authors: "Fu et al."
+    date: "2024-01"
+    category: teleoperation
+    tags: [mobile, bimanual, low-cost]
+    abstract_short: "$32k mobile teleop platform that learns dexterous bimanual mobile tasks."
+    links:
+      arxiv: "https://arxiv.org/abs/2401.02117"
+      project: "https://mobile-aloha.github.io"
+      code: "https://github.com/MarkFzp/mobile-aloha"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== 3D Scene Understanding ==============
+  - arxiv_id: "2308.04079"
+    title: "3D Gaussian Splatting for Real-Time Radiance Field Rendering"
+    authors: "Kerbl et al."
+    date: "2023-08"
+    category: scene
+    tags: [gaussian-splatting, novel-view-synthesis]
+    abstract_short: "Real-time, high-quality radiance field rendering via differentiable Gaussian splatting."
+    links:
+      arxiv: "https://arxiv.org/abs/2308.04079"
+      project: "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/"
+      code: "https://github.com/graphdeco-inria/gaussian-splatting"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed
+
+  # TODO(maintainer): add NVSMask3D once arXiv link is verified
+  # - title: "NVSMask3D: ..."
+  #   authors: "Junyuan Fang et al."
+  #   ...
+
+  # ============== Sim-to-Real ==============
+  - arxiv_id: "2310.12931"
+    title: "Eureka: Human-Level Reward Design via Coding Large Language Models"
+    authors: "Ma et al."
+    date: "2023-10"
+    category: sim2real
+    tags: [reward-design, llm, isaac]
+    abstract_short: "LLM-generated reward functions trained in Isaac Gym, deployed to real robots."
+    links:
+      arxiv: "https://arxiv.org/abs/2310.12931"
+      project: "https://eureka-research.github.io"
+      code: "https://github.com/eureka-research/Eureka"
+    highlight: "👀"
+    added: "2026-06-03"
+    source: seed
+
+  # ============== RL & Imitation ==============
+  - arxiv_id: "2303.04137"
+    title: "Diffusion Policy: Visuomotor Policy Learning via Action Diffusion"
+    authors: "Chi et al."
+    date: "2023-03"
+    category: rl-il
+    tags: [diffusion, imitation, visuomotor]
+    abstract_short: "Action-space diffusion for robust visuomotor policies — now a default baseline."
+    links:
+      arxiv: "https://arxiv.org/abs/2303.04137"
+      project: "https://diffusion-policy.cs.columbia.edu"
+      code: "https://github.com/real-stanford/diffusion_policy"
+    highlight: "🔥"
+    added: "2026-06-03"
+    source: seed

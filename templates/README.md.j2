@@ -1,0 +1,111 @@
+{#- Jinja2 template — DO NOT edit README.md directly, edit this file -#}
+# Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+
+> A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
+
+🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
+📅 Last updated: **{{ last_updated }}** · 📊 **{{ stats.papers }}** papers · 🏢 **{{ stats.companies }}** companies · 🎮 **{{ stats.simulators }}** simulators
+
+Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## Contents
+
+{% for cat in categories %}- [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }})
+{% endfor %}
+---
+
+{% for cat in categories %}
+## <a id="{{ cat.id }}"></a>{{ cat.icon }} {{ cat.title }}
+
+*{{ cat.desc }}*
+
+{%- if cat.source == "companies.yaml" %}
+
+### 💰 Valuation Tracker
+
+| Company | Region | Focus | Latest Round | Valuation | Date |
+|---|---|---|---|---|---|
+{% for c in companies | sort(attribute='last_valuation_usd', reverse=true) -%}
+| **{{ c.name }}** | {{ c.region }} | {{ c.focus | join(", ") }} | {% if c.funding %}{{ c.funding[-1].round }} ${{ "{:,}".format(c.funding[-1].amount_usd) }}{% else %}—{% endif %} | {% if c.last_valuation_usd %}${{ "{:,}".format(c.last_valuation_usd) }}{% else %}—{% endif %} | {% if c.funding %}{{ c.funding[-1].date }}{% else %}—{% endif %} |
+{% endfor %}
+
+### 🇺🇸 United States
+
+{% for c in companies | selectattr("region", "equalto", "US") -%}
+- **[{{ c.name }}]({{ c.website }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{% if c.notes %} · {{ c.notes }}{% endif %}{{ "" }}
+{% endfor %}
+
+### 🇨🇳 China
+
+{% for c in companies | selectattr("region", "equalto", "CN") -%}
+- **[{{ c.name }}]({{ c.website if c.website else '#' }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{% if c.notes %} · {{ c.notes }}{% endif %}{{ "" }}
+{% endfor %}
+
+### 🇪🇺 Europe
+
+{% for c in companies | selectattr("region", "equalto", "Norway") -%}
+- **[{{ c.name }}]({{ c.website }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{{ "" }}
+{% endfor %}
+
+### 🇨🇦 Canada
+
+{% for c in companies | selectattr("region", "equalto", "CA") -%}
+- **[{{ c.name }}]({{ c.website }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{{ "" }}
+{% endfor %}
+
+{%- elif cat.source == "datasets.yaml" %}
+
+{% for d in datasets -%}
+- **[{{ d.name }}]({{ d.links.project }})** — {{ d.desc }}{% if d.size %} · *{{ d.size }}*{% endif %}{% if d.links.paper %} · [paper]({{ d.links.paper }}){% endif %}{% if d.links.code %} · [code]({{ d.links.code }}){% endif %}{{ "" }}
+{% endfor %}
+
+{%- elif cat.source == "simulators.yaml" %}
+
+{% for s in simulators -%}
+- **[{{ s.name }}]({{ s.links.project }})** — {{ s.desc }}{% if s.links.paper %} · [paper]({{ s.links.paper }}){% endif %}{% if s.links.code %} · [code]({{ s.links.code }}){% endif %}{{ "" }}
+{% endfor %}
+
+{%- elif cat.source == "benchmarks.yaml" %}
+
+{% for b in benchmarks -%}
+- **[{{ b.name }}]({{ b.links.project }})** — {{ b.desc }}{% if b.links.paper %} · [paper]({{ b.links.paper }}){% endif %}{% if b.links.code %} · [code]({{ b.links.code }}){% endif %}{{ "" }}
+{% endfor %}
+
+{%- elif cat.source == "tools.yaml" %}
+
+{% for t in tools -%}
+- **[{{ t.name }}]({{ t.links.project if t.links.project else t.links.code }})** — {{ t.desc }}{% if t.links.paper %} · [paper]({{ t.links.paper }}){% endif %}{% if t.links.code %} · [code]({{ t.links.code }}){% endif %}{{ "" }}
+{% endfor %}
+
+{%- else %}
+
+{% set cat_papers = papers | selectattr("category", "equalto", cat.id) | sort(attribute="date", reverse=true) | list %}
+{% if cat_papers %}
+{% for p in cat_papers -%}
+- {{ p.highlight | default("") }} **{{ p.title }}** ({{ p.date }}) — *{{ p.authors }}*
+  - {{ p.abstract_short }}
+  - {% if p.links.arxiv %}[arXiv]({{ p.links.arxiv }}){% endif %}{% if p.links.project %} · [project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
+{% endfor %}
+{% else %}
+*No entries yet — [contribute one!](CONTRIBUTING.md)*
+{% endif %}
+
+{%- endif %}
+
+{% endfor %}
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=junyuan-fang/awesome-physical-ai&type=Date)](https://star-history.com/#junyuan-fang/awesome-physical-ai&Date)
+
+## 🤝 Contributing
+
+This list is auto-fed from a [daily paper aggregation pipeline](https://github.com/junyuan-fang/personal_planning), but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## 📜 License
+
+[MIT](LICENSE) © {{ year }} [@junyuan-fang](https://github.com/junyuan-fang)

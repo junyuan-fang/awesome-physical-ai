@@ -1,0 +1,99 @@
+# Category definitions — controls README section order & rendering
+# Edit this file to add/remove/reorder sections in the generated README.
+
+categories:
+  - id: foundation-models
+    title: "Foundation Models for Robotics"
+    icon: "🤖"
+    desc: "Generalist policies, VLA, world models"
+    order: 1
+    subcategories:
+      - id: vla
+        title: "Vision-Language-Action (VLA)"
+      - id: world-model
+        title: "World Models"
+      - id: foundation-general
+        title: "Other Generalist Models"
+
+  - id: manipulation
+    title: "Manipulation"
+    icon: "🦾"
+    desc: "Grasping, dexterous, bimanual manipulation"
+    order: 2
+
+  - id: locomotion
+    title: "Locomotion"
+    icon: "🦿"
+    desc: "Humanoid, quadruped, bipedal walking and running"
+    order: 3
+
+  - id: teleoperation
+    title: "Teleoperation"
+    icon: "🕹️"
+    desc: "VR, wearable, and exoskeleton-based data collection"
+    order: 4
+
+  - id: sim2real
+    title: "Sim-to-Real"
+    icon: "🌉"
+    desc: "Domain randomization, sim-to-real transfer, deployment"
+    order: 5
+
+  - id: scene
+    title: "3D Scene Understanding"
+    icon: "🌍"
+    desc: "NeRF, Gaussian Splatting, segmentation for robotics"
+    order: 6
+
+  - id: navigation
+    title: "Navigation & Mobility"
+    icon: "🧭"
+    desc: "Visual navigation, embodied QA, mobile robots"
+    order: 7
+
+  - id: rl-il
+    title: "RL & Imitation Learning"
+    icon: "🎯"
+    desc: "Diffusion policies, behavior cloning, RL for robotics"
+    order: 8
+
+  - id: datasets
+    title: "Datasets"
+    icon: "📦"
+    desc: "Robot trajectories, demonstrations, scene datasets"
+    order: 9
+    source: datasets.yaml
+
+  - id: simulators
+    title: "Simulators"
+    icon: "🎮"
+    desc: "Isaac Sim, MuJoCo, Genesis, and friends"
+    order: 10
+    source: simulators.yaml
+
+  - id: benchmarks
+    title: "Benchmarks"
+    icon: "📊"
+    desc: "Standardized evaluations for embodied AI"
+    order: 11
+    source: benchmarks.yaml
+
+  - id: tools
+    title: "Tools & Libraries"
+    icon: "🛠️"
+    desc: "Open-source frameworks for building embodied AI"
+    order: 12
+    source: tools.yaml
+
+  - id: companies
+    title: "Companies & Industry"
+    icon: "🏢"
+    desc: "Humanoid and embodied AI startups with valuation tracker"
+    order: 13
+    source: companies.yaml
+
+  - id: tutorials
+    title: "Tutorials & Surveys"
+    icon: "📚"
+    desc: "Surveys, books, and tutorial materials"
+    order: 14

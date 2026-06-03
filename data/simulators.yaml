@@ -1,0 +1,51 @@
+simulators:
+  - name: "Isaac Lab"
+    desc: "NVIDIA's modular RL training framework built on Isaac Sim."
+    links:
+      project: "https://isaac-sim.github.io/IsaacLab"
+      code: "https://github.com/isaac-sim/IsaacLab"
+    tags: [rl, gpu-accelerated, nvidia]
+
+  - name: "Isaac Sim"
+    desc: "NVIDIA's full robot simulator with photorealistic rendering."
+    links:
+      project: "https://developer.nvidia.com/isaac/sim"
+    tags: [photorealistic, gpu, nvidia]
+
+  - name: "Genesis"
+    desc: "Universal physics engine for robotics — built in pure Python, 43M FPS claim."
+    links:
+      project: "https://genesis-embodied-ai.github.io"
+      code: "https://github.com/Genesis-Embodied-AI/Genesis"
+      paper: "https://arxiv.org/abs/2412.04268"
+    tags: [physics, python, multi-material]
+
+  - name: "MuJoCo MJX"
+    desc: "GPU/TPU-accelerated JAX-based version of MuJoCo for massive parallel rollouts."
+    links:
+      project: "https://mujoco.readthedocs.io/en/latest/mjx.html"
+      code: "https://github.com/google-deepmind/mujoco"
+    tags: [jax, gpu, parallel]
+
+  - name: "Habitat 3.0"
+    desc: "Photorealistic embodied AI sim with humans, navigation + manipulation."
+    links:
+      project: "https://aihabitat.org"
+      paper: "https://arxiv.org/abs/2310.13724"
+      code: "https://github.com/facebookresearch/habitat-sim"
+    tags: [navigation, humans, photorealistic]
+
+  - name: "RoboCasa"
+    desc: "Large-scale household simulation framework on top of MuJoCo."
+    links:
+      project: "https://robocasa.ai"
+      paper: "https://arxiv.org/abs/2406.02523"
+      code: "https://github.com/robocasa/robocasa"
+    tags: [household, mujoco, large-scale]
+
+  - name: "ManiSkill 3"
+    desc: "GPU-parallelized manipulation skill learning sim."
+    links:
+      project: "https://maniskill.ai"
+      code: "https://github.com/haosulab/ManiSkill"
+    tags: [manipulation, gpu]
