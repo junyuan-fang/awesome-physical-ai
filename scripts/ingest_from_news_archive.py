@@ -101,7 +101,9 @@ VENUE_PATTERNS = re.compile(
     r"\s*(\d{4})?",
     re.IGNORECASE,
 )
-# Project URL hints in arXiv comments or news_archive context
+# Explicit "- Project: <url>" line (written by the d667c0db cron prompt).
+PROJECT_LINE_RE = re.compile(r"^-\s*Project:\s*(\S+)", re.MULTILINE)
+# Fallback heuristic: any project-page-shaped URL.
 PROJECT_URL_RE = re.compile(
     r"https?://(?:[a-zA-Z0-9_-]+\.)?(?:github\.io|netlify\.app|vercel\.app|notion\.site|"
     r"web\.app|github\.com/[\w-]+/[\w.-]+(?:/blob|/tree)?|stanford\.edu/~[\w-]+/[\w/.-]*|"
@@ -357,7 +359,13 @@ def categorize(meta: dict[str, Any]) -> str:
 
 
 def find_project_url_in_news_archive(arxiv_id: str) -> str:
-    """Search ±500 chars around arxiv link in news_archive for a project page URL."""
+    """Search ±500 chars around arxiv link in news_archive for a project URL.
+
+    Priority:
+      1. Explicit "- Project: <url>" line written by the embodied news cron.
+      2. Heuristic project-page-shaped URL nearby.
+    Returns "" if not found, or skips known "N/A" markers.
+    """
     if not NEWS_ARCHIVE.exists():
         return ""
     pattern = re.compile(rf"https?://arxiv\.org/abs/{re.escape(arxiv_id)}")
@@ -366,7 +374,17 @@ def find_project_url_in_news_archive(arxiv_id: str) -> str:
         m = pattern.search(text)
         if not m:
             continue
-        chunk = text[max(0, m.start() - 500) : m.end() + 500]
+        chunk = text[max(0, m.start() - 600) : m.end() + 800]
+
+        # Priority 1: explicit "- Project:" line
+        for pm in PROJECT_LINE_RE.finditer(chunk):
+            url = pm.group(1).strip().rstrip(".,;")
+            if url.lower() in ("n/a", "na", "none", "-", "tbd"):
+                continue
+            if url.startswith("http"):
+                return url
+
+        # Priority 2: heuristic project page URL
         pm = PROJECT_URL_RE.search(chunk)
         if pm:
             return pm.group(0)
