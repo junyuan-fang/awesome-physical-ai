@@ -45,9 +45,15 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 👀 **[HEX: Humanoid Embodied World Model](https://arxiv.org/abs/2604.07993)** (2026-04) — *Anonymous*
   - "首个 full-sized 双足人形的全身 VLA 框架"；Full-sized 双足是产业最难做的形态（重心高、足底支撑窄）
 - `world-model · humanoid`
+
+<details>
+<summary>📜 Show 1 earlier paper</summary>
+
 - 📜 **[Cosmos World Foundation Model Platform for Physical AI](https://arxiv.org/abs/2501.03575)** (2025-01) — *NVIDIA*
   - NVIDIA's open world model platform for physical AI training data generation.
 - [project](https://www.nvidia.com/en-us/ai/cosmos/) · [code](https://github.com/NVIDIA/Cosmos) · `world-model · nvidia · physical-ai`
+
+</details>
 
 ## <a id="manipulation"></a>🦾 Manipulation
 
@@ -61,9 +67,15 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](https://arxiv.org/abs/2605.21811)** (2026-05) — *Wu, Albert et al.*
   - Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector poses on...
 - `news-archive`
+
+<details>
+<summary>📜 Show 1 earlier paper</summary>
+
 - 📜 **[ALOHA Unleashed: A Simple Recipe for Robot Dexterity](https://arxiv.org/abs/2410.13126)** (2024-10) — *Zhao et al.*
   - Diffusion policy + large-scale teleop data for dexterous bimanual manipulation — community baseline.
 - [project](https://aloha-unleashed.github.io) · `bimanual · diffusion · dexterous`
+
+</details>
 
 ## <a id="locomotion"></a>🦿 Locomotion
 
@@ -84,6 +96,10 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 👀 **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](https://arxiv.org/abs/2603.08122)** (2026-03) — *Tang, Tutian et al.*
   - While Vision-Language-Action (VLA) models have demonstrated remarkable success in robotic manipulation, their application has largely been confined to low-degree-of-freedom end-effectors performing simple, vision-guided pick-and-place...
 - `news-archive`
+
+<details>
+<summary>📜 Show 2 earlier papers</summary>
+
 - 📜 **[OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback](https://arxiv.org/abs/2407.01512)** (2024-07) — *Cheng et al.*
   - Open-source VR teleoperation system with binocular stereo feedback — community reference.
 - [project](https://robot-tv.github.io) · [code](https://github.com/OpenTeleVision/TeleVision) · `vr · stereo · open-source`
@@ -91,15 +107,23 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
   - $32k mobile teleop platform — community baseline for whole-body teleop.
 - [project](https://mobile-aloha.github.io) · [code](https://github.com/MarkFzp/mobile-aloha) · `mobile · bimanual · low-cost`
 
+</details>
+
 ## <a id="sim2real"></a>🌉 Sim-to-Real
 
 *Domain randomization, sim-to-real transfer, deployment*
 - 🔥 **[Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real](https://arxiv.org/abs/2605.22272)** (2026-05) — *Anonymous*
   - 解决 humanoid 与物体交互的"3D 数据从哪来"瓶颈；用 video 生成模型作为 prior，与 NVIDIA Cosmos / GR00T-Dreams 同思路但场景更细：HOI 而非通用 manipulation
 - `hoi · video-prior · zero-shot`
+
+<details>
+<summary>📜 Show 1 earlier paper</summary>
+
 - 👀 **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751)** (2025-06) — *Xue, Haoru et al.*
   - Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization, yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
 - `news-archive`
+
+</details>
 
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
@@ -107,9 +131,15 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** (2026-05) — *Anonymous*
   - 为 robotic policy learning 和 simulation-ready scene generation 提供原料；减少 robotics 仿真数据手工建模成本
 - `sim-ready · 3d-generation · vlm`
+
+<details>
+<summary>📜 Show 1 earlier paper</summary>
+
 - 📜 **[3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://arxiv.org/abs/2308.04079)** (2023-08) — *Kerbl et al.*
   - Real-time, high-quality radiance field rendering — now ubiquitous in 3D scene understanding pipelines.
 - [project](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) · [code](https://github.com/graphdeco-inria/gaussian-splatting) · `gaussian-splatting · novel-view-synthesis`
+
+</details>
 
 ## <a id="navigation"></a>🧭 Navigation & Mobility
 
@@ -119,9 +149,15 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="rl-il"></a>🎯 RL & Imitation Learning
 
 *Diffusion policies, behavior cloning, RL for robotics*
+
+<details>
+<summary>📜 Show 1 earlier paper</summary>
+
 - 📜 **[Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/abs/2303.04137)** (2023-03) — *Chi et al.*
   - Action-space diffusion — now the default visuomotor policy baseline.
 - [project](https://diffusion-policy.cs.columbia.edu) · [code](https://github.com/real-stanford/diffusion_policy) · `diffusion · imitation · visuomotor`
+
+</details>
 
 ## <a id="datasets"></a>📦 Datasets
 

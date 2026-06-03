@@ -95,8 +95,26 @@ logging.basicConfig(
 log = logging.getLogger("ingest")
 
 
+VENUE_PATTERNS = re.compile(
+    r"\b(?:Accepted|Published|To appear|Appears?)\s+(?:to|at|in)?\s*"
+    r"(CoRL|NeurIPS|ICLR|CVPR|ICML|ICRA|RSS|ECCV|ICCV|AAAI|IROS|RAL|TPAMI|TRO|JMLR|SIGGRAPH(?: Asia)?)"
+    r"\s*(\d{4})?",
+    re.IGNORECASE,
+)
+# Project URL hints in arXiv comments or news_archive context
+PROJECT_URL_RE = re.compile(
+    r"https?://(?:[a-zA-Z0-9_-]+\.)?(?:github\.io|netlify\.app|vercel\.app|notion\.site|"
+    r"web\.app|github\.com/[\w-]+/[\w.-]+(?:/blob|/tree)?|stanford\.edu/~[\w-]+/[\w/.-]*|"
+    r"berkeley\.edu/~[\w-]+/[\w/.-]*)[\w./~?#&%=+-]*",
+    re.IGNORECASE,
+)
+
+
 def fetch_arxiv_html(arxiv_id: str) -> dict[str, Any] | None:
-    """Scrape arXiv abstract page HTML for citation_* meta tags. Primary path."""
+    """Scrape arXiv abstract page HTML for citation_* meta tags. Primary path.
+
+    Also extracts venue (from Comments / Journal ref) and project URL when available.
+    """
     url = ARXIV_ABS.format(arxiv_id=arxiv_id)
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     for attempt in range(1, 3):
@@ -116,12 +134,41 @@ def fetch_arxiv_html(arxiv_id: str) -> dict[str, Any] | None:
     title = (fields.get("title") or [""])[0].strip()
     if not title:
         return None
+
+    # Parse non-meta-tag fields: Comments + Journal ref + Project URL
+    venue = ""
+    comments_text = ""
+    cm = re.search(
+        r'<td class="tablecell label">Comments:</td>\s*<td[^>]*>(.+?)</td>',
+        content, re.DOTALL,
+    )
+    if cm:
+        comments_text = re.sub(r"<[^>]+>", " ", cm.group(1)).strip()
+        vm = VENUE_PATTERNS.search(comments_text)
+        if vm:
+            venue = f"{vm.group(1).upper()}{(' ' + vm.group(2)) if vm.group(2) else ''}".strip()
+    jm = re.search(
+        r'<td class="tablecell label">Journal&nbsp;ref:</td>\s*<td[^>]*>(.+?)</td>',
+        content, re.DOTALL,
+    )
+    if jm and not venue:
+        venue = re.sub(r"<[^>]+>", " ", jm.group(1)).strip()[:60]
+
+    # Project URL: search in comments + abstract pages's links section
+    project_url = ""
+    if comments_text:
+        pm = PROJECT_URL_RE.search(comments_text)
+        if pm:
+            project_url = pm.group(0)
+
     return {
         "arxiv_id": arxiv_id,
         "title": title,
         "abstract": (fields.get("abstract") or [""])[0].strip(),
         "published": (fields.get("date") or [""])[0].replace("/", "-")[:10],
         "authors": [a.strip() for a in fields.get("author", [])],
+        "venue": venue,
+        "project_url": project_url,
     }
 
 
@@ -156,15 +203,31 @@ def extract_chinese_summary(arxiv_id: str) -> str | None:
 
 
 def update_existing_chinese_summaries(papers: list[dict[str, Any]]) -> int:
-    """Walk all existing papers; overwrite abstract_short with Chinese where found."""
+    """Walk all existing papers; overwrite abstract_short with Chinese where found,
+    enrich missing project_url, fill venue.
+    """
     updated = 0
     for p in papers:
         aid = p.get("arxiv_id")
         if not aid:
             continue
+        touched = False
+
+        # Refresh Chinese description from news_archive
         chinese = extract_chinese_summary(aid)
         if chinese and chinese != p.get("abstract_short"):
             p["abstract_short"] = chinese
+            touched = True
+
+        # Fill project URL from news_archive if absent
+        links = p.setdefault("links", {})
+        if not links.get("project"):
+            proj = find_project_url_in_news_archive(aid)
+            if proj:
+                links["project"] = proj
+                touched = True
+
+        if touched:
             updated += 1
     return updated
 
@@ -293,6 +356,23 @@ def categorize(meta: dict[str, Any]) -> str:
     return "vla"  # safe default for embodied AI papers
 
 
+def find_project_url_in_news_archive(arxiv_id: str) -> str:
+    """Search ±500 chars around arxiv link in news_archive for a project page URL."""
+    if not NEWS_ARCHIVE.exists():
+        return ""
+    pattern = re.compile(rf"https?://arxiv\.org/abs/{re.escape(arxiv_id)}")
+    for md_file in sorted(NEWS_ARCHIVE.glob("embodied-*.md"), reverse=True):
+        text = md_file.read_text(encoding="utf-8", errors="ignore")
+        m = pattern.search(text)
+        if not m:
+            continue
+        chunk = text[max(0, m.start() - 500) : m.end() + 500]
+        pm = PROJECT_URL_RE.search(chunk)
+        if pm:
+            return pm.group(0)
+    return ""
+
+
 def to_paper_entry(meta: dict[str, Any]) -> dict[str, Any]:
     chinese = extract_chinese_summary(meta["arxiv_id"])
     if chinese:
@@ -301,17 +381,22 @@ def to_paper_entry(meta: dict[str, Any]) -> dict[str, Any]:
         abstract_short = meta.get("abstract", "")[:240].strip()
         if abstract_short and not abstract_short.endswith("."):
             abstract_short = abstract_short.rsplit(" ", 1)[0] + "..."
+
+    project_url = meta.get("project_url") or find_project_url_in_news_archive(meta["arxiv_id"])
+    links: dict[str, str] = {"arxiv": f"https://arxiv.org/abs/{meta['arxiv_id']}"}
+    if project_url:
+        links["project"] = project_url
+
     return {
         "arxiv_id": meta["arxiv_id"],
         "title": meta["title"],
         "authors": short_authors(meta["authors"]),
-        "date": meta["published"][:7],  # YYYY-MM
+        "date": meta["published"][:10],  # YYYY-MM-DD (full)
+        "venue": meta.get("venue", ""),
         "category": categorize(meta),
         "tags": ["news-archive"],
         "abstract_short": abstract_short,
-        "links": {
-            "arxiv": f"https://arxiv.org/abs/{meta['arxiv_id']}",
-        },
+        "links": links,
         "highlight": "🔥" if (meta.get("published", "") >= "2026-04") else "👀",
         "added": date.today().isoformat(),
         "source": "news_archive",

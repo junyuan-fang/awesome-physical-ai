@@ -93,9 +93,12 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {%- else %}
 
 {% set cat_papers = papers | selectattr("category", "equalto", cat.id) | sort(attribute="date", reverse=true) | list %}
+{% set recent_year = cat_papers | selectattr("date", "ge", "2026") | list %}
+{% set earlier = cat_papers | rejectattr("date", "ge", "2026") | list %}
 {% if cat_papers %}
-{% for p in cat_papers -%}
-- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}) — *{{ p.authors }}*
+{% if recent_year %}
+{% for p in recent_year -%}
+- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}{% if p.venue %}, {{ p.venue }}{% endif %}) — *{{ p.authors }}*
   - {{ p.abstract_short }}
   {% if p.links.project or p.links.code or p.links.demo -%}
   - {% if p.links.project %}[project]({{ p.links.project }}){% endif %}{% if p.links.project and (p.links.code or p.links.demo) %} · {% endif %}{% if p.links.code %}[code]({{ p.links.code }}){% endif %}{% if p.links.code and p.links.demo %} · {% endif %}{% if p.links.demo %}[demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
@@ -103,6 +106,24 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
   - `{{ p.tags | join(" · ") }}`
   {% endif -%}
 {% endfor %}
+{% endif %}
+{% if earlier %}
+
+<details>
+<summary>📜 Show {{ earlier | length }} earlier paper{% if earlier | length > 1 %}s{% endif %}</summary>
+
+{% for p in earlier -%}
+- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}{% if p.venue %}, {{ p.venue }}{% endif %}) — *{{ p.authors }}*
+  - {{ p.abstract_short }}
+  {% if p.links.project or p.links.code or p.links.demo -%}
+  - {% if p.links.project %}[project]({{ p.links.project }}){% endif %}{% if p.links.project and (p.links.code or p.links.demo) %} · {% endif %}{% if p.links.code %}[code]({{ p.links.code }}){% endif %}{% if p.links.code and p.links.demo %} · {% endif %}{% if p.links.demo %}[demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
+  {% else -%}
+  - `{{ p.tags | join(" · ") }}`
+  {% endif -%}
+{% endfor %}
+
+</details>
+{% endif %}
 {% else %}
 *No entries yet — [contribute one!](CONTRIBUTING.md)*
 {% endif %}
