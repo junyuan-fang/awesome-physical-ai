@@ -30,104 +30,104 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="foundation-models"></a>🤖 Foundation Models for Robotics
 
 *Generalist policies, VLA, world models*
-- 🔥 **[stable-worldmodel: A Reproducibility-First Infrastructure for World Models](https://arxiv.org/abs/2605.21800)** (2026-05) — *Anonymous*
+- 🔥 **stable-worldmodel: A Reproducibility-First Infrastructure for World Models** (2026-05) — *Anonymous*
   - 给 WAM 阵营（昨天提的 RAW-Dream、DreamZero、PhysiFlow 等）提供统一基础设施；推动 world model 研究从"各家造轮子"走向 reproducibility-first
-- `world-model · infrastructure · lerobot · benchmark`
-- 🔥 **[RAW-Dream: Reward-Aligned World Model Without Task Data](https://arxiv.org/abs/2605.12334)** (2026-05) — *Anonymous*
+  - [arXiv](https://arxiv.org/abs/2605.21800) · `world-model · infrastructure · lerobot · benchmark`
+- 🔥 **RAW-Dream: Reward-Aligned World Model Without Task Data** (2026-05) — *Anonymous*
   - 把"训世界模型也要任务数据"这个束缚拆掉；是 Joint WAM 阵营最新代表（昨天 WAM survey 给的 taxonomy）
-- `world-model · joint-wam · vlm-reward`
-- 🔥 **[World Action Model Survey: Cascaded vs Joint Taxonomy](https://arxiv.org/abs/2605.12090)** (2026-05) — *Anonymous*
+  - [arXiv](https://arxiv.org/abs/2605.12334) · `world-model · joint-wam · vlm-reward`
+- 🔥 **World Action Model Survey: Cascaded vs Joint Taxonomy** (2026-05) — *Anonymous*
   - 把 2025 H2 - 2026 H1 散落工作（NVIDIA Cosmos / DreamZero / LeVERB / PhysiFlow / HEX 等）收编进统一框架；为产业 + 学术界提供 共同的概念锚：Cascaded vs Joint
-- `survey · world-model · wam-taxonomy`
-- 🔥 **[Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models](https://arxiv.org/abs/2605.31158)** (2026-05) — *Lu, Jiacheng et al.*
+  - [arXiv](https://arxiv.org/abs/2605.12090) · `survey · world-model · wam-taxonomy`
+- 🔥 **Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models** (2026-05) — *Lu, Jiacheng et al.*
   - Interactive video world models generate video chunk by chunk in response to user-controlled camera movements, enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However, scaling to...
-- `news-archive`
-- 🔥 **[Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models](https://arxiv.org/abs/2605.31158)** (2026-05) — *Lu, Jiacheng et al.*
+  - [arXiv](https://arxiv.org/abs/2605.31158) · `news-archive`
+- 🔥 **Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models** (2026-05) — *Lu, Jiacheng et al.*
   - Interactive video world models generate video chunk by chunk in response to user-controlled camera movements, enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However, scaling to...
-- `news-archive`
-- 👀 **[HEX: Humanoid Embodied World Model](https://arxiv.org/abs/2604.07993)** (2026-04) — *Anonymous*
+  - [arXiv](https://arxiv.org/abs/2605.31158) · `news-archive`
+- 👀 **HEX: Humanoid Embodied World Model** (2026-04) — *Anonymous*
   - "首个 full-sized 双足人形的全身 VLA 框架"；Full-sized 双足是产业最难做的形态（重心高、足底支撑窄）
-- `world-model · humanoid`
-- 📜 **[Cosmos World Foundation Model Platform for Physical AI](https://arxiv.org/abs/2501.03575)** (2025-01) — *NVIDIA*
+  - [arXiv](https://arxiv.org/abs/2604.07993) · `world-model · humanoid`
+- 📜 **Cosmos World Foundation Model Platform for Physical AI** (2025-01) — *NVIDIA*
   - NVIDIA's open world model platform for physical AI training data generation.
-- [project](https://www.nvidia.com/en-us/ai/cosmos/) · [code](https://github.com/NVIDIA/Cosmos) · `world-model · nvidia · physical-ai`
+  - [arXiv](https://arxiv.org/abs/2501.03575) · [project](https://www.nvidia.com/en-us/ai/cosmos/) · [code](https://github.com/NVIDIA/Cosmos) · `world-model · nvidia · physical-ai`
 
 ## <a id="manipulation"></a>🦾 Manipulation
 
 *Grasping, dexterous, bimanual manipulation*
-- 🔥 **[HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation](https://arxiv.org/abs/2605.15157)** (2026-05) — *Anonymous*
+- 🔥 **HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation** (2026-05) — *Anonymous*
   - 解决 high-DoF 灵巧操作的 IIL 命令匹配难题；给 ROBOTERA、银河通用、智元等"teleop 路线"公司提供新工具
-- `dexterous · interactive-il · teleop`
-- 🔥 **[Dexterous Hand Research: A Comprehensive Survey (2026)](https://arxiv.org/abs/2605.13925)** (2026-05) — *Anonymous*
+  - [arXiv](https://arxiv.org/abs/2605.15157) · `dexterous · interactive-il · teleop`
+- 🔥 **Dexterous Hand Research: A Comprehensive Survey (2026)** (2026-05) — *Anonymous*
   - 这是当前最完整的灵巧手研究综述，与最近几篇 VLA / WAM survey 形成完整文献地图；触觉 modality（与 TARS VLTA / Sanctuary Phoenix Gen 8 / HandITL 一线产业 / 论文趋势呼应）被作为下一阶段关键
-- `survey · dexterous · tactile`
-- 🔥 **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](https://arxiv.org/abs/2605.21811)** (2026-05) — *Wu, Albert et al.*
+  - [arXiv](https://arxiv.org/abs/2605.13925) · `survey · dexterous · tactile`
+- 🔥 **Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation** (2026-05) — *Wu, Albert et al.*
   - Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector poses on...
-- `news-archive`
-- 🔥 **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](https://arxiv.org/abs/2605.21811)** (2026-05) — *Wu, Albert et al.*
+  - [arXiv](https://arxiv.org/abs/2605.21811) · `news-archive`
+- 🔥 **Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation** (2026-05) — *Wu, Albert et al.*
   - Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector poses on...
-- `news-archive`
-- 📜 **[ALOHA Unleashed: A Simple Recipe for Robot Dexterity](https://arxiv.org/abs/2410.13126)** (2024-10) — *Zhao et al.*
+  - [arXiv](https://arxiv.org/abs/2605.21811) · `news-archive`
+- 📜 **ALOHA Unleashed: A Simple Recipe for Robot Dexterity** (2024-10) — *Zhao et al.*
   - Diffusion policy + large-scale teleop data for dexterous bimanual manipulation — community baseline.
-- [project](https://aloha-unleashed.github.io) · `bimanual · diffusion · dexterous`
+  - [arXiv](https://arxiv.org/abs/2410.13126) · [project](https://aloha-unleashed.github.io) · `bimanual · diffusion · dexterous`
 
 ## <a id="locomotion"></a>🦿 Locomotion
 
 *Humanoid, quadruped, bipedal walking and running*
-- 🔥 **[SPRINT: Spectral-Priors Reinforced Humanoid Sprinting](https://arxiv.org/abs/2605.28549)** (2026-05) — *Anonymous*
+- 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) — *Anonymous*
   - 6 m/s 是当前 humanoid 短跑公开数字第一档（vs Tesla Optimus Gen 3 行走 1.2 m/s、Figure 03 慢跑 2 m/s）；Spectral priors 是"frequency domain reference 库"思路 — 比 motion capture demos 数据效率高很多
-- `humanoid · sprint · frequency-domain`
-- 🔥 **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](https://arxiv.org/abs/2605.21935)** (2026-05) — *Jiang, Peifeng et al.*
+  - [arXiv](https://arxiv.org/abs/2605.28549) · `humanoid · sprint · frequency-domain`
+- 🔥 **Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments** (2026-05) — *Jiang, Peifeng et al.*
   - Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
-- `news-archive`
-- 🔥 **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](https://arxiv.org/abs/2605.21935)** (2026-05) — *Jiang, Peifeng et al.*
+  - [arXiv](https://arxiv.org/abs/2605.21935) · `news-archive`
+- 🔥 **Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments** (2026-05) — *Jiang, Peifeng et al.*
   - Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
-- `news-archive`
+  - [arXiv](https://arxiv.org/abs/2605.21935) · `news-archive`
 
 ## <a id="teleoperation"></a>🕹️ Teleoperation
 
 *VR, wearable, and exoskeleton-based data collection*
-- 🔥 **[MonoDuo: Using One Robot Arm to Learn Bimanual Policies](https://arxiv.org/abs/2605.29298)** (2026-05) — *Bajamahal, Sandeep et al.*
+- 🔥 **MonoDuo: Using One Robot Arm to Learn Bimanual Policies** (2026-05) — *Bajamahal, Sandeep et al.*
   - Bimanual coordination is essential for many real-world manipulation tasks, yet learning bimanual robot policies is limited by the scarcity of bimanual robots and datasets. Single-arm robots, however, are widely available in research labs....
-- `news-archive`
-- 🔥 **[MonoDuo: Using One Robot Arm to Learn Bimanual Policies](https://arxiv.org/abs/2605.29298)** (2026-05) — *Bajamahal, Sandeep et al.*
+  - [arXiv](https://arxiv.org/abs/2605.29298) · `news-archive`
+- 🔥 **MonoDuo: Using One Robot Arm to Learn Bimanual Policies** (2026-05) — *Bajamahal, Sandeep et al.*
   - Bimanual coordination is essential for many real-world manipulation tasks, yet learning bimanual robot policies is limited by the scarcity of bimanual robots and datasets. Single-arm robots, however, are widely available in research labs....
-- `news-archive`
-- 👀 **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](https://arxiv.org/abs/2603.08122)** (2026-03) — *Tang, Tutian et al.*
+  - [arXiv](https://arxiv.org/abs/2605.29298) · `news-archive`
+- 👀 **Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA** (2026-03) — *Tang, Tutian et al.*
   - While Vision-Language-Action (VLA) models have demonstrated remarkable success in robotic manipulation, their application has largely been confined to low-degree-of-freedom end-effectors performing simple, vision-guided pick-and-place...
-- `news-archive`
-- 👀 **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](https://arxiv.org/abs/2603.08122)** (2026-03) — *Tang, Tutian et al.*
+  - [arXiv](https://arxiv.org/abs/2603.08122) · `news-archive`
+- 👀 **Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA** (2026-03) — *Tang, Tutian et al.*
   - While Vision-Language-Action (VLA) models have demonstrated remarkable success in robotic manipulation, their application has largely been confined to low-degree-of-freedom end-effectors performing simple, vision-guided pick-and-place...
-- `news-archive`
-- 📜 **[OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback](https://arxiv.org/abs/2407.01512)** (2024-07) — *Cheng et al.*
+  - [arXiv](https://arxiv.org/abs/2603.08122) · `news-archive`
+- 📜 **OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback** (2024-07) — *Cheng et al.*
   - Open-source VR teleoperation system with binocular stereo feedback — community reference.
-- [project](https://robot-tv.github.io) · [code](https://github.com/OpenTeleVision/TeleVision) · `vr · stereo · open-source`
-- 📜 **[Mobile ALOHA: Learning Bimanual Mobile Manipulation](https://arxiv.org/abs/2401.02117)** (2024-01) — *Fu et al.*
+  - [arXiv](https://arxiv.org/abs/2407.01512) · [project](https://robot-tv.github.io) · [code](https://github.com/OpenTeleVision/TeleVision) · `vr · stereo · open-source`
+- 📜 **Mobile ALOHA: Learning Bimanual Mobile Manipulation** (2024-01) — *Fu et al.*
   - $32k mobile teleop platform — community baseline for whole-body teleop.
-- [project](https://mobile-aloha.github.io) · [code](https://github.com/MarkFzp/mobile-aloha) · `mobile · bimanual · low-cost`
+  - [arXiv](https://arxiv.org/abs/2401.02117) · [project](https://mobile-aloha.github.io) · [code](https://github.com/MarkFzp/mobile-aloha) · `mobile · bimanual · low-cost`
 
 ## <a id="sim2real"></a>🌉 Sim-to-Real
 
 *Domain randomization, sim-to-real transfer, deployment*
-- 🔥 **[Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real](https://arxiv.org/abs/2605.22272)** (2026-05) — *Anonymous*
+- 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) — *Anonymous*
   - 解决 humanoid 与物体交互的"3D 数据从哪来"瓶颈；用 video 生成模型作为 prior，与 NVIDIA Cosmos / GR00T-Dreams 同思路但场景更细：HOI 而非通用 manipulation
-- `hoi · video-prior · zero-shot`
-- 👀 **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751)** (2025-06) — *Xue, Haoru et al.*
+  - [arXiv](https://arxiv.org/abs/2605.22272) · `hoi · video-prior · zero-shot`
+- 👀 **LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction** (2025-06) — *Xue, Haoru et al.*
   - Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization, yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
-- `news-archive`
-- 👀 **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751)** (2025-06) — *Xue, Haoru et al.*
+  - [arXiv](https://arxiv.org/abs/2506.13751) · `news-archive`
+- 👀 **LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction** (2025-06) — *Xue, Haoru et al.*
   - Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization, yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
-- `news-archive`
+  - [arXiv](https://arxiv.org/abs/2506.13751) · `news-archive`
 
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
 *NeRF, Gaussian Splatting, segmentation for robotics*
-- 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** (2026-05) — *Anonymous*
+- 🔥 **PhysX-Omni: Simulation-Ready 3D Generation for Robotics** (2026-05) — *Anonymous*
   - 为 robotic policy learning 和 simulation-ready scene generation 提供原料；减少 robotics 仿真数据手工建模成本
-- `sim-ready · 3d-generation · vlm`
-- 📜 **[3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://arxiv.org/abs/2308.04079)** (2023-08) — *Kerbl et al.*
+  - [arXiv](https://arxiv.org/abs/2605.21572) · `sim-ready · 3d-generation · vlm`
+- 📜 **3D Gaussian Splatting for Real-Time Radiance Field Rendering** (2023-08) — *Kerbl et al.*
   - Real-time, high-quality radiance field rendering — now ubiquitous in 3D scene understanding pipelines.
-- [project](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) · [code](https://github.com/graphdeco-inria/gaussian-splatting) · `gaussian-splatting · novel-view-synthesis`
+  - [arXiv](https://arxiv.org/abs/2308.04079) · [project](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) · [code](https://github.com/graphdeco-inria/gaussian-splatting) · `gaussian-splatting · novel-view-synthesis`
 
 ## <a id="navigation"></a>🧭 Navigation & Mobility
 
@@ -137,9 +137,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="rl-il"></a>🎯 RL & Imitation Learning
 
 *Diffusion policies, behavior cloning, RL for robotics*
-- 📜 **[Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/abs/2303.04137)** (2023-03) — *Chi et al.*
+- 📜 **Diffusion Policy: Visuomotor Policy Learning via Action Diffusion** (2023-03) — *Chi et al.*
   - Action-space diffusion — now the default visuomotor policy baseline.
-- [project](https://diffusion-policy.cs.columbia.edu) · [code](https://github.com/real-stanford/diffusion_policy) · `diffusion · imitation · visuomotor`
+  - [arXiv](https://arxiv.org/abs/2303.04137) · [project](https://diffusion-policy.cs.columbia.edu) · [code](https://github.com/real-stanford/diffusion_policy) · `diffusion · imitation · visuomotor`
 
 ## <a id="datasets"></a>📦 Datasets
 
@@ -298,21 +298,21 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ## 🆕 Recent additions (last 45 days)
 
-- 🔥 **[AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment](https://arxiv.org/abs/2606.02486)** (2026-06) · *Anonymous (under review)* · `vla`
-- 🔥 **[Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction](https://arxiv.org/abs/2605.30834)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[Qwen-VLA: Alibaba's Embodied Foundation Model](https://arxiv.org/abs/2605.30280)** (2026-05) · *Alibaba* · `vla`
-- 🔥 **[SPRINT: Spectral-Priors Reinforced Humanoid Sprinting](https://arxiv.org/abs/2605.28549)** (2026-05) · *Anonymous* · `locomotion`
-- 👀 **[Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations](https://arxiv.org/abs/2605.26820)** (2026-05) · *Anonymous* · `vla`
-- 👀 **[GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models](https://arxiv.org/abs/2605.22812)** (2026-05) · *Xuan et al.* · [project](https://gwxuan.github.io/GesVLA/) · `vla`
-- 🔥 **[Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real](https://arxiv.org/abs/2605.22272)** (2026-05) · *Anonymous* · `sim2real`
-- 🔥 **[AVP: Action-Visual Primitives for Decoupled VLA Architecture](https://arxiv.org/abs/2605.22183)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[stable-worldmodel: A Reproducibility-First Infrastructure for World Models](https://arxiv.org/abs/2605.21800)** (2026-05) · *Anonymous* · `foundation-models`
-- 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** (2026-05) · *Anonymous* · `scene`
-- 🔥 **[Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation](https://arxiv.org/abs/2605.21133)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation](https://arxiv.org/abs/2605.15157)** (2026-05) · *Anonymous* · `manipulation`
-- 🔥 **[IntentVLA: History-Conditioned Action Prediction for VLA](https://arxiv.org/abs/2605.14712)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[Dexterous Hand Research: A Comprehensive Survey (2026)](https://arxiv.org/abs/2605.13925)** (2026-05) · *Anonymous* · `manipulation`
-- 🔥 **[RAW-Dream: Reward-Aligned World Model Without Task Data](https://arxiv.org/abs/2605.12334)** (2026-05) · *Anonymous* · `foundation-models`
+- 🔥 **AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment** (2026-06) · *Anonymous (under review)* · [arXiv](https://arxiv.org/abs/2606.02486) · `vla`
+- 🔥 **Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.30834) · `vla`
+- 🔥 **Qwen-VLA: Alibaba's Embodied Foundation Model** (2026-05) · *Alibaba* · [arXiv](https://arxiv.org/abs/2605.30280) · `vla`
+- 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.28549) · `locomotion`
+- 👀 **Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.26820) · `vla`
+- 👀 **GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models** (2026-05) · *Xuan et al.* · [arXiv](https://arxiv.org/abs/2605.22812) · [project](https://gwxuan.github.io/GesVLA/) · `vla`
+- 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22272) · `sim2real`
+- 🔥 **AVP: Action-Visual Primitives for Decoupled VLA Architecture** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22183) · `vla`
+- 🔥 **stable-worldmodel: A Reproducibility-First Infrastructure for World Models** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21800) · `foundation-models`
+- 🔥 **PhysX-Omni: Simulation-Ready 3D Generation for Robotics** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21572) · `scene`
+- 🔥 **Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21133) · `vla`
+- 🔥 **HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.15157) · `manipulation`
+- 🔥 **IntentVLA: History-Conditioned Action Prediction for VLA** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.14712) · `vla`
+- 🔥 **Dexterous Hand Research: A Comprehensive Survey (2026)** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.13925) · `manipulation`
+- 🔥 **RAW-Dream: Reward-Aligned World Model Without Task Data** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.12334) · `foundation-models`
 
 > 🤖 *Auto-rolled forward from `data/papers.yaml` every push. Older entries naturally drop out of this window but remain in their category section.*
 
