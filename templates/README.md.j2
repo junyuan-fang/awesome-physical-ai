@@ -95,9 +95,13 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {% set cat_papers = papers | selectattr("category", "equalto", cat.id) | sort(attribute="date", reverse=true) | list %}
 {% if cat_papers %}
 {% for p in cat_papers -%}
-- {{ p.highlight | default("") }} **{{ p.title }}** ({{ p.date }}) — *{{ p.authors }}*
+- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}) — *{{ p.authors }}*
   - {{ p.abstract_short }}
-  - {% if p.links.arxiv %}[arXiv]({{ p.links.arxiv }}){% endif %}{% if p.links.project %} · [project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
+  {% if p.links.project or p.links.code or p.links.demo -%}
+  - {% if p.links.project %}[project]({{ p.links.project }}){% endif %}{% if p.links.project and (p.links.code or p.links.demo) %} · {% endif %}{% if p.links.code %}[code]({{ p.links.code }}){% endif %}{% if p.links.code and p.links.demo %} · {% endif %}{% if p.links.demo %}[demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
+  {% else -%}
+  - `{{ p.tags | join(" · ") }}`
+  {% endif -%}
 {% endfor %}
 {% else %}
 *No entries yet — [contribute one!](CONTRIBUTING.md)*
@@ -114,7 +118,7 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {% set recent = papers | selectattr("date", "ge", recent_cutoff) | sort(attribute="date", reverse=true) | list %}
 {% if recent %}
 {% for p in recent[:15] -%}
-- {{ p.highlight | default("") }} **{{ p.title }}** ({{ p.date }}) · *{{ p.authors }}* · [arXiv]({{ p.links.arxiv }}){% if p.links.project %} · [project]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
+- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}) · *{{ p.authors }}*{% if p.links.project %} · [project]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
 {% endfor %}
 {% else %}
 *No recent additions in the rolling window — see full sections above.*

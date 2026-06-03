@@ -17,6 +17,7 @@ Designed to be idempotent — running twice without new papers is a no-op.
 """
 from __future__ import annotations
 
+import html
 import json
 import logging
 import re
@@ -37,7 +38,14 @@ PAPERS_YAML = ROOT / "data" / "papers.yaml"
 NEWS_ARCHIVE = Path.home() / "code" / "claude_bot" / "news_archive"
 
 ARXIV_API = "https://export.arxiv.org/api/query"
+ARXIV_ABS = "https://arxiv.org/abs/{arxiv_id}"
 S2_API = "https://api.semanticscholar.org/graph/v1/paper/arXiv:{arxiv_id}?fields=title,abstract,authors,publicationDate,year"
+META_TAG_RE = re.compile(
+    r'<meta\s+name="citation_(?P<key>[a-z_]+)"\s+content="(?P<value>[^"]*)"\s*/?>',
+    re.IGNORECASE,
+)
+BULLET_RE = re.compile(r"^\s*[-*]\s+(?P<text>.+)$", re.MULTILINE)
+NOISE_BULLET_PREFIXES = ("来源", "源：", "Source", "见 ", "参见", "信源", "扩展阅读", "延伸阅读")
 USER_AGENT = "awesome-physical-ai/0.1 (https://github.com/junyuan-fang/awesome-physical-ai; mailto:fangjunyuan1@gmail.com)"
 ATOM_NS = {"atom": "http://www.w3.org/2005/Atom"}
 ARXIV_NS = {"arxiv": "http://arxiv.org/schemas/atom"}
@@ -85,6 +93,80 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 log = logging.getLogger("ingest")
+
+
+def fetch_arxiv_html(arxiv_id: str) -> dict[str, Any] | None:
+    """Scrape arXiv abstract page HTML for citation_* meta tags. Primary path."""
+    url = ARXIV_ABS.format(arxiv_id=arxiv_id)
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    for attempt in range(1, 3):
+        try:
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                content = resp.read().decode("utf-8", errors="replace")
+            break
+        except (urllib.error.URLError, TimeoutError) as e:
+            log.warning("arXiv HTML fetch failed for %s (try %d/2): %s", arxiv_id, attempt, e)
+            time.sleep(3)
+    else:
+        return None
+
+    fields: dict[str, list[str]] = {}
+    for m in META_TAG_RE.finditer(content):
+        fields.setdefault(m.group("key"), []).append(html.unescape(m.group("value")))
+    title = (fields.get("title") or [""])[0].strip()
+    if not title:
+        return None
+    return {
+        "arxiv_id": arxiv_id,
+        "title": title,
+        "abstract": (fields.get("abstract") or [""])[0].strip(),
+        "published": (fields.get("date") or [""])[0].replace("/", "-")[:10],
+        "authors": [a.strip() for a in fields.get("author", [])],
+    }
+
+
+def extract_chinese_summary(arxiv_id: str) -> str | None:
+    """Find arXiv ID in news_archive markdown, pull surrounding Chinese 业内意义."""
+    if not NEWS_ARCHIVE.exists():
+        return None
+    pattern = re.compile(rf"https?://arxiv\.org/abs/{re.escape(arxiv_id)}")
+    for md_file in sorted(NEWS_ARCHIVE.glob("embodied-*.md"), reverse=True):
+        text = md_file.read_text(encoding="utf-8", errors="ignore")
+        m = pattern.search(text)
+        if not m:
+            continue
+        before = text[: m.start()]
+        h_idx = before.rfind("### 业内意义")
+        if h_idx == -1:
+            h_idx = max(before.rfind("\n## "), before.rfind("\n### "))
+        if h_idx == -1:
+            continue
+        section = text[h_idx : m.start()]
+        bullets = [b.group("text").strip() for b in BULLET_RE.finditer(section)]
+        bullets = [b for b in bullets if not b.startswith(NOISE_BULLET_PREFIXES) and len(b) > 6]
+        if not bullets:
+            continue
+        summary = "；".join(bullets[:2])
+        summary = re.sub(r"\*\*([^*]+)\*\*", r"\1", summary)
+        summary = re.sub(r"\*([^*]+)\*", r"\1", summary)
+        if len(summary) > 240:
+            summary = summary[:240].rsplit("，", 1)[0] + "…"
+        return summary
+    return None
+
+
+def update_existing_chinese_summaries(papers: list[dict[str, Any]]) -> int:
+    """Walk all existing papers; overwrite abstract_short with Chinese where found."""
+    updated = 0
+    for p in papers:
+        aid = p.get("arxiv_id")
+        if not aid:
+            continue
+        chinese = extract_chinese_summary(aid)
+        if chinese and chinese != p.get("abstract_short"):
+            p["abstract_short"] = chinese
+            updated += 1
+    return updated
 
 
 def extract_arxiv_ids() -> set[str]:
@@ -212,9 +294,13 @@ def categorize(meta: dict[str, Any]) -> str:
 
 
 def to_paper_entry(meta: dict[str, Any]) -> dict[str, Any]:
-    abstract_short = meta.get("abstract", "")[:240].strip()
-    if abstract_short and not abstract_short.endswith("."):
-        abstract_short = abstract_short.rsplit(" ", 1)[0] + "..."
+    chinese = extract_chinese_summary(meta["arxiv_id"])
+    if chinese:
+        abstract_short = chinese
+    else:
+        abstract_short = meta.get("abstract", "")[:240].strip()
+        if abstract_short and not abstract_short.endswith("."):
+            abstract_short = abstract_short.rsplit(" ", 1)[0] + "..."
     return {
         "arxiv_id": meta["arxiv_id"],
         "title": meta["title"],
@@ -242,6 +328,8 @@ def git_run(*args: str) -> subprocess.CompletedProcess:
 
 
 def main() -> int:
+    update_existing = "--update-existing" in sys.argv
+
     all_ids = extract_arxiv_ids()
     log.info("Found %d unique arXiv IDs in news_archive", len(all_ids))
 
@@ -249,41 +337,55 @@ def main() -> int:
     new_ids = sorted(all_ids - have)
     log.info("New IDs to ingest: %d (have %d already)", len(new_ids), len(have))
 
-    if not new_ids:
-        log.info("Nothing new — exiting cleanly.")
-        return 0
-
-    # Primary source: Semantic Scholar (per-ID, but reliable). Fall back to arXiv batch only if many fail.
-    meta_by_id: dict[str, dict[str, Any]] = {}
-    for aid in new_ids:
-        m = fetch_semantic_scholar(aid)
-        if m:
-            meta_by_id[aid] = m
-        time.sleep(1.1)  # S2 1 req/sec without API key
-    log.info("Semantic Scholar returned metadata for %d / %d", len(meta_by_id), len(new_ids))
-
-    # Fallback to arXiv API for the ones S2 missed
-    missing = [aid for aid in new_ids if aid not in meta_by_id]
-    if missing:
-        log.info("Falling back to arXiv API for %d IDs S2 didn't cover", len(missing))
-        arxiv_meta = fetch_arxiv_metadata(missing)
-        meta_by_id.update(arxiv_meta)
-        log.info("After arXiv fallback: %d / %d total", len(meta_by_id), len(new_ids))
-
     existing_doc = yaml.safe_load(PAPERS_YAML.read_text()) or {}
     existing_papers: list[dict[str, Any]] = existing_doc.get("papers", [])
 
-    added = 0
-    for aid in new_ids:
-        meta = meta_by_id.get(aid)
-        if not meta or not meta.get("title"):
-            log.warning("Skipping %s — no metadata", aid)
-            continue
-        existing_papers.append(to_paper_entry(meta))
-        added += 1
+    # Optional backfill: refresh abstract_short for existing entries.
+    backfilled = 0
+    if update_existing:
+        backfilled = update_existing_chinese_summaries(existing_papers)
+        log.info("--update-existing: refreshed %d entries", backfilled)
 
-    if not added:
-        log.info("Nothing actually added after metadata fetch — exiting.")
+    # Fetch new papers, if any.
+    added = 0
+    if new_ids:
+        meta_by_id: dict[str, dict[str, Any]] = {}
+        # Primary: arXiv HTML scrape (no rate limit, no SSL issues)
+        for aid in new_ids:
+            m = fetch_arxiv_html(aid)
+            if m:
+                meta_by_id[aid] = m
+            time.sleep(2)
+        log.info("arXiv HTML scrape: %d / %d", len(meta_by_id), len(new_ids))
+
+        # Fallback 1: Semantic Scholar
+        missing = [aid for aid in new_ids if aid not in meta_by_id]
+        if missing:
+            log.info("Falling back to Semantic Scholar for %d IDs", len(missing))
+            for aid in missing:
+                m = fetch_semantic_scholar(aid)
+                if m:
+                    meta_by_id[aid] = m
+                time.sleep(1.1)
+
+        # Fallback 2: arXiv API batch
+        missing = [aid for aid in new_ids if aid not in meta_by_id]
+        if missing:
+            log.info("Falling back to arXiv API for %d IDs", len(missing))
+            meta_by_id.update(fetch_arxiv_metadata(missing))
+
+        log.info("Final coverage: %d / %d", len(meta_by_id), len(new_ids))
+
+        for aid in new_ids:
+            meta = meta_by_id.get(aid)
+            if not meta or not meta.get("title"):
+                log.warning("Skipping %s — no metadata", aid)
+                continue
+            existing_papers.append(to_paper_entry(meta))
+            added += 1
+
+    if added == 0 and backfilled == 0:
+        log.info("Nothing to write — exiting cleanly.")
         return 0
 
     PAPERS_YAML.write_text(
@@ -295,25 +397,25 @@ def main() -> int:
         ),
         encoding="utf-8",
     )
-    log.info("Wrote %d new entries to %s", added, PAPERS_YAML.name)
+    log.info("Wrote papers.yaml: +%d new, %d refreshed", added, backfilled)
 
-    # Regenerate README
     rc = subprocess.run(
-        [sys.executable, str(ROOT / "scripts" / "generate_readme.py")],
-        check=False,
+        [sys.executable, str(ROOT / "scripts" / "generate_readme.py")], check=False,
     ).returncode
     if rc != 0:
         log.error("generate_readme.py failed (rc=%d)", rc)
         return rc
 
-    # Commit + push only if there are actual file changes
     status = git_run("status", "--porcelain")
     if not status.stdout.strip():
         log.info("No git changes after regenerate — exiting.")
         return 0
 
     git_run("add", "data/papers.yaml", "README.md")
-    msg = f"chore: ingest {added} new papers from news_archive ({date.today().isoformat()})"
+    parts = []
+    if added: parts.append(f"+{added} papers")
+    if backfilled: parts.append(f"refreshed {backfilled} summaries")
+    msg = f"chore: {' & '.join(parts)} ({date.today().isoformat()})"
     commit = git_run(
         "-c", "user.email=fangjunyuan1@gmail.com",
         "-c", "user.name=junyuan-fang",
