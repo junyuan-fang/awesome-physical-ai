@@ -3,7 +3,7 @@
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
 
 🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
-📅 Last updated: **2026-06-03** · 📊 **27** papers · 🏢 **19** companies · 🎮 **7** simulators
+📅 Last updated: **2026-06-03** · 📊 **39** papers · 🏢 **19** companies · 🎮 **7** simulators
 
 Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -39,6 +39,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **World Action Model Survey: Cascaded vs Joint Taxonomy** (2026-05) — *Anonymous*
   - Unifies NVIDIA Cosmos / DreamZero / LeVERB / PhysiFlow / HEX in a Cascaded vs Joint framework — the WAM entry-point reference.
   - [arXiv](https://arxiv.org/abs/2605.12090) · `survey · world-model · wam-taxonomy`
+- 🔥 **Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models** (2026-05) — *Lu, Jiacheng et al.*
+  - Interactive video world models generate video chunk by chunk in response to user-controlled camera movements, enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However, scaling to...
+  - [arXiv](https://arxiv.org/abs/2605.31158) · `news-archive`
 - 👀 **HEX: Humanoid Embodied World Model** (2026-04) — *Anonymous*
   - Humanoid-centric world model in the WAM family — see WAM survey 2605.12090 for taxonomy placement.
   - [arXiv](https://arxiv.org/abs/2604.07993) · `world-model · humanoid`
@@ -55,6 +58,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **Dexterous Hand Research: A Comprehensive Survey (2026)** (2026-05) — *Anonymous*
   - Most comprehensive dexterous-hand survey to date — methods, datasets, evaluation; positions tactile as the next-stage key modality.
   - [arXiv](https://arxiv.org/abs/2605.13925) · `survey · dexterous · tactile`
+- 🔥 **Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation** (2026-05) — *Wu, Albert et al.*
+  - Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector poses on...
+  - [arXiv](https://arxiv.org/abs/2605.21811) · `news-archive`
 - 📜 **ALOHA Unleashed: A Simple Recipe for Robot Dexterity** (2024-10) — *Zhao et al.*
   - Diffusion policy + large-scale teleop data for dexterous bimanual manipulation — community baseline.
   - [arXiv](https://arxiv.org/abs/2410.13126) · [project](https://aloha-unleashed.github.io) · `bimanual · diffusion · dexterous`
@@ -65,10 +71,19 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) — *Anonymous*
   - Humanoid sprint at 6 m/s — public-data first-tier (vs Optimus Gen 3 1.2 m/s, Figure 03 ~2 m/s).
   - [arXiv](https://arxiv.org/abs/2605.28549) · `humanoid · sprint · frequency-domain`
+- 🔥 **Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments** (2026-05) — *Jiang, Peifeng et al.*
+  - Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
+  - [arXiv](https://arxiv.org/abs/2605.21935) · `news-archive`
 
 ## <a id="teleoperation"></a>🕹️ Teleoperation
 
 *VR, wearable, and exoskeleton-based data collection*
+- 🔥 **MonoDuo: Using One Robot Arm to Learn Bimanual Policies** (2026-05) — *Bajamahal, Sandeep et al.*
+  - Bimanual coordination is essential for many real-world manipulation tasks, yet learning bimanual robot policies is limited by the scarcity of bimanual robots and datasets. Single-arm robots, however, are widely available in research labs....
+  - [arXiv](https://arxiv.org/abs/2605.29298) · `news-archive`
+- 👀 **Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA** (2026-03) — *Tang, Tutian et al.*
+  - While Vision-Language-Action (VLA) models have demonstrated remarkable success in robotic manipulation, their application has largely been confined to low-degree-of-freedom end-effectors performing simple, vision-guided pick-and-place...
+  - [arXiv](https://arxiv.org/abs/2603.08122) · `news-archive`
 - 📜 **OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback** (2024-07) — *Cheng et al.*
   - Open-source VR teleoperation system with binocular stereo feedback — community reference.
   - [arXiv](https://arxiv.org/abs/2407.01512) · [project](https://robot-tv.github.io) · [code](https://github.com/OpenTeleVision/TeleVision) · `vr · stereo · open-source`
@@ -82,6 +97,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) — *Anonymous*
   - Use video generation as latent prior for human-object interaction; zero-shot mocap deployment, geometry-free.
   - [arXiv](https://arxiv.org/abs/2605.22272) · `hoi · video-prior · zero-shot`
+- 👀 **LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction** (2025-06) — *Xue, Haoru et al.*
+  - Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization, yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
+  - [arXiv](https://arxiv.org/abs/2506.13751) · `news-archive`
 
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
