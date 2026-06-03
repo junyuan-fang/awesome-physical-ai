@@ -63,6 +63,12 @@ categories:
     desc: "Robot trajectories, demonstrations, scene datasets"
     order: 9
     source: datasets.yaml
+    subcategories:
+      - { id: manipulation-demos, title: "Manipulation Demonstrations" }
+      - { id: scene-3d,           title: "3D Scenes" }
+      - { id: egocentric-human,   title: "Egocentric / Human Video" }
+      - { id: mocap-motion,       title: "Motion Capture / Whole-Body" }
+      - { id: sim-generated,      title: "Sim-Generated" }
 
   - id: simulators
     title: "Simulators"
@@ -77,6 +83,12 @@ categories:
     desc: "Standardized evaluations for embodied AI"
     order: 11
     source: benchmarks.yaml
+    subcategories:
+      - { id: manipulation,         title: "Manipulation" }
+      - { id: navigation,           title: "Navigation" }
+      - { id: locomotion,           title: "Locomotion / Whole-Body" }
+      - { id: vla-generalization,   title: "VLA Generalization & OOD" }
+      - { id: multi-skill,          title: "Multi-Skill / Long-Horizon" }
 
   - id: tools
     title: "Tools & Libraries"

@@ -9,23 +9,6 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ---
 
-## 🆕 Recent additions (last 30 days)
-
-- 🔥 **AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment** (2026-06) · *Anonymous (under review)* · [arXiv](https://arxiv.org/abs/2606.02486) · `vla`
-- 🔥 **Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.30834) · `vla`
-- 🔥 **Qwen-VLA: Alibaba's Embodied Foundation Model** (2026-05) · *Alibaba* · [arXiv](https://arxiv.org/abs/2605.30280) · `vla`
-- 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.28549) · `locomotion`
-- 👀 **Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.26820) · `vla`
-- 👀 **GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models** (2026-05) · *Xuan et al.* · [arXiv](https://arxiv.org/abs/2605.22812) · [project](https://gwxuan.github.io/GesVLA/) · `vla`
-- 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22272) · `sim2real`
-- 🔥 **AVP: Action-Visual Primitives for Decoupled VLA Architecture** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22183) · `vla`
-- 🔥 **stable-worldmodel: A Reproducibility-First Infrastructure for World Models** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21800) · `foundation-models`
-- 🔥 **PhysX-Omni: Simulation-Ready 3D Generation for Robotics** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21572) · `scene`
-
-> 🤖 *This section is auto-populated from papers dated within the last 30 days.*
-
----
-
 ## Contents
 
 - [🤖 Foundation Models for Robotics](#foundation-models)
@@ -125,12 +108,38 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="datasets"></a>📦 Datasets
 
 *Robot trajectories, demonstrations, scene datasets*
+
+
+### Manipulation Demonstrations
+
 - **[Open X-Embodiment (RT-X)](https://robotics-transformer-x.github.io)** — Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories. · *1M+ episodes* · [paper](https://arxiv.org/abs/2310.08864) · [code](https://github.com/google-deepmind/open_x_embodiment)
-- **[LIBERO](https://libero-project.github.io)** — Lifelong robot learning benchmark — 130 manipulation tasks. · [paper](https://arxiv.org/abs/2306.03310) · [code](https://github.com/Lifelong-Robot-Learning/LIBERO)
-- **[DROID](https://droid-dataset.github.io)** — Diverse, real-world manipulation dataset from 564 scenes, 13 institutions. · *76k demonstrations* · [paper](https://arxiv.org/abs/2403.12945)
+- **[DROID](https://droid-dataset.github.io)** — Diverse real-world manipulation dataset from 564 scenes, 13 institutions. · *76k demonstrations* · [paper](https://arxiv.org/abs/2403.12945)
 - **[BridgeData V2](https://rail-berkeley.github.io/bridgedata)** — Large-scale tabletop manipulation dataset for generalization research. · *60k trajectories* · [paper](https://arxiv.org/abs/2308.12952)
-- **[Habitat-Matterport 3D (HM3D)](https://aihabitat.org/datasets/hm3d/)** — 1000+ photorealistic indoor 3D scenes for embodied AI training. · [paper](https://arxiv.org/abs/2109.08238)
 - **[ARIO (All Robots In One)](https://imaei.github.io/project_pages/ario/)** — Unified cross-embodiment robot learning dataset. · [paper](https://arxiv.org/abs/2408.10899)
+- **[AgiBot World](https://agibot-world.com)** — Large-scale humanoid manipulation dataset from AgiBot's real-world deployments.
+
+### 3D Scenes
+
+- **[Habitat-Matterport 3D (HM3D)](https://aihabitat.org/datasets/hm3d/)** — 1000+ photorealistic indoor 3D scenes for embodied AI training. · [paper](https://arxiv.org/abs/2109.08238)
+- **[ScanNet++](https://kaldir.vc.in.tum.de/scannetpp/)** — 1006 high-fidelity indoor scenes with sub-mm geometry & DSLR captures. · [paper](https://arxiv.org/abs/2308.11417)
+- **[Replica Dataset](https://github.com/facebookresearch/Replica-Dataset)** — 18 high-quality reconstructions of indoor spaces (Meta Reality Labs). · [paper](https://arxiv.org/abs/1906.05797)
+- **[3D-FRONT / 3D-FUTURE](https://tianchi.aliyun.com/specials/promotion/alibaba-3d-scene-dataset)** — Synthetic indoor scenes with high-quality furniture CAD models (Alibaba). · [paper](https://arxiv.org/abs/2011.09127)
+
+### Egocentric / Human Video
+
+- **[Ego4D](https://ego4d-data.org)** — 3,670 hours of egocentric video across 74 worldwide locations. · *3,670 hours* · [paper](https://arxiv.org/abs/2110.07058)
+- **[EPIC-KITCHENS-100](https://epic-kitchens.github.io/2024)** — Long-form egocentric kitchen activity dataset for action understanding. · *100 hours* · [paper](https://arxiv.org/abs/2006.13256)
+- **[HOI4D](https://hoi4d.github.io)** — 4D egocentric dataset for category-level human-object interaction. · [paper](https://arxiv.org/abs/2203.01577)
+
+### Motion Capture / Whole-Body
+
+- **[AMASS](https://amass.is.tue.mpg.de)** — Unifies 15 mocap datasets in a common SMPL skeleton — 40+ hours of motion. · [paper](https://arxiv.org/abs/1904.03278)
+- **[HumanML3D](https://github.com/EricGuo5513/HumanML3D)** — 14,616 motions with text annotations for motion-language tasks. · [paper](https://arxiv.org/abs/2202.04257) · [code](https://github.com/EricGuo5513/HumanML3D)
+
+### Sim-Generated
+
+- **[RoboCasa-Gen](https://robocasa.ai)** — Large-scale procedurally generated household tasks rendered in MuJoCo. · [paper](https://arxiv.org/abs/2406.02523)
+- **[PhysXVerse](https://arxiv.org/abs/2605.21572)** — First general-purpose simulation-ready 3D dataset (released with PhysX-Omni, 2026). · [paper](https://arxiv.org/abs/2605.21572)
 
 ## <a id="simulators"></a>🎮 Simulators
 
@@ -146,11 +155,34 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="benchmarks"></a>📊 Benchmarks
 
 *Standardized evaluations for embodied AI*
+
+### Manipulation
+
 - **[CALVIN](http://calvin.cs.uni-freiburg.de)** — Long-horizon, language-conditioned manipulation benchmark. · [paper](https://arxiv.org/abs/2112.03227) · [code](https://github.com/mees/calvin)
-- **[Meta-World](https://meta-world.github.io)** — 50 manipulation tasks for multi-task and meta-RL. · [paper](https://arxiv.org/abs/1910.10897) · [code](https://github.com/Farama-Foundation/Metaworld)
-- **[LIBERO](https://libero-project.github.io)** — Lifelong robot learning benchmark — 130 manipulation tasks across 4 task suites. · [paper](https://arxiv.org/abs/2306.03310)
+- **[Meta-World](https://meta-world.github.io)** — 50 manipulation tasks for multi-task and meta-RL evaluation. · [paper](https://arxiv.org/abs/1910.10897) · [code](https://github.com/Farama-Foundation/Metaworld)
+- **[LIBERO](https://libero-project.github.io)** — Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites. · [paper](https://arxiv.org/abs/2306.03310)
 - **[RLBench](https://sites.google.com/view/rlbench)** — 100 vision-guided manipulation tasks with CoppeliaSim. · [paper](https://arxiv.org/abs/1909.12271) · [code](https://github.com/stepjam/RLBench)
+- **[AliasBench](https://arxiv.org/abs/2605.14712)** — Benchmark probing multimodal-imitation ambiguity in VLA (used in IntentVLA 2026). · [paper](https://arxiv.org/abs/2605.14712)
+
+### Navigation
+
 - **[ProcTHOR](https://procthor.allenai.org)** — 10,000+ procedurally generated household scenes for embodied AI. · [paper](https://arxiv.org/abs/2206.06994)
+- **[Habitat ObjectNav](https://aihabitat.org/challenge/2023/)** — Standard object-goal navigation in HM3D / MP3D. · [paper](https://arxiv.org/abs/2210.13063)
+- **[OVMM](https://arxiv.org/abs/2310.13724)** — Open-vocabulary mobile manipulation benchmark (Habitat 3.0). · [paper](https://arxiv.org/abs/2310.13724)
+
+### Locomotion / Whole-Body
+
+- **[HumanoidBench](https://humanoid-bench.github.io)** — MuJoCo-based humanoid locomotion + whole-body manipulation benchmark. · [paper](https://arxiv.org/abs/2403.10506) · [code](https://github.com/carlosferrazza/humanoid-bench)
+
+### VLA Generalization & OOD
+
+- **[SimplerEnv](https://simpler-env.github.io)** — Reproducible real-to-sim eval suite — measures VLA gap between real and sim deployment. · [paper](https://arxiv.org/abs/2405.05941) · [code](https://github.com/simpler-env/SimplerEnv)
+- **[PhysX-Bench](https://arxiv.org/abs/2605.21572)** — 6-dim evaluation (geometry/scale/material/affordance/kinematics/function) — released with PhysX-Omni, 2026. · [paper](https://arxiv.org/abs/2605.21572)
+
+### Multi-Skill / Long-Horizon
+
+- **[BEHAVIOR-1K](https://behavior.stanford.edu/behavior-1k)** — 1,000 long-horizon household activities in OmniGibson — the largest activity benchmark. · [paper](https://arxiv.org/abs/2403.09227)
+- **[RoboCasa-Bench](https://robocasa.ai)** — 100+ atomic + composite household tasks running on RoboCasa-Gen scenes. · [paper](https://arxiv.org/abs/2406.02523)
 
 ## <a id="tools"></a>🛠️ Tools & Libraries
 
@@ -225,6 +257,28 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 *Surveys, books, and tutorial materials*
 *No entries yet — [contribute one!](CONTRIBUTING.md)*
 
+
+---
+
+## 🆕 Recent additions (last 45 days)
+
+- 🔥 **AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment** (2026-06) · *Anonymous (under review)* · [arXiv](https://arxiv.org/abs/2606.02486) · `vla`
+- 🔥 **Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.30834) · `vla`
+- 🔥 **Qwen-VLA: Alibaba's Embodied Foundation Model** (2026-05) · *Alibaba* · [arXiv](https://arxiv.org/abs/2605.30280) · `vla`
+- 🔥 **SPRINT: Spectral-Priors Reinforced Humanoid Sprinting** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.28549) · `locomotion`
+- 👀 **Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.26820) · `vla`
+- 👀 **GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models** (2026-05) · *Xuan et al.* · [arXiv](https://arxiv.org/abs/2605.22812) · [project](https://gwxuan.github.io/GesVLA/) · `vla`
+- 🔥 **Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22272) · `sim2real`
+- 🔥 **AVP: Action-Visual Primitives for Decoupled VLA Architecture** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.22183) · `vla`
+- 🔥 **stable-worldmodel: A Reproducibility-First Infrastructure for World Models** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21800) · `foundation-models`
+- 🔥 **PhysX-Omni: Simulation-Ready 3D Generation for Robotics** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21572) · `scene`
+- 🔥 **Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.21133) · `vla`
+- 🔥 **HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.15157) · `manipulation`
+- 🔥 **IntentVLA: History-Conditioned Action Prediction for VLA** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.14712) · `vla`
+- 🔥 **Dexterous Hand Research: A Comprehensive Survey (2026)** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.13925) · `manipulation`
+- 🔥 **RAW-Dream: Reward-Aligned World Model Without Task Data** (2026-05) · *Anonymous* · [arXiv](https://arxiv.org/abs/2605.12334) · `foundation-models`
+
+> 🤖 *Auto-rolled forward from `data/papers.yaml` every push. Older entries naturally drop out of this window but remain in their category section.*
 
 ---
 

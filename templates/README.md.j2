@@ -10,21 +10,6 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ---
 
-## 🆕 Recent additions (last 30 days)
-
-{% set recent = papers | selectattr("date", "ge", recent_cutoff) | sort(attribute="date", reverse=true) | list %}
-{% if recent %}
-{% for p in recent[:10] -%}
-- {{ p.highlight | default("") }} **{{ p.title }}** ({{ p.date }}) · *{{ p.authors }}* · [arXiv]({{ p.links.arxiv }}){% if p.links.project %} · [project]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
-{% endfor %}
-{% else %}
-*No recent additions — see full sections below.*
-{% endif %}
-
-> 🤖 *This section is auto-populated from papers dated within the last 30 days.*
-
----
-
 ## Contents
 
 {% for cat in categories %}- [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }})
@@ -72,8 +57,14 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 {%- elif cat.source == "datasets.yaml" %}
 
-{% for d in datasets -%}
-- **[{{ d.name }}]({{ d.links.project }})** — {{ d.desc }}{% if d.size %} · *{{ d.size }}*{% endif %}{% if d.links.paper %} · [paper]({{ d.links.paper }}){% endif %}{% if d.links.code %} · [code]({{ d.links.code }}){% endif %}{{ "" }}
+
+{% for sub in cat.subcategories %}
+
+### {{ sub.title }}
+
+{% for d in datasets | selectattr("subcategory", "equalto", sub.id) -%}
+- **[{{ d.name }}]({{ d.links.project if d.links.project else (d.links.code if d.links.code else d.links.paper) }})** — {{ d.desc }}{% if d.size %} · *{{ d.size }}*{% endif %}{% if d.links.paper %} · [paper]({{ d.links.paper }}){% endif %}{% if d.links.code %} · [code]({{ d.links.code }}){% endif %}{{ "" }}
+{% endfor %}
 {% endfor %}
 
 {%- elif cat.source == "simulators.yaml" %}
@@ -84,8 +75,13 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 {%- elif cat.source == "benchmarks.yaml" %}
 
-{% for b in benchmarks -%}
-- **[{{ b.name }}]({{ b.links.project }})** — {{ b.desc }}{% if b.links.paper %} · [paper]({{ b.links.paper }}){% endif %}{% if b.links.code %} · [code]({{ b.links.code }}){% endif %}{{ "" }}
+{% for sub in cat.subcategories %}
+
+### {{ sub.title }}
+
+{% for b in benchmarks | selectattr("subcategory", "equalto", sub.id) -%}
+- **[{{ b.name }}]({{ b.links.project if b.links.project else (b.links.code if b.links.code else b.links.paper) }})** — {{ b.desc }}{% if b.links.paper %} · [paper]({{ b.links.paper }}){% endif %}{% if b.links.code %} · [code]({{ b.links.code }}){% endif %}{{ "" }}
+{% endfor %}
 {% endfor %}
 
 {%- elif cat.source == "tools.yaml" %}
@@ -110,6 +106,21 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {%- endif %}
 
 {% endfor %}
+
+---
+
+## 🆕 Recent additions (last 45 days)
+
+{% set recent = papers | selectattr("date", "ge", recent_cutoff) | sort(attribute="date", reverse=true) | list %}
+{% if recent %}
+{% for p in recent[:15] -%}
+- {{ p.highlight | default("") }} **{{ p.title }}** ({{ p.date }}) · *{{ p.authors }}* · [arXiv]({{ p.links.arxiv }}){% if p.links.project %} · [project]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
+{% endfor %}
+{% else %}
+*No recent additions in the rolling window — see full sections above.*
+{% endif %}
+
+> 🤖 *Auto-rolled forward from `data/papers.yaml` every push. Older entries naturally drop out of this window but remain in their category section.*
 
 ---
 

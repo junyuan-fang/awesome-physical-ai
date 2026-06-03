@@ -1,5 +1,11 @@
+# Benchmarks — grouped by subcategory.
+# Subcategory IDs (see categories.yaml benchmark_subcategories):
+#   manipulation | navigation | locomotion | vla-generalization | multi-skill
+
 benchmarks:
+  # ============== Manipulation Benchmarks ==============
   - name: "CALVIN"
+    subcategory: manipulation
     desc: "Long-horizon, language-conditioned manipulation benchmark."
     links:
       project: "http://calvin.cs.uni-freiburg.de"
@@ -8,7 +14,8 @@ benchmarks:
     tags: [language-conditioned, long-horizon]
 
   - name: "Meta-World"
-    desc: "50 manipulation tasks for multi-task and meta-RL."
+    subcategory: manipulation
+    desc: "50 manipulation tasks for multi-task and meta-RL evaluation."
     links:
       project: "https://meta-world.github.io"
       paper: "https://arxiv.org/abs/1910.10897"
@@ -16,23 +23,93 @@ benchmarks:
     tags: [multi-task, meta-rl]
 
   - name: "LIBERO"
-    desc: "Lifelong robot learning benchmark — 130 manipulation tasks across 4 task suites."
+    subcategory: manipulation
+    desc: "Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites."
     links:
       project: "https://libero-project.github.io"
       paper: "https://arxiv.org/abs/2306.03310"
-    tags: [lifelong, manipulation]
+    tags: [lifelong]
 
   - name: "RLBench"
+    subcategory: manipulation
     desc: "100 vision-guided manipulation tasks with CoppeliaSim."
     links:
       project: "https://sites.google.com/view/rlbench"
       paper: "https://arxiv.org/abs/1909.12271"
       code: "https://github.com/stepjam/RLBench"
-    tags: [manipulation, vision]
+    tags: [vision]
 
+  - name: "AliasBench"
+    subcategory: manipulation
+    desc: "Benchmark probing multimodal-imitation ambiguity in VLA (used in IntentVLA 2026)."
+    links:
+      paper: "https://arxiv.org/abs/2605.14712"
+    tags: [vla, multimodal-imitation, 2026]
+
+  # ============== Navigation Benchmarks ==============
   - name: "ProcTHOR"
+    subcategory: navigation
     desc: "10,000+ procedurally generated household scenes for embodied AI."
     links:
       project: "https://procthor.allenai.org"
       paper: "https://arxiv.org/abs/2206.06994"
-    tags: [navigation, household, procedural]
+    tags: [household, procedural]
+
+  - name: "Habitat ObjectNav"
+    subcategory: navigation
+    desc: "Standard object-goal navigation in HM3D / MP3D."
+    links:
+      project: "https://aihabitat.org/challenge/2023/"
+      paper: "https://arxiv.org/abs/2210.13063"
+    tags: [object-nav]
+
+  - name: "OVMM"
+    subcategory: navigation
+    desc: "Open-vocabulary mobile manipulation benchmark (Habitat 3.0)."
+    links:
+      paper: "https://arxiv.org/abs/2310.13724"
+    tags: [open-vocab, mobile-manipulation]
+
+  # ============== Locomotion Benchmarks ==============
+  - name: "HumanoidBench"
+    subcategory: locomotion
+    desc: "MuJoCo-based humanoid locomotion + whole-body manipulation benchmark."
+    links:
+      project: "https://humanoid-bench.github.io"
+      paper: "https://arxiv.org/abs/2403.10506"
+      code: "https://github.com/carlosferrazza/humanoid-bench"
+    tags: [humanoid, whole-body]
+
+  # ============== VLA Generalization / OOD ==============
+  - name: "SimplerEnv"
+    subcategory: vla-generalization
+    desc: "Reproducible real-to-sim eval suite — measures VLA gap between real and sim deployment."
+    links:
+      project: "https://simpler-env.github.io"
+      paper: "https://arxiv.org/abs/2405.05941"
+      code: "https://github.com/simpler-env/SimplerEnv"
+    tags: [real-to-sim, vla, eval]
+
+  - name: "PhysX-Bench"
+    subcategory: vla-generalization
+    desc: "6-dim evaluation (geometry/scale/material/affordance/kinematics/function) — released with PhysX-Omni, 2026."
+    links:
+      paper: "https://arxiv.org/abs/2605.21572"
+    tags: [sim-ready, 2026]
+
+  # ============== Multi-Skill / Long-Horizon ==============
+  - name: "BEHAVIOR-1K"
+    subcategory: multi-skill
+    desc: "1,000 long-horizon household activities in OmniGibson — the largest activity benchmark."
+    links:
+      project: "https://behavior.stanford.edu/behavior-1k"
+      paper: "https://arxiv.org/abs/2403.09227"
+    tags: [household, long-horizon, omnigibson]
+
+  - name: "RoboCasa-Bench"
+    subcategory: multi-skill
+    desc: "100+ atomic + composite household tasks running on RoboCasa-Gen scenes."
+    links:
+      project: "https://robocasa.ai"
+      paper: "https://arxiv.org/abs/2406.02523"
+    tags: [household, multi-skill]

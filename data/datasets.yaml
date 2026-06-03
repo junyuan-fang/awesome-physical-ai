@@ -1,47 +1,141 @@
+# Datasets — grouped by subcategory.
+# Subcategory IDs (see categories.yaml dataset_subcategories):
+#   manipulation-demos | scene-3d | egocentric-human | mocap-motion | sim-generated
+
 datasets:
+  # ============== Manipulation Demonstrations ==============
   - name: "Open X-Embodiment (RT-X)"
+    subcategory: manipulation-demos
     desc: "Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories."
+    size: "1M+ episodes"
     links:
       project: "https://robotics-transformer-x.github.io"
       paper: "https://arxiv.org/abs/2310.08864"
       code: "https://github.com/google-deepmind/open_x_embodiment"
-    tags: [trajectories, multi-embodiment]
-    size: "1M+ episodes"
-
-  - name: "LIBERO"
-    desc: "Lifelong robot learning benchmark — 130 manipulation tasks."
-    links:
-      project: "https://libero-project.github.io"
-      paper: "https://arxiv.org/abs/2306.03310"
-      code: "https://github.com/Lifelong-Robot-Learning/LIBERO"
-    tags: [lifelong, manipulation, simulation]
+    tags: [multi-embodiment]
 
   - name: "DROID"
-    desc: "Diverse, real-world manipulation dataset from 564 scenes, 13 institutions."
+    subcategory: manipulation-demos
+    desc: "Diverse real-world manipulation dataset from 564 scenes, 13 institutions."
+    size: "76k demonstrations"
     links:
       project: "https://droid-dataset.github.io"
       paper: "https://arxiv.org/abs/2403.12945"
-    tags: [real-world, manipulation, multi-institution]
-    size: "76k demonstrations"
+    tags: [real-world, multi-institution]
 
   - name: "BridgeData V2"
+    subcategory: manipulation-demos
     desc: "Large-scale tabletop manipulation dataset for generalization research."
+    size: "60k trajectories"
     links:
       project: "https://rail-berkeley.github.io/bridgedata"
       paper: "https://arxiv.org/abs/2308.12952"
-    tags: [tabletop, manipulation]
-    size: "60k trajectories"
-
-  - name: "Habitat-Matterport 3D (HM3D)"
-    desc: "1000+ photorealistic indoor 3D scenes for embodied AI training."
-    links:
-      project: "https://aihabitat.org/datasets/hm3d/"
-      paper: "https://arxiv.org/abs/2109.08238"
-    tags: [3d-scene, indoor, navigation]
+    tags: [tabletop]
 
   - name: "ARIO (All Robots In One)"
+    subcategory: manipulation-demos
     desc: "Unified cross-embodiment robot learning dataset."
     links:
       project: "https://imaei.github.io/project_pages/ario/"
       paper: "https://arxiv.org/abs/2408.10899"
     tags: [multi-embodiment, real-world]
+
+  - name: "AgiBot World"
+    subcategory: manipulation-demos
+    desc: "Large-scale humanoid manipulation dataset from AgiBot's real-world deployments."
+    links:
+      project: "https://agibot-world.com"
+    tags: [humanoid, manipulation, china]
+
+  # ============== 3D Scene Datasets ==============
+  - name: "Habitat-Matterport 3D (HM3D)"
+    subcategory: scene-3d
+    desc: "1000+ photorealistic indoor 3D scenes for embodied AI training."
+    links:
+      project: "https://aihabitat.org/datasets/hm3d/"
+      paper: "https://arxiv.org/abs/2109.08238"
+    tags: [indoor, navigation]
+
+  - name: "ScanNet++"
+    subcategory: scene-3d
+    desc: "1006 high-fidelity indoor scenes with sub-mm geometry & DSLR captures."
+    links:
+      project: "https://kaldir.vc.in.tum.de/scannetpp/"
+      paper: "https://arxiv.org/abs/2308.11417"
+    tags: [indoor, high-fidelity]
+
+  - name: "Replica Dataset"
+    subcategory: scene-3d
+    desc: "18 high-quality reconstructions of indoor spaces (Meta Reality Labs)."
+    links:
+      project: "https://github.com/facebookresearch/Replica-Dataset"
+      paper: "https://arxiv.org/abs/1906.05797"
+    tags: [indoor, meta]
+
+  - name: "3D-FRONT / 3D-FUTURE"
+    subcategory: scene-3d
+    desc: "Synthetic indoor scenes with high-quality furniture CAD models (Alibaba)."
+    links:
+      project: "https://tianchi.aliyun.com/specials/promotion/alibaba-3d-scene-dataset"
+      paper: "https://arxiv.org/abs/2011.09127"
+    tags: [synthetic, indoor, furniture]
+
+  # ============== Egocentric / Human Video ==============
+  - name: "Ego4D"
+    subcategory: egocentric-human
+    desc: "3,670 hours of egocentric video across 74 worldwide locations."
+    size: "3,670 hours"
+    links:
+      project: "https://ego4d-data.org"
+      paper: "https://arxiv.org/abs/2110.07058"
+    tags: [egocentric, large-scale]
+
+  - name: "EPIC-KITCHENS-100"
+    subcategory: egocentric-human
+    desc: "Long-form egocentric kitchen activity dataset for action understanding."
+    size: "100 hours"
+    links:
+      project: "https://epic-kitchens.github.io/2024"
+      paper: "https://arxiv.org/abs/2006.13256"
+    tags: [egocentric, kitchen, activity]
+
+  - name: "HOI4D"
+    subcategory: egocentric-human
+    desc: "4D egocentric dataset for category-level human-object interaction."
+    links:
+      project: "https://hoi4d.github.io"
+      paper: "https://arxiv.org/abs/2203.01577"
+    tags: [hoi, egocentric, 4d]
+
+  # ============== Motion Capture / Whole-Body ==============
+  - name: "AMASS"
+    subcategory: mocap-motion
+    desc: "Unifies 15 mocap datasets in a common SMPL skeleton — 40+ hours of motion."
+    links:
+      project: "https://amass.is.tue.mpg.de"
+      paper: "https://arxiv.org/abs/1904.03278"
+    tags: [smpl, motion-capture]
+
+  - name: "HumanML3D"
+    subcategory: mocap-motion
+    desc: "14,616 motions with text annotations for motion-language tasks."
+    links:
+      code: "https://github.com/EricGuo5513/HumanML3D"
+      paper: "https://arxiv.org/abs/2202.04257"
+    tags: [text-to-motion, smpl]
+
+  # ============== Sim-Generated ==============
+  - name: "RoboCasa-Gen"
+    subcategory: sim-generated
+    desc: "Large-scale procedurally generated household tasks rendered in MuJoCo."
+    links:
+      project: "https://robocasa.ai"
+      paper: "https://arxiv.org/abs/2406.02523"
+    tags: [household, procedural]
+
+  - name: "PhysXVerse"
+    subcategory: sim-generated
+    desc: "First general-purpose simulation-ready 3D dataset (released with PhysX-Omni, 2026)."
+    links:
+      paper: "https://arxiv.org/abs/2605.21572"
+    tags: [sim-ready, 2026]
