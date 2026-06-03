@@ -601,3 +601,178 @@ papers:
   highlight: 🔥
   added: '2026-06-03'
   source: news_archive
+- arxiv_id: '2506.13751'
+  title: 'LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction'
+  authors: Xue, Haoru et al.
+  date: 2025-06
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization,
+    yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
+  links:
+    arxiv: https://arxiv.org/abs/2506.13751
+  highlight: 👀
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2603.05410'
+  title: 'PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking'
+  authors: Qin, Weikai et al.
+  date: 2026-03
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: In the domain of humanoid robot control, the fusion of Vision-Language-Action (VLA) with whole-body control
+    is essential for semantically guided execution of real-world tasks. However, existing methods encounter challenges in
+    terms of low...
+  links:
+    arxiv: https://arxiv.org/abs/2603.05410
+  highlight: 👀
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2603.08122'
+  title: Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA
+  authors: Tang, Tutian et al.
+  date: 2026-03
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: While Vision-Language-Action (VLA) models have demonstrated remarkable success in robotic manipulation,
+    their application has largely been confined to low-degree-of-freedom end-effectors performing simple, vision-guided pick-and-place...
+  links:
+    arxiv: https://arxiv.org/abs/2603.08122
+  highlight: 👀
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.21811'
+  title: Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation
+  authors: Wu, Albert et al.
+  date: 2026-05
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: 'Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on
+    heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector
+    poses on...'
+  links:
+    arxiv: https://arxiv.org/abs/2605.21811
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.21935'
+  title: 'Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments'
+  authors: Jiang, Peifeng et al.
+  date: 2026-05
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under
+    locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
+  links:
+    arxiv: https://arxiv.org/abs/2605.21935
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.22283'
+  title: Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action
+  authors: Li, Pengteng et al.
+  date: 2026-05
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: We introduce SOMA, the Spatial Memory framework for Out-of-Vision Manipulation in Vision-Language-Action
+    (VLA) models. Most existing VLAs implicitly assume that task-relevant objects are always visible, leading to brittle and
+    reactive...
+  links:
+    arxiv: https://arxiv.org/abs/2605.22283
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.29298'
+  title: 'MonoDuo: Using One Robot Arm to Learn Bimanual Policies'
+  authors: Bajamahal, Sandeep et al.
+  date: 2026-05
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Bimanual coordination is essential for many real-world manipulation tasks, yet learning bimanual robot policies
+    is limited by the scarcity of bimanual robots and datasets. Single-arm robots, however, are widely available in research
+    labs....
+  links:
+    arxiv: https://arxiv.org/abs/2605.29298
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.29438'
+  title: 'ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models'
+  authors: Li, Ye et al.
+  date: 2026-05
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-Language-Action (VLA) models are a powerful paradigm for generalist robotic control. However, their
+    high computational cost and limited control frequency hinder real-time robotic manipulation, especially when large vision-language...
+  links:
+    arxiv: https://arxiv.org/abs/2605.29438
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.30226'
+  title: 'BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models'
+  authors: Chen, Zhongxi et al.
+  date: 2026-05
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-Language-Action (VLA) models have emerged as a promising paradigm for grounding visual-language understanding
+    into real-world robotic manipulation. However, dexterous manipulation remains challenging for VLA policies due to...
+  links:
+    arxiv: https://arxiv.org/abs/2605.30226
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.30282'
+  title: 'Gaze2Act: Gaze-Conditioned Vision-Language-Action Policies for Interactive Robot Manipulation'
+  authors: Zuo, Kuangji et al.
+  date: 2026-05
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-Language-Action (VLA) models have recently shown strong potential for robot learning by following
+    language instructions. However, in practice, language alone is often insufficient to precisely convey human intent. It
+    is difficult...
+  links:
+    arxiv: https://arxiv.org/abs/2605.30282
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.30561'
+  title: 'VLM3: Vision Language Models Are Native 3D Learners'
+  authors: Cai, Zhipeng et al.
+  date: 2026-05
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision Language Models (VLMs) enable a unified model to solve various vision tasks through prompting. They
+    have shown promising performance in semantic understanding. However, 3D understanding still largely relies on expert vision
+    models...
+  links:
+    arxiv: https://arxiv.org/abs/2605.30561
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
+- arxiv_id: '2605.31158'
+  title: 'Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models'
+  authors: Lu, Jiacheng et al.
+  date: 2026-05
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Interactive video world models generate video chunk by chunk in response to user-controlled camera movements,
+    enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However,
+    scaling to...
+  links:
+    arxiv: https://arxiv.org/abs/2605.31158
+  highlight: 🔥
+  added: '2026-06-03'
+  source: news_archive
