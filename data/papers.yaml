@@ -600,3 +600,80 @@ papers:
   highlight: 🔥
   added: '2026-06-03'
   source: news_archive
+- arxiv_id: '2606.03127'
+  title: 'TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models'
+  authors: Zhang, Wenbo et al.
+  date: '2026-06-02'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-Language-Action (VLA) models trained on large-scale data have made remarkable progress, but they
+    remain vulnerable to distribution shifts at deployment time. Recent VLA models suggest that prompts can serve as an efficient...
+  links:
+    arxiv: https://arxiv.org/abs/2606.03127
+  highlight: 🔥
+  added: '2026-06-04'
+  source: news_archive
+- arxiv_id: '2606.03188'
+  title: 'GeoSem-WAM: Geometry- and Semantic-Aware World Action Models'
+  authors: Ma, Fulong et al.
+  date: '2026-06-02'
+  venue: ''
+  category: scene
+  tags:
+  - news-archive
+  abstract_short: Recent World Action Models (WAMs) have demonstrated impressive capabilities in embodied decision-making.
+    However, whether their effectiveness stems from explicit future imagination during inference or representation learning
+    induced by...
+  links:
+    arxiv: https://arxiv.org/abs/2606.03188
+  highlight: 🔥
+  added: '2026-06-04'
+  source: news_archive
+- arxiv_id: '2606.03240'
+  title: 'GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models'
+  authors: Chen, Yizhi et al.
+  date: '2026-06-02'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Current Vision--Language--Action (VLA) models often optimize for semantic grounding, whereas executable
+    manipulation requires geometry-aware spatial alignment and dynamic affordance selection. We introduce GeoAlign, a state-guided
+    spatial...
+  links:
+    arxiv: https://arxiv.org/abs/2606.03240
+  highlight: 🔥
+  added: '2026-06-04'
+  source: news_archive
+- arxiv_id: '2606.03268'
+  title: 'EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations'
+  authors: Zhao, Qian et al.
+  date: '2026-06-02'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Dexterous manipulation learning has long been hindered by the high costs of data and training, as pure reinforcement
+    learning typically requires large-scale interactive exploration and imitation learning depends on high-quality...
+  links:
+    arxiv: https://arxiv.org/abs/2606.03268
+  highlight: 🔥
+  added: '2026-06-04'
+  source: news_archive
+- arxiv_id: '2606.03985'
+  title: 'Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking'
+  authors: Qi, Zekun et al.
+  date: '2026-06-02'
+  venue: CVPR 2026
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: '"数据 scaling + GPT 范式"应用到 humanoid 控制 — humanoid 第一个"foundation model 时刻"；数据规模（2B-frame）对标 LLM "GPT-3 数据量"'
+  links:
+    arxiv: https://arxiv.org/abs/2606.03985
+    project: https://qizekun.github.io/humanoid-gpt/
+  highlight: 🔥
+  added: '2026-06-04'
+  source: news_archive

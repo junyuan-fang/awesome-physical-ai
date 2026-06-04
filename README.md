@@ -3,7 +3,7 @@
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
 
 🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
-📅 Last updated: **2026-06-03** · 📊 **39** papers · 🏢 **19** companies · 🎮 **7** simulators
+📅 Last updated: **2026-06-04** · 📊 **44** papers · 🏢 **19** companies · 🎮 **7** simulators
 
 Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -58,6 +58,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="manipulation"></a>🦾 Manipulation
 
 *Grasping, dexterous, bimanual manipulation*
+- 🔥 **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](https://arxiv.org/abs/2606.03268)** (2026-06-02) — *Zhao, Qian et al.*
+  - Dexterous manipulation learning has long been hindered by the high costs of data and training, as pure reinforcement learning typically requires large-scale interactive exploration and imitation learning depends on high-quality...
+- `news-archive`
 - 🔥 **[HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation](https://arxiv.org/abs/2605.15157)** (2026-05) — *Anonymous*
   - 解决 high-DoF 灵巧操作的 IIL 命令匹配难题；给 ROBOTERA、银河通用、智元等"teleop 路线"公司提供新工具
 - `dexterous · interactive-il · teleop`
@@ -128,6 +131,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
 *NeRF, Gaussian Splatting, segmentation for robotics*
+- 🔥 **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](https://arxiv.org/abs/2606.03188)** (2026-06-02) — *Ma, Fulong et al.*
+  - Recent World Action Models (WAMs) have demonstrated impressive capabilities in embodied decision-making. However, whether their effectiveness stems from explicit future imagination during inference or representation learning induced by...
+- `news-archive`
 - 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** (2026-05) — *Anonymous*
   - 为 robotic policy learning 和 simulation-ready scene generation 提供原料；减少 robotics 仿真数据手工建模成本
 - `sim-ready · 3d-generation · vlm`
@@ -316,6 +322,11 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ## 🆕 Recent additions (last 45 days)
 
+- 🔥 **[TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models](https://arxiv.org/abs/2606.03127)** (2026-06-02) · *Zhang, Wenbo et al.* · `vla`
+- 🔥 **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](https://arxiv.org/abs/2606.03188)** (2026-06-02) · *Ma, Fulong et al.* · `scene`
+- 🔥 **[GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models](https://arxiv.org/abs/2606.03240)** (2026-06-02) · *Chen, Yizhi et al.* · `vla`
+- 🔥 **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](https://arxiv.org/abs/2606.03268)** (2026-06-02) · *Zhao, Qian et al.* · `manipulation`
+- 🔥 **[Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985)** (2026-06-02) · *Qi, Zekun et al.* · [project](https://qizekun.github.io/humanoid-gpt/) · `vla`
 - 🔥 **[AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment](https://arxiv.org/abs/2606.02486)** (2026-06) · *Anonymous (under review)* · `vla`
 - 🔥 **[Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction](https://arxiv.org/abs/2605.30834)** (2026-05) · *Anonymous* · `vla`
 - 🔥 **[Qwen-VLA: Alibaba's Embodied Foundation Model](https://arxiv.org/abs/2605.30280)** (2026-05) · *Alibaba* · `vla`
@@ -326,11 +337,6 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **[AVP: Action-Visual Primitives for Decoupled VLA Architecture](https://arxiv.org/abs/2605.22183)** (2026-05) · *Anonymous* · `vla`
 - 🔥 **[stable-worldmodel: A Reproducibility-First Infrastructure for World Models](https://arxiv.org/abs/2605.21800)** (2026-05) · *Anonymous* · `foundation-models`
 - 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** (2026-05) · *Anonymous* · `scene`
-- 🔥 **[Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation](https://arxiv.org/abs/2605.21133)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation](https://arxiv.org/abs/2605.15157)** (2026-05) · *Anonymous* · `manipulation`
-- 🔥 **[IntentVLA: History-Conditioned Action Prediction for VLA](https://arxiv.org/abs/2605.14712)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[Dexterous Hand Research: A Comprehensive Survey (2026)](https://arxiv.org/abs/2605.13925)** (2026-05) · *Anonymous* · `manipulation`
-- 🔥 **[RAW-Dream: Reward-Aligned World Model Without Task Data](https://arxiv.org/abs/2605.12334)** (2026-05) · *Anonymous* · `foundation-models`
 
 > 🤖 *Auto-rolled forward from `data/papers.yaml` every push. Older entries naturally drop out of this window but remain in their category section.*
 
