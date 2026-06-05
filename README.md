@@ -3,7 +3,7 @@
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
 
 🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
-📅 Last updated: **2026-06-04** · 📊 **44** papers · 🏢 **19** companies · 🎮 **7** simulators
+📅 Last updated: **2026-06-05** · 📊 **54** papers · 🏢 **19** companies · 🎮 **7** simulators
 
 Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -30,6 +30,18 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="foundation-models"></a>🤖 Foundation Models for Robotics
 
 *Generalist policies, VLA, world models*
+- 🔥 **[3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](https://arxiv.org/abs/2606.04436)** (2026-06-03) — *Shi, Jiaxin et al.*
+  - We propose a 3D-thinking-guided co-training framework that enables vision-language-action (VLA) models to perform 3D spatial reasoning implicitly during action prediction. Our core insight is that 3D geometry perception and 3D spatial...
+- `news-archive`
+- 🔥 **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](https://arxiv.org/abs/2606.04463)** (2026-06-03) — *Wu, Zhuoyuan et al.*
+  - 与昨日讨论的 罗剑岚 Critic 主线 + 6/3 GN0 三件套 同根：用 WAM 做 virtual policy evaluation = 把"评价模型"具体化；拿 NVIDIA Cosmos-Predict2.5 做底座是这一波 Cosmos 生态首批应用
+- [project](https://qizekun.github.io/humanoid-gpt/) · `news-archive`
+- 🔥 **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](https://arxiv.org/abs/2606.04534)** (2026-06-03) — *Zhang, Xinhong et al.*
+  - Agile quadrotor flight in cluttered scenes requires more than a reactive mapping from a depth image to a control command: the vehicle must remember which regions have been observed, infer nearby occupied space, and act under partial...
+- `news-archive`
+- 🔥 **[CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization](https://arxiv.org/abs/2606.04130)** (2026-06-02) — *Ayalew, Tewodros et al.*
+  - We introduce CLAW, a fully end-to-end self-supervised framework for learning a world model jointly with continuous latent action representations directly from action-free videos. Our approach leverages adversarial latent regularization...
+- `news-archive`
 - 🔥 **[stable-worldmodel: A Reproducibility-First Infrastructure for World Models](https://arxiv.org/abs/2605.21800)** (2026-05) — *Anonymous*
   - 给 WAM 阵营（昨天提的 RAW-Dream、DreamZero、PhysiFlow 等）提供统一基础设施；推动 world model 研究从"各家造轮子"走向 reproducibility-first
 - `world-model · infrastructure · lerobot · benchmark`
@@ -61,6 +73,9 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 - 🔥 **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](https://arxiv.org/abs/2606.03268)** (2026-06-02) — *Zhao, Qian et al.*
   - Dexterous manipulation learning has long been hindered by the high costs of data and training, as pure reinforcement learning typically requires large-scale interactive exploration and imitation learning depends on high-quality...
 - `news-archive`
+- 🔥 **[Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation](https://arxiv.org/abs/2606.04172)** (2026-06-02) — *Liu, Litao et al.*
+  - Task-conditioned manipulation requires grounding instructions to task-relevant functional parts rather than object categories. This setting is scene-dependent and often one-to-many in cluttered scenes: the same object may afford different...
+- `news-archive`
 - 🔥 **[HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation](https://arxiv.org/abs/2605.15157)** (2026-05) — *Anonymous*
   - 解决 high-DoF 灵巧操作的 IIL 命令匹配难题；给 ROBOTERA、银河通用、智元等"teleop 路线"公司提供新工具
 - `dexterous · interactive-il · teleop`
@@ -83,6 +98,12 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="locomotion"></a>🦿 Locomotion
 
 *Humanoid, quadruped, bipedal walking and running*
+- 🔥 **[CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation](https://arxiv.org/abs/2606.04718)** (2026-06-03) — *Huang, Kailun et al.*
+  - Humans primarily rely on walking and running to traverse complex terrains, without resorting to unnecessarily complex motion patterns. Similarly, humanoid robots should achieve smooth transitions between walking and running while...
+- `news-archive`
+- 🔥 **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](https://arxiv.org/abs/2606.04829)** (2026-06-03) — *Lu, Zuxing et al.*
+  - Building a general-purpose whole-body controller is essential for enabling diverse motion capabilities in humanoid robots across a wide range of downstream tasks, including locomotion and loco-manipulation. Different tasks rely on...
+- `news-archive`
 - 🔥 **[SPRINT: Spectral-Priors Reinforced Humanoid Sprinting](https://arxiv.org/abs/2605.28549)** (2026-05) — *Anonymous*
   - 6 m/s 是当前 humanoid 短跑公开数字第一档（vs Tesla Optimus Gen 3 行走 1.2 m/s、Figure 03 慢跑 2 m/s）；Spectral priors 是"frequency domain reference 库"思路 — 比 motion capture demos 数据效率高很多
 - `humanoid · sprint · frequency-domain`
@@ -93,6 +114,15 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="teleoperation"></a>🕹️ Teleoperation
 
 *VR, wearable, and exoskeleton-based data collection*
+- 🔥 **[VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training](https://arxiv.org/abs/2606.04708)** (2026-06-03) — *Yang, Siyuan et al.*
+  - Universal Manipulation Interface (UMI) enables scalable real-world robot data collection without hardware-specific teleoperation, yet leveraging UMI data to train large-scale Vision-Language-Action (VLA) models remains fundamentally...
+- `news-archive`
+- 🔥 **[HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning](https://arxiv.org/abs/2606.04825)** (2026-06-03) — *Alian, Amirhosein et al.*
+  - Despite the importance of tactile sensing for reliable manipulation, most existing Vision-Language-Action (VLA) datasets remain vision-only, and those that do incorporate tactile information typically lack the joint combination of task...
+- `news-archive`
+- 🔥 **[GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](https://arxiv.org/abs/2606.05160)** (2026-06-03) — *Xie, Tianyi et al.*
+  - Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each collection depends on...
+- `news-archive`
 - 🔥 **[MonoDuo: Using One Robot Arm to Learn Bimanual Policies](https://arxiv.org/abs/2605.29298)** (2026-05) — *Bajamahal, Sandeep et al.*
   - Bimanual coordination is essential for many real-world manipulation tasks, yet learning bimanual robot policies is limited by the scarcity of bimanual robots and datasets. Single-arm robots, however, are widely available in research labs....
 - `news-archive`
@@ -322,21 +352,21 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ## 🆕 Recent additions (last 45 days)
 
+- 🔥 **[3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](https://arxiv.org/abs/2606.04436)** (2026-06-03) · *Shi, Jiaxin et al.* · `foundation-models`
+- 🔥 **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](https://arxiv.org/abs/2606.04463)** (2026-06-03) · *Wu, Zhuoyuan et al.* · [project](https://qizekun.github.io/humanoid-gpt/) · `foundation-models`
+- 🔥 **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](https://arxiv.org/abs/2606.04534)** (2026-06-03) · *Zhang, Xinhong et al.* · `foundation-models`
+- 🔥 **[VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training](https://arxiv.org/abs/2606.04708)** (2026-06-03) · *Yang, Siyuan et al.* · `teleoperation`
+- 🔥 **[CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation](https://arxiv.org/abs/2606.04718)** (2026-06-03) · *Huang, Kailun et al.* · `locomotion`
+- 🔥 **[HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning](https://arxiv.org/abs/2606.04825)** (2026-06-03) · *Alian, Amirhosein et al.* · `teleoperation`
+- 🔥 **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](https://arxiv.org/abs/2606.04829)** (2026-06-03) · *Lu, Zuxing et al.* · `locomotion`
+- 🔥 **[GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](https://arxiv.org/abs/2606.05160)** (2026-06-03) · *Xie, Tianyi et al.* · `teleoperation`
 - 🔥 **[TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models](https://arxiv.org/abs/2606.03127)** (2026-06-02) · *Zhang, Wenbo et al.* · `vla`
 - 🔥 **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](https://arxiv.org/abs/2606.03188)** (2026-06-02) · *Ma, Fulong et al.* · `scene`
 - 🔥 **[GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models](https://arxiv.org/abs/2606.03240)** (2026-06-02) · *Chen, Yizhi et al.* · `vla`
 - 🔥 **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](https://arxiv.org/abs/2606.03268)** (2026-06-02) · *Zhao, Qian et al.* · `manipulation`
 - 🔥 **[Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985)** (2026-06-02) · *Qi, Zekun et al.* · [project](https://qizekun.github.io/humanoid-gpt/) · `vla`
-- 🔥 **[AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment](https://arxiv.org/abs/2606.02486)** (2026-06) · *Anonymous (under review)* · `vla`
-- 🔥 **[Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction](https://arxiv.org/abs/2605.30834)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[Qwen-VLA: Alibaba's Embodied Foundation Model](https://arxiv.org/abs/2605.30280)** (2026-05) · *Alibaba* · `vla`
-- 🔥 **[SPRINT: Spectral-Priors Reinforced Humanoid Sprinting](https://arxiv.org/abs/2605.28549)** (2026-05) · *Anonymous* · `locomotion`
-- 👀 **[Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations](https://arxiv.org/abs/2605.26820)** (2026-05) · *Anonymous* · `vla`
-- 👀 **[GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models](https://arxiv.org/abs/2605.22812)** (2026-05) · *Xuan et al.* · [project](https://gwxuan.github.io/GesVLA/) · `vla`
-- 🔥 **[Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real](https://arxiv.org/abs/2605.22272)** (2026-05) · *Anonymous* · `sim2real`
-- 🔥 **[AVP: Action-Visual Primitives for Decoupled VLA Architecture](https://arxiv.org/abs/2605.22183)** (2026-05) · *Anonymous* · `vla`
-- 🔥 **[stable-worldmodel: A Reproducibility-First Infrastructure for World Models](https://arxiv.org/abs/2605.21800)** (2026-05) · *Anonymous* · `foundation-models`
-- 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** (2026-05) · *Anonymous* · `scene`
+- 🔥 **[CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization](https://arxiv.org/abs/2606.04130)** (2026-06-02) · *Ayalew, Tewodros et al.* · `foundation-models`
+- 🔥 **[Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation](https://arxiv.org/abs/2606.04172)** (2026-06-02) · *Liu, Litao et al.* · `manipulation`
 
 > 🤖 *Auto-rolled forward from `data/papers.yaml` every push. Older entries naturally drop out of this window but remain in their category section.*
 

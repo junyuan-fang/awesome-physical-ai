@@ -677,3 +677,160 @@ papers:
   highlight: 🔥
   added: '2026-06-04'
   source: news_archive
+- arxiv_id: '2606.04130'
+  title: 'CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization'
+  authors: Ayalew, Tewodros et al.
+  date: '2026-06-02'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: We introduce CLAW, a fully end-to-end self-supervised framework for learning a world model jointly with
+    continuous latent action representations directly from action-free videos. Our approach leverages adversarial latent regularization...
+  links:
+    arxiv: https://arxiv.org/abs/2606.04130
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04172'
+  title: 'Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation'
+  authors: Liu, Litao et al.
+  date: '2026-06-02'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: 'Task-conditioned manipulation requires grounding instructions to task-relevant functional parts rather
+    than object categories. This setting is scene-dependent and often one-to-many in cluttered scenes: the same object may
+    afford different...'
+  links:
+    arxiv: https://arxiv.org/abs/2606.04172
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04436'
+  title: '3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training'
+  authors: Shi, Jiaxin et al.
+  date: '2026-06-03'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: We propose a 3D-thinking-guided co-training framework that enables vision-language-action (VLA) models to
+    perform 3D spatial reasoning implicitly during action prediction. Our core insight is that 3D geometry perception and
+    3D spatial...
+  links:
+    arxiv: https://arxiv.org/abs/2606.04436
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04463'
+  title: 'OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics'
+  authors: Wu, Zhuoyuan et al.
+  date: '2026-06-03'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 与昨日讨论的 罗剑岚 Critic 主线 + 6/3 GN0 三件套 同根：用 WAM 做 virtual policy evaluation = 把"评价模型"具体化；拿 NVIDIA Cosmos-Predict2.5
+    做底座是这一波 Cosmos 生态首批应用
+  links:
+    arxiv: https://arxiv.org/abs/2606.04463
+    project: https://qizekun.github.io/humanoid-gpt/
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04534'
+  title: 'MAD: Mapping-Aware World Models for Agile Quadrotor Flight'
+  authors: Zhang, Xinhong et al.
+  date: '2026-06-03'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'Agile quadrotor flight in cluttered scenes requires more than a reactive mapping from a depth image to
+    a control command: the vehicle must remember which regions have been observed, infer nearby occupied space, and act under
+    partial...'
+  links:
+    arxiv: https://arxiv.org/abs/2606.04534
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04708'
+  title: 'VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training'
+  authors: Yang, Siyuan et al.
+  date: '2026-06-03'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Universal Manipulation Interface (UMI) enables scalable real-world robot data collection without hardware-specific
+    teleoperation, yet leveraging UMI data to train large-scale Vision-Language-Action (VLA) models remains fundamentally...
+  links:
+    arxiv: https://arxiv.org/abs/2606.04708
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04718'
+  title: 'CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation'
+  authors: Huang, Kailun et al.
+  date: '2026-06-03'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Humans primarily rely on walking and running to traverse complex terrains, without resorting to unnecessarily
+    complex motion patterns. Similarly, humanoid robots should achieve smooth transitions between walking and running while...
+  links:
+    arxiv: https://arxiv.org/abs/2606.04718
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04825'
+  title: 'HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning'
+  authors: Alian, Amirhosein et al.
+  date: '2026-06-03'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Despite the importance of tactile sensing for reliable manipulation, most existing Vision-Language-Action
+    (VLA) datasets remain vision-only, and those that do incorporate tactile information typically lack the joint combination
+    of task...
+  links:
+    arxiv: https://arxiv.org/abs/2606.04825
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.04829'
+  title: 'M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking'
+  authors: Lu, Zuxing et al.
+  date: '2026-06-03'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Building a general-purpose whole-body controller is essential for enabling diverse motion capabilities in
+    humanoid robots across a wide range of downstream tasks, including locomotion and loco-manipulation. Different tasks rely
+    on...
+  links:
+    arxiv: https://arxiv.org/abs/2606.04829
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
+- arxiv_id: '2606.05160'
+  title: 'GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors'
+  authors: Xie, Tianyi et al.
+  date: '2026-06-03'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body
+    motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each collection depends
+    on...
+  links:
+    arxiv: https://arxiv.org/abs/2606.05160
+  highlight: 🔥
+  added: '2026-06-05'
+  source: news_archive
