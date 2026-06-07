@@ -2,7 +2,7 @@ papers:
 - arxiv_id: '2606.02486'
   title: 'AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment'
   authors: Anonymous (under review)
-  date: 2026-06
+  date: '2026-06-01'
   category: vla
   tags:
   - wrapper
@@ -17,7 +17,7 @@ papers:
 - arxiv_id: '2605.30834'
   title: 'Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-29'
   category: vla
   tags:
   - failure-detection
@@ -33,7 +33,7 @@ papers:
 - arxiv_id: '2605.30280'
   title: 'Qwen-VLA: Alibaba''s Embodied Foundation Model'
   authors: Alibaba
-  date: 2026-05
+  date: '2026-05-28'
   category: vla
   tags:
   - foundation-model
@@ -49,7 +49,7 @@ papers:
 - arxiv_id: '2605.28549'
   title: 'SPRINT: Spectral-Priors Reinforced Humanoid Sprinting'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-27'
   category: locomotion
   tags:
   - humanoid
@@ -65,7 +65,7 @@ papers:
 - arxiv_id: '2605.26820'
   title: 'Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-26'
   category: vla
   tags:
   - continual-learning
@@ -80,7 +80,7 @@ papers:
 - arxiv_id: '2605.22812'
   title: 'GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models'
   authors: Xuan et al.
-  date: 2026-05
+  date: '2026-05-21'
   category: vla
   tags:
   - gesture
@@ -96,7 +96,7 @@ papers:
 - arxiv_id: '2605.22272'
   title: 'Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-21'
   category: sim2real
   tags:
   - hoi
@@ -111,7 +111,7 @@ papers:
 - arxiv_id: '2605.22183'
   title: 'AVP: Action-Visual Primitives for Decoupled VLA Architecture'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-21'
   category: vla
   tags:
   - pi0.5
@@ -126,7 +126,7 @@ papers:
 - arxiv_id: '2605.21800'
   title: 'stable-worldmodel: A Reproducibility-First Infrastructure for World Models'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-20'
   category: foundation-models
   tags:
   - world-model
@@ -142,7 +142,7 @@ papers:
 - arxiv_id: '2605.21572'
   title: 'PhysX-Omni: Simulation-Ready 3D Generation for Robotics'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-20'
   category: scene
   tags:
   - sim-ready
@@ -157,7 +157,7 @@ papers:
 - arxiv_id: '2605.21133'
   title: Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-20'
   category: vla
   tags:
   - hierarchical
@@ -172,7 +172,7 @@ papers:
 - arxiv_id: '2605.15157'
   title: 'HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-14'
   category: manipulation
   tags:
   - dexterous
@@ -187,7 +187,7 @@ papers:
 - arxiv_id: '2605.14712'
   title: 'IntentVLA: History-Conditioned Action Prediction for VLA'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-14'
   category: vla
   tags:
   - multimodal-imitation
@@ -203,7 +203,7 @@ papers:
 - arxiv_id: '2605.13925'
   title: 'Dexterous Hand Research: A Comprehensive Survey (2026)'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-13'
   category: manipulation
   tags:
   - survey
@@ -219,7 +219,7 @@ papers:
 - arxiv_id: '2605.12334'
   title: 'RAW-Dream: Reward-Aligned World Model Without Task Data'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-12'
   category: foundation-models
   tags:
   - world-model
@@ -234,7 +234,7 @@ papers:
 - arxiv_id: '2605.12090'
   title: 'World Action Model Survey: Cascaded vs Joint Taxonomy'
   authors: Anonymous
-  date: 2026-05
+  date: '2026-05-12'
   category: foundation-models
   tags:
   - survey
@@ -250,7 +250,7 @@ papers:
 - arxiv_id: '2604.07993'
   title: 'HEX: Humanoid Embodied World Model'
   authors: Anonymous
-  date: 2026-04
+  date: '2026-04-09'
   category: foundation-models
   tags:
   - world-model
@@ -264,7 +264,7 @@ papers:
 - arxiv_id: '2601.12993'
   title: 'Scaling Embodied Pretraining: 35K Hours, 30 Robot Embodiments'
   authors: Anonymous
-  date: 2026-01
+  date: '2026-01-19'
   category: vla
   tags:
   - scale
@@ -279,7 +279,7 @@ papers:
 - arxiv_id: '2501.03575'
   title: Cosmos World Foundation Model Platform for Physical AI
   authors: NVIDIA
-  date: 2025-01
+  date: '2025-01-07'
   category: foundation-models
   tags:
   - world-model
@@ -296,7 +296,7 @@ papers:
 - arxiv_id: '2503.14734'
   title: 'GR00T N1: An Open Foundation Model for Generalist Humanoid Robots'
   authors: NVIDIA
-  date: 2025-03
+  date: '2025-03-18'
   category: vla
   tags:
   - foundation-model
@@ -312,7 +312,7 @@ papers:
 - arxiv_id: '2406.09246'
   title: 'OpenVLA: An Open-Source Vision-Language-Action Model'
   authors: Kim et al.
-  date: 2024-06
+  date: '2024-06-13'
   category: vla
   tags:
   - foundation-model
@@ -328,7 +328,7 @@ papers:
 - arxiv_id: '2410.07864'
   title: 'RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation'
   authors: Liu et al.
-  date: 2024-10
+  date: '2024-10-10'
   category: vla
   tags:
   - foundation-model
@@ -345,7 +345,7 @@ papers:
 - arxiv_id: '2410.13126'
   title: 'ALOHA Unleashed: A Simple Recipe for Robot Dexterity'
   authors: Zhao et al.
-  date: 2024-10
+  date: '2024-10-17'
   category: manipulation
   tags:
   - bimanual
@@ -361,7 +361,7 @@ papers:
 - arxiv_id: '2407.01512'
   title: 'OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback'
   authors: Cheng et al.
-  date: 2024-07
+  date: '2024-07-01'
   category: teleoperation
   tags:
   - vr
@@ -378,7 +378,7 @@ papers:
 - arxiv_id: '2401.02117'
   title: 'Mobile ALOHA: Learning Bimanual Mobile Manipulation'
   authors: Fu et al.
-  date: 2024-01
+  date: '2024-01-04'
   category: teleoperation
   tags:
   - mobile
@@ -395,7 +395,7 @@ papers:
 - arxiv_id: '2308.04079'
   title: 3D Gaussian Splatting for Real-Time Radiance Field Rendering
   authors: Kerbl et al.
-  date: 2023-08
+  date: '2023-08-08'
   category: scene
   tags:
   - gaussian-splatting
@@ -411,7 +411,7 @@ papers:
 - arxiv_id: '2303.04137'
   title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion'
   authors: Chi et al.
-  date: 2023-03
+  date: '2023-03-07'
   category: rl-il
   tags:
   - diffusion
@@ -428,7 +428,7 @@ papers:
 - arxiv_id: '2506.13751'
   title: 'LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction'
   authors: Xue, Haoru et al.
-  date: 2025-06
+  date: '2025-06-16'
   category: sim2real
   tags:
   - news-archive
@@ -442,7 +442,7 @@ papers:
 - arxiv_id: '2603.05410'
   title: 'PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking'
   authors: Qin, Weikai et al.
-  date: 2026-03
+  date: '2026-03-05'
   category: vla
   tags:
   - news-archive
@@ -457,7 +457,7 @@ papers:
 - arxiv_id: '2603.08122'
   title: Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA
   authors: Tang, Tutian et al.
-  date: 2026-03
+  date: '2026-03-09'
   category: teleoperation
   tags:
   - news-archive
@@ -471,7 +471,7 @@ papers:
 - arxiv_id: '2605.21811'
   title: Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation
   authors: Wu, Albert et al.
-  date: 2026-05
+  date: '2026-05-20'
   category: manipulation
   tags:
   - news-archive
@@ -486,7 +486,7 @@ papers:
 - arxiv_id: '2605.21935'
   title: 'Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments'
   authors: Jiang, Peifeng et al.
-  date: 2026-05
+  date: '2026-05-21'
   category: locomotion
   tags:
   - news-archive
@@ -500,7 +500,7 @@ papers:
 - arxiv_id: '2605.22283'
   title: Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action
   authors: Li, Pengteng et al.
-  date: 2026-05
+  date: '2026-05-21'
   category: vla
   tags:
   - news-archive
@@ -515,7 +515,7 @@ papers:
 - arxiv_id: '2605.29298'
   title: 'MonoDuo: Using One Robot Arm to Learn Bimanual Policies'
   authors: Bajamahal, Sandeep et al.
-  date: 2026-05
+  date: '2026-05-28'
   category: teleoperation
   tags:
   - news-archive
@@ -530,7 +530,7 @@ papers:
 - arxiv_id: '2605.29438'
   title: 'ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models'
   authors: Li, Ye et al.
-  date: 2026-05
+  date: '2026-05-28'
   category: vla
   tags:
   - news-archive
@@ -544,7 +544,7 @@ papers:
 - arxiv_id: '2605.30226'
   title: 'BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models'
   authors: Chen, Zhongxi et al.
-  date: 2026-05
+  date: '2026-05-28'
   category: vla
   tags:
   - news-archive
@@ -558,7 +558,7 @@ papers:
 - arxiv_id: '2605.30282'
   title: 'Gaze2Act: Gaze-Conditioned Vision-Language-Action Policies for Interactive Robot Manipulation'
   authors: Zuo, Kuangji et al.
-  date: 2026-05
+  date: '2026-05-28'
   category: vla
   tags:
   - news-archive
@@ -573,7 +573,7 @@ papers:
 - arxiv_id: '2605.30561'
   title: 'VLM3: Vision Language Models Are Native 3D Learners'
   authors: Cai, Zhipeng et al.
-  date: 2026-05
+  date: '2026-05-28'
   category: vla
   tags:
   - news-archive
@@ -588,7 +588,7 @@ papers:
 - arxiv_id: '2605.31158'
   title: 'Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models'
   authors: Lu, Jiacheng et al.
-  date: 2026-05
+  date: '2026-05-29'
   category: foundation-models
   tags:
   - news-archive
