@@ -430,8 +430,46 @@ def git_run(*args: str) -> subprocess.CompletedProcess:
     )
 
 
+def refresh_venues_and_dates(papers: list[dict[str, Any]]) -> int:
+    """Fetch arXiv HTML for every paper missing venue or full date; fill both.
+
+    Returns number of entries updated. Used via --refresh-venues (one-time backfill
+    + safe to re-run; only touches entries that lack data).
+    """
+    updated = 0
+    for p in papers:
+        aid = p.get("arxiv_id")
+        if not aid:
+            continue
+        needs_venue = not p.get("venue")
+        needs_date = len(str(p.get("date", ""))) < 10  # YYYY-MM → upgrade to YYYY-MM-DD
+        if not (needs_venue or needs_date):
+            continue
+        meta = fetch_arxiv_html(str(aid))
+        time.sleep(2)
+        if not meta:
+            continue
+        touched = False
+        if needs_date and meta.get("published") and len(meta["published"]) == 10:
+            p["date"] = meta["published"]
+            touched = True
+        if needs_venue and meta.get("venue"):
+            p["venue"] = meta["venue"]
+            touched = True
+        # Opportunistic: fill project URL from arXiv comments if absent
+        links = p.setdefault("links", {})
+        if not links.get("project") and meta.get("project_url"):
+            links["project"] = meta["project_url"]
+            touched = True
+        if touched:
+            updated += 1
+            log.info("refreshed %s: date=%s venue=%r", aid, p.get("date"), p.get("venue", ""))
+    return updated
+
+
 def main() -> int:
     update_existing = "--update-existing" in sys.argv
+    refresh_venues = "--refresh-venues" in sys.argv
 
     all_ids = extract_arxiv_ids()
     log.info("Found %d unique arXiv IDs in news_archive", len(all_ids))
@@ -448,6 +486,10 @@ def main() -> int:
     if update_existing:
         backfilled = update_existing_chinese_summaries(existing_papers)
         log.info("--update-existing: refreshed %d entries", backfilled)
+
+    # Optional backfill: fetch venue + full date for entries missing them.
+    if refresh_venues:
+        backfilled += refresh_venues_and_dates(existing_papers)
 
     # Fetch new papers, if any.
     added = 0

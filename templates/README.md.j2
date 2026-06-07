@@ -1,4 +1,10 @@
 {#- Jinja2 template — DO NOT edit README.md directly, edit this file -#}
+{%- macro paper_line(p) -%}
+- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** — *{{ p.authors }}* · `{{ p.date }}`{% if p.venue %} · 🏛️ **{{ p.venue }}**{% endif %}
+
+  > {{ p.abstract_short }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}
+
+{% endmacro -%}
 # Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
@@ -7,6 +13,8 @@
 📅 Last updated: **{{ last_updated }}** · 📊 **{{ stats.papers }}** papers · 🏢 **{{ stats.companies }}** companies · 🎮 **{{ stats.simulators }}** simulators
 
 Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+> 💡 **How to read**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue. Click any **▸ section** to expand.
 
 ---
 
@@ -31,40 +39,51 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 | **{{ c.name }}** | {{ c.region }} | {{ c.focus | join(", ") }} | {% if c.funding %}{{ c.funding[-1].round }} ${{ "{:,}".format(c.funding[-1].amount_usd) }}{% else %}—{% endif %} | {% if c.last_valuation_usd %}${{ "{:,}".format(c.last_valuation_usd) }}{% else %}—{% endif %} | {% if c.funding %}{{ c.funding[-1].date }}{% else %}—{% endif %} |
 {% endfor %}
 
-### 🇺🇸 United States
+{% set us = companies | selectattr("region", "equalto", "US") | list %}
+<details>
+<summary>🇺🇸 <b>United States</b> · {{ us | length }} companies</summary>
 
-{% for c in companies | selectattr("region", "equalto", "US") -%}
-- **[{{ c.name }}]({{ c.website }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{% if c.notes %} · {{ c.notes }}{% endif %}{{ "" }}
-{% endfor %}
-
-### 🇨🇳 China
-
-{% for c in companies | selectattr("region", "equalto", "CN") -%}
+{% for c in us -%}
 - **[{{ c.name }}]({{ c.website if c.website else '#' }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{% if c.notes %} · {{ c.notes }}{% endif %}{{ "" }}
 {% endfor %}
 
-### 🇪🇺 Europe
+</details>
 
-{% for c in companies | selectattr("region", "equalto", "Norway") -%}
-- **[{{ c.name }}]({{ c.website }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{{ "" }}
+{% set cn = companies | selectattr("region", "equalto", "CN") | list %}
+<details>
+<summary>🇨🇳 <b>China</b> · {{ cn | length }} companies</summary>
+
+{% for c in cn -%}
+- **[{{ c.name }}]({{ c.website if c.website else '#' }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{% if c.notes %} · {{ c.notes }}{% endif %}{{ "" }}
 {% endfor %}
 
-### 🇨🇦 Canada
+</details>
 
-{% for c in companies | selectattr("region", "equalto", "CA") -%}
-- **[{{ c.name }}]({{ c.website }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{{ "" }}
+{% set eu = companies | selectattr("region", "equalto", "Norway") | list %}
+{% set ca = companies | selectattr("region", "equalto", "CA") | list %}
+<details>
+<summary>🌍 <b>Europe & Canada</b> · {{ (eu | length) + (ca | length) }} companies</summary>
+
+{% for c in eu + ca -%}
+- **[{{ c.name }}]({{ c.website if c.website else '#' }})** · {{ c.focus | join(" / ") }}{% if c.products %} · *{{ c.products | join(", ") }}*{% endif %}{% if c.notes %} · {{ c.notes }}{% endif %}{{ "" }}
 {% endfor %}
+
+</details>
 
 {%- elif cat.source == "datasets.yaml" %}
 
-
 {% for sub in cat.subcategories %}
+{% set items = datasets | selectattr("subcategory", "equalto", sub.id) | list %}
+{% if items %}
+<details>
+<summary>📁 <b>{{ sub.title }}</b> · {{ items | length }} datasets</summary>
 
-### {{ sub.title }}
-
-{% for d in datasets | selectattr("subcategory", "equalto", sub.id) -%}
+{% for d in items -%}
 - **[{{ d.name }}]({{ d.links.project if d.links.project else (d.links.code if d.links.code else d.links.paper) }})** — {{ d.desc }}{% if d.size %} · *{{ d.size }}*{% endif %}{% if d.links.paper %} · [paper]({{ d.links.paper }}){% endif %}{% if d.links.code %} · [code]({{ d.links.code }}){% endif %}{{ "" }}
 {% endfor %}
+
+</details>
+{% endif %}
 {% endfor %}
 
 {%- elif cat.source == "simulators.yaml" %}
@@ -76,12 +95,17 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {%- elif cat.source == "benchmarks.yaml" %}
 
 {% for sub in cat.subcategories %}
+{% set items = benchmarks | selectattr("subcategory", "equalto", sub.id) | list %}
+{% if items %}
+<details>
+<summary>📐 <b>{{ sub.title }}</b> · {{ items | length }} benchmarks</summary>
 
-### {{ sub.title }}
-
-{% for b in benchmarks | selectattr("subcategory", "equalto", sub.id) -%}
+{% for b in items -%}
 - **[{{ b.name }}]({{ b.links.project if b.links.project else (b.links.code if b.links.code else b.links.paper) }})** — {{ b.desc }}{% if b.links.paper %} · [paper]({{ b.links.paper }}){% endif %}{% if b.links.code %} · [code]({{ b.links.code }}){% endif %}{{ "" }}
 {% endfor %}
+
+</details>
+{% endif %}
 {% endfor %}
 
 {%- elif cat.source == "tools.yaml" %}
@@ -97,31 +121,17 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {% set earlier = cat_papers | rejectattr("date", "ge", "2026") | list %}
 {% if cat_papers %}
 {% if recent_year %}
-{% for p in recent_year -%}
-- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}{% if p.venue %}, {{ p.venue }}{% endif %}) — *{{ p.authors }}*
-  - {{ p.abstract_short }}
-  {% if p.links.project or p.links.code or p.links.demo -%}
-  - {% if p.links.project %}[project]({{ p.links.project }}){% endif %}{% if p.links.project and (p.links.code or p.links.demo) %} · {% endif %}{% if p.links.code %}[code]({{ p.links.code }}){% endif %}{% if p.links.code and p.links.demo %} · {% endif %}{% if p.links.demo %}[demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
-  {% else -%}
-  - `{{ p.tags | join(" · ") }}`
-  {% endif -%}
-{% endfor %}
+<details open>
+<summary>🆕 <b>2026</b> · {{ recent_year | length }} paper{% if recent_year | length > 1 %}s{% endif %}</summary>
+
+{% for p in recent_year %}{{ paper_line(p) }}{% endfor %}
+</details>
 {% endif %}
 {% if earlier %}
-
 <details>
-<summary>📜 Show {{ earlier | length }} earlier paper{% if earlier | length > 1 %}s{% endif %}</summary>
+<summary>📜 <b>Earlier landmarks</b> · {{ earlier | length }} paper{% if earlier | length > 1 %}s{% endif %}</summary>
 
-{% for p in earlier -%}
-- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}{% if p.venue %}, {{ p.venue }}{% endif %}) — *{{ p.authors }}*
-  - {{ p.abstract_short }}
-  {% if p.links.project or p.links.code or p.links.demo -%}
-  - {% if p.links.project %}[project]({{ p.links.project }}){% endif %}{% if p.links.project and (p.links.code or p.links.demo) %} · {% endif %}{% if p.links.code %}[code]({{ p.links.code }}){% endif %}{% if p.links.code and p.links.demo %} · {% endif %}{% if p.links.demo %}[demo]({{ p.links.demo }}){% endif %} · `{{ p.tags | join(" · ") }}`
-  {% else -%}
-  - `{{ p.tags | join(" · ") }}`
-  {% endif -%}
-{% endfor %}
-
+{% for p in earlier %}{{ paper_line(p) }}{% endfor %}
 </details>
 {% endif %}
 {% else %}
@@ -138,9 +148,14 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 {% set recent = papers | selectattr("date", "ge", recent_cutoff) | sort(attribute="date", reverse=true) | list %}
 {% if recent %}
+<details>
+<summary><b>Show {{ recent[:15] | length }} recently added papers</b></summary>
+
 {% for p in recent[:15] -%}
-- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** ({{ p.date }}) · *{{ p.authors }}*{% if p.links.project %} · [project]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
+- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** `{{ p.date }}`{% if p.venue %} · 🏛️ {{ p.venue }}{% endif %} · *{{ p.authors }}*{% if p.links.project %} · [🌐]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
 {% endfor %}
+
+</details>
 {% else %}
 *No recent additions in the rolling window — see full sections above.*
 {% endif %}
