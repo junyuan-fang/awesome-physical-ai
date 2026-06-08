@@ -1,7 +1,7 @@
 papers:
 - arxiv_id: '2606.02486'
-  title: 'AHEAD: Adaptive Hierarchical Embodied Action Decoding for Dynamic VLA Deployment'
-  authors: Anonymous (under review)
+  title: 'Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation'
+  authors: Syed, Shahram Najam et al.
   date: '2026-06-01'
   category: vla
   tags:
@@ -15,8 +15,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.30834'
-  title: 'Hide-and-Seek: Step-Level Failure Detection for VLA under Conformal Prediction'
-  authors: Anonymous
+  title: 'Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring'
+  authors: Park, Seongheon et al.
   date: '2026-05-29'
   category: vla
   tags:
@@ -47,8 +47,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.28549'
-  title: 'SPRINT: Spectral-Priors Reinforced Humanoid Sprinting'
-  authors: Anonymous
+  title: 'SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints'
+  authors: Wei, Yantong et al.
   date: '2026-05-27'
   category: locomotion
   tags:
@@ -63,8 +63,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.26820'
-  title: 'Continual VLA: Catastrophic Forgetting in Heterogeneous Real-World Demonstrations'
-  authors: Anonymous
+  title: Can VLA Models Learn from Real-World Data Continually without Forgetting?
+  authors: Zhu, Jiarun et al.
   date: '2026-05-26'
   category: vla
   tags:
@@ -94,8 +94,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.22272'
-  title: 'Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real'
-  authors: Anonymous
+  title: 'Imagine2Real: Towards Zero-shot Humanoid-Object Interaction via Video Generative Priors'
+  authors: Chen, Jiahe et al.
   date: '2026-05-21'
   category: sim2real
   tags:
@@ -109,8 +109,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.22183'
-  title: 'AVP: Action-Visual Primitives for Decoupled VLA Architecture'
-  authors: Anonymous
+  title: Action with Visual Primitives
+  authors: Guo, Weilong et al.
   date: '2026-05-21'
   category: vla
   tags:
@@ -124,8 +124,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.21800'
-  title: 'stable-worldmodel: A Reproducibility-First Infrastructure for World Models'
-  authors: Anonymous
+  title: 'stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation'
+  authors: Maes, Lucas et al.
   date: '2026-05-20'
   category: foundation-models
   tags:
@@ -140,8 +140,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.21572'
-  title: 'PhysX-Omni: Simulation-Ready 3D Generation for Robotics'
-  authors: Anonymous
+  title: 'PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects'
+  authors: Cao, Ziang et al.
   date: '2026-05-20'
   category: scene
   tags:
@@ -155,8 +155,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.21133'
-  title: Hierarchical 'Brain-Cerebellum' Architecture for Robot Manipulation
-  authors: Anonymous
+  title: Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum
+  authors: Liang, Zhizhao et al.
   date: '2026-05-20'
   category: vla
   tags:
@@ -170,8 +170,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.15157'
-  title: 'HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation'
-  authors: Anonymous
+  title: 'Hand-in-the-Loop: Improving VLA Policies for Dexterous Manipulation via Seamless Hand-Arm Intervention'
+  authors: Li, Zhuohang et al.
   date: '2026-05-14'
   category: manipulation
   tags:
@@ -185,8 +185,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.14712'
-  title: 'IntentVLA: History-Conditioned Action Prediction for VLA'
-  authors: Anonymous
+  title: 'IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation'
+  authors: Lian, Shijie et al.
   date: '2026-05-14'
   category: vla
   tags:
@@ -201,8 +201,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.13925'
-  title: 'Dexterous Hand Research: A Comprehensive Survey (2026)'
-  authors: Anonymous
+  title: 'Towards Robotic Dexterous Hand Intelligence: A Survey'
+  authors: Zhao, Weiguang et al.
   date: '2026-05-13'
   category: manipulation
   tags:
@@ -217,8 +217,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.12334'
-  title: 'RAW-Dream: Reward-Aligned World Model Without Task Data'
-  authors: Anonymous
+  title: Reinforcing VLAs in Task-Agnostic World Models
+  authors: Wang, Yucen et al.
   date: '2026-05-12'
   category: foundation-models
   tags:
@@ -232,8 +232,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2605.12090'
-  title: 'World Action Model Survey: Cascaded vs Joint Taxonomy'
-  authors: Anonymous
+  title: 'World Action Models: The Next Frontier in Embodied AI'
+  authors: Wang, Siyin et al.
   date: '2026-05-12'
   category: foundation-models
   tags:
@@ -248,8 +248,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2604.07993'
-  title: 'HEX: Humanoid Embodied World Model'
-  authors: Anonymous
+  title: 'HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation'
+  authors: Bai, Shuanghao et al.
   date: '2026-04-09'
   category: foundation-models
   tags:
@@ -262,8 +262,8 @@ papers:
   added: '2026-06-03'
   source: seed
 - arxiv_id: '2601.12993'
-  title: 'Scaling Embodied Pretraining: 35K Hours, 30 Robot Embodiments'
-  authors: Anonymous
+  title: 'Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization'
+  authors: Luo, Hao et al.
   date: '2026-01-19'
   category: vla
   tags:

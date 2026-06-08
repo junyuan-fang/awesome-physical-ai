@@ -69,13 +69,13 @@ New to the field? Pick a track / 新手按背景选择起点：
   > We introduce CLAW, a fully end-to-end self-supervised framework for learning a world model jointly with continuous latent action representations directly from action-free videos. Our approach leverages adversarial latent regularization...
 - 🔥 **[Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models](https://arxiv.org/abs/2605.31158)** — *Lu, Jiacheng et al.* · `2026-05-29`
   > Interactive video world models generate video chunk by chunk in response to user-controlled camera movements, enabling applications such as real-time game simulation, virtual scene navigation, and embodied AI training. However, scaling to...
-- 🔥 **[stable-worldmodel: A Reproducibility-First Infrastructure for World Models](https://arxiv.org/abs/2605.21800)** — *Anonymous* · `2026-05-20`
+- 🔥 **[stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](https://arxiv.org/abs/2605.21800)** — *Maes, Lucas et al.* · `2026-05-20`
   > 给 WAM 阵营（昨天提的 RAW-Dream、DreamZero、PhysiFlow 等）提供统一基础设施；推动 world model 研究从"各家造轮子"走向 reproducibility-first
-- 🔥 **[RAW-Dream: Reward-Aligned World Model Without Task Data](https://arxiv.org/abs/2605.12334)** — *Anonymous* · `2026-05-12`
+- 🔥 **[Reinforcing VLAs in Task-Agnostic World Models](https://arxiv.org/abs/2605.12334)** — *Wang, Yucen et al.* · `2026-05-12`
   > 把"训世界模型也要任务数据"这个束缚拆掉；是 Joint WAM 阵营最新代表（昨天 WAM survey 给的 taxonomy）
-- 🔥 **[World Action Model Survey: Cascaded vs Joint Taxonomy](https://arxiv.org/abs/2605.12090)** — *Anonymous* · `2026-05-12`
+- 🔥 **[World Action Models: The Next Frontier in Embodied AI](https://arxiv.org/abs/2605.12090)** — *Wang, Siyin et al.* · `2026-05-12`
   > 把 2025 H2 - 2026 H1 散落工作（NVIDIA Cosmos / DreamZero / LeVERB / PhysiFlow / HEX 等）收编进统一框架；为产业 + 学术界提供 共同的概念锚：Cascaded vs Joint
-- 👀 **[HEX: Humanoid Embodied World Model](https://arxiv.org/abs/2604.07993)** — *Anonymous* · `2026-04-09`
+- 👀 **[HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](https://arxiv.org/abs/2604.07993)** — *Bai, Shuanghao et al.* · `2026-04-09`
   > "首个 full-sized 双足人形的全身 VLA 框架"；Full-sized 双足是产业最难做的形态（重心高、足底支撑窄）
 </details>
 <details>
@@ -99,9 +99,9 @@ New to the field? Pick a track / 新手按背景选择起点：
   > Task-conditioned manipulation requires grounding instructions to task-relevant functional parts rather than object categories. This setting is scene-dependent and often one-to-many in cluttered scenes: the same object may afford different...
 - 🔥 **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](https://arxiv.org/abs/2605.21811)** — *Wu, Albert et al.* · `2026-05-20`
   > Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector poses on...
-- 🔥 **[HandITL: Interactive Imitation Learning for High-DoF Dexterous Manipulation](https://arxiv.org/abs/2605.15157)** — *Anonymous* · `2026-05-14`
+- 🔥 **[Hand-in-the-Loop: Improving VLA Policies for Dexterous Manipulation via Seamless Hand-Arm Intervention](https://arxiv.org/abs/2605.15157)** — *Li, Zhuohang et al.* · `2026-05-14`
   > 解决 high-DoF 灵巧操作的 IIL 命令匹配难题；给 ROBOTERA、银河通用、智元等"teleop 路线"公司提供新工具
-- 🔥 **[Dexterous Hand Research: A Comprehensive Survey (2026)](https://arxiv.org/abs/2605.13925)** — *Anonymous* · `2026-05-13`
+- 🔥 **[Towards Robotic Dexterous Hand Intelligence: A Survey](https://arxiv.org/abs/2605.13925)** — *Zhao, Weiguang et al.* · `2026-05-13`
   > 这是当前最完整的灵巧手研究综述，与最近几篇 VLA / WAM survey 形成完整文献地图；触觉 modality（与 TARS VLTA / Sanctuary Phoenix Gen 8 / HandITL 一线产业 / 论文趋势呼应）被作为下一阶段关键
 </details>
 <details>
@@ -127,7 +127,7 @@ New to the field? Pick a track / 新手按背景选择起点：
   > Humans primarily rely on walking and running to traverse complex terrains, without resorting to unnecessarily complex motion patterns. Similarly, humanoid robots should achieve smooth transitions between walking and running while...
 - 🔥 **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](https://arxiv.org/abs/2606.04829)** — *Lu, Zuxing et al.* · `2026-06-03`
   > Building a general-purpose whole-body controller is essential for enabling diverse motion capabilities in humanoid robots across a wide range of downstream tasks, including locomotion and loco-manipulation. Different tasks rely on...
-- 🔥 **[SPRINT: Spectral-Priors Reinforced Humanoid Sprinting](https://arxiv.org/abs/2605.28549)** — *Anonymous* · `2026-05-27`
+- 🔥 **[SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints](https://arxiv.org/abs/2605.28549)** — *Wei, Yantong et al.* · `2026-05-27`
   > 6 m/s 是当前 humanoid 短跑公开数字第一档（vs Tesla Optimus Gen 3 行走 1.2 m/s、Figure 03 慢跑 2 m/s）；Spectral priors 是"frequency domain reference 库"思路 — 比 motion capture demos 数据效率高很多
 - 🔥 **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](https://arxiv.org/abs/2605.21935)** — *Jiang, Peifeng et al.* · `2026-05-21`
   > Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
@@ -175,7 +175,7 @@ New to the field? Pick a track / 新手按背景选择起点：
 <details open>
 <summary>🆕 <b>2026</b> · 1 paper</summary>
 
-- 🔥 **[Imagine2Real: Video-Generated HOI Priors for Zero-Shot Humanoid Sim2Real](https://arxiv.org/abs/2605.22272)** — *Anonymous* · `2026-05-21`
+- 🔥 **[Imagine2Real: Towards Zero-shot Humanoid-Object Interaction via Video Generative Priors](https://arxiv.org/abs/2605.22272)** — *Chen, Jiahe et al.* · `2026-05-21`
   > 解决 humanoid 与物体交互的"3D 数据从哪来"瓶颈；用 video 生成模型作为 prior，与 NVIDIA Cosmos / GR00T-Dreams 同思路但场景更细：HOI 而非通用 manipulation
 </details>
 <details>
@@ -195,7 +195,7 @@ New to the field? Pick a track / 新手按背景选择起点：
 
 - 🔥 **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](https://arxiv.org/abs/2606.03188)** — *Ma, Fulong et al.* · `2026-06-02`
   > Recent World Action Models (WAMs) have demonstrated impressive capabilities in embodied decision-making. However, whether their effectiveness stems from explicit future imagination during inference or representation learning induced by...
-- 🔥 **[PhysX-Omni: Simulation-Ready 3D Generation for Robotics](https://arxiv.org/abs/2605.21572)** — *Anonymous* · `2026-05-20`
+- 🔥 **[PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects](https://arxiv.org/abs/2605.21572)** — *Cao, Ziang et al.* · `2026-05-20`
   > 为 robotic policy learning 和 simulation-ready scene generation 提供原料；减少 robotics 仿真数据手工建模成本
 </details>
 <details>
