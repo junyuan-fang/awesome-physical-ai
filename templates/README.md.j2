@@ -24,6 +24,16 @@
 
 ---
 
+## 🌐 What is Physical AI?
+
+**Physical AI** is AI that perceives, reasons about, and acts in the *physical* world through a body — robots, humanoids, manipulators. Unlike chatbots that output text, these systems output **actions** and must obey physics, contact, and real-time constraints.
+
+> **物理 AI / 具身智能**：让 AI 通过「身体」（机器人 / 人形 / 机械臂）感知、推理并作用于真实物理世界。区别于只输出文本的对话模型，它输出的是**动作**，必须遵守物理、接触和实时性约束。
+
+This list covers the full stack: **foundation models** (VLA, world models) → **policies** (manipulation, locomotion, navigation) → **data** (teleoperation, datasets) → **infrastructure** (simulators, benchmarks, sim-to-real) → **industry** (humanoid companies). It does **not** cover pure LLMs, classical control without learning, or non-embodied CV/NLP.
+
+---
+
 ## 🚀 Where to Start
 
 New to the field? Pick a track / 新手按背景选择起点：
@@ -114,7 +124,7 @@ New to the field? Pick a track / 新手按背景选择起点：
 {%- elif cat.source == "simulators.yaml" %}
 
 {% for s in simulators -%}
-- **[{{ s.name }}]({{ s.links.project }})** — {{ s.desc }}{% if s.links.paper %} · [paper]({{ s.links.paper }}){% endif %}{% if s.links.code %} · [code]({{ s.links.code }}){% endif %}{{ "" }}
+- **[{{ s.name }}]({{ s.links.project }})** — {{ s.desc }}{% if s.tags %} {% for t in s.tags %}`{{ t }}` {% endfor %}{% endif %}{% if s.links.paper %}· [📄 paper]({{ s.links.paper }}){% endif %}{% if s.links.code %} · [💻 code]({{ s.links.code }}){% endif %}{{ "" }}
 {% endfor %}
 
 {%- elif cat.source == "benchmarks.yaml" %}
@@ -164,6 +174,8 @@ New to the field? Pick a track / 新手按背景选择起点：
 {% endif %}
 
 {%- endif %}
+
+<sub>[⬆ back to top](#contents)</sub>
 
 {% endfor %}
 

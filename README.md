@@ -17,6 +17,16 @@
 
 ---
 
+## 🌐 What is Physical AI?
+
+**Physical AI** is AI that perceives, reasons about, and acts in the *physical* world through a body — robots, humanoids, manipulators. Unlike chatbots that output text, these systems output **actions** and must obey physics, contact, and real-time constraints.
+
+> **物理 AI / 具身智能**：让 AI 通过「身体」（机器人 / 人形 / 机械臂）感知、推理并作用于真实物理世界。区别于只输出文本的对话模型，它输出的是**动作**，必须遵守物理、接触和实时性约束。
+
+This list covers the full stack: **foundation models** (VLA, world models) → **policies** (manipulation, locomotion, navigation) → **data** (teleoperation, datasets) → **infrastructure** (simulators, benchmarks, sim-to-real) → **industry** (humanoid companies). It does **not** cover pure LLMs, classical control without learning, or non-embodied CV/NLP.
+
+---
+
 ## 🚀 Where to Start
 
 New to the field? Pick a track / 新手按背景选择起点：
@@ -75,6 +85,8 @@ New to the field? Pick a track / 新手按背景选择起点：
   > NVIDIA's open world model platform for physical AI training data generation. · [🌐 project](https://www.nvidia.com/en-us/ai/cosmos/) · [💻 code](https://github.com/NVIDIA/Cosmos)
 </details>
 
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="manipulation"></a>🦾 Manipulation
 
 *Grasping, dexterous, bimanual manipulation*
@@ -99,6 +111,8 @@ New to the field? Pick a track / 新手按背景选择起点：
   > Diffusion policy + large-scale teleop data for dexterous bimanual manipulation — community baseline. · [🌐 project](https://aloha-unleashed.github.io)
 </details>
 
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="locomotion"></a>🦿 Locomotion
 
 *Humanoid, quadruped, bipedal walking and running*
@@ -118,6 +132,8 @@ New to the field? Pick a track / 新手按背景选择起点：
 - 🔥 **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](https://arxiv.org/abs/2605.21935)** — *Jiang, Peifeng et al.* · `2026-05-21`
   > Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
 </details>
+
+<sub>[⬆ back to top](#contents)</sub>
 
 ## <a id="teleoperation"></a>🕹️ Teleoperation
 
@@ -151,6 +167,8 @@ New to the field? Pick a track / 新手按背景选择起点：
   > $32k mobile teleop platform — community baseline for whole-body teleop. · [🌐 project](https://mobile-aloha.github.io) · [💻 code](https://github.com/MarkFzp/mobile-aloha)
 </details>
 
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="sim2real"></a>🌉 Sim-to-Real
 
 *Domain randomization, sim-to-real transfer, deployment*
@@ -166,6 +184,8 @@ New to the field? Pick a track / 新手按背景选择起点：
 - 👀 **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751)** — *Xue, Haoru et al.* · `2025-06-16`
   > Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization, yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
 </details>
+
+<sub>[⬆ back to top](#contents)</sub>
 
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
@@ -185,10 +205,14 @@ New to the field? Pick a track / 新手按背景选择起点：
   > Real-time, high-quality radiance field rendering — now ubiquitous in 3D scene understanding pipelines. · [🌐 project](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) · [💻 code](https://github.com/graphdeco-inria/gaussian-splatting)
 </details>
 
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="navigation"></a>🧭 Navigation & Mobility
 
 *Visual navigation, embodied QA, mobile robots*
 *No entries yet — [contribute one!](CONTRIBUTING.md)*
+
+<sub>[⬆ back to top](#contents)</sub>
 
 ## <a id="rl-il"></a>🎯 RL & Imitation Learning
 
@@ -199,6 +223,8 @@ New to the field? Pick a track / 新手按背景选择起点：
 - 📜 **[Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/abs/2303.04137)** — *Chi et al.* · `2023-03-07`
   > Action-space diffusion — now the default visuomotor policy baseline. · [🌐 project](https://diffusion-policy.cs.columbia.edu) · [💻 code](https://github.com/real-stanford/diffusion_policy)
 </details>
+
+<sub>[⬆ back to top](#contents)</sub>
 
 ## <a id="datasets"></a>📦 Datasets
 
@@ -245,16 +271,20 @@ New to the field? Pick a track / 新手按背景选择起点：
 
 </details>
 
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="simulators"></a>🎮 Simulators
 
 *Isaac Sim, MuJoCo, Genesis, and friends*
-- **[Isaac Lab](https://isaac-sim.github.io/IsaacLab)** — NVIDIA's modular RL training framework built on Isaac Sim. · [code](https://github.com/isaac-sim/IsaacLab)
-- **[Isaac Sim](https://developer.nvidia.com/isaac/sim)** — NVIDIA's full robot simulator with photorealistic rendering.
-- **[Genesis](https://genesis-embodied-ai.github.io)** — Universal physics engine for robotics — built in pure Python, 43M FPS claim. · [paper](https://arxiv.org/abs/2412.04268) · [code](https://github.com/Genesis-Embodied-AI/Genesis)
-- **[MuJoCo MJX](https://mujoco.readthedocs.io/en/latest/mjx.html)** — GPU/TPU-accelerated JAX-based version of MuJoCo for massive parallel rollouts. · [code](https://github.com/google-deepmind/mujoco)
-- **[Habitat 3.0](https://aihabitat.org)** — Photorealistic embodied AI sim with humans, navigation + manipulation. · [paper](https://arxiv.org/abs/2310.13724) · [code](https://github.com/facebookresearch/habitat-sim)
-- **[RoboCasa](https://robocasa.ai)** — Large-scale household simulation framework on top of MuJoCo. · [paper](https://arxiv.org/abs/2406.02523) · [code](https://github.com/robocasa/robocasa)
-- **[ManiSkill 3](https://maniskill.ai)** — GPU-parallelized manipulation skill learning sim. · [code](https://github.com/haosulab/ManiSkill)
+- **[Isaac Lab](https://isaac-sim.github.io/IsaacLab)** — NVIDIA's modular RL training framework built on Isaac Sim. `rl` `gpu-accelerated` `nvidia`  · [💻 code](https://github.com/isaac-sim/IsaacLab)
+- **[Isaac Sim](https://developer.nvidia.com/isaac/sim)** — NVIDIA's full robot simulator with photorealistic rendering. `photorealistic` `gpu` `nvidia` 
+- **[Genesis](https://genesis-embodied-ai.github.io)** — Universal physics engine for robotics — built in pure Python, 43M FPS claim. `physics` `python` `multi-material` · [📄 paper](https://arxiv.org/abs/2412.04268) · [💻 code](https://github.com/Genesis-Embodied-AI/Genesis)
+- **[MuJoCo MJX](https://mujoco.readthedocs.io/en/latest/mjx.html)** — GPU/TPU-accelerated JAX-based version of MuJoCo for massive parallel rollouts. `jax` `gpu` `parallel`  · [💻 code](https://github.com/google-deepmind/mujoco)
+- **[Habitat 3.0](https://aihabitat.org)** — Photorealistic embodied AI sim with humans, navigation + manipulation. `navigation` `humans` `photorealistic` · [📄 paper](https://arxiv.org/abs/2310.13724) · [💻 code](https://github.com/facebookresearch/habitat-sim)
+- **[RoboCasa](https://robocasa.ai)** — Large-scale household simulation framework on top of MuJoCo. `household` `mujoco` `large-scale` · [📄 paper](https://arxiv.org/abs/2406.02523) · [💻 code](https://github.com/robocasa/robocasa)
+- **[ManiSkill 3](https://maniskill.ai)** — GPU-parallelized manipulation skill learning sim. `manipulation` `gpu`  · [💻 code](https://github.com/haosulab/ManiSkill)
+
+<sub>[⬆ back to top](#contents)</sub>
 
 ## <a id="benchmarks"></a>📊 Benchmarks
 
@@ -298,6 +328,8 @@ New to the field? Pick a track / 新手按背景选择起点：
 
 </details>
 
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="tools"></a>🛠️ Tools & Libraries
 
 *Open-source frameworks for building embodied AI*
@@ -307,6 +339,8 @@ New to the field? Pick a track / 新手按背景选择起点：
 - **[AnyGrasp SDK](https://graspnet.net/anygrasp.html)** — General object grasping in cluttered scenes. · ✅ open-source · [💻 code](https://github.com/graspnet/anygrasp_sdk) · [📄 paper](https://arxiv.org/abs/2212.08333)
 - **[Curobo](https://curobo.org)** — NVIDIA's GPU-accelerated motion planning library. · ✅ open-source · [💻 code](https://github.com/NVlabs/curobo)
 - **[nvdiffrast](https://nvlabs.github.io/nvdiffrast/)** — Modular differentiable rendering primitives from NVIDIA. · ✅ open-source · [💻 code](https://github.com/NVlabs/nvdiffrast)
+
+<sub>[⬆ back to top](#contents)</sub>
 
 ## <a id="companies"></a>🏢 Companies & Industry
 
@@ -371,10 +405,14 @@ New to the field? Pick a track / 新手按背景选择起点：
 - **[Sanctuary AI](https://sanctuary.ai)** · humanoid · *Phoenix Gen 7*
 
 </details>
+<sub>[⬆ back to top](#contents)</sub>
+
 ## <a id="tutorials"></a>📚 Tutorials & Surveys
 
 *Surveys, books, and tutorial materials*
 *No entries yet — [contribute one!](CONTRIBUTING.md)*
+
+<sub>[⬆ back to top](#contents)</sub>
 
 
 ---
