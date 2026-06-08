@@ -5,23 +5,48 @@
   > {{ p.abstract_short }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}
 
 {% endmacro -%}
-# Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Physical AI
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
+![Last updated](https://img.shields.io/badge/Last%20updated-{{ last_updated | replace("-", "--") }}-blue.svg)
+![Papers](https://img.shields.io/badge/Papers-{{ stats.papers }}-success.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
+> 一个**持续自动更新**的具身智能 / 物理 AI / 人形机器人资源列表（论文描述中英双语，面向中文社区）。
 
-🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
-📅 Last updated: **{{ last_updated }}** · 📊 **{{ stats.papers }}** papers · 🏢 **{{ stats.companies }}** companies · 🎮 **{{ stats.simulators }}** simulators
+🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline · 每日自动同步.
+📊 **{{ stats.papers }}** papers · 🏢 **{{ stats.companies }}** companies · 🎮 **{{ stats.simulators }}** simulators · 📦 **{{ stats.datasets }}** datasets · 📊 **{{ stats.benchmarks }}** benchmarks
 
-Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+> 💡 **Legend / 图例**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue · 🌐 project · 💻 code. Click any **▸ section** to expand / 点击展开折叠区.
 
-> 💡 **How to read**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue. Click any **▸ section** to expand.
+---
+
+## 🚀 Where to Start
+
+New to the field? Pick a track / 新手按背景选择起点：
+
+- 🧠 **From an ML / LLM background** → start with [Foundation Models](#foundation-models) (VLA & world models), then [RL & Imitation Learning](#rl-il).
+- 🦾 **Building a manipulation system** → [Manipulation](#manipulation) → [Teleoperation](#teleoperation) (data collection) → [Datasets](#datasets).
+- 🌉 **Caring about sim-to-real** → [Simulators](#simulators) → [Sim-to-Real](#sim2real) → [Benchmarks](#benchmarks).
+- 🦿 **Into humanoids / locomotion** → [Locomotion](#locomotion) → [Companies & Industry](#companies).
+- 📈 **Tracking the industry** → [Companies & Industry](#companies) (valuation tracker + US/CN/EU players).
 
 ---
 
 ## Contents
 
-{% for cat in categories %}- [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }})
-{% endfor %}
+**📚 Research**
+{% for cat in categories if cat.group == "research" %}· [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}) {% endfor %}
+
+**🧰 Resources**
+{% for cat in categories if cat.group == "resources" %}· [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}) {% endfor %}
+
+**🏢 Industry**
+{% for cat in categories if cat.group == "industry" %}· [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}) {% endfor %}
+
 ---
 
 {% for cat in categories %}
@@ -111,7 +136,7 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 {%- elif cat.source == "tools.yaml" %}
 
 {% for t in tools -%}
-- **[{{ t.name }}]({{ t.links.project if t.links.project else t.links.code }})** — {{ t.desc }}{% if t.links.paper %} · [paper]({{ t.links.paper }}){% endif %}{% if t.links.code %} · [code]({{ t.links.code }}){% endif %}{{ "" }}
+- **[{{ t.name }}]({{ t.links.project if t.links.project else t.links.code }})** — {{ t.desc }}{% if t.links.code %} · ✅ open-source · [💻 code]({{ t.links.code }}){% endif %}{% if t.links.paper %} · [📄 paper]({{ t.links.paper }}){% endif %}{{ "" }}
 {% endfor %}
 
 {%- else %}
@@ -170,7 +195,13 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ## 🤝 Contributing
 
-This list is auto-fed from a [daily paper aggregation pipeline](https://github.com/junyuan-fang/personal_planning), but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+This list is auto-fed from a daily paper aggregation pipeline, but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+**Inclusion criteria / 收录标准** (keep the list high-signal):
+- ✅ Has a public paper (arXiv/venue) **or** open-source code / project page
+- ✅ Comes with a one-line description of its contribution / 一句话说明贡献
+- ✅ Relevant to physical AI: embodiment, manipulation, locomotion, world models, sim-to-real, etc.
+- ❌ No paywalled-only resources, vague "we're building AGI" startups, or dead links
 
 ## 📜 License
 

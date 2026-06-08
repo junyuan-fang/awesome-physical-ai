@@ -1,32 +1,42 @@
-# Awesome Physical AI [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome Physical AI
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--08-blue.svg)
+![Papers](https://img.shields.io/badge/Papers-63-success.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
+> 一个**持续自动更新**的具身智能 / 物理 AI / 人形机器人资源列表（论文描述中英双语，面向中文社区）。
 
-🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline.
-📅 Last updated: **2026-06-08** · 📊 **63** papers · 🏢 **19** companies · 🎮 **7** simulators
+🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline · 每日自动同步.
+📊 **63** papers · 🏢 **19** companies · 🎮 **7** simulators · 📦 **16** datasets · 📊 **13** benchmarks
 
-Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+> 💡 **Legend / 图例**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue · 🌐 project · 💻 code. Click any **▸ section** to expand / 点击展开折叠区.
 
-> 💡 **How to read**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue. Click any **▸ section** to expand.
+---
+
+## 🚀 Where to Start
+
+New to the field? Pick a track / 新手按背景选择起点：
+
+- 🧠 **From an ML / LLM background** → start with [Foundation Models](#foundation-models) (VLA & world models), then [RL & Imitation Learning](#rl-il).
+- 🦾 **Building a manipulation system** → [Manipulation](#manipulation) → [Teleoperation](#teleoperation) (data collection) → [Datasets](#datasets).
+- 🌉 **Caring about sim-to-real** → [Simulators](#simulators) → [Sim-to-Real](#sim2real) → [Benchmarks](#benchmarks).
+- 🦿 **Into humanoids / locomotion** → [Locomotion](#locomotion) → [Companies & Industry](#companies).
+- 📈 **Tracking the industry** → [Companies & Industry](#companies) (valuation tracker + US/CN/EU players).
 
 ---
 
 ## Contents
 
-- [🤖 Foundation Models for Robotics](#foundation-models)
-- [🦾 Manipulation](#manipulation)
-- [🦿 Locomotion](#locomotion)
-- [🕹️ Teleoperation](#teleoperation)
-- [🌉 Sim-to-Real](#sim2real)
-- [🌍 3D Scene Understanding](#scene)
-- [🧭 Navigation & Mobility](#navigation)
-- [🎯 RL & Imitation Learning](#rl-il)
-- [📦 Datasets](#datasets)
-- [🎮 Simulators](#simulators)
-- [📊 Benchmarks](#benchmarks)
-- [🛠️ Tools & Libraries](#tools)
-- [🏢 Companies & Industry](#companies)
-- [📚 Tutorials & Surveys](#tutorials)
+**📚 Research**
+· [🤖 Foundation Models for Robotics](#foundation-models) · [🦾 Manipulation](#manipulation) · [🦿 Locomotion](#locomotion) · [🕹️ Teleoperation](#teleoperation) · [🌉 Sim-to-Real](#sim2real) · [🌍 3D Scene Understanding](#scene) · [🧭 Navigation & Mobility](#navigation) · [🎯 RL & Imitation Learning](#rl-il) 
+**🧰 Resources**
+· [📦 Datasets](#datasets) · [🎮 Simulators](#simulators) · [📊 Benchmarks](#benchmarks) · [🛠️ Tools & Libraries](#tools) · [📚 Tutorials & Surveys](#tutorials) 
+**🏢 Industry**
+· [🏢 Companies & Industry](#companies) 
 ---
 
 ## <a id="foundation-models"></a>🤖 Foundation Models for Robotics
@@ -291,12 +301,12 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 ## <a id="tools"></a>🛠️ Tools & Libraries
 
 *Open-source frameworks for building embodied AI*
-- **[LeRobot](https://huggingface.co/lerobot)** — Hugging Face's end-to-end robotics framework — datasets, models, hardware. · [code](https://github.com/huggingface/lerobot)
-- **[Diffusion Policy](https://github.com/real-stanford/diffusion_policy)** — Reference implementation of action-space diffusion policies. · [paper](https://arxiv.org/abs/2303.04137) · [code](https://github.com/real-stanford/diffusion_policy)
-- **[OpenVLA](https://openvla.github.io)** — Open-source 7B Vision-Language-Action foundation model. · [code](https://github.com/openvla/openvla)
-- **[AnyGrasp SDK](https://graspnet.net/anygrasp.html)** — General object grasping in cluttered scenes. · [paper](https://arxiv.org/abs/2212.08333) · [code](https://github.com/graspnet/anygrasp_sdk)
-- **[Curobo](https://curobo.org)** — NVIDIA's GPU-accelerated motion planning library. · [code](https://github.com/NVlabs/curobo)
-- **[nvdiffrast](https://nvlabs.github.io/nvdiffrast/)** — Modular differentiable rendering primitives from NVIDIA. · [code](https://github.com/NVlabs/nvdiffrast)
+- **[LeRobot](https://huggingface.co/lerobot)** — Hugging Face's end-to-end robotics framework — datasets, models, hardware. · ✅ open-source · [💻 code](https://github.com/huggingface/lerobot)
+- **[Diffusion Policy](https://github.com/real-stanford/diffusion_policy)** — Reference implementation of action-space diffusion policies. · ✅ open-source · [💻 code](https://github.com/real-stanford/diffusion_policy) · [📄 paper](https://arxiv.org/abs/2303.04137)
+- **[OpenVLA](https://openvla.github.io)** — Open-source 7B Vision-Language-Action foundation model. · ✅ open-source · [💻 code](https://github.com/openvla/openvla)
+- **[AnyGrasp SDK](https://graspnet.net/anygrasp.html)** — General object grasping in cluttered scenes. · ✅ open-source · [💻 code](https://github.com/graspnet/anygrasp_sdk) · [📄 paper](https://arxiv.org/abs/2212.08333)
+- **[Curobo](https://curobo.org)** — NVIDIA's GPU-accelerated motion planning library. · ✅ open-source · [💻 code](https://github.com/NVlabs/curobo)
+- **[nvdiffrast](https://nvlabs.github.io/nvdiffrast/)** — Modular differentiable rendering primitives from NVIDIA. · ✅ open-source · [💻 code](https://github.com/NVlabs/nvdiffrast)
 
 ## <a id="companies"></a>🏢 Companies & Industry
 
@@ -402,7 +412,13 @@ Maintained by [@junyuan-fang](https://github.com/junyuan-fang). PRs welcome — 
 
 ## 🤝 Contributing
 
-This list is auto-fed from a [daily paper aggregation pipeline](https://github.com/junyuan-fang/personal_planning), but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+This list is auto-fed from a daily paper aggregation pipeline, but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+**Inclusion criteria / 收录标准** (keep the list high-signal):
+- ✅ Has a public paper (arXiv/venue) **or** open-source code / project page
+- ✅ Comes with a one-line description of its contribution / 一句话说明贡献
+- ✅ Relevant to physical AI: embodiment, manipulation, locomotion, world models, sim-to-real, etc.
+- ❌ No paywalled-only resources, vague "we're building AGI" startups, or dead links
 
 ## 📜 License
 
