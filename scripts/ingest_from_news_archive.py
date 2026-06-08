@@ -467,9 +467,31 @@ def refresh_venues_and_dates(papers: list[dict[str, Any]]) -> int:
     return updated
 
 
+def refresh_anonymous_authors(papers: list[dict[str, Any]]) -> int:
+    """Re-fetch arXiv metadata for entries whose authors are 'Anonymous'/'Unknown'
+    and fill in real author names. Also fixes placeholder titles. Returns count."""
+    updated = 0
+    for p in papers:
+        aid = p.get("arxiv_id")
+        authors = str(p.get("authors", ""))
+        if not aid or ("anonymous" not in authors.lower() and "unknown" not in authors.lower()):
+            continue
+        meta = fetch_arxiv_html(str(aid))
+        time.sleep(2)
+        if meta and meta.get("authors"):
+            p["authors"] = short_authors(meta["authors"])
+            # Also upgrade title if the real one differs and looks better
+            if meta.get("title") and len(meta["title"]) > 10:
+                p["title"] = meta["title"]
+            updated += 1
+            log.info("refreshed authors %s -> %s", aid, p["authors"])
+    return updated
+
+
 def main() -> int:
     update_existing = "--update-existing" in sys.argv
     refresh_venues = "--refresh-venues" in sys.argv
+    refresh_authors = "--refresh-authors" in sys.argv
 
     all_ids = extract_arxiv_ids()
     log.info("Found %d unique arXiv IDs in news_archive", len(all_ids))
@@ -490,6 +512,10 @@ def main() -> int:
     # Optional backfill: fetch venue + full date for entries missing them.
     if refresh_venues:
         backfilled += refresh_venues_and_dates(existing_papers)
+
+    # Optional backfill: replace Anonymous authors with real names from arXiv.
+    if refresh_authors:
+        backfilled += refresh_anonymous_authors(existing_papers)
 
     # Fetch new papers, if any.
     added = 0
