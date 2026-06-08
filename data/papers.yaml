@@ -834,3 +834,144 @@ papers:
   highlight: 🔥
   added: '2026-06-05'
   source: news_archive
+- arxiv_id: '2606.05645'
+  title: 'Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning'
+  authors: Yao, Ziyang et al.
+  date: '2026-06-04'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Autonomous driving requires reasoning about how ego actions shape the evolution of the surrounding world.
+    However, most end-to-end methods rely on direct state-to-action mappings, capturing correlations without explicitly modeling...
+  links:
+    arxiv: https://arxiv.org/abs/2606.05645
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.05773'
+  title: 'PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation'
+  authors: Ma, Chong et al.
+  date: '2026-06-04'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: 与 5/30 罗剑岚 τ0-WM "Critic + WM 评估" 主线精确同根；与 6/3 OSCAR (Cosmos-Predict2.5 + 2D 骨架 conditioning) virtual policy
+    evaluation 互补
+  links:
+    arxiv: https://arxiv.org/abs/2606.05773
+    project: https://qizekun.github.io/humanoid-gpt/
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.05873'
+  title: 'LadderMan: Learning Humanoid Perceptive Ladder Climbing'
+  authors: Zhao, Siheng et al.
+  date: '2026-06-04'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains
+    one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and sensitivity
+    to...
+  links:
+    arxiv: https://arxiv.org/abs/2606.05873
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.05880'
+  title: 'TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion'
+  authors: Li, Peizhuo et al.
+  date: '2026-06-04'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Agile humanoid locomotion across diverse challenging terrain demands both wide perceptual coverage and precise
+    local geometry understanding. Motivated by the way humans selectively look at relevant terrain during locomotion, we introduce...
+  links:
+    arxiv: https://arxiv.org/abs/2606.05880
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.05979'
+  title: World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis
+  authors: Yang, Yi et al.
+  date: '2026-06-04'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: We propose world-language-action (WLA) models as a new class of embodied foundation models. WLA takes textual
+    instructions, images, and robot states as inputs to jointly predict textual subtasks, subgoal images, and robot actions,...
+  links:
+    arxiv: https://arxiv.org/abs/2606.05979
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.06139'
+  title: 'MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation'
+  authors: Taouil, Ilyass et al.
+  date: '2026-06-04'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: We present MotionDisco, a framework that discovers contact-rich, long-horizon humanoid loco-manipulation
+    motions from scratch, without relying on teleoperation or motion retargeting from human demonstrations. This is challenging
+    because...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06139
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.06155'
+  title: 'AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding'
+  authors: Yu, Qize et al.
+  date: '2026-06-04'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-Language-Action (VLA) models leverage the rich world knowledge of pretrained vision-language models
+    (VLMs) to enable instruction-following robotic manipulation. However, the structural mismatch between VLM semantic spaces
+    and...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06155
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.06491'
+  title: 'TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies'
+  authors: Jing, Dong et al.
+  date: '2026-06-04'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Robot manipulation alternates between low-risk transit phases that call for fast execution and high-risk
+    contact stages that demand slow, precise motion. Yet existing Vision-Language-Action models (VLAs) only inherit a single
+    fixed speed...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06491
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
+- arxiv_id: '2606.06493'
+  title: 'HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers'
+  authors: Yang, Lizhi et al.
+  date: '2026-06-04'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: For a humanoid robot to be deployed in the real world, the choice of command space (i.e., the interface
+    between task planning and whole-body control) is crucial. Existing whole-body controllers typically demand dense kinematic
+    or spatial...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06493
+  highlight: 🔥
+  added: '2026-06-08'
+  source: news_archive
