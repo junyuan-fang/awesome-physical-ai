@@ -48,14 +48,12 @@ New to the field? Pick a track / 新手按背景选择起点：
 
 ## Contents
 
-**📚 Research**
-{% for cat in categories if cat.group == "research" %}· [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}) {% endfor %}
+- **📚 Research** — {% for cat in categories if cat.group == "research" %}[{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}){% if not loop.last %} · {% endif %}{% endfor %}
 
-**🧰 Resources**
-{% for cat in categories if cat.group == "resources" %}· [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}) {% endfor %}
+- **🧰 Resources** — {% for cat in categories if cat.group == "resources" %}[{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}){% if not loop.last %} · {% endif %}{% endfor %}
 
-**🏢 Industry**
-{% for cat in categories if cat.group == "industry" %}· [{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}) {% endfor %}
+- **🏢 Industry** — {% for cat in categories if cat.group == "industry" %}[{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}){% if not loop.last %} · {% endif %}{% endfor %}
+
 
 ---
 
