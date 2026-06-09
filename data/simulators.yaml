@@ -49,3 +49,10 @@ simulators:
       project: "https://maniskill.ai"
       code: "https://github.com/haosulab/ManiSkill"
     tags: [manipulation, gpu]
+
+  - name: "MotrixSim (Motphys / 谋先飞)"
+    desc: "Homegrown Chinese real-time physics engine for multibody dynamics & robotics — generalized coordinates + implicit solver, GPU multi-world parallel training. Powers the MIIT/CAS-backed AGIROS embodied-AI ecosystem."
+    links:
+      project: "https://www.motphys.com/en/products"
+      code: "https://github.com/Motphys/motrixsim-docs"
+    tags: [physics, gpu, multibody, china]

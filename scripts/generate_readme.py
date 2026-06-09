@@ -5,6 +5,7 @@ Usage:
 """
 from __future__ import annotations
 
+import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -16,6 +17,36 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 TEMPLATES = ROOT / "templates"
 OUTPUT = ROOT / "README.md"
+
+# Sentence-ending punctuation in both English and Chinese.
+_SENTENCE_END = ".!?。！？"
+
+
+def clean_abstract(text: str, max_len: int = 220) -> str:
+    """Tidy a paper one-liner for display.
+
+    Machine-ingested abstracts arrive truncated mid-sentence with a trailing
+    ``...``. Curated one-liners (no trailing ellipsis) are left untouched.
+    For truncated text we drop the ellipsis and cut back to the last complete
+    sentence so the line never ends mid-thought.
+    """
+    if not text:
+        return text
+    s = text.strip()
+    # Detect & strip a machine-truncation marker (… or ...).
+    truncated = bool(re.search(r"(\.\.\.|…)$", s))
+    if not truncated:
+        return s
+    s = re.sub(r"\s*(\.\.\.|…)$", "", s).rstrip()
+    # Prefer cutting to the last complete sentence within max_len.
+    window = s[:max_len]
+    cut = max(window.rfind(c) for c in _SENTENCE_END)
+    if cut >= 60:  # keep at least a meaningful clause
+        return window[: cut + 1].strip()
+    # No sentence boundary found — trim to a word boundary and add an ellipsis.
+    if len(s) > max_len:
+        s = s[:max_len].rsplit(" ", 1)[0].rstrip()
+    return s + " …"
 
 
 def load_yaml(path: Path, key: str | None = None):
@@ -68,6 +99,7 @@ def main() -> int:
         keep_trailing_newline=True,
         undefined=ChainableUndefined,
     )
+    env.filters["clean_abstract"] = clean_abstract
     tmpl = env.get_template("README.md.j2")
     rendered = tmpl.render(**context)
 

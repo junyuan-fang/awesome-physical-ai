@@ -8,7 +8,8 @@ papers:
   - wrapper
   - dynamic-env
   - vla
-  abstract_short: 完美呼应罗剑岚 τ0-WM "评价驱动 + 世界模型"主线；解决 VLA 真机部署"动态环境"这个被忽视已久的硬伤
+  abstract_short: predict-then-act 包装器 AHEAD 给冻结 VLA 加一个运动感知 latent 世界模型：用光流的逐 token 速度 / 加速度预测未来特征、按不确定性自适应预测时域，专治"执行时物体在动"的动态操作；给冻结
+    7B OpenVLA 仅加 4.9M 参数，20 个动态场景成功率 79–97%（最强基线 31–58%），真机抛物接球等基线全 0 的任务它仍能完成。
   links:
     arxiv: https://arxiv.org/abs/2606.02486
   highlight: 🔥
@@ -23,8 +24,8 @@ papers:
   - failure-detection
   - conformal
   - runtime-monitor
-  abstract_short: 与昨日讨论的 罗剑岚 τ0-WM"评价驱动"哲学完全呼应 — failure detection 是 Critic 体系的一个具体应用；"trajectory-level label 监督 → step-level
-    failure 定位"是个值得平移的工程范式
+  abstract_short: VLA 运行时失败检测：只用轨迹级标签（无需逐步标注）做粗监督，靠 inter / intra-trajectory 对比目标定位"哪一步要出错"；在 LIBERO / VLABench / 真机上对 OpenVLA、π0、π0.5
+    均达 SOTA，并用 conformal prediction 平衡准确率与及时性。
   links:
     arxiv: https://arxiv.org/abs/2605.30834
   highlight: 🔥
@@ -86,7 +87,8 @@ papers:
   - gesture
   - hri
   - grounding
-  abstract_short: 与昨天 Imagine2Real（HOI 数据 gap）互补：那个解"机器人-物体"交互的数据，GesVLA 解"人-机器人"指令的歧义；把零售 / 家用场景中"指给它看"的最自然交互方式硬编进模型
+  abstract_short: 给 VLA 加"指点手势"这条并行指令模态以解决多相似物体的空间歧义：手势特征编入 latent 参与高层推理与低层动作生成，双 VLM 架构紧耦合；通过把手模型渲染到真实场景图生成带指点标注的数据，杂乱场景下目标
+    grounding 准确率与人机交互效率均提升。
   links:
     arxiv: https://arxiv.org/abs/2605.22812
     project: https://gwxuan.github.io/GesVLA/
@@ -133,7 +135,8 @@ papers:
   - infrastructure
   - lerobot
   - benchmark
-  abstract_short: 给 WAM 阵营（昨天提的 RAW-Dream、DreamZero、PhysiFlow 等）提供统一基础设施；推动 world model 研究从"各家造轮子"走向 reproducibility-first
+  abstract_short: 世界模型研究的统一开源平台 stable-worldmodel (swm)，针对"各家造轮子 / 视频加载慢 / 缺标准泛化基准"三大痛点：Lance 高性能数据层（原生支持 MP4 / HDF5 / LeRobot）+
+    经测试的主流 baseline 与 planning solver + 可控视觉 / 几何 / 物理变量的环境套件，支撑可复现的 in-silico 评测。
   links:
     arxiv: https://arxiv.org/abs/2605.21800
   highlight: 🔥
@@ -209,8 +212,7 @@ papers:
   - survey
   - dexterous
   - tactile
-  abstract_short: 这是当前最完整的灵巧手研究综述，与最近几篇 VLA / WAM survey 形成完整文献地图；触觉 modality（与 TARS VLTA / Sanctuary Phoenix Gen 8 / HandITL
-    一线产业 / 论文趋势呼应）被作为下一阶段关键
+  abstract_short: 当前最系统的机器人灵巧手综述：从硬件（驱动 / 传动 / 感知及代表手型的力-柔顺-带宽权衡）、控制与学习方法（按范式分组、按时间梳理演进）、数据与评测三方面整合，厘清领域发展轨迹与关键开放问题。
   links:
     arxiv: https://arxiv.org/abs/2605.13925
   highlight: 🔥
@@ -225,7 +227,8 @@ papers:
   - world-model
   - joint-wam
   - vlm-reward
-  abstract_short: 把"训世界模型也要任务数据"这个束缚拆掉；是 Joint WAM 阵营最新代表（昨天 WAM survey 给的 taxonomy）
+  abstract_short: 把世界模型学习与下游任务彻底解耦以实现 zero-shot VLA 微调（RAW-Dream）：用 task-free 行为预训练的世界模型做 rollout + 现成 VLM 生成奖励，二者都任务无关；再加
+    dual-noise 验证过滤幻觉 rollout，证明通用物理先验可替代昂贵的任务相关数据。
   links:
     arxiv: https://arxiv.org/abs/2605.12334
   highlight: 🔥
@@ -432,8 +435,8 @@ papers:
   category: sim2real
   tags:
   - news-archive
-  abstract_short: Vision-language-action (VLA) models have demonstrated strong semantic understanding and zero-shot generalization,
-    yet most existing systems assume an accurate low-level controller with hand-crafted action "vocabulary" such as end-effector...
+  abstract_short: 首个 sim-to-real-ready 的人形全身控制（WBC）vision-language 闭环基准（150+ 任务 / 10 类）+ 分层 latent VLA 框架 LeVERB：高层学 latent
+    动作词表、低层 RL 全身控制器执行；zero-shot 总成功率 58.5%，比朴素分层 VLA 高 7.8×。
   links:
     arxiv: https://arxiv.org/abs/2506.13751
   highlight: 👀
@@ -461,8 +464,7 @@ papers:
   category: teleoperation
   tags:
   - news-archive
-  abstract_short: While Vision-Language-Action (VLA) models have demonstrated remarkable success in robotic manipulation,
-    their application has largely been confined to low-degree-of-freedom end-effectors performing simple, vision-guided pick-and-place...
+  abstract_short: 把 VLA 从低自由度抓放推进到双手灵巧"手内操作"：RL 原子技能 IMCopilot 既辅助遥操采数据又当底层执行原语，MoDE-VLA 用残差注入融合力 / 触觉而不损预训练知识；接触密集任务成功率翻倍。
   links:
     arxiv: https://arxiv.org/abs/2603.08122
   highlight: 👀
@@ -475,9 +477,8 @@ papers:
   category: manipulation
   tags:
   - news-archive
-  abstract_short: 'Robotic dexterous manipulation requires continuously reconciling objectives and constraints defined on
-    heterogeneous geometric spaces: a robot controlled on a $\mathbb{R}^7$ configuration manifold may need to track end effector
-    poses on...'
+  abstract_short: 用 pullback 控制屏障函数把任务流形的安全约束转成构型空间加速度的线性约束，高层策略可注入低维残差运动而始终保持安全；23-DOF Franka-Allegro 抓取成功率 92.5%，并首次实现模型化掌心朝下手内翻转
+    >360°。
   links:
     arxiv: https://arxiv.org/abs/2605.21811
   highlight: 🔥
@@ -490,8 +491,7 @@ papers:
   category: locomotion
   tags:
   - news-archive
-  abstract_short: Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under
-    locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing...
+  abstract_short: 面向人形的多模态交互场（MIF）：不确定性感知 3DGS 抑制步态模糊 + 差异触发的空间记忆更新，专治移动导致的感知畸变；真实动态办公室里重定位成功率 12%→94%，语义内存占用降 91.4%。
   links:
     arxiv: https://arxiv.org/abs/2605.21935
   highlight: 🔥
@@ -655,8 +655,8 @@ papers:
   category: manipulation
   tags:
   - news-archive
-  abstract_short: Dexterous manipulation learning has long been hindered by the high costs of data and training, as pure reinforcement
-    learning typically requires large-scale interactive exploration and imitation learning depends on high-quality...
+  abstract_short: 低成本跨本体灵巧操作框架 EaDex：单 RGB-D 相机捕捉人手 + MANO 建模重定向生成示范，contact-reward 动态退火从"跟示范"过渡到"自主优化"；9 个跨本体设置下比无退火基线相对提升
+    55.3%。
   links:
     arxiv: https://arxiv.org/abs/2606.03268
   highlight: 🔥
@@ -732,11 +732,11 @@ papers:
   category: foundation-models
   tags:
   - news-archive
-  abstract_short: 与昨日讨论的 罗剑岚 Critic 主线 + 6/3 GN0 三件套 同根：用 WAM 做 virtual policy evaluation = 把"评价模型"具体化；拿 NVIDIA Cosmos-Predict2.5
-    做底座是这一波 Cosmos 生态首批应用
+  abstract_short: 精确动作条件的视频世界模型 OSCAR：用 2D 骨架渲染做统一 conditioning 跨机械臂 / 人手泛化，在单张 GH200 上微调 Cosmos-Predict2.5-2B；用于 RoboArena
+    策略的 virtual policy evaluation，仿真评测与真机结果高度相关，且比更大模型 / 更多 GPU 的基线在动作跟随、画质、运动一致性上都更好。
   links:
     arxiv: https://arxiv.org/abs/2606.04463
-    project: https://qizekun.github.io/humanoid-gpt/
+    project: https://wuzy2115.github.io/oscar-project-page/
   highlight: 🔥
   added: '2026-06-05'
   source: news_archive
@@ -748,9 +748,7 @@ papers:
   category: foundation-models
   tags:
   - news-archive
-  abstract_short: 'Agile quadrotor flight in cluttered scenes requires more than a reactive mapping from a depth image to
-    a control command: the vehicle must remember which regions have been observed, infer nearby occupied space, and act under
-    partial...'
+  abstract_short: 面向视觉四旋翼的几何感知世界模型 MAD：不重建原图，而是重建机体中心的占据 / 可见性栅格 + 本体状态，迫使 latent 编码局部几何与可见历史；真实森林飞行达 5.05 m/s，是模块化导航与端到端学习之间的实用折中。
   links:
     arxiv: https://arxiv.org/abs/2606.04534
   highlight: 🔥
@@ -764,8 +762,7 @@ papers:
   category: teleoperation
   tags:
   - news-archive
-  abstract_short: Universal Manipulation Interface (UMI) enables scalable real-world robot data collection without hardware-specific
-    teleoperation, yet leveraging UMI data to train large-scale Vision-Language-Action (VLA) models remains fundamentally...
+  abstract_short: 打通 UMI 数据训 VLA 的两大鸿沟——腕部鱼眼畸变 OOD + 人采轨迹违反运动学：UMI-VQA（首个鱼眼 VQA 数据集）做视觉对齐 + 物理校验流水线给轨迹打分过滤不可行动作 + 两阶段联合训练。
   links:
     arxiv: https://arxiv.org/abs/2606.04708
   highlight: 🔥
@@ -794,9 +791,7 @@ papers:
   category: teleoperation
   tags:
   - news-archive
-  abstract_short: Despite the importance of tactile sensing for reliable manipulation, most existing Vision-Language-Action
-    (VLA) datasets remain vision-only, and those that do incorporate tactile information typically lack the joint combination
-    of task...
+  abstract_short: 接触-grounded 视触觉操作数据集 HapTile，在两端嵌入物理交互感知：机器人指尖触觉 + 遥操作端的力反馈示范；覆盖抓放 / 折叠 / 按压 / 堆叠等接触密集技能，每条配语言指令 + 同步视触觉观测与动作轨迹。
   links:
     arxiv: https://arxiv.org/abs/2606.04825
   highlight: 🔥
@@ -826,9 +821,8 @@ papers:
   category: teleoperation
   tags:
   - news-archive
-  abstract_short: Scaling humanoid loco-manipulation requires robot-compatible demonstrations across diverse objects, whole-body
-    motions, and scene geometries, but teleoperation and motion capture are difficult to scale because each collection depends
-    on...
+  abstract_short: 部署前全程虚拟的人形 loco-manipulation 数据生成流水线 GRAIL：组合 3D 资产 + 仿真场景 + 视频基础模型先验，从已知几何 / 尺度的 3D 配置出发重建 metric 4D 人-物交互再重定向到机器人；产出
+    2 万+ 序列，真机抓取 84%、爬楼 90%。
   links:
     arxiv: https://arxiv.org/abs/2606.05160
   highlight: 🔥
@@ -857,11 +851,10 @@ papers:
   category: teleoperation
   tags:
   - news-archive
-  abstract_short: 与 5/30 罗剑岚 τ0-WM "Critic + WM 评估" 主线精确同根；与 6/3 OSCAR (Cosmos-Predict2.5 + 2D 骨架 conditioning) virtual policy
-    evaluation 互补
+  abstract_short: 首个面向闭环 VLA 评测的 chunk-wise 世界模型：现有评测多是沿预采轨迹的开环预测，PiL-World 交替"VLA 推理 ↔ 世界模型预测"生成与 rollout 一致的多视角未来观测，无需每步真机执行；还能从失败轨迹学习，三个双臂任务上把真机与仿真成功率的误差从
+    63.2% 降到 12.0%。
   links:
     arxiv: https://arxiv.org/abs/2606.05773
-    project: https://qizekun.github.io/humanoid-gpt/
   highlight: 🔥
   added: '2026-06-08'
   source: news_archive
@@ -873,9 +866,7 @@ papers:
   category: teleoperation
   tags:
   - news-archive
-  abstract_short: Humanoid robots hold great promise for operating in human-centered environments, yet ladder climbing remains
-    one of the most challenging tasks due to sparse footholds and handholds, complex whole-body coordination, and sensitivity
-    to...
+  abstract_short: 让人形稳健爬各种梯子并在梯上操作：两阶段流水线——混合运动跟踪从单条参考动作学多个爬梯专家，蒸馏成统一的深度视觉运动策略；借视觉基础模型弥合深度 sim-to-real，zero-shot 迁移到真机。
   links:
     arxiv: https://arxiv.org/abs/2606.05873
   highlight: 🔥

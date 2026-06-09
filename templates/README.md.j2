@@ -2,7 +2,7 @@
 {%- macro paper_line(p) -%}
 - {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** — *{{ p.authors }}* · `{{ p.date }}`{% if p.venue %} · 🏛️ **{{ p.venue }}**{% endif %}
 
-  > {{ p.abstract_short }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}
+  > {{ p.abstract_short | clean_abstract }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}
 
 {% endmacro -%}
 # Awesome Physical AI
