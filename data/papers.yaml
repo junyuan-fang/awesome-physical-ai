@@ -975,3 +975,51 @@ papers:
   highlight: 🔥
   added: '2026-06-08'
   source: news_archive
+- arxiv_id: '2606.05699'
+  title: 'DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use'
+  authors: Li, Runfa Blark et al.
+  date: '2026-06-04'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Bimanual dexterous tool use remains challenging for robots due to high-dimensional hand configurations and
+    complex hand-tool-object dynamics and contact. Most existing control policies depend on future configuration references
+    provided...
+  links:
+    arxiv: https://arxiv.org/abs/2606.05699
+  highlight: 🔥
+  added: '2026-06-09'
+  source: news_archive
+- arxiv_id: '2606.06218'
+  title: 'TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation'
+  authors: Son, Dongwon et al.
+  date: '2026-06-04'
+  venue: ''
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: A policy tuned for one robot often behaves differently on another, whether due to the sim-to-real gap, unknown
+    payloads, or the differing dynamics of two instances of the same robot. In contact-rich, dynamic manipulation, even small...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06218
+  highlight: 🔥
+  added: '2026-06-09'
+  source: news_archive
+- arxiv_id: '2606.06390'
+  title: 'HomeWorld: A Unified Floorplan-to-Furnished Framework for Generating Controllable, Densely Interactive Whole-Home
+    Scenes'
+  authors: Li, Wenbo et al.
+  date: '2026-06-04'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Indoor scene generation is crucial for robot simulation and modern interior design. However, complex layouts
+    together with scarce 3D scene data make learning-based generation challenging. Existing methods often rely on hand-crafted
+    rules...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06390
+  highlight: 🔥
+  added: '2026-06-09'
+  source: news_archive
