@@ -5,20 +5,25 @@
   > {{ p.abstract_short | clean_abstract }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}
 
 {% endmacro -%}
-# Awesome Physical AI
+<div align="center">
+
+# 🤖 Awesome Physical AI
+
+**A continuously maintained, auto-updated list of Physical AI · Embodied AI · Humanoid Robotics — focused on 2025–2026+ state-of-the-art.**
+
+*持续自动更新的具身智能 / 物理 AI / 人形机器人资源列表 · 论文描述中英双语，面向中文社区*
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
 ![Last updated](https://img.shields.io/badge/Last%20updated-{{ last_updated | replace("-", "--") }}-blue.svg)
-![Papers](https://img.shields.io/badge/Papers-{{ stats.papers }}-success.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
-> 一个**持续自动更新**的具身智能 / 物理 AI / 人形机器人资源列表（论文描述中英双语，面向中文社区）。
+📊 **{{ stats.papers }}** papers&nbsp; · &nbsp;🏢 **{{ stats.companies }}** companies&nbsp; · &nbsp;🎮 **{{ stats.simulators }}** simulators&nbsp; · &nbsp;📦 **{{ stats.datasets }}** datasets&nbsp; · &nbsp;📊 **{{ stats.benchmarks }}** benchmarks
 
-🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline · 每日自动同步.
-📊 **{{ stats.papers }}** papers · 🏢 **{{ stats.companies }}** companies · 🎮 **{{ stats.simulators }}** simulators · 📦 **{{ stats.datasets }}** datasets · 📊 **{{ stats.benchmarks }}** benchmarks
+<sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
+
+</div>
 
 > 💡 **Legend / 图例**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue · 🌐 project · 💻 code. Click any **▸ section** to expand / 点击展开折叠区.
 
@@ -36,13 +41,15 @@ This list covers the full stack: **foundation models** (VLA, world models) → *
 
 ## 🚀 Where to Start
 
-New to the field? Pick a track / 新手按背景选择起点：
+New to the field? Pick a track by your background / 新手按背景选择起点：
 
-- 🧠 **From an ML / LLM background** → start with [Foundation Models](#foundation-models) (VLA & world models), then [RL & Imitation Learning](#rl-il).
-- 🦾 **Building a manipulation system** → [Manipulation](#manipulation) → [Teleoperation](#teleoperation) (data collection) → [Datasets](#datasets).
-- 🌉 **Caring about sim-to-real** → [Simulators](#simulators) → [Sim-to-Real](#sim2real) → [Benchmarks](#benchmarks).
-- 🦿 **Into humanoids / locomotion** → [Locomotion](#locomotion) → [Companies & Industry](#companies).
-- 📈 **Tracking the industry** → [Companies & Industry](#companies) (valuation tracker + US/CN/EU players).
+| Your background / 你的背景 | Suggested reading path / 推荐路线 |
+|---|---|
+| 🧠 **ML / LLM** | [Foundation Models](#foundation-models) → [RL & Imitation Learning](#rl-il) |
+| 🦾 **Manipulation** | [Manipulation](#manipulation) → [Teleoperation](#teleoperation) → [Datasets](#datasets) |
+| 🌉 **Sim-to-real** | [Simulators](#simulators) → [Sim-to-Real](#sim2real) → [Benchmarks](#benchmarks) |
+| 🦿 **Humanoids / locomotion** | [Locomotion](#locomotion) → [Companies & Industry](#companies) |
+| 📈 **Industry tracking** | [Companies & Industry](#companies) — valuation tracker + US / CN / EU players |
 
 ---
 
@@ -121,8 +128,11 @@ New to the field? Pick a track / 新手按背景选择起点：
 
 {%- elif cat.source == "simulators.yaml" %}
 
+
+| Simulator | What it is | Backend / tags | Links |
+|---|---|---|---|
 {% for s in simulators -%}
-- **[{{ s.name }}]({{ s.links.project }})** — {{ s.desc }}{% if s.tags %} {% for t in s.tags %}`{{ t }}` {% endfor %}{% endif %}{% if s.links.paper %}· [📄 paper]({{ s.links.paper }}){% endif %}{% if s.links.code %} · [💻 code]({{ s.links.code }}){% endif %}{{ "" }}
+| **[{{ s.name }}]({{ s.links.project }})** | {{ s.desc | replace("|", "\\|") }} | {% if s.tags %}{% for t in s.tags %}`{{ t }}`{% if not loop.last %} {% endif %}{% endfor %}{% endif %} | {% if s.links.paper %}[📄 paper]({{ s.links.paper }}){% endif %}{% if s.links.paper and s.links.code %} · {% endif %}{% if s.links.code %}[💻 code]({{ s.links.code }}){% endif %} |
 {% endfor %}
 
 {%- elif cat.source == "benchmarks.yaml" %}
@@ -143,8 +153,11 @@ New to the field? Pick a track / 新手按背景选择起点：
 
 {%- elif cat.source == "tools.yaml" %}
 
+
+| Tool | What it is | Links |
+|---|---|---|
 {% for t in tools -%}
-- **[{{ t.name }}]({{ t.links.project if t.links.project else t.links.code }})** — {{ t.desc }}{% if t.links.code %} · ✅ open-source · [💻 code]({{ t.links.code }}){% endif %}{% if t.links.paper %} · [📄 paper]({{ t.links.paper }}){% endif %}{{ "" }}
+| **[{{ t.name }}]({{ t.links.project if t.links.project else t.links.code }})** | {{ t.desc | replace("|", "\\|") }} | {% if t.links.code %}✅ [💻 code]({{ t.links.code }}){% endif %}{% if t.links.code and t.links.paper %} · {% endif %}{% if t.links.paper %}[📄 paper]({{ t.links.paper }}){% endif %} |
 {% endfor %}
 
 {%- else %}

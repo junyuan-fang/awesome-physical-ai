@@ -1,17 +1,22 @@
-# Awesome Physical AI
+<div align="center">
+
+# 🤖 Awesome Physical AI
+
+**A continuously maintained, auto-updated list of Physical AI · Embodied AI · Humanoid Robotics — focused on 2025–2026+ state-of-the-art.**
+
+*持续自动更新的具身智能 / 物理 AI / 人形机器人资源列表 · 论文描述中英双语，面向中文社区*
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
 ![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--09-blue.svg)
-![Papers](https://img.shields.io/badge/Papers-66-success.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-> A **continuously maintained** list of resources on Physical AI, Embodied AI, and Humanoid Robotics — focused on **2025-2026+** state-of-the-art.
-> 一个**持续自动更新**的具身智能 / 物理 AI / 人形机器人资源列表（论文描述中英双语，面向中文社区）。
+📊 **66** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
-🤖 **Auto-updated** from arXiv + HuggingFace daily papers via a custom pipeline · 每日自动同步.
-📊 **66** papers · 🏢 **19** companies · 🎮 **8** simulators · 📦 **16** datasets · 📊 **13** benchmarks
+<sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
+
+</div>
 
 > 💡 **Legend / 图例**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue · 🌐 project · 💻 code. Click any **▸ section** to expand / 点击展开折叠区.
 
@@ -29,13 +34,15 @@ This list covers the full stack: **foundation models** (VLA, world models) → *
 
 ## 🚀 Where to Start
 
-New to the field? Pick a track / 新手按背景选择起点：
+New to the field? Pick a track by your background / 新手按背景选择起点：
 
-- 🧠 **From an ML / LLM background** → start with [Foundation Models](#foundation-models) (VLA & world models), then [RL & Imitation Learning](#rl-il).
-- 🦾 **Building a manipulation system** → [Manipulation](#manipulation) → [Teleoperation](#teleoperation) (data collection) → [Datasets](#datasets).
-- 🌉 **Caring about sim-to-real** → [Simulators](#simulators) → [Sim-to-Real](#sim2real) → [Benchmarks](#benchmarks).
-- 🦿 **Into humanoids / locomotion** → [Locomotion](#locomotion) → [Companies & Industry](#companies).
-- 📈 **Tracking the industry** → [Companies & Industry](#companies) (valuation tracker + US/CN/EU players).
+| Your background / 你的背景 | Suggested reading path / 推荐路线 |
+|---|---|
+| 🧠 **ML / LLM** | [Foundation Models](#foundation-models) → [RL & Imitation Learning](#rl-il) |
+| 🦾 **Manipulation** | [Manipulation](#manipulation) → [Teleoperation](#teleoperation) → [Datasets](#datasets) |
+| 🌉 **Sim-to-real** | [Simulators](#simulators) → [Sim-to-Real](#sim2real) → [Benchmarks](#benchmarks) |
+| 🦿 **Humanoids / locomotion** | [Locomotion](#locomotion) → [Companies & Industry](#companies) |
+| 📈 **Industry tracking** | [Companies & Industry](#companies) — valuation tracker + US / CN / EU players |
 
 ---
 
@@ -278,14 +285,17 @@ New to the field? Pick a track / 新手按背景选择起点：
 ## <a id="simulators"></a>🎮 Simulators
 
 *Isaac Sim, MuJoCo, Genesis, and friends*
-- **[Isaac Lab](https://isaac-sim.github.io/IsaacLab)** — NVIDIA's modular RL training framework built on Isaac Sim. `rl` `gpu-accelerated` `nvidia`  · [💻 code](https://github.com/isaac-sim/IsaacLab)
-- **[Isaac Sim](https://developer.nvidia.com/isaac/sim)** — NVIDIA's full robot simulator with photorealistic rendering. `photorealistic` `gpu` `nvidia` 
-- **[Genesis](https://genesis-embodied-ai.github.io)** — Universal physics engine for robotics — built in pure Python, 43M FPS claim. `physics` `python` `multi-material` · [📄 paper](https://arxiv.org/abs/2412.04268) · [💻 code](https://github.com/Genesis-Embodied-AI/Genesis)
-- **[MuJoCo MJX](https://mujoco.readthedocs.io/en/latest/mjx.html)** — GPU/TPU-accelerated JAX-based version of MuJoCo for massive parallel rollouts. `jax` `gpu` `parallel`  · [💻 code](https://github.com/google-deepmind/mujoco)
-- **[Habitat 3.0](https://aihabitat.org)** — Photorealistic embodied AI sim with humans, navigation + manipulation. `navigation` `humans` `photorealistic` · [📄 paper](https://arxiv.org/abs/2310.13724) · [💻 code](https://github.com/facebookresearch/habitat-sim)
-- **[RoboCasa](https://robocasa.ai)** — Large-scale household simulation framework on top of MuJoCo. `household` `mujoco` `large-scale` · [📄 paper](https://arxiv.org/abs/2406.02523) · [💻 code](https://github.com/robocasa/robocasa)
-- **[ManiSkill 3](https://maniskill.ai)** — GPU-parallelized manipulation skill learning sim. `manipulation` `gpu`  · [💻 code](https://github.com/haosulab/ManiSkill)
-- **[MotrixSim (Motphys / 谋先飞)](https://www.motphys.com/en/products)** — Homegrown Chinese real-time physics engine for multibody dynamics & robotics — generalized coordinates + implicit solver, GPU multi-world parallel training. Powers the MIIT/CAS-backed AGIROS embodied-AI ecosystem. `physics` `gpu` `multibody` `china`  · [💻 code](https://github.com/Motphys/motrixsim-docs)
+
+| Simulator | What it is | Backend / tags | Links |
+|---|---|---|---|
+| **[Isaac Lab](https://isaac-sim.github.io/IsaacLab)** | NVIDIA's modular RL training framework built on Isaac Sim. | `rl` `gpu-accelerated` `nvidia` | [💻 code](https://github.com/isaac-sim/IsaacLab) |
+| **[Isaac Sim](https://developer.nvidia.com/isaac/sim)** | NVIDIA's full robot simulator with photorealistic rendering. | `photorealistic` `gpu` `nvidia` |  |
+| **[Genesis](https://genesis-embodied-ai.github.io)** | Universal physics engine for robotics — built in pure Python, 43M FPS claim. | `physics` `python` `multi-material` | [📄 paper](https://arxiv.org/abs/2412.04268) · [💻 code](https://github.com/Genesis-Embodied-AI/Genesis) |
+| **[MuJoCo MJX](https://mujoco.readthedocs.io/en/latest/mjx.html)** | GPU/TPU-accelerated JAX-based version of MuJoCo for massive parallel rollouts. | `jax` `gpu` `parallel` | [💻 code](https://github.com/google-deepmind/mujoco) |
+| **[Habitat 3.0](https://aihabitat.org)** | Photorealistic embodied AI sim with humans, navigation + manipulation. | `navigation` `humans` `photorealistic` | [📄 paper](https://arxiv.org/abs/2310.13724) · [💻 code](https://github.com/facebookresearch/habitat-sim) |
+| **[RoboCasa](https://robocasa.ai)** | Large-scale household simulation framework on top of MuJoCo. | `household` `mujoco` `large-scale` | [📄 paper](https://arxiv.org/abs/2406.02523) · [💻 code](https://github.com/robocasa/robocasa) |
+| **[ManiSkill 3](https://maniskill.ai)** | GPU-parallelized manipulation skill learning sim. | `manipulation` `gpu` | [💻 code](https://github.com/haosulab/ManiSkill) |
+| **[MotrixSim (Motphys / 谋先飞)](https://www.motphys.com/en/products)** | Homegrown Chinese real-time physics engine for multibody dynamics & robotics — generalized coordinates + implicit solver, GPU multi-world parallel training. Powers the MIIT/CAS-backed AGIROS embodied-AI ecosystem. | `physics` `gpu` `multibody` `china` | [💻 code](https://github.com/Motphys/motrixsim-docs) |
 
 <sub>[⬆ back to top](#contents)</sub>
 
@@ -336,12 +346,15 @@ New to the field? Pick a track / 新手按背景选择起点：
 ## <a id="tools"></a>🛠️ Tools & Libraries
 
 *Open-source frameworks for building embodied AI*
-- **[LeRobot](https://huggingface.co/lerobot)** — Hugging Face's end-to-end robotics framework — datasets, models, hardware. · ✅ open-source · [💻 code](https://github.com/huggingface/lerobot)
-- **[Diffusion Policy](https://github.com/real-stanford/diffusion_policy)** — Reference implementation of action-space diffusion policies. · ✅ open-source · [💻 code](https://github.com/real-stanford/diffusion_policy) · [📄 paper](https://arxiv.org/abs/2303.04137)
-- **[OpenVLA](https://openvla.github.io)** — Open-source 7B Vision-Language-Action foundation model. · ✅ open-source · [💻 code](https://github.com/openvla/openvla)
-- **[AnyGrasp SDK](https://graspnet.net/anygrasp.html)** — General object grasping in cluttered scenes. · ✅ open-source · [💻 code](https://github.com/graspnet/anygrasp_sdk) · [📄 paper](https://arxiv.org/abs/2212.08333)
-- **[Curobo](https://curobo.org)** — NVIDIA's GPU-accelerated motion planning library. · ✅ open-source · [💻 code](https://github.com/NVlabs/curobo)
-- **[nvdiffrast](https://nvlabs.github.io/nvdiffrast/)** — Modular differentiable rendering primitives from NVIDIA. · ✅ open-source · [💻 code](https://github.com/NVlabs/nvdiffrast)
+
+| Tool | What it is | Links |
+|---|---|---|
+| **[LeRobot](https://huggingface.co/lerobot)** | Hugging Face's end-to-end robotics framework — datasets, models, hardware. | ✅ [💻 code](https://github.com/huggingface/lerobot) |
+| **[Diffusion Policy](https://github.com/real-stanford/diffusion_policy)** | Reference implementation of action-space diffusion policies. | ✅ [💻 code](https://github.com/real-stanford/diffusion_policy) · [📄 paper](https://arxiv.org/abs/2303.04137) |
+| **[OpenVLA](https://openvla.github.io)** | Open-source 7B Vision-Language-Action foundation model. | ✅ [💻 code](https://github.com/openvla/openvla) |
+| **[AnyGrasp SDK](https://graspnet.net/anygrasp.html)** | General object grasping in cluttered scenes. | ✅ [💻 code](https://github.com/graspnet/anygrasp_sdk) · [📄 paper](https://arxiv.org/abs/2212.08333) |
+| **[Curobo](https://curobo.org)** | NVIDIA's GPU-accelerated motion planning library. | ✅ [💻 code](https://github.com/NVlabs/curobo) |
+| **[nvdiffrast](https://nvlabs.github.io/nvdiffrast/)** | Modular differentiable rendering primitives from NVIDIA. | ✅ [💻 code](https://github.com/NVlabs/nvdiffrast) |
 
 <sub>[⬆ back to top](#contents)</sub>
 
