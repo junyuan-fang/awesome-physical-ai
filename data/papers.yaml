@@ -1014,3 +1014,81 @@ papers:
   highlight: 🔥
   added: '2026-06-09'
   source: news_archive
+- arxiv_id: '2606.06832'
+  title: 'STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images'
+  authors: Ajith, Abhiroop et al.
+  date: '2026-06-05'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'Robots performing long-horizon visual manipulation observe high-dimensional images, but successful plans
+    depend on action-relevant facts: what can be done now and what changes afterward. A useful planning representation should
+    discard...'
+  links:
+    arxiv: https://arxiv.org/abs/2606.06832
+  highlight: 🔥
+  added: '2026-06-10'
+  source: news_archive
+- arxiv_id: '2606.06904'
+  title: 'ActionMap: Robot Policy Learning via Voxel Action Heatmap'
+  authors: Yang, Pei et al.
+  date: '2026-06-05'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-language-action (VLA) models have advanced rapidly across backbones, training recipes, and data scale,
+    yet the action decoder, which converts the backbone's hidden state into a continuous control signal, has barely changed
+    and...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06904
+  highlight: 🔥
+  added: '2026-06-10'
+  source: news_archive
+- arxiv_id: '2606.06944'
+  title: 'T-GMP: Terrain-conditioned Generative Motion Priors for Versatile and Natural Humanoid Locomotion'
+  authors: Guo, Junhong et al.
+  date: '2026-06-05'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Achieving both anthropomorphic naturalness and robust terrain traversal remains a fundamental challenge
+    in humanoid locomotion. Existing Reinforcement Learning (RL) approaches typically rely on fixed motion priors, limiting
+    their...
+  links:
+    arxiv: https://arxiv.org/abs/2606.06944
+  highlight: 🔥
+  added: '2026-06-10'
+  source: news_archive
+- arxiv_id: '2606.07089'
+  title: 'Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning'
+  authors: Tang, Yinzhou et al.
+  date: '2026-06-05'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: '"always dream" 是 WAM 范式的原罪 — Cosmos3 14B 跑一次 rollout 算力可怕；AdaWAM 按需 dream 是把 WAM 从研究推到部署的必经一步'
+  links:
+    arxiv: https://arxiv.org/abs/2606.07089
+  highlight: 🔥
+  added: '2026-06-10'
+  source: news_archive
+- arxiv_id: '2606.07100'
+  title: 'LARA: Latent Action Representation Alignment for Vision-Language-Action Models'
+  authors: Liu, Mengya et al.
+  date: '2026-06-05'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Visual-language action (VLA) models enable robots to predict actions directly from observations and language
+    instructions, but their performance depends on large-scale, high-quality data and is limited by the scarcity of real-world
+    robot...
+  links:
+    arxiv: https://arxiv.org/abs/2606.07100
+  highlight: 🔥
+  added: '2026-06-10'
+  source: news_archive

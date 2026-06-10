@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--09-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--10-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **66** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **71** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 12 papers</summary>
+<summary>🆕 <b>2026</b> · 13 papers</summary>
 
+- 🔥 **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](https://arxiv.org/abs/2606.06832)** — *Ajith, Abhiroop et al.* · `2026-06-05`
+  > Robots performing long-horizon visual manipulation observe high-dimensional images, but successful plans depend on action-relevant facts: what can be done now and what changes afterward.
 - 🔥 **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](https://arxiv.org/abs/2606.05645)** — *Yao, Ziyang et al.* · `2026-06-04`
   > Autonomous driving requires reasoning about how ego actions shape the evolution of the surrounding world.
 - 🔥 **[World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis](https://arxiv.org/abs/2606.05979)** — *Yang, Yi et al.* · `2026-06-04`
@@ -98,8 +100,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 5 papers</summary>
+<summary>🆕 <b>2026</b> · 6 papers</summary>
 
+- 🔥 **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](https://arxiv.org/abs/2606.07089)** — *Tang, Yinzhou et al.* · `2026-06-05`
+  > "always dream" 是 WAM 范式的原罪 — Cosmos3 14B 跑一次 rollout 算力可怕；AdaWAM 按需 dream 是把 WAM 从研究推到部署的必经一步
 - 🔥 **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](https://arxiv.org/abs/2606.03268)** — *Zhao, Qian et al.* · `2026-06-02`
   > 低成本跨本体灵巧操作框架 EaDex：单 RGB-D 相机捕捉人手 + MANO 建模重定向生成示范，contact-reward 动态退火从"跟示范"过渡到"自主优化"；9 个跨本体设置下比无退火基线相对提升 55.3%。
 - 🔥 **[Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation](https://arxiv.org/abs/2606.04172)** — *Liu, Litao et al.* · `2026-06-02`
@@ -124,8 +128,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Humanoid, quadruped, bipedal walking and running*
 <details open>
-<summary>🆕 <b>2026</b> · 6 papers</summary>
+<summary>🆕 <b>2026</b> · 7 papers</summary>
 
+- 🔥 **[T-GMP: Terrain-conditioned Generative Motion Priors for Versatile and Natural Humanoid Locomotion](https://arxiv.org/abs/2606.06944)** — *Guo, Junhong et al.* · `2026-06-05`
+  > Achieving both anthropomorphic naturalness and robust terrain traversal remains a fundamental challenge in humanoid locomotion.
 - 🔥 **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](https://arxiv.org/abs/2606.05880)** — *Li, Peizhuo et al.* · `2026-06-04`
   > Agile humanoid locomotion across diverse challenging terrain demands both wide perceptual coverage and precise local geometry understanding.
 - 🔥 **[HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](https://arxiv.org/abs/2606.06493)** — *Yang, Lizhi et al.* · `2026-06-04`
@@ -438,6 +444,11 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](https://arxiv.org/abs/2606.06832)** `2026-06-05` · *Ajith, Abhiroop et al.* · `foundation-models`
+- 🔥 **[ActionMap: Robot Policy Learning via Voxel Action Heatmap](https://arxiv.org/abs/2606.06904)** `2026-06-05` · *Yang, Pei et al.* · `vla`
+- 🔥 **[T-GMP: Terrain-conditioned Generative Motion Priors for Versatile and Natural Humanoid Locomotion](https://arxiv.org/abs/2606.06944)** `2026-06-05` · *Guo, Junhong et al.* · `locomotion`
+- 🔥 **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](https://arxiv.org/abs/2606.07089)** `2026-06-05` · *Tang, Yinzhou et al.* · `manipulation`
+- 🔥 **[LARA: Latent Action Representation Alignment for Vision-Language-Action Models](https://arxiv.org/abs/2606.07100)** `2026-06-05` · *Liu, Mengya et al.* · `vla`
 - 🔥 **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](https://arxiv.org/abs/2606.05645)** `2026-06-04` · *Yao, Ziyang et al.* · `foundation-models`
 - 🔥 **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](https://arxiv.org/abs/2606.05773)** `2026-06-04` · *Ma, Chong et al.* · `teleoperation`
 - 🔥 **[LadderMan: Learning Humanoid Perceptive Ladder Climbing](https://arxiv.org/abs/2606.05873)** `2026-06-04` · *Zhao, Siheng et al.* · `teleoperation`
@@ -448,11 +459,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies](https://arxiv.org/abs/2606.06491)** `2026-06-04` · *Jing, Dong et al.* · `vla`
 - 🔥 **[HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](https://arxiv.org/abs/2606.06493)** `2026-06-04` · *Yang, Lizhi et al.* · `locomotion`
 - 🔥 **[DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use](https://arxiv.org/abs/2606.05699)** `2026-06-04` · *Li, Runfa Blark et al.* · `foundation-models`
-- 🔥 **[TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation](https://arxiv.org/abs/2606.06218)** `2026-06-04` · *Son, Dongwon et al.* · `sim2real`
-- 🔥 **[HomeWorld: A Unified Floorplan-to-Furnished Framework for Generating Controllable, Densely Interactive Whole-Home Scenes](https://arxiv.org/abs/2606.06390)** `2026-06-04` · *Li, Wenbo et al.* · `vla`
-- 🔥 **[3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](https://arxiv.org/abs/2606.04436)** `2026-06-03` · *Shi, Jiaxin et al.* · `foundation-models`
-- 🔥 **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](https://arxiv.org/abs/2606.04463)** `2026-06-03` · *Wu, Zhuoyuan et al.* · [🌐](https://wuzy2115.github.io/oscar-project-page/) · `foundation-models`
-- 🔥 **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](https://arxiv.org/abs/2606.04534)** `2026-06-03` · *Zhang, Xinhong et al.* · `foundation-models`
 
 </details>
 
