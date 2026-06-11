@@ -1092,3 +1092,83 @@ papers:
   highlight: 🔥
   added: '2026-06-10'
   source: news_archive
+- arxiv_id: '2606.08828'
+  title: 'Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video'
+  authors: Han, Yunhai et al.
+  date: '2026-06-07'
+  venue: ''
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: Human manipulation videos are a convenient and intuitive source for robot learning. However, directly transferring
+    human dexterity to robots remains challenging due to perception errors and embodiment gap. To address this, we introduce...
+  links:
+    arxiv: https://arxiv.org/abs/2606.08828
+  highlight: 🔥
+  added: '2026-06-11'
+  source: news_archive
+- arxiv_id: '2606.09215'
+  title: 'MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation'
+  authors: Zheng, Jia et al.
+  date: '2026-06-08'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: 6/4 PiL-World（闭环 chunk-wise WM 评估） + 6/5 WLA（unified W+L+A） + 6/8 AdaWAM（按需 dream） + 6/10 MotionWAM（实时 humanoid
+    落地） = WAM 系 2026 H1 四大演化路径完整；MotionWAM 把 WAM 从研究推到"humanoid 实时控制"赛道 — 给 Figure 03 + 1X NEO + 智元远征 A3 + 银河通用 真机部署提供 foundation
+    mo…
+  links:
+    arxiv: https://arxiv.org/abs/2606.09215
+    project: https://kairos-homeworld.github.io/
+  highlight: 🔥
+  added: '2026-06-11'
+  source: news_archive
+- arxiv_id: '2606.09499'
+  title: Targeting World Models to Compromise Robot Learning Pipelines
+  authors: Rathbun, Ethan et al.
+  date: '2026-06-08'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: World models have recently seen a rapid growth in both their popularity and capability as more data efficient
+    tools for generating robot training data or simulating real world environments, with many works proposing their integration
+    into...
+  links:
+    arxiv: https://arxiv.org/abs/2606.09499
+  highlight: 🔥
+  added: '2026-06-11'
+  source: news_archive
+- arxiv_id: '2606.09813'
+  title: 'iMaC: Translating Actions into Motion and Contact Images for Embodied World Models'
+  authors: Wu, Zhenyu et al.
+  date: '2026-06-08'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Embodied world models have emerged as a pivotal paradigm for visual robotic decision-making and interactive
+    environment simulation. However, conventional embodied frameworks rely on low-dimensional structured action vectors (e.g.,
+    joint...
+  links:
+    arxiv: https://arxiv.org/abs/2606.09813
+  highlight: 🔥
+  added: '2026-06-11'
+  source: news_archive
+- arxiv_id: '2606.09828'
+  title: Latent Spatial Memory for Video World Models
+  authors: Wang, Weijie et al.
+  date: '2026-06-08'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Video world models that maintain 3D spatial consistency across generated frames typically rely on explicit
+    point cloud memory constructed in RGB space. This design is both computationally expensive, requiring repeated rendering
+    and VAE...
+  links:
+    arxiv: https://arxiv.org/abs/2606.09828
+  highlight: 🔥
+  added: '2026-06-11'
+  source: news_archive
