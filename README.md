@@ -10,7 +10,7 @@
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
 ![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--11-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 📊 **76** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
@@ -492,4 +492,4 @@ This list is auto-fed from a daily paper aggregation pipeline, but PRs are very 
 
 ## 📜 License
 
-[MIT](LICENSE) © 2026 [@junyuan-fang](https://github.com/junyuan-fang)
+[Apache License 2.0](LICENSE) © 2026 [@junyuan-fang](https://github.com/junyuan-fang)
