@@ -1172,3 +1172,130 @@ papers:
   highlight: 🔥
   added: '2026-06-11'
   source: news_archive
+- arxiv_id: '2606.11129'
+  title: 'WorldOlympiad: Can Your World Model Survive a Triathlon?'
+  authors: Zhao, Yuke et al.
+  date: '2026-06-09'
+  venue: ''
+  category: scene
+  tags:
+  - news-archive
+  abstract_short: We introduce WorldOlympiad, a benchmark for diagnosing video-based world models across physical faithfulness,
+    geometric consistency, and interaction fidelity. While existing benchmarks often focus on visual quality, semantic alignment,
+    or...
+  links:
+    arxiv: https://arxiv.org/abs/2606.11129
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.13460'
+  title: 'VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models'
+  authors: Xian, Ruiqi et al.
+  date: '2026-06-11'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Semantic 3D occupancy provides a voxelized world state for autonomous driving and robot decision making,
+    but object and rare-class errors can affect free-space interpretation, collision checking, and temporal state propagation.
+    We show...
+  links:
+    arxiv: https://arxiv.org/abs/2606.13460
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.13494'
+  title: 'NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation'
+  authors: Azuma, Daichi et al.
+  date: '2026-06-11'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Goal-conditioned visual navigation requires a robot to act under partial observability by anticipating how
+    its motion will change the future egocentric view and whether that change brings it closer to the goal. Navigation world
+    models...
+  links:
+    arxiv: https://arxiv.org/abs/2606.13494
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.13672'
+  title: '$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation'
+  authors: Jain, Arnav Kumar et al.
+  date: '2026-06-11'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy
+    evaluation, policy improvement, and test-time planning -- all with limited real-world interaction. To unlock these downstream...
+  links:
+    arxiv: https://arxiv.org/abs/2606.13672
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.13677'
+  title: 'Mana: Dexterous Manipulation of Articulated Tools'
+  authors: Yin, Zhao-Heng et al.
+  date: '2026-06-11'
+  venue: ''
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate
+    internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated
+    tool...
+  links:
+    arxiv: https://arxiv.org/abs/2606.13677
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.13769'
+  title: '$\mu_0$: A Scalable 3D Interaction-Trace World Model'
+  authors: Lee, Seungjae et al.
+  date: '2026-06-11'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 与 6/4 [[PiL-World]] (闭环 chunk-wise WM 评估) + 6/5 [[WLA]] (Unified W+L+A) + 6/8 [[AdaWAM]] (按需 dream) + 6/10
+    [[MotionWAM]] (humanoid 实时) + 6/16 [[ContactWorld]] (vision-tactile 系统分析) + 6/16 [[WEAVER]] (better/faster/longer 三件套)
+    形成 WAM 系 2026 …
+  links:
+    arxiv: https://arxiv.org/abs/2606.13769
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.13877'
+  title: 'ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation'
+  authors: Zhang, Zhiyuan et al.
+  date: '2026-06-11'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Contact-rich manipulation requires world models to reason over complex contact dynamics from multimodal
+    sensory observations. However, it remains unclear which representation properties fundamentally support stable long-horizon
+    planning...
+  links:
+    arxiv: https://arxiv.org/abs/2606.13877
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive
+- arxiv_id: '2606.14561'
+  title: 'ORCA: A Platform for Open-Source Dexterity Research'
+  authors: Capuano, Francesco et al.
+  date: '2026-06-12'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Robotics manipulation research increasingly focuses on two-finger parallel grippers for their effectiveness,
+    affordability, and ease of teleoperation. Grippers are nonetheless limited by their form factor, often requiring bimanual
+    setups...
+  links:
+    arxiv: https://arxiv.org/abs/2606.14561
+  highlight: 🔥
+  added: '2026-06-17'
+  source: news_archive

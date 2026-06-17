@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--11-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--17-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **76** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **84** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,18 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 15 papers</summary>
+<summary>🆕 <b>2026</b> · 20 papers</summary>
 
+- 🔥 **[VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models](https://arxiv.org/abs/2606.13460)** — *Xian, Ruiqi et al.* · `2026-06-11`
+  > Semantic 3D occupancy provides a voxelized world state for autonomous driving and robot decision making, but object and rare-class errors can affect free-space interpretation, collision checking, and temporal state …
+- 🔥 **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](https://arxiv.org/abs/2606.13494)** — *Azuma, Daichi et al.* · `2026-06-11`
+  > Goal-conditioned visual navigation requires a robot to act under partial observability by anticipating how its motion will change the future egocentric view and whether that change brings it closer to the goal.
+- 🔥 **[$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](https://arxiv.org/abs/2606.13672)** — *Jain, Arnav Kumar et al.* · `2026-06-11`
+  > The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy evaluation, policy improvement, and test-time planning -- all with limited real-world interaction.
+- 🔥 **[$\mu_0$: A Scalable 3D Interaction-Trace World Model](https://arxiv.org/abs/2606.13769)** — *Lee, Seungjae et al.* · `2026-06-11`
+  > 与 6/4 [[PiL-World]] (闭环 chunk-wise WM 评估) + 6/5 [[WLA]] (Unified W+L+A) + 6/8 [[AdaWAM]] (按需 dream) + 6/10 [[MotionWAM]] (humanoid 实时) + 6/16 [[ContactWorld]] (vision-tactile 系统分析) + 6/16 [[WEAVER]] …
+- 🔥 **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](https://arxiv.org/abs/2606.13877)** — *Zhang, Zhiyuan et al.* · `2026-06-11`
+  > Contact-rich manipulation requires world models to reason over complex contact dynamics from multimodal sensory observations.
 - 🔥 **[iMaC: Translating Actions into Motion and Contact Images for Embodied World Models](https://arxiv.org/abs/2606.09813)** — *Wu, Zhenyu et al.* · `2026-06-08`
   > Embodied world models have emerged as a pivotal paradigm for visual robotic decision-making and interactive environment simulation.
 - 🔥 **[Latent Spatial Memory for Video World Models](https://arxiv.org/abs/2606.09828)** — *Wang, Weijie et al.* · `2026-06-08`
@@ -158,8 +168,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *VR, wearable, and exoskeleton-based data collection*
 <details open>
-<summary>🆕 <b>2026</b> · 9 papers</summary>
+<summary>🆕 <b>2026</b> · 10 papers</summary>
 
+- 🔥 **[ORCA: A Platform for Open-Source Dexterity Research](https://arxiv.org/abs/2606.14561)** — *Capuano, Francesco et al.* · `2026-06-12`
+  > Robotics manipulation research increasingly focuses on two-finger parallel grippers for their effectiveness, affordability, and ease of teleoperation.
 - 🔥 **[Targeting World Models to Compromise Robot Learning Pipelines](https://arxiv.org/abs/2606.09499)** — *Rathbun, Ethan et al.* · `2026-06-08`
   > World models have recently seen a rapid growth in both their popularity and capability as more data efficient tools for generating robot training data or simulating real world environments, with many works proposing …
 - 🔥 **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](https://arxiv.org/abs/2606.05773)** — *Ma, Chong et al.* · `2026-06-04`
@@ -194,8 +206,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Domain randomization, sim-to-real transfer, deployment*
 <details open>
-<summary>🆕 <b>2026</b> · 3 papers</summary>
+<summary>🆕 <b>2026</b> · 4 papers</summary>
 
+- 🔥 **[Mana: Dexterous Manipulation of Articulated Tools](https://arxiv.org/abs/2606.13677)** — *Yin, Zhao-Heng et al.* · `2026-06-11`
+  > Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions.
 - 🔥 **[Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video](https://arxiv.org/abs/2606.08828)** — *Han, Yunhai et al.* · `2026-06-07`
   > Human manipulation videos are a convenient and intuitive source for robot learning. However, directly transferring human dexterity to robots remains challenging due to perception errors and embodiment gap.
 - 🔥 **[TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation](https://arxiv.org/abs/2606.06218)** — *Son, Dongwon et al.* · `2026-06-04`
@@ -216,8 +230,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *NeRF, Gaussian Splatting, segmentation for robotics*
 <details open>
-<summary>🆕 <b>2026</b> · 2 papers</summary>
+<summary>🆕 <b>2026</b> · 3 papers</summary>
 
+- 🔥 **[WorldOlympiad: Can Your World Model Survive a Triathlon?](https://arxiv.org/abs/2606.11129)** — *Zhao, Yuke et al.* · `2026-06-09`
+  > We introduce WorldOlympiad, a benchmark for diagnosing video-based world models across physical faithfulness, geometric consistency, and interaction fidelity.
 - 🔥 **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](https://arxiv.org/abs/2606.03188)** — *Ma, Fulong et al.* · `2026-06-02`
   > Recent World Action Models (WAMs) have demonstrated impressive capabilities in embodied decision-making.
 - 🔥 **[PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects](https://arxiv.org/abs/2605.21572)** — *Cao, Ziang et al.* · `2026-05-20`
@@ -454,6 +470,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[ORCA: A Platform for Open-Source Dexterity Research](https://arxiv.org/abs/2606.14561)** `2026-06-12` · *Capuano, Francesco et al.* · `teleoperation`
+- 🔥 **[VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models](https://arxiv.org/abs/2606.13460)** `2026-06-11` · *Xian, Ruiqi et al.* · `foundation-models`
+- 🔥 **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](https://arxiv.org/abs/2606.13494)** `2026-06-11` · *Azuma, Daichi et al.* · `foundation-models`
+- 🔥 **[$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](https://arxiv.org/abs/2606.13672)** `2026-06-11` · *Jain, Arnav Kumar et al.* · `foundation-models`
+- 🔥 **[Mana: Dexterous Manipulation of Articulated Tools](https://arxiv.org/abs/2606.13677)** `2026-06-11` · *Yin, Zhao-Heng et al.* · `sim2real`
+- 🔥 **[$\mu_0$: A Scalable 3D Interaction-Trace World Model](https://arxiv.org/abs/2606.13769)** `2026-06-11` · *Lee, Seungjae et al.* · `foundation-models`
+- 🔥 **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](https://arxiv.org/abs/2606.13877)** `2026-06-11` · *Zhang, Zhiyuan et al.* · `foundation-models`
+- 🔥 **[WorldOlympiad: Can Your World Model Survive a Triathlon?](https://arxiv.org/abs/2606.11129)** `2026-06-09` · *Zhao, Yuke et al.* · `scene`
 - 🔥 **[MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation](https://arxiv.org/abs/2606.09215)** `2026-06-08` · *Zheng, Jia et al.* · [🌐](https://kairos-homeworld.github.io/) · `locomotion`
 - 🔥 **[Targeting World Models to Compromise Robot Learning Pipelines](https://arxiv.org/abs/2606.09499)** `2026-06-08` · *Rathbun, Ethan et al.* · `teleoperation`
 - 🔥 **[iMaC: Translating Actions into Motion and Contact Images for Embodied World Models](https://arxiv.org/abs/2606.09813)** `2026-06-08` · *Wu, Zhenyu et al.* · `foundation-models`
@@ -461,14 +485,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video](https://arxiv.org/abs/2606.08828)** `2026-06-07` · *Han, Yunhai et al.* · `sim2real`
 - 🔥 **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](https://arxiv.org/abs/2606.06832)** `2026-06-05` · *Ajith, Abhiroop et al.* · `foundation-models`
 - 🔥 **[ActionMap: Robot Policy Learning via Voxel Action Heatmap](https://arxiv.org/abs/2606.06904)** `2026-06-05` · *Yang, Pei et al.* · `vla`
-- 🔥 **[T-GMP: Terrain-conditioned Generative Motion Priors for Versatile and Natural Humanoid Locomotion](https://arxiv.org/abs/2606.06944)** `2026-06-05` · *Guo, Junhong et al.* · `locomotion`
-- 🔥 **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](https://arxiv.org/abs/2606.07089)** `2026-06-05` · *Tang, Yinzhou et al.* · `manipulation`
-- 🔥 **[LARA: Latent Action Representation Alignment for Vision-Language-Action Models](https://arxiv.org/abs/2606.07100)** `2026-06-05` · *Liu, Mengya et al.* · `vla`
-- 🔥 **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](https://arxiv.org/abs/2606.05645)** `2026-06-04` · *Yao, Ziyang et al.* · `foundation-models`
-- 🔥 **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](https://arxiv.org/abs/2606.05773)** `2026-06-04` · *Ma, Chong et al.* · `teleoperation`
-- 🔥 **[LadderMan: Learning Humanoid Perceptive Ladder Climbing](https://arxiv.org/abs/2606.05873)** `2026-06-04` · *Zhao, Siheng et al.* · `teleoperation`
-- 🔥 **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](https://arxiv.org/abs/2606.05880)** `2026-06-04` · *Li, Peizhuo et al.* · `locomotion`
-- 🔥 **[World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis](https://arxiv.org/abs/2606.05979)** `2026-06-04` · *Yang, Yi et al.* · `foundation-models`
 
 </details>
 
@@ -492,4 +508,4 @@ This list is auto-fed from a daily paper aggregation pipeline, but PRs are very 
 
 ## 📜 License
 
-[Apache License 2.0](LICENSE) © 2026 [@junyuan-fang](https://github.com/junyuan-fang)
+[MIT](LICENSE) © 2026 [@junyuan-fang](https://github.com/junyuan-fang)
