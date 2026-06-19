@@ -1299,3 +1299,145 @@ papers:
   highlight: 🔥
   added: '2026-06-17'
   source: news_archive
+- arxiv_id: '2606.16993'
+  title: 'DreamX-World 1.0: A General-Purpose Interactive World Model'
+  authors: DreamX Team et al.
+  date: '2026-06-15'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: DreamX-World 1.0 is a general-purpose interactive text/image-to-video world model for controllable long-horizon
+    generation. It supports camera navigation, revisits to previously observed regions, and promptable events across...
+  links:
+    arxiv: https://arxiv.org/abs/2606.16993
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.17011'
+  title: 'ROVE: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning'
+  authors: Xiao, Wei et al.
+  date: '2026-06-15'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Human interventions provide crucial corrective signals for post-training Vision-Language-Action (VLA) models.
+    However, enabling seamless humanoid interventions is a formidable systems challenge due to complex whole-body kinematics
+    and...
+  links:
+    arxiv: https://arxiv.org/abs/2606.17011
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.17030'
+  title: 'Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation'
+  authors: Zhang, Jie et al.
+  date: '2026-06-15'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: We introduce Qwen-RobotWorld, a language-conditioned video world model for embodied intelligence. With natural
+    language as a unified action interface, it predicts physically grounded future visual trajectories from current observations...
+  links:
+    arxiv: https://arxiv.org/abs/2606.17030
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.17046'
+  title: Geometric Action Model for Robot Policy Learning
+  authors: Han, Jisang et al.
+  date: '2026-06-15'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and
+    robot actions interact in the 3D physical world. Recent vision-language-action models (VLAs) and video world-action models
+    (WAMs)...
+  links:
+    arxiv: https://arxiv.org/abs/2606.17046
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.17055'
+  title: 'T-Rex: Tactile-Reactive Dexterous Manipulation'
+  authors: Niu, Dantong et al.
+  date: '2026-06-15'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: The ability to react dynamically to tactile signals has long been considered crucial to agile human-level
+    dexterity. Yet contemporary learning-based Vision-Language-Action (VLA) models for robotic manipulation generally either
+    overlook...
+  links:
+    arxiv: https://arxiv.org/abs/2606.17055
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.17639'
+  title: 'ERQA-Plus: A Diagnostic Benchmark for Reasoning in Embodied AI'
+  authors: Yang, Hong et al.
+  date: '2026-06-16'
+  venue: ''
+  category: navigation
+  tags:
+  - news-archive
+  abstract_short: 'Generalist embodied agents require more than object recognition: they must reason about spatial relations,
+    actions, procedures, human intentions, environmental constraints, and commonsense consequences from situated visual observations....'
+  links:
+    arxiv: https://arxiv.org/abs/2606.17639
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.17906'
+  title: 'WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT'
+  authors: Qian, Zezhong et al.
+  date: '2026-06-16'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 与 6/9 [[QGF]] (UCB+Physical Intelligence test-time gradient flow policy RL) + 6/10 [[MODIP]] (Sorbonne MBP
+    DP RL) + 6/8 [[AdaWAM]] (清华 按需 dream) 同月内 "VLA/WAM + RL fine-tune"完整一线；千寻 Spirit v1.6 6/3 登顶 RoboArena 大概率也用了类似"WM 自监督
+    + RL"路径 — Tsin…
+  links:
+    arxiv: https://arxiv.org/abs/2606.17906
+    project: https://cvlab-kaist.github.io/Geometric-Action-Model
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.18112'
+  title: 'Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System'
+  authors: Zhang, Jiazhao et al.
+  date: '2026-06-16'
+  venue: ''
+  category: navigation
+  tags:
+  - news-archive
+  abstract_short: Agentic navigation systems require a base navigation model whose observation strategy can be externally
+    reconfigured at inference time, because instruction following, object search, target tracking, and autonomous driving
+    share the same...
+  links:
+    arxiv: https://arxiv.org/abs/2606.18112
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
+- arxiv_id: '2606.18208'
+  title: Looped World Models
+  authors: Lu, Hongyuan Adam et al.
+  date: '2026-06-16'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'Current world models face a fundamental tension: faithful long-horizon simulation demands deep computation,
+    but deeper models are expensive to deploy and prone to compounding errors. We resolve this by introducing Looped World
+    Models...'
+  links:
+    arxiv: https://arxiv.org/abs/2606.18208
+  highlight: 🔥
+  added: '2026-06-19'
+  source: news_archive
