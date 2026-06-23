@@ -1441,3 +1441,48 @@ papers:
   highlight: 🔥
   added: '2026-06-19'
   source: news_archive
+- arxiv_id: '2606.18589'
+  title: 'DREAM-Chunk: Reactive Action Chunking with Latent World Model'
+  authors: Chen, Wenxi et al.
+  date: '2026-06-17'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Action chunking has become a common interface for vision-language-action (VLA) models, enabling low-frequency
+    policy inference to drive high-frequency robot execution. However, once an action chunk is committed, its open-loop execution...
+  links:
+    arxiv: https://arxiv.org/abs/2606.18589
+  highlight: 🔥
+  added: '2026-06-23'
+  source: news_archive
+- arxiv_id: '2606.18953'
+  title: Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement
+  authors: Kim, Kinam et al.
+  date: '2026-06-17'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: 与 6/9 [[QGF]] (UCB + Physical Intelligence) + 6/10 [[MODIP]] (Sorbonne) + 6/17 [[WAMRL]] (清华 + 北大) + 今日
+    OCRR 形成 "VLA + RL fine-tune"完整一线；zero-shot sim-to-real 是 Figure / 1X / 智元 / 银河 / 小鹏 IRON real-world 部署最大成本省略点
+  links:
+    arxiv: https://arxiv.org/abs/2606.18953
+  highlight: 🔥
+  added: '2026-06-23'
+  source: news_archive
+- arxiv_id: '2606.18960'
+  title: 'Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation'
+  authors: Zheng, Zirui et al.
+  date: '2026-06-17'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Action-conditioned world models have emerged as a promising paradigm for robot learning, offering a scalable
+    alternative to costly real-world experimentation by generating action-consistent video rollouts. However, persistent world...
+  links:
+    arxiv: https://arxiv.org/abs/2606.18960
+  highlight: 🔥
+  added: '2026-06-23'
+  source: news_archive
