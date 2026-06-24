@@ -1486,3 +1486,66 @@ papers:
   highlight: 🔥
   added: '2026-06-23'
   source: news_archive
+- arxiv_id: '2606.19928'
+  title: 'SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour'
+  authors: Lan, Kaixin et al.
+  date: '2026-06-18'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: While latent world models enable the proactive predictions required for extreme parkour, their purely data-driven
+    nature forces them to redundantly encode left-right symmetric interactions as independent patterns. This inflates the...
+  links:
+    arxiv: https://arxiv.org/abs/2606.19928
+  highlight: 🔥
+  added: '2026-06-24'
+  source: news_archive
+- arxiv_id: '2606.20104'
+  title: 'Sensorimotor World Models: Perception for Action via Inverse Dynamics'
+  authors: Ivashkov, Petr et al.
+  date: '2026-06-18'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Perception for action suggests that representations of the world should be shaped not by visual fidelity
+    alone, but by their relevance for actions. At the same time, latent JEPA-style world models advocate learning compact
+    predictive...
+  links:
+    arxiv: https://arxiv.org/abs/2606.20104
+  highlight: 🔥
+  added: '2026-06-24'
+  source: news_archive
+- arxiv_id: '2606.20521'
+  title: 'HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining'
+  authors: Ma, Juncheng et al.
+  date: '2026-06-18'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Embodied foundation models are expected to benefit from data scaling like large language models, but face
+    a much tighter data bottleneck. Teleoperated real-robot trajectories remain the dominant pretraining source due to their
+    precise...
+  links:
+    arxiv: https://arxiv.org/abs/2606.20521
+  highlight: 🔥
+  added: '2026-06-24'
+  source: news_archive
+- arxiv_id: '2606.20562'
+  title: 'MemoryWAM: Efficient World Action Modeling with Persistent Memory'
+  authors: Yang, Sizhe et al.
+  date: '2026-06-18'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 与 6/19 [[MemWorld]] (大工 manipulation memory) + 6/18 [[LoopWM]] (FaceMind looped) + 6/8 [[AdaWAM]] (清华按需
+    dream) + 今日 [[CurrentWMLackPSC]] (文献分析直接命题"持久状态核心缺失") 同主线 — WM 系集中 attack "persistent state" gap；配合 6/22 NVIDIA Halos
+    安全栈 + 智元 / Figure …
+  links:
+    arxiv: https://arxiv.org/abs/2606.20562
+  highlight: 🔥
+  added: '2026-06-24'
+  source: news_archive
