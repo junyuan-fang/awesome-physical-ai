@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--24-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--26-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **100** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **106** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,10 +58,18 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 28 papers</summary>
+<summary>🆕 <b>2026</b> · 32 papers</summary>
 
+- 🔥 **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](https://arxiv.org/abs/2606.24101)** — *Mei, Yanghong et al.* · `2026-06-23` · 🏛️ **ECCV 2026**
+  > Conventional visual navigation policies often struggle with myopic decision-making and mode collapse in complex environments.
+- 🔥 **[World Value Models for Robotic Manipulation](https://arxiv.org/abs/2606.24742)** — *Wang, Zhihao et al.* · `2026-06-23`
+  > 字节 Seed Robotics 首次正面 push robotics foundation model 战略论文 — 与 6 月 6/16 [[Mu0]] / 6/16 [[WEAVER]] / 6/17 [[QwenRobotWorld]] / 6/19 [[MemoryWAM]] / 6/24 [[WAMSurvey]] 同 WM/WAM 大家庭；与今日新闻 Zhou Chang 接管 ByteDance Seed …
+- 🔥 **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](https://arxiv.org/abs/2606.23085)** — *Zhang, Haoran et al.* · `2026-06-22`
+  > Long-horizon tasks are common in real-world robotic deployments, yet failure detection for such tasks remains underexplored.
 - 🔥 **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](https://arxiv.org/abs/2606.20104)** — *Ivashkov, Petr et al.* · `2026-06-18`
   > Perception for action suggests that representations of the world should be shaped not by visual fidelity alone, but by their relevance for actions.
+- 🔥 **[World Action Models: A Survey](https://arxiv.org/abs/2606.20781)** — *Shen, Qiuhong et al.* · `2026-06-18`
+  > World Action Models (WAMs) are embodied predictive-action models that make a forecast of the future available to action.
 - 🔥 **[DREAM-Chunk: Reactive Action Chunking with Latent World Model](https://arxiv.org/abs/2606.18589)** — *Chen, Wenxi et al.* · `2026-06-17`
   > Action chunking has become a common interface for vision-language-action (VLA) models, enabling low-frequency policy inference to drive high-frequency robot execution.
 - 🔥 **[Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation](https://arxiv.org/abs/2606.18960)** — *Zheng, Zirui et al.* · `2026-06-17`
@@ -158,8 +166,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Humanoid, quadruped, bipedal walking and running*
 <details open>
-<summary>🆕 <b>2026</b> · 9 papers</summary>
+<summary>🆕 <b>2026</b> · 10 papers</summary>
 
+- 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** — *Hou, Haidong et al.* · `2026-06-23`
+  > Recent advances in control have enabled bipedal-wheeled robots to traverse slopes and single-step obstacles, yet long staircase traversal remains challenging as current teacher-student frameworks suffer from weakened …
 - 🔥 **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](https://arxiv.org/abs/2606.19928)** — *Lan, Kaixin et al.* · `2026-06-18`
   > While latent world models enable the proactive predictions required for extreme parkour, their purely data-driven nature forces them to redundantly encode left-right symmetric interactions as independent patterns.
 - 🔥 **[MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation](https://arxiv.org/abs/2606.09215)** — *Zheng, Jia et al.* · `2026-06-08`
@@ -228,8 +238,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Domain randomization, sim-to-real transfer, deployment*
 <details open>
-<summary>🆕 <b>2026</b> · 4 papers</summary>
+<summary>🆕 <b>2026</b> · 5 papers</summary>
 
+- 🔥 **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](https://arxiv.org/abs/2606.23444)** — *Rao, Pratyaksh et al.* · `2026-06-22`
+  > Accurate dynamics models are critical for informed decision-making in robotic systems, particularly for agile aerial vehicles operating under uncertainty.
 - 🔥 **[Mana: Dexterous Manipulation of Articulated Tools](https://arxiv.org/abs/2606.13677)** — *Yin, Zhao-Heng et al.* · `2026-06-11`
   > Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions.
 - 🔥 **[Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video](https://arxiv.org/abs/2606.08828)** — *Han, Yunhai et al.* · `2026-06-07`
@@ -499,21 +511,21 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** `2026-06-23` · *Hou, Haidong et al.* · `locomotion`
+- 🔥 **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](https://arxiv.org/abs/2606.24101)** `2026-06-23` · 🏛️ ECCV 2026 · *Mei, Yanghong et al.* · `foundation-models`
+- 🔥 **[World Value Models for Robotic Manipulation](https://arxiv.org/abs/2606.24742)** `2026-06-23` · *Wang, Zhihao et al.* · `foundation-models`
+- 🔥 **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](https://arxiv.org/abs/2606.23085)** `2026-06-22` · *Zhang, Haoran et al.* · `foundation-models`
+- 🔥 **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](https://arxiv.org/abs/2606.23444)** `2026-06-22` · *Rao, Pratyaksh et al.* · `sim2real`
 - 🔥 **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](https://arxiv.org/abs/2606.19928)** `2026-06-18` · *Lan, Kaixin et al.* · `locomotion`
 - 🔥 **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](https://arxiv.org/abs/2606.20104)** `2026-06-18` · *Ivashkov, Petr et al.* · `foundation-models`
 - 🔥 **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](https://arxiv.org/abs/2606.20521)** `2026-06-18` · *Ma, Juncheng et al.* · `teleoperation`
 - 🔥 **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](https://arxiv.org/abs/2606.20562)** `2026-06-18` · *Yang, Sizhe et al.* · `vla`
+- 🔥 **[World Action Models: A Survey](https://arxiv.org/abs/2606.20781)** `2026-06-18` · *Shen, Qiuhong et al.* · `foundation-models`
 - 🔥 **[DREAM-Chunk: Reactive Action Chunking with Latent World Model](https://arxiv.org/abs/2606.18589)** `2026-06-17` · *Chen, Wenxi et al.* · `foundation-models`
 - 🔥 **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](https://arxiv.org/abs/2606.18953)** `2026-06-17` · *Kim, Kinam et al.* · `teleoperation`
 - 🔥 **[Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation](https://arxiv.org/abs/2606.18960)** `2026-06-17` · *Zheng, Zirui et al.* · `foundation-models`
 - 🔥 **[ERQA-Plus: A Diagnostic Benchmark for Reasoning in Embodied AI](https://arxiv.org/abs/2606.17639)** `2026-06-16` · *Yang, Hong et al.* · `navigation`
 - 🔥 **[WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](https://arxiv.org/abs/2606.17906)** `2026-06-16` · *Qian, Zezhong et al.* · [🌐](https://cvlab-kaist.github.io/Geometric-Action-Model) · `foundation-models`
-- 🔥 **[Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](https://arxiv.org/abs/2606.18112)** `2026-06-16` · *Zhang, Jiazhao et al.* · `navigation`
-- 🔥 **[Looped World Models](https://arxiv.org/abs/2606.18208)** `2026-06-16` · *Lu, Hongyuan Adam et al.* · `foundation-models`
-- 🔥 **[DreamX-World 1.0: A General-Purpose Interactive World Model](https://arxiv.org/abs/2606.16993)** `2026-06-15` · *DreamX Team et al.* · `foundation-models`
-- 🔥 **[ROVE: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning](https://arxiv.org/abs/2606.17011)** `2026-06-15` · *Xiao, Wei et al.* · `vla`
-- 🔥 **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](https://arxiv.org/abs/2606.17030)** `2026-06-15` · *Zhang, Jie et al.* · `foundation-models`
-- 🔥 **[Geometric Action Model for Robot Policy Learning](https://arxiv.org/abs/2606.17046)** `2026-06-15` · *Han, Jisang et al.* · `foundation-models`
 
 </details>
 
