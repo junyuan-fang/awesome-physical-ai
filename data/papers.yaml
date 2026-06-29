@@ -1643,3 +1643,49 @@ papers:
   highlight: 🔥
   added: '2026-06-26'
   source: news_archive
+- arxiv_id: '2606.24597'
+  title: 'Qwen-AgentWorld: Language World Models for General Agents'
+  authors: Zuo, Yuxin et al.
+  date: '2026-06-23'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 与 6/17 [[QwenRobotWorld]]（语言条件视频 WM for 具身）+ 6/19 [[QwenRobotNav]] + 6/25 [[WorldValueModels]]（ByteDance
+    Seed） 形成 CN 大厂"语言 WM × WAM × Value Model"三大派系并立；阿里走"language WM for general agents"，字节走"World Value Model for manipulation"
+  links:
+    arxiv: https://arxiv.org/abs/2606.24597
+  highlight: 🔥
+  added: '2026-06-29'
+  source: news_archive
+- arxiv_id: '2606.25473'
+  title: 'Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in
+    Streaming Video Generation and Interactive World Models'
+  authors: Zheng, Kaiwen et al.
+  date: '2026-06-24'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Autoregressive video diffusion with causal diffusion transformers has emerged as a major paradigm for real-time
+    streaming video generation and action-conditioned interactive world models. In this work, we extend rCM, an advanced diffusion...
+  links:
+    arxiv: https://arxiv.org/abs/2606.25473
+  highlight: 🔥
+  added: '2026-06-29'
+  source: news_archive
+- arxiv_id: '2606.25765'
+  title: 'StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots'
+  authors: Tang, Xincheng et al.
+  date: '2026-06-24'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Climbing hollow stairs remains a challenging problem for quadruped robots due to the high risk of leg trapping,
+    severe depth sparsity, and high-frequency depth-sensing noise. In this paper, we propose StairMaster, a novel three-stage...
+  links:
+    arxiv: https://arxiv.org/abs/2606.25765
+  highlight: 🔥
+  added: '2026-06-29'
+  source: news_archive
