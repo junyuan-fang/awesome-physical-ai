@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--06--29-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--02-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **109** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **113** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 34 papers</summary>
+<summary>🆕 <b>2026</b> · 36 papers</summary>
 
+- 🔥 **[MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734)** — *Yu, Jiwen et al.* · `2026-06-30`
+  > 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]] + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系"
+- 🔥 **[Orca: The World is in Your Mind](https://arxiv.org/abs/2606.30534)** — *Wang, Yihao et al.* · `2026-06-29`
+  > 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]] + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系" · [🌐 project](https://orca-wm.github.io/)
 - 🔥 **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](https://arxiv.org/abs/2606.25473)** — *Zheng, Kaiwen et al.* · `2026-06-24`
   > Autoregressive video diffusion with causal diffusion transformers has emerged as a major paradigm for real-time streaming video generation and action-conditioned interactive world models.
 - 🔥 **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](https://arxiv.org/abs/2606.24101)** — *Mei, Yanghong et al.* · `2026-06-23` · 🏛️ **ECCV 2026**
@@ -517,6 +521,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding](https://arxiv.org/abs/2606.31315)** `2026-06-30` · *Zhang, Hao et al.* · `vla`
+- 🔥 **[MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734)** `2026-06-30` · *Yu, Jiwen et al.* · `foundation-models`
+- 🔥 **[Orca: The World is in Your Mind](https://arxiv.org/abs/2606.30534)** `2026-06-29` · *Wang, Yihao et al.* · [🌐](https://orca-wm.github.io/) · `foundation-models`
 - 🔥 **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](https://arxiv.org/abs/2606.25473)** `2026-06-24` · *Zheng, Kaiwen et al.* · `foundation-models`
 - 🔥 **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](https://arxiv.org/abs/2606.25765)** `2026-06-24` · *Tang, Xincheng et al.* · `locomotion`
 - 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** `2026-06-23` · *Hou, Haidong et al.* · `locomotion`
@@ -529,9 +536,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](https://arxiv.org/abs/2606.20104)** `2026-06-18` · *Ivashkov, Petr et al.* · `foundation-models`
 - 🔥 **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](https://arxiv.org/abs/2606.20521)** `2026-06-18` · *Ma, Juncheng et al.* · `teleoperation`
 - 🔥 **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](https://arxiv.org/abs/2606.20562)** `2026-06-18` · *Yang, Sizhe et al.* · `vla`
-- 🔥 **[World Action Models: A Survey](https://arxiv.org/abs/2606.20781)** `2026-06-18` · *Shen, Qiuhong et al.* · `foundation-models`
-- 🔥 **[DREAM-Chunk: Reactive Action Chunking with Latent World Model](https://arxiv.org/abs/2606.18589)** `2026-06-17` · *Chen, Wenxi et al.* · `foundation-models`
-- 🔥 **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](https://arxiv.org/abs/2606.18953)** `2026-06-17` · *Kim, Kinam et al.* · `teleoperation`
 
 </details>
 

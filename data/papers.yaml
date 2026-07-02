@@ -1689,3 +1689,65 @@ papers:
   highlight: 🔥
   added: '2026-06-29'
   source: news_archive
+- arxiv_id: '2606.19297'
+  title: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models
+  authors: Kachaev, Nikita et al.
+  date: '2026-06-17'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]]
+    + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系"
+  links:
+    arxiv: https://arxiv.org/abs/2606.19297
+    project: https://orca-wm.github.io/
+  highlight: 🔥
+  added: '2026-07-02'
+  source: news_archive
+- arxiv_id: '2606.30534'
+  title: 'Orca: The World is in Your Mind'
+  authors: Wang, Yihao et al.
+  date: '2026-06-29'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]]
+    + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系"
+  links:
+    arxiv: https://arxiv.org/abs/2606.30534
+    project: https://orca-wm.github.io/
+  highlight: 🔥
+  added: '2026-07-02'
+  source: news_archive
+- arxiv_id: '2606.31315'
+  title: 'BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding'
+  authors: Zhang, Hao et al.
+  date: '2026-06-30'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]]
+    + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系"
+  links:
+    arxiv: https://arxiv.org/abs/2606.31315
+  highlight: 🔥
+  added: '2026-07-02'
+  source: news_archive
+- arxiv_id: '2606.31734'
+  title: 'MemLearner: Learning to Query Context memory for Video World Models'
+  authors: Yu, Jiwen et al.
+  date: '2026-06-30'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]]
+    + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系"
+  links:
+    arxiv: https://arxiv.org/abs/2606.31734
+  highlight: 🔥
+  added: '2026-07-02'
+  source: news_archive
