@@ -1751,3 +1751,63 @@ papers:
   highlight: 🔥
   added: '2026-07-02'
   source: news_archive
+- arxiv_id: '2607.06291'
+  title: 'AlayaWorld: Long-Horizon and Playable Video World Generation'
+  authors: AlayaWorld Team et al.
+  date: '2026-07-07'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA
+    on real-world benchmarks
+  links:
+    arxiv: https://arxiv.org/abs/2607.06291
+  highlight: 🔥
+  added: '2026-07-09'
+  source: news_archive
+- arxiv_id: '2607.06403'
+  title: 'From Foundation to Application: Improving VLA Models in Practice'
+  authors: Wu, Wei et al.
+  date: '2026-07-07'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 一个 VLA 团队在 4 个月内 pretraining 数据从 ~5K 小时扩到 60K 小时 = 12× 扩量 = 说明中国大厂已 catching up 到"foundation VLA 数据规模"层次；跨
+    20 embodiment + whole-body DoF = "通用 VLA foundation"落地方向明确
+  links:
+    arxiv: https://arxiv.org/abs/2607.06403
+  highlight: 🔥
+  added: '2026-07-09'
+  source: news_archive
+- arxiv_id: '2607.06558'
+  title: 'RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation'
+  authors: Zhao, Haoyu et al.
+  date: '2026-07-07'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA
+    on real-world benchmarks
+  links:
+    arxiv: https://arxiv.org/abs/2607.06558
+  highlight: 🔥
+  added: '2026-07-09'
+  source: news_archive
+- arxiv_id: '2607.06559'
+  title: 'RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation'
+  authors: Zhao, Haoyu et al.
+  date: '2026-07-07'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA
+    on real-world benchmarks
+  links:
+    arxiv: https://arxiv.org/abs/2607.06559
+  highlight: 🔥
+  added: '2026-07-09'
+  source: news_archive

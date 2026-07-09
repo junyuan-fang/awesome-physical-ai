@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--02-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--09-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **113** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **117** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 36 papers</summary>
+<summary>🆕 <b>2026</b> · 39 papers</summary>
 
+- 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** — *AlayaWorld Team et al.* · `2026-07-07`
+  > 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA on real-world benchmarks
+- 🔥 **[From Foundation to Application: Improving VLA Models in Practice](https://arxiv.org/abs/2607.06403)** — *Wu, Wei et al.* · `2026-07-07`
+  > 一个 VLA 团队在 4 个月内 pretraining 数据从 ~5K 小时扩到 60K 小时 = 12× 扩量 = 说明中国大厂已 catching up 到"foundation VLA 数据规模"层次；跨 20 embodiment + whole-body DoF = "通用 VLA foundation"落地方向明确
+- 🔥 **[RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](https://arxiv.org/abs/2607.06559)** — *Zhao, Haoyu et al.* · `2026-07-07`
+  > 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA on real-world benchmarks
 - 🔥 **[MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734)** — *Yu, Jiwen et al.* · `2026-06-30`
   > 规模上首个 100K+ 小时视频 WM（Sora 训练量级），OOD 泛化在 GalBot 真实机器人得到验证；与 6/17 [[QwenRobotWorld]] + 6/25 [[WorldValueModels]] + 6/26 [[QwenAgentWorld]] 形成"CN 大厂 world model 四大派系"
 - 🔥 **[Orca: The World is in Your Mind](https://arxiv.org/abs/2606.30534)** — *Wang, Yihao et al.* · `2026-06-29`
@@ -206,8 +212,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *VR, wearable, and exoskeleton-based data collection*
 <details open>
-<summary>🆕 <b>2026</b> · 12 papers</summary>
+<summary>🆕 <b>2026</b> · 13 papers</summary>
 
+- 🔥 **[RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation](https://arxiv.org/abs/2607.06558)** — *Zhao, Haoyu et al.* · `2026-07-07`
+  > 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA on real-world benchmarks
 - 🔥 **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](https://arxiv.org/abs/2606.20521)** — *Ma, Juncheng et al.* · `2026-06-18`
   > Embodied foundation models are expected to benefit from data scaling like large language models, but face a much tighter data bottleneck.
 - 🔥 **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](https://arxiv.org/abs/2606.18953)** — *Kim, Kinam et al.* · `2026-06-17`
@@ -521,6 +529,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** `2026-07-07` · *AlayaWorld Team et al.* · `foundation-models`
+- 🔥 **[From Foundation to Application: Improving VLA Models in Practice](https://arxiv.org/abs/2607.06403)** `2026-07-07` · *Wu, Wei et al.* · `foundation-models`
+- 🔥 **[RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation](https://arxiv.org/abs/2607.06558)** `2026-07-07` · *Zhao, Haoyu et al.* · `teleoperation`
+- 🔥 **[RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](https://arxiv.org/abs/2607.06559)** `2026-07-07` · *Zhao, Haoyu et al.* · `foundation-models`
 - 🔥 **[BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding](https://arxiv.org/abs/2606.31315)** `2026-06-30` · *Zhang, Hao et al.* · `vla`
 - 🔥 **[MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734)** `2026-06-30` · *Yu, Jiwen et al.* · `foundation-models`
 - 🔥 **[Orca: The World is in Your Mind](https://arxiv.org/abs/2606.30534)** `2026-06-29` · *Wang, Yihao et al.* · [🌐](https://orca-wm.github.io/) · `foundation-models`
@@ -532,10 +544,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Qwen-AgentWorld: Language World Models for General Agents](https://arxiv.org/abs/2606.24597)** `2026-06-23` · *Zuo, Yuxin et al.* · `foundation-models`
 - 🔥 **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](https://arxiv.org/abs/2606.23085)** `2026-06-22` · *Zhang, Haoran et al.* · `foundation-models`
 - 🔥 **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](https://arxiv.org/abs/2606.23444)** `2026-06-22` · *Rao, Pratyaksh et al.* · `sim2real`
-- 🔥 **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](https://arxiv.org/abs/2606.19928)** `2026-06-18` · *Lan, Kaixin et al.* · `locomotion`
-- 🔥 **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](https://arxiv.org/abs/2606.20104)** `2026-06-18` · *Ivashkov, Petr et al.* · `foundation-models`
-- 🔥 **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](https://arxiv.org/abs/2606.20521)** `2026-06-18` · *Ma, Juncheng et al.* · `teleoperation`
-- 🔥 **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](https://arxiv.org/abs/2606.20562)** `2026-06-18` · *Yang, Sizhe et al.* · `vla`
 
 </details>
 
