@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--09-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--21-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **117** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **119** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 39 papers</summary>
+<summary>🆕 <b>2026</b> · 40 papers</summary>
 
+- 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** — *Lu, Susie et al.* · `2026-07-16`
+  > 机构：MIT + Harvard。；核心：提出 Drifting 范式——在特征空间（DINOv3）而非像素空间做世界模型 rollout，比 Ctrl-World 快 17 倍（Push-T 场景 479 倍 / 30+ fps）；配合 Action-Accentuated Drifting 与 Motion Weighting，FVD 从 168 降到 6.20。 · [🌐 project](https://arxiv.org/abs/2607.15330)
 - 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** — *AlayaWorld Team et al.* · `2026-07-07`
   > 之前 video WM 只做 RGB pixel（Cosmos / Sora），本文首次把 depth + optical flow 融进 WM 训练 = 几何 + 动力学 grounded WM；SOTA on real-world benchmarks
 - 🔥 **[From Foundation to Application: Improving VLA Models in Practice](https://arxiv.org/abs/2607.06403)** — *Wu, Wei et al.* · `2026-07-07`
@@ -529,6 +531,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** `2026-07-16` · *Lu, Susie et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
+- 🔥 **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330)** `2026-07-16` · *Xiaomi Robotics Team et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `vla`
 - 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** `2026-07-07` · *AlayaWorld Team et al.* · `foundation-models`
 - 🔥 **[From Foundation to Application: Improving VLA Models in Practice](https://arxiv.org/abs/2607.06403)** `2026-07-07` · *Wu, Wei et al.* · `foundation-models`
 - 🔥 **[RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation](https://arxiv.org/abs/2607.06558)** `2026-07-07` · *Zhao, Haoyu et al.* · `teleoperation`
@@ -542,8 +546,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](https://arxiv.org/abs/2606.24101)** `2026-06-23` · 🏛️ ECCV 2026 · *Mei, Yanghong et al.* · `foundation-models`
 - 🔥 **[World Value Models for Robotic Manipulation](https://arxiv.org/abs/2606.24742)** `2026-06-23` · *Wang, Zhihao et al.* · `foundation-models`
 - 🔥 **[Qwen-AgentWorld: Language World Models for General Agents](https://arxiv.org/abs/2606.24597)** `2026-06-23` · *Zuo, Yuxin et al.* · `foundation-models`
-- 🔥 **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](https://arxiv.org/abs/2606.23085)** `2026-06-22` · *Zhang, Haoran et al.* · `foundation-models`
-- 🔥 **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](https://arxiv.org/abs/2606.23444)** `2026-06-22` · *Rao, Pratyaksh et al.* · `sim2real`
 
 </details>
 

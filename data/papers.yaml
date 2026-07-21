@@ -1811,3 +1811,35 @@ papers:
   highlight: 🔥
   added: '2026-07-09'
   source: news_archive
+- arxiv_id: '2607.15065'
+  title: 'DriftWorld: Fast World Modeling through Drifting'
+  authors: Lu, Susie et al.
+  date: '2026-07-16'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：MIT + Harvard。；核心：提出 Drifting 范式——在特征空间（DINOv3）而非像素空间做世界模型 rollout，比 Ctrl-World 快 17 倍（Push-T 场景 479
+    倍 / 30+ fps）；配合 Action-Accentuated Drifting 与 Motion Weighting，FVD 从 168 降到 6.20。
+  links:
+    arxiv: https://arxiv.org/abs/2607.15065
+    project: https://arxiv.org/abs/2607.15330
+  highlight: 🔥
+  added: '2026-07-21'
+  source: news_archive
+- arxiv_id: '2607.15330'
+  title: 'Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories'
+  authors: Xiaomi Robotics Team et al.
+  date: '2026-07-16'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 规模：三档尺寸 2.6B / 5.1B / 10.5B；训练数据 100K+ 小时 UMI 采集轨迹。；架构：Qwen3-VL 作为 VLM 主干 + DiT Flow Matching 动作专家；提出 Choice
+    Policies（多候选动作选择机制）。
+  links:
+    arxiv: https://arxiv.org/abs/2607.15330
+    project: https://arxiv.org/abs/2607.15330
+  highlight: 🔥
+  added: '2026-07-21'
+  source: news_archive
