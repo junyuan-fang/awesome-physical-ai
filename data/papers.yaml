@@ -1843,3 +1843,50 @@ papers:
   highlight: 🔥
   added: '2026-07-21'
   source: news_archive
+- arxiv_id: '2607.18367'
+  title: 'AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report'
+  authors: AlayaWorld Team et al.
+  date: '2026-07-20'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：Alaya Lab（商汤系背景）；热度：HF Trending 46 upvotes
+  links:
+    arxiv: https://arxiv.org/abs/2607.18367
+    project: https://arxiv.org/abs/2607.18367
+  highlight: 🔥
+  added: '2026-07-23'
+  source: news_archive
+- arxiv_id: '2607.19191'
+  title: 'ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU'
+  authors: Jiang, Fan et al.
+  date: '2026-07-21'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop
+    interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and internet videos
+    to learn...
+  links:
+    arxiv: https://arxiv.org/abs/2607.19191
+  highlight: 🔥
+  added: '2026-07-23'
+  source: news_archive
+- arxiv_id: '2607.19343'
+  title: Masked Visual Actions for Unified World Modeling
+  authors: Alzayer, Hadi et al.
+  date: '2026-07-21'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 核心：把机器人动作投影为图像对齐稠密掩膜，让 video diffusion 直接读图作为动作条件，绕开 embodiment-specific action space；DROID/BEHAVIOR benchmark；意义：cross-embodiment
+    VLA scale-up 的关键胶水层——用视觉 mask 代替动作向量
+  links:
+    arxiv: https://arxiv.org/abs/2607.19343
+    project: https://arxiv.org/abs/2607.15330
+  highlight: 🔥
+  added: '2026-07-23'
+  source: news_archive

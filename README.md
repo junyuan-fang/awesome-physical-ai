@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--21-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--23-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **119** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **122** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 40 papers</summary>
+<summary>🆕 <b>2026</b> · 43 papers</summary>
 
+- 🔥 **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](https://arxiv.org/abs/2607.19191)** — *Jiang, Fan et al.* · `2026-07-21`
+  > We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and internet …
+- 🔥 **[Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343)** — *Alzayer, Hadi et al.* · `2026-07-21`
+  > 核心：把机器人动作投影为图像对齐稠密掩膜，让 video diffusion 直接读图作为动作条件，绕开 embodiment-specific action space；DROID/BEHAVIOR benchmark；意义：cross-embodiment VLA scale-up 的关键胶水层——用视觉 mask 代替动作向量 · [🌐 project](https://arxiv.org/abs/2607.15330)
+- 🔥 **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](https://arxiv.org/abs/2607.18367)** — *AlayaWorld Team et al.* · `2026-07-20`
+  > 机构：Alaya Lab（商汤系背景）；热度：HF Trending 46 upvotes · [🌐 project](https://arxiv.org/abs/2607.18367)
 - 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** — *Lu, Susie et al.* · `2026-07-16`
   > 机构：MIT + Harvard。；核心：提出 Drifting 范式——在特征空间（DINOv3）而非像素空间做世界模型 rollout，比 Ctrl-World 快 17 倍（Push-T 场景 479 倍 / 30+ fps）；配合 Action-Accentuated Drifting 与 Motion Weighting，FVD 从 168 降到 6.20。 · [🌐 project](https://arxiv.org/abs/2607.15330)
 - 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** — *AlayaWorld Team et al.* · `2026-07-07`
@@ -531,6 +537,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](https://arxiv.org/abs/2607.19191)** `2026-07-21` · *Jiang, Fan et al.* · `foundation-models`
+- 🔥 **[Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343)** `2026-07-21` · *Alzayer, Hadi et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
+- 🔥 **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](https://arxiv.org/abs/2607.18367)** `2026-07-20` · *AlayaWorld Team et al.* · [🌐](https://arxiv.org/abs/2607.18367) · `foundation-models`
 - 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** `2026-07-16` · *Lu, Susie et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
 - 🔥 **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330)** `2026-07-16` · *Xiaomi Robotics Team et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `vla`
 - 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** `2026-07-07` · *AlayaWorld Team et al.* · `foundation-models`
@@ -543,9 +552,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](https://arxiv.org/abs/2606.25473)** `2026-06-24` · *Zheng, Kaiwen et al.* · `foundation-models`
 - 🔥 **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](https://arxiv.org/abs/2606.25765)** `2026-06-24` · *Tang, Xincheng et al.* · `locomotion`
 - 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** `2026-06-23` · *Hou, Haidong et al.* · `locomotion`
-- 🔥 **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](https://arxiv.org/abs/2606.24101)** `2026-06-23` · 🏛️ ECCV 2026 · *Mei, Yanghong et al.* · `foundation-models`
-- 🔥 **[World Value Models for Robotic Manipulation](https://arxiv.org/abs/2606.24742)** `2026-06-23` · *Wang, Zhihao et al.* · `foundation-models`
-- 🔥 **[Qwen-AgentWorld: Language World Models for General Agents](https://arxiv.org/abs/2606.24597)** `2026-06-23` · *Zuo, Yuxin et al.* · `foundation-models`
 
 </details>
 
