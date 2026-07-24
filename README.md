@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--23-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--24-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **122** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **125** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 43 papers</summary>
+<summary>🆕 <b>2026</b> · 44 papers</summary>
 
+- 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** — *Liu, Zeyu et al.* · `2026-07-22`
+  > 机构：复旦 + NUS 等；核心：不依赖逆动力学模型，直接用运动学 grounding 评估 WM 生成的物理合理性（ManiSkill3 + FoundationPose 验证）——补上"WM 论文只报 FVD"的评测盲区 · [🌐 project](https://arxiv.org/abs/2607.19191)
 - 🔥 **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](https://arxiv.org/abs/2607.19191)** — *Jiang, Fan et al.* · `2026-07-21`
   > We present ABot-World-0, an action-conditioned video world model for real-time, long-horizon closed-loop interaction, supported by a multi-source data infrastructure spanning AAA games, simulation engines, and internet …
 - 🔥 **[Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343)** — *Alzayer, Hadi et al.* · `2026-07-21`
@@ -160,8 +162,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 6 papers</summary>
+<summary>🆕 <b>2026</b> · 7 papers</summary>
 
+- 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** — *Chen, Guangyan et al.* · `2026-07-22`
+  > 机构：北京理工大学 + 清华大学；核心：从单条人类演示视频提取手-物交互轨迹 → DTW 对齐 → AWDA 域自适应映射到机器人本体。"one-shot"在推理期成立，但 Stage 2 训练仍需 5,847 对人-机配对数据；真机成功率约 62% · [🌐 project](https://arxiv.org/abs/2607.20033)
 - 🔥 **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](https://arxiv.org/abs/2606.07089)** — *Tang, Yinzhou et al.* · `2026-06-05`
   > "always dream" 是 WAM 范式的原罪 — Cosmos3 14B 跑一次 rollout 算力可怕；AdaWAM 按需 dream 是把 WAM 从研究推到部署的必经一步
 - 🔥 **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](https://arxiv.org/abs/2606.03268)** — *Zhao, Qian et al.* · `2026-06-02`
@@ -537,6 +541,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695)** `2026-07-22` · *Wu, Junzhe et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `vla`
+- 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** `2026-07-22` · *Liu, Zeyu et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `foundation-models`
+- 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** `2026-07-22` · *Chen, Guangyan et al.* · [🌐](https://arxiv.org/abs/2607.20033) · `manipulation`
 - 🔥 **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](https://arxiv.org/abs/2607.19191)** `2026-07-21` · *Jiang, Fan et al.* · `foundation-models`
 - 🔥 **[Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343)** `2026-07-21` · *Alzayer, Hadi et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
 - 🔥 **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](https://arxiv.org/abs/2607.18367)** `2026-07-20` · *AlayaWorld Team et al.* · [🌐](https://arxiv.org/abs/2607.18367) · `foundation-models`
@@ -549,9 +556,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding](https://arxiv.org/abs/2606.31315)** `2026-06-30` · *Zhang, Hao et al.* · `vla`
 - 🔥 **[MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734)** `2026-06-30` · *Yu, Jiwen et al.* · `foundation-models`
 - 🔥 **[Orca: The World is in Your Mind](https://arxiv.org/abs/2606.30534)** `2026-06-29` · *Wang, Yihao et al.* · [🌐](https://orca-wm.github.io/) · `foundation-models`
-- 🔥 **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](https://arxiv.org/abs/2606.25473)** `2026-06-24` · *Zheng, Kaiwen et al.* · `foundation-models`
-- 🔥 **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](https://arxiv.org/abs/2606.25765)** `2026-06-24` · *Tang, Xincheng et al.* · `locomotion`
-- 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** `2026-06-23` · *Hou, Haidong et al.* · `locomotion`
 
 </details>
 

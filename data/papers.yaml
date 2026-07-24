@@ -1890,3 +1890,49 @@ papers:
   highlight: 🔥
   added: '2026-07-23'
   source: news_archive
+- arxiv_id: '2607.19695'
+  title: 'NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation'
+  authors: Wu, Junzhe et al.
+  date: '2026-07-22'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 机构：清华 + 密歇根；核心：首个覆盖室内→室外连续过渡的具身导航 benchmark，含安全指标（碰撞/跌落）；对比 UniNaVid、PlaceNav 等
+  links:
+    arxiv: https://arxiv.org/abs/2607.19695
+    project: https://arxiv.org/abs/2607.19191
+  highlight: 🔥
+  added: '2026-07-24'
+  source: news_archive
+- arxiv_id: '2607.19876'
+  title: 'KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding'
+  authors: Liu, Zeyu et al.
+  date: '2026-07-22'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：复旦 + NUS 等；核心：不依赖逆动力学模型，直接用运动学 grounding 评估 WM 生成的物理合理性（ManiSkill3 + FoundationPose 验证）——补上"WM 论文只报 FVD"的评测盲区
+  links:
+    arxiv: https://arxiv.org/abs/2607.19876
+    project: https://arxiv.org/abs/2607.19191
+  highlight: 🔥
+  added: '2026-07-24'
+  source: news_archive
+- arxiv_id: '2607.20033'
+  title: Robots Acquire Manipulation Skills in Seconds from a Single Human Video
+  authors: Chen, Guangyan et al.
+  date: '2026-07-22'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: 机构：北京理工大学 + 清华大学；核心：从单条人类演示视频提取手-物交互轨迹 → DTW 对齐 → AWDA 域自适应映射到机器人本体。"one-shot"在推理期成立，但 Stage 2 训练仍需 5,847
+    对人-机配对数据；真机成功率约 62%
+  links:
+    arxiv: https://arxiv.org/abs/2607.20033
+    project: https://arxiv.org/abs/2607.20033
+  highlight: 🔥
+  added: '2026-07-24'
+  source: news_archive
