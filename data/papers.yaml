@@ -1936,3 +1936,19 @@ papers:
   highlight: 🔥
   added: '2026-07-24'
   source: news_archive
+- arxiv_id: '2606.16533'
+  title: 'Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI'
+  authors: Kairos Team et al.
+  date: '2026-06-15'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Kairos（2606.16533，2026-06-16 提交，超窗口）：SJTU 系 4B "control-sufficient state" 世界-动作模型全栈——不保留全部视觉细节，只学控制所需七类变量（物体状态/空间关系/接触条件/任务进度/动作后果/失败风险/部署不确定性）；WMBench-Robot
+    9.30、RoboTwin 2.0 96.1、LIBERO-Plus 90.8 全第一…
+  links:
+    arxiv: https://arxiv.org/abs/2606.16533
+    project: https://arxiv.org/abs/2607.19191
+  highlight: 🔥
+  added: '2026-07-27'
+  source: news_archive

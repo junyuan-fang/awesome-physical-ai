@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--24-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--27-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **125** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **126** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,7 +58,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 44 papers</summary>
+<summary>🆕 <b>2026</b> · 45 papers</summary>
 
 - 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** — *Liu, Zeyu et al.* · `2026-07-22`
   > 机构：复旦 + NUS 等；核心：不依赖逆动力学模型，直接用运动学 grounding 评估 WM 生成的物理合理性（ManiSkill3 + FoundationPose 验证）——补上"WM 论文只报 FVD"的评测盲区 · [🌐 project](https://arxiv.org/abs/2607.19191)
@@ -108,6 +108,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
   > We introduce Qwen-RobotWorld, a language-conditioned video world model for embodied intelligence.
 - 🔥 **[Geometric Action Model for Robot Policy Learning](https://arxiv.org/abs/2606.17046)** — *Han, Jisang et al.* · `2026-06-15`
   > Generalist robot policies must follow user instructions while reasoning about how objects, cameras, and robot actions interact in the 3D physical world.
+- 🔥 **[Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](https://arxiv.org/abs/2606.16533)** — *Kairos Team et al.* · `2026-06-15`
+  > Kairos（2606.16533，2026-06-16 提交，超窗口）：SJTU 系 4B "control-sufficient state" 世界-动作模型全栈——不保留全部视觉细节，只学控制所需七类变量（物体状态/空间关系/接触条件/任务进度/动作后果/失败风险/部署不确定性）；WMBench-Robot 9.30、RoboTwin 2.0 96.1、LIBERO-Plus 90. · [🌐 project](https://arxiv.org/abs/2607.19191)
 - 🔥 **[VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models](https://arxiv.org/abs/2606.13460)** — *Xian, Ruiqi et al.* · `2026-06-11`
   > Semantic 3D occupancy provides a voxelized world state for autonomous driving and robot decision making, but object and rare-class errors can affect free-space interpretation, collision checking, and temporal state …
 - 🔥 **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](https://arxiv.org/abs/2606.13494)** — *Azuma, Daichi et al.* · `2026-06-11`
