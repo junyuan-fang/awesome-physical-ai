@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--27-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--28-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **126** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **127** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -543,6 +543,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393)** `2026-07-24` · *Zhao, Yifei et al.* · `vla`
 - 🔥 **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695)** `2026-07-22` · *Wu, Junzhe et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `vla`
 - 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** `2026-07-22` · *Liu, Zeyu et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `foundation-models`
 - 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** `2026-07-22` · *Chen, Guangyan et al.* · [🌐](https://arxiv.org/abs/2607.20033) · `manipulation`
@@ -557,7 +558,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](https://arxiv.org/abs/2607.06559)** `2026-07-07` · *Zhao, Haoyu et al.* · `foundation-models`
 - 🔥 **[BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding](https://arxiv.org/abs/2606.31315)** `2026-06-30` · *Zhang, Hao et al.* · `vla`
 - 🔥 **[MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734)** `2026-06-30` · *Yu, Jiwen et al.* · `foundation-models`
-- 🔥 **[Orca: The World is in Your Mind](https://arxiv.org/abs/2606.30534)** `2026-06-29` · *Wang, Yihao et al.* · [🌐](https://orca-wm.github.io/) · `foundation-models`
 
 </details>
 

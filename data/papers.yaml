@@ -1952,3 +1952,19 @@ papers:
   highlight: 🔥
   added: '2026-07-27'
   source: news_archive
+- arxiv_id: '2607.22393'
+  title: 'SceneActBench: Can Agents Act on the 3D Scenes They See?'
+  authors: Zhao, Yifei et al.
+  date: '2026-07-24'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-language model (VLM) agents increasingly use tools to act on 3D scenes rather than only describe
+    them. Existing 3D benchmarks score textual responses or single-object operations, leaving agent action on complete multi-object
+    3D...
+  links:
+    arxiv: https://arxiv.org/abs/2607.22393
+  highlight: 🔥
+  added: '2026-07-28'
+  source: news_archive
