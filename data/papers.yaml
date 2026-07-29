@@ -1968,3 +1968,48 @@ papers:
   highlight: 🔥
   added: '2026-07-28'
   source: news_archive
+- arxiv_id: '2607.02501'
+  title: 'Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots'
+  authors: Xu, Ling et al.
+  date: '2026-07-02'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'Embodied.cpp（2607.02501，2026-07-02 提交，超 14 天）：面向异构机器人的可移植推理运行时；HY-VLA / pi0.5 上闭环成功率 100% / 91%；对边缘部署有直接工程价值；Project:'
+  links:
+    arxiv: https://arxiv.org/abs/2607.02501
+    project: https://arxiv.org/abs/2607.23909
+  highlight: 🔥
+  added: '2026-07-29'
+  source: news_archive
+- arxiv_id: '2607.21655'
+  title: 'Progress Reward Modeling for Robotic Learning: A Comprehensive Survey'
+  authors: Zhang, Jianshu et al.
+  date: '2026-07-22'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：西北大学；核心：机器人学习奖励建模的首个系统 survey——覆盖进度奖励、稀疏奖励重塑、语言奖励、VLM 奖励等
+  links:
+    arxiv: https://arxiv.org/abs/2607.21655
+    project: https://arxiv.org/abs/2607.23909
+  highlight: 🔥
+  added: '2026-07-29'
+  source: news_archive
+- arxiv_id: '2607.23909'
+  title: 'WorldDiT: A Unified Diffusion Architecture for World and Action Modeling'
+  authors: Wang, Sen et al.
+  date: '2026-07-27'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：Bagel Labs；核心：把 WAM（World-Action Model）从两阶段（先 WM 后 policy）并成单一 DiT backbone——统一扩散架构同时预测未来帧与动作
+  links:
+    arxiv: https://arxiv.org/abs/2607.23909
+    project: https://arxiv.org/abs/2607.23909
+  highlight: 🔥
+  added: '2026-07-29'
+  source: news_archive
