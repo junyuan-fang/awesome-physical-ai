@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--29-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--30-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **130** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **132** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 47 papers</summary>
+<summary>🆕 <b>2026</b> · 49 papers</summary>
 
+- 🔥 **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](https://arxiv.org/abs/2607.25337)** — *Bai, Jiaxin et al.* · `2026-07-28`
+  > 机构：Hong Kong Baptist University；核心：给 JEPA-style WM 加"时序距离"意识，让 latent WM 在 planning 时更知道"离目标还有多远"，直接服务 MPC；对比 LeWM、CEM · [🌐 project](https://arxiv.org/abs/2607.26037)
+- 🔥 **[Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037)** — *Xu, Jiacong et al.* · `2026-07-28`
+  > 机构：Adobe Research + Johns Hopkins University；核心：改进 video WM 的物理一致性 / 长时序生成，DiT 主干 + KV cache 复用 + DMD 蒸馏 + RPE 位置编码；内部数据集 "Inspatio-World"；宣称在物理一致性上比 Sora 系列 WM 更"真" · [🌐 project](https://arxiv.org/abs/2607.26037)
 - 🔥 **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](https://arxiv.org/abs/2607.23909)** — *Wang, Sen et al.* · `2026-07-27`
   > 机构：Bagel Labs；核心：把 WAM（World-Action Model）从两阶段（先 WM 后 policy）并成单一 DiT backbone——统一扩散架构同时预测未来帧与动作 · [🌐 project](https://arxiv.org/abs/2607.23909)
 - 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** — *Liu, Zeyu et al.* · `2026-07-22`
@@ -547,6 +551,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](https://arxiv.org/abs/2607.25337)** `2026-07-28` · *Bai, Jiaxin et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
+- 🔥 **[Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037)** `2026-07-28` · *Xu, Jiacong et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
 - 🔥 **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](https://arxiv.org/abs/2607.23909)** `2026-07-27` · *Wang, Sen et al.* · [🌐](https://arxiv.org/abs/2607.23909) · `foundation-models`
 - 🔥 **[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393)** `2026-07-24` · *Zhao, Yifei et al.* · `vla`
 - 🔥 **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695)** `2026-07-22` · *Wu, Junzhe et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `vla`
@@ -560,8 +566,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330)** `2026-07-16` · *Xiaomi Robotics Team et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `vla`
 - 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** `2026-07-07` · *AlayaWorld Team et al.* · `foundation-models`
 - 🔥 **[From Foundation to Application: Improving VLA Models in Practice](https://arxiv.org/abs/2607.06403)** `2026-07-07` · *Wu, Wei et al.* · `foundation-models`
-- 🔥 **[RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation](https://arxiv.org/abs/2607.06558)** `2026-07-07` · *Zhao, Haoyu et al.* · `teleoperation`
-- 🔥 **[RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](https://arxiv.org/abs/2607.06559)** `2026-07-07` · *Zhao, Haoyu et al.* · `foundation-models`
 
 </details>
 

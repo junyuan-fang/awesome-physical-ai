@@ -2013,3 +2013,35 @@ papers:
   highlight: 🔥
   added: '2026-07-29'
   source: news_archive
+- arxiv_id: '2607.25337'
+  title: 'Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control'
+  authors: Bai, Jiaxin et al.
+  date: '2026-07-28'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：Hong Kong Baptist University；核心：给 JEPA-style WM 加"时序距离"意识，让 latent WM 在 planning 时更知道"离目标还有多远"，直接服务 MPC；对比
+    LeWM、CEM
+  links:
+    arxiv: https://arxiv.org/abs/2607.25337
+    project: https://arxiv.org/abs/2607.26037
+  highlight: 🔥
+  added: '2026-07-30'
+  source: news_archive
+- arxiv_id: '2607.26037'
+  title: 'Wonder: Video World Model Done Better'
+  authors: Xu, Jiacong et al.
+  date: '2026-07-28'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：Adobe Research + Johns Hopkins University；核心：改进 video WM 的物理一致性 / 长时序生成，DiT 主干 + KV cache 复用 + DMD 蒸馏
+    + RPE 位置编码；内部数据集 "Inspatio-World"；宣称在物理一致性上比 Sora 系列 WM 更"真"
+  links:
+    arxiv: https://arxiv.org/abs/2607.26037
+    project: https://arxiv.org/abs/2607.26037
+  highlight: 🔥
+  added: '2026-07-30'
+  source: news_archive
