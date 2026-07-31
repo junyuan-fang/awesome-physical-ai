@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--30-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--31-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **132** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **134** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -551,6 +551,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[HumanCLAW: Can Vision-Language Models Act Through a Body?](https://arxiv.org/abs/2607.27180)** `2026-07-29` · *Li, Siyao et al.* · `vla`
+- 🔥 **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](https://arxiv.org/abs/2607.27205)** `2026-07-29` · *Xie, Hengyi et al.* · [🌐](https://huggingface.co/papers/2607.27180) · `vla`
 - 🔥 **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](https://arxiv.org/abs/2607.25337)** `2026-07-28` · *Bai, Jiaxin et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
 - 🔥 **[Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037)** `2026-07-28` · *Xu, Jiacong et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
 - 🔥 **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](https://arxiv.org/abs/2607.23909)** `2026-07-27` · *Wang, Sen et al.* · [🌐](https://arxiv.org/abs/2607.23909) · `foundation-models`
@@ -564,8 +566,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](https://arxiv.org/abs/2607.18367)** `2026-07-20` · *AlayaWorld Team et al.* · [🌐](https://arxiv.org/abs/2607.18367) · `foundation-models`
 - 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** `2026-07-16` · *Lu, Susie et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
 - 🔥 **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330)** `2026-07-16` · *Xiaomi Robotics Team et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `vla`
-- 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** `2026-07-07` · *AlayaWorld Team et al.* · `foundation-models`
-- 🔥 **[From Foundation to Application: Improving VLA Models in Practice](https://arxiv.org/abs/2607.06403)** `2026-07-07` · *Wu, Wei et al.* · `foundation-models`
 
 </details>
 

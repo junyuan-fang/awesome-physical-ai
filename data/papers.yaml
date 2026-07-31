@@ -2045,3 +2045,35 @@ papers:
   highlight: 🔥
   added: '2026-07-30'
   source: news_archive
+- arxiv_id: '2607.27180'
+  title: 'HumanCLAW: Can Vision-Language Models Act Through a Body?'
+  authors: Li, Siyao et al.
+  date: '2026-07-29'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Evaluating whether a vision-language model (VLM) can act through a physical body is challenging. The outcome
+    of an action couples the VLM's decision with motor control. When a task fails, it is hard to tell whether the VLM made
+    a bad...
+  links:
+    arxiv: https://arxiv.org/abs/2607.27180
+  highlight: 🔥
+  added: '2026-07-31'
+  source: news_archive
+- arxiv_id: '2607.27205'
+  title: 'TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM'
+  authors: Xie, Hengyi et al.
+  date: '2026-07-29'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 热度：HF Trending 119 upvotes 冲顶；核心：V+L→A 直连 + 6 层双向 cross-attention 取代 LLM 主干；0.2B / 0.9GB VRAM / 31.2 ms；LIBERO
+    97.7% SOTA
+  links:
+    arxiv: https://arxiv.org/abs/2607.27205
+    project: https://huggingface.co/papers/2607.27180
+  highlight: 🔥
+  added: '2026-07-31'
+  source: news_archive
