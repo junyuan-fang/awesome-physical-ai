@@ -2077,3 +2077,78 @@ papers:
   highlight: 🔥
   added: '2026-07-31'
   source: news_archive
+- arxiv_id: '2607.23782'
+  title: '$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens'
+  authors: NeoteAI Team et al.
+  date: '2026-07-26'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 核心：把触觉 token 直接塞进 VLA 主干（视觉-触觉-语言-动作），规模化验证；与 7/26 N₀-Foundation 3 万小时触觉数据集配套；意义：触觉从"感知补丁"升格为 VLA/WAM 的第一等模态
+  links:
+    arxiv: https://arxiv.org/abs/2607.23782
+    project: https://arxiv.org/abs/2607.23782
+  highlight: 🔥
+  added: '2026-08-04'
+  source: news_archive
+- arxiv_id: '2607.23783'
+  title: '$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation'
+  authors: NeoteAI Team et al.
+  date: '2026-07-26'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: 核心：面向 contact-rich manipulation，首个把"触觉→未来状态预测"闭环的 WAM；意义：与 [[FeelWorld]]（CASIA+BAAI）方向共振——WM 的触觉分支正在形成完整栈
+  links:
+    arxiv: https://arxiv.org/abs/2607.23783
+    project: https://arxiv.org/abs/2607.23782
+  highlight: 🔥
+  added: '2026-08-04'
+  source: news_archive
+- arxiv_id: '2607.26991'
+  title: 'RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models'
+  authors: Tan, Derek Ming Siang et al.
+  date: '2026-07-29'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: '核心：VLA 推理时自适应 RL，Test-time scaling；Project:'
+  links:
+    arxiv: https://arxiv.org/abs/2607.26991
+    project: https://arxiv.org/abs/2607.23783
+  highlight: 🔥
+  added: '2026-08-04'
+  source: news_archive
+- arxiv_id: '2607.27201'
+  title: Mental World Modeling
+  authors: Fei, Hao et al.
+  date: '2026-07-29'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: '核心：面向 agent 的心智世界模型，规划相关；Project:'
+  links:
+    arxiv: https://arxiv.org/abs/2607.27201
+    project: https://arxiv.org/abs/2607.23783
+  highlight: 🔥
+  added: '2026-08-04'
+  source: news_archive
+- arxiv_id: '2607.28443'
+  title: 'One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA'
+  authors: Gazzaev, Alan-Barsag et al.
+  date: '2026-07-30'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 核心：去中心化 JEPA 做多机器人集体状态预测，label-efficient；意义：多机器人 fleet learning 方向的第一篇公开工作——对物流仓库/工厂多本体协同直接相关
+  links:
+    arxiv: https://arxiv.org/abs/2607.28443
+    project: https://arxiv.org/abs/2607.23782
+  highlight: 🔥
+  added: '2026-08-04'
+  source: news_archive

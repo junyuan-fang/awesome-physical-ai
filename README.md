@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--07--31-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--04-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **134** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **139** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,14 +58,18 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 49 papers</summary>
+<summary>🆕 <b>2026</b> · 51 papers</summary>
 
+- 🔥 **[Mental World Modeling](https://arxiv.org/abs/2607.27201)** — *Fei, Hao et al.* · `2026-07-29`
+  > 核心：面向 agent 的心智世界模型，规划相关；Project: · [🌐 project](https://arxiv.org/abs/2607.23783)
 - 🔥 **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](https://arxiv.org/abs/2607.25337)** — *Bai, Jiaxin et al.* · `2026-07-28`
   > 机构：Hong Kong Baptist University；核心：给 JEPA-style WM 加"时序距离"意识，让 latent WM 在 planning 时更知道"离目标还有多远"，直接服务 MPC；对比 LeWM、CEM · [🌐 project](https://arxiv.org/abs/2607.26037)
 - 🔥 **[Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037)** — *Xu, Jiacong et al.* · `2026-07-28`
   > 机构：Adobe Research + Johns Hopkins University；核心：改进 video WM 的物理一致性 / 长时序生成，DiT 主干 + KV cache 复用 + DMD 蒸馏 + RPE 位置编码；内部数据集 "Inspatio-World"；宣称在物理一致性上比 Sora 系列 WM 更"真" · [🌐 project](https://arxiv.org/abs/2607.26037)
 - 🔥 **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](https://arxiv.org/abs/2607.23909)** — *Wang, Sen et al.* · `2026-07-27`
   > 机构：Bagel Labs；核心：把 WAM（World-Action Model）从两阶段（先 WM 后 policy）并成单一 DiT backbone——统一扩散架构同时预测未来帧与动作 · [🌐 project](https://arxiv.org/abs/2607.23909)
+- 🔥 **[$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](https://arxiv.org/abs/2607.23782)** — *NeoteAI Team et al.* · `2026-07-26`
+  > 核心：把触觉 token 直接塞进 VLA 主干（视觉-触觉-语言-动作），规模化验证；与 7/26 N₀-Foundation 3 万小时触觉数据集配套；意义：触觉从"感知补丁"升格为 VLA/WAM 的第一等模态 · [🌐 project](https://arxiv.org/abs/2607.23782)
 - 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** — *Liu, Zeyu et al.* · `2026-07-22`
   > 机构：复旦 + NUS 等；核心：不依赖逆动力学模型，直接用运动学 grounding 评估 WM 生成的物理合理性（ManiSkill3 + FoundationPose 验证）——补上"WM 论文只报 FVD"的评测盲区 · [🌐 project](https://arxiv.org/abs/2607.19191)
 - 🔥 **[Progress Reward Modeling for Robotic Learning: A Comprehensive Survey](https://arxiv.org/abs/2607.21655)** — *Zhang, Jianshu et al.* · `2026-07-22`
@@ -172,8 +176,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 7 papers</summary>
+<summary>🆕 <b>2026</b> · 8 papers</summary>
 
+- 🔥 **[$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783)** — *NeoteAI Team et al.* · `2026-07-26`
+  > 核心：面向 contact-rich manipulation，首个把"触觉→未来状态预测"闭环的 WAM；意义：与 [[FeelWorld]]（CASIA+BAAI）方向共振——WM 的触觉分支正在形成完整栈 · [🌐 project](https://arxiv.org/abs/2607.23782)
 - 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** — *Chen, Guangyan et al.* · `2026-07-22`
   > 机构：北京理工大学 + 清华大学；核心：从单条人类演示视频提取手-物交互轨迹 → DTW 对齐 → AWDA 域自适应映射到机器人本体。"one-shot"在推理期成立，但 Stage 2 训练仍需 5,847 对人-机配对数据；真机成功率约 62% · [🌐 project](https://arxiv.org/abs/2607.20033)
 - 🔥 **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](https://arxiv.org/abs/2606.07089)** — *Tang, Yinzhou et al.* · `2026-06-05`
@@ -551,21 +557,21 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](https://arxiv.org/abs/2607.28443)** `2026-07-30` · *Gazzaev, Alan-Barsag et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `vla`
 - 🔥 **[HumanCLAW: Can Vision-Language Models Act Through a Body?](https://arxiv.org/abs/2607.27180)** `2026-07-29` · *Li, Siyao et al.* · `vla`
 - 🔥 **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](https://arxiv.org/abs/2607.27205)** `2026-07-29` · *Xie, Hengyi et al.* · [🌐](https://huggingface.co/papers/2607.27180) · `vla`
+- 🔥 **[RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](https://arxiv.org/abs/2607.26991)** `2026-07-29` · *Tan, Derek Ming Siang et al.* · [🌐](https://arxiv.org/abs/2607.23783) · `vla`
+- 🔥 **[Mental World Modeling](https://arxiv.org/abs/2607.27201)** `2026-07-29` · *Fei, Hao et al.* · [🌐](https://arxiv.org/abs/2607.23783) · `foundation-models`
 - 🔥 **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](https://arxiv.org/abs/2607.25337)** `2026-07-28` · *Bai, Jiaxin et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
 - 🔥 **[Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037)** `2026-07-28` · *Xu, Jiacong et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
 - 🔥 **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](https://arxiv.org/abs/2607.23909)** `2026-07-27` · *Wang, Sen et al.* · [🌐](https://arxiv.org/abs/2607.23909) · `foundation-models`
+- 🔥 **[$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](https://arxiv.org/abs/2607.23782)** `2026-07-26` · *NeoteAI Team et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `foundation-models`
+- 🔥 **[$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783)** `2026-07-26` · *NeoteAI Team et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `manipulation`
 - 🔥 **[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393)** `2026-07-24` · *Zhao, Yifei et al.* · `vla`
 - 🔥 **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695)** `2026-07-22` · *Wu, Junzhe et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `vla`
 - 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** `2026-07-22` · *Liu, Zeyu et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `foundation-models`
 - 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** `2026-07-22` · *Chen, Guangyan et al.* · [🌐](https://arxiv.org/abs/2607.20033) · `manipulation`
 - 🔥 **[Progress Reward Modeling for Robotic Learning: A Comprehensive Survey](https://arxiv.org/abs/2607.21655)** `2026-07-22` · *Zhang, Jianshu et al.* · [🌐](https://arxiv.org/abs/2607.23909) · `foundation-models`
-- 🔥 **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](https://arxiv.org/abs/2607.19191)** `2026-07-21` · *Jiang, Fan et al.* · `foundation-models`
-- 🔥 **[Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343)** `2026-07-21` · *Alzayer, Hadi et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
-- 🔥 **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](https://arxiv.org/abs/2607.18367)** `2026-07-20` · *AlayaWorld Team et al.* · [🌐](https://arxiv.org/abs/2607.18367) · `foundation-models`
-- 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** `2026-07-16` · *Lu, Susie et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `foundation-models`
-- 🔥 **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330)** `2026-07-16` · *Xiaomi Robotics Team et al.* · [🌐](https://arxiv.org/abs/2607.15330) · `vla`
 
 </details>
 
