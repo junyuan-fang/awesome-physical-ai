@@ -2152,3 +2152,49 @@ papers:
   highlight: 🔥
   added: '2026-08-04'
   source: news_archive
+- arxiv_id: '2608.01397'
+  title: 'SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space'
+  authors: Zhao, Ruiteng et al.
+  date: '2026-08-02'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: World Action Models (WAMs) couple action generation with prediction of future states. Their effectiveness
+    depends on whether future dynamics are modeled in a space that is both aligned with action generation and sufficiently...
+  links:
+    arxiv: https://arxiv.org/abs/2608.01397
+  highlight: 🔥
+  added: '2026-08-05'
+  source: news_archive
+- arxiv_id: '2608.01735'
+  title: 'DAPD: Dual-Anchored Policy Distillation'
+  authors: Wu, Jianyu et al.
+  date: '2026-08-03'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'On-policy (self) distillation (OPSD) is increasingly adopted for language-model post-training. It strengthens
+    the teacher with privileged information but can induce a privilege illusion: the student learns privilege-dependent behavior
+    it...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.01735
+  highlight: 🔥
+  added: '2026-08-05'
+  source: news_archive
+- arxiv_id: '2608.02603'
+  title: 'WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity'
+  authors: Yang, Yuxue et al.
+  date: '2026-08-03'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：CUHK（16 作者协作）；核心：从"表观外观"到"内在反应性"两个层次分层评测，覆盖比 VBench/WorldModelBench 更广
+  links:
+    arxiv: https://arxiv.org/abs/2608.02603
+    project: https://huggingface.co/papers/2608.01735
+  highlight: 🔥
+  added: '2026-08-05'
+  source: news_archive

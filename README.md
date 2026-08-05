@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--04-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--05-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **139** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **142** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 51 papers</summary>
+<summary>🆕 <b>2026</b> · 53 papers</summary>
 
+- 🔥 **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](https://arxiv.org/abs/2608.02603)** — *Yang, Yuxue et al.* · `2026-08-03`
+  > 机构：CUHK（16 作者协作）；核心：从"表观外观"到"内在反应性"两个层次分层评测，覆盖比 VBench/WorldModelBench 更广 · [🌐 project](https://huggingface.co/papers/2608.01735)
+- 🔥 **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](https://arxiv.org/abs/2608.01397)** — *Zhao, Ruiteng et al.* · `2026-08-02`
+  > World Action Models (WAMs) couple action generation with prediction of future states.
 - 🔥 **[Mental World Modeling](https://arxiv.org/abs/2607.27201)** — *Fei, Hao et al.* · `2026-07-29`
   > 核心：面向 agent 的心智世界模型，规划相关；Project: · [🌐 project](https://arxiv.org/abs/2607.23783)
 - 🔥 **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](https://arxiv.org/abs/2607.25337)** — *Bai, Jiaxin et al.* · `2026-07-28`
@@ -557,6 +561,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[DAPD: Dual-Anchored Policy Distillation](https://arxiv.org/abs/2608.01735)** `2026-08-03` · *Wu, Jianyu et al.* · `vla`
+- 🔥 **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](https://arxiv.org/abs/2608.02603)** `2026-08-03` · *Yang, Yuxue et al.* · [🌐](https://huggingface.co/papers/2608.01735) · `foundation-models`
+- 🔥 **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](https://arxiv.org/abs/2608.01397)** `2026-08-02` · *Zhao, Ruiteng et al.* · `foundation-models`
 - 🔥 **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](https://arxiv.org/abs/2607.28443)** `2026-07-30` · *Gazzaev, Alan-Barsag et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `vla`
 - 🔥 **[HumanCLAW: Can Vision-Language Models Act Through a Body?](https://arxiv.org/abs/2607.27180)** `2026-07-29` · *Li, Siyao et al.* · `vla`
 - 🔥 **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](https://arxiv.org/abs/2607.27205)** `2026-07-29` · *Xie, Hengyi et al.* · [🌐](https://huggingface.co/papers/2607.27180) · `vla`
@@ -569,9 +576,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783)** `2026-07-26` · *NeoteAI Team et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `manipulation`
 - 🔥 **[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393)** `2026-07-24` · *Zhao, Yifei et al.* · `vla`
 - 🔥 **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695)** `2026-07-22` · *Wu, Junzhe et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `vla`
-- 🔥 **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](https://arxiv.org/abs/2607.19876)** `2026-07-22` · *Liu, Zeyu et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `foundation-models`
-- 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** `2026-07-22` · *Chen, Guangyan et al.* · [🌐](https://arxiv.org/abs/2607.20033) · `manipulation`
-- 🔥 **[Progress Reward Modeling for Robotic Learning: A Comprehensive Survey](https://arxiv.org/abs/2607.21655)** `2026-07-22` · *Zhang, Jianshu et al.* · [🌐](https://arxiv.org/abs/2607.23909) · `foundation-models`
 
 </details>
 
