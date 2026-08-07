@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--05-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--07-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **142** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **145** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 53 papers</summary>
+<summary>🆕 <b>2026</b> · 54 papers</summary>
 
+- 🔥 **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964)** — *Gu, Bohai et al.* · `2026-08-05`
+  > 核心：用可逆动作循环做自监督信号，spatial closure + temporal consistency 双奖励；意义：面向长时程规划的 physically grounded 视频世界模型——与 WM 评测四件套（KineBench 等）形成"训练侧"呼应 · [🌐 project](https://arxiv.org/abs/2608.02580)
 - 🔥 **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](https://arxiv.org/abs/2608.02603)** — *Yang, Yuxue et al.* · `2026-08-03`
   > 机构：CUHK（16 作者协作）；核心：从"表观外观"到"内在反应性"两个层次分层评测，覆盖比 VBench/WorldModelBench 更广 · [🌐 project](https://huggingface.co/papers/2608.01735)
 - 🔥 **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](https://arxiv.org/abs/2608.01397)** — *Zhao, Ruiteng et al.* · `2026-08-02`
@@ -561,8 +563,11 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964)** `2026-08-05` · *Gu, Bohai et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `foundation-models`
+- 🔥 **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](https://arxiv.org/abs/2608.05042)** `2026-08-05` · *Li, Peiyan et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `vla`
 - 🔥 **[DAPD: Dual-Anchored Policy Distillation](https://arxiv.org/abs/2608.01735)** `2026-08-03` · *Wu, Jianyu et al.* · `vla`
 - 🔥 **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](https://arxiv.org/abs/2608.02603)** `2026-08-03` · *Yang, Yuxue et al.* · [🌐](https://huggingface.co/papers/2608.01735) · `foundation-models`
+- 🔥 **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](https://arxiv.org/abs/2608.02580)** `2026-08-03` · *Wang, Ye et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `vla`
 - 🔥 **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](https://arxiv.org/abs/2608.01397)** `2026-08-02` · *Zhao, Ruiteng et al.* · `foundation-models`
 - 🔥 **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](https://arxiv.org/abs/2607.28443)** `2026-07-30` · *Gazzaev, Alan-Barsag et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `vla`
 - 🔥 **[HumanCLAW: Can Vision-Language Models Act Through a Body?](https://arxiv.org/abs/2607.27180)** `2026-07-29` · *Li, Siyao et al.* · `vla`
@@ -573,9 +578,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037)** `2026-07-28` · *Xu, Jiacong et al.* · [🌐](https://arxiv.org/abs/2607.26037) · `foundation-models`
 - 🔥 **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](https://arxiv.org/abs/2607.23909)** `2026-07-27` · *Wang, Sen et al.* · [🌐](https://arxiv.org/abs/2607.23909) · `foundation-models`
 - 🔥 **[$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](https://arxiv.org/abs/2607.23782)** `2026-07-26` · *NeoteAI Team et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `foundation-models`
-- 🔥 **[$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783)** `2026-07-26` · *NeoteAI Team et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `manipulation`
-- 🔥 **[SceneActBench: Can Agents Act on the 3D Scenes They See?](https://arxiv.org/abs/2607.22393)** `2026-07-24` · *Zhao, Yifei et al.* · `vla`
-- 🔥 **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695)** `2026-07-22` · *Wu, Junzhe et al.* · [🌐](https://arxiv.org/abs/2607.19191) · `vla`
 
 </details>
 

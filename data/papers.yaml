@@ -2198,3 +2198,49 @@ papers:
   highlight: 🔥
   added: '2026-08-05'
   source: news_archive
+- arxiv_id: '2608.02580'
+  title: 'Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data'
+  authors: Wang, Ye et al.
+  date: '2026-08-03'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 核心：动作重定向 + 机械臂视觉合成 + 多级质量筛选，把第一人称人类操作视频转成机器人训练数据；规模：产出 18,561 小时、跨 15 种形态的最大规模合成数据集，联合预训练提升跨域泛化
+  links:
+    arxiv: https://arxiv.org/abs/2608.02580
+    project: https://arxiv.org/abs/2608.02580
+  highlight: 🔥
+  added: '2026-08-07'
+  source: news_archive
+- arxiv_id: '2608.04964'
+  title: 'WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models'
+  authors: Gu, Bohai et al.
+  date: '2026-08-05'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 核心：用可逆动作循环做自监督信号，spatial closure + temporal consistency 双奖励；意义：面向长时程规划的 physically grounded 视频世界模型——与 WM
+    评测四件套（KineBench 等）形成"训练侧"呼应
+  links:
+    arxiv: https://arxiv.org/abs/2608.04964
+    project: https://arxiv.org/abs/2608.02580
+  highlight: 🔥
+  added: '2026-08-07'
+  source: news_archive
+- arxiv_id: '2608.05042'
+  title: 'BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation'
+  authors: Li, Peiyan et al.
+  date: '2026-08-05'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 核心：为 BridgeVLA 加统一时空记忆架构，让 3D manipulation 模型能推理观察历史；结果：记忆依赖型操作任务 SOTA，兼顾数据效率
+  links:
+    arxiv: https://arxiv.org/abs/2608.05042
+    project: https://arxiv.org/abs/2608.02580
+  highlight: 🔥
+  added: '2026-08-07'
+  source: news_archive
