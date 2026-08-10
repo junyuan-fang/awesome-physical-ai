@@ -2244,3 +2244,66 @@ papers:
   highlight: 🔥
   added: '2026-08-07'
   source: news_archive
+- arxiv_id: '2608.01851'
+  title: 'Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their
+    Own Skills'
+  authors: Jena, Gaytri et al.
+  date: '2026-08-03'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 核心：把机器人学习分成两条路线对照——冻结权重的 VLA vs 自己写可执行技能代码的 agent；梳理 code-as-policy 与技能发现中的自改进机制；指出空缺：机器人技能市场在适配、安全、标准化上仍是空白
+  links:
+    arxiv: https://arxiv.org/abs/2608.01851
+    project: https://arxiv.org/abs/2608.06374
+  highlight: 🔥
+  added: '2026-08-10'
+  source: news_archive
+- arxiv_id: '2608.05369'
+  title: 'World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation'
+  authors: Pan, Yuhao et al.
+  date: '2026-08-05'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 核心：不再把腕部视角与主视角等同处理——用 latent modeling tokens 作接口，由全局任务上下文预测未来腕部运动；配套：W2-CoT 标注流水线，生成"操作阶段 + 物理交互"的结构化监督
+  links:
+    arxiv: https://arxiv.org/abs/2608.05369
+    project: https://arxiv.org/abs/2608.05369
+  highlight: 🔥
+  added: '2026-08-10'
+  source: news_archive
+- arxiv_id: '2608.06197'
+  title: 'EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning'
+  authors: Xu, Zishan et al.
+  date: '2026-08-06'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 核心：agent 交替生成工具调用与自己模拟的环境响应（world rehearsal），降低对外部环境依赖、支持测试时私有推演；定位：偏 agentic RL，非机器人本体，但"把环境模型压进权重"这条路对具身端的低成本
+    rollout 有直接借鉴
+  links:
+    arxiv: https://arxiv.org/abs/2608.06197
+    project: https://arxiv.org/abs/2608.06374
+  highlight: 🔥
+  added: '2026-08-10'
+  source: news_archive
+- arxiv_id: '2608.06374'
+  title: 'DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation'
+  authors: Li, Junfeng et al.
+  date: '2026-08-06'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 核心：共享动力学先验（VLM 侧）+ MoE 本体专属控制头，免去手工 action normalization；成绩：LIBERO 98.0%、RoboCasa-GR1 59.25%、RoboTwin 2.0
+    89.02%
+  links:
+    arxiv: https://arxiv.org/abs/2608.06374
+    project: https://arxiv.org/abs/2608.05369
+  highlight: 🔥
+  added: '2026-08-10'
+  source: news_archive
