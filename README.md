@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--10-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--12-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **149** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **153** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 56 papers</summary>
+<summary>🆕 <b>2026</b> · 59 papers</summary>
 
+- 🔥 **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730)** — *Tang, Qu et al.* · `2026-08-10`
+  > 机构：JIUTIAN Research（中国移动九天）· 中关村学院 · [🌐 project](https://kzz1031.github.io/slim-project-page/)
+- 🔥 **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771)** — *Wang, Jingkai et al.* · `2026-08-10`
+  > 机构：复旦大学 / 北京智源人工智能研究院（BAAI）/ 清华大学 / 中国人民大学 · [🌐 project](https://kzz1031.github.io/slim-project-page/)
+- 🔥 **[RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](https://arxiv.org/abs/2608.09853)** — *Huang, Dongchi et al.* · `2026-08-10`
+  > 机构：DAMO Academy, Alibaba Group；Hupan Lab · [🌐 project](https://alibaba-damo-academy.github.io/RynnValue.github.io)
 - 🔥 **[EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning](https://arxiv.org/abs/2608.06197)** — *Xu, Zishan et al.* · `2026-08-06`
   > 核心：agent 交替生成工具调用与自己模拟的环境响应（world rehearsal），降低对外部环境依赖、支持测试时私有推演；定位：偏 agentic RL，非机器人本体，但"把环境模型压进权重"这条路对具身端的低成本 rollout 有直接借鉴 · [🌐 project](https://arxiv.org/abs/2608.06374)
 - 🔥 **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964)** — *Gu, Bohai et al.* · `2026-08-05`
@@ -567,6 +573,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730)** `2026-08-10` · *Tang, Qu et al.* · [🌐](https://kzz1031.github.io/slim-project-page/) · `foundation-models`
+- 🔥 **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771)** `2026-08-10` · *Wang, Jingkai et al.* · [🌐](https://kzz1031.github.io/slim-project-page/) · `foundation-models`
+- 🔥 **[RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](https://arxiv.org/abs/2608.09853)** `2026-08-10` · *Huang, Dongchi et al.* · [🌐](https://alibaba-damo-academy.github.io/RynnValue.github.io) · `foundation-models`
+- 🔥 **[XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment](https://arxiv.org/abs/2608.09892)** `2026-08-10` · *Community, XPolicyLab et al.* · `vla`
 - 🔥 **[EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning](https://arxiv.org/abs/2608.06197)** `2026-08-06` · *Xu, Zishan et al.* · [🌐](https://arxiv.org/abs/2608.06374) · `foundation-models`
 - 🔥 **[DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](https://arxiv.org/abs/2608.06374)** `2026-08-06` · *Li, Junfeng et al.* · [🌐](https://arxiv.org/abs/2608.05369) · `vla`
 - 🔥 **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964)** `2026-08-05` · *Gu, Bohai et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `foundation-models`
@@ -578,10 +588,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills](https://arxiv.org/abs/2608.01851)** `2026-08-03` · *Jena, Gaytri et al.* · [🌐](https://arxiv.org/abs/2608.06374) · `foundation-models`
 - 🔥 **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](https://arxiv.org/abs/2608.01397)** `2026-08-02` · *Zhao, Ruiteng et al.* · `foundation-models`
 - 🔥 **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](https://arxiv.org/abs/2607.28443)** `2026-07-30` · *Gazzaev, Alan-Barsag et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `vla`
-- 🔥 **[HumanCLAW: Can Vision-Language Models Act Through a Body?](https://arxiv.org/abs/2607.27180)** `2026-07-29` · *Li, Siyao et al.* · `vla`
-- 🔥 **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](https://arxiv.org/abs/2607.27205)** `2026-07-29` · *Xie, Hengyi et al.* · [🌐](https://huggingface.co/papers/2607.27180) · `vla`
-- 🔥 **[RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](https://arxiv.org/abs/2607.26991)** `2026-07-29` · *Tan, Derek Ming Siang et al.* · [🌐](https://arxiv.org/abs/2607.23783) · `vla`
-- 🔥 **[Mental World Modeling](https://arxiv.org/abs/2607.27201)** `2026-07-29` · *Fei, Hao et al.* · [🌐](https://arxiv.org/abs/2607.23783) · `foundation-models`
 
 </details>
 

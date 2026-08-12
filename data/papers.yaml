@@ -2307,3 +2307,62 @@ papers:
   highlight: 🔥
   added: '2026-08-10'
   source: news_archive
+- arxiv_id: '2608.09730'
+  title: 'World Tokens: Enhancing Embodied Policies with Training-Time World Modeling'
+  authors: Tang, Qu et al.
+  date: '2026-08-10'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：JIUTIAN Research（中国移动九天）· 中关村学院
+  links:
+    arxiv: https://arxiv.org/abs/2608.09730
+    project: https://kzz1031.github.io/slim-project-page/
+  highlight: 🔥
+  added: '2026-08-12'
+  source: news_archive
+- arxiv_id: '2608.09771'
+  title: 'SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation'
+  authors: Wang, Jingkai et al.
+  date: '2026-08-10'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：复旦大学 / 北京智源人工智能研究院（BAAI）/ 清华大学 / 中国人民大学
+  links:
+    arxiv: https://arxiv.org/abs/2608.09771
+    project: https://kzz1031.github.io/slim-project-page/
+  highlight: 🔥
+  added: '2026-08-12'
+  source: news_archive
+- arxiv_id: '2608.09853'
+  title: 'RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance'
+  authors: Huang, Dongchi et al.
+  date: '2026-08-10'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 机构：DAMO Academy, Alibaba Group；Hupan Lab
+  links:
+    arxiv: https://arxiv.org/abs/2608.09853
+    project: https://alibaba-damo-academy.github.io/RynnValue.github.io
+  highlight: 🔥
+  added: '2026-08-12'
+  source: news_archive
+- arxiv_id: '2608.09892'
+  title: 'XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment'
+  authors: Community, XPolicyLab et al.
+  date: '2026-08-10'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 机构：MMLab@HKU & 清华大学（XPolicyLab Contributors）
+  links:
+    arxiv: https://arxiv.org/abs/2608.09892
+  highlight: 🔥
+  added: '2026-08-12'
+  source: news_archive
