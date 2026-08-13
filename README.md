@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--12-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--13-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **153** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **161** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 59 papers</summary>
+<summary>🆕 <b>2026</b> · 61 papers</summary>
 
+- 🔥 **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](https://arxiv.org/abs/2608.10618)** — *Shan, Zitong et al.* · `2026-08-11`
+  > Embodied artificial intelligence aims to develop agents that perceive, reason, and act through continuous interaction with the physical world.
+- 🔥 **[VIScore: Diagnosing Planning-Relevant Quality in Latent World Models](https://arxiv.org/abs/2608.11174)** — *Wu, Haiyu et al.* · `2026-08-11`
+  > Regulating the latent space to an isotropic Gaussian distribution provides a stable and information-maximized landscape for world model planning.
 - 🔥 **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730)** — *Tang, Qu et al.* · `2026-08-10`
   > 机构：JIUTIAN Research（中国移动九天）· 中关村学院 · [🌐 project](https://kzz1031.github.io/slim-project-page/)
 - 🔥 **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771)** — *Wang, Jingkai et al.* · `2026-08-10`
@@ -192,8 +196,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 8 papers</summary>
+<summary>🆕 <b>2026</b> · 9 papers</summary>
 
+- 🔥 **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383)** — *Li, Ziming et al.* · `2026-08-11`
+  > Bimanual dexterous grasping of large objects is a critical challenge in robotic manipulation.
 - 🔥 **[$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783)** — *NeoteAI Team et al.* · `2026-07-26`
   > 核心：面向 contact-rich manipulation，首个把"触觉→未来状态预测"闭环的 WAM；意义：与 [[FeelWorld]]（CASIA+BAAI）方向共振——WM 的触觉分支正在形成完整栈 · [🌐 project](https://arxiv.org/abs/2607.23782)
 - 🔥 **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033)** — *Chen, Guangyan et al.* · `2026-07-22`
@@ -224,8 +230,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Humanoid, quadruped, bipedal walking and running*
 <details open>
-<summary>🆕 <b>2026</b> · 11 papers</summary>
+<summary>🆕 <b>2026</b> · 12 papers</summary>
 
+- 🔥 **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](https://arxiv.org/abs/2608.10860)** — *Yan, Ge et al.* · `2026-08-11`
+  > World-action models (WAMs) predict the future to act better, but nearly all of them predict only RGB latents, trained purely for pixel reconstruction, with no explicit signal for the 3D geometry or object semantics …
 - 🔥 **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](https://arxiv.org/abs/2606.25765)** — *Tang, Xincheng et al.* · `2026-06-24`
   > Climbing hollow stairs remains a challenging problem for quadruped robots due to the high risk of leg trapping, severe depth sparsity, and high-frequency depth-sensing noise.
 - 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** — *Hou, Haidong et al.* · `2026-06-23`
@@ -573,6 +581,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383)** `2026-08-11` · *Li, Ziming et al.* · `manipulation`
+- 🔥 **[Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2608.10393)** `2026-08-11` · *Han, Jiahui et al.* · `vla`
+- 🔥 **[Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484)** `2026-08-11` · *Wenjie, Li et al.* · `vla`
+- 🔥 **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](https://arxiv.org/abs/2608.10618)** `2026-08-11` · *Shan, Zitong et al.* · `foundation-models`
+- 🔥 **[Beyond Pixels: From Video Priors to 4D Worlds](https://arxiv.org/abs/2608.10744)** `2026-08-11` · *Liu, Zihao et al.* · `vla`
+- 🔥 **[Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models](https://arxiv.org/abs/2608.10824)** `2026-08-11` · 🏛️ IROS 2026 · *Wu, Zhijie et al.* · `vla`
+- 🔥 **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](https://arxiv.org/abs/2608.10860)** `2026-08-11` · *Yan, Ge et al.* · `locomotion`
+- 🔥 **[VIScore: Diagnosing Planning-Relevant Quality in Latent World Models](https://arxiv.org/abs/2608.11174)** `2026-08-11` · *Wu, Haiyu et al.* · `foundation-models`
 - 🔥 **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730)** `2026-08-10` · *Tang, Qu et al.* · [🌐](https://kzz1031.github.io/slim-project-page/) · `foundation-models`
 - 🔥 **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771)** `2026-08-10` · *Wang, Jingkai et al.* · [🌐](https://kzz1031.github.io/slim-project-page/) · `foundation-models`
 - 🔥 **[RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](https://arxiv.org/abs/2608.09853)** `2026-08-10` · *Huang, Dongchi et al.* · [🌐](https://alibaba-damo-academy.github.io/RynnValue.github.io) · `foundation-models`
@@ -580,14 +596,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning](https://arxiv.org/abs/2608.06197)** `2026-08-06` · *Xu, Zishan et al.* · [🌐](https://arxiv.org/abs/2608.06374) · `foundation-models`
 - 🔥 **[DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](https://arxiv.org/abs/2608.06374)** `2026-08-06` · *Li, Junfeng et al.* · [🌐](https://arxiv.org/abs/2608.05369) · `vla`
 - 🔥 **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964)** `2026-08-05` · *Gu, Bohai et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `foundation-models`
-- 🔥 **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](https://arxiv.org/abs/2608.05042)** `2026-08-05` · *Li, Peiyan et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `vla`
-- 🔥 **[World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation](https://arxiv.org/abs/2608.05369)** `2026-08-05` · *Pan, Yuhao et al.* · [🌐](https://arxiv.org/abs/2608.05369) · `vla`
-- 🔥 **[DAPD: Dual-Anchored Policy Distillation](https://arxiv.org/abs/2608.01735)** `2026-08-03` · *Wu, Jianyu et al.* · `vla`
-- 🔥 **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](https://arxiv.org/abs/2608.02603)** `2026-08-03` · *Yang, Yuxue et al.* · [🌐](https://huggingface.co/papers/2608.01735) · `foundation-models`
-- 🔥 **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](https://arxiv.org/abs/2608.02580)** `2026-08-03` · *Wang, Ye et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `vla`
-- 🔥 **[Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills](https://arxiv.org/abs/2608.01851)** `2026-08-03` · *Jena, Gaytri et al.* · [🌐](https://arxiv.org/abs/2608.06374) · `foundation-models`
-- 🔥 **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](https://arxiv.org/abs/2608.01397)** `2026-08-02` · *Zhao, Ruiteng et al.* · `foundation-models`
-- 🔥 **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](https://arxiv.org/abs/2607.28443)** `2026-07-30` · *Gazzaev, Alan-Barsag et al.* · [🌐](https://arxiv.org/abs/2607.23782) · `vla`
 
 </details>
 
