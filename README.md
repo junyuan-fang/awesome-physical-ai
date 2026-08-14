@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--13-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--14-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **161** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **170** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,12 +58,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 61 papers</summary>
+<summary>🆕 <b>2026</b> · 63 papers</summary>
 
 - 🔥 **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](https://arxiv.org/abs/2608.10618)** — *Shan, Zitong et al.* · `2026-08-11`
   > Embodied artificial intelligence aims to develop agents that perceive, reason, and act through continuous interaction with the physical world.
 - 🔥 **[VIScore: Diagnosing Planning-Relevant Quality in Latent World Models](https://arxiv.org/abs/2608.11174)** — *Wu, Haiyu et al.* · `2026-08-11`
   > Regulating the latent space to an isotropic Gaussian distribution provides a stable and information-maximized landscape for world model planning.
+- 🔥 **[Self-Evolving Embodied Agents via Skill-Harness Evolution](https://arxiv.org/abs/2608.11350)** — *Wang, Peidong et al.* · `2026-08-11`
+  > Embodied agents are increasingly built as systems around foundation models, where performance depends not only on model weights but also on the skills, context, action interfaces, and execution harness surrounding the …
 - 🔥 **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730)** — *Tang, Qu et al.* · `2026-08-10`
   > 机构：JIUTIAN Research（中国移动九天）· 中关村学院 · [🌐 project](https://kzz1031.github.io/slim-project-page/)
 - 🔥 **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771)** — *Wang, Jingkai et al.* · `2026-08-10`
@@ -100,6 +102,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
   > 核心：把机器人动作投影为图像对齐稠密掩膜，让 video diffusion 直接读图作为动作条件，绕开 embodiment-specific action space；DROID/BEHAVIOR benchmark；意义：cross-embodiment VLA scale-up 的关键胶水层——用视觉 mask 代替动作向量 · [🌐 project](https://arxiv.org/abs/2607.15330)
 - 🔥 **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](https://arxiv.org/abs/2607.18367)** — *AlayaWorld Team et al.* · `2026-07-20`
   > 机构：Alaya Lab（商汤系背景）；热度：HF Trending 46 upvotes · [🌐 project](https://arxiv.org/abs/2607.18367)
+- 🔥 **[AutoWorldModel-Bench: A State-Centric Benchmark for Automated World-Model Research](https://arxiv.org/abs/2608.11216)** — *Moodi, Marjan et al.* · `2026-07-20`
+  > World modeling is an unsettled field: architectures, training objectives, and state representations interact in complex ways, and no single recipe dominates across environments.
 - 🔥 **[DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065)** — *Lu, Susie et al.* · `2026-07-16`
   > 机构：MIT + Harvard。；核心：提出 Drifting 范式——在特征空间（DINOv3）而非像素空间做世界模型 rollout，比 Ctrl-World 快 17 倍（Push-T 场景 479 倍 / 30+ fps）；配合 Action-Accentuated Drifting 与 Motion Weighting，FVD 从 168 降到 6.20。 · [🌐 project](https://arxiv.org/abs/2607.15330)
 - 🔥 **[AlayaWorld: Long-Horizon and Playable Video World Generation](https://arxiv.org/abs/2607.06291)** — *AlayaWorld Team et al.* · `2026-07-07`
@@ -230,10 +234,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Humanoid, quadruped, bipedal walking and running*
 <details open>
-<summary>🆕 <b>2026</b> · 12 papers</summary>
+<summary>🆕 <b>2026</b> · 13 papers</summary>
 
 - 🔥 **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](https://arxiv.org/abs/2608.10860)** — *Yan, Ge et al.* · `2026-08-11`
   > World-action models (WAMs) predict the future to act better, but nearly all of them predict only RGB latents, trained purely for pixel reconstruction, with no explicit signal for the 3D geometry or object semantics …
+- 🔥 **[Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning](https://arxiv.org/abs/2608.09926)** — *Li, Haodong et al.* · `2026-08-10`
+  > The world evolves following its dynamics, i.e., its laws of motion. However, leading video diffusion models largely fit the pixels without modeling how the pixels transit over time.
 - 🔥 **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](https://arxiv.org/abs/2606.25765)** — *Tang, Xincheng et al.* · `2026-06-24`
   > Climbing hollow stairs remains a challenging problem for quadruped robots due to the high risk of leg trapping, severe depth sparsity, and high-frequency depth-sensing noise.
 - 🔥 **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](https://arxiv.org/abs/2606.24089)** — *Hou, Haidong et al.* · `2026-06-23`
@@ -581,6 +587,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[Keep the Future, Drop the Rollout: RIFT for World Action Models](https://arxiv.org/abs/2608.11521)** `2026-08-12` · *Zhang, Chushan et al.* · `vla`
+- 🔥 **[StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models](https://arxiv.org/abs/2608.11671)** `2026-08-12` · *Xu, Siyu et al.* · `vla`
+- 🔥 **[G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739)** `2026-08-12` · *Liu, Yicheng et al.* · `vla`
+- 🔥 **[Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](https://arxiv.org/abs/2608.12198)** `2026-08-12` · *Busch, Jean-Pierre et al.* · `vla`
 - 🔥 **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383)** `2026-08-11` · *Li, Ziming et al.* · `manipulation`
 - 🔥 **[Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2608.10393)** `2026-08-11` · *Han, Jiahui et al.* · `vla`
 - 🔥 **[Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484)** `2026-08-11` · *Wenjie, Li et al.* · `vla`
@@ -589,13 +599,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models](https://arxiv.org/abs/2608.10824)** `2026-08-11` · 🏛️ IROS 2026 · *Wu, Zhijie et al.* · `vla`
 - 🔥 **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](https://arxiv.org/abs/2608.10860)** `2026-08-11` · *Yan, Ge et al.* · `locomotion`
 - 🔥 **[VIScore: Diagnosing Planning-Relevant Quality in Latent World Models](https://arxiv.org/abs/2608.11174)** `2026-08-11` · *Wu, Haiyu et al.* · `foundation-models`
+- 🔥 **[Self-Evolving Embodied Agents via Skill-Harness Evolution](https://arxiv.org/abs/2608.11350)** `2026-08-11` · *Wang, Peidong et al.* · `foundation-models`
 - 🔥 **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730)** `2026-08-10` · *Tang, Qu et al.* · [🌐](https://kzz1031.github.io/slim-project-page/) · `foundation-models`
 - 🔥 **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771)** `2026-08-10` · *Wang, Jingkai et al.* · [🌐](https://kzz1031.github.io/slim-project-page/) · `foundation-models`
-- 🔥 **[RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](https://arxiv.org/abs/2608.09853)** `2026-08-10` · *Huang, Dongchi et al.* · [🌐](https://alibaba-damo-academy.github.io/RynnValue.github.io) · `foundation-models`
-- 🔥 **[XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment](https://arxiv.org/abs/2608.09892)** `2026-08-10` · *Community, XPolicyLab et al.* · `vla`
-- 🔥 **[EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning](https://arxiv.org/abs/2608.06197)** `2026-08-06` · *Xu, Zishan et al.* · [🌐](https://arxiv.org/abs/2608.06374) · `foundation-models`
-- 🔥 **[DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](https://arxiv.org/abs/2608.06374)** `2026-08-06` · *Li, Junfeng et al.* · [🌐](https://arxiv.org/abs/2608.05369) · `vla`
-- 🔥 **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964)** `2026-08-05` · *Gu, Bohai et al.* · [🌐](https://arxiv.org/abs/2608.02580) · `foundation-models`
 
 </details>
 

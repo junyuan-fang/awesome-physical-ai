@@ -2493,3 +2493,146 @@ papers:
   highlight: 🔥
   added: '2026-08-13'
   source: news_archive
+- arxiv_id: '2608.06729'
+  title: 'AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models'
+  authors: Zhao, Guiyu et al.
+  date: '2026-08-07'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: While Vision-Language-Action (VLA) models have advanced embodied AI, their fundamentally reactive paradigm
+    severely limits performance in partially observable and long-horizon tasks. When restricted to a single wrist-mounted
+    camera, they...
+  links:
+    arxiv: https://arxiv.org/abs/2608.06729
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.09926'
+  title: 'Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning'
+  authors: Li, Haodong et al.
+  date: '2026-08-10'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: The world evolves following its dynamics, i.e., its laws of motion. However, leading video diffusion models
+    largely fit the pixels without modeling how the pixels transit over time. Thus, they render visually plausible frames
+    but may not...
+  links:
+    arxiv: https://arxiv.org/abs/2608.09926
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.11215'
+  title: 'Poor Man''s Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop'
+  authors: Itkin, Igor
+  date: '2026-07-19'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'Simulating societies of many large language model (LLM) agents is expensive, yet the questions asked of
+    such simulations are usually macroscopic: phase behaviour, stylised facts, and scaling with the number of agents $N$,
+    not the...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.11215
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.11216'
+  title: 'AutoWorldModel-Bench: A State-Centric Benchmark for Automated World-Model Research'
+  authors: Moodi, Marjan et al.
+  date: '2026-07-20'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'World modeling is an unsettled field: architectures, training objectives, and state representations interact
+    in complex ways, and no single recipe dominates across environments. This makes it an ideal testbed for AI coding agents
+    acting...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.11216
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.11350'
+  title: Self-Evolving Embodied Agents via Skill-Harness Evolution
+  authors: Wang, Peidong et al.
+  date: '2026-08-11'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Embodied agents are increasingly built as systems around foundation models, where performance depends not
+    only on model weights but also on the skills, context, action interfaces, and execution harness surrounding the model.
+    While...
+  links:
+    arxiv: https://arxiv.org/abs/2608.11350
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.11521'
+  title: 'Keep the Future, Drop the Rollout: RIFT for World Action Models'
+  authors: Zhang, Chushan et al.
+  date: '2026-08-12'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: World action models (WAMs) condition robot actions on predicted futures, but iterative video rollout increases
+    deployment latency. We ask whether action generation requires the evolving rollout trajectory or only its future representation.
+  links:
+    arxiv: https://arxiv.org/abs/2608.11521
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.11671'
+  title: 'StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models'
+  authors: Xu, Siyu et al.
+  date: '2026-08-12'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Vision-Language-Action (VLA) models can follow instructions and manipulate objects, but their performance
+    often collapses out of distribution (OOD), when the scene, viewpoint, or object differs from training. Adapting to each
+    new...
+  links:
+    arxiv: https://arxiv.org/abs/2608.11671
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.11739'
+  title: 'G0.5: One Autoregressive Stream for Robot Reasoning and Action'
+  authors: Liu, Yicheng et al.
+  date: '2026-08-12'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: The prevailing recipe for Vision-Language-Action (VLA) models couples a pretrained VLM with a separately
+    trained flow-matching action expert. This makes the VLM a context encoder rather than a decision-maker. We introduce G0.5,
+    a...
+  links:
+    arxiv: https://arxiv.org/abs/2608.11739
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
+- arxiv_id: '2608.12198'
+  title: 'Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment'
+  authors: Busch, Jean-Pierre et al.
+  date: '2026-08-12'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Recent research in machine and deep learning has shown the potential of learningbased motion planning approaches
+    to improve the driving behavior of automated vehicles, especially in complex environments. However, their complex nature
+    and...
+  links:
+    arxiv: https://arxiv.org/abs/2608.12198
+  highlight: 🔥
+  added: '2026-08-14'
+  source: news_archive
