@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--17-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--19-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **177** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **188** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 66 papers</summary>
+<summary>🆕 <b>2026</b> · 68 papers</summary>
 
+- 🔥 **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885)** — *Cai, Xiaowei et al.* · `2026-08-17`
+  > Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. · [🌐 project](https://tau0-vla.github.io/)
+- 🔥 **[GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture](https://arxiv.org/abs/2608.15875)** — *GigaBrain Team et al.* · `2026-08-16`
+  > 注意：项目页对应的是 GigaBrain-0，不是 0.7，页面内容与本文不完全对应。 · [🌐 project](https://tau0-vla.github.io/)
 - 🔥 **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](https://arxiv.org/abs/2608.13049)** — *Rong, Dingyi et al.* · `2026-08-13`
   > arXiv：2608.13049 · 已校验投稿日：2026-08-13；机构：Dingyi Rong, Yue Shi, Chaofan Ma, Jiezhang Cao, Zongrui Wang, Zeyu Zhang, 穆尧, 翟广涛 等 —— 作者群指向 SJTU + HKU/上海 AI Lab，abs 页未明示，属推断。
 - 🔥 **[ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models](https://arxiv.org/abs/2608.13438)** — *Zheng, Gehan et al.* · `2026-08-13`
@@ -242,8 +246,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Humanoid, quadruped, bipedal walking and running*
 <details open>
-<summary>🆕 <b>2026</b> · 14 papers</summary>
+<summary>🆕 <b>2026</b> · 16 papers</summary>
 
+- 🔥 **[HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](https://arxiv.org/abs/2608.16837)** — *Gu, Langzhe et al.* · `2026-08-17`
+  > Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body … · [🌐 project](https://tau0-vla.github.io/)
+- 🔥 **[Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion](https://arxiv.org/abs/2608.15766)** — *Liu, Ziyun et al.* · `2026-08-16`
+  > SparkVLA（2608.16172，8/17）— 链接：https://arxiv.org/abs/2608.16172 ｜ Project: N/A；Tac4Loco（2608.15766，8/16）— 链接：
 - 🔥 **[HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](https://arxiv.org/abs/2608.12860)** — *Pham, Quan-Dung et al.* · `2026-08-13`
   > arXiv：2608.12860 · 已校验投稿日：2026-08-13；机构：Quan-Dung Pham, Anh Dao, The-Anh Nguyen, Minh Nguyen-Dinh, Phuong Nam Dang, Tri Pham, Hung Tran, Bach Dao 等，作者群在越南；两台机器人被匿名为 "Internal-A / Internal-B"，暗示有未披露的产业合作方。abs 页未列机构，不做进一步断言。 · [🌐 project](https://humanoid-vln.github.io/)
 - 🔥 **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](https://arxiv.org/abs/2608.10860)** — *Yan, Ge et al.* · `2026-08-11`
@@ -280,8 +288,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *VR, wearable, and exoskeleton-based data collection*
 <details open>
-<summary>🆕 <b>2026</b> · 14 papers</summary>
+<summary>🆕 <b>2026</b> · 15 papers</summary>
 
+- 🔥 **[Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917)** — *Kamat, Sarthak et al.* · `2026-08-16`
+  > Large-scale pre-training has made robot policy fine-tuning increasingly data-efficient, but this progress has largely been driven by datasets and embodiments built around simple parallel-jaw grippers. · [🌐 project](https://gigabrain0.github.io/)
 - 🔥 **[NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation](https://arxiv.org/abs/2608.13362)** — *Zhao, James et al.* · `2026-08-13`
   > arXiv：2608.13362 · 已校验投稿日：2026-08-13；机构：James Zhao, Jinhe Tang, Mingyuan Ba, Weiming Zhi —— CMU Robotics Institute
 - 🔥 **[RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation](https://arxiv.org/abs/2607.06558)** — *Zhao, Haoyu et al.* · `2026-07-07`
@@ -326,8 +336,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Domain randomization, sim-to-real transfer, deployment*
 <details open>
-<summary>🆕 <b>2026</b> · 5 papers</summary>
+<summary>🆕 <b>2026</b> · 6 papers</summary>
 
+- 🔥 **[Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](https://arxiv.org/abs/2608.15897)** — *Yang, Fan et al.* · `2026-08-16`
+  > Robot sensor designs, particularly tactile sensors, are highly diverse and evolve rapidly.
 - 🔥 **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](https://arxiv.org/abs/2606.23444)** — *Rao, Pratyaksh et al.* · `2026-06-22`
   > Accurate dynamics models are critical for informed decision-making in robotic systems, particularly for agile aerial vehicles operating under uncertainty.
 - 🔥 **[Mana: Dexterous Manipulation of Articulated Tools](https://arxiv.org/abs/2606.13677)** — *Yin, Zhao-Heng et al.* · `2026-06-11`
@@ -387,6 +399,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="rl-il"></a>🎯 RL & Imitation Learning
 
 *Diffusion policies, behavior cloning, RL for robotics*
+<details open>
+<summary>🆕 <b>2026</b> · 1 paper</summary>
+
+- 🔥 **[RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing](https://arxiv.org/abs/2608.16195)** — *Yin, Kangning et al.* · `2026-08-17`
+  > Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing. · [🌐 project](https://grange007.github.io/HAF)
+</details>
 <details>
 <summary>📜 <b>Earlier landmarks</b> · 1 paper</summary>
 
@@ -599,21 +617,21 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation](https://arxiv.org/abs/2608.16172)** `2026-08-17` · *Lei, Xunyao et al.* · `vla`
+- 🔥 **[RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing](https://arxiv.org/abs/2608.16195)** `2026-08-17` · *Yin, Kangning et al.* · [🌐](https://grange007.github.io/HAF) · `rl-il`
+- 🔥 **[NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation](https://arxiv.org/abs/2608.16503)** `2026-08-17` · *Zhao, Cong et al.* · `vla`
+- 🔥 **[Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](https://arxiv.org/abs/2608.16590)** `2026-08-17` · *Ding, Xin et al.* · [🌐](https://grange007.github.io/HAF) · `vla`
+- 🔥 **[Throwing a Tight Spiral American Football by a Humanoid Robot](https://arxiv.org/abs/2608.16642)** `2026-08-17` · *Mahboob, Zaid et al.* · `vla`
+- 🔥 **[HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](https://arxiv.org/abs/2608.16837)** `2026-08-17` · *Gu, Langzhe et al.* · [🌐](https://tau0-vla.github.io/) · `locomotion`
+- 🔥 **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885)** `2026-08-17` · *Cai, Xiaowei et al.* · [🌐](https://tau0-vla.github.io/) · `foundation-models`
+- 🔥 **[Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion](https://arxiv.org/abs/2608.15766)** `2026-08-16` · *Liu, Ziyun et al.* · `locomotion`
+- 🔥 **[GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture](https://arxiv.org/abs/2608.15875)** `2026-08-16` · *GigaBrain Team et al.* · [🌐](https://tau0-vla.github.io/) · `foundation-models`
+- 🔥 **[Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](https://arxiv.org/abs/2608.15897)** `2026-08-16` · *Yang, Fan et al.* · `sim2real`
+- 🔥 **[Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917)** `2026-08-16` · *Kamat, Sarthak et al.* · [🌐](https://gigabrain0.github.io/) · `teleoperation`
 - 🔥 **[HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](https://arxiv.org/abs/2608.12860)** `2026-08-13` · *Pham, Quan-Dung et al.* · [🌐](https://humanoid-vln.github.io/) · `locomotion`
 - 🔥 **[Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning](https://arxiv.org/abs/2608.13026)** `2026-08-13` · *Zhou, Yao et al.* · `vla`
 - 🔥 **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](https://arxiv.org/abs/2608.13049)** `2026-08-13` · *Rong, Dingyi et al.* · `foundation-models`
 - 🔥 **[NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation](https://arxiv.org/abs/2608.13362)** `2026-08-13` · *Zhao, James et al.* · `teleoperation`
-- 🔥 **[ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models](https://arxiv.org/abs/2608.13438)** `2026-08-13` · *Zheng, Gehan et al.* · `foundation-models`
-- 🔥 **[DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](https://arxiv.org/abs/2608.13489)** `2026-08-13` · *DreamX Team et al.* · [🌐](https://github.com/AMAP-ML/DreamX-Phi) · `foundation-models`
-- 🔥 **[Keep the Future, Drop the Rollout: RIFT for World Action Models](https://arxiv.org/abs/2608.11521)** `2026-08-12` · *Zhang, Chushan et al.* · `vla`
-- 🔥 **[StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models](https://arxiv.org/abs/2608.11671)** `2026-08-12` · *Xu, Siyu et al.* · `vla`
-- 🔥 **[G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739)** `2026-08-12` · *Liu, Yicheng et al.* · `vla`
-- 🔥 **[Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](https://arxiv.org/abs/2608.12198)** `2026-08-12` · *Busch, Jean-Pierre et al.* · `vla`
-- 🔥 **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383)** `2026-08-11` · *Li, Ziming et al.* · `manipulation`
-- 🔥 **[Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models](https://arxiv.org/abs/2608.10393)** `2026-08-11` · *Han, Jiahui et al.* · `vla`
-- 🔥 **[Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484)** `2026-08-11` · *Wenjie, Li et al.* · `vla`
-- 🔥 **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](https://arxiv.org/abs/2608.10618)** `2026-08-11` · *Shan, Zitong et al.* · `foundation-models`
-- 🔥 **[Beyond Pixels: From Video Priors to 4D Worlds](https://arxiv.org/abs/2608.10744)** `2026-08-11` · *Liu, Zihao et al.* · `vla`
 
 </details>
 

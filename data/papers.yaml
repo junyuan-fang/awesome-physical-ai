@@ -2744,3 +2744,179 @@ papers:
   highlight: 🔥
   added: '2026-08-17'
   source: news_archive
+- arxiv_id: '2608.15766'
+  title: 'Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion'
+  authors: Liu, Ziyun et al.
+  date: '2026-08-16'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: 'SparkVLA（2608.16172，8/17）— 链接：https://arxiv.org/abs/2608.16172 ｜ Project: N/A；Tac4Loco（2608.15766，8/16）—
+    链接：'
+  links:
+    arxiv: https://arxiv.org/abs/2608.15766
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.15875'
+  title: 'GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture'
+  authors: GigaBrain Team et al.
+  date: '2026-08-16'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 注意：项目页对应的是 GigaBrain-0，不是 0.7，页面内容与本文不完全对应。
+  links:
+    arxiv: https://arxiv.org/abs/2608.15875
+    project: https://tau0-vla.github.io/
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.15897'
+  title: Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction
+  authors: Yang, Fan et al.
+  date: '2026-08-16'
+  venue: ''
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: Robot sensor designs, particularly tactile sensors, are highly diverse and evolve rapidly. Modeling each
+    sensor in simulation demands substantial domain expertise and computational approximations can degrade the fidelity of
+    the simulated...
+  links:
+    arxiv: https://arxiv.org/abs/2608.15897
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.15917'
+  title: Pre-training Visual Dexterity in Simulation
+  authors: Kamat, Sarthak et al.
+  date: '2026-08-16'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Large-scale pre-training has made robot policy fine-tuning increasingly data-efficient, but this progress
+    has largely been driven by datasets and embodiments built around simple parallel-jaw grippers. Dexterous, multi-fingered
+    hands...
+  links:
+    arxiv: https://arxiv.org/abs/2608.15917
+    project: https://gigabrain0.github.io/
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16172'
+  title: 'SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation'
+  authors: Lei, Xunyao et al.
+  date: '2026-08-17'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: SparkVLA（2608.16172，8/17）— 链接：
+  links:
+    arxiv: https://arxiv.org/abs/2608.16172
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16195'
+  title: 'RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing'
+  authors: Yin, Kangning et al.
+  date: '2026-08-17'
+  venue: ''
+  category: rl-il
+  tags:
+  - news-archive
+  abstract_short: Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound
+    challenge, particularly in contact-rich and highly dynamic tasks such as boxing. While Multi-Agent Reinforcement Learning
+    offers a...
+  links:
+    arxiv: https://arxiv.org/abs/2608.16195
+    project: https://grange007.github.io/HAF
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16503'
+  title: 'NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation'
+  authors: Zhao, Cong et al.
+  date: '2026-08-17'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Real-world deployment of Vision-Language-Action (VLA) models is often bottlenecked by efficiency-performance
+    trade-offs, cross-embodiment generalization, and execution smoothness. We present NebulaVLA, an asynchronous dual-frequency...
+  links:
+    arxiv: https://arxiv.org/abs/2608.16503
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16590'
+  title: 'Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence'
+  authors: Ding, Xin et al.
+  date: '2026-08-17'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'Embodied agents are increasingly used to close the gap left by end-to-end policy models. Yet the agentic
+    path has not realized closed-loop learning in physical execution: existing harnesses remain largely open-loop, following
+    fixed skills...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.16590
+    project: https://grange007.github.io/HAF
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16642'
+  title: Throwing a Tight Spiral American Football by a Humanoid Robot
+  authors: Mahboob, Zaid et al.
+  date: '2026-08-17'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'SparkVLA（2608.16172，8/17）— 链接：https://arxiv.org/abs/2608.16172 ｜ Project: N/A；Tac4Loco（2608.15766，8/16）—
+    链接：https://arxiv.org/abs/2608.15766 ｜ Project: N/A'
+  links:
+    arxiv: https://arxiv.org/abs/2608.16642
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16837'
+  title: 'HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral
+    Latent RL'
+  authors: Gu, Langzhe et al.
+  date: '2026-08-17'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist
+    vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation. The
+    high...
+  links:
+    arxiv: https://arxiv.org/abs/2608.16837
+    project: https://tau0-vla.github.io/
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
+- arxiv_id: '2608.16885'
+  title: '$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation'
+  authors: Cai, Xiaowei et al.
+  date: '2026-08-17'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence
+    them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with
+    a single...
+  links:
+    arxiv: https://arxiv.org/abs/2608.16885
+    project: https://tau0-vla.github.io/
+  highlight: 🔥
+  added: '2026-08-19'
+  source: news_archive
