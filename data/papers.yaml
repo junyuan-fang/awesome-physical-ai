@@ -2920,3 +2920,150 @@ papers:
   highlight: 🔥
   added: '2026-08-19'
   source: news_archive
+- arxiv_id: '2608.17320'
+  title: Robust Brachiation on a Life-Sized Dual-Arm Robot Using Waypoint-Guided Reinforcement Learning
+  authors: Iwata, Ayumu et al.
+  date: '2026-08-18'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Brachiation is a form of locomotion in which primates move primarily using their arms, enabling traversal
+    in environments without footholds. However, this motion requires highly coordinated whole-body movement and precise timing
+    control...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17320
+    project: https://tengbo-yu.github.io/PRISM/
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17423'
+  title: 'Prism-GRPO: Faster VLA Policy Optimization via Splitting Same-outcome Groups'
+  authors: Deng, Zeyun et al.
+  date: '2026-08-18'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'GRPO is increasingly used for reinforcement learning of vision-language-action (VLA) policies because,
+    unlike PPO, it does not require training a critic. This simplification comes with a sampling cost: group-relative advantages
+    require...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.17423
+    project: https://unireflex.github.io/
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17432'
+  title: 'UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex'
+  authors: Huang, Yan et al.
+  date: '2026-08-18'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Generative imitation learning policies excel at trajectory planning but lack closed-loop force regulation,
+    while directly incorporating force modalities often requires redesigning or retraining the network. We present UniReflex,
+    a...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17432
+    project: https://unireflex.github.io/
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17453'
+  title: 'EATR-Stereo: Embodiment-Aware Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control'
+  authors: Wu, Songwei et al.
+  date: '2026-08-18'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Long-horizon humanoid vision--language--action (VLA) control with head-mounted stereo cameras requires visual
+    interfaces that can exploit complementary views while maintaining compatibility with pretrained representations. Existing...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17453
+    project: https://tengbo-yu.github.io/PRISM/
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17512'
+  title: 'Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation'
+  authors: Feng, Hongyan et al.
+  date: '2026-08-18'
+  venue: ''
+  category: navigation
+  tags:
+  - news-archive
+  abstract_short: Although Large Vision-Language Models (VLMs) have significantly advanced embodied navigation, their direct
+    deployment remains challenging, as existing methods often force VLMs into unnatural action spaces that misalign with their
+    2D...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17512
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17584'
+  title: 'HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction'
+  authors: Chen, Wang Warren et al.
+  date: '2026-08-18'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: We propose HODAgent, a System-2 embodied agent for humanoid robots in service settings, addressing situated
+    intent, responsive execution, task revision, and outcome verification. Its semi-duplex architecture integrates an Env-Interactor,...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17584
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17600'
+  title: 'LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models'
+  authors: Qian, Zhengyan et al.
+  date: '2026-08-18'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Visual cues are increasingly adopted to guide robot learning, but whether Vision-Language-Action (VLA) models
+    can reliably follow authorized cues while disregarding unauthorized ones remains unclear. Existing work covers only a
+    narrow...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17600
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.17962'
+  title: 'PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing'
+  authors: Yu, Tengbo et al.
+  date: '2026-08-18'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: Recent progress in robotic learning has been fueled by large-scale datasets collected in everyday environments.
+    However, most existing datasets emphasize short-horizon, low-contact tasks such as pick-and-place, and therefore do not...
+  links:
+    arxiv: https://arxiv.org/abs/2608.17962
+    project: https://unireflex.github.io/
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
+- arxiv_id: '2608.18077'
+  title: 'Hydra-0: Action Flow for Generalist World Modeling and Control'
+  authors: Li, Hongyu et al.
+  date: '2026-08-18'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions
+    as pixel motion. This shared visual interface enables generalist world modeling and control by learning action consequences
+    across...
+  links:
+    arxiv: https://arxiv.org/abs/2608.18077
+    project: https://unireflex.github.io/
+  highlight: 🔥
+  added: '2026-08-20'
+  source: news_archive
