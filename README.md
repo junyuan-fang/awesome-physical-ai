@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--20-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--21-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **197** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **205** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 69 papers</summary>
+<summary>🆕 <b>2026</b> · 70 papers</summary>
 
+- 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** — *Domae, Yukiyasu et al.* · `2026-08-19`
+  > Robot foundation models (RFMs), including vision-language-action (VLA) policies, are often discussed through a scaling view: more data, larger models, and broader benchmarks should improve generalization. · [🌐 project](https://shepherd1226.github.io/gigabrain-wbc-0.5/)
 - 🔥 **[Hydra-0: Action Flow for Generalist World Modeling and Control](https://arxiv.org/abs/2608.18077)** — *Li, Hongyu et al.* · `2026-08-18`
   > We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions as pixel motion. · [🌐 project](https://unireflex.github.io/)
 - 🔥 **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885)** — *Cai, Xiaowei et al.* · `2026-08-17`
@@ -212,8 +214,18 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 10 papers</summary>
+<summary>🆕 <b>2026</b> · 15 papers</summary>
 
+- 🔥 **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](https://arxiv.org/abs/2608.18618)** — *Tang, Zhipeng et al.* · `2026-08-19`
+  > Autonomous laboratories hold great promise for accelerating scientific discovery. · [🌐 project](https://shepherd1226.github.io/gigabrain-wbc-0.5/)
+- 🔥 **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701)** — *Jing, Bowen et al.* · `2026-08-19`
+  > Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive compression.
+- 🔥 **[Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation](https://arxiv.org/abs/2608.18787)** — *Zhang, Haoyu et al.* · `2026-08-19`
+  > PartialBiGrasp（2608.19188，2026-08-19）部分点云双臂抓取 — https://arxiv.org/abs/2608.19188 ｜ Project: N/A；Dream2Reward（2608.18787，2026-08-19）—
+- 🔥 **[RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](https://arxiv.org/abs/2608.18948)** — *Guo, Yaowei et al.* · `2026-08-19`
+  > Collecting robot hand-object interaction data is costly and embodiment-specific, yet abundant human-object videos remain unusable for robot training. · [🌐 project](https://adept-dexterity.github.io/)
+- 🔥 **[PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views](https://arxiv.org/abs/2608.19188)** — *Kaura, Ayush et al.* · `2026-08-19`
+  > PartialBiGrasp（2608.19188，2026-08-19）部分点云双臂抓取 —
 - 🔥 **[UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](https://arxiv.org/abs/2608.17432)** — *Huang, Yan et al.* · `2026-08-18`
   > Generative imitation learning policies excel at trajectory planning but lack closed-loop force regulation, while directly incorporating force modalities often requires redesigning or retraining the network. · [🌐 project](https://unireflex.github.io/)
 - 🔥 **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383)** — *Li, Ziming et al.* · `2026-08-11`
@@ -294,10 +306,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *VR, wearable, and exoskeleton-based data collection*
 <details open>
-<summary>🆕 <b>2026</b> · 16 papers</summary>
+<summary>🆕 <b>2026</b> · 17 papers</summary>
 
 - 🔥 **[PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing](https://arxiv.org/abs/2608.17962)** — *Yu, Tengbo et al.* · `2026-08-18`
   > Recent progress in robotic learning has been fueled by large-scale datasets collected in everyday environments. · [🌐 project](https://unireflex.github.io/)
+- 🔥 **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](https://arxiv.org/abs/2608.18234)** — *Cheng, Ziyang et al.* · `2026-08-18`
+  > Whole-body motion tracking policies turn a humanoid into a robust control interface: the teleoperator---or an upstream model---only supplies a coarse movement intent, while the low-level policy keeps the robot balanced … · [🌐 project](https://adept-dexterity.github.io/)
 - 🔥 **[Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917)** — *Kamat, Sarthak et al.* · `2026-08-16`
   > Large-scale pre-training has made robot policy fine-tuning increasingly data-efficient, but this progress has largely been driven by datasets and embodiments built around simple parallel-jaw grippers. · [🌐 project](https://gigabrain0.github.io/)
 - 🔥 **[NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation](https://arxiv.org/abs/2608.13362)** — *Zhao, James et al.* · `2026-08-13`
@@ -344,8 +358,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Domain randomization, sim-to-real transfer, deployment*
 <details open>
-<summary>🆕 <b>2026</b> · 6 papers</summary>
+<summary>🆕 <b>2026</b> · 7 papers</summary>
 
+- 🔥 **[ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning](https://arxiv.org/abs/2608.19182)** — *Lee, Jayjun et al.* · `2026-08-19`
+  > We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments … · [🌐 project](https://adept-dexterity.github.io/)
 - 🔥 **[Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](https://arxiv.org/abs/2608.15897)** — *Yang, Fan et al.* · `2026-08-16`
   > Robot sensor designs, particularly tactile sensors, are highly diverse and evolve rapidly.
 - 🔥 **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](https://arxiv.org/abs/2606.23444)** — *Rao, Pratyaksh et al.* · `2026-06-22`
@@ -627,6 +643,13 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** `2026-08-19` · *Domae, Yukiyasu et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `foundation-models`
+- 🔥 **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](https://arxiv.org/abs/2608.18618)** `2026-08-19` · *Tang, Zhipeng et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `manipulation`
+- 🔥 **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701)** `2026-08-19` · *Jing, Bowen et al.* · `manipulation`
+- 🔥 **[Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation](https://arxiv.org/abs/2608.18787)** `2026-08-19` · *Zhang, Haoyu et al.* · `manipulation`
+- 🔥 **[RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](https://arxiv.org/abs/2608.18948)** `2026-08-19` · *Guo, Yaowei et al.* · [🌐](https://adept-dexterity.github.io/) · `manipulation`
+- 🔥 **[ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning](https://arxiv.org/abs/2608.19182)** `2026-08-19` · *Lee, Jayjun et al.* · [🌐](https://adept-dexterity.github.io/) · `sim2real`
+- 🔥 **[PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views](https://arxiv.org/abs/2608.19188)** `2026-08-19` · *Kaura, Ayush et al.* · `manipulation`
 - 🔥 **[Robust Brachiation on a Life-Sized Dual-Arm Robot Using Waypoint-Guided Reinforcement Learning](https://arxiv.org/abs/2608.17320)** `2026-08-18` · *Iwata, Ayumu et al.* · [🌐](https://tengbo-yu.github.io/PRISM/) · `locomotion`
 - 🔥 **[Prism-GRPO: Faster VLA Policy Optimization via Splitting Same-outcome Groups](https://arxiv.org/abs/2608.17423)** `2026-08-18` · *Deng, Zeyun et al.* · [🌐](https://unireflex.github.io/) · `vla`
 - 🔥 **[UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](https://arxiv.org/abs/2608.17432)** `2026-08-18` · *Huang, Yan et al.* · [🌐](https://unireflex.github.io/) · `manipulation`
@@ -635,13 +658,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](https://arxiv.org/abs/2608.17584)** `2026-08-18` · *Chen, Wang Warren et al.* · `vla`
 - 🔥 **[LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models](https://arxiv.org/abs/2608.17600)** `2026-08-18` · *Qian, Zhengyan et al.* · `vla`
 - 🔥 **[PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing](https://arxiv.org/abs/2608.17962)** `2026-08-18` · *Yu, Tengbo et al.* · [🌐](https://unireflex.github.io/) · `teleoperation`
-- 🔥 **[Hydra-0: Action Flow for Generalist World Modeling and Control](https://arxiv.org/abs/2608.18077)** `2026-08-18` · *Li, Hongyu et al.* · [🌐](https://unireflex.github.io/) · `foundation-models`
-- 🔥 **[SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation](https://arxiv.org/abs/2608.16172)** `2026-08-17` · *Lei, Xunyao et al.* · `vla`
-- 🔥 **[RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing](https://arxiv.org/abs/2608.16195)** `2026-08-17` · *Yin, Kangning et al.* · [🌐](https://grange007.github.io/HAF) · `rl-il`
-- 🔥 **[NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation](https://arxiv.org/abs/2608.16503)** `2026-08-17` · *Zhao, Cong et al.* · `vla`
-- 🔥 **[Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](https://arxiv.org/abs/2608.16590)** `2026-08-17` · *Ding, Xin et al.* · [🌐](https://grange007.github.io/HAF) · `vla`
-- 🔥 **[Throwing a Tight Spiral American Football by a Humanoid Robot](https://arxiv.org/abs/2608.16642)** `2026-08-17` · *Mahboob, Zaid et al.* · `vla`
-- 🔥 **[HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](https://arxiv.org/abs/2608.16837)** `2026-08-17` · *Gu, Langzhe et al.* · [🌐](https://tau0-vla.github.io/) · `locomotion`
 
 </details>
 

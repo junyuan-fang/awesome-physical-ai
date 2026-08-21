@@ -3067,3 +3067,130 @@ papers:
   highlight: 🔥
   added: '2026-08-20'
   source: news_archive
+- arxiv_id: '2608.18234'
+  title: 'GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction'
+  authors: Cheng, Ziyang et al.
+  date: '2026-08-18'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: 'Whole-body motion tracking policies turn a humanoid into a robust control interface: the teleoperator---or
+    an upstream model---only supplies a coarse movement intent, while the low-level policy keeps the robot balanced and physically...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.18234
+    project: https://adept-dexterity.github.io/
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.18433'
+  title: The Embodiment Gap in Robot Foundation Models
+  authors: Domae, Yukiyasu et al.
+  date: '2026-08-19'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'Robot foundation models (RFMs), including vision-language-action (VLA) policies, are often discussed through
+    a scaling view: more data, larger models, and broader benchmarks should improve generalization. In robotics, however,
+    a model can...'
+  links:
+    arxiv: https://arxiv.org/abs/2608.18433
+    project: https://shepherd1226.github.io/gigabrain-wbc-0.5/
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.18618'
+  title: 'LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories'
+  authors: Tang, Zhipeng et al.
+  date: '2026-08-19'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Autonomous laboratories hold great promise for accelerating scientific discovery. To achieve this vision,
+    robots are supposed to dexterously manipulate diverse labware and instruments and execute long-horizon, state-dependent
+    experimental...
+  links:
+    arxiv: https://arxiv.org/abs/2608.18618
+    project: https://shepherd1226.github.io/gigabrain-wbc-0.5/
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.18701'
+  title: 'SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation'
+  authors: Jing, Bowen et al.
+  date: '2026-08-19'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate
+    task success alone. A policy may complete the task while allowing slip or causing excessive compression. A primary bottleneck
+    is the...
+  links:
+    arxiv: https://arxiv.org/abs/2608.18701
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.18787'
+  title: 'Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation'
+  authors: Zhang, Haoyu et al.
+  date: '2026-08-19'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: 'PartialBiGrasp（2608.19188，2026-08-19）部分点云双臂抓取 — https://arxiv.org/abs/2608.19188 ｜ Project: N/A；Dream2Reward（2608.18787，2026-08-19）—'
+  links:
+    arxiv: https://arxiv.org/abs/2608.18787
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.18948'
+  title: 'RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience'
+  authors: Guo, Yaowei et al.
+  date: '2026-08-19'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Collecting robot hand-object interaction data is costly and embodiment-specific, yet abundant human-object
+    videos remain unusable for robot training. We present RoboEdit, a human-to-robot video editing suite that transforms human...
+  links:
+    arxiv: https://arxiv.org/abs/2608.18948
+    project: https://adept-dexterity.github.io/
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.19182'
+  title: 'ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning'
+  authors: Lee, Jayjun et al.
+  date: '2026-08-19'
+  venue: ''
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL)
+    framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments that can
+    solve...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19182
+    project: https://adept-dexterity.github.io/
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
+- arxiv_id: '2608.19188'
+  title: 'PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views'
+  authors: Kaura, Ayush et al.
+  date: '2026-08-19'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: PartialBiGrasp（2608.19188，2026-08-19）部分点云双臂抓取 —
+  links:
+    arxiv: https://arxiv.org/abs/2608.19188
+  highlight: 🔥
+  added: '2026-08-21'
+  source: news_archive
