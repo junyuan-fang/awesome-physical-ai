@@ -3194,3 +3194,153 @@ papers:
   highlight: 🔥
   added: '2026-08-21'
   source: news_archive
+- arxiv_id: '2608.14022'
+  title: 'ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models'
+  authors: Li, Xinye et al.
+  date: '2026-08-14'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Action-conditioned video world models require low-latency causal generation and reliable responses to game-native
+    controls. Although causal distillation enables one- or few-step video synthesis, extending it to interactive world models...
+  links:
+    arxiv: https://arxiv.org/abs/2608.14022
+    project: https://asdfo123.github.io/ForgeWM
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.19574'
+  title: 'HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation'
+  authors: Xue, Chao et al.
+  date: '2026-08-20'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: World action models jointly predict future visual observations and actions, whereas existing tactile-aware
+    variants typically represent future touch as an image or latent stream without modeling the physical dependencies that
+    organize...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19574
+    project: https://carldegio.github.io/latent_action.github.io
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.19613'
+  title: What Matters for Latent Actions in Robot Learning
+  authors: Bu, Xizhou et al.
+  date: '2026-08-20'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Latent Action Models (LAMs) have emerged as a promising paradigm for enabling robot learning to leverage
+    large-scale unlabeled videos through latent actions that serve as compact surrogates for physical actions. Despite rapid
+    progress,...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19613
+    project: https://carldegio.github.io/latent_action.github.io
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.19759'
+  title: 'GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation'
+  authors: Merand, Julien et al.
+  date: '2026-08-20'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Multifingered grasping is a crucial robotic skill, but current deep-learning grasp planners often struggle
+    to generalize to new objects because they are trained on limited, object-specific datasets. We introduce a fundamentally
+    different...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19759
+    project: https://cea-list.github.io/goagweb/
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.19776'
+  title: 'CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning'
+  authors: Merand, Julien et al.
+  date: '2026-08-20'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Current dexterous grasp planners primarily optimize for physical stability, focusing on whether an object
+    can be grasped rather than how it should be grasped to support downstream functional tasks. However, conditioning grasp
+    synthesis on...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19776
+    project: https://cea-list.github.io/goagweb/
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.19891'
+  title: 'EXIMO: VLM Guided Exploration of VLA Policies'
+  authors: Sukhija, Bhavya et al.
+  date: '2026-08-20'
+  venue: ''
+  category: teleoperation
+  tags:
+  - news-archive
+  abstract_short: How to efficiently finetune robot policies to learn new tasks on the fly? State of the art robotic manipulation
+    policies are based on behaviour cloning of large vision-language-action (VLA) models with billions of parameters on huge...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19891
+    project: https://carldegio.github.io/latent_action.github.io
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.19955'
+  title: 'MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces'
+  authors: Luo, Zeren et al.
+  date: '2026-08-20'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Enabling robots to walk on yielding terrain is vital for applications ranging from disaster response to
+    planetary exploration. While bipedal robots hold immense potential, their locomotion on deformable surfaces remains limited
+    as current...
+  links:
+    arxiv: https://arxiv.org/abs/2608.19955
+    project: https://cea-list.github.io/cotograspweb/
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.20087'
+  title: Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking
+  authors: Huang, Tao et al.
+  date: '2026-08-20'
+  venue: ''
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: Humanoid robots have recently demonstrated promising capabilities in real-world ball sports. However, achieving
+    professional motion styles while maintaining strong task performance remains challenging. In this work, we propose AdaPT,
+    an...
+  links:
+    arxiv: https://arxiv.org/abs/2608.20087
+    project: https://humanoidtennis.github.io/AdaPT/
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
+- arxiv_id: '2608.20114'
+  title: 'DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation'
+  authors: Ma, Siyuan et al.
+  date: '2026-08-20'
+  venue: ''
+  category: locomotion
+  tags:
+  - news-archive
+  abstract_short: Mobile manipulation requires a robot to predict how locomotion and arm motion jointly alter future observations
+    and control. Existing world-action models, developed largely for fixed-base platforms, do not explicitly distinguish camera...
+  links:
+    arxiv: https://arxiv.org/abs/2608.20114
+    project: https://humanoidtennis.github.io/AdaPT/
+  highlight: 🔥
+  added: '2026-08-24'
+  source: news_archive
