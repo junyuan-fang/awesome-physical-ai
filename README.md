@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--24-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--25-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **214** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **219** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,10 +58,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 71 papers</summary>
+<summary>🆕 <b>2026</b> · 72 papers</summary>
 
 - 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** — *Domae, Yukiyasu et al.* · `2026-08-19`
   > Robot foundation models (RFMs), including vision-language-action (VLA) policies, are often discussed through a scaling view: more data, larger models, and broader benchmarks should improve generalization. · [🌐 project](https://shepherd1226.github.io/gigabrain-wbc-0.5/)
+- 🔥 **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](https://arxiv.org/abs/2608.18484)** — *Taghavi, Pardis et al.* · `2026-08-19`
+  > Training-free block-sparse attention can accelerate video transformers, but row-wise attention concentration does not by itself specify an executable sparse operator.
 - 🔥 **[Hydra-0: Action Flow for Generalist World Modeling and Control](https://arxiv.org/abs/2608.18077)** — *Li, Hongyu et al.* · `2026-08-18`
   > We introduce Hydra-0, a generalist world model conditioned on action flow, which represents robot actions as pixel motion. · [🌐 project](https://unireflex.github.io/)
 - 🔥 **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](https://arxiv.org/abs/2608.16885)** — *Cai, Xiaowei et al.* · `2026-08-17`
@@ -216,7 +218,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 19 papers</summary>
+<summary>🆕 <b>2026</b> · 21 papers</summary>
 
 - 🔥 **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](https://arxiv.org/abs/2608.19574)** — *Xue, Chao et al.* · `2026-08-20`
   > World action models jointly predict future visual observations and actions, whereas existing tactile-aware variants typically represent future touch as an image or latent stream without modeling the physical … · [🌐 project](https://carldegio.github.io/latent_action.github.io)
@@ -226,6 +228,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
   > Multifingered grasping is a crucial robotic skill, but current deep-learning grasp planners often struggle to generalize to new objects because they are trained on limited, object-specific datasets. · [🌐 project](https://cea-list.github.io/goagweb/)
 - 🔥 **[CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning](https://arxiv.org/abs/2608.19776)** — *Merand, Julien et al.* · `2026-08-20`
   > Current dexterous grasp planners primarily optimize for physical stability, focusing on whether an object can be grasped rather than how it should be grasped to support downstream functional tasks. · [🌐 project](https://cea-list.github.io/goagweb/)
+- 🔥 **[Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning](https://arxiv.org/abs/2608.20546)** — *Hajj-Ahmad, Amar et al.* · `2026-08-20`
+  > As the demand for larger manipulation datasets grows, handheld robotic gripper data collection and the associated gripper designs become more vital. · [🌐 project](https://github.com/AMAP-ML/DreamX-Phi)
 - 🔥 **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](https://arxiv.org/abs/2608.18618)** — *Tang, Zhipeng et al.* · `2026-08-19`
   > Autonomous laboratories hold great promise for accelerating scientific discovery. · [🌐 project](https://shepherd1226.github.io/gigabrain-wbc-0.5/)
 - 🔥 **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701)** — *Jing, Bowen et al.* · `2026-08-19`
@@ -238,6 +242,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
   > PartialBiGrasp（2608.19188，2026-08-19）部分点云双臂抓取 —
 - 🔥 **[UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](https://arxiv.org/abs/2608.17432)** — *Huang, Yan et al.* · `2026-08-18`
   > Generative imitation learning policies excel at trajectory planning but lack closed-loop force regulation, while directly incorporating force modalities often requires redesigning or retraining the network. · [🌐 project](https://unireflex.github.io/)
+- 🔥 **[Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](https://arxiv.org/abs/2608.15938)** — *Zeng, Michael et al.* · `2026-08-16`
+  > Action chunking --- the practice of predicting a sequence of actions and executing a prefix open-loop --- has emerged as a key enabler of recent progress in imitation learning for robotic manipulation. · [🌐 project](https://revisiting-open-loop-action-chunking.github.io/)
 - 🔥 **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383)** — *Li, Ziming et al.* · `2026-08-11`
   > Bimanual dexterous grasping of large objects is a critical challenge in robotic manipulation.
 - 🔥 **[$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783)** — *NeoteAI Team et al.* · `2026-07-26`
@@ -661,6 +667,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](https://arxiv.org/abs/2608.21031)** `2026-08-21` · *Lin, Chen-Yu et al.* · [🌐](https://physcap.github.io) · `vla`
 - 🔥 **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](https://arxiv.org/abs/2608.19574)** `2026-08-20` · *Xue, Chao et al.* · [🌐](https://carldegio.github.io/latent_action.github.io) · `manipulation`
 - 🔥 **[What Matters for Latent Actions in Robot Learning](https://arxiv.org/abs/2608.19613)** `2026-08-20` · *Bu, Xizhou et al.* · [🌐](https://carldegio.github.io/latent_action.github.io) · `manipulation`
 - 🔥 **[GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation](https://arxiv.org/abs/2608.19759)** `2026-08-20` · *Merand, Julien et al.* · [🌐](https://cea-list.github.io/goagweb/) · `manipulation`
@@ -669,13 +676,12 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](https://arxiv.org/abs/2608.19955)** `2026-08-20` · *Luo, Zeren et al.* · [🌐](https://cea-list.github.io/cotograspweb/) · `locomotion`
 - 🔥 **[Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](https://arxiv.org/abs/2608.20087)** `2026-08-20` · *Huang, Tao et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `sim2real`
 - 🔥 **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](https://arxiv.org/abs/2608.20114)** `2026-08-20` · *Ma, Siyuan et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `locomotion`
+- 🔥 **[Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning](https://arxiv.org/abs/2608.20546)** `2026-08-20` · *Hajj-Ahmad, Amar et al.* · [🌐](https://github.com/AMAP-ML/DreamX-Phi) · `manipulation`
 - 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** `2026-08-19` · *Domae, Yukiyasu et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `foundation-models`
 - 🔥 **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](https://arxiv.org/abs/2608.18618)** `2026-08-19` · *Tang, Zhipeng et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `manipulation`
 - 🔥 **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701)** `2026-08-19` · *Jing, Bowen et al.* · `manipulation`
 - 🔥 **[Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation](https://arxiv.org/abs/2608.18787)** `2026-08-19` · *Zhang, Haoyu et al.* · `manipulation`
 - 🔥 **[RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](https://arxiv.org/abs/2608.18948)** `2026-08-19` · *Guo, Yaowei et al.* · [🌐](https://adept-dexterity.github.io/) · `manipulation`
-- 🔥 **[ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning](https://arxiv.org/abs/2608.19182)** `2026-08-19` · *Lee, Jayjun et al.* · [🌐](https://adept-dexterity.github.io/) · `sim2real`
-- 🔥 **[PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views](https://arxiv.org/abs/2608.19188)** `2026-08-19` · *Kaura, Ayush et al.* · `manipulation`
 
 </details>
 

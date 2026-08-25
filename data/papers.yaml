@@ -3344,3 +3344,84 @@ papers:
   highlight: 🔥
   added: '2026-08-24'
   source: news_archive
+- arxiv_id: '2608.13422'
+  title: 'Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning'
+  authors: Zhuang, Zheyu et al.
+  date: '2026-08-13'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: Visual bottlenecks that focus policy inputs on regions of interest (ROIs) can improve data-efficient visuomotor
+    learning by separating where to look from how to act. Many ROI interfaces rely on external spatial labels, such as gaze,...
+  links:
+    arxiv: https://arxiv.org/abs/2608.13422
+    project: http://koalagripper.rai-inst.com
+  highlight: 🔥
+  added: '2026-08-25'
+  source: news_archive
+- arxiv_id: '2608.15938'
+  title: 'Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies'
+  authors: Zeng, Michael et al.
+  date: '2026-08-16'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: Action chunking --- the practice of predicting a sequence of actions and executing a prefix open-loop ---
+    has emerged as a key enabler of recent progress in imitation learning for robotic manipulation. However, executing long
+    open-loop...
+  links:
+    arxiv: https://arxiv.org/abs/2608.15938
+    project: https://revisiting-open-loop-action-chunking.github.io/
+  highlight: 🔥
+  added: '2026-08-25'
+  source: news_archive
+- arxiv_id: '2608.18484'
+  title: 'Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models'
+  authors: Taghavi, Pardis et al.
+  date: '2026-08-19'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: Training-free block-sparse attention can accelerate video transformers, but row-wise attention concentration
+    does not by itself specify an executable sparse operator. Queries sharing a block route may have poorly overlapping supports,...
+  links:
+    arxiv: https://arxiv.org/abs/2608.18484
+  highlight: 🔥
+  added: '2026-08-25'
+  source: news_archive
+- arxiv_id: '2608.20546'
+  title: 'Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning'
+  authors: Hajj-Ahmad, Amar et al.
+  date: '2026-08-20'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: As the demand for larger manipulation datasets grows, handheld robotic gripper data collection and the associated
+    gripper designs become more vital. Current data collection device designs trend towards matching the morphologies of...
+  links:
+    arxiv: https://arxiv.org/abs/2608.20546
+    project: https://github.com/AMAP-ML/DreamX-Phi
+  highlight: 🔥
+  added: '2026-08-25'
+  source: news_archive
+- arxiv_id: '2608.21031'
+  title: 'PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration'
+  authors: Lin, Chen-Yu et al.
+  date: '2026-08-21'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: We present PhysCaP, a Physics-Informed Code-as-Policy agent for active perception in robotic manipulation.
+    While vision-language-action policies excel at imitating demonstrations, they rely on passive observation and fail to
+    infer latent...
+  links:
+    arxiv: https://arxiv.org/abs/2608.21031
+    project: https://physcap.github.io
+  highlight: 🔥
+  added: '2026-08-25'
+  source: news_archive
