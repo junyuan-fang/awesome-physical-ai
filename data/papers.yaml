@@ -3425,3 +3425,61 @@ papers:
   highlight: 🔥
   added: '2026-08-25'
   source: news_archive
+- arxiv_id: '2608.26239'
+  title: 'WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression'
+  authors: Zhang, Maeve et al.
+  date: '2026-08-26'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'arXiv: 2608.26239（Submitted 2026-08-26）；机构：X Square Robot（自变量机器人）'
+  links:
+    arxiv: https://arxiv.org/abs/2608.26239
+    project: http://x2robot.com/pages/ss
+  highlight: 🔥
+  added: '2026-08-31'
+  source: news_archive
+- arxiv_id: '2608.27345'
+  title: 'PAWBench: How Far Are We from Probabilistically Aligned World Modeling?'
+  authors: Pu, Yuandong et al.
+  date: '2026-08-27'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'arXiv: 2608.27345（Submitted 2026-08-27）；机构：上海 AI Lab / HKU / SJTU'
+  links:
+    arxiv: https://arxiv.org/abs/2608.27345
+    project: https://pawbench.github.io/
+  highlight: 🔥
+  added: '2026-08-31'
+  source: news_archive
+- arxiv_id: '2608.27384'
+  title: 'FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference'
+  authors: Li, Zekai et al.
+  date: '2026-08-27'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: 'arXiv: 2608.27384（Submitted 2026-08-27）'
+  links:
+    arxiv: https://arxiv.org/abs/2608.27384
+  highlight: 🔥
+  added: '2026-08-31'
+  source: news_archive
+- arxiv_id: '2608.27406'
+  title: 'CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators'
+  authors: Liu, Kechen et al.
+  date: '2026-08-27'
+  venue: ''
+  category: foundation-models
+  tags:
+  - news-archive
+  abstract_short: 'arXiv: 2608.27406（Submitted 2026-08-27）；作者：Kechen Liu, Ola Shorinwa（Princeton）'
+  links:
+    arxiv: https://arxiv.org/abs/2608.27406
+  highlight: 🔥
+  added: '2026-08-31'
+  source: news_archive

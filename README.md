@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--25-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--31-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **219** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **223** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -58,8 +58,14 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 <details open>
-<summary>🆕 <b>2026</b> · 72 papers</summary>
+<summary>🆕 <b>2026</b> · 75 papers</summary>
 
+- 🔥 **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345)** — *Pu, Yuandong et al.* · `2026-08-27`
+  > arXiv: 2608.27345（Submitted 2026-08-27）；机构：上海 AI Lab / HKU / SJTU · [🌐 project](https://pawbench.github.io/)
+- 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** — *Liu, Kechen et al.* · `2026-08-27`
+  > arXiv: 2608.27406（Submitted 2026-08-27）；作者：Kechen Liu, Ola Shorinwa（Princeton）
+- 🔥 **[WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression](https://arxiv.org/abs/2608.26239)** — *Zhang, Maeve et al.* · `2026-08-26`
+  > arXiv: 2608.26239（Submitted 2026-08-26）；机构：X Square Robot（自变量机器人） · [🌐 project](http://x2robot.com/pages/ss)
 - 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** — *Domae, Yukiyasu et al.* · `2026-08-19`
   > Robot foundation models (RFMs), including vision-language-action (VLA) policies, are often discussed through a scaling view: more data, larger models, and broader benchmarks should improve generalization. · [🌐 project](https://shepherd1226.github.io/gigabrain-wbc-0.5/)
 - 🔥 **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](https://arxiv.org/abs/2608.18484)** — *Taghavi, Pardis et al.* · `2026-08-19`
@@ -667,6 +673,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345)** `2026-08-27` · *Pu, Yuandong et al.* · [🌐](https://pawbench.github.io/) · `foundation-models`
+- 🔥 **[FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](https://arxiv.org/abs/2608.27384)** `2026-08-27` · *Li, Zekai et al.* · `vla`
+- 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** `2026-08-27` · *Liu, Kechen et al.* · `foundation-models`
+- 🔥 **[WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression](https://arxiv.org/abs/2608.26239)** `2026-08-26` · *Zhang, Maeve et al.* · [🌐](http://x2robot.com/pages/ss) · `foundation-models`
 - 🔥 **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](https://arxiv.org/abs/2608.21031)** `2026-08-21` · *Lin, Chen-Yu et al.* · [🌐](https://physcap.github.io) · `vla`
 - 🔥 **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](https://arxiv.org/abs/2608.19574)** `2026-08-20` · *Xue, Chao et al.* · [🌐](https://carldegio.github.io/latent_action.github.io) · `manipulation`
 - 🔥 **[What Matters for Latent Actions in Robot Learning](https://arxiv.org/abs/2608.19613)** `2026-08-20` · *Bu, Xizhou et al.* · [🌐](https://carldegio.github.io/latent_action.github.io) · `manipulation`
@@ -678,10 +688,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](https://arxiv.org/abs/2608.20114)** `2026-08-20` · *Ma, Siyuan et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `locomotion`
 - 🔥 **[Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning](https://arxiv.org/abs/2608.20546)** `2026-08-20` · *Hajj-Ahmad, Amar et al.* · [🌐](https://github.com/AMAP-ML/DreamX-Phi) · `manipulation`
 - 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** `2026-08-19` · *Domae, Yukiyasu et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `foundation-models`
-- 🔥 **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](https://arxiv.org/abs/2608.18618)** `2026-08-19` · *Tang, Zhipeng et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `manipulation`
-- 🔥 **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701)** `2026-08-19` · *Jing, Bowen et al.* · `manipulation`
-- 🔥 **[Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation](https://arxiv.org/abs/2608.18787)** `2026-08-19` · *Zhang, Haoyu et al.* · `manipulation`
-- 🔥 **[RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](https://arxiv.org/abs/2608.18948)** `2026-08-19` · *Guo, Yaowei et al.* · [🌐](https://adept-dexterity.github.io/) · `manipulation`
 
 </details>
 
