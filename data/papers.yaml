@@ -3483,3 +3483,35 @@ papers:
   highlight: 🔥
   added: '2026-08-31'
   source: news_archive
+- arxiv_id: '2608.28693'
+  title: 'RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction'
+  authors: Wang, Zifan et al.
+  date: '2026-08-27'
+  venue: ECCV 2026
+  category: sim2real
+  tags:
+  - news-archive
+  abstract_short: 1.5 万台这个量级如果落地，单家公司就接近中国上半年 4 万台总出货的四成。；但要注意口径差异：这是供应链备料推算，不是特斯拉官方产量指引，也不是交付量。特斯拉在 Optimus 上的历史指引偏差极大（2025
+    年初曾指引「年内 5000 台」，实际远未达成）。
+  links:
+    arxiv: https://arxiv.org/abs/2608.28693
+    project: https://RoboGesture.github.io
+  highlight: 🔥
+  added: '2026-09-08'
+  source: news_archive
+- arxiv_id: '2609.05266'
+  title: 'TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation'
+  authors: Ma, Zipei et al.
+  date: '2026-09-04'
+  venue: ''
+  category: manipulation
+  tags:
+  - news-archive
+  abstract_short: 1.5 万台这个量级如果落地，单家公司就接近中国上半年 4 万台总出货的四成。；但要注意口径差异：这是供应链备料推算，不是特斯拉官方产量指引，也不是交付量。特斯拉在 Optimus 上的历史指引偏差极大（2025
+    年初曾指引「年内 5000 台」，实际远未达成）。
+  links:
+    arxiv: https://arxiv.org/abs/2609.05266
+    project: https://github.com/LogosRoboticsGroup/TacPAC
+  highlight: 🔥
+  added: '2026-09-08'
+  source: news_archive

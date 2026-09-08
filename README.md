@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--08--31-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--09--08-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **223** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **225** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -224,8 +224,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🆕 <b>2026</b> · 21 papers</summary>
+<summary>🆕 <b>2026</b> · 22 papers</summary>
 
+- 🔥 **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](https://arxiv.org/abs/2609.05266)** — *Ma, Zipei et al.* · `2026-09-04`
+  > 1.5 万台这个量级如果落地，单家公司就接近中国上半年 4 万台总出货的四成。；但要注意口径差异：这是供应链备料推算，不是特斯拉官方产量指引，也不是交付量。特斯拉在 Optimus 上的历史指引偏差极大（2025 年初曾指引「年内 5000 台」，实际远未达成）。 · [🌐 project](https://github.com/LogosRoboticsGroup/TacPAC)
 - 🔥 **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](https://arxiv.org/abs/2608.19574)** — *Xue, Chao et al.* · `2026-08-20`
   > World action models jointly predict future visual observations and actions, whereas existing tactile-aware variants typically represent future touch as an image or latent stream without modeling the physical … · [🌐 project](https://carldegio.github.io/latent_action.github.io)
 - 🔥 **[What Matters for Latent Actions in Robot Learning](https://arxiv.org/abs/2608.19613)** — *Bu, Xizhou et al.* · `2026-08-20`
@@ -386,8 +388,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Domain randomization, sim-to-real transfer, deployment*
 <details open>
-<summary>🆕 <b>2026</b> · 8 papers</summary>
+<summary>🆕 <b>2026</b> · 9 papers</summary>
 
+- 🔥 **[RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction](https://arxiv.org/abs/2608.28693)** — *Wang, Zifan et al.* · `2026-08-27` · 🏛️ **ECCV 2026**
+  > 1.5 万台这个量级如果落地，单家公司就接近中国上半年 4 万台总出货的四成。；但要注意口径差异：这是供应链备料推算，不是特斯拉官方产量指引，也不是交付量。特斯拉在 Optimus 上的历史指引偏差极大（2025 年初曾指引「年内 5000 台」，实际远未达成）。 · [🌐 project](https://RoboGesture.github.io)
 - 🔥 **[Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](https://arxiv.org/abs/2608.20087)** — *Huang, Tao et al.* · `2026-08-20`
   > Humanoid robots have recently demonstrated promising capabilities in real-world ball sports. However, achieving professional motion styles while maintaining strong task performance remains challenging. · [🌐 project](https://humanoidtennis.github.io/AdaPT/)
 - 🔥 **[ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning](https://arxiv.org/abs/2608.19182)** — *Lee, Jayjun et al.* · `2026-08-19`
@@ -673,9 +677,11 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <details>
 <summary><b>Show 15 recently added papers</b></summary>
 
+- 🔥 **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](https://arxiv.org/abs/2609.05266)** `2026-09-04` · *Ma, Zipei et al.* · [🌐](https://github.com/LogosRoboticsGroup/TacPAC) · `manipulation`
 - 🔥 **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345)** `2026-08-27` · *Pu, Yuandong et al.* · [🌐](https://pawbench.github.io/) · `foundation-models`
 - 🔥 **[FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](https://arxiv.org/abs/2608.27384)** `2026-08-27` · *Li, Zekai et al.* · `vla`
 - 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** `2026-08-27` · *Liu, Kechen et al.* · `foundation-models`
+- 🔥 **[RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction](https://arxiv.org/abs/2608.28693)** `2026-08-27` · 🏛️ ECCV 2026 · *Wang, Zifan et al.* · [🌐](https://RoboGesture.github.io) · `sim2real`
 - 🔥 **[WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression](https://arxiv.org/abs/2608.26239)** `2026-08-26` · *Zhang, Maeve et al.* · [🌐](http://x2robot.com/pages/ss) · `foundation-models`
 - 🔥 **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](https://arxiv.org/abs/2608.21031)** `2026-08-21` · *Lin, Chen-Yu et al.* · [🌐](https://physcap.github.io) · `vla`
 - 🔥 **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](https://arxiv.org/abs/2608.19574)** `2026-08-20` · *Xue, Chao et al.* · [🌐](https://carldegio.github.io/latent_action.github.io) · `manipulation`
@@ -686,8 +692,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](https://arxiv.org/abs/2608.19955)** `2026-08-20` · *Luo, Zeren et al.* · [🌐](https://cea-list.github.io/cotograspweb/) · `locomotion`
 - 🔥 **[Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](https://arxiv.org/abs/2608.20087)** `2026-08-20` · *Huang, Tao et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `sim2real`
 - 🔥 **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](https://arxiv.org/abs/2608.20114)** `2026-08-20` · *Ma, Siyuan et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `locomotion`
-- 🔥 **[Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning](https://arxiv.org/abs/2608.20546)** `2026-08-20` · *Hajj-Ahmad, Amar et al.* · [🌐](https://github.com/AMAP-ML/DreamX-Phi) · `manipulation`
-- 🔥 **[The Embodiment Gap in Robot Foundation Models](https://arxiv.org/abs/2608.18433)** `2026-08-19` · *Domae, Yukiyasu et al.* · [🌐](https://shepherd1226.github.io/gigabrain-wbc-0.5/) · `foundation-models`
 
 </details>
 
