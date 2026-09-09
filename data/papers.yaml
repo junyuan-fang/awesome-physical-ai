@@ -3515,3 +3515,18 @@ papers:
   highlight: 🔥
   added: '2026-09-08'
   source: news_archive
+- arxiv_id: '2609.01281'
+  title: 'EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents'
+  authors: Wang, Wei et al.
+  date: '2026-09-01'
+  venue: ''
+  category: vla
+  tags:
+  - news-archive
+  abstract_short: https://www.humanoidsdaily.com/news/tokyo-now-has-a-dedicated-911-service-for-busted-humanoid-robots；宇树
+    U1 系列从 6 月 2 日开放预订到 6 月 30 日发布会，累计预订超 13,361 台，相当于公司 2025 年全尺寸人形全年销量（1,079 台）的 12 倍以上。首批产品交付定于 2026-09-16 开始。
+  links:
+    arxiv: https://arxiv.org/abs/2609.01281
+  highlight: 🔥
+  added: '2026-09-09'
+  source: news_archive

@@ -8,11 +8,11 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--09--08-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--09--09-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **225** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
+📊 **226** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **16** datasets&nbsp; · &nbsp;📊 **13** benchmarks
 
 <sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
 
@@ -678,6 +678,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <summary><b>Show 15 recently added papers</b></summary>
 
 - 🔥 **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](https://arxiv.org/abs/2609.05266)** `2026-09-04` · *Ma, Zipei et al.* · [🌐](https://github.com/LogosRoboticsGroup/TacPAC) · `manipulation`
+- 🔥 **[EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](https://arxiv.org/abs/2609.01281)** `2026-09-01` · *Wang, Wei et al.* · `vla`
 - 🔥 **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345)** `2026-08-27` · *Pu, Yuandong et al.* · [🌐](https://pawbench.github.io/) · `foundation-models`
 - 🔥 **[FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](https://arxiv.org/abs/2608.27384)** `2026-08-27` · *Li, Zekai et al.* · `vla`
 - 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** `2026-08-27` · *Liu, Kechen et al.* · `foundation-models`
@@ -691,7 +692,6 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 🔥 **[EXIMO: VLM Guided Exploration of VLA Policies](https://arxiv.org/abs/2608.19891)** `2026-08-20` · *Sukhija, Bhavya et al.* · [🌐](https://carldegio.github.io/latent_action.github.io) · `teleoperation`
 - 🔥 **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](https://arxiv.org/abs/2608.19955)** `2026-08-20` · *Luo, Zeren et al.* · [🌐](https://cea-list.github.io/cotograspweb/) · `locomotion`
 - 🔥 **[Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](https://arxiv.org/abs/2608.20087)** `2026-08-20` · *Huang, Tao et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `sim2real`
-- 🔥 **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](https://arxiv.org/abs/2608.20114)** `2026-08-20` · *Ma, Siyuan et al.* · [🌐](https://humanoidtennis.github.io/AdaPT/) · `locomotion`
 
 </details>
 
