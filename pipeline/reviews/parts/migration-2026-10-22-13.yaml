@@ -1,0 +1,723 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2608.15917'
+  title: Pre-training Visual Dexterity in Simulation
+  triage: include
+  reason: null
+  date_v1: '2026-08-16'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - sim-pretraining
+  - vr-teleoperation
+  - bimanual
+  - diffusion-transformer
+  affiliations:
+  - Stanford University
+  - MIT
+  - Scale AI
+  one_liner: SPD 用 VR 在 MuJoCo 中遥操作采集 75 小时双手灵巧操作数据预训练扩散 Transformer，再用 1–2 小时真机数据微调；作者报告在 5 项 56 自由度真机任务上均优于从零训练的 BC。
+  summary: |
+    为缓解多指灵巧手真机遥操作数据昂贵、人手视频存在本体差异和重定向误差的问题，作者提出 SPD：操作者戴 VR 头显在 MuJoCo 中直接操控与真机对齐的双臂 + 双 22 自由度灵巧手（相机布局、物体相近），5 名操作者一周采集约 75 小时、1,930 条多任务示教（spd-75h），用于预训练一个 2.22 亿参数、以视觉-本体历史为条件的因果扩散 Transformer，再在每个真机任务上用 1–2 小时示教全量微调。在挂盘、挂杯、Jenga、叠杯、投瓶 5 项真机任务（每检查点 20 次试验）上，作者报告预训练模型在各阶段完成率和平均任务进度上都高于同架构从零训练的 BC；消融显示 32 步历史窗口配合 8 步短动作块最佳，且该配置从预训练中获益最大（平均进度约 +18 点）。该结果提示仿真遥操作可作为灵巧手预训练的可扩展数据源，但对照只有从零训练，未与真机/人手视频预训练比较；评测物体与仿真中相近，仿真物理调参质量和场景多样性仍是限制。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 5
+  rationale:
+    C: 以本体一致的仿真 VR 遥操作数据为灵巧手预训练源，并系统研究历史条件与动作块长度，对灵巧操作数据扩展有明确增量。
+    E: 5 项真机任务、每项 20 次试验并有历史/动作块消融，但只与从零训练比较，缺少与其他预训练数据源的对照，泛化测试有限。
+    O: 仅见项目页 spd.bot；探测到的 mink 仓库是依赖库而非本文代码，数据集与权重是否公开未确认。
+    T: Chelsea Finn、Phillip Isola、C. Karen Liu 团队在机器人学习与灵巧操作方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目页 spd.bot 是否发布 spd-75h 数据集、spd-vr 采集系统代码或预训练权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 探测到的 kevinzakka/mink 是论文使用的 IK 依赖库，非官方代码；缓存中项目页字段（gigabrain0）亦有误，官方项目页为 https://spd.bot
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.16172'
+  title: 'SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - hierarchical-vla
+  - adaptive-action-chunking
+  - long-horizon
+  - subtask-termination
+  affiliations:
+  - Beijing Institute of Technology
+  - Tsinghua University
+  one_liner: SparkVLA 把子任务终止与动作块执行长度放进同一候选集统一排序，作者报告在 RoboCerebra 上成功率 47.12%，比官方分层基线高 30.57 个百分点，并有真机长程任务验证。
+  summary: |
+    分层 VLA 在每个重观测点需同时决定"是否结束当前子任务"和"动作块执行多长"，现有方法分别用独立模块处理，二者信息互不可见。SparkVLA 将 Stop 与所有动作前缀长度放入同一候选集，用全自注意力打分头统一排序，仅需离线序数偏好监督、无需阈值调参；另以历史感知的子任务锚点引导视觉 token 剪枝。在 RoboCerebra 长程基准（60 个留出案例×10 次）上，作者报告平均成功率 47.12%，高于官方 HPE 基线 30.57 个百分点、复现的 Mem-0 26.83 个百分点；更换 OpenVLA-OFT/SmolVLA 执行器时同样有提升；LIBERO 平均 98.5%。消融显示统一候选集使 Stop 准确率从 80.37% 升至 96.65%。在 AirbotPlay 双臂平台三项多步任务（各 50 次）上作者报告平均 69.3%，比最强基线高 21.3 个百分点。结果提示终止与执行长度联合决策有效，但评测限于桌面操作与离线训练，且无代码公开，复现性待确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 将终止判断与自适应动作块统一为单一排序问题，思路清晰，但属于分层 VLA 接口层面的方法增量。
+    E: RoboCerebra 与 LIBERO 两个基准、多种执行器、逐项消融及三项真机任务各 50 次，证据较完整。
+    O: 仅有项目页 icr-lab.github.io/SparkVLA，未发现代码仓库或权重。
+    T: 北京理工大学与清华大学团队，具身方向积累信息有限，按默认给 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目页是否后续放出代码与权重
+  - 真机对比表中 48.0% 基线的具体模型名称（缓存文本缺失）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文给出项目页 https://icr-lab.github.io/SparkVLA，未见代码仓库
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.16195'
+  title: 'RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing'
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - multi-agent-rl
+  - self-play
+  - latent-action-space
+  - sim2real
+  affiliations:
+  - Shanghai Jiao Tong University
+  - Shanghai Artificial Intelligence Laboratory
+  - Huazhong University of Science and Technology
+  - University of Science and Technology of China
+  - Shanghai Innovation Institute
+  one_liner: RoboStriker 把人形机器人拳击建模为潜空间零和博弈，在预训练运动解码器的有界潜空间中做神经虚拟自博弈，作者报告胜率与击打效率优于原始关节空间方法，并在两台 G1 上真机对打。
+  summary: |
+    在原始关节空间直接做多智能体强化学习，人形机器人会在出现战术前就因失衡崩溃。RoboStriker 将拳击建模为两人潜空间零和马尔可夫博弈：先训练拳击动作跟踪器，再蒸馏为状态条件的有界潜空间解码器，随后经 AMP 正则的热身训练和潜空间神经虚拟自博弈（LS-NFSP）演化策略，并给出近似纳什解释。在 Isaac Lab 中训练 29 自由度 Unitree G1，作者报告其对 Naive SP、Fictitious SP、PPO-Only 等基线的交叉对战胜率最高，参与率和有效击打率也最高；与加 AMP 的 29 维关节空间自博弈相比仍胜 92.50% 的对局，说明增益不只来自 AMP。消融显示去掉热身课程会使战术表现接近零，32 维潜空间为表达力与稳定性折中。真机上两台 G1 借助动捕获得对手相对位置完成接触对打，但真机仅为定性展示，且依赖外部动捕而非机载感知。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 把竞技人形对抗放到运动先验潜空间中做博弈学习，对人形多智能体物理交互有明确的方法增量。
+    E: 仿真中有多类基线、AMP 与潜空间的解耦对照和潜维度消融，真机仅定性演示且依赖动捕。
+    O: 摘要称代码与视频已公开，但未找到可核实的仓库链接。
+    T: 上海交大张伟楠、上海 AI Lab 庞江淼等团队在人形控制与多智能体 RL 方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 摘要所称 RoboStriker 代码/项目页的实际链接与内容
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: n/a
+    license: unknown
+    note: 摘要称代码可在项目页获取，但未给出可核实链接；缓存中的项目页字段（HAF）与本文无关
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.16503'
+  title: 'NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - dual-system
+  - asynchronous-inference
+  - action-smoothness
+  - cross-embodiment
+  affiliations:
+  - ZTE Corporation
+  one_liner: NebulaVLA 采用 10 Hz 语义规划 + 20 Hz DiT 控制的异步双频架构，配合 GESTURE-7 动作表示与 Guide Action 平滑拼接，作者报告 LIBERO-Plus 总成功率 85.5%，真机延迟降至 42 ms。
+  summary: |
+    为缓解同步 VLA 在效率与性能间的取舍、跨本体动作语义不统一以及异步执行中的块间抖动，NebulaVLA 将 Qwen3-VL 系统 2（约 10 Hz）与 DiT 系统 1（约 20 Hz）解耦；提出 GESTURE-7（位置、姿态加手势关键词的 7 维末端表示）统一不同末端执行器，并对系统 2 先 SFT 再 GRPO 强化；Guide Action 以上一块已执行点为条件做掩码去噪，实现块间平滑。作者报告在 LIBERO-Plus 上总成功率 85.5%，高于 InternVLA-M1（81.3%）等官方或复现结果，但相机扰动维度略逊；在 AgiBot A2 两项真机任务中成功率 92.08%/92.5%，平均推理延迟 42 ms（同频版本 115 ms）；Guide Action 使 7 个关节平均 jerk 降低 25.6%。结果提示异步双频设计对部署效率有益，但真机试验次数与跨本体泛化证据有限，频率配置为经验设定，且未公开代码。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 快慢双系统、末端统一表示与块间平滑均有先例，属于已有思路的工程组合与改进。
+    E: LIBERO-Plus 单一仿真基准加两项真机任务和训练阶段消融，真机试验次数未明确，跨本体主张缺乏专门实验。
+    O: 探测到的 LeRobot 是复现基线所用框架，非本文代码；未见任何开放资源。
+    T: 中兴通讯团队在具身方向的公开研究产出有限，信息不足按 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 真机评测每项任务的试验次数
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测到的 huggingface/lerobot 只是复现基线使用的工具库，并非本文官方仓库
+  uses:
+  - resource: lerobot
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.16590'
+  title: 'Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence'
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: vla
+  route: core
+  contribution: system
+  tags:
+  - embodied-agent
+  - self-evolution
+  - runtime-critic
+  - rollout-infrastructure
+  - failure-recovery
+  affiliations:
+  - Institute for AI Industry Research (AIR), Tsinghua University
+  - Z-Trans AI
+  one_liner: Zetta 为冻结的 VLA 演化代码化运行时 critic 与恢复技能，形成闭环具身 harness；作者报告在 LIBERO-Pro 与 RoboCasa 留出种子上分别达 90.8% 与 93.6%，并配套 Z-Infra 提升 rollout 吞吐。
+  summary: |
+    现有具身智能体 harness 多在回合结束后做事后反思，无法在执行中随状态变化干预。Zetta 在保持基础策略（π0.5 / GR00T N1.5）权重冻结的前提下，通过三个时间尺度的循环：动作频率的代码化 critic 监控、基于失败聚类与分层因果诊断的 critic-恢复提案、以及经验证门控的技能合并，在线演化监控与恢复技能；Z-Infra 则把智能体逻辑与异构仿真/推理资源解耦以支撑大规模并行 rollout。作者报告在 RoboCasa 18 项原子任务上宏平均成功率从冻结策略的 73.56% 经四轮修复提升到 93.56%，LIBERO-Pro 上达 90.8%（均为与开发集不相交的留出种子），部分技能可零样本迁移到同类任务，Z-Infra 吞吐较基线高 7.7–12.8 倍。结果提示 harness 层自演化可补足冻结 VLA 的执行鲁棒性，但实验仅在仿真中、依赖人工设计的 critic 框架与 LLM 智能体，真实机器人上的有效性和演化成本尚待验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 将运行时 critic 与恢复技能的在线演化引入冻结 VLA 的执行闭环，并配套 rollout 基础设施，是有影响潜力的系统性方案。
+    E: 两个仿真基准、留出种子评测、迁移与扩展曲线，但无真机实验，且与其他 agent harness 的对照有限。
+    O: 仅有项目页 air-embodied-brain.github.io/zetta，未见代码仓库。
+    T: 清华 AIR 刘云新、曹婷团队以系统方向见长，具身方向积累可核实信息有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 项目页是否发布 Zetta / Z-Infra 代码
+  - 是否有真机实验（缓存文本未见）
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: none
+    license: unknown
+    note: 官方项目页 https://air-embodied-brain.github.io/zetta ；缓存项目页字段（HAF）有误
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.16642'
+  title: Throwing a Tight Spiral American Football by a Humanoid Robot
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - dynamic-manipulation
+  - throwing
+  - mpc
+  - whole-body-control
+  affiliations:
+  - Department of Computer Science, Iowa State University
+  one_liner: 首次让 Unitree G1 人形机器人投出旋转稳定的橄榄球螺旋传球：轨迹优化完成投掷段，查表式 MPC 调控手指释放段，作者报告旋转效率最高 93.6%。
+  summary: |
+    橄榄球投掷要求在约半秒内精确产生耦合的线动量与角动量，并处理不足 100 ms 的手指-球瞬态接触，现有抛掷研究多采用张开夹爪的瞬时释放。作者先用可量化指标定义"紧螺旋"（自旋效率与鼻向角误差），再提出全身控制：下肢由 GR00T 全身控制器保持稳定，上肢分为轨迹优化跟踪的投掷段，以及基于接触感知模型、用真机数据离线构建查表 MPC 的随动段来调控腕部与仍接触的手指。在 Unitree G1 + Dex3-1（加装拇指"指甲"）上，作者报告出手线速度最高 5.35 m/s、角速度 14.5 rad/s，自旋效率最高 93.6%、鼻向角误差 0.286 rad；与不加随动控制的释放相比螺旋质量明显更好。结果提示释放过程需作为动态过程控制，但方法以模型优化控制为主、学习成分有限，依赖动捕跟踪，且作者自述硬件过热导致尚不能做统计显著的重复性分析。
+  venue: Humanoids 2026
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 首次形式化并实现人形机器人橄榄球螺旋投掷，问题新颖但较小众，方法以轨迹优化与 MPC 为主。
+    E: 只有真机自身对照（有无随动段），试验次数有限且作者承认重复性不足以做统计分析，无外部基线。
+    O: 未发现代码、数据或模型公开。
+    T: 爱荷华州立大学团队，相关积累信息有限，按默认给 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: none
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.16837'
+  title: 'HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral
+    Latent RL'
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - loco-manipulation
+  - flow-matching
+  - latent-noise-rl
+  - real-world-rl
+  affiliations:
+  - Peking University
+  - Beijing Innovation Center of Humanoid Robotics
+  - Nankai University
+  one_liner: HAF 将通用流匹配 VLA 改为"行走/头部→腰部→双臂"三阶段分层去噪，并在冻结骨干上做 DCT 低维噪声空间离线到在线 SAC；作者报告 7 项真机人形任务平均分 70.5%，高于最强基线 53.3%。
+  summary: |
+    通用 VLA 单阶段生成全身动作，难以协调人形机器人的行走、腰部姿态与双臂操作，而直接用在线 RL 微调大骨干又昂贵且危险。HAF 包含两部分：HAF-VLA 基于预训练流匹配 VLA（π0.5），按运动学依赖依次生成行走与头部、腰部、双臂动作，用阶段嵌入和跨阶段 KV cache 传递前一阶段的干净动作；HAF-Steer 利用流匹配可逆性把示教动作反推为初始噪声，经 DCT 压缩到低维谱空间，先行为克隆再做离线-在线混合 SAC，骨干保持冻结。在天工 2.0/3.0 人形机器人 7 项长程家务任务（每项 10 次）上，作者报告 HAF-VLA 平均归一化得分 70.5%，最强基线为 53.3%，对比 GR00T N1.7、Cosmos Policy、ACT；消融显示增益并非来自更多去噪步数；HAF-Steer 在分布内外设置下均提升成功次数，而 DSRL 出现不安全探索。但每项仅 10 次试验，任务与数据为自采，代码未见公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 分层动作流与谱潜空间 RL 共同提供把通用 VLA 迁移到人形全身移动操作的低成本路线，对人形 VLA 子方向有明确增量。
+    E: 7 项真机任务对比 4 个强基线，含去噪结构消融、分布外扰动和真机 RL 实验，但每项仅 10 次试验。
+    O: 仅有项目页 grange007.github.io/HAF；探测到的 tau-0-vla 仓库属于其他论文。
+    T: 北大张尚彤团队与北京人形机器人创新中心在 VLA 与人形方向有多项可核实工作。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 项目页是否发布 HAF 代码或权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 探测到的 sii-research/tau-0-vla 是 τ0-VLA 的仓库，与本文无关；官方项目页 https://grange007.github.io/HAF
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.16885'
+  title: '$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-17'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - hierarchical-vla
+  - test-time-compute
+  - world-model
+  - long-horizon
+  - cross-embodiment
+  affiliations:
+  - Shanghai Innovation Institute
+  - Agibot Finch
+  - The Chinese University of Hong Kong
+  one_liner: τ0-VLA 用 40,115 小时真机数据训练分层机器人基础模型，高层以世界模型预测子任务结果并做束搜索；作者报告真机长程任务平均成功率 45%（π0.5 为 22.5%），测试时计算进一步提升，代码与权重已开源。
+  summary: |
+    分层 VLA 通常一次前向就决定下一个子任务，困难决策无法获得更多计算。τ0-VLA 的高层由提案、世界模型、价值、反思四个模型组成：带可纠错执行记忆生成子任务，置信度低时对候选子任务用图像编辑式世界模型预测完成画面、价值模型打分并束搜索，再由反思模型给出最终子任务；低层为 Qwen3.5-2B + MoT 流匹配动作专家，在 40,115 小时异构真机数据上分阶段共训练，统一 40 维状态/动作空间覆盖固定基座、移动与双臂本体。作者报告在 AgiBot G1 四项长程真机任务（各 10 次）上分层系统平均成功率 45.0%、进度 87.85%，π0.5 为 22.5%/73.05%，GR00T N1.7 与 LingBot-VLA 更低；在奶茶、整理书、打扫房间上，测试时计算将成功次数由 5/6/5 提升到 7/9/7（各 10 次），下一子任务预测准确率随计算量上升。结果支持对子任务层做测试时搜索的价值，但每项试验仅 10 次，大规模训练数据未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 大规模真机数据训练的分层基础模型，并把世界模型引导的测试时搜索落到开放式语言子任务层，对长程 VLA 有明确增量。
+    E: 多本体真机长程任务与三个强基线对比、测试时计算的开环与闭环分析及记忆消融，但每项仅 10 次试验。
+    O: 仓库含训练、LIBERO 后训练与评测、高层推理与微调代码，低层/高层/世界模型权重均在 HF 开放（Apache-2.0），训练数据仅示例子集。
+    T: 上海创智学院与智元团队（含 Jianlan Luo 等）在真机 VLA 与机器人学习方向有可核实的强相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - 高层策略组件（价值模型、反思模型）是否已全部开源
+  open:
+    code: substantive
+    repo: https://github.com/sii-research/tau-0-vla
+    weights: open
+    data: partial
+    license: Apache-2.0
+    note: README 列出训练入口、LIBERO 后训练与评测、高层提案与世界模型推理/微调代码；HF 发布低层策略、LIBERO、提案模型与世界模型 LoRA 权重；数据仅含少量 AgiBot World 示例子集，README 称高层组件逐步发布
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.17320'
+  title: Robust Brachiation on a Life-Sized Dual-Arm Robot Using Waypoint-Guided Reinforcement Learning
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - brachiation
+  - reinforcement-learning
+  - reward-design
+  - sim2real
+  affiliations:
+  - Department of Mechano-Informatics, Graduate School of Information Science and Technology, The University of Tokyo
+  one_liner: 提出路点引导强化学习 WGRL，用稀疏末端路点加任务成功与机械能奖励，在真人尺寸双臂机器人上零样本实现单杠悬臂摆荡移动，真机穿越 4 根横杆并出现失败后加大摆幅重试的恢复行为。
+  summary: |
+    悬臂摆荡（brachiation）需要全身协调与精确的抓放时机，又缺少可模仿的参考动作，真人尺寸机器人上的学习方法很少。作者提出路点引导强化学习（WGRL）：只为末端手钩稀疏指定路点，以兼顾距离与方向的势函数、进度和到达奖励引导探索，并用课程逐步放宽路点约束，再在第二阶段以过杆成功与机械能跟踪奖励为主精调；策略在 Legged Gym 中用 PPO 训练并做域随机化。消融显示距离加方向的奖励形式与三项奖励组合是学会该动作的必要条件。作者报告在 MuJoCo sim-to-sim 测试中 10 次试验均连续越过 30 根以上横杆，并能应对高度、偏航扰动及倾斜/环形路线；真机零样本部署时穿越 4 根间距 400 mm 的横杆，每次首抓失败后都能加大摆幅重试成功。该结果提示稀疏路点可替代示教数据引导复杂动作，但真机验证规模很小，抓杆失败率较高，依赖固定横杆几何且无视觉感知。
+  venue: IROS 2026
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 稀疏路点引导 RL 的思路扎实、可迁移到其他无示教动作，但属于奖励设计层面的有限增量。
+    E: 奖励形式与组合的多种子消融及 sim-to-sim 泛化测试较充分，真机仅一次 4 杆演示，无外部基线。
+    O: 探测到的 PRISM 仓库属于其他论文，未发现本文代码或模型。
+    T: 东京大学 JSK 实验室（冈田、河原塚）在仿人与开源机器人硬件方向有长期可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 探测到的 Tengbo-Yu/PRISM 及其项目页与本文无关
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.17423'
+  title: 'Prism-GRPO: Faster VLA Policy Optimization via Splitting Same-outcome Groups'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - vla-rl
+  - grpo
+  - sample-efficiency
+  - reward-shaping
+  - bimanual
+  affiliations:
+  - Purdue University
+  - AWS AI
+  one_liner: Prism-GRPO 在二值成功奖励上叠加有界的执行质量分，把全成功/全失败的退化组拆分成可学习信号；作者报告在 4 个 RoboTwin 任务上达到目标成功率最多少用 56% 的 rollout，并抑制奖励作弊。
+  summary: |
+    GRPO 用于 VLA 强化学习时，若一组 rollout 全部成功或全部失败，优势为零而被丢弃，训练早期尤其浪费昂贵的机器人 rollout。Prism-GRPO 在二值成功奖励上加入加权且有界的轨迹执行质量分（如对非目标物体的最大接触力、动作平滑度或 VLM 判断），保证任何成功仍高于任何失败，并配合 RLOO 优势估计；作者证明该奖励不会增加获得有效组所需的期望 rollout 数，并给出成功与质量梯度对齐时的上升条件。在 RoboTwin 2.0 的四个任务（5 个随机种子）上，作者报告在相同 rollout 预算下成功率与执行质量均优于 Binary GRPO、Binary RLOO、随机质量与 RL-ZVP，达到目标成功率最多节省 56% 的 rollout，多种质量信号均有收益；在 Piper 真机上 25 次试验中未出现"推倒作弊"，干净成功 6/25（基线 4/25 与 2/25）。但真机绝对成功率很低，且方法依赖与成功对齐的可观测质量信号。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 用执行质量打破同结果组的平局，简单实用并有理论保证，但属于 VLA RL 奖励设计的局部改进。
+    E: 4 个任务 5 种子、多个基线、权重与质量信号消融及少量真机验证，证据较完整。
+    O: 未发现代码或模型公开。
+    T: 普渡大学与 AWS AI 合作，具身 RL 方向可核实积累有限，按默认给 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 缓存中的项目页字段（unireflex）与本文无关
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.17432'
+  title: 'UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - force-control
+  - variable-impedance
+  - fast-slow
+  - contact-rich
+  - plug-and-play
+  affiliations:
+  - Tsinghua University Shenzhen International Graduate School
+  - Nanyang Technological University
+  - X Square Robot
+  - Xspark AI
+  one_liner: UniReflex 截取冻结生成式策略（DP、π0、DreamZero）动作头的隐表示，驱动快速反射网络输出变阻抗与参考力；作者报告在 5 项真机接触任务的接触阶段成功率提升 20–60 个百分点。
+  summary: |
+    生成式模仿策略擅长轨迹规划却缺少闭环力调节，而把力模态并入网络通常需要重新设计或重训大骨干。UniReflex 保持慢速生成策略冻结，只读截取其动作头最后投影前的时序隐表示作为"慢意图"，结合本体与腕部力反馈驱动一个 GRU 快速反射网络，逐步输出参考力与各向异性刚度方向，并用接触触发的门控在位置主导与力主导之间切换；监督信号来自遥操作主从误差推得的力意图。在擦拭曲面/斜面、插充电器、撕便签、翻芯片盒 5 项双臂真机任务（每项 10 次）上，作者报告接入后接触阶段成功率较原骨干提升 20–60 个百分点，非接触阶段变化不超过 10 个百分点，且多数任务不低于 RDP、ForceVLA、TA-VLA；消融显示刚度预测和门控必不可少；反向传播延迟比联合训练低 25–66 倍。但短时高冲击的插接任务无明显提升，对长动作块的世界动作模型增益较小，未公开代码。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 以非侵入方式给冻结的生成式策略加入变阻抗力控，适配多种骨干，对接触丰富操作有明确的实用增量。
+    E: 5 项真机任务、3 种骨干、3 个力感知基线、组件消融与扰动恢复，但每项仅 10 次试验。
+    O: 仅有项目页 unireflex.github.io，未见代码仓库。
+    T: 清华深研院丁文伯团队在触觉与接触操作方向有一定可核实积累，按 3 计。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 项目页是否发布代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 项目页 https://unireflex.github.io/
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.17453'
+  title: 'EATR-Stereo: Embodiment-Aware Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - stereo-vision
+  - token-routing
+  - proprioception
+  - long-horizon
+  affiliations:
+  - Harbin Institute of Technology
+  - Honor
+  one_liner: EATR-Stereo 保留主视图 token，用交叉注意力从另一目构建对齐的辅助 token，并按分身体段本体状态路由；作者报告 33 自由度人形真机长程任务全程成功率 60%，遮挡恢复 80%。
+  summary: |
+    头戴双目的人形 VLA 面临步态扰动与手臂自遮挡，现有接口要么丢弃第二目，要么替换预训练的主视图 token。EATR-Stereo 保留冻结 VLM 的主视图 token 通路，以主视图 token 为查询对辅助视图做跨视图注意力，构建对齐的辅助 token（CVAT），再用按腿、臂、头、腰、位姿分段编码的本体历史逐 token 门控辅助信息，与语言及主视图 token 一并送入 GR00T 1.7 动作专家。在 HONOR Omega 1.0 人形机器人超过 100 秒的搜索-接近-抓取-放置-返回任务（每配置 20 次，分布内外各半）上，作者报告全程成功率 60%、抓取成功率 100%，StereoPolicy 为 45%，GR00T 系列为 20–35%；严重单侧遮挡下恢复率 80%（无路由的 CVAT 为 30%）；RoboCasa365 18 项任务仿真中总成功率 43.33%，高于各对照。消融支持保留主 token 与分段路由的作用。但真机仅一个任务族、样本量小，且依赖外部 VLM 判定子任务完成与安全干预，代码未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 在预训练 VLA 中加入保留主视图的双目辅助流与本体路由，是有针对性的接口改进，增量有限。
+    E: 真机 9 种配置对比与消融、分布外位置与遮挡测试，以及 RoboCasa365 仿真复核，但真机仅一个任务族、每配置 20 次。
+    O: 探测到的 PRISM 仓库与本文无关，未发现代码或权重。
+    T: 哈工大与荣耀团队，相关具身积累信息有限，按默认给 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测到的 Tengbo-Yu/PRISM 为其他论文仓库
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.17512'
+  title: 'Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: navigation
+  route: core
+  contribution: method
+  tags:
+  - vision-language-navigation
+  - vlm
+  - grpo
+  - selective-reasoning
+  - memory
+  affiliations:
+  - School of Software Technology, Zhejiang University
+  - Zhejiang Humanoid Robot Innovation Center Co., Ltd.
+  one_liner: TAMP-Nav（Embodied-Navigator）让 VLM 只在图像上点选像素再投影成 3D 路点，配合按需推理、锚点轨迹记忆与两级 GRPO；作者报告 R2R-CE 未见验证集成功率 66.2%，仅用 9 万条轨迹训练。
+  summary: |
+    直接用 VLM 做连续环境视觉语言导航时，原子动作或 3D 坐标回归与其 2D 预训练先验不匹配，逐步思维链拖慢推理，长程记忆又易溢出或丢失关键信息。TAMP-Nav 让 Qwen2.5-VL-7B 先选视角再输出 2D 像素，经深度投影成 3D 路点交给 SLAM 控制器；仅在关键节点触发思维链并存为高保真锚点，其余历史压缩为时空指示 token；先在 9 万条带选择性 CoT 的 MultiNav-CoT 数据上 SFT，再用叠加全局结果奖励与逐步过程奖励的两级 GRPO 对齐。作者报告在 R2R-CE / RxR-CE 未见验证集上成功率 66.2% / 65.7%，高于 DualVLN、NavFoM 等；每条轨迹平均约 9 步交互、单任务 16.58 s；RL 将成功率从 55.7% 提升到 66.2%；自动推理比稠密 CoT 少 73.7% 调用、成功率仅降 0.6 点；真机 100 次室内外试验有对比。不过动作执行依赖深度与 SLAM 控制器，CoT 标注依赖 Gemini 教师，与他法的训练数据规模并不对等。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 像素到 3D 的动作表述、按需推理与两级 GRPO 组合成高效 VLN 框架，对 VLM 导航子方向有明确增量。
+    E: R2R-CE 与 RxR-CE 两个基准、强基线、分块消融、深度噪声鲁棒性和 100 次真机试验，证据较完整。
+    O: Embodied-Omni 仓库含训练（SFT 与 GRPO）、评测与部署代码，7B GRPO 权重在 HF 公开，Mulan PSL v2 许可；MultiNav-CoT 数据公开情况未确认。
+    T: 浙大熊蓉、庄越挺等团队在机器人与多模态方向有可核实的强相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - MultiNav-CoT 数据集是否公开
+  open:
+    code: substantive
+    repo: https://github.com/ZJU-OmniAI/Embodied-Omni
+    weights: open
+    data: unknown
+    license: MulanPSL-2.0
+    note: embodied_navigator/ 子目录含 SFT 与两级 GRPO 训练、连续导航评测和 Go2 部署服务；HF 发布 Embodied-Navigator-7B-GRPO 权重；仓库许可为 Mulan PSL v2
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.17584'
+  title: 'HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: vla
+  route: core
+  contribution: system
+  tags:
+  - humanoid
+  - embodied-agent
+  - human-robot-interaction
+  - system-2
+  affiliations: []
+  one_liner: HODAgent 是面向服务场景的人形机器人 System-2 智能体（交互器、规划器、执行器与分层记忆）；摘要称仿真 164 例联合成功率 84.8%/91.5%，但论文已被作者撤回，结论无法核验。
+  summary: |
+    该工作面向服务场景中人形机器人的意图理解、执行中响应新请求、任务修订与结果核验，提出半双工 System-2 智能体 HODAgent，由环境交互器、规划器、执行器和分层记忆组成，并以统一接口连接仿真与 Unitree G1 真机。根据摘要，作者报告在 164 个交互仿真案例中两种 VLM 骨干下联合成功率分别为 84.8% 与 91.5%，比基线高 9.8 和 18.9 个百分点；真机原子、组合与完整任务通过率分别为 92%、72% 与 63.3%；在多个具身基准上提升 0.7–9.0 个百分点。但 arXiv 评论显示公司要求内部审查，作者已撤回论文，且没有可用的 HTML 全文，基线、试验次数与评测设置均无法核实。本条目仅保留摘要层面的信息，不评分；若论文不再公开，建议从列表中移除。
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 论文已被撤回（公司内部审查要求），确认是否有重新公开的版本；若无，建议从列表移除
+  - 作者单位、基线设置与真机试验次数（无 HTML 全文）
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 论文已撤回，无项目页或仓库
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.17600'
+  title: 'LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: vla
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - benchmark
+  - vla-safety
+  - visual-cues
+  - libero
+  affiliations: []
+  one_liner: LIBERO-VIFO 在 40 个 LIBERO 任务上构建 8 类、1,347 个视觉提示实例，同时评测 VLA 跟随授权提示的能力与受未授权提示诱导的风险；作者报告无语言指令时 7 个模型仍有 32–60% 会执行提示所指任务。
+  summary: |
+    视觉提示（箭头、轨迹、文字卡、标识等）正被用于引导机器人，但已有评测只覆盖少量提示形式且只看最终成功率，也没有考虑未授权提示带来的安全风险。为弥补这一缺口，作者发布 LIBERO-VIFO：包含 8 类视觉提示资产（含一套面向机器人的标识体系）和自动插入管线，在 40 个 LIBERO 任务上生成 1,347 个任务条件化实例；设置四个协议，分别考察四阶段 VQA 理解、授权跟随、语言-提示冲突和无语言诱导。对 OpenVLA-OFT、π0.5、MolmoAct2、InstructVLA、InternVLA-A1.5 等 7 个 VLA 的评测中，作者报告全链理解准确率不超过 17.6%，理解强不等于跟随强；语言与提示冲突时所有模型未授权跟随率均为 0；但无语言时提示诱导执行率达 32.2–60.1%。场景物体化提示、HazardArena 危险场景与 PiPER 真机实验给出了一致的定性结果。局限在于仅基于 LIBERO 仿真，部分行为可能来自场景先验，且未见数据或代码公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 首次把视觉提示跟随的能力与安全放到同一基准中评测，视角新，但构建在 LIBERO 之上、覆盖范围有限。
+    E: 7 个 VLA、8 类提示与四个协议的系统评测，附场景物体与危险场景扩展，真机仅一个定性示例。
+    O: 未发现基准代码或数据公开。
+    T: 作者单位未在缓存中给出，信息不足按默认给 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 作者单位（HTML 未给出，需查 PDF）
+  - 基准资产与评测代码是否公开
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: unknown
+    license: unknown
+    note: ''
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []

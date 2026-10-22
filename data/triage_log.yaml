@@ -1,0 +1,439 @@
+entries:
+- arxiv_id: '2605.30561'
+  title: 'VLM3: Vision Language Models Are Native 3D Learners'
+  decision: exclude
+  reason: 超出范围：纯 VLM 的 3D 视觉理解（深度、对应、相机位姿、物体级空间问答），无机器人或具身决策实验
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2606.18208'
+  title: Looped World Models
+  decision: exclude
+  reason: 超出范围：在 ScienceWorld/ALFWorld 文本环境中做状态描述预测，以 EM/BLEU 对比 LLM API，无视觉感知或物理控制成分
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2606.24597'
+  title: 'Qwen-AgentWorld: Language World Models for General Agents'
+  decision: exclude
+  reason: 超出范围：面向 LLM 智能体（终端、GUI、工具调用、搜索）的语言世界模型，无物理/具身成分
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2606.31315'
+  title: 'BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding'
+  decision: exclude
+  reason: 超出范围：LLM 扩散式推测解码的块大小自适应选择，与具身/物理 AI 无关
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2607.06291'
+  title: 'AlayaWorld: Long-Horizon and Playable Video World Generation'
+  decision: exclude
+  reason: 重复：同一项目的完整技术报告 2607.18367 已覆盖本版内容，本版仅有定性结果
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2607.22393'
+  title: 'SceneActBench: Can Agents Act on the 3D Scenes They See?'
+  decision: exclude
+  reason: 超出范围：VLM 代理通过 Blender 工具编辑 3D 场景（布局、相机、关节、重建、动画）的基准，无机器人/具身身体或物理控制成分
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2607.27201'
+  title: Mental World Modeling
+  decision: exclude
+  reason: 超出范围：基于 LLM 的心智/社会情境决策预测框架与多选基准，无具身感知或控制实验
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2608.01735'
+  title: 'DAPD: Dual-Anchored Policy Distillation'
+  decision: exclude
+  reason: 超出范围：纯语言模型后训练（在线自蒸馏）方法，评测为数学/代码/指令遵循基准，与具身无关
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2608.06197'
+  title: 'EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning'
+  decision: exclude
+  reason: 超出范围：LLM 工具调用智能体的强化学习方法，评测为 BFCL、tau2-Bench 等文本工具基准，无具身环境
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2608.10744'
+  title: 'Beyond Pixels: From Video Priors to 4D Worlds'
+  decision: exclude
+  reason: 超出范围：通用文本/图像到 4D 场景生成，与决策和控制无关，具身相关内容只有操作/导航隐变量的定性兼容性演示
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2608.11174'
+  title: 'VIScore: Diagnosing Planning-Relevant Quality in Latent World Models'
+  decision: exclude
+  reason: 材料不足：arXiv 上两个版本都已被移除或撤回（管理员注明许可证问题，后续版本由作者撤回），没有可核查的全文
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2608.11215'
+  title: 'Poor Man''s Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop'
+  decision: exclude
+  reason: 超出范围：用低参数代理模型替代 LLM 智能体来模拟社会/经济系统，属于多智能体与统计物理研究，与具身或物理世界交互无关
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2608.11216'
+  title: 'AutoWorldModel-Bench: A State-Centric Benchmark for Automated World-Model Research'
+  decision: exclude
+  reason: 超出范围：评测编码智能体在游戏结构化状态上自主改进世界模型的能力，不涉及具身感知、机器人或物理控制
+  date: '2026-10-22'
+  run: migration-2026-10-22
+- arxiv_id: '2609.38537'
+  title: Systematically Exploring the Capabilities of GPT-6 Astra as Embodied Policies
+  decision: exclude
+  reason: 重复：与 2610.22471 的 GPT-6 Astra 评测高度重叠，增量有限
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.10522'
+  title: 'Show-Harness: Just a VLM Agent Can Play Robots'
+  decision: exclude
+  reason: 与 HexaShell 的 VLM-agent 机器人控制 harness 定位重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.18568'
+  title: 'WAVE-0: Bridging VLA Policies and WAMs with Lightweight Latent Future Prediction'
+  decision: exclude
+  reason: WAM 变体（latent 未来预测桥接 VLA），本轮已收录多篇 WAM
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.02840'
+  title: 'PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation'
+  decision: exclude
+  reason: WAM 变体（3D 点表示），本轮已收录多篇 WAM
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.24682'
+  title: 'Think Like a World Model, Act Like a VLA: Distilling World-Model Representations into Compact Robot Policies'
+  decision: exclude
+  reason: 增量过小：世界模型表征蒸馏到紧凑策略
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.12468'
+  title: 'DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training'
+  decision: exclude
+  reason: WAM 变体（反事实后训练），本轮已收录多篇 WAM
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.06251'
+  title: 'MobileVLA-R1 2.0: RL-Enhanced Reasoning for Mobile Robot Control'
+  decision: exclude
+  reason: 增量过小：移动机器人 VLA 的 RL 推理增强
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.05324'
+  title: 'RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?'
+  decision: exclude
+  reason: 增量有限：VLA 复杂场景/长时程基准，相对已收录基准增量有限
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.02054'
+  title: 'UniWAM: Unified World-Action Model'
+  decision: exclude
+  reason: WAM 统一范式，与 GreenWAM/OpenWAM 重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.21817'
+  title: A Sim-to-Real Integration Pipeline for Training and Deployment of Chunk-Based VLA Manipulation Policies
+  decision: exclude
+  reason: 工程整合：sim-to-real 部署流水线，无实质方法/数据增量
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.05719'
+  title: 'When to Switch: Reliable Action-Chunk Extension for Vision-Language-Action Models'
+  decision: exclude
+  reason: 增量过小：动作块扩展切换策略
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.02368'
+  title: Rethinking World-Action Model for Compositional and In-Context Robotic Manipulation
+  decision: exclude
+  reason: WAM 组合式/in-context 增量，本轮已收录多篇 WAM
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.10895'
+  title: 'ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs'
+  decision: exclude
+  reason: 增量有限：反应式决策物理基准
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.12299'
+  title: Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction
+  decision: exclude
+  reason: 增量有限：单 agent 到多 agent 世界模型扩展
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.37334'
+  title: 'Taming VLAs under Robot Execution Errors: Self-Compensation and Stress Testing'
+  decision: exclude
+  reason: 增量有限：执行误差自补偿，与 VLA 鲁棒性系列重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.20442'
+  title: 'Towards Agentic Robots: Model, Data, Environment, and Harness'
+  decision: exclude
+  reason: 观点性：agentic robot 范式定位，无新实验/基准
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.39820'
+  title: Learning from Runtime Feedback through Failure-Bank Self-Evolution for Vision-Language-Action Models
+  decision: exclude
+  reason: 增量有限：运行时反馈自进化，与 Fleet Experience 等重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.38173'
+  title: 'In-context Robot Learning Made Simple: A Democratized Recipe for Manipulation Tasks'
+  decision: exclude
+  reason: 增量有限：ICL 方法整合配方，与 ICL survey 重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.18872'
+  title: 'EgoExplorer: A Vision-Motion-Touch Observatory for Human Loco-Manipulation In Situ'
+  decision: exclude
+  reason: 增量有限：多模态观测数据集
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.25043'
+  title: 'VLA-Rolling: Fewer Denoising Steps, Better Control via Adaptive Action Reuse'
+  decision: exclude
+  reason: 增量过小：动作复用去噪步数优化
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.10409'
+  title: 'RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments'
+  decision: exclude
+  reason: 增量有限：多模态 agent 机器人仿真基准
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.01939'
+  title: 'Fewer Tokens, Better Action: GPT-6 Astra Robot Agents with 14% Higher Success Rate but 65% Fewer Tokens'
+  decision: exclude
+  reason: 重复：GPT-6 Astra agent token 优化，与 2610.22471/HexaShell 重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.36012'
+  title: 'In-Context Learning for Robots: Methods and Applications'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.16074'
+  title: 'World-Action Models for Robot Learning and Control: A Survey'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.20609'
+  title: 'SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving'
+  decision: exclude
+  reason: 方向偏离：自动驾驶 VLA，与具身操作主线较远
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.38059'
+  title: 'WorldLine: Action-Driven Visual Simulation for Robotic Manipulation'
+  decision: exclude
+  reason: WAM 仿真变体，本轮已收录多篇 WAM
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.24118'
+  title: 'CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies'
+  decision: exclude
+  reason: 增量有限：纠错执行框架，与 VLA 鲁棒性系列重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.02196'
+  title: 'InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation'
+  decision: exclude
+  reason: 增量有限：测试时奖励程序演化
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.18487'
+  title: 'ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models'
+  decision: exclude
+  reason: 增量有限：动作 token 化重构
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.26765'
+  title: 'HandsOn: A Large-Scale Simulation Benchmark for Generalizable Dexterous Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.23479'
+  title: 'HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.12126'
+  title: 'SuperNav: An Agentic Navigation System for Any Task in Any Scene'
+  decision: exclude
+  reason: 与 ScaleNav 的导航方向重叠，增量有限
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.33378'
+  title: Recursive Harness Distillation across Agents for Robot Manipulation
+  decision: exclude
+  reason: 增量有限：harness 蒸馏，与 HexaShell 系列重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.00864'
+  title: 'Kinematic MeanFlow: One-Step Action Generation Policy for Robotic Foundation Models'
+  decision: exclude
+  reason: 增量过小：一步动作生成
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.27308'
+  title: 'EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics'
+  decision: exclude
+  reason: 增量有限：coding agent 仿真基准
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.35709'
+  title: Humanoid Loco-Manipulation With Discrete VLA Model
+  decision: exclude
+  reason: 增量有限：离散 VLA 应用于 humanoid
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.35450'
+  title: 'Uni-VLaT: Whole-Body Tactile Adaptation of VLA Policies for Humanoid Loco-Manipulation'
+  decision: exclude
+  reason: 增量有限：全身触觉 VLA 适配
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.26520'
+  title: 'MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection'
+  decision: exclude
+  reason: 工程：多人遥操作数据平台，无实质方法增量
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.05588'
+  title: 'GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation'
+  decision: exclude
+  reason: WAM 预训练/扩展，本轮已收录多篇 WAM
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.35427'
+  title: LLMs are General Asynchronous Agents
+  decision: exclude
+  reason: 超出范围：通用 LLM 异步 agent 框架，非具身
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.10706'
+  title: 'HuRo: Robotizing Human Videos for Scalable VLA Pretraining'
+  decision: exclude
+  reason: 增量有限：人体视频 robotize 预训练
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.28256'
+  title: 'MemBodied: Recurrent Associative Memory for Vision-Language-Action Models'
+  decision: exclude
+  reason: 增量有限：循环记忆 VLA
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.17210'
+  title: 'FluxVLA Engine: A One-Stop VLA Engineering Platform for Embodied Intelligence'
+  decision: exclude
+  reason: 工程平台：VLA 工程化平台，无实质研究增量
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.15770'
+  title: 'JEPLO: Joint-Embedding Predictive Learning for LiDAR-Based Legged Locomotion'
+  decision: exclude
+  reason: 增量有限：LiDAR 腿足运动 JEPA
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.02521'
+  title: 'Spatial Memory Intelligence: Endowing World Models with Understanding-Driven Long-Term Memory'
+  decision: exclude
+  reason: 方向偏离：长视频/世界模型长时记忆，偏生成娱乐
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.28594'
+  title: Learning the 4D World through Point Trajectory Forecasting
+  decision: exclude
+  reason: 方向偏离：多视图视频预测世界模型，非具身控制主线
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.18950'
+  title: '$λ_0$: Scaling Open-World Egocentric Human Data for Humanoid Loco-Manipulation'
+  decision: exclude
+  reason: 与 Ropedia/EgoXperience 的 egocentric human 数据路线重叠
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.28660'
+  title: 'Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy'
+  decision: exclude
+  reason: 增量有限：手部 retargeting 三阶段框架
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.12036'
+  title: 'Pelican-Sim 1.0: A General World Model Simulator for Embodied Intelligence'
+  decision: defer
+  reason: 材料不足：技术报告，通用世界模型仿真器的实质开源与可用性待后续核实
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.07498'
+  title: 'CosmoH2G: A Hand-to-Gripper Transfer Dataset and Baseline Method for Object Manipulation with Complex Spatial Movements'
+  decision: exclude
+  reason: 增量有限：手到夹爪迁移数据集
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.20968'
+  title: 'SOMA: Stack-of-Objects Manipulation using a Quadruped Robot'
+  decision: exclude
+  reason: 增量有限：四足非抓取堆叠操作
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.19594'
+  title: 'RoboSpan: Learning Modular Coordination Policies for High-DoF Whole-Body Mobile Manipulation with Teleoperation'
+  decision: exclude
+  reason: 增量有限：高自由度全身移动操作模块化策略
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.12465'
+  title: 'A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control'
+  decision: exclude
+  reason: 增量有限：大规模 RL 数据配比
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.09455'
+  title: 'RLHND: Video Foundation Models as Physically Grounded Hand Trackers for Robot Learning'
+  decision: exclude
+  reason: 增量有限：视频基础模型手部追踪器
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.38653'
+  title: 'TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion'
+  decision: exclude
+  reason: 方向小众：肌肉骨骼运动，增量有限
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.36915'
+  title: 'AeroManip-VLA: Scalable Vision-Language-Action Learning for Aerial Manipulation with RL-Generated Demonstrations'
+  decision: exclude
+  reason: 方向较边缘：空中操作 VLA
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.21045'
+  title: 'DEXTERA: From a Single Image to Deployable Dexterous Manipulation via Real-to-Sim-to-Real'
+  decision: exclude
+  reason: 增量有限：单图到可部署灵巧操作流水线
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.13053'
+  title: 'Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model'
+  decision: exclude
+  reason: 增量有限：统一扩散 VLA
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2609.04355'
+  title: 'VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models'
+  decision: exclude
+  reason: 增量有限：非对称 co-bootstrapping 在线 RL
+  date: '2026-10-22'
+  run: '2026-10-22'
+- arxiv_id: '2610.01092'
+  title: 'Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation'
+  decision: exclude
+  reason: 增量有限：自我中心视频目标操作评测
+  date: '2026-10-22'
+  run: '2026-10-22'

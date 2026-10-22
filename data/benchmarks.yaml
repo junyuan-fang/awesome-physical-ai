@@ -3,113 +3,250 @@
 #   manipulation | navigation | locomotion | vla-generalization | multi-skill
 
 benchmarks:
-  # ============== Manipulation Benchmarks ==============
-  - name: "CALVIN"
-    subcategory: manipulation
-    desc: "Long-horizon, language-conditioned manipulation benchmark."
-    links:
-      project: "http://calvin.cs.uni-freiburg.de"
-      paper: "https://arxiv.org/abs/2112.03227"
-      code: "https://github.com/mees/calvin"
-    tags: [language-conditioned, long-horizon]
-
-  - name: "Meta-World"
-    subcategory: manipulation
-    desc: "50 manipulation tasks for multi-task and meta-RL evaluation."
-    links:
-      project: "https://meta-world.github.io"
-      paper: "https://arxiv.org/abs/1910.10897"
-      code: "https://github.com/Farama-Foundation/Metaworld"
-    tags: [multi-task, meta-rl]
-
-  - name: "LIBERO"
-    subcategory: manipulation
-    desc: "Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites."
-    links:
-      project: "https://libero-project.github.io"
-      paper: "https://arxiv.org/abs/2306.03310"
-    tags: [lifelong]
-
-  - name: "RLBench"
-    subcategory: manipulation
-    desc: "100 vision-guided manipulation tasks with CoppeliaSim."
-    links:
-      project: "https://sites.google.com/view/rlbench"
-      paper: "https://arxiv.org/abs/1909.12271"
-      code: "https://github.com/stepjam/RLBench"
-    tags: [vision]
-
-  - name: "AliasBench"
-    subcategory: manipulation
-    desc: "Benchmark probing multimodal-imitation ambiguity in VLA (used in IntentVLA 2026)."
-    links:
-      paper: "https://arxiv.org/abs/2605.14712"
-    tags: [vla, multimodal-imitation, 2026]
-
-  # ============== Navigation Benchmarks ==============
-  - name: "ProcTHOR"
-    subcategory: navigation
-    desc: "10,000+ procedurally generated household scenes for embodied AI."
-    links:
-      project: "https://procthor.allenai.org"
-      paper: "https://arxiv.org/abs/2206.06994"
-    tags: [household, procedural]
-
-  - name: "Habitat ObjectNav"
-    subcategory: navigation
-    desc: "Standard object-goal navigation in HM3D / MP3D."
-    links:
-      project: "https://aihabitat.org/challenge/2023/"
-      paper: "https://arxiv.org/abs/2210.13063"
-    tags: [object-nav]
-
-  - name: "OVMM"
-    subcategory: navigation
-    desc: "Open-vocabulary mobile manipulation benchmark (Habitat 3.0)."
-    links:
-      paper: "https://arxiv.org/abs/2310.13724"
-    tags: [open-vocab, mobile-manipulation]
-
-  # ============== Locomotion Benchmarks ==============
-  - name: "HumanoidBench"
-    subcategory: locomotion
-    desc: "MuJoCo-based humanoid locomotion + whole-body manipulation benchmark."
-    links:
-      project: "https://humanoid-bench.github.io"
-      paper: "https://arxiv.org/abs/2403.10506"
-      code: "https://github.com/carlosferrazza/humanoid-bench"
-    tags: [humanoid, whole-body]
-
-  # ============== VLA Generalization / OOD ==============
-  - name: "SimplerEnv"
-    subcategory: vla-generalization
-    desc: "Reproducible real-to-sim eval suite — measures VLA gap between real and sim deployment."
-    links:
-      project: "https://simpler-env.github.io"
-      paper: "https://arxiv.org/abs/2405.05941"
-      code: "https://github.com/simpler-env/SimplerEnv"
-    tags: [real-to-sim, vla, eval]
-
-  - name: "PhysX-Bench"
-    subcategory: vla-generalization
-    desc: "6-dim evaluation (geometry/scale/material/affordance/kinematics/function) — released with PhysX-Omni, 2026."
-    links:
-      paper: "https://arxiv.org/abs/2605.21572"
-    tags: [sim-ready, 2026]
-
-  # ============== Multi-Skill / Long-Horizon ==============
-  - name: "BEHAVIOR-1K"
-    subcategory: multi-skill
-    desc: "1,000 long-horizon household activities in OmniGibson — the largest activity benchmark."
-    links:
-      project: "https://behavior.stanford.edu/behavior-1k"
-      paper: "https://arxiv.org/abs/2403.09227"
-    tags: [household, long-horizon, omnigibson]
-
-  - name: "RoboCasa-Bench"
-    subcategory: multi-skill
-    desc: "100+ atomic + composite household tasks running on RoboCasa-Gen scenes."
-    links:
-      project: "https://robocasa.ai"
-      paper: "https://arxiv.org/abs/2406.02523"
-    tags: [household, multi-skill]
+- id: calvin
+  name: CALVIN
+  subcategory: manipulation
+  desc: Long-horizon, language-conditioned manipulation benchmark.
+  links:
+    project: http://calvin.cs.uni-freiburg.de
+    paper: https://arxiv.org/abs/2112.03227
+    code: https://github.com/mees/calvin
+  tags:
+  - language-conditioned
+  - long-horizon
+- id: meta-world
+  name: Meta-World
+  subcategory: manipulation
+  desc: 50 manipulation tasks for multi-task and meta-RL evaluation.
+  links:
+    project: https://meta-world.github.io
+    paper: https://arxiv.org/abs/1910.10897
+    code: https://github.com/Farama-Foundation/Metaworld
+  tags:
+  - multi-task
+  - meta-rl
+- id: libero
+  name: LIBERO
+  subcategory: manipulation
+  desc: Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
+  links:
+    project: https://libero-project.github.io
+    paper: https://arxiv.org/abs/2306.03310
+  tags:
+  - lifelong
+- id: rlbench
+  name: RLBench
+  subcategory: manipulation
+  desc: 100 vision-guided manipulation tasks with CoppeliaSim.
+  links:
+    project: https://sites.google.com/view/rlbench
+    paper: https://arxiv.org/abs/1909.12271
+    code: https://github.com/stepjam/RLBench
+  tags:
+  - vision
+- id: aliasbench
+  name: AliasBench
+  subcategory: manipulation
+  desc: Benchmark probing multimodal-imitation ambiguity in VLA (used in IntentVLA 2026).
+  links:
+    paper: https://arxiv.org/abs/2605.14712
+  tags:
+  - vla
+  - multimodal-imitation
+  - 2026
+- id: procthor
+  name: ProcTHOR
+  subcategory: navigation
+  desc: 10,000+ procedurally generated household scenes for embodied AI.
+  links:
+    project: https://procthor.allenai.org
+    paper: https://arxiv.org/abs/2206.06994
+  tags:
+  - household
+  - procedural
+- id: habitat-objectnav
+  name: Habitat ObjectNav
+  subcategory: navigation
+  desc: Standard object-goal navigation in HM3D / MP3D.
+  links:
+    project: https://aihabitat.org/challenge/2023/
+    paper: https://arxiv.org/abs/2210.13063
+  tags:
+  - object-nav
+- id: ovmm
+  name: OVMM
+  subcategory: navigation
+  desc: Open-vocabulary mobile manipulation benchmark (Habitat 3.0).
+  links:
+    paper: https://arxiv.org/abs/2310.13724
+  tags:
+  - open-vocab
+  - mobile-manipulation
+- id: humanoidbench
+  name: HumanoidBench
+  subcategory: locomotion
+  desc: MuJoCo-based humanoid locomotion + whole-body manipulation benchmark.
+  links:
+    project: https://humanoid-bench.github.io
+    paper: https://arxiv.org/abs/2403.10506
+    code: https://github.com/carlosferrazza/humanoid-bench
+  tags:
+  - humanoid
+  - whole-body
+- id: simplerenv
+  name: SimplerEnv
+  subcategory: vla-generalization
+  desc: Reproducible real-to-sim eval suite — measures VLA gap between real and sim deployment.
+  links:
+    project: https://simpler-env.github.io
+    paper: https://arxiv.org/abs/2405.05941
+    code: https://github.com/simpler-env/SimplerEnv
+  tags:
+  - real-to-sim
+  - vla
+  - eval
+- id: physx-bench
+  name: PhysX-Bench
+  subcategory: vla-generalization
+  desc: 6-dim evaluation (geometry/scale/material/affordance/kinematics/function) — released with PhysX-Omni, 2026.
+  links:
+    paper: https://arxiv.org/abs/2605.21572
+  tags:
+  - sim-ready
+  - 2026
+- id: behavior-1k
+  name: BEHAVIOR-1K
+  subcategory: multi-skill
+  desc: 1,000 long-horizon household activities in OmniGibson — the largest activity benchmark.
+  links:
+    project: https://behavior.stanford.edu/behavior-1k
+    paper: https://arxiv.org/abs/2403.09227
+  tags:
+  - household
+  - long-horizon
+  - omnigibson
+- id: robocasa-bench
+  name: RoboCasa-Bench
+  subcategory: multi-skill
+  desc: 100+ atomic + composite household tasks running on RoboCasa-Gen scenes.
+  links:
+    project: https://robocasa.ai
+    paper: https://arxiv.org/abs/2406.02523
+  tags:
+  - household
+  - multi-skill
+- id: robotwin-2
+  name: RoboTwin 2.0
+  desc: 可扩展的双臂操作数据生成器与基准，含 50 个双臂任务，提供 clean 与强域随机化两种设置。
+  links:
+    paper: https://arxiv.org/abs/2506.18088
+    code: https://github.com/RoboTwin-Platform/RoboTwin
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: navverse
+  name: NavVerse
+  desc: Isaac Sim 上的室内/室外/室内到室外连续物理导航基准，含 ObjNav、VLN、PlaceNav 三类任务与安全指标。
+  links:
+    paper: https://arxiv.org/abs/2607.19695
+    project: https://umich-curly.github.io/NavVerse-Benchmark/
+  subcategory: navigation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: kinebench
+  name: KineBench
+  desc: 基于 ManiSkill3 的具身视频世界模型闭环评测基准，用显式 6D 位姿提取替代 IDM，含 20 个操作任务与 4 个评测套件。
+  links:
+    paper: https://arxiv.org/abs/2607.19876
+    code: https://github.com/minecraft-zzz/KineBench
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: humanclaw-bench
+  name: HumanCLAW-Bench
+  desc: 基于 HSSD 的人形具身评测基准，VLM 发出原子技能、运动生成器在半物理仿真中执行，含 1,218 个寻找-导航-交互长程 episode。
+  links:
+    paper: https://arxiv.org/abs/2607.27180
+    project: https://human-claw.github.io/
+    code: https://github.com/Human-CLAW/HumanCLAW
+  subcategory: navigation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: robotwin
+  name: RoboTwin 2.0
+  desc: Bimanual manipulation simulation benchmark with 50 tasks under clean and domain-randomized settings.
+  links:
+    project: https://robotwin-platform.github.io
+    paper: https://arxiv.org/abs/2506.18088
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: humanoidvln
+  name: HumanoidVLN
+  desc: Physics-grounded VLN benchmark in Isaac Sim with four humanoid embodiments, 87 curated scenes (artist + 3DGS) and
+    933 instruction episodes.
+  links:
+    project: https://humanoid-vln.github.io/
+    paper: https://arxiv.org/abs/2608.12860
+  subcategory: navigation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: h2r-bench
+  name: H2R-Bench
+  desc: Benchmark of human-to-robot manipulation video generation, 240 EgoDex-based transfer cases scored on goal, action,
+    contact, embodiment and video quality.
+  links:
+    project: https://rongdingyi.github.io/H2R-Bench/
+    paper: https://arxiv.org/abs/2608.13049
+    code: https://github.com/Rongdingyi/H2R-Bench
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: softvtbench
+  name: SoftVTBench
+  desc: Isaac-based visuo-tactile deformable-object pick-and-place dataset and benchmark with evaluator-only FEM states and
+    Deformation-aware Success Rate (DSR).
+  links:
+    paper: https://arxiv.org/abs/2608.18701
+    code: https://github.com/TuojingAI/SoftVTBench
+    data: https://huggingface.co/datasets/Arthur12137/SoftVTBench
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: xp-teleop
+  name: Xp-Teleop
+  desc: Unitree G1 双六自由度灵巧手长时程 loco-manipulation 遥操作世界模型评测集，27 段约 1 小时、543 个原子片段/30 类技能，含 RGB-D、位姿、骨架与触觉。
+  links:
+    project: https://ropedia.github.io/ropedia-w0/
+    code: https://github.com/Ropedia/ropedia-w0
+  subcategory: multi-skill
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: habitatgs-ln
+  name: HabitatGS-LN
+  desc: 基于 Habitat-GS/InteriorGS 的语言条件局部导航基准，157 个 episode/45 个留出场景，要求按属性与空间关系定位可见目标并停靠。
+  links:
+    project: https://zju3dv.github.io/ScaleNav/
+    code: https://github.com/MachEmbodied/ScaleNav
+  subcategory: navigation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: humanoidtoolbench
+  name: HumanoidToolBench
+  desc: '18-task humanoid tool-use benchmark: 3 scenarios x 3 execution levels x 2 tool-set modes, 55 tool assets.'
+  links:
+    project: https://snu-pi.github.io/HumanoidToolBench/
+    code: https://github.com/SNU-PI/HumanoidToolBench
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: egox-bench
+  name: EgoX-Bench
+  desc: 从 EgoX-Data-6M 留出的 1 小时质量受控子集，覆盖工作台操作、跨房间交互与户外 loco-manipulation，用于联合评测相机、深度、手与物体重建。
+  links:
+    paper: https://arxiv.org/abs/2610.26625
+    project: https://ropedia.github.io/EgoXperience
+    data: https://huggingface.co/datasets/ropedia-ai/EgoX-Bench
+  subcategory: manipulation
+  added: '2026-10-22'
+  last_check: '2026-10-22'

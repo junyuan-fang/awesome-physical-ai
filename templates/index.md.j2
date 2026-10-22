@@ -1,0 +1,41 @@
+{#- Jinja2 template — renders docs/index.md; DO NOT edit docs/index.md directly -#}
+{%- set PZH = {"must-read": "🔥 重点阅读", "notable": "👀 值得关注", "watching": "观察中", "unrated": "暂不评级"} -%}
+{%- set CZH = {"substantive": "💻 实质代码", "partial": "🟡 部分开放", "placeholder": "📄 占位仓库", "no-repo": "未找到仓库", "unknown": "未核查"} -%}
+{%- set RZH = {"proposes": "提出", "pretrain": "预训练", "finetune": "微调/后训练", "eval": "评测"} -%}
+# 累积索引 / Ranked index
+
+> 自动生成于 {{ last_updated }}，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
+> 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
+
+共 {{ stats.papers }} 篇：🔥 {{ priority_counts["must-read"] }} · 👀 {{ priority_counts["notable"] }} · 观察中 {{ priority_counts["watching"] }} · 暂不评级 {{ priority_counts["unrated"] }}
+
+{% for c in index_categories %}
+- [{{ c.title }}](#cat-{{ c.id }}) · {{ c.papers | length }}
+{% endfor %}
+- [数据集 / 基准使用关系](#resources)
+
+{% for c in index_categories %}
+## <a id="cat-{{ c.id }}"></a>{{ c.title }}
+
+| 论文 | 首次公开 | 路线 | 优先级 | 总分 (C/E/O/T) | 开源（last_check） | 作者/单位 | 报告 |
+|---|---|---|---|---|---|---|---|
+{% for p in c.papers %}
+| {% if p.classic %}📜 {% endif %}[{{ p.title | cell }}]({{ p.links.arxiv }}) | {{ p.date }} | {{ {"core": "核心", "adjacent": "相邻"}[p.route] if p.route else "—" }} | {{ PZH[p.review.priority] }} | {% if p.review.total %}**{{ p.review.total }}** ({{ p.review.scores.C }}/{{ p.review.scores.E }}/{{ p.review.scores.O }}/{{ p.review.scores.T }}){% else %}—{% endif %} | {{ CZH[p.open.code or "unknown"] }}{% if p.open.license and p.open.license not in ("unknown", "none-found") %} · {{ p.open.license }}{% endif %}{% if p.open.last_check %} ({{ p.open.last_check }}){% endif %} | {{ ((p.affiliations or [])[:3] | join("; ")) | cell if p.affiliations else p.authors | cell }} | {% if p.digest %}[📝](../{{ p.digest }}){% endif %} |
+{% endfor %}
+
+{% endfor %}
+## <a id="resources"></a>数据集 / 基准使用关系
+
+只登记论文正文或实验设置中明确写出的关系；在某基准上评测 ≠ 用其 demos 训练。
+
+{% for r in datasets + benchmarks + simulators %}
+{% if used_by[r.id] %}
+### <a id="resource-{{ r.id }}"></a>{{ r.name }}
+
+{% for u in used_by[r.id] | sort(attribute="paper.date", reverse=true) %}
+- {{ RZH[u.role] }} · [{{ u.paper.title }}]({{ u.paper.links.arxiv }}) · {{ u.paper.date[:7] }}{% if u.paper.digest %} · [报告](../{{ u.paper.digest }}){% endif %}
+
+{% endfor %}
+
+{% endif %}
+{% endfor %}

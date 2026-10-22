@@ -25,9 +25,16 @@ Edit the relevant YAML file under `data/`:
 | Tool / library | `data/tools.yaml` |
 | New category section | `data/categories.yaml` |
 
-**Do NOT edit `README.md` directly** — it is auto-generated from `data/`.
+**Do NOT edit `README.md` or `docs/index.md` directly** — both are auto-generated from `data/`.
 
-Use existing entries as a template. Run locally before pushing:
+Use existing entries as a template. A paper needs at least `title / category / date / links / review / open`;
+a PR-submitted paper may enter as `review: {priority: unrated}` and `open: {code: unknown}` — it will be
+scored by the next review run. If you do score it, follow [docs/METHODOLOGY.md](docs/METHODOLOGY.md):
+four 1–5 scores with a one-line rationale each, `evidence_read` beyond the abstract, and let
+`scripts/apply_reviews.py` (or `curation.finalize_review`) derive `total / priority / highlight` — never hand-set 🔥.
+Datasets / benchmarks / simulators / tools need a unique `id`, which papers reference in `uses`.
+
+Run locally before pushing:
 
 ```bash
 pip install -r requirements.txt
@@ -35,7 +42,7 @@ python scripts/validate.py
 python scripts/generate_readme.py
 ```
 
-GitHub Actions will reject PRs that fail validation.
+GitHub Actions will reject PRs that fail validation (schema, score formula, derived priority, `uses` ids).
 
 ## 3. Quality bar
 
@@ -48,9 +55,18 @@ GitHub Actions will reject PRs that fail validation.
 
 ## Auto-update note
 
-Papers are auto-ingested from my [daily paper aggregation pipeline](https://github.com/junyuan-fang/personal_planning) via `scripts/ingest_dailypaper.py`. Only entries rated 🔥 or 👀 by the human-in-the-loop review stage land here.
+Every morning (08:00 Asia/Shanghai) a scheduled agent runs the pipeline described in
+[docs/METHODOLOGY.md](docs/METHODOLOGY.md):
 
-PR-submitted entries are kept alongside auto-ingested ones.
+1. `scripts/run_daily.sh fetch` — discover candidates directly from arXiv + HuggingFace daily papers,
+   dedupe against `data/papers.yaml` and `data/triage_log.yaml`, prefilter, probe repos, cache full text.
+2. The agent fills `pipeline/reviews/<date>.yaml`: layer-1 triage, then layer-2 reading and four-dimension scoring.
+3. `scripts/run_daily.sh apply` — enforce the run cap, merge, write `digests/daily/<date>.md`,
+   re-check open-source status on the weekly/monthly cadence, roll up weekly/monthly picks, re-render, validate.
+
+Every judgement (including exclusions) is committed in `pipeline/reviews/` and `data/triage_log.yaml`,
+so you can audit or overturn it in a PR. The legacy ingesters (`ingest_dailypaper.py`,
+`ingest_from_news_archive.py`) still work but add papers as `unrated` until reviewed.
 
 ## License
 

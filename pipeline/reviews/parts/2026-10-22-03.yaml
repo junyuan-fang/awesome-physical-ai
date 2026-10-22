@@ -1,0 +1,865 @@
+run:
+  scan_date: '2026-10-22'
+  kind: daily
+  window_start: '2026-09-02'
+  window_end: '2026-10-22'
+  last_covered_end: '2026-09-04'
+  d: 48
+  cap: 20
+  stats:
+    fetched: 6029
+    already_tracked_or_triaged: 1
+    out_of_scope: 1413
+    below_pool_cut: 4535
+    pool: 80
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items:
+- arxiv_id: '2609.24118'
+  title: 'CARE: Experience-Guided Atomic Corrective Execution for Vision-Language-Action Policies'
+  prefilter_score: 19.6
+  triage: exclude
+  reason: 增量有限：纠错执行框架，与 VLA 鲁棒性系列重叠
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: All authors are with Dalian University of Technology, Dalian, China.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/xiaojunlan/care
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.12818'
+  title: 'LeWAM: End-to-End World and Action Modeling with JEPAs'
+  prefilter_score: 19.5
+  triage: include
+  reason: null
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - jepa
+  - flow-matching
+  - planning
+  - manipulation
+  affiliations:
+  - UC San Diego
+  - ETH Zurich
+  - University of British Columbia
+  - Brown University
+  one_liner: 首个端到端 JEPA：联合潜状态预测与动作 flow matching，在 10 个仿真任务上把接触密集/长程任务的规划成功率做到 89.7%/46.2%，规划快 32.3 倍。
+  summary: 为缓解 JEPA 世界模型需先单独训练表征与动力学、再接策略或 CEM 求解器的问题，作者提出 LeWAM：用 Mixture-of-Transformers 让干净动作支路预测下一潜状态、加噪动作支路做 flow matching，并用
+    SIGReg 约束潜状态，使同一模型既能直接输出动作块，也能用学到的潜动力学做梯度式规划。在 10 个仿真导航/操作任务（3 seeds×50 episodes）上，作者报告其视觉规划成功率高过 LeWM(CEM)、LeWM(IDM)、DINO-WM
+    与 GCBC，接触密集与长程任务分别从 28.6%/10.9% 升至 89.7%/46.2%，单次规划约为 CEM 的 1/32；在三个真机任务各 30 次试验中与 Diffusion Policy 相当。该结果提示动作监督可作为防崩塌信号，但仍受单任务单本体、数据规模有限、未验证跨物体泛化的限制。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 5
+    T: 4
+  rationale:
+    C: 首个把表征、动作条件潜动力学与随机策略在单一 JEPA 目标下联合训练的模型，相对 LeWM/DINO-WM 有清晰方法增量
+    E: 10 个仿真导航/操作环境、4 个基线、3 seeds×50 episodes，加 SIGReg/编码器/动作头消融与线性探针，另有 3 个真机任务各 30 次试验；但单任务单本体、无跨物体泛化测试
+    O: MIT 仓库含 182 个文件/90 个代码文件，HF 上公开 5 个任务 checkpoint 与对应数据集，可直接复现
+    T: Randall Balestriero（LeJEPA 作者）等 JEPA 核心成员，UCSD/Brown/UBC/ETH 组合在该线上有可核实的强相关积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - HF 仅见 cube/drawer/pointmaze-large/pusht/puzzle 五个任务的 checkpoint 与数据，其余五个环境的权重/数据是否发布待确认
+  - 真机 Pick and Place T、Push-T、Tape Stack 的部署代码与训练配置是否随仓库提供
+  open:
+    code: substantive
+    repo: https://github.com/MinghaoFu/lewam
+    weights: open
+    data: open
+    license: MIT
+    note: 仓库含 90 个代码文件与训练配置；HF 公开 5 个任务的 checkpoint 与数据集，其余环境复用 LeWM/DINO-WM/OGBench 的公开数据，故 data 仍记为 open。
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.12772'
+  title: 'Reflex: Visually Grounded Reactive Humanoid Control'
+  prefilter_score: 19.5
+  triage: include
+  reason: null
+  category: locomotion
+  route: core
+  contribution: model
+  tags:
+  - humanoid
+  - whole-body-control
+  - sim2real
+  - egocentric-vision
+  - reinforcement-learning
+  affiliations:
+  - University of Washington
+  - Stanford University
+  - University of Southern California
+  - National University of Singapore
+  - University of North Carolina at Chapel Hill
+  - Allen Institute for AI
+  one_liner: 三阶段训练的人形全身接箱框架：仿真第一视角 RGB-D 抓接成功率 85.7%，Unitree G1 真机 2.5 m/5 m 处达 65%/40%。
+  summary: 为解决人形机器人对快速运动物体的视觉反应式全身控制问题——全身协调、约 1 秒内预测物体动力学、第一视角感知三者耦合——作者提出 Reflex 三阶段框架：先用 PPO 与人体动作先验在特权状态上学全身接箱；再让策略从延迟
+    20–60 ms、不完整的箱体观测推断 8 维动力学潜变量；最后固定控制器，用第一视角 RGB-D 与自运动历史回归该潜变量。仿真中作者报告纯视觉抓接成功率 85.7%，接近特权状态的 87.9%，去掉时序历史在居中/侧偏投掷上分别下降
+    35.6 与 39.8 个百分点；Unitree G1 真机在 2.5 m 与 5 m 处接住人类投掷纸箱的成功率为 65% 与 40%，相当于人类接球者的 76% 与 59%。该结果提示分阶段训练可把视觉学习与全身控制解耦，但仍限于单一接箱任务与单一机型，真机每条件仅
+    20 次试验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 首次把全身控制、延迟下物体动力学推断与第一视角视觉接地串成三阶段可训练框架，并在真机人形上完成接箱，任务与系统组合是明确增量
+    E: 仿真每条件 640 次投掷、6 个控制器种子，奖励/初始化/视觉编码器/延迟消融较完整，真机每条件 20 次并与人类接球者对照；但单任务单机型
+    O: MIT 仓库含三阶段训练与评测代码及约 25 MB checkpoint，真机部署栈未包含
+    T: Ranjay Krishna、Jiafei Duan、Zhongzheng Ren、Yue Wang 等在具身视觉与机器人学习方向有可核实积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 真机部署栈（G1 通信、Kalman 滤波、SONIC 切换）未随代码发布，是否会后续开源待确认
+  open:
+    code: substantive
+    repo: https://github.com/ToberJ/reflex
+    weights: open
+    data: partial
+    license: MIT
+    note: 仓库含三阶段训练/评测代码与 download_checkpoints.sh 拉取的约 25 MB checkpoint，真机部署栈明确不在发布范围内；HF 数据集链接为第三方重定向 AMASS/动作数据，非本文新发布，故
+      data 记 partial。
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.02196'
+  title: 'InterEvolve: Test-Time Evolution of Reward Programs for Humanoid Loco-Manipulation'
+  prefilter_score: 19.5
+  triage: exclude
+  reason: 增量有限：测试时奖励程序演化
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.18487'
+  title: 'ActionPiece: Rethinking Action Tokenization for Autoregressive Vision-Language-Action Models'
+  prefilter_score: 19.4
+  triage: exclude
+  reason: 增量有限：动作 token 化重构
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: ['
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/DeepCybo-PhysAI/ActionPiece
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.26765'
+  title: 'HandsOn: A Large-Scale Simulation Benchmark for Generalizable Dexterous Manipulation'
+  prefilter_score: 19.1
+  triage: include
+  reason: null
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - dexterous-manipulation
+  - benchmark
+  - simulation
+  - demonstrations
+  - cross-embodiment
+  affiliations:
+  - Tsinghua University
+  - Beijing University of Posts and Telecommunications
+  - NatureWill
+  - Peking University
+  one_liner: 跨本体灵巧操作仿真基准：5 臂 6 手、66 个任务、18,000 条演示；最佳多任务策略 Core-50 成功率仅 29.1%。
+  summary: 为弥补灵巧操作基准中人类演示规模小、缺少完全留出的评估任务与细粒度诊断的缺口，作者构建 HandsOn：在 Isaac Sim 中支持 5 种机械臂、6 种灵巧手与约 200 个刚体/铰接/可变形资产，发布 18,000
+    条人工核验的仿真演示（约 56 小时、三路同步视角）与 66 个任务，Core-50 供策略学习与执行评测，Transfer-16 只做资产、关系与技能组合迁移。作者以每任务 100 次试验评测 DP、5 个 VLA 与 3 个 WAM，报告最佳多任务策略
+    Core-50 成功率为 29.1%；未经基准微调的 GPT-6（move_eef）在 660 次试验中仅 5.2%/1.9%。分阶段诊断显示失败集中在建立接触、动作协调与保持已达目标，真机只提供定性 rollout，且各模型预训练数据与算力不同，比较不能归因于架构。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 18k 演示、66 任务、5 臂 6 手、含完全留出 Transfer-16 的灵巧操作基准，人类轨迹数为现有灵巧基准的 5.7–16.4 倍，是关键资源级增量
+    E: 10 种方法×50 任务×每任务 100 次试验，另有 Transfer-16、GPT-6 660 次试验、分阶段诊断与统计区间；但真机仅定性 rollout，各模型预训练数据与算力不可比
+    O: MIT 仓库含环境、66 个任务配置与评测代码，18,000 条轨迹数据集在 HF 公开；策略 checkpoint 未随仓库分发
+    T: 清华 C3I（Ning Ding 等）与北大/NatureWill，近年在 agent 与 VLA 方向有可核实产出
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - README 提到 Newton 后端的任务数据待发布，发布时间待复查
+  - 策略 checkpoint 明确不分发，后续是否另行公开待确认
+  open:
+    code: substantive
+    repo: https://github.com/TsinghuaC3I/HandsOn
+    weights: none
+    data: open
+    license: MIT
+    note: 探针记为 substantive 且 README 顶部有 coming soon 文案；核对后仓库实际含环境、66 个任务 YAML、评测代码与适配的 OpenPI 栈，仅 Newton 后端数据标注为待发布，故保留 substantive；checkpoint
+      不分发。
+  uses:
+  - resource: isaac-sim
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: handson
+    name: HandsOn
+    desc: 跨本体灵巧操作仿真基准：5 种机械臂、6 种灵巧手、66 个任务与 18,000 条人类演示
+    links:
+      project: https://llltttwww.github.io/HandsOn-website/
+      code: https://github.com/TsinghuaC3I/HandsOn
+    subcategory: manipulation
+- arxiv_id: '2610.23479'
+  title: 'HexaShell: A Thin Harness for Exploring the Limits of VLM Agents as Robot Coding Agents'
+  prefilter_score: 19.0
+  triage: include
+  reason: null
+  category: manipulation
+  route: adjacent
+  contribution: infra
+  tags:
+  - coding-agent
+  - vlm-agent
+  - manipulation
+  - tool-use
+  - robot-programming
+  affiliations: []
+  one_liner: 让 VLM 编码 agent 通过薄 harness 控制机械臂并演化可复用工具，RoboDojo 官方隐藏 seed 榜以 46.9% 成功率居首。
+  summary: 为探究 VLM 编码 agent 直接控制机器人能走多远，作者提出 HexaShell：薄 harness 只把 robo 命令转成关节运动而不做决策，acting agent 执行 episode，失败后 optimizer
+    agent（同为 Codex/GPT-6-Astra）读完整记录，诊断并修复带测试的工具，能力以代码沉淀，无需演示或额外训练。工具仅用 RGB、相机标定与机械臂状态，靠多视角三角化与已知平面测深获得厘米级位置。在 RoboDojo 官方隐藏
+    seed 评测（42 任务×50 episode）中，作者报告 46.9% 成功率与 53.2 progress，居官方榜首；Memory 任务 81.0%、Precision 仅 32.0%，三角化比 Depth Anything V2
+    高 8.7 分。该结果提示瓶颈在接触精度，但 harness 未开源、真机仅两段定性演示。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 把编码 agent 的「写工具—测—保留」闭环搬到真机操作，harness 刻意做薄、工具跨任务复用，是新的系统范式而非又一个策略
+    E: RoboDojo 官方隐藏 seed、42 任务×50 episode 的第三方评测并居榜首，另有三角化 vs 深度网络、干净 vs 杂乱、失败模式分析与两段真机演示
+    O: 仓库公开演化后的工具、任务配置与结果，但 README 明确 harness、executor、agent 容器与演化循环未包含，属部分开放
+    T: 作者单位未在 arXiv HTML 中给出（关联 hexafuture.ai），公开研究产出难以核实，按规则默认 3
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 作者单位与团队背景未在 HTML 中给出，需查 PDF 确认
+  - harness 与 evolution loop 是否计划开源（当前明确排除）
+  open:
+    code: partial
+    repo: https://github.com/HexaFuture/HexaShell
+    weights: n/a
+    data: n/a
+    license: Apache-2.0
+    note: 探针记为 substantive；实际仓库只含演化后的工具、RoboDojo 任务配置与 results，README 明确 harness（server、executor、agent 容器、evolution loop）及工具测试未包含，故下调为
+      partial。
+  uses:
+  - resource: isaac-sim
+    role: eval
+  new_resources:
+  - kind: tool
+    id: hexashell
+    name: HexaShell
+    desc: VLM 编码 agent 通过薄 harness 控制机械臂、以代码形式演化可复用工具的工具库与任务配置
+    links:
+      project: https://hexafuture.ai/home/
+      code: https://github.com/HexaFuture/HexaShell
+- arxiv_id: '2610.12126'
+  title: 'SuperNav: An Agentic Navigation System for Any Task in Any Scene'
+  prefilter_score: 19.0
+  triage: exclude
+  reason: 与 ScaleNav 的导航方向重叠，增量有限
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Zhejiang University'
+  - 'Affiliation: Shenzhen University'
+  - 'Affiliation: Causa Robotics†Corresponding author'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/zju3dv/SuperNav
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.10528'
+  title: 'Long-WAM: Scaling the Context of World-Action Models'
+  prefilter_score: 19.0
+  triage: include
+  reason: null
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - long-context
+  - autoregressive-video
+  - real-time
+  - humanoid
+  affiliations:
+  - NVIDIA
+  - MIT
+  - HKU
+  - UCSD
+  one_liner: 自回归视频预训练 + 因果世界-动作模型：GR-1 上 19.2 s 上下文把成功率从 63.3% 提到 78.7%，RTX 5090 每动作块 107.4 ms。
+  summary: 为在实时控制约束下让世界-动作模型真正用上足够长的视觉历史，作者提出 Long-WAM：先在约 10,000 窗口等效小时的机器人/第一视角视频上做自回归视频预训练（LongLive2.0-Robot），再以因果到因果方式适配动作头，并用异步执行、流式
+    VAE 与 NVFP4 量化在边缘设备部署。RoboCasa GR-1 上作者报告上下文从 0 增至 19.2 s 使成功率由 63.3% 升至 78.7%，而双向预训练初始化无净增益；LIBERO-Long 99.5%、RoboTwin
+    2.0 平均 94.4%、DOMINO 34.9% SR。RTX 5090 上每动作块（含未来视频潜变量预测）107.4 ms；G1 与 YAM 真机每条件 20 次试验，动态叠杯 95%。该结果提示历史的价值取决于预训练是否学会因果预测，但
+    38.4 s 时性能回落，且各基准数字不可横向比较。
+  venue: ''
+  scores:
+    C: 4
+    E: 5
+    O: 4
+    T: 5
+  rationale:
+    C: 给出「访问历史≠会用历史、增益取决于自回归视频预训练」的可检验结论，并配 model-system 协同设计，相对 DreamZero/LingBot-VA 是清晰的方法+系统增量
+    E: LIBERO、RoboTwin 2.0、DOMINO、RoboCasa GR-1/365 四个仿真基准 + G1/YAM 真机每条件 20 次 + 上下文/初始化/去噪策略消融 + 延迟与设备测量，覆盖广且对照完整
+    O: LongLive 仓库内含 Long-WAM 子项目的训练/评测/部署代码，HF 公开 LIBERO/RoboTwin/RoboCasa/YAM 多个 checkpoint，Apache-2.0；预训练语料不随发布
+    T: NVIDIA/MIT/HKU/UCSD，Linxi Fan、Song Han、Sifei Liu、Yukang Chen 等在该方向有多项标志性模型与系统
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - RoboCasa GR-1 的 19.2 s 上下文 checkpoint 在仓库中标注为待更新，需复查是否已发布
+  open:
+    code: substantive
+    repo: https://github.com/NVlabs/LongLive
+    weights: open
+    data: partial
+    license: Apache-2.0
+    note: 代码位于 NVlabs/LongLive 仓库的 Long-WAM 子项目；HF 公开 LIBERO、RoboTwin、RoboCasa、YAM 等 checkpoint，19.2 s GR-1 checkpoint 标注待更新；预训练语料为公开数据集与自有数据混合，未随发布，故
+      data 记 partial。
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  - resource: agibot-world
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2609.33378'
+  title: Recursive Harness Distillation across Agents for Robot Manipulation
+  prefilter_score: 18.9
+  triage: exclude
+  reason: 增量有限：harness 蒸馏，与 HexaShell 系列重叠
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Seoul National University'
+  - 'Email: syeonkim@snu.ac.kr'
+  - 'Affiliation: Korea Advanced Institute of Science and Technology'
+  - 'Email: minkyu.kim@snu.ac.kr'
+  - 'Email: baekseung.kim@snu.ac.kr'
+  - 'Email: junhoo.lee@kaist.ac.kr'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.00864'
+  title: 'Kinematic MeanFlow: One-Step Action Generation Policy for Robotic Foundation Models'
+  prefilter_score: 18.8
+  triage: exclude
+  reason: 增量过小：一步动作生成
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Email: jiawei.fan@intel.com'
+  - 'Email: anbang.yao@intel.com'
+  - 'Affiliation: Intel Labs China Midea AI Research'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/IntelChina-AI/K-MF
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.27308'
+  title: 'EmbodiedSWE: Coding Agents for Long Horizon Dexterous Robotics'
+  prefilter_score: 18.8
+  triage: exclude
+  reason: 增量有限：coding agent 仿真基准
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/EmbodiedSWE/EmbodiedSWE
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.35709'
+  title: Humanoid Loco-Manipulation With Discrete VLA Model
+  prefilter_score: 18.5
+  triage: exclude
+  reason: 增量有限：离散 VLA 应用于 humanoid
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Horizon Robotics'
+  - 'Affiliation: *Equal contribution'
+  - 'Affiliation: Project page: https://horizonrobotics.github.io/gail/Holo-M/'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/NVlabs/GR00T-WholeBodyControl
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.35450'
+  title: 'Uni-VLaT: Whole-Body Tactile Adaptation of VLA Policies for Humanoid Loco-Manipulation'
+  prefilter_score: 18.5
+  triage: exclude
+  reason: 增量有限：全身触觉 VLA 适配
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Tsinghua University;'
+  - 'Affiliation: Beihang University;'
+  - 'Affiliation: Communication University of China;'
+  - 'Affiliation: The University of Hong Kong; *Equal contribution. †Corresponding author.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.26520'
+  title: 'MATE: Multi-Agent Virtual Teleoperation Platform for Humanoid Collaboration Data Collection'
+  prefilter_score: 18.5
+  triage: exclude
+  reason: 工程：多人遥操作数据平台，无实质方法增量
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.05588'
+  title: 'GE-Act 2.0: Pretraining and Scaling a World-Action Model for Robotic Manipulation'
+  prefilter_score: 18.5
+  triage: exclude
+  reason: WAM 预训练/扩展，本轮已收录多篇 WAM
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: https://ge-act-v2.github.io/'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/NVIDIA/Isaac-GR00T
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.35427'
+  title: LLMs are General Asynchronous Agents
+  prefilter_score: 18.5
+  triage: exclude
+  reason: 超出范围：通用 LLM 异步 agent 框架，非具身
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/dvmazur/async_llm
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.10706'
+  title: 'HuRo: Robotizing Human Videos for Scalable VLA Pretraining'
+  prefilter_score: 18.3
+  triage: exclude
+  reason: 增量有限：人体视频 robotize 预训练
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/3587jjh/HuRo
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.28256'
+  title: 'MemBodied: Recurrent Associative Memory for Vision-Language-Action Models'
+  prefilter_score: 18.2
+  triage: exclude
+  reason: 增量有限：循环记忆 VLA
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Nanyang Technological University'
+  - 'Affiliation: Griffin Labs'
+  - 'Affiliation: École Centrale de Lyon Code: https://github.com/declare-lab/MemBodied Project Website: https://declare-lab.github.io/MemBodied'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/declare-lab/MemBodied
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.25736'
+  title: 'Learning from Fleet Experience: Collective Experience Learning Across 96 Robots'
+  prefilter_score: 18.0
+  triage: include
+  reason: null
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - fleet-learning
+  - real-world-rl
+  - vla
+  - imitation-learning
+  - deployment
+  affiliations:
+  - Tsinghua University
+  - AgiBot
+  - Infinigence AI
+  one_liner: 用机队部署经验替代专家纠正：FERT 从成功轨迹检索与失败相关的片段，96 台真机 5 个任务达 93.3–99.2% 成功率。
+  summary: 为减少策略持续改进对专家纠正动作的依赖，作者提出 Collective Experience Learning：机器人在部署中汇集自身执行经验更新共享策略，并以 FERT 实现——用失败片段的上下文从成功轨迹中检索相关片段、提高其采样优先级，只用机器人自主动作做监督，人工仅提供二元
+    episode 结果与环境重置；配套容错异步系统 FATS 协调 96 台机器人、云端推理与训练。在 AgiBot G2 的 5 个真机任务上，作者报告 FERT 在未参与采集的机器人上每任务 120 次试验的成功率为 93.3–99.2%，均值由
+    (M)HG-DAgger 的 81.0% 升至 97.3%，手机包装从 79.2% 升至 98.3%。该结果提示部署经验可替代部分专家监督，但仍依赖任务特定的专家初始化与人工结果标注，未验证跨任务/跨本体迁移。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 提出「从机队部署经验学习」的新范式，把动作监督来源从专家纠正换成机器人自身执行，并以 FERT + FATS 在 96 台真机上落地，规模在同类工作中罕见
+    E: 5 个真机任务、未参与采集的机器人上每任务 120 次试验，对照 (M)HG-DAgger/RECAP/RLT，含检索/同步频率/片段扩展/优先级消融与 96 台 9,834 episode 的系统运行分析；但单本体、无仿真与跨任务迁移
+    O: 项目页只指向通用 RLinf 框架，未在其中找到 CEL/FERT 实现，也未发布权重或机队数据，当前开放度低
+    T: 清华 + AgiBot + Infinigence AI，作者含 Bo Dai 等，机器人学习与大规模训练系统产出可核实
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - project
+  - code
+  pending_checks:
+  - RLinf 仓库是否包含 FERT/CEL 实现与可加载 checkpoint（README 与算法列表未提及 CEL/FERT）
+  - 96 台机队的执行数据或 episode 成功/失败标注是否会公开
+  open:
+    code: partial
+    repo: https://github.com/RLinf/RLinf
+    weights: unknown
+    data: none
+    license: Apache-2.0
+    note: 探针命中的 RLinf 是通用具身/agentic RL 框架（项目页亦如此链接），README 与算法列表支持 RECAP、RLT 等但未提及 CEL/FERT；HF 上的 WideSeek-R1 数据集与本工作无关，属组织匹配误报；未找到权重与机队数据，按现状
+      O 记 2。
+  uses: []
+  new_resources: []

@@ -33,6 +33,9 @@ from typing import Any
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from migrate_v2 import migrate_paper  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 PAPERS_YAML = ROOT / "data" / "papers.yaml"
 NEWS_ARCHIVE = Path.home() / "code" / "claude_bot" / "news_archive"
@@ -405,20 +408,23 @@ def to_paper_entry(meta: dict[str, Any]) -> dict[str, Any]:
     if project_url:
         links["project"] = project_url
 
-    return {
-        "arxiv_id": meta["arxiv_id"],
-        "title": meta["title"],
-        "authors": short_authors(meta["authors"]),
-        "date": meta["published"][:10],  # YYYY-MM-DD (full)
-        "venue": meta.get("venue", ""),
-        "category": categorize(meta),
-        "tags": ["news-archive"],
-        "abstract_short": abstract_short,
-        "links": links,
-        "highlight": "🔥" if (meta.get("published", "") >= "2026-04") else "👀",
-        "added": date.today().isoformat(),
-        "source": "news_archive",
-    }
+    # Enters as unrated: 🔥/👀 now come only from the two-layer review
+    # (docs/METHODOLOGY.md), never from the publication date.
+    return migrate_paper(
+        {
+            "arxiv_id": meta["arxiv_id"],
+            "title": meta["title"],
+            "authors": short_authors(meta["authors"]),
+            "date": meta["published"][:10],  # YYYY-MM-DD (full)
+            "venue": meta.get("venue", ""),
+            "category": categorize(meta),
+            "tags": ["news-archive"],
+            "abstract_short": abstract_short,
+            "links": links,
+            "added": date.today().isoformat(),
+            "source": "news_archive",
+        }
+    )
 
 
 def git_run(*args: str) -> subprocess.CompletedProcess:

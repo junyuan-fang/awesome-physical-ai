@@ -1,0 +1,744 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2608.19891'
+  title: 'EXIMO: VLM Guided Exploration of VLA Policies'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla-finetuning
+  - vlm-planner
+  - residual-rl
+  - self-distillation
+  - aloha
+  affiliations:
+  - Google DeepMind
+  one_liner: EXIMO 以「VLM 编排探索→蒸馏 SFT→残差离策略 RL」三阶段微调 VLA，作者报告在 ALOHA 仿真 22 个长程/推理任务上样本效率与最终成功率均优于直接 RL 基线。
+  summary: |
+    为解决预训练 VLA 学习新的长程、组合或需推理任务时既要大量遥操作数据、直接 RL 又样本低效的问题，作者提出 EXIMO：先让 VLM 作为规划器把任务拆成 VLA 已掌握的原子指令、与 VLA 协同收集数据（Explore），再只用成功轨迹对 VLA 做行为克隆蒸馏、使其直接以原任务目标为条件（Imitate），最后以残差离策略 RL 继续优化（Optimize）。基座为 3B 的 Gemini Robotics On-Device。在 ALOHA 仿真 22 个任务上，作者报告 VLM 编排显著提高基座成功率，蒸馏后的 VLA 甚至超过在线编排，且 SFT 后再做 RL 的起点与收敛性能都高于对基座直接 RL（后者已补偿额外交互步数）；附录还比较了蒸馏到残差策略等变体。该结果提示 VLM 编排可作为免遥操作的数据来源并降低 RL 探索难度，但实验仅限仿真、依赖真值成功检测器，基座与代码均未公开，难以独立复现。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 5
+  rationale:
+    C: VLM 编排+蒸馏+残差 RL 的组合流程清晰，但各环节均有先例，增量主要在系统整合
+    E: 22 个任务、三阶段逐一消融并补偿交互预算，但仅 ALOHA 仿真、无真机与外部方法对比
+    O: 未找到官方仓库，探测到的仓库属于其他论文；基座 GROD 不公开
+    T: Google DeepMind 机器人团队，在 VLA 与 RL 方向有多项标志性成果
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测到的 XizoB/What-Matters-for-Latent-Actions 仓库与项目页属于另一篇论文，已更正为 no-repo
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.19955'
+  title: 'MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - bipedal
+  - deformable-terrain
+  - contact-model
+  - sim2real
+  - rl
+  affiliations:
+  - Adaptive Robotic Controls Lab (ArcLab), Department of Mechanical Engineering, The University of Hong Kong
+  - School of Mechanical and Electrical Engineering, Beijing Institute of Technology
+  - Graduate School of Information Science and Technology, The University of Tokyo
+  one_liner: MILD 用离散单元颗粒介质接触模型在仿真中刻画脚-软地非均匀交互并训练地形感知 RL 双足控制器，作者报告真机在泡沫、沙地等六类软地面上成功率与能效优于对比方法。
+  summary: |
+    为解决主流刚体仿真器无法刻画可变形地面时空异质性、导致双足控制器在软地面上表现受限的问题，作者提出 MILD：把脚底离散为 154 个单元，每个单元按发展锥模型独立计算穿透、附加质量与惯性阻力，形成可在 Isaac Gym 中并行运行的接触求解器；再用带 VAE 估计器与潜变量调制的非对称 actor-critic 训练地形感知策略。仿真中作者报告该模型比 Con-Spring、Con-Cone、RFT 等接触模型产生更深穿透与更丰富接触（相对 Ecc-Spring 穿透深 38%）；真机在橡胶、三种密度 PU 泡沫、草地与沙地上完成 1.2 m/s 往返行走无失败，并在能耗（COT）、速度跟踪与关节力矩上优于 HT-2、Clock 两种学习方法，潜变量呈现按刚度聚类。该结果提示高保真软接触建模可直接提升 sim-to-real 适应性，但验证限于单一双足平台、平地行走，代码未公开。
+  venue: RA-L
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 把颗粒介质接触模型扩展为多单元偏心接触并接入 RL，对软地面行走子方向有明确增量
+    E: 仿真多接触模型对比 + 真机六种地面、基线与刚度迁移实验，较完整
+    O: 未找到官方代码，探测到的 CoToGrasp 仓库属于其他论文
+    T: 港大 ArcLab 与北理工双足团队在腿足控制方向有一定积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 探测到的 CEA-LIST/CoToGrasp 仓库与项目页属于另一篇论文，已更正为 no-repo
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.20087'
+  title: Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - motion-tracking
+  - ball-sports
+  - video-to-motion
+  - sim2real
+  affiliations:
+  - Noitom Robotics
+  - Shanghai AI Laboratory
+  - Shanghai Jiao Tong University
+  - Dobot Robotics
+  one_liner: AdaPT 从转播视频学习纳达尔等职业网球风格，以速度自适应的规划-跟踪分层框架缩小 sim-to-real 差距，作者报告在 Unitree G1 真机多拍与发球上击球率高于 Vid2Player3D 等基线。
+  summary: |
+    为在人形机器人上兼顾职业网球动作风格与击球任务表现，并缓解解耦规划-跟踪架构在真机上的跟踪退化与自回归误差累积，作者提出 AdaPT：从纳达尔、费德勒、德约科维奇转播视频重建并重定向约 1.6 万段动作，训练 MVAE 动作生成器与高层规划器；底层跟踪器在随机执行速度下训练，规划器同时输出动作潜变量与速度适配信号，发球则基于 AdaMimic 训练残差跟踪器。在 Mjlab 仿真中作者报告其在风格（FID）与命中率之间取得较好平衡；在 G1 真机上以发球机 25 次/区域评测，纳达尔风格正反手命中率由 Vid2Player3D 的 28%/28% 提升到 44%/56%，并做了自适应规划器与跟踪器的逐项消融，还在 1.7 m Dobot Atom 上实现无动捕户外发球。该结果提示速度自适应是缩小风格化技能 sim-to-real 差距的有效手段，但对局场地为缩小版、依赖动捕或多目相机定位，真机试次有限。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 把视频风格学习与速度自适应规划-跟踪结合用于人形球类运动，对高动态风格化技能有明确增量
+    E: 仿真多基线（AMP/PULSE/NCP/Vid2Player3D/DeepMimic）+ 两款真机 + 组件消融，但真机试次偏少
+    O: 官方仓库有实质代码且 Apache-2.0，权重与动作数据是否公开未核实
+    T: 上海 AI Lab 庞江淼团队在人形运动控制方向有多项可核实成果
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核实仓库是否发布训练好的策略权重与处理后的网球动作数据
+  open:
+    code: substantive
+    repo: https://github.com/noitom-robotics/AdaPT
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 摘要声明代码已公开；探测到 309 个代码文件
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.20114'
+  title: 'DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - mobile-manipulation
+  - legged-robot
+  - parameter-efficient
+  - ego-motion
+  affiliations:
+  - Tsinghua University
+  - Shanghai Artificial Intelligence Laboratory
+  - Harbin Institute of Technology
+  - Hangzhou Yunshenchu Technology Co., Ltd. (DEEP Robotics)
+  one_liner: DECOWAM 在冻结的 FastWAM 上加入残差适配器、未来信息瓶颈、底盘/机械臂解耦潜变量与底盘速度条件，作者报告在自建 ARMDOG 回放上动作 MSE 降 21.7%，79 次真机试验中全身协调性最好。
+  summary: |
+    为解决固定基座世界-动作模型无法区分相机自运动、底盘动作与机械臂动作，难以用于腿式移动操作的问题，作者提出 DECOWAM：先在自建 ARMDOG 数据上全量适配 FastWAM（Wan-2.2 视频专家 + ActionDiT 动作专家），再冻结主干、仅训练 25.95M 参数的残差适配器、由特权未来观测蒸馏的动作等价瓶颈、对抗分离的底盘/机械臂潜变量和底盘速度视频条件；同时发布 ARMDOG 轮足四足+机械臂数据集（过滤后 1487 段、约 321 分钟）。在 23 段固定回放切片上，作者报告帧 MSE 降 15.0%、动作 MSE 降 21.7%，各结构消融均使指标变差；动作误差仍高于 X-VLA。每法 79 次真机试验中，完成率 58.2% 与 FastWAM（57.0%）相当，但协调、位移鲁棒与恢复率最高。该结果提示具身感知的因子化可在参数高效前提下改进移动视角下的视频-动作联合建模，但评测基于单一平台与单一回放切片，任务完成率提升有限，代码与数据尚未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 针对移动操作的 WAM 解耦设计合理，但建立在 FastWAM 上的适配式增量
+    E: 回放对比 + 内部消融 + VLA/WAM 参照 + 每法 79 次真机试验，较完整但回放集小
+    O: 未找到官方仓库，探测到的仓库与项目页属于 AdaPT；ARMDOG 未见下载入口
+    T: 清华、上海 AI Lab 与云深处合作，团队信息有限，按默认值
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核实 ARMDOG 数据集与 DECOWAM 代码是否有公开发布计划或链接
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 探测到的 noitom-robotics/AdaPT 仓库与项目页属于另一篇论文，已更正为 no-repo
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.13422'
+  title: 'Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning'
+  triage: include
+  reason: null
+  date_v1: '2026-08-13'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - visual-attention
+  - roi
+  - visuomotor-policy
+  - data-efficiency
+  - dinov3
+  affiliations:
+  - KTH Royal Institute of Technology
+  - University of Freiburg
+  - Universität Hamburg
+  one_liner: Seeker 仅用动作监督从冻结 DINOv3 特征中学出随任务进度变化的关注区域，用于裁剪、背景增强与点云过滤，作者报告真机平均成功率由最佳基线 48.3% 提升到 76.7%。
+  summary: |
+    为解决视觉瓶颈（ROI）方法依赖注视、类别等外部标注，或依赖以末端执行器为中心的固定裁剪、在关键视觉证据远离夹爪或随任务进度变化时失配的问题，作者提出 Seeker：在冻结的 DINOv3 特征上用一个任务与状态条件的查询迭代收集视觉证据，只靠动作监督学出随进度变化的 ROI，并把它作为 RGB 裁剪、掩码引导背景增强和点云过滤的统一接口。摘要称在仿真与真机上都优于无裁剪、数据增强和动作推导裁剪基线；作者报告真机平均域内成功率由最佳基线 48.3% 提高到 76.7%，光照/背景变化下由 20.0% 提高到 60.0%。仓库显示仿真部分基于 MimicGen 任务。该结果提示由动作反推注意力可在无额外标注下提升数据效率与鲁棒性，但本次只读到摘要与仓库说明，具体任务数、试次与消融细节尚待核对。
+  venue: CoRL 2026
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - code
+  pending_checks:
+  - arXiv 无 HTML 版本，需阅读 PDF 的实验部分（仿真任务数、演示数量、真机任务与试次、消融）后再评分
+  - 核实论文署名单位（当前取自仓库 README）
+  open:
+    code: substantive
+    repo: https://github.com/zheyu-zhuang/seeker
+    weights: open
+    data: n/a
+    license: MIT
+    note: README 提供训练配置与 seeker.mimicgen.pth 权重（MIT），仿真数据使用公开 MimicGen 数据集
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.15938'
+  title: 'Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies'
+  triage: include
+  reason: null
+  date_v1: '2026-08-16'
+  category: rl-il
+  route: adjacent
+  contribution: method
+  tags:
+  - action-chunking
+  - imitation-learning
+  - diffusion-policy
+  - long-context
+  - analysis
+  affiliations:
+  - Massachusetts Institute of Technology
+  - Mundane Systems Inc.
+  - University of California, Berkeley
+  one_liner: 通过受控实验指出长开环执行主要在弥补短上下文策略模仿非马尔可夫示教的缺陷，作者报告在 4 个仿真和 2 个真机任务上加长上下文后最具反应性的闭环策略表现最好。
+  summary: |
+    为厘清动作分块中长开环执行为何有效，作者在扩散策略上做系统受控实验：用有限状态机构造马尔可夫与注入历史依赖行为的非马尔可夫脚本专家，并比较人类示教。在 FurnitureSim 单腿装配、PushT、齿轮插装与 Kitchen 四个仿真任务上，作者报告示教的非马尔可夫性主导「成功率-执行步长」曲线：马尔可夫专家数据下曲线近乎单调下降、最优步长接近 1；而扩大数据量、HG-DAgger 等针对累积误差的干预只带来较小偏移（仅在 100 条示教时累积误差作用明显）。进一步把上下文长度提高到 16–20 帧并采用「双编码器」后，最优步长左移，1000 条示教时长上下文、短步长策略显著优于短上下文最佳配置；两个真机任务（倒单粒药片、塞纸条入袋）也呈相同趋势。该结果提示应优先发展长上下文、高反应性策略，但结论局限于扩散策略和中等数据规模，代码仓库目前为空。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 5
+  rationale:
+    C: 对动作分块这一普遍做法给出可检验的机理解释与实践建议，可能影响 IL 策略设计
+    E: 4 个仿真 + 2 个真机任务，专家类型、数据量、DAgger、上下文长度多组受控对照
+    O: 代码仓库仅占位，但脚本专家与示教数据已在 HuggingFace 公开
+    T: MIT Tedrake 组是扩散策略等标志性工作的来源团队
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/Michaelszeng/Revisiting-Open-Loop-Execution-in-Robotics
+    weights: none
+    data: open
+    license: MIT
+    note: 仓库仅 2 个文件无代码；HuggingFace 公开 FurnitureSim one_leg 与 ManiSkill PlanarPushT 遥操作数据
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.18484'
+  title: 'Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: world-model
+  route: adjacent
+  contribution: infra
+  tags:
+  - sparse-attention
+  - video-generation
+  - inference-acceleration
+  - training-free
+  - cosmos
+  affiliations:
+  - Texas A&M University
+  one_liner: SparsePR 以响应耦合分组与探针拟合残差重建实现免训练块稀疏注意力，作者报告在 Cosmos-Predict2.5 等四个视频/世界模型上端到端加速 1.48–2.61 倍且保真度优于 SVG2 等基线。
+  summary: |
+    为解决块稀疏注意力加速视频 Transformer 时，同组查询偏好的键集合不重合、保留注意力质量也不等于保留输出的问题，作者提出免训练的 SparsePR：先按键对采样查询的响应对 K/V 分组，再按查询对键组中心的响应对查询分组以共享路由；随后对少量探针查询计算精确注意力，用加权岭回归拟合稀疏输出到残差的仿射映射并补偿其余查询。在 HunyuanVideo、Wan2.2 与两个物理世界模型 Cosmos-Predict2.5、Cosmos3-Nano 上，作者报告在约 22% 执行对密度下未探针查询的注意力输出误差比语义分组无校正降低 61.6–90.5%，端到端加速 1.48–2.61 倍，与稠密参考的 PSNR 为 24.42–31.84 dB，VBench/PBench 质量接近稠密，并对分组、探针选择与校正形式做了消融。该结果提示这类加速可降低视频世界模型推理成本，但它是通用视频生成基础设施，未在机器人规划或策略评估等下游任务上验证。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 4
+    T: 3
+  rationale:
+    C: 免训练稀疏注意力的扎实改进，对具身方向属间接支撑
+    E: 四个模型、多种稀疏注意力基线、密度扫描与组件消融，但无具身下游验证
+    O: 实质代码 Apache-2.0 公开；方法免训练，无需额外权重
+    T: 德州农工团队，相关积累信息有限，按默认值
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/PardisTaghavi/SparsePR
+    weights: n/a
+    data: n/a
+    license: Apache-2.0
+    note: 免训练方法，仓库含实现代码
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.20546'
+  title: 'Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: teleoperation
+  route: adjacent
+  contribution: hardware
+  tags:
+  - gripper-design
+  - handheld-data-capture
+  - co-design
+  - dexterous-manipulation
+  - umi
+  affiliations: []
+  one_liner: Koala 协同设计手持数采器与机器人三自由度夹爪（双拇指、低反射质量连杆），作者展示其可完成多类抓取与工具使用，并以手持与遥操作数据训练扩散策略在 FR3 上执行。
+  summary: |
+    为弥补现有手持数采设备多沿用平行夹爪形态、牺牲人体工学与灵巧性的缺口，作者提出数采设备与机器人执行器协同设计的流程，并据此设计 Koala 系统：9 杆欠驱动手指连杆配合模仿指尖闭合轨迹的扳机机构、整体式双拇指、三档握把，以及三台广角相机与视觉里程计构成的状态感知；手持端与机器人端状态动作空间一致，无需重定向即可混用手持采集与遥操作数据。作者在 MuJoCo 中计算手指等效质量（数十克量级），定性展示 7–115 mm 抓取范围、钉子单取、钻孔等工具使用，并用 250 条手持和 100 条遥操作示教训练扩散策略在 Franka FR3 上完成滤面与叠杯任务。该工作为灵巧数据采集提供了新的硬件形态，但策略验证仅有视频演示、无定量成功率与对照，缺少力觉数据，设计与代码未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 数采器与夹爪协同设计对手持数采有实际价值，但学习部分沿用扩散策略
+    E: 主要为机构分析与定性抓取展示，策略执行无定量成功率与基线
+    O: 未找到设计文件或代码，探测到的仓库属于其他项目
+    T: 论文正文未列出单位，按默认值
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核实论文署名单位（项目页域名为 rai-inst.com，PDF 首页需确认）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测到的 AMAP-ML/DreamX-Phi 仓库属于其他项目；官方仅有项目页 koalagripper.rai-inst.com
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.21031'
+  title: 'PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration'
+  triage: include
+  reason: null
+  date_v1: '2026-08-21'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - code-as-policy
+  - active-perception
+  - physical-properties
+  - llm-agent
+  - interactive-exploration
+  affiliations:
+  - National Taiwan University
+  - NVIDIA Research
+  - National Yang Ming Chiao Tung University
+  one_liner: PhysCaP 为代码即策略智能体加入由关节力矩与夹爪形变估计质量、刚度的模块及规划/排序双智能体，作者报告在三个真机任务和 LIBERO 中以更少交互与更短时间达到相当或更高成功率。
+  summary: |
+    为解决 VLA 与代码即策略系统依赖被动视觉、无法推断质量和刚度等隐藏物理属性的问题，作者提出 PhysCaP：在 CaP-Agent0 之上加入免训练的物理属性提取模块，仅凭机械臂关节力矩估计质量、凭夹爪力-位移估计刚度；再用 Planner 决定是否探索与何时停止，Prioritizer 过滤不合理交互并按启发式优先级排序。在 AgileX PiPER 真机的找空罐、挑熟牛油果、装购物袋三个任务（每任务 10 次，Gemini 3.1 Pro 作骨干）上，作者报告纯视觉 CaP 只能盲猜，CaP+PhysX 过度探索，而 PhysCaP 成功率相当或更高且交互次数与执行时间更少；LIBERO 中复现找空罐任务也呈相同趋势。验证实验显示 PhysX 质量估计误差明显低于各种输入组合下的 VLM 估计。该结果提示显式物理测量可补足基础模型的物理推断短板，但任务均为小规模桌面场景、试次少、依赖商用 VLM，代码尚未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 把交互式物理属性测量作为工具接入代码即策略智能体，思路清晰但组件较常规
+    E: 三个真机任务各 10 次 + 一个 LIBERO 任务 + 模块误差验证与跨 VLM 测试，规模偏小
+    O: 仅有项目页，未见代码仓库
+    T: 台大王钰强、孙绍华与 NVIDIA Research 在机器人学习方向有可核实积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: none
+    license: unknown
+    note: 只有项目页 physcap.github.io
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.26239'
+  title: 'WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression'
+  triage: include
+  reason: null
+  date_v1: '2026-08-26'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - next-scale-autoregression
+  - action-conditioned-video
+  - long-horizon
+  - policy-evaluation
+  affiliations:
+  - X Square Robot
+  one_liner: WALL-SS 以动作条件的逐尺度自回归生成机器人多视角未来，配合尺度压缩长程记忆与在线对齐，作者报告可稳定生成分钟级流式推演，并在 600 对真机-生成闭环回放中与真实结果较一致。
+  summary: |
+    为让生成式世界模型从片段级预测走向可变长度、可流式延展且可做奖励优化的统一机器人轨迹模型，自变量机器人提出 WALL-SS：以 InfinityStar 初始化，把观测与动作交错成因果序列，每帧由粗到细逐尺度生成；在各尺度注入对齐的动作表示，近期历史保留细尺度、远期压缩为粗尺度以控制记忆，并用尺度级 dream forcing 适应自生成上下文；最后把视觉生成视作策略，以动作跟随和长期一致性奖励做在线对齐。训练数据包括完整 AgiBot World Beta、ManipArena、私有 X2 机器人与 UMI 数据以及干预/失败恢复轨迹。作者报告其在交互质量、指令跟随和轨迹精度上优于 Wan2.1/2.2、Infinity 等视频生成基线，60 秒推演中 PSNR、FID、FVD 持续更好，并用 30 个任务-检查点单元和 600 对配对回放检验与真机成功率的校准与排序一致性。该结果提示逐尺度自回归可作为长程机器人世界模型的可行路线，但对比对象多为通用视频模型，大量依赖私有数据，代码与权重尚未发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 把逐尺度自回归、尺度记忆与在线对齐统一到动作条件世界模型，对长程机器人仿真有明确增量
+    E: 视频质量对比、长程消融、反事实动作与 600 对闭环一致性评估，但缺少机器人世界模型专门基线
+    O: 官方仓库仅含项目页与 PDF，README 列训练/推理代码为待办
+    T: 自变量机器人发布过 WALL-OSS 等模型，有可核实的具身基础模型产出
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 跟踪 X-Square-Robot/wall-ss 是否发布训练与推理代码及权重
+  open:
+    code: placeholder
+    repo: https://github.com/X-Square-Robot/wall-ss
+    weights: none
+    data: none
+    license: MIT
+    note: 探测到的 Wan2.2 仓库非本文官方仓库；官方仓库 README 称目前只有项目页，代码列为待发布
+  uses:
+  - resource: agibot-world
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2608.27345'
+  title: 'PAWBench: How Far Are We from Probabilistically Aligned World Modeling?'
+  triage: include
+  reason: null
+  date_v1: '2026-08-27'
+  category: world-model
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - world-model-evaluation
+  - video-generation
+  - probabilistic-alignment
+  - benchmark
+  - physical-reasoning
+  affiliations:
+  - Shanghai Jiao Tong University
+  - Shanghai AI Laboratory
+  - Krea AI
+  - Hugging Face
+  - Shanghai Innovation Institute
+  - Tongyi Lab
+  - The University of Hong Kong
+  one_liner: PAWBench 用 50 个随机物理场景检验视频生成模型重复采样能否复现正确的结果分布，作者报告 11 个模型均未能同时匹配参考概率并覆盖全部合理结果。
+  summary: |
+    为弥补现有世界模型评测只看单条视频是否合理、不检验重复生成能否复现正确未来分布的缺口，作者提出「概率对齐」准则并发布 PAWBench：50 个人工整理场景分 8 类机制，其中 PAW-Calibration（掷硬币、转盘等 25 个有解析参考分布的场景）用总变差距离衡量概率质量是否对齐，PAW-Coverage（碰撞、稳定性等 25 个场景）衡量合理结果的覆盖率；配套 PAWEval 用 Gemini 按场景规则把每条视频映射为终局结果。对 Veo3.1、Kling 3、Cosmos 3、Wan2.2 等 11 个模型每场景采样 50 次，作者报告没有模型同时做到低 TVD、高覆盖与高可判读率，平均 TVD 远高于有限样本基线；PAWEval 与人工判断一致率 81.3%。提示词、初始噪声耦合与 LoRA 数据配比实验显示只有改变训练数据能实质重塑分布。该基准为评估用于规划的世界模型提供了分布层面的视角，但场景为非机器人的通用物理过程、源图像为生成图，与具身决策的直接关联有待验证。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 分布层面评测视角新颖，但面向通用视频生成，对具身方向属间接支撑
+    E: 11 个模型、采样预算敏感性、蒙特卡洛基线与人工一致性检验，评测设计较严谨
+    O: 评测代码 Apache-2.0 与 HuggingFace 数据集均已公开
+    T: 上海 AI Lab 等团队在视频生成与评测方向有较多可核实成果
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 核实 HuggingFace 上 PAWBench 数据的许可条款
+  open:
+    code: substantive
+    repo: https://github.com/Andrew0613/PAWBench
+    weights: n/a
+    data: open
+    license: Apache-2.0
+    note: 探测到的 Wan2.2 仓库非官方；项目页给出官方仓库（含评测器与测试）与 HuggingFace 数据集 Andrew613/PAWBench
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.27384'
+  title: 'FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference'
+  triage: include
+  reason: null
+  date_v1: '2026-08-27'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla-inference
+  - flow-matching
+  - asynchronous-execution
+  - streaming-decoding
+  - real-time-control
+  affiliations:
+  - UC San Diego
+  - MIT
+  one_liner: FlashVLA 让多个动作块以错开的噪声水平在流式缓冲区中联合去噪，每步产出一个可执行块，作者报告 LIBERO 上异步执行 2.43 倍提速且成功率升至 97.8%，真机 30 Hz 控制。
+  summary: |
+    为同时解决流匹配 VLA 推理延迟高与异步执行时观测过期导致动作不连续的问题，作者提出 FlashVLA：维护一个由多个处于不同噪声水平的动作块组成的流式缓冲区，用块级因果注意力让噪声更大的未来块参考更干净的块，每次前向推进全部块一步、产出一个可执行块；并把冷启动的各种缓冲配置打包进单个样本做多缓冲联合微调。基于 π0.5，作者报告 LIBERO 一步异步下平均成功率由 96.9% 升至 97.8%、每步耗时由 53.8 降到 22.1 ms，优于 VLASH 与 StreamingVLA；RoboTwin 2.0 的 50 个任务同步评测由 86.1% 升至 90.8%，长程子集提升 36.6 点；单次推理延迟低于 Realtime-VLA，并可迁移到 SmolVLA 与 LingBot-VLA。Franka 真机三个任务各 15 次，平均得分 84.4%，高于同步与 RTC。去掉块级因果掩码会使异步成功率降约 10 点。该结果提示联合解码可同时换取速度与连续性，但需额外微调、每回合有冷启动开销。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 把流式分块扩散引入 VLA 动作解码，同时改善延迟与异步连续性，可直接影响部署实践
+    E: LIBERO、RoboTwin 2.0、三种骨干、多类加速/异步基线、因果掩码消融与真机，但真机试次有限
+    O: 实质代码 Apache-2.0 + LIBERO/RoboTwin 微调权重已在 HuggingFace 发布
+    T: 刘志坚等在高效模型推理方向有多项可核实成果
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/z-lab/flashvla
+    weights: open
+    data: n/a
+    license: Apache-2.0
+    note: HuggingFace 提供 flashvla-pi05-libero 与 flashvla-pi05-robotwin 权重；真机数据未公开
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: robotwin-2
+    name: RoboTwin 2.0
+    subcategory: manipulation
+    desc: Scalable bimanual manipulation benchmark and data generator with 50 tasks under clean and domain-randomized settings.
+    links:
+      paper: https://arxiv.org/abs/2506.18088
+      code: https://github.com/RoboTwin-Platform/RoboTwin
+- arxiv_id: '2608.27406'
+  title: 'CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators'
+  triage: include
+  reason: null
+  date_v1: '2026-08-27'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - cross-embodiment
+  - action-conditioned-video
+  - latent-actions
+  - policy-evaluation
+  affiliations:
+  - Princeton University
+  one_liner: CLAP 用末端位姿、语言与潜动作统一异构动作空间并以课程式训练跨具身视频世界模型，作者报告在 DROID 上接近或超过单具身 Ctrl-World，并可零样本用于多策略规划。
+  summary: |
+    为解决动作条件视频世界模型局限于单一机器人、无法利用异构人类与机器人视频的问题，作者提出 CLAP：用末端执行器位姿、语言指令和学习到的潜动作三种方式统一不同具身的动作空间，并采用课程式训练——先以潜动作在无标注视频上学物理先验，再落地到末端动作空间以便零样本部署；模型基于 U-Net 潜视频扩散，带历史条件与多视角预测，在 Open X-Embodiment 与 EgoDex 上训练。作者报告其在 DROID 上接近或超过单具身 Ctrl-World，在 OXE 混合数据上潜动作与课程版本保真度最高；绝对动作在末端条件下优于相对动作；以 CLAP 作推理时规划、在 π0.5 与 MolmoAct-2 的候选动作中选优，在 5 个 DROID 真机任务上成功率持平或提高，并能少样本适配双臂 YAM 与 G1 人形。该结果提示跨具身数据可为视频世界模型提供可迁移先验，但评测以感知指标为主，规划依赖 VLM 打分，真机试次与任务规模有限。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 5
+    T: 3
+  rationale:
+    C: 跨具身动作统一与课程训练为视频世界模型提供可复用基础，对子方向有明确影响
+    E: DROID/Bridge/OXE 多数据集对比、动作空间消融、真机规划与新具身适配，但以感知指标为主
+    O: 训练与推理代码、多套检查点（MIT）均已公开，训练数据为公开数据集
+    T: 普林斯顿两位作者的小团队，可核实积累有限，按默认值
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/omni-CLAP/clap
+    weights: open
+    data: n/a
+    license: MIT
+    note: README 含 clap-train 与评测/部署脚本，HuggingFace omni-CLAP/CLAP 提供跨具身及 DROID/Bridge/YAM/G1 检查点；"coming soon" 仅指引用信息
+  uses:
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: droid
+    role: eval
+  - resource: bridgedata-v2
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.28693'
+  title: 'RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction'
+  triage: include
+  reason: null
+  date_v1: '2026-08-27'
+  category: sim2real
+  route: core
+  contribution: system
+  tags:
+  - humanoid
+  - co-speech-gesture
+  - hri
+  - motion-generation
+  - flow-matching
+  affiliations:
+  - Tsinghua University
+  - Galbot Inc.
+  - Beijing Institute of Technology
+  - Harbin Institute of Technology
+  - Peking University
+  - Shanghai Qi Zhi Institute
+  one_liner: RoboGesture 结合 300 余类手势数据、分层语音-语义对齐器、流式流匹配动作生成与 MPC 安全过滤，作者报告在 BEAT 与 SemanticBEAT 上优于基线，并在 G1 真机实现实时语音交互手势。
+  summary: |
+    为让人形机器人在对话中实时做出与语音同步且语义恰当的手势，作者针对语义数据稀缺、模型忽视音频而依赖历史动作（modality eclipse）以及真机自碰撞三点提出 RoboGesture：构建含 300 余类手势的动捕数据集，并用 LLM 生成场景、TTS 合成语音、与节奏手势融合并经 MPC 去碰撞，得到约 1000 小时半合成音频-动作对；模型以分层语义-声学对齐器直接从原始音频 token 提取韵律与语义，驱动基于 DiT 的流式条件流匹配生成器，并用随机屏蔽历史动作的 Anti-Inertia CFG 迫使模型依赖音频；部署时 MPC 过滤器把自碰撞帧比例由 4.16% 降到 0.13%。作者报告在 BEAT 与自建 SemanticBEAT 上客观指标和人工评测均优于 DiffSHEG、Semantic Gesticulator 等基线，并给出数据规模与各组件消融，G1 加灵巧手真机实现端到端低延迟交互。该结果提示数据-模型-控制协同设计可提升人形社交表达，但评测以人工打分为主，训练数据未公开。
+  venue: ECCV 2026
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 面向人形的流式语音手势系统完整，但核心技术多为已有生成与控制方法的组合
+    E: 标准基准 + 人工评测 + 较全消融 + 真机演示，真机交互缺少定量对照
+    O: 官方仓库含推理代码与动作检查点（MIT），训练数据与完整训练管线未公开
+    T: 清华弋力、银河通用王鹤团队在具身方向有多项可核实成果
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks: []
+  open:
+    code: partial
+    repo: https://github.com/GalaxyGeneralRobotics/RoboGesture
+    weights: open
+    data: none
+    license: MIT
+    note: 探测到的 GMR 仓库非本文官方；官方仓库提供推理/部署代码、动作检查点与 Qwen LoRA，训练仅有示例，私有数据集未公开
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.05266'
+  title: 'TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-09-04'
+  category: manipulation
+  route: core
+  contribution: model
+  tags:
+  - tactile
+  - world-action-model
+  - contact-rich
+  - action-correction
+  - real-robot
+  affiliations:
+  - School of Data Science, Fudan University
+  - Shanghai Innovation Institute
+  - NeoteAI
+  one_liner: TacPAC 在预测视觉与触觉的世界-动作模型上加入触觉专家，执行中将实时触觉与缓存的预期接触对照来修正剩余动作，作者报告五个真机接触密集任务平均成功率由 22% 升至 64%。
+  summary: |
+    为解决以视觉为主的世界-动作模型难以捕捉决定接触密集操作成败的局部接触信息，且把触觉当作额外视角预测只能拿到约三分之一收益（预测发生在执行前、触觉反馈在执行中到达）的问题，作者提出 TacPAC：基础模型以视频专家预测未来视觉与触觉、动作专家据此规划动作块；规划完成后缓存预测的接触与计划自身的逐层注意力状态，由触觉专家把每帧新触觉图像与缓存对照，为尚未执行的步骤输出增量修正，单次修正比重新生成动作块便宜 20.7 倍。在 Flexiv 机械臂加双 InTac 触觉传感器的五个任务（插充电头、转移水果、拿薯片、扶正空瓶、插扩展卡，每法每任务 20 次）上，作者报告 TacPAC 在全部任务领先，平均 64%，比最强基线 T-Rex 高 16 点；消融显示去掉缓存访问即降到 47%。该结果提示「对照预期读触觉」是闭环接触操作的有效途径，但仅单一平台与传感器，数据与权重尚未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 把触觉预测转化为执行期基于预期的实时修正，对触觉 WAM 子方向有清晰增量
+    E: 五个真机任务各 20 次、六个外部基线与逐路径消融，但仅单一平台
+    O: 仓库含模型、训练与部署代码（MIT），权重与数据集仍在准备中
+    T: 复旦张力团队，具身方向积累信息有限，按默认值
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 跟踪检查点与数据集是否按 README 承诺发布
+  open:
+    code: substantive
+    repo: https://github.com/LogosRoboticsGroup/TacPAC
+    weights: none
+    data: none
+    license: MIT
+    note: 探测链接多了句号导致失效；实际仓库含模型、训练、预处理与部署代码，README 称数据与检查点待发布
+  uses: []
+  new_resources: []

@@ -1,0 +1,761 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2607.23783'
+  title: '$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-07-26'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - tactile
+  - world-action-model
+  - contact-rich
+  - mixture-of-transformers
+  - cross-embodiment
+  affiliations:
+  - NeoteAI Team
+  - Fudan TEAI Team
+  one_liner: 触觉原生的世界-动作模型，在同一流匹配目标下联合预测未来视觉、触觉与动作；作者报告 UniVTAC 平均成功率 84.5%，8 项真机接触任务整体优于 π0.5 等基线。
+  summary: |
+    为解决接触密集操作中相机难以分辨指尖接触状态、现有世界-动作模型只预测视觉未来的问题，作者提出 N0-TWAM：以视频扩散 Transformer 为骨干，重组为视频/触觉/动作三专家的非对称 Mixture-of-Transformers，仅通过共享自注意力交互；触觉既作为与视频同目标、同因果步预测的未来信号，又经 NeoForce 力表示作为当前观测输入，并用触觉接触事件切分长时程任务阶段。模型在自采 NeoData（六种本体、带逐指触觉）上大规模预训练。作者报告：公开触觉仿真基准 UniVTAC 八任务平均 84.5%，高于 InternVLA-A1 的 67.1% 及纯视觉 WAM 基线；自建 NeoSim 十二任务平均 49.4%（最强基线 45.8%）；PiPER 与 Flexiv 上 8 项真机任务整体最好，优势集中在插座插拔、立瓶等依赖接触状态的任务，消融显示两条触觉通路与预训练规模均有贡献。该结果提示触觉进入世界模型的预测目标对接触任务有益，但 NeoSim 与真机任务均为自建、真机由操作员判定且试次有限，仿真触觉与真实传感器存在差异，训练数据集尚未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 3
+  rationale:
+    C: 把触觉作为世界-动作模型的联合预测目标并做大规模预训练，对触觉操作子方向有明确增量。
+    E: 公开基准 UniVTAC、自建 NeoSim 与 8 项真机任务加消融，基线覆盖 VLA 与 WAM；但部分基准自建、真机试次有限。
+    O: 仓库含实质代码并在 HF 发布多份权重，许可 CC-BY-NC；NeoData 训练数据未见公开。
+    T: NeoteAI 与复旦团队，公开可核实的触觉/具身成果信息有限，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - NeoteAI / Fudan TEAI 团队过往具身与触觉研究产出
+  - NeoData 数据集是否会公开
+  open:
+    code: substantive
+    repo: https://github.com/neoteai/N0-TWAM
+    weights: open
+    data: none
+    license: CC-BY-NC
+    note: 探测到 60 个文件、HF 上有 base 及 NeoSim/UniVTAC 微调权重；预训练数据 NeoData 未公开。
+  uses: []
+  new_resources: []
+- arxiv_id: '2607.26991'
+  title: 'RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-07-29'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - test-time-scaling
+  - inference-steering
+  - offline-rl
+  - failure-detection
+  - flow-matching
+  affiliations:
+  - National University of Singapore
+  - University of Toronto
+  - Singapore Technologies Engineering
+  one_liner: 在冻结 VLA 推理时，用基于动作专家潜变量训练的离线 RL 流策略组合引导动作采样，且仅在失败检测器报警时启用；作者报告 SIMPLER/PolaRiS 分布外任务最高提升 17.3%。
+  summary: |
+    为缓解测试时扩展方法中候选动作都来自同一 VLA、继承相关失败模式，且对每一步都施加同样干预的问题，作者提出 RL²：先在 BridgeV2、DROID 上提取 VLA 动作专家潜变量，训练轻量离线 RL 流匹配策略（QAM，OpenVLA 场景用 V-GPS 的 CQL 策略），推理时把其速度场与冻结 VLA 的速度场加权组合以增加动作多样性；并基于“引导在失败状态有益、在成功状态有害”的缩放分析，用 SAFE 失败检测器仅在预测失败时启用引导，再由 RoboMonkey/CoVer 验证器选动作。作者报告：SIMPLER 域内任务上 OpenVLA 平均比重复采样基线高 7.5%；π0 在 SIMPLER 分布外指令下平均高 10.1%、分布外环境高 8.5%；π0.5 在 PolaRiS 分布外指令三任务平均成功率由 31.8% 提至 42.7%；PiperX 真机四任务平均比改写基线高 17.5%，消融支持潜变量与 RL 训练的作用。该结果提示“何时引导”与“如何引导”可模块化叠加于现有 VLA，但依赖外部验证器与按任务训练的失败检测器，计算开销与对新任务的迁移仍需评估。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 将离线 RL 潜变量引导与失败触发的自适应测试时扩展结合，是推理期改进 VLA 的扎实方法增量。
+    E: 覆盖 SIMPLER 域内/分布外、PolaRiS 与真机，三种 VLA 与两类验证器，含消融与缩放分析。
+    O: 官方仓库已含 SIMPLER 评测与数据准备脚本（Apache-2.0），PolaRiS 部分仍在待办，权重可用性未核实。
+    T: 通讯作者 Sartoretti 课题组在多机器人学习与机器人 RL 方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - HuggingFace rl2-vla 组织下的模型权重是否实际可下载
+  open:
+    code: partial
+    repo: https://github.com/marmotlab/RL2-VLA
+    weights: unknown
+    data: n/a
+    license: Apache-2.0
+    note: 探测漏掉了项目页链接的官方仓库；README 显示已发布 SIMPLER 评测与 SAFE/QAM 数据准备脚本，PolaRiS 版本在待办列表中。
+  uses:
+  - resource: simplerenv
+    role: eval
+  - resource: bridgedata-v2
+    role: finetune
+  - resource: droid
+    role: finetune
+  new_resources: []
+- arxiv_id: '2607.27201'
+  title: Mental World Modeling
+  triage: exclude
+  reason: 超出范围：基于 LLM 的心智/社会情境决策预测框架与多选基准，无具身感知或控制实验
+  date_v1: '2026-07-29'
+  category: foundation-general
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - University of Oxford
+  - National University of Singapore
+  one_liner: 提出耦合物理-心智状态的世界模型框架 MWM 与免训练基线 Mentis，在人工构建的情境决策多选基准上评测 8 个 LLM。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2607.28443'
+  title: 'One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA'
+  triage: include
+  reason: null
+  date_v1: '2026-07-30'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - jepa
+  - multi-robot
+  - swarm
+  - decentralized
+  - representation-learning
+  affiliations:
+  - ITMO University
+  one_liner: CS-JEPA 让每台机器人仅凭本地历史与邻居消息预测同一潜空间集体未来，无一致性损失；作者报告仿真中集体状态误差较重建基线降 28.4%，拓扑/规模迁移下降 64–76%。
+  summary: |
+    为解决去中心化机器人群体中各个体只见局部证据、却需要对团队未来形成相容判断的问题，作者提出 Collective-State JEPA（CS-JEPA）：每台机器人以 16 帧本地历史和邻居上一时刻的 64 维循环记忆为输入，预测由冻结目标编码器与置换不变 tokenizer 生成的固定宽度“全局+空间”潜在未来，训练中不设任何一致性损失，部署时不汇总预测。在群集、编队、覆盖三类二维仿真任务上，与容量匹配的原始未来重建基线（Future-Recon）对比，作者报告 12 个独立种子的新一轮复现中，个体间分歧在所有划分上均下降，同时 ID 准确率误差 AUC 降 28.4%、环形/互近邻拓扑与更大群规模迁移下降 64.4–75.6%；动作条件价值估计 MSE 降约 45%，全去中心化刚体控制效用提升 5.3%（16 个种子中 12 个占优）。该结果提示共享潜在目标本身即可对齐分散预测，但实验仅在简化的二维群体仿真中进行，未涉及真实机器人、视觉感知或通信延迟等现实条件。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 把 JEPA 目标用于去中心化群体的集体状态预测，问题设定新颖但应用面较窄。
+    E: 控制变量与多种子统计严谨，含迁移、价值估计和闭环控制，但全部为简化二维仿真。
+    O: 未找到代码、数据或模型。
+    T: ITMO 团队在具身/群体机器人学习方向的可核实积累信息不足，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 作者团队在群体机器人学习方向的既往成果
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文未给出代码或项目链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.01397'
+  title: 'SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space'
+  triage: include
+  reason: null
+  date_v1: '2026-08-02'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-action-model
+  - latent-prediction
+  - geometry-supervision
+  - ema-target
+  - flow-matching
+  affiliations: []
+  one_liner: 在策略自身表征空间中用可学习动态 token 与 EMA 目标预测动作条件下的未来潜状态，并以 VGGT 几何监督塑形；0.9B 模型作者报告 LIBERO 98.5%、LIBERO-Plus 零样本 73.0%。
+  summary: |
+    为解决世界-动作模型的未来预测要么在像素空间耗费容量于外观、要么在与动作专家不一致的辅助潜空间进行的问题，作者提出 SG-WAM：在 Qwen3.5-0.8B 骨干中加入可学习动态 token，由 Self-Guided World Predictor 在给定中间动作序列下预测其未来潜状态，目标由同一策略的 EMA 副本对未来观测编码得到；同时用冻结 VGGT 特征对主视角视觉 token 做余弦对齐，使预测空间兼具动作相关与几何感知；预测、几何与流匹配动作损失端到端联合训练，推理时移除预测分支。作者报告：无大规模具身预训练的 0.9B 模型在 LIBERO 四套件平均 98.5%，在 LIBERO-Plus 零样本扰动下总体 73.0% 为表中最高；UR5e 真机三任务（含背景、光照、新物体 OOD）均优于 VPP 与 VLA-JEPA，如 Pick and Place ID 75% 对 35%/30%；消融显示去掉世界建模使 LIBERO-Long 从 96.2% 降至 92.2%。该结果提示自引导潜空间预测可在小模型上带来鲁棒性收益，但真机每任务仅 10–20 次试验、LIBERO 已接近饱和，代码尚未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 把未来预测目标置于策略自身 EMA 表征并加几何监督，是 WAM 设计上的清晰但有限增量。
+    E: LIBERO、LIBERO-Plus 零样本与 UR5e 真机 ID/OOD 评测，含组件与 token 数消融。
+    O: 官方仓库仅有 README 且注明即将发布。
+    T: 单位未在 HTML 中给出，团队背景无法核实，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 作者单位（需查 PDF）
+  - 代码与权重是否按承诺发布
+  open:
+    code: placeholder
+    repo: https://github.com/ReturnZhao/SG-WAM
+    weights: none
+    data: n/a
+    license: unknown
+    note: 仓库只有 1 个文件，README 写明 coming soon。
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.01735'
+  title: 'DAPD: Dual-Anchored Policy Distillation'
+  triage: exclude
+  reason: 超出范围：纯语言模型后训练（在线自蒸馏）方法，评测为数学/代码/指令遵循基准，与具身无关
+  date_v1: '2026-08-03'
+  category: foundation-general
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - Shanghai Jiao Tong University
+  - Shanghai Artificial Intelligence Laboratory
+  - The Chinese University of Hong Kong
+  - The University of Science and Technology of China
+  one_liner: 针对 LLM 在线自蒸馏中的特权信息错觉，提出双锚定蒸馏 DAPD；作者报告 Qwen3-4B 六项基准平均比 OPSD 高 2.00 分。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: partial
+    repo: https://github.com/uanu2002/DAPD
+    weights: unknown
+    data: n/a
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.02603'
+  title: 'WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity'
+  triage: include
+  reason: null
+  date_v1: '2026-08-03'
+  category: world-model
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - benchmark
+  - video-world-model
+  - world-reactivity
+  - controllability
+  - evaluation
+  affiliations:
+  - CASIA
+  - SLAI
+  - CUHK
+  - AMAP
+  - THU
+  one_liner: 分四层（视觉质量、控制遵循、空间一致、世界反应性）评测视频世界模型的基准，含 8 项任务 1,474 个用例；作者评测 20 个相机/动作/语言驱动模型，发现无一兼顾覆盖与表现。
+  summary: |
+    为弥补现有世界模型基准主要检查画质或显式指令是否兑现、忽视模型能否从场景推断未被言明后果的缺口，作者发布 WorldExam：把可控行为拆为原子控制单元，并适配到相机轨迹、离散动作、自然语言三类模型接口；共 8 项任务 1,474 个用例，分静态场景（相机控制、场景回访）与动态交互（主体控制、地形/物体/社交交互、物理反应、目标完成）两条赛道。相机与主体轨迹、地形交互用 VGGT 类几何重建在 3D 中度量，其余任务用 GPT-5.5 作为 VLM 评委按清单打分，并以 800 个样本报告与人工评分的相关性；还对相机驱动模型做图像位移标定以公平比较。对 20 个代表模型的评测显示：相机驱动模型相机控制强但不支持动态交互，动作驱动模型主体控制更准但世界常“无反应”，语言驱动模型交互更好却难以遵循复杂控制。该基准对把视频世界模型用作具身仿真器有诊断价值，但场景多为生成图像、部分指标依赖闭源 VLM 评委，主体涵盖人、车、动物，并非专门面向机器人；数据与代码尚未发布。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 把“世界反应性”作为独立评测层并统一三类接口，是视频世界模型评测的扎实补充，具身针对性有限。
+    E: 评测 20 个模型、提供 VLM 评委与人工一致性及替换几何模型的复核，但无下游具身任务验证。
+    O: 官方仓库仅 README 与图片，数据集标注 Coming Soon。
+    T: CASIA、CUHK、清华等团队在视觉生成与具身方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 基准用例与评测代码是否发布
+  open:
+    code: placeholder
+    repo: https://github.com/YuxueYang1204/worldexam
+    weights: n/a
+    data: none
+    license: unknown
+    note: 探测误把 DAPD 仓库当作本文仓库；项目页链接的官方仓库仅有 README 与 teaser 图，数据集写明 Coming Soon。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.02580'
+  title: 'Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data'
+  triage: include
+  reason: null
+  date_v1: '2026-08-03'
+  category: manipulation
+  route: adjacent
+  contribution: data
+  tags:
+  - egocentric-video
+  - data-synthesis
+  - retargeting
+  - cross-embodiment
+  - vla-pretraining
+  affiliations:
+  - AIM3 Lab, Renmin University of China
+  - Qwen Team, Alibaba Inc.
+  - ShanghaiTech University
+  - Beijing Institute for General Artificial Intelligence (BIGAI)
+  - Beijing University of Aeronautics and Astronautics
+  one_liner: 将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
+  summary: |
+    为弥补真机演示数据昂贵、多样性受限的缺口，作者构建 Ego2Robot 流水线：把手部位姿重定向为末端执行器轨迹，用 SAM 3 分割、ProPainter 去除人手并经基座位姿搜索与 IK 做深度感知的机械臂渲染，再在轨迹、帧、片段三级做质量筛选；既支持带手部标注的数据集，也支持经 WiLoR/DynHaMR 估计手部的野外视频，由约 1,940 小时视频生成覆盖 15 种机械臂形态的 18,561 小时数据。评测上把 RoboTwin 2.0 扩展为外观、布局、本体、任务语义 11 个独立扰动轴，并补充 EBench。以 Qwen3.5-4B+DiT 的 VLA 在相同样本量下对比，作者报告：Ego2R 与真机数据（DROID+AgiBot World+InternData）1:1 混合预训练使 RoboTwin 随机化设置由 50.9% 升至 53.5%，未见物体与相机偏移等轴提升明显，EBench 3:1 混合提升 12.1 分；ARX ACone 真机五任务中加入转换后的人手 play 数据效果最好。该结果提示合成数据主要提升视觉与语义泛化，但重定向只到平行夹爪、渲染存在伪影，Franka 等大运动学差异本体仍接近失败，数据与代码尚未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 首次在万小时级规模检验人到机器人合成数据对 VLA 预训练的价值，并给出可解耦的泛化评测，资源性增量明确。
+    E: 控制样本量的配比实验、11 轴扰动分解、EBench、流水线消融与真机五任务，但仅单一模型架构。
+    O: 仅有项目博客，探测到的 mink 仓库是第三方依赖而非官方代码，数据未发布。
+    T: 人大 AIM3、通义 Qwen 团队与 BIGAI 在多模态与具身方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 18,561 小时合成数据与流水线代码是否会公开
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测命中 kevinzakka/mink（IK 库，第三方依赖），并非本文官方仓库；论文只给出项目博客。
+  uses:
+  - resource: ego2robot-data
+    role: proposes
+  - resource: droid
+    role: pretrain
+  - resource: agibot-world
+    role: pretrain
+  new_resources:
+  - kind: dataset
+    id: ego2robot-data
+    name: Ego2Robot
+    desc: 由第一人称人手操作视频经动作重定向与机械臂渲染合成的 18,561 小时机器人训练数据，覆盖 15 种机械臂形态（截至 2026-10 尚未公开）。
+    links:
+      paper: https://arxiv.org/abs/2608.02580
+      project: https://www-ye.github.io/ego2robot_blog/
+    subcategory: sim-generated
+- arxiv_id: '2608.04964'
+  title: 'WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-05'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - video-world-model
+  - rl-post-training
+  - cycle-consistency
+  - long-horizon
+  - benchmark
+  affiliations:
+  - The Hong Kong University of Science and Technology
+  - Wuhan University
+  - AI Technology Center, Tencent Video, Tencent
+  one_liner: 利用可逆动作循环必然回到初始状态这一约束，为交互式视频世界模型构造免标注的空间闭合与时间一致奖励做 RL 后训练；作者报告在自建 CycleBench 上回归漂移最多降 44%。
+  summary: |
+    为解决交互式视频世界模型自回归生成误差累积、而任意动作序列缺少真值未来状态导致长时程 RL 后训练无法验证的问题，作者提出 WorldCycle：从普通动作序列构造“正向+逆向”闭合循环及其重复执行，基于点跟踪定义两种奖励——镜像帧对齐的空间闭合奖励与跨循环相位对齐的时间一致奖励，配合先空间预热再联合优化的日程和多尺度循环采样，以 DiffusionNFT 对 WorldPlay 做后训练；同时发布含 47 条轨迹、380 张初始帧、四类任务的 CycleBench，用独立的 RoMa 对应估计评测。作者报告：相比同样从 WorldPlay 后训练的 WorldCompass，短时程 ESC 降 32%、RPS 降 44%，381 帧时 RCS 降 34%；在分布外复合动作上动作准确率由基座的 0.136 提至 0.553，HPSv3 画质也有提升。该结果提示循环一致性可作为世界模型长时程一致性的自监督信号，但验证仅限相机自运动类可逆动作与自建基准，未涉及机器人操作或下游规划任务，代码未见公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 用可逆循环构造免标注长时程奖励思路清晰，但局限于相机运动类可逆动作，具身相关性间接。
+    E: 与三种公开世界模型对比并有奖励与日程消融，但主要依赖自建 CycleBench，无下游具身验证。
+    O: 只有项目页，未找到代码、权重或基准数据。
+    T: 港科大、武大与腾讯视频团队在具身/世界模型方向的可核实积累信息不足，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - CycleBench 与训练代码是否发布
+  - 作者团队在世界模型方向的既往成果
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 论文仅给出项目页 https://nevsnev.github.io/Worldcycle/，摘要称发布 CycleBench 但未见下载链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.05042'
+  title: 'BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-05'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - 3d-vla
+  - heatmap
+  - spatio-temporal-memory
+  - bimanual
+  - data-efficient
+  affiliations:
+  - New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences
+  - School of Artificial Intelligence, University of Chinese Academy of Sciences
+  - FiveAges
+  - ByteDance Seed
+  one_liner: 在 BridgeVLA 的多视图热力图 3D VLA 上加入时序记忆与可重渲染的点云空间记忆，支持记忆依赖与双臂任务；作者报告 RMBench、MemoryBench 上达到最优，并在两种真机平台验证。
+  summary: |
+    为解决 3D VLA 数据需求大、分布偏移下泛化弱、且缺少对历史观测记忆的问题，作者在前作 BridgeVLA（点云投影为三视图正交图像、以 2D 热力图预测动作并用 RoboPoint 检测数据做热力图预训练）基础上提出 BridgeVLA++：粗阶段加入由初始锚视图、近邻关键帧和自适应选择的子目标关键帧构成的时序记忆，细阶段保存初始点云并按当前缩放区域重渲染作为抗遮挡空间记忆，二者以轻量注意力模块注入，并可共享给双臂各自的动作头。作者报告：在 RLBench 18 任务、COLOSSEUM 扰动和 GemBench 四级泛化上保持强表现；在记忆依赖的双臂 RMBench 九任务与 MemoryBench 上取得表中最优；Franka 真机 13 任务每任务 10 条演示即可学习并在多种视觉扰动下保持优势，Dobot 平台上记忆任务明显优于无记忆版本，消融显示两种记忆互补。该结果提示热力图对齐与显式记忆可兼得，但方法仍基于关键帧与运动规划器，增量主要是对前作的扩展，代码是否发布尚未确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 5
+    O: 2
+    T: 4
+  rationale:
+    C: 在已有 BridgeVLA 上增加时空记忆，增量明确但属于前作扩展。
+    E: RLBench、COLOSSEUM、GemBench、RMBench、MemoryBench 五个基准加两种真机平台与记忆消融，覆盖面广。
+    O: 论文仅给出项目页，未找到 BridgeVLA++ 的代码或权重。
+    T: 中科院自动化所与字节 Seed 团队在 3D 操作与 VLA 方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - BridgeVLA++ 代码与权重是否会并入前作仓库发布
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: n/a
+    license: unknown
+    note: 仅有项目页 https://bridgevla-plus.github.io/；前作 BridgeVLA 的开源情况不计入本文。
+  uses:
+  - resource: rlbench
+    role: finetune
+  - resource: rlbench
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.01851'
+  title: 'Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their
+    Own Skills'
+  triage: include
+  reason: null
+  date_v1: '2026-08-03'
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - code-as-policy
+  - skill-library
+  - self-improvement
+  - vla
+  affiliations:
+  - UC Berkeley
+  - San Jose State University
+  - Meta
+  - Apple
+  - PocketFM
+  - Pragya Lab, BITS Pilani Goa
+  one_liner: 以“权重 vs 技能”为主轴梳理机器人学习，把 code-as-policy 按自我改进程度分为五级，覆盖 77 个代表系统并附 225 篇外围工作，讨论机器人技能市场的开放问题。
+  summary: |
+    为梳理机器人学习中“把能力固化进冻结权重的 VLA”与“自行编写并改进可执行技能代码的智能体”两条路线，作者以“交付的是权重还是技能”为单一轴构建分类：重点把 code-as-policy 方法按是否写代码、能否依执行反馈自修复、能否跨任务记忆、能否做程序种群搜索、能否闭合为开放式循环分为五级，并给出反馈、记忆、搜索三种机制的操作性定义，指出最高一级只有 ASPIRE、ENPIRE、RoboClaw 等少数系统；同时梳理 VLA、奖励与课程合成、技能库、仿真到真实与跨本体迁移、基准六个技术族，分析“技能”一词的五种含义，并以 Unitree UniStore 为例讨论技能市场在适配、跨本体移植、溯源、安全验证与标准化上的空白，提出成功率-交互量曲线等四个可测指标。综述按 PRISMA 风格说明语料构建，覆盖 77 个分类系统与 225 篇外围工作。其价值在于给出 code-as-policy 自我改进的清晰坐标，但作者明确视角以代码为中心，对 VLA 与 RL 技能发现只作背景处理，技能市场论据基于单一厂商，未做定量对比。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 以自我改进程度组织 code-as-policy 的分类有一定新意，但属聚焦型综述，覆盖面有限。
+    E: 综述无实验，定性对比表为主，未做定量汇总。
+    O: 无仓库或配套资源。
+    T: 作者以个人身份署名，与具身机器人研究的直接积累难以核实，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  pending_checks:
+  - 作者团队在机器人学习方向的既往成果
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: n/a
+    license: unknown
+    note: 综述论文，无配套仓库。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.05369'
+  title: 'World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-05'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - wrist-camera
+  - future-prediction
+  - latent-tokens
+  - v-jepa
+  - fine-grained-manipulation
+  affiliations:
+  - The Hong Kong University of Science and Technology
+  - National University of Singapore
+  - Nanyang Technological University
+  - Southeast University
+  - Wuhan University
+  - Sun Yat-sen University
+  - Xidian University
+  one_liner: 以 VLM 中的潜在建模 token 为接口、结合腕部历史预测未来腕部 V-JEPA 潜变量并注入动作头，辅以 W2-CoT 结构化标注；作者报告 LIBERO 98.5%、LIBERO-Plus 84.0%，推理超 80 Hz。
+  summary: |
+    为解决多视角 VLA 把主视角与腕部视角当作平行输入、忽视腕部观测贴近动作这一角色的问题，作者提出 W2-VLA：在 Qwen3-VL-4B 中加入 16 个潜在建模 token，由当前多视角观测与指令语境化后作为任务条件接口；腕部预测器以该接口和冻结 V-JEPA 2.1 编码的腕部历史为条件预测未来腕部潜变量，经 Q-Former 式适配器转为未来感知上下文，与 VLM 上下文一起条件化 DiT 流匹配动作头；另用 W2-CoT 流水线合成“子任务/物理转换/腕部证据”结构化标注做辅助监督，推理时无需解码 CoT。作者报告：LIBERO 平均 98.5%，LIBERO-Plus 零样本总体 84.0%（ABot-M0.5 为 83.4%），RoboTwin 2.0 Easy/Hard 为 60.71%/18.21%；CoBoT Magic 真机三任务（含双臂插头插入）标准与 OOD 条件下成功率和进度分均最高；消融显示腕部预测器与 CoT 各有贡献，动作生成约 87 Hz。该结果提示面向腕部的局部未来预测对精细接触任务有益，但 LIBERO 增益幅度小、真机仅三任务且每任务 30 次，代码未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 把未来预测聚焦于腕部视角并用任务条件接口连接，是明确但有限的 VLA 结构增量。
+    E: LIBERO、LIBERO-Plus、RoboTwin 2.0 与双臂真机三任务，含组件、接口与预测目标消融。
+    O: 只有项目页，未找到代码或权重。
+    T: 多校合作，通讯作者团队在具身操作方向的积累信息不足，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 代码、权重与 W2-CoT 标注是否发布
+  - 通讯作者团队在机器人操作方向的既往成果
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有项目页 https://yyyyu120.github.io/W2-VLA/。
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.06197'
+  title: 'EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning'
+  triage: exclude
+  reason: 超出范围：LLM 工具调用智能体的强化学习方法，评测为 BFCL、tau2-Bench 等文本工具基准，无具身环境
+  date_v1: '2026-08-06'
+  category: foundation-general
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - Shanghai Jiao Tong University
+  - Tencent Inc.
+  - Zhejiang University
+  - National University of Singapore
+  - Sun Yat-sen University
+  - Central South University
+  - The Chinese University of Hong Kong
+  one_liner: 让 LLM 智能体在训练中交替生成工具调用与自身模拟的环境响应（world rehearsal）并端到端优化；作者报告在 BFCL-v4、tau2-Bench 等基准上优于环境扩展基线。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: https://github.com/Within-yao/EnvACE
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 探测时仓库链接不可达。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.06374'
+  title: 'DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-06'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - cross-embodiment
+  - mixture-of-experts
+  - future-prediction
+  - humanoid
+  - generalist-policy
+  affiliations:
+  - The Hong Kong University of Science and Technology (Guangzhou)
+  - COCO Matrix
+  one_liner: 以未来帧生成监督学习跨本体动力学先验，按本体路由的 MoE 头输出原生动作；单一权重作者报告 LIBERO 98.0%、RoboCasa-GR1 59.25%、RoboTwin 2.0 89.02%。
+  summary: |
+    为解决跨本体 VLA 只用动作标签学习共享知识、且需手工把异构动作对齐到统一格式的问题，作者提出 DyPES-VLA：Qwen3-VL-2B 编码观测、指令与文字化的本体元数据并附加可学习查询 token；SANA 图像生成头仅以查询状态为条件生成未来帧，迫使其编码物体运动与接触等动力学先验；DiT 流匹配动作头共享注意力层、按本体静态路由前馈专家，并为每种本体配独立编解码器直接输出原生动作。训练先在 EgoDex 人手视频与三套仿真视频上做无动作的未来预测预训练，再在三类机器人演示上联合训练，推理时去掉生成头。作者报告：单一检查点在 RoboTwin 2.0 Clean/Randomized 平均 89.02%、RoboCasa-GR1 59.25%、LIBERO 98.0%，与各基准最强专用模型相当或略优；在 FR3、COBOT Magic、Unitree G1 三种真机三任务上平均 75.6%，高于联合微调的 GR00T-N1.6（59.6%）；去掉未来预测在 RoboTwin 与 RoboCasa-GR1 上各降约 2.4 分，线性探针显示接触起止更易解码。该结果提示未来监督与本体专属头可减少跨本体干扰，但仿真增益多为 1–3 分、真机仅三项简单任务，代码未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 未来预测先验与按本体 MoE 动作头的组合设计合理，属已有技术的有效整合。
+    E: 三个仿真基准单一检查点评测加单臂、双臂、人形三种真机，并有逐项消融与表征探针。
+    O: 只有项目页，未找到代码或权重。
+    T: 港科大（广州）与 COCO Matrix 团队的具身积累信息有限，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 代码与权重是否发布
+  - 作者团队在跨本体操作方向的既往成果
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 仅有项目页 https://livfour.github.io/DyPES-VLA_RELEASE/。
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.09730'
+  title: 'World Tokens: Enhancing Embodied Policies with Training-Time World Modeling'
+  triage: include
+  reason: null
+  date_v1: '2026-08-10'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - world-model-supervision
+  - training-time-only
+  - perceiver-adapter
+  - video-diffusion
+  - efficient-inference
+  affiliations:
+  - JIUTIAN Research
+  - Zhongguancun Academy
+  one_liner: world tokens 同时条件化训练期视频去噪器并作为动作专家唯一上下文，部署时移除视频分支；作者报告 LIBERO 98.2%、SIMPLER WidowX 71.5%，延迟约 62 ms。
+  summary: |
+    为在不承担在线视频生成开销的前提下让 VLA 获得世界模型带来的动力学表征，作者提出 World Tokens：Perceiver 式 World Adapter 将 Qwen3-VL-2B 的多模态特征映射为固定数量的 world tokens，它们既作为联合微调的 Cosmos Predict2.5-2B 视频去噪器的条件（首帧用 Canny 边缘图而非 RGB，以抑制外观捷径），又是流匹配动作专家唯一的视觉-语言上下文（排他路由，防止绕过）；部署时整个视频分支被移除。作者报告：无具身动作预训练时 LIBERO 平均 98.2%，Long 套件 97.0%，每个动作块 61.85 ms，与 π0.5 相近；消融显示允许绕过 VLM、改用 FFN 适配器或 RGB 锚帧都会使 Long 降到 94% 以下；SIMPLER 视觉匹配 WidowX 平均 71.5%、Google Robot 82.1%；Galaxea R1 Pro 真机放水果 96 次试验成功率 76.0%，对照同骨干 Qwen-GR00T 为 59.4%。该结果提示训练期世界建模经共享瓶颈可直接塑造控制表征，但收益主要体现在 LIBERO-Long 与 SIMPLER，真机仅单一放置任务族，且与带具身预训练模型相比仍有差距。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 4
+    T: 3
+  rationale:
+    C: 用排他路由的共享瓶颈让训练期视频监督作用于控制表征，设计清晰，属 WAM/VLA 融合的方法增量。
+    E: LIBERO、SIMPLER 两平台与 R1 Pro 真机，含匹配基线与逐因素机制消融。
+    O: 仓库含实质代码（MIT），HF 发布 LIBERO 与 CALVIN 权重。
+    T: 中国移动九天研究院与中关村学院，具身方向可核实积累有限，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 作者团队在具身策略方向的既往成果
+  open:
+    code: substantive
+    repo: https://github.com/kzz1031/SLIM
+    weights: open
+    data: n/a
+    license: MIT
+    note: 项目页 slim-project-page 对应该仓库（项目原名 SLIM）；探测到 48 个代码文件及 HF 权重 SLIM-LIBERO、SLIM-CALVIN。
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  - resource: simplerenv
+    role: eval
+  - resource: bridgedata-v2
+    role: finetune
+  new_resources: []

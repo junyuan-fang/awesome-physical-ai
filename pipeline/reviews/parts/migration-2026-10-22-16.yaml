@@ -1,0 +1,60 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2609.01281'
+  title: 'EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents'
+  triage: include
+  reason: null
+  date_v1: '2026-09-01'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - world-action-model
+  - action-selection
+  - policy-steering
+  - ensemble
+  - skill-framework
+  affiliations:
+  - College of Computer Science and Technology, Zhejiang University
+  - Nanjing University of Aeronautics and Astronautics
+  - Cornell University
+  - Universal Ubiquitous AI Co., Ltd.
+  - Hangzhou DEEP Robotics Technology Co., Ltd.
+  - National University of Singapore
+  one_liner: EmbodiedSkills 以三个独立世界动作模型预测冻结 VLA 候选动作的潜在后果并据分歧与效应一致性选优，作者报告 MetaWorld MT50 成功率由 76.28% 升至 78.64%、CLIPort 由 33.94% 升至 36.83%。
+  summary: |
+    为解决冻结 VLA 生成的多个合理候选动作可能带来不同后果、仅靠生成无法判断哪个更能完成任务的问题，作者提出 EmbodiedSkills：把观察、候选生成、后果预测、结果评估、候选比较与执行定义为可复用技能，组织成 Observe-Propose-Predict-Select-Execute 五阶段闭环；在冻结的 V-JEPA 2 与 MiniLM 表示上训练三个独立世界动作模型预测候选的潜在后果与结果分数，以「均值减标准差」惩罚预测分歧，再加一个基于预测效应一致性的轻量比较器；训练数据来自同一仿真状态下的分支执行，策略本身不更新。作者报告 MetaWorld MT50（π0 后端，2500 回合）成功率由 76.28% 升至 78.64%，CLIPort（1800 实例）由 33.94% 升至 36.83%，CALVIN 上 FLOWER 五连任务成功率由 77.10% 升至 77.90%，并与 UF-OPS、SPIRAL 等增强方法和多组集成、表征消融对比。该结果提示后果感知选择可跨策略后端带来小幅稳定收益，但提升幅度有限、部分任务出现退化，全部实验仅在仿真中进行，且分支数据依赖可重置的模拟器。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 用世界模型集成为冻结策略做候选选择是已有思路的整合，技能化框架有一定工程价值
+    E: 三个仿真基准、大样本评测、外部方法对比与较全消融，但无真机且增益较小
+    O: 仓库含实质代码但未找到许可证，权重与分支数据发布情况未明
+    T: 浙大庄越挺、张文桥团队在多模态与具身方向有可核实积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核实仓库是否提供训练好的世界动作模型权重与分支训练数据，以及许可证
+  open:
+    code: substantive
+    repo: https://github.com/DCDmllm/EmbodiedSkills
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 探测到 16 个代码文件，未找到许可证文件
+  uses:
+  - resource: meta-world
+    role: eval
+  - resource: calvin
+    role: eval
+  new_resources: []

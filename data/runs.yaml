@@ -1,0 +1,51 @@
+runs:
+- scan_date: '2026-10-22'
+  kind: migration
+  included: 213
+  excluded: 13
+  deferred: 0
+  removed: 13
+  new_resources:
+  - benchmark:robotwin-2
+  - dataset:grail-locomanip
+  - benchmark:navverse
+  - benchmark:kinebench
+  - benchmark:humanclaw-bench
+  - dataset:ego2robot-data
+  - benchmark:robotwin
+  - benchmark:humanoidvln
+  - benchmark:h2r-bench
+  - dataset:prism-industrial
+  - benchmark:softvtbench
+  digest: digests/migration-2026-10-22.md
+  applied: '2026-10-22'
+- scan_date: '2026-10-22'
+  kind: daily
+  window_start: '2026-09-02'
+  window_end: '2026-10-22'
+  last_covered_end: '2026-09-04'
+  d: 48
+  cap: 20
+  stats:
+    fetched: 6029
+    already_tracked_or_triaged: 1
+    out_of_scope: 1413
+    below_pool_cut: 4535
+    pool: 80
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 20
+  excluded: 55
+  deferred: 5
+  removed: 0
+  new_resources:
+  - benchmark:xp-teleop
+  - benchmark:habitatgs-ln
+  - dataset:scalenav-data
+  - benchmark:humanoidtoolbench
+  - dataset:toolbook
+  - dataset:egox-data-6m
+  - benchmark:egox-bench
+  digest: digests/daily/2026-10-22.md
+  applied: '2026-10-22'

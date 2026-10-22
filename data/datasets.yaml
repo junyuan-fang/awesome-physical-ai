@@ -3,139 +3,227 @@
 #   manipulation-demos | scene-3d | egocentric-human | mocap-motion | sim-generated
 
 datasets:
-  # ============== Manipulation Demonstrations ==============
-  - name: "Open X-Embodiment (RT-X)"
-    subcategory: manipulation-demos
-    desc: "Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories."
-    size: "1M+ episodes"
-    links:
-      project: "https://robotics-transformer-x.github.io"
-      paper: "https://arxiv.org/abs/2310.08864"
-      code: "https://github.com/google-deepmind/open_x_embodiment"
-    tags: [multi-embodiment]
-
-  - name: "DROID"
-    subcategory: manipulation-demos
-    desc: "Diverse real-world manipulation dataset from 564 scenes, 13 institutions."
-    size: "76k demonstrations"
-    links:
-      project: "https://droid-dataset.github.io"
-      paper: "https://arxiv.org/abs/2403.12945"
-    tags: [real-world, multi-institution]
-
-  - name: "BridgeData V2"
-    subcategory: manipulation-demos
-    desc: "Large-scale tabletop manipulation dataset for generalization research."
-    size: "60k trajectories"
-    links:
-      project: "https://rail-berkeley.github.io/bridgedata"
-      paper: "https://arxiv.org/abs/2308.12952"
-    tags: [tabletop]
-
-  - name: "ARIO (All Robots In One)"
-    subcategory: manipulation-demos
-    desc: "Unified cross-embodiment robot learning dataset."
-    links:
-      project: "https://imaei.github.io/project_pages/ario/"
-      paper: "https://arxiv.org/abs/2408.10899"
-    tags: [multi-embodiment, real-world]
-
-  - name: "AgiBot World"
-    subcategory: manipulation-demos
-    desc: "Large-scale humanoid manipulation dataset from AgiBot's real-world deployments."
-    links:
-      project: "https://agibot-world.com"
-    tags: [humanoid, manipulation, china]
-
-  # ============== 3D Scene Datasets ==============
-  - name: "Habitat-Matterport 3D (HM3D)"
-    subcategory: scene-3d
-    desc: "1000+ photorealistic indoor 3D scenes for embodied AI training."
-    links:
-      project: "https://aihabitat.org/datasets/hm3d/"
-      paper: "https://arxiv.org/abs/2109.08238"
-    tags: [indoor, navigation]
-
-  - name: "ScanNet++"
-    subcategory: scene-3d
-    desc: "1006 high-fidelity indoor scenes with sub-mm geometry & DSLR captures."
-    links:
-      project: "https://kaldir.vc.in.tum.de/scannetpp/"
-      paper: "https://arxiv.org/abs/2308.11417"
-    tags: [indoor, high-fidelity]
-
-  - name: "Replica Dataset"
-    subcategory: scene-3d
-    desc: "18 high-quality reconstructions of indoor spaces (Meta Reality Labs)."
-    links:
-      project: "https://github.com/facebookresearch/Replica-Dataset"
-      paper: "https://arxiv.org/abs/1906.05797"
-    tags: [indoor, meta]
-
-  - name: "3D-FRONT / 3D-FUTURE"
-    subcategory: scene-3d
-    desc: "Synthetic indoor scenes with high-quality furniture CAD models (Alibaba)."
-    links:
-      project: "https://tianchi.aliyun.com/specials/promotion/alibaba-3d-scene-dataset"
-      paper: "https://arxiv.org/abs/2011.09127"
-    tags: [synthetic, indoor, furniture]
-
-  # ============== Egocentric / Human Video ==============
-  - name: "Ego4D"
-    subcategory: egocentric-human
-    desc: "3,670 hours of egocentric video across 74 worldwide locations."
-    size: "3,670 hours"
-    links:
-      project: "https://ego4d-data.org"
-      paper: "https://arxiv.org/abs/2110.07058"
-    tags: [egocentric, large-scale]
-
-  - name: "EPIC-KITCHENS-100"
-    subcategory: egocentric-human
-    desc: "Long-form egocentric kitchen activity dataset for action understanding."
-    size: "100 hours"
-    links:
-      project: "https://epic-kitchens.github.io/2024"
-      paper: "https://arxiv.org/abs/2006.13256"
-    tags: [egocentric, kitchen, activity]
-
-  - name: "HOI4D"
-    subcategory: egocentric-human
-    desc: "4D egocentric dataset for category-level human-object interaction."
-    links:
-      project: "https://hoi4d.github.io"
-      paper: "https://arxiv.org/abs/2203.01577"
-    tags: [hoi, egocentric, 4d]
-
-  # ============== Motion Capture / Whole-Body ==============
-  - name: "AMASS"
-    subcategory: mocap-motion
-    desc: "Unifies 15 mocap datasets in a common SMPL skeleton — 40+ hours of motion."
-    links:
-      project: "https://amass.is.tue.mpg.de"
-      paper: "https://arxiv.org/abs/1904.03278"
-    tags: [smpl, motion-capture]
-
-  - name: "HumanML3D"
-    subcategory: mocap-motion
-    desc: "14,616 motions with text annotations for motion-language tasks."
-    links:
-      code: "https://github.com/EricGuo5513/HumanML3D"
-      paper: "https://arxiv.org/abs/2202.04257"
-    tags: [text-to-motion, smpl]
-
-  # ============== Sim-Generated ==============
-  - name: "RoboCasa-Gen"
-    subcategory: sim-generated
-    desc: "Large-scale procedurally generated household tasks rendered in MuJoCo."
-    links:
-      project: "https://robocasa.ai"
-      paper: "https://arxiv.org/abs/2406.02523"
-    tags: [household, procedural]
-
-  - name: "PhysXVerse"
-    subcategory: sim-generated
-    desc: "First general-purpose simulation-ready 3D dataset (released with PhysX-Omni, 2026)."
-    links:
-      paper: "https://arxiv.org/abs/2605.21572"
-    tags: [sim-ready, 2026]
+- id: open-x-embodiment
+  name: Open X-Embodiment (RT-X)
+  subcategory: manipulation-demos
+  desc: Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories.
+  size: 1M+ episodes
+  links:
+    project: https://robotics-transformer-x.github.io
+    paper: https://arxiv.org/abs/2310.08864
+    code: https://github.com/google-deepmind/open_x_embodiment
+  tags:
+  - multi-embodiment
+- id: droid
+  name: DROID
+  subcategory: manipulation-demos
+  desc: Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
+  size: 76k demonstrations
+  links:
+    project: https://droid-dataset.github.io
+    paper: https://arxiv.org/abs/2403.12945
+  tags:
+  - real-world
+  - multi-institution
+- id: bridgedata-v2
+  name: BridgeData V2
+  subcategory: manipulation-demos
+  desc: Large-scale tabletop manipulation dataset for generalization research.
+  size: 60k trajectories
+  links:
+    project: https://rail-berkeley.github.io/bridgedata
+    paper: https://arxiv.org/abs/2308.12952
+  tags:
+  - tabletop
+- id: ario
+  name: ARIO (All Robots In One)
+  subcategory: manipulation-demos
+  desc: Unified cross-embodiment robot learning dataset.
+  links:
+    project: https://imaei.github.io/project_pages/ario/
+    paper: https://arxiv.org/abs/2408.10899
+  tags:
+  - multi-embodiment
+  - real-world
+- id: agibot-world
+  name: AgiBot World
+  subcategory: manipulation-demos
+  desc: Large-scale humanoid manipulation dataset from AgiBot's real-world deployments.
+  links:
+    project: https://agibot-world.com
+  tags:
+  - humanoid
+  - manipulation
+  - china
+- id: habitat-matterport-3d
+  name: Habitat-Matterport 3D (HM3D)
+  subcategory: scene-3d
+  desc: 1000+ photorealistic indoor 3D scenes for embodied AI training.
+  links:
+    project: https://aihabitat.org/datasets/hm3d/
+    paper: https://arxiv.org/abs/2109.08238
+  tags:
+  - indoor
+  - navigation
+- id: scannet
+  name: ScanNet++
+  subcategory: scene-3d
+  desc: 1006 high-fidelity indoor scenes with sub-mm geometry & DSLR captures.
+  links:
+    project: https://kaldir.vc.in.tum.de/scannetpp/
+    paper: https://arxiv.org/abs/2308.11417
+  tags:
+  - indoor
+  - high-fidelity
+- id: replica-dataset
+  name: Replica Dataset
+  subcategory: scene-3d
+  desc: 18 high-quality reconstructions of indoor spaces (Meta Reality Labs).
+  links:
+    project: https://github.com/facebookresearch/Replica-Dataset
+    paper: https://arxiv.org/abs/1906.05797
+  tags:
+  - indoor
+  - meta
+- id: 3d-front-3d-future
+  name: 3D-FRONT / 3D-FUTURE
+  subcategory: scene-3d
+  desc: Synthetic indoor scenes with high-quality furniture CAD models (Alibaba).
+  links:
+    project: https://tianchi.aliyun.com/specials/promotion/alibaba-3d-scene-dataset
+    paper: https://arxiv.org/abs/2011.09127
+  tags:
+  - synthetic
+  - indoor
+  - furniture
+- id: ego4d
+  name: Ego4D
+  subcategory: egocentric-human
+  desc: 3,670 hours of egocentric video across 74 worldwide locations.
+  size: 3,670 hours
+  links:
+    project: https://ego4d-data.org
+    paper: https://arxiv.org/abs/2110.07058
+  tags:
+  - egocentric
+  - large-scale
+- id: epic-kitchens-100
+  name: EPIC-KITCHENS-100
+  subcategory: egocentric-human
+  desc: Long-form egocentric kitchen activity dataset for action understanding.
+  size: 100 hours
+  links:
+    project: https://epic-kitchens.github.io/2024
+    paper: https://arxiv.org/abs/2006.13256
+  tags:
+  - egocentric
+  - kitchen
+  - activity
+- id: hoi4d
+  name: HOI4D
+  subcategory: egocentric-human
+  desc: 4D egocentric dataset for category-level human-object interaction.
+  links:
+    project: https://hoi4d.github.io
+    paper: https://arxiv.org/abs/2203.01577
+  tags:
+  - hoi
+  - egocentric
+  - 4d
+- id: amass
+  name: AMASS
+  subcategory: mocap-motion
+  desc: Unifies 15 mocap datasets in a common SMPL skeleton — 40+ hours of motion.
+  links:
+    project: https://amass.is.tue.mpg.de
+    paper: https://arxiv.org/abs/1904.03278
+  tags:
+  - smpl
+  - motion-capture
+- id: humanml3d
+  name: HumanML3D
+  subcategory: mocap-motion
+  desc: 14,616 motions with text annotations for motion-language tasks.
+  links:
+    code: https://github.com/EricGuo5513/HumanML3D
+    paper: https://arxiv.org/abs/2202.04257
+  tags:
+  - text-to-motion
+  - smpl
+- id: robocasa-gen
+  name: RoboCasa-Gen
+  subcategory: sim-generated
+  desc: Large-scale procedurally generated household tasks rendered in MuJoCo.
+  links:
+    project: https://robocasa.ai
+    paper: https://arxiv.org/abs/2406.02523
+  tags:
+  - household
+  - procedural
+- id: physxverse
+  name: PhysXVerse
+  subcategory: sim-generated
+  desc: First general-purpose simulation-ready 3D dataset (released with PhysX-Omni, 2026).
+  links:
+    paper: https://arxiv.org/abs/2605.21572
+  tags:
+  - sim-ready
+  - 2026
+- id: grail-locomanip
+  name: GRAIL Humanoid Loco-Manipulation
+  desc: 由 GRAIL 流水线生成的 2 万+条 Unitree G1 人形 loco-manipulation 序列（拾取、全身操作、坐下、地形穿越），源自视频世界模型与 3D 资产
+  links:
+    paper: https://arxiv.org/abs/2606.05160
+    data: https://huggingface.co/datasets/nvidia/PhysicalAI-Robotics-Locomanipulation-GRAIL
+    code: https://github.com/NVlabs/GRAIL
+  subcategory: sim-generated
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: ego2robot-data
+  name: Ego2Robot
+  desc: 由第一人称人手操作视频经动作重定向与机械臂渲染合成的 18,561 小时机器人训练数据，覆盖 15 种机械臂形态（截至 2026-10 尚未公开）。
+  links:
+    paper: https://arxiv.org/abs/2608.02580
+    project: https://www-ye.github.io/ego2robot_blog/
+  subcategory: sim-generated
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: prism-industrial
+  name: PRISM
+  desc: Real-world contact-rich industrial manipulation dataset, 25+ tasks, 5k+ teleoperated trajectories with RGB-D, F/T,
+    tactile and robot state across 3 robots.
+  links:
+    project: https://tengbo-yu.github.io/PRISM/
+    paper: https://arxiv.org/abs/2608.17962
+    data: https://modelscope.cn/datasets/Turboyuuuu/PRISM
+  subcategory: manipulation-demos
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: scalenav-data
+  name: ScaleNav-Data
+  desc: 18,249 段互联网自我中心导航视频片段（含指令标注）与 2,600 条 Habitat-GS 仿真 episode（含对齐动作）。
+  links:
+    project: https://zju3dv.github.io/ScaleNav/
+    code: https://github.com/MachEmbodied/ScaleNav
+  subcategory: egocentric-human
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: toolbook
+  name: ToolBook
+  desc: 3,094 human demonstrations of humanoid tool use, 3,003 in simulation and 91 on a real Unitree G1.
+  links:
+    project: https://snu-pi.github.io/HumanoidToolBench/
+    code: https://github.com/SNU-PI/HumanoidToolBench
+  subcategory: manipulation-demos
+  added: '2026-10-22'
+  last_check: '2026-10-22'
+- id: egox-data-6m
+  name: EgoX-Data-6M
+  desc: 50 小时任务驱动的自我中心操作与移动视频（101 个刚性物体、270 个任务脚本），含统一度量世界坐标下的相机、深度、双手、物体标注与秒级任务描述。
+  links:
+    paper: https://arxiv.org/abs/2610.26625
+    project: https://ropedia.github.io/EgoXperience
+    data: https://huggingface.co/datasets/ropedia-ai/EgoX-Data-6M
+  subcategory: egocentric-human
+  added: '2026-10-22'
+  last_check: '2026-10-22'

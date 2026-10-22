@@ -1,0 +1,769 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2606.02486'
+  title: 'Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-01'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - dynamic-manipulation
+  - latent-world-model
+  - frozen-vla
+  - optical-flow
+  - real-robot
+  affiliations:
+  - Robotics Institute, Carnegie Mellon University, Pittsburgh, USA
+  one_liner: AHEAD 给冻结 OpenVLA 外挂 4.9M 参数潜空间世界模型以预测未来特征；作者报告 20 个动态仿真场景成功率 79–97%（最强基线 31–58%），真机接抛射物 19/30，基线全为 0。
+  summary: |
+    为缓解 VLA 按当前观测出动作、默认场景静止而在物体运动时“抓空”的问题，作者提出 AHEAD：一个 predict-then-act 包装器，在冻结 VLA 的视觉特征空间里用小型 flow-matching 世界模型预测未来 patch token。它用 RAFT 光流给每个 token 加上速度/加速度条件并按恒加速度运动学解析外推，用语言+运动显著性掩码只预测相关 patch，并在预测不确定性超过阈值时自适应停止滚动，最后把预测 token 交给原动作解码器。在自建 MuJoCo 的 20 个动态场景（匀速、加速、遮挡、碰撞后混沌等）上，作者报告成功率 79–97%，对比 Realtime ACT、Streaming DP、DreamVLA、LaDi-WM 等基线的 31–58%；在 xArm 7 真机五个任务上为 19/30 到 30/30，抛物接球任务各基线均为 0/30，并有速度扫描和组件消融。结果提示“给冻结 VLA 补前瞻”是低成本的可行路线，但仿真环境为自建、真机仅单平台，恒加速度假设在碰撞后混沌运动中失效，光流只捕捉像平面运动，且尚未公开代码。
+  venue: CoRL 2026
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 4
+  rationale:
+    C: 针对动态物体操作给冻结 VLA 加潜空间预测的通用包装思路清晰，空间/时间自适应计算分配有方法增量。
+    E: 20 个仿真场景+8 个基线+速度扫描+消融，并有 xArm 7 五任务真机；但仿真为自建环境、真机单平台。
+    O: 未找到官方仓库，权重与数据均未公开。
+    T: CMU Robotics Institute（Ichnowski 组）在操作与运动规划方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否会发布代码与世界模型权重
+  - 预训练所用六个公开视频数据源的具体名单（Table 7）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文与 arXiv 页面均未给出代码链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.30834'
+  title: 'Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring'
+  triage: include
+  reason: null
+  date_v1: '2026-05-29'
+  category: vla
+  route: adjacent
+  contribution: method
+  tags:
+  - failure-detection
+  - runtime-monitoring
+  - conformal-prediction
+  - weak-supervision
+  - safety
+  affiliations:
+  - University of Wisconsin–Madison
+  - Georgia Institute of Technology
+  one_liner: Hide-and-Seek 仅用轨迹级成败标签，以轨迹间/内对比损失训练 VLA 运行时失败检测器；作者报告在 LIBERO-10、VLABench 与真机上对 OpenVLA、π0、π0.5 均优于 SAFE 等基线。
+  summary: |
+    为解决 VLA 失败检测要么依赖昂贵的动作重采样或外部 VLM、要么把轨迹级标签均匀摊到每一步而引入标签噪声的问题，作者把失败检测表述为粗监督学习：在 VLA 内部动作嵌入上训练轻量 LSTM 检测器，用轨迹间对比损失让失败轨迹中最可疑的一步得分高于成功轨迹中最像失败的一步，再用轨迹内对比损失围绕推断的失败起点拉开前后得分，部署时用函数型保形预测构造随时间变化的报警阈值。在 LIBERO-10 和 VLABench 上、针对 OpenVLA、π0、π0.5 三种策略，作者报告在已见与未见任务的 bACC、wACC、TWA 上均优于 OOD 检测、多采样不确定性与 SAFE 等十余种基线；在 xArm 6 真机两组任务上 TWA 也最佳；与 Qwen3-VL-8B 在线监控相比，作者报告 bACC 0.843 对 0.712、单步延迟约 1 ms 对 2.3 s。结果提示弱监督即可学到可迁移的失败信号，但检测器需针对每个策略收集成败轨迹训练，且目前仓库仍为占位。
+  venue: NeurIPS 2026
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 把轨迹级弱监督与对比目标用于 VLA 失败定位，是对 SAFE 一类方法的扎实改进，属监控子方向的方法增量。
+    E: 两个仿真基准×三种 VLA+真机，基线覆盖面广，含损失/结构消融与 VLM 监控对比。
+    O: 仓库仅有 README 且写明代码即将发布，暂无实质代码。
+    T: Sharon Li（OOD 检测）与 Zsolt Kira 在可靠性与机器人学习方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库何时放出训练代码与采集的 rollout 数据
+  open:
+    code: placeholder
+    repo: https://github.com/deeplearning-wisc/hide_and_seek
+    weights: none
+    data: none
+    license: none-found
+    note: 仓库仅 1 个文件，README 标注 coming soon。
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2605.30280'
+  title: 'Qwen-VLA: Alibaba''s Embodied Foundation Model'
+  triage: include
+  reason: null
+  date_v1: '2026-05-28'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - foundation-model
+  - generalist-policy
+  - cross-embodiment
+  - navigation
+  - qwen
+  affiliations:
+  - Qwen Team
+  one_liner: Qwen-VLA 以 Qwen3.5-4B 加 DiT 动作专家统一操作、导航与轨迹预测；作者报告单一模型 LIBERO 97.9%、Simpler-WidowX 73.7%、RoboTwin 86.1/87.2%、R2R OSR 69.0%。
+  summary: |
+    为缓解具身模型按任务（操作、导航）和本体各自训练导致能力割裂、跨本体泛化差的问题，Qwen 团队提出 Qwen-VLA：以 Qwen3.5-4B 原生多模态模型为骨干，接约 1.15B 参数的 DiT flow-matching 动作专家，用“本体感知提示词”声明机器人平台与控制约定，把操作、视觉语言导航和人类第一视角轨迹统一为动作/轨迹预测。训练分四阶段：仅文本到动作预训练、联合持续预训练（真实机器人数据约占 74%，含 AgiBot World、DROID、BridgeData V2 等）、多任务 SFT 和基于仿真回报的 PPO 强化学习。作者报告单一 Instruct 模型在 LIBERO 97.9%、Simpler-WidowX 73.7%、RoboCasa-GR1 56.7%、RoboTwin 2.0 Easy/Hard 86.1/87.2%，R2R OSR 69.0%、RxR SR 59.6%，ALOHA 真机 OOD 平均 76.9%，DOMINO 零样本 26.6%，并有 T2A、视觉语言共训练等消融。结果提示统一的多任务多本体预训练可在多个基准上与专用模型相当或更好，但对比基线多为各自报告数字，真机只覆盖 ALOHA，且目前仓库无代码和权重。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 把操作、导航、轨迹预测统一到一个 VLA 并给出完整分阶段训练配方，属基础模型级工作，但架构组件多为已有技术组合。
+    E: 覆盖 6+ 个仿真基准、真机 ALOHA、OOD 测试与多项消融；基线数字多引自原文，真机平台单一。
+    O: 官方仓库仅 README 与图片，未见代码、权重或许可证。
+    T: Qwen 团队在多模态基础模型上产出显著，具身方向的可核实积累相对较新。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 是否发布模型权重与训练/推理代码及其许可证
+  - 论文署名完整单位（arXiv HTML 仅显示 Qwen Team）
+  open:
+    code: placeholder
+    repo: https://github.com/QwenLM/Qwen-VLA
+    weights: none
+    data: none
+    license: none-found
+    note: 2026-10-22 核对：仓库仅 README 与 assets 图片，无代码和权重链接。
+  uses:
+  - resource: agibot-world
+    role: pretrain
+  - resource: droid
+    role: pretrain
+  - resource: bridgedata-v2
+    role: pretrain
+  - resource: libero
+    role: eval
+  - resource: simplerenv
+    role: eval
+  new_resources: []
+- arxiv_id: '2605.28549'
+  title: 'SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints'
+  triage: include
+  reason: null
+  date_v1: '2026-05-27'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - sprinting
+  - motion-prior
+  - frequency-domain
+  - sim2real
+  affiliations:
+  - College of Intelligence Science and Technology, National University of Defense Technology, China
+  - School of Artificial Intelligence and Robotics, Hunan University, China
+  one_liner: SPRINT 仅用 5 段（14 秒）人体步态训练频率自适应谱先验，生成参考关节轨迹再由残差 RL 稳定；作者报告 Unitree G1 零样本实机冲刺在 6 m/s 指令下实测约 5.9 m/s，并可平滑切换步态。
+  summary: |
+    为解决人形机器人高速冲刺缺乏可用运动参考数据、AMP 类方法在高速下易不稳定或模式坍塌的问题，作者提出 SPRINT：从 LAFAN1 中挑出 5 段走、慢跑、跑步序列（共 428 帧、14 秒），经 GMR 重定向后在频域刻画步态周期性，用以频率为条件的 VAE 加多谐波相位输入和 FiLM 解码器训练“谱先验”，可外推到超出参考分布的速度；再以冻结先验生成参考轨迹，PPO 训练的残差策略负责动态稳定，配合渐进速度课程与非对称 actor-critic。在 Isaac Gym 中，作者报告谱先验的重建误差、FID 和边界幅值误差均优于 AI-CPG，消融显示课程学习、残差结构和特权 critic 各有贡献；在 Unitree G1 上零样本部署，1–6 m/s 指令下实测速度与仿真接近（6 m/s 指令时约 5.91 m/s），并展示了从站立到跑步的连续步态切换。结果提示频域先验是高速周期运动的高数据效率参考来源，但只适用于周期性步态，真机评测以速度跟踪和 FID 为主、缺少与其他高速方法的实机对比，且未公开代码。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 用频域谱先验替代大量动捕参考做高速步态，思路简洁，增量集中在周期步态这一细分问题。
+    E: 有与 AI-CPG 等基线的仿真对比、四项消融及 G1 实机 1–6 m/s 仿真/实机对照，但实机缺少基线。
+    O: 仅有匿名项目页，未找到代码仓库或权重。
+    T: 国防科大机器人团队有一定相关成果，人形学习方向的可核实积累信息有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否开源代码与谱先验模型
+  - 团队在人形运动控制方向的既往成果
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有匿名项目页 https://anonymous.4open.science/w/SPRINT-138A/。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.26820'
+  title: Can VLA Models Learn from Real-World Data Continually without Forgetting?
+  triage: include
+  reason: null
+  date_v1: '2026-05-26'
+  category: vla
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - continual-learning
+  - experience-replay
+  - catastrophic-forgetting
+  - real-world
+  - bimanual
+  affiliations:
+  - HKU
+  - EIT, Ningbo
+  - SUSTech
+  - INFIFORCE
+  - HUST
+  - HITSZ
+  one_liner: 构建 10 个真机单臂/双臂任务的 VLA 持续学习基准，作者报告朴素顺序微调严重遗忘（单臂 AS 31.4、BWT -81.0），而配置得当的经验回放 AS 达 97.2，并优于同算力的多任务联合训练。
+  summary: |
+    为弥补 VLA 持续学习研究多在 LIBERO 等仿真上进行、可能低估真实部署中遗忘程度的缺口，作者用两台 PiPER-X 机械臂和四路 RealSense 构建真实世界持续操作基准：5 个单臂与 5 个双臂任务（含叠碗、挂杯、叠毛巾等可形变操作），每个单臂任务 500 条、双臂任务 300 条遥操作示范，以分步打分计算平均分 AS、后向迁移 BWT 与前向迁移 FWT。基于一个 flow-matching 类预训练 VLA 的标准微调流程，作者报告：顺序微调在单臂流上 AS 31.4、BWT -81.0，双臂流 AS 38.3、BWT -68.6；加入经验回放后两条流 AS 均为 97.2、BWT 转为正值，并高于联合多任务训练的 82.6 与 83.2。作者进一步分析回放比例、回放频率和动作归一化策略，发现固定首任务归一化统计量最好，并在 10 任务交替流上用非对称回放频率实现稳定学习。结论提示真实数据流下回放仍是简单有效的基线，但只覆盖单一平台和单一基础模型，每格评测次数有限，回放需持续存储历史数据，且数据与代码尚未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 首批真机 VLA 持续学习实证之一，结论（回放有效、归一化一致性重要）实用但方法上无新算法。
+    E: 10 个真机任务、三类设定与回放配置/归一化消融较系统，但只有单平台单模型，对照方法仅顺序微调、联合训练和回放。
+    O: 未发布代码，35 GB 数据集未见公开链接。
+    T: HKU 与 EIT（曾文军）团队有一定相关成果，具身持续学习方向积累有限可核实信息。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 所用基础 VLA 的确切版本（文中引用 [3]）
+  - 数据集是否会以 LeRobot 格式公开
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文未给出代码或数据链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.22812'
+  title: 'GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-05-21'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - gesture
+  - hri
+  - grounding
+  - dual-vlm
+  - synthetic-data
+  affiliations:
+  - Tsinghua University
+  - Dexmal
+  one_liner: GesVLA 把指点手势作为与语言并行的指令模态，双 VLM 结构加半合成手势数据；作者报告 ARX5 真机三项挑选任务平均成功率 83.3%，纯文本 VLA 为 31.7%，手势意图识别准确率 94.3%。
+  summary: |
+    为解决多相似物体场景下纯文本指令难以指明“这个/放那里”的空间歧义，作者提出 GesVLA：把 MediaPipe 提取的食指与手腕关键点编码为潜变量，与手势关键帧、语言一起输入负责意图推理的 VLM，再由负责在线感知的 VLM 通过交叉注意力读取其隐状态、驱动 flow-matching 动作专家；数据侧把渲染的手模型叠加到真实 RGB-D 场景上，自动生成带精确指向标注的半合成手势数据，并采用先训练意图推理、再冻结它训练动作的两阶段策略。作者报告在 88 个真实测试场景中意图识别准确率 94.3%，高于提示式 Qwen3.5-plus 的 38.6% 和几何流水线的 59.1%；在 ARX5 真机抓放积木、挑果冻、挑果蔬三项任务（各 20 次）上平均成功率 83.3%，对比纯文本 VLA 31.7%、几何流水线+VLA 41.7%、解耦 VLM 变体 61.7%，并有数据增强与训练策略消融。结果提示手势作为一等模态能显著减少拥挤场景的目标歧义，但评测仅单一平台、每任务 20 次，手势依赖固定侧视相机且仅支持指点类手势。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 将指点手势端到端融入 VLA 并配半合成数据管线，是有用的交互模态扩展，增量集中在 HRI 子问题。
+    E: 意图识别与真机操作均有多基线和消融，但仅单平台、每任务 20 次试验，无仿真或公开基准。
+    O: 仓库含 74 个代码文件（探测结果），权重与数据未见发布，未找到许可证。
+    T: 清华（冯建江组）与 Dexmal 有一定相关成果，具身方向积累信息有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库是否包含训练代码与数据生成管线、是否发布权重
+  - 仓库许可证
+  open:
+    code: substantive
+    repo: https://github.com/GWxuan/GesVLA
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 依据探测（114 文件/74 代码文件）判断为实质代码，未逐文件核对。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.22272'
+  title: 'Imagine2Real: Towards Zero-shot Humanoid-Object Interaction via Video Generative Priors'
+  triage: include
+  reason: null
+  date_v1: '2026-05-21'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - hoi
+  - video-generation
+  - behavior-foundation-model
+  - keypoint-tracking
+  affiliations:
+  - Zhejiang University
+  - Shanghai AI Laboratory
+  - The Chinese University of Hong Kong
+  one_liner: Imagine2Real 用视频生成模型合成人形-物体交互视频，提取机器人基座、双手与物体的稀疏 4D 关键点，在行为基础模型潜空间内跟踪；作者报告 MuJoCo 中搬箱成功率 82.65%，并在动捕环境下零样本实机演示。
+  summary: |
+    为缓解人形全身物体交互（HOI）缺乏高质量 3D 数据、而从视频提取动作又依赖 CAD 模型和复杂重定向的问题，作者提出 Imagine2Real：由图像和文本用视频生成模型（实机用 Seedance 2.0 Fast）合成交互视频，经 SAM3 分割与 SpaTrackerV2 跟踪得到基座、双手和物体的统一 4D 点轨迹，绕过重定向；控制侧先在约 68.5 小时人体动作（AMASS、LAFAN1、100STYLE）上训练行为基础模型（BFM），再在其潜空间中训练稀疏关键点跟踪器，最后用约 0.43 小时 OMOMO 交互数据微调交互适配器。在 MuJoCo sim2sim 评测中，作者报告搬箱成功率 82.65%、推箱 64.91%（无适配器时为 0% 与 29.82%），BFM 潜空间跟踪在保持近似成功率的同时显著降低关节角误差与动作抖动；实机在 Unitree G1 上零样本完成多种搬箱和击打柱子任务。结果提示视频先验+稀疏关键点是扩展 HOI 的可行路径，但实机依赖动捕系统、为开环执行，任务局限于搬/推等无需灵巧手的交互，实机仅有定性演示。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 将视频生成先验、统一点轨迹与 BFM 潜空间跟踪组合用于零样本 HOI，有系统性增量，但组件多为已有技术。
+    E: sim2sim 有适配器与跟踪方式消融，实机仅定性演示且依赖动捕，任务类型有限。
+    O: 探测到的仓库 pink 是第三方 IK 库并非官方代码；论文称代码在补充材料中，未见公开仓库。
+    T: 上海 AI Lab（庞江淼、王靖博）在人形全身控制方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 官方代码与预训练检查点是否公开
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 修正探测结果：stephane-caron/pink 为论文引用的第三方逆运动学库，不是本文代码。
+  uses:
+  - resource: amass
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2605.22183'
+  title: Action with Visual Primitives
+  triage: include
+  reason: null
+  date_v1: '2026-05-21'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - decoupled-vla
+  - visual-primitives
+  - flow-matching
+  - withdrawn
+  affiliations: []
+  one_liner: AVP 让 VLM 先推断下一阶段目标并输出视觉基元 token，再条件化 flow-matching 动作专家；摘要称真机抓放比 π0.5 成功率高 37.04%，但该论文已于 v4 撤稿，结果无法核验。
+  summary: |
+    为缓解常见 VLA 在单次前向中把指令理解、空间场景理解和运动控制纠缠在一个目标里、使动作专家被迫重新学习预训练 VLM 已有能力的问题，作者提出 AVP（Action with Visual Primitives）：一个端到端架构，以“视觉基元”作为 VLM 与动作模块之间的接口——VLM 推断下一阶段目标并输出视觉基元 token，这些 token 条件化 flow-matching 动作专家，其监督信号由末端执行器运动学导出。根据摘要，作者在通用抓放真机实验中报告成功率比 π0.5 高 37.04%，并在数据效率、空间组合泛化和物体级迁移上有一致提升。然而该论文 v4（2026-09-20）已被作者撤回，备注称希望完成进一步实验改进后再发表；缓存中没有正文，前三个版本的实验设置、基线配置和试验次数均无法在本次复查中核对。因此该条目暂不评分：其思路与解耦式 VLA 路线一致，但在新版本出现前，摘要中的数字不应被引用为可信结论。
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 论文已于 2026-09-20 撤稿（v4），需确认是否有修订版重新发布；若长期无新版本，应考虑移出列表
+  - 正文（v1–v3 PDF）中的实验设置、基线与试验次数
+  - 作者单位（arXiv 页面未列出）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 未找到代码仓库；论文已撤稿。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.21800'
+  title: 'stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation'
+  triage: include
+  reason: null
+  date_v1: '2026-05-20'
+  category: world-model
+  route: adjacent
+  contribution: infra
+  tags:
+  - world-model
+  - infrastructure
+  - reproducibility
+  - planning
+  - ood-generalization
+  affiliations:
+  - Mila & Université de Montréal
+  - New York University
+  - Universidade Federal de Minas Gerais
+  - Independent Researcher
+  - LanceDB
+  - University of Oxford
+  - Brown University
+  one_liner: 世界模型开源统一平台 swm：Lance 数据层、DINO-WM/LeWM/TD-MPC2 等基线、CEM/MPPI 规划器与可控扰动环境；作者在 Push-T 上复现基线，并显示轻微分布偏移即令规划成功率骤降。
+  summary: |
+    为解决世界模型研究代码各自为政、视频数据加载慢、缺少标准化泛化评测的问题，作者发布开源平台 stable-worldmodel（swm）：基于 Lance 列式格式的数据层（支持 MP4、HDF5、LeRobot 转换，本地读取吞吐约为 HDF5 的 3 倍并支持 S3 流式读取）；经测试的世界模型基线（DINO-WM、LeWorldModel、PLDM、TD-MPC2、GCBC 等）与规划求解器（CEM、MPPI、梯度法等）；以及覆盖经典控制、MuJoCo、Atari、OGBench 机器人与 Craftax 的环境套件，可在线施加颜色、纹理、遮挡、质量、摩擦等可控扰动。案例研究中，作者在 Push-T 上用统一配置复现各基线（如 DINO-WM 92%、LeWM 94%），并报告预测误差与规划成败相关性弱、轻微视觉扰动或增加干扰物即导致成功率显著下降。该平台有望降低复现与公平比较成本，但目前评测主要在仿真低维/桌面任务上，真实机器人与 sim-to-real 支持仍是未来工作，平台价值有待社区采用检验。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 5
+  rationale:
+    C: 统一数据、基线、规划器与扰动评测的基础设施，对世界模型研究有实用价值，但方法层面无新增。
+    E: 以 Push-T/OGB-Cube 复现基线并做分布偏移与扰动分析，均为仿真案例研究。
+    O: MIT 许可的实质代码（350+ 文件）及 HF 上的 Push-T 数据集，未见基线权重发布。
+    T: LeCun 与 Balestriero 团队在 JEPA/世界模型方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否提供基线预训练检查点
+  open:
+    code: substantive
+    repo: https://github.com/galilai-group/stable-worldmodel
+    weights: unknown
+    data: partial
+    license: MIT
+    note: HF 数据集 galilai-group/lewm-pusht。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.21572'
+  title: 'PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects'
+  triage: include
+  reason: null
+  date_v1: '2026-05-20'
+  category: scene
+  route: adjacent
+  contribution: model
+  tags:
+  - sim-ready-assets
+  - 3d-generation
+  - articulated-objects
+  - vlm
+  - dataset
+  affiliations:
+  - S-Lab, Nanyang Technological University
+  - ACE Robotics
+  one_liner: PhysX-Omni 用 VLM 统一生成刚体、可形变与铰接的仿真就绪 3D 资产，并发布 PhysXVerse（8.7K 资产）与 PhysX-Bench；作者报告几何与物理属性指标多数优于 PhysX-Anything 等。
+  summary: |
+    为解决现有 3D 生成忽视物理属性、或只针对刚体/铰接/可形变某一类资产，且缺少大规模标注数据和真实场景评测基准的问题，作者提出 PhysX-Omni：基于 Qwen2.5-VL-7B，以无需压缩的 VLM 友好几何表示直接编码高分辨率 3D 结构，先全局推断类别、尺度、部件层级和物理属性，再逐部件生成几何与属性，并用 TRELLIS 解码为网格。同时发布 PhysXVerse（8.7K 资产、2.9K 类别，GPT 预标注+人工校验）和用 Qwen3.5 评判渲染视频的六维基准 PhysX-Bench。在 PhysXVerse 与 PhysX-Mobility 上，作者报告 PSNR、CD、F-score 及尺度、材质、可供性、运动学指标大多优于 Articulate-Anything、MonoArt、PhysXGen、PhysX-Anything（如 PhysXVerse 尺度误差 2.79 对 298.19），PhysX-Bench 评分与人工标注一致性较高。结果提示统一的仿真就绪资产生成可降低机器人仿真建模成本，但机器人策略学习与场景生成仅为定性演示，基准依赖 VLM 评判，物理属性真实性仍需下游实测验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 5
+  rationale:
+    C: 首个覆盖三类资产的统一仿真就绪生成框架并配数据集与基准，对具身仿真资产供给有明确增量。
+    E: 两个数据集上多基线定量对比与消融较完整，但具身下游（策略学习）仅定性展示，基准为自建且依赖 VLM 评判。
+    O: 实质代码、HF 权重与三个 HF 数据集均已公开，但许可证为自定义条款。
+    T: NTU S-Lab（刘子纬组）在 3D 生成方向有多项标志性成果与资源。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 自定义许可证是否允许商用/再分发
+  open:
+    code: substantive
+    repo: https://github.com/physx-omni/PhysX-Omni
+    weights: open
+    data: open
+    license: custom
+    note: 权重 HF PhysX-Omni/PhysX-Omni；数据 HF PhysX-Omni/PhysXVerse、Caoza/PhysX-3D、Caoza/PhysX-Mobility。
+  uses:
+  - resource: physxverse
+    role: proposes
+  - resource: physx-bench
+    role: proposes
+  new_resources: []
+- arxiv_id: '2605.21133'
+  title: Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum
+  triage: include
+  reason: null
+  date_v1: '2026-05-20'
+  category: manipulation
+  route: core
+  contribution: system
+  tags:
+  - humanoid
+  - loco-manipulation
+  - active-perception
+  - vlm-planning
+  - training-free
+  affiliations:
+  - School of Computer Science and Engineering, Sun Yat-sen University, China
+  - Peng Cheng Laboratory, China
+  - Key Laboratory of Machine Intelligence and Advanced Computing, Ministry of Education, China
+  one_liner: 以 VLM 驱动的“主动空间大脑”负责主动视角感知与任务分解、多智能体“动作小脑”生成全身动作，无需任务真机数据；作者报告 G1 人形五类空间操作困难设定成功率 55–70%，高于 TrajBooster、CaP 等基线。
+  summary: |
+    为解决人形全身操作中复杂 3D 空间理解难、且真机数据有限导致数据驱动策略泛化差的问题，作者提出无需任务特定真机数据的分层多智能体框架：“主动空间大脑”由 VLM 控制 2 自由度主动相机调整视角、用记忆库保存观测并做自适应任务规划与子任务分解；“可泛化动作小脑”把全身控制拆为下肢避障移动与上肢灵巧操作，由多个专门动作智能体在末端可达空间求解等模块辅助下生成可执行动作，二者形成感知-规划-控制闭环。在配 Inspire 灵巧手的 Unitree G1 上，作者设计高度、位置、避障、遮挡等五类任务（各 10–30 次），报告困难设定下成功率 55–70%，而用 20 条示范微调的 TrajBooster 与另一数据驱动基线多在 0–45%，VLM 基线 CaP 为 30–55%；消融显示主动感知与可达空间求解器均有贡献，另对多款 VLM 的空间智能做了评测。结果提示大模型规划+模块化控制可在数据稀缺时获得更好空间泛化，但试验次数少、数据驱动基线仅用少量示范微调，系统依赖闭源 VLM 推理且延迟较高，未公开代码。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 主动感知+VLM 规划+模块化控制的组合应用于人形全身操作，工程完整但多为已有技术组合。
+    E: 真机五类任务有数据驱动与 VLM 基线及消融，但每项 10–30 次试验，基线微调数据量小。
+    O: 仅有项目页，未找到代码仓库。
+    T: 中山大学郑伟诗团队在灵巧抓取与具身方向有可核实的相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否开源代码
+  - 表 1 第二个数据驱动基线的确切名称（缓存文本缺失）
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: none
+    license: unknown
+    note: 仅项目页 https://leungchaos.github.io/Humanoid-Whole-Body-Manipulation-via-Active-Spatial-Brain-and-Generalizable-Action-Cerebellum/。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.15157'
+  title: 'Hand-in-the-Loop: Improving VLA Policies for Dexterous Manipulation via Seamless Hand-Arm Intervention'
+  triage: include
+  reason: null
+  date_v1: '2026-05-14'
+  category: teleoperation
+  route: adjacent
+  contribution: system
+  tags:
+  - dexterous
+  - interactive-il
+  - human-in-the-loop
+  - shared-control
+  - bimanual
+  affiliations:
+  - State Key Laboratory of Mechanical System and Vibration, School of Mechanical Engineering, Shanghai Jiao Tong University
+  - Shanghai Key Laboratory of Intelligent Robotics, Meta Robotics Institute, Shanghai Jiao Tong University
+  - ByteDance Seed
+  - The University of Tokyo
+  one_liner: HandITL 以介入时刻为锚的相对手部重定向和基于速度的手臂共享控制，消除灵巧手 VLA 人工介入时的“手势跳变”；作者报告介入抖动降低 99.8%，用其纠错数据微调后三项长程任务平均比遥操作数据高 19%。
+  summary: |
+    为解决高自由度灵巧手上做交互式模仿学习时，人类遥操作指令与策略指令在介入瞬间不一致导致“手势跳变”、抓取不稳甚至掉落物体的问题，作者提出 HandITL：手部采用以介入时刻为锚的优化式相对重定向，只传递操作者指尖的增量运动；手臂采用基于速度的共享控制，把手腕瞬时运动转为残差速度叠加到策略指令上，并支持完全接管与 copilot 两种模式。在双 Franka FR3 加双 21 自由度 ByteDexter V2 的 56 自由度平台上，作者报告相比直接切换遥操作，介入抖动降低 99.8%，介入后抓取失败减少 87.5%、完成时间缩短 19.1%，并优于 Jacobian 映射与增量指令基线；以 GR-Dexter 微调得到基础策略后，用 1 小时 copilot 纠错数据继续训练，在三项长程双手灵巧任务上的子目标完成分平均比等量遥操作数据高 19%。结果提示对灵巧手而言，平滑介入接口和在策略分布上的纠错数据都很关键，但每个策略只评测 10 次，后训练仅用简单 SFT，且未公开代码与数据。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 针对灵巧手 IIL 介入跳变给出实用的相对重定向与共享控制方案，属子方向的方法/系统增量。
+    E: 真机上有多种介入方式对比与策略后训练对照，但评测次数少（每策略 10 次），无消融化的统计分析。
+    O: 仅有项目页，未找到代码或数据。
+    T: 字节 Seed（GR 系列）与上海交大盛鑫军组在灵巧操作与 VLA 方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否开源介入系统代码与纠错数据
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅项目页 https://simpson-li.github.io/Hand-in-the-Loop/。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.14712'
+  title: 'IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-05-14'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - history-conditioning
+  - observation-aliasing
+  - intent
+  - benchmark
+  - rollout-stability
+  affiliations:
+  - Huazhong University of Science and Technology
+  - Zhongguancun Academy
+  - Harbin Institute of Technology
+  - The Hong Kong University of Science and Technology (Guangzhou)
+  - Beihang University
+  - Zhengzhou University
+  - Zhongguancun Institute of Artificial Intelligence
+  - East China Normal University
+  - University of Science and Technology of China
+  - DeepCybo
+  one_liner: IntentVLA 用冻结 VGGT 编码近期视觉历史并融入 VLA，抑制观测混叠下的意图切换；作者报告自建 AliasBench 平均成功率 45.8%（基线 9.0%），SimplerEnv 72.9%、LIBERO 98.6%。
+  summary: |
+    为解决帧条件 VLA 在部分可观测下，相似观测对应不同短程意图而在相邻重规划步之间来回切换、导致动作块冲突的问题，作者提出 IntentVLA：以 Qwen3-VL 4B 编码当前图像和指令，用冻结的 VGGT-1B 编码近期头部相机历史帧，经门控交叉注意力融合并追加一个紧凑的历史证据 token，作为 DiT flow-matching 动作头的条件；同时在 RoboTwin2 上构建含 12 个任务、匹配训练数据的 AliasBench，专门隔离观测混叠。作者报告在 AliasBench 上平均成功率 45.8%，对比帧条件 Qwen3-VL-GR00T 的 9.0%、最佳直接历史输入变体 28.1% 和 MemoryVLA 14.9%；SimplerEnv WidowX 72.9%、LIBERO 平均 98.6%（Long 97.4%），并在 RoboCasa-GR1 与双臂 Franka 真机收零食任务（每模型 50 次）上优于 π0.5、MemoryVLA；消融表明历史融合与意图 token 均有贡献。结果提示短窗口历史能有效缓解局部混叠，但仅针对短程歧义，双手和多目标任务仍偏弱，部分任务（如放勺子）略有下降，仓库仍标注部分内容即将发布。
+  venue: EMNLP 2026
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 明确界定并基准化“观测混叠导致意图切换”问题，给出历史条件化方案与专门基准，对 VLA 子方向有清晰增量。
+    E: 自建基准+三个公开仿真基准+50 次真机试验，基线较强且有组件、历史长度与编码器消融。
+    O: 仓库已有部分代码，README 仍写部分内容即将发布，未见权重与许可证。
+    T: 中关村学院等多校联合团队，相关积累信息有限，按默认 3 分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库中 AliasBench 数据与训练代码的实际完整度、许可证
+  - 团队在 VLA 方向的既往成果
+  open:
+    code: partial
+    repo: https://github.com/ZGC-EmbodyAI/IntentVLA
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 探测为 13 个代码文件且 README 含 coming soon。
+  uses:
+  - resource: aliasbench
+    role: proposes
+  - resource: simplerenv
+    role: eval
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2605.13925'
+  title: 'Towards Robotic Dexterous Hand Intelligence: A Survey'
+  triage: include
+  reason: null
+  date_v1: '2026-05-13'
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - dexterous-hand
+  - tactile
+  - hardware
+  - datasets
+  affiliations:
+  - University of Liverpool
+  - The Chinese University of Hong Kong
+  - Xi’an Jiaotong-Liverpool University
+  - Duke Kunshan University
+  one_liner: 机器人灵巧手综述：从驱动/传动/感知硬件与代表手型对比、按任务类别梳理 RL/IL/扩散策略/VLA 方法演进、汇总数据集与评测三方面整合，并讨论主要局限与未来方向。
+  summary: |
+    为弥补现有灵巧手综述多只关注硬件、感知或学习方法某一层、难以在统一假设下比较工作的缺口，作者从四个方面系统梳理灵巧手研究：一是硬件解剖，按电磁、流体、智能材料与混合驱动，以及腱绳、连杆、齿轮等传动和本体/触觉/视觉感知分类，并用表格对比代表性灵巧手的自由度、指尖力、负载与重量等指标；二是方法综述，按手内操作、抓取与抓放、工具与设备操作、人机交互、双手操作五类任务，将强化学习、模仿学习、扩散策略和 VLA 等范式按时间线组织；三是数据与评测，把数据集按优化式仿真、学习式仿真和人类采集三种来源归类，并讨论观测模态设计与评测实践；四是总结领域局限与未来方向。该综述为入门者提供硬件—方法—数据的整体地图，但作为综述不含新实验，文献检索主要基于 EI 与 Web of Science，对 2026 年最新 VLA 与灵巧手数据集的覆盖程度和配套论文列表是否维护尚不清楚。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 覆盖硬件、方法、数据与评测的整体性综述，结构清楚，但与已有灵巧手综述相比增量有限。
+    E: 综述无实验，有硬件对比表与数据集汇总表，缺少统一的定量对比分析。
+    O: 未找到配套论文列表仓库或其他开放资源。
+    T: 利物浦大学/CUHK（Irwin King）/昆山杜克（黄开竹）在机器学习方向有积累，灵巧手方向积累有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  pending_checks:
+  - 是否有配套的 awesome 列表或持续维护的资源页
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: n/a
+    license: unknown
+    note: 综述，无代码。
+  uses: []
+  new_resources: []
+- arxiv_id: '2605.12334'
+  title: Reinforcing VLAs in Task-Agnostic World Models
+  triage: include
+  reason: null
+  date_v1: '2026-05-12'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-model
+  - vla-rl
+  - vlm-reward
+  - zero-shot
+  - hallucination-filtering
+  affiliations:
+  - Nanjing University
+  - University of Illinois at Urbana-Champaign
+  - University of Technology Sydney
+  - Tsinghua University
+  - Microsoft Research Asia
+  - Wuhan University
+  one_liner: RAW-Dream 在任务无关视频世界模型中用 VLM 零样本奖励 RL 微调 VLA，并以双噪声验证过滤幻觉；作者报告 LIBERO 四个未见套件平均成功率从 1-shot SFT 的 43.4% 提至 52.3–57.1%。
+  summary: |
+    为解决现有“在世界模型中 RL 微调 VLA”方法仍需目标任务数据来训练世界模型和奖励模型、难以泛化到新任务的问题，作者提出 RAW-Dream：在 Wan2.1-1.3B DiT 上微调动作条件视频世界模型，只用任务无关的多样行为（如 LIBERO-90 上加噪策略的探索 rollout，或真机遥操作 play 数据）训练；用 Qwen3-VL 对想象视频给出零样本二值成功奖励，以 GRPO 优化 OpenVLA-OFT；并提出双噪声验证，对判为成功的轨迹用重采样扩散噪声重放动作、若再判失败则丢弃，以过滤世界模型幻觉。在 LIBERO 四个未见套件上（每任务 1 条示范做 SFT），作者报告平均成功率从 43.4% 提升到 52.3%（零样本世界模型）和 57.1%（混入 10 条示范共训），接近用 2,500 条真实 rollout 和真值奖励的在线 RL（58.8%）；零样本 VLM 奖励明显优于 1-shot 学习的奖励模型，双噪声验证带来稳定增益；AgileX Piper 真机四项任务（各 30 次）亦有提升。结果提示任务无关的物理先验可部分替代目标任务数据，但 LIBERO-Object 等新物体场景下世界模型保真度不足，VLM 奖励在部分任务上不可靠，且未公开代码。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 4
+  rationale:
+    C: 把世界模型与奖励都做成任务无关、实现零目标数据的想象式 RL，并提出幻觉过滤机制，对 WM-RL 路线有明确增量。
+    E: LIBERO 四个未见套件上有世界模型保真度、在线 RL 与 WoVR 对比及奖励/验证消融，另有真机四任务；主要在单一仿真基准。
+    O: 未找到代码、模型或数据发布。
+    T: MSRA（赵立组）在强化学习与决策方向有可核实的强相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否开源世界模型与训练代码
+  - 真机四项任务的具体成功率（缓存未含 Table 4 数值）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文未给出代码链接。
+  uses:
+  - resource: libero
+    role: pretrain
+  - resource: libero
+    role: eval
+  - resource: open-x-embodiment
+    role: pretrain
+  new_resources: []
