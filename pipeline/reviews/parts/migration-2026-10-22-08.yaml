@@ -1,0 +1,722 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2606.24742'
+  title: World Value Models for Robotic Manipulation
+  triage: include
+  reason: null
+  date_v1: '2026-06-23'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - value-model
+  - world-model
+  - reward-modeling
+  - offline-rl
+  - benchmark
+  affiliations:
+  - ByteDance Seed
+  - Peking University
+  - Tsinghua University
+  one_liner: 以视频世界模型为骨干构建通用机器人价值模型 WVM，并发布含 800 条次优轨迹的 Suboptimal-Value-Bench；作者报告其在专家与次优数据上的 VOC 均优于 GVL、VLAC 等基线。
+  summary: |
+    为缓解现有机器人价值模型多基于 VLM、缺乏时序建模能力、难以评估混合质量数据的问题，作者提出 World Value Model（WVM），以 Mixture-of-Transformers 方式将视频 DiT 世界模型与轻量价值 DiT 耦合，输出任务进度作为价值估计。作者同时构建 Suboptimal-Value-Bench（800 条含重试、犹豫的人工逐帧标注轨迹，覆盖 15 个任务及 AgileX、ARX、RoboSuite 设置）。项目页显示，在 OXE、RoboCOIN、EgoDex 等专家数据上作者报告平均 VOC 0.95，高于 Robo Reward、Robometer、GVL 等基线；在次优数据的重试与犹豫子集上同样领先；并称在仿真与真机中将 WVM 用于 AWR、Filtered BC 等策略提取可提升操作表现。该结果提示视频世界模型的时序先验可迁移到价值估计，但本次未读到正文（无 HTML），策略学习的具体数字、真机试验规模与所用视频骨干均待核对，代码与基准尚未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 把视频世界模型用作通用价值函数并补充次优轨迹价值基准，对混合质量数据学习这一子方向有明确增量。
+    E: 项目页给出多数据集 VOC/RMSE 与多基线对比，并称有仿真与真机策略学习验证，但未读到正文实验细节，暂给 3。
+    O: 仓库标注 Coming Soon，权重与基准数据均未发布，仅有项目页。
+    T: 字节 Seed 与北大、清华合作，作者在离线 RL 与机器人学习方面有可核实积累。
+  evidence_read:
+  - abstract
+  - project
+  pending_checks:
+  - 阅读 PDF 核对策略学习（AWR / Filtered BC）在仿真与真机上的具体成功率与试验次数
+  - 核对项目页 VOC 表的列序与基线对应关系，以及所用视频 DiT 骨干
+  - 以论文署名核对作者单位
+  - 仓库 255isWhite/WVM 与 Suboptimal-Value-Bench 是否发布
+  open:
+    code: placeholder
+    repo: https://github.com/255isWhite/WVM
+    weights: none
+    data: none
+    license: unknown
+    note: 项目页链接的仓库标注 Coming Soon；权重与 Suboptimal-Value-Bench 暂无发布链接。
+  uses:
+  - resource: open-x-embodiment
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.24597'
+  title: 'Qwen-AgentWorld: Language World Models for General Agents'
+  triage: exclude
+  reason: 超出范围：面向 LLM 智能体（终端、GUI、工具调用、搜索）的语言世界模型，无物理/具身成分
+  date_v1: '2026-06-23'
+  category: foundation-models
+  route: null
+  contribution: null
+  tags:
+  - llm-agent
+  affiliations:
+  - Qwen Team
+  one_liner: 阿里 Qwen 团队训练模拟 7 类文本/GUI 智能体环境的语言世界模型 Qwen-AgentWorld，并发布 AgentWorldBench；与具身无关。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: partial
+    repo: https://github.com/QwenLM/Qwen-AgentWorld
+    weights: open
+    data: partial
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.25473'
+  title: 'Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in
+    Streaming Video Generation and Interactive World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-06-24'
+  category: world-model
+  route: adjacent
+  contribution: method
+  tags:
+  - video-diffusion
+  - distillation
+  - autoregressive
+  - interactive-world-model
+  - cosmos
+  affiliations:
+  - Tsinghua University
+  - NVIDIA
+  - UT Austin
+  one_liner: 将 rCM 扩展到自回归视频扩散，用 teacher-forcing 一致性蒸馏初始化 self-forcing DMD；作者报告 2 步因果 Wan2.1-1.3B 在 VBench-T2V 达 84.63，并演示 Cosmos 3 交互式世界模型。
+  summary: |
+    为缓解自回归视频扩散中 self-forcing DMD 对初始化敏感、易模式坍缩的问题，作者把前向/反向散度互补的 rCM 蒸馏框架扩展到因果视频生成：用 teacher-forcing 一致性模型（离散 dCM 或连续时间 sCM/MeanFlow）做离线初始化，再以 self-forcing DMD 在线细化，并实现自定义掩码的 FlashAttention-2 JVP 内核，作者报告 TF-sCM 收敛约快 10 倍。在 Wan2.1 T2V 480p、仅用合成数据训练的条件下，作者报告逐帧与分块两种设置的 VBench-T2V 总分均优于 Self-Forcing、LongLive、Causal Forcing、AnyFlow（2 步逐帧 84.63），并给出初始化策略消融。论文还将方法用于 Cosmos 3，得到以自车运动为条件的交互式驾驶世界模型。该工作为实时动作条件世界模型提供了可复用的蒸馏配方与基础设施，但具身相关部分仅有定性演示，未在机器人控制或规划上验证；长 rollout 相机漂移与联合训练困难也被作者列为局限。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 扎实的视频扩散蒸馏配方与基础设施，对交互式世界模型提速有用，但与具身任务的联系停留在演示层面。
+    E: 主要证据是单一 VBench-T2V 基准上的多基线对比与初始化消融，世界模型应用仅定性展示。
+    O: NVlabs/rcm 已含 Causal-rCM 训练与推理代码（Apache-2.0），检查点下载方式未确认。
+    T: 清华朱军组与 NVIDIA Cosmos 团队在扩散模型和物理 AI 世界模型方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 确认 Causal-rCM 检查点（Wan2.1 蒸馏模型、交互式 Cosmos 3）是否公开下载
+  open:
+    code: substantive
+    repo: https://github.com/NVlabs/rcm
+    weights: unknown
+    data: n/a
+    license: Apache-2.0
+    note: 探测到的 NVlabs/FastGen 为相关通用框架；论文署名给出的 NVlabs/rcm 含 Causal-rCM 实现（causal 模型、配置、KV cache）。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.25765'
+  title: 'StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots'
+  triage: include
+  reason: null
+  date_v1: '2026-06-24'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - quadruped
+  - stair-climbing
+  - depth-perception
+  - sim2real
+  - reinforcement-learning
+  affiliations:
+  - Shanghai Jiao Tong University
+  one_liner: 三阶段强化学习框架 StairMaster 结合交叉注意力视觉编码、空间感知循环记忆与深度噪声建模；作者报告 Unitree Go2 零样本迁移后在 37°/55° 镂空楼梯真机成功率 93.3%/63.3%。
+  summary: |
+    为解决四足机器人攀爬镂空楼梯时的踏空卡腿、深度图稀疏噪声和脚下视野盲区问题，作者提出 StairMaster：先用 PPO 训练带特权高度图的教师策略，再蒸馏为基于深度图与本体感知的学生策略并继续 RL 微调；编码器以本体特征为 query 对深度特征做交叉注意力，并用空间感知 LSTM 维持时空记忆；另设计高保真深度噪声仿真管线、引导俯仰角的 3D 航点主动感知奖励及镂空间隙/台阶边缘惩罚。在 Isaac Gym 中每种设置 1000 回合的评测里，作者报告 55° 镂空楼梯成功率 97.5%，而 Extreme Parkour 与 HIMLoco 为 0，并给出各组件消融。真机 Go2 上每种楼梯 30 次试验，作者报告 37°/55° 成功率 93.33%/63.33%，高于自带 RL 控制器（46.67%/0），去掉深度噪声建模则降至 50%/16.67%。结果支持各设计的必要性，但场景限于单一机型与两种真机楼梯，代码未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 针对镂空楼梯这一具体难题组合了记忆编码、深度噪声建模与奖励设计，扎实但增量集中在单一场景。
+    E: 仿真多坡度大样本对比与完整消融，加真机 30 次试验与多基线（含自带控制器），证据较完整。
+    O: 未找到官方仓库，仅有项目页。
+    T: 论文仅列出上海交通大学，团队在该方向的积累信息有限，默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 以 PDF 核对全部作者单位（HTML 仅显示上海交通大学）
+  - 项目页是否后续放出代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 仅有项目页 https://sivan666666.github.io/StairMaster/ 。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.19297'
+  title: Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models
+  triage: include
+  reason: null
+  date_v1: '2026-06-17'
+  category: vla
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - vla-evaluation
+  - commonsense
+  - knowledge-retention
+  - probing
+  - benchmark
+  affiliations:
+  - CogAI Lab
+  - FusionBrain Lab
+  - IAI MSU
+  - Lomonosov MSU
+  - NUST MISIS
+  - Applied AI Institute
+  - HSE University
+  - Generalizable AI Systems
+  - ISP RAS
+  - MIRAI
+  - Domain-specific NLP Group
+  one_liner: 提出 Act2Answer 协议，把 VLM 知识基准改造成“放方块选答案”的桌面操作回合；作者评测 7 个 VLA 后报告其在颜色、形状等简单概念上表现好，而在更丰富语义类别上多接近随机。
+  summary: |
+    为区分 VLA 失败究竟源于知识缺失还是底层控制泛化不足，作者提出 Act2Answer：把 MLLM-CompBench、IconQA、MMBench、OK-VQA、VL-Think 等 VLM 基准题目改写为二选一，在基于 SimplerEnv 的桌面环境中要求智能体把方块放到正确答案图片上，以软成功率衡量；共 12 个类别、1720 题、3440 个回合（含左右互换）。作者还提出逐层线性意图探针，定位答案信息在 VLM 主干与动作专家中的分布。在 7 个 VLA（π0、OpenVLA、Magma、SmolVLA、SpatialVLA 等，均用官方检查点）与 9 个 VLM 的对比中，作者报告 VLA 在颜色、形状等原语类别上较好，但在情绪、计数、对称、文化等类别多接近随机，相对源 VLM 差距明显；含 VQA 共训的模型保留更好；答案信号在中间层达峰、上层衰减。该协议作为诊断工具有价值，但只在仿真中的单一放置动作下测试，题目经 LLM 改写与人工筛选，无法完全剥离感知与控制因素。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 提供了把知识评测与操作控制解耦的轻量诊断协议，对 VLA 评测有参考价值，但不改变模型或方法。
+    E: 覆盖 7 个 VLA、9 个 VLM 和逐层探针并含环境与提示消融，但全部在仿真、单一简化动作下进行。
+    O: 评测代码已开源（MIT），任务资产标注即将上传 HuggingFace。
+    T: 多家俄罗斯研究机构联合，作者在 VLA 评测与认知 AI 方面有一定成果，信息不足默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 项目页称已被 EMNLP 2026 主会录用，需以官方录用页或 arXiv comment 确认
+  - HuggingFace 任务资产是否发布
+  open:
+    code: substantive
+    repo: https://github.com/CognitiveAISystems/Act2Answer
+    weights: n/a
+    data: partial
+    license: MIT
+    note: 探测结果误指 Orca 仓库，已更正为项目页链接的 CognitiveAISystems/Act2Answer；仓库含各 VLA 评测脚本，HF 资产标注 coming soon。
+  uses:
+  - resource: simplerenv
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.30534'
+  title: 'Orca: The World is in Your Mind'
+  triage: include
+  reason: null
+  date_v1: '2026-06-29'
+  category: foundation-general
+  route: core
+  contribution: model
+  tags:
+  - world-foundation-model
+  - next-state-prediction
+  - latent-world-model
+  - action-readout
+  - real-robot
+  affiliations:
+  - Beijing Academy of Artificial Intelligence
+  one_liner: BAAI 提出以“下一状态预测”学习统一世界隐空间的 Orca，用 12.5 万小时视频与 1.6 亿事件标注预训练；冻结主干后接文本、图像、动作读出头，作者报告优于同规模基线。
+  summary: |
+    为探索不再分别优化下一词、下一帧或下一动作、而以统一状态转移建模来理解、预测并作用于世界的路线，BAAI 提出 Orca：基于预训练 VLM，在冻结视觉编码器的特征空间中进行“无意识学习”（预测相邻帧隐表示）与“有意识学习”（以语言事件为条件的状态转移及 VQA），预训练数据含 12.5 万小时视频与 1.6 亿条事件标注。预训练后冻结主干，仅训练轻量读出：LM 头输出文本、MLP+LoRA 接 SD3.5 预测图像、从零训练的 DiT 动作专家生成动作。作者报告 0.8B/4B 规模下损失随数据与模型扩展下降，更强隐空间带来更好下游读出；在文本基准、PRICE-V0.1 图像预测与双臂轮式机器人 5 个任务的 OOD 真机评测中，优于冻结主干的 V-JEPA 2.1、Qwen3.5 等基线；三项损失消融显示观测转移对动作读出最关键。但动作评测是冻结主干下的相对比较，任务有限，作者也承认模态与规模受限，训练代码尚未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 提出统一下一状态预测的世界隐空间路线并给出初步实例，方向有新意，但下游能力仍是冻结主干读出，增量有限。
+    E: 有扩展曲线、三类读出的多基线对比、真机 OOD 评测与损失消融，但动作评测任务少且基线均为冻结主干。
+    O: 已发布 Orca-4B 权重与评测代码，训练代码、0.8B 权重和预训练数据未发布，许可未声明。
+    T: 智源研究院在具身大脑、多模态基础模型方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 真机 5 个任务的试验次数与具体成功率（附录 Table E3）
+  - 仓库许可证与训练代码发布情况
+  open:
+    code: partial
+    repo: https://github.com/orca-wm/Orca
+    weights: partial
+    data: partial
+    license: unknown
+    note: 探测结果误指 FlagScale（训练框架），已更正为 orca-wm/Orca；README 显示已发布 Orca-4B 权重与评测代码，0.8B 权重、推理与下游微调代码待发布；PRICE 评测数据在 HF。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.31315'
+  title: 'BlockPilot: Instance-Adaptive Policy Learning for Diffusion-based Speculative Decoding'
+  triage: exclude
+  reason: 超出范围：LLM 扩散式推测解码的块大小自适应选择，与具身/物理 AI 无关
+  date_v1: '2026-06-30'
+  category: vla
+  route: null
+  contribution: null
+  tags:
+  - llm-inference
+  affiliations:
+  - AMAP, Alibaba Group
+  one_liner: 为扩散式推测解码按样本预测最优块大小的轻量策略；作者报告 Qwen3-4B 上 4.20 倍加速，与具身无关。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/AMAP-ML/BlockPilot
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.31734'
+  title: 'MemLearner: Learning to Query Context memory for Video World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-06-30'
+  category: world-model
+  route: adjacent
+  contribution: method
+  tags:
+  - video-world-model
+  - memory
+  - long-video
+  - camera-control
+  affiliations:
+  - The University of Hong Kong
+  - Fudan University
+  - Zhejiang University
+  - Kuaishou Technology
+  one_liner: 用视频生成模型自身的 query token 自适应检索历史上下文作为视频世界模型记忆；作者报告在含遮挡与动态物体的自建数据上 PSNR/LPIPS/FVD 均优于 CaM、VMem 等基线。
+  summary: |
+    为解决视频世界模型长时生成中因上下文窗口有限导致场景不一致、且基于视场重叠或点云的规则式检索难以处理遮挡和动态物体的问题，作者提出 MemLearner：引入与预测帧等长的 query token，作为上下文 token 与预测 token 之间的信息桥，并直接复用视频 DiT 自身的浅层（5 层）完成查询，避免从零训练独立模块，同时裁剪不必要的注意力计算。作者用 Unreal Engine 采集带精确相机位姿、遮挡与动态物体的长视频，并为不同位姿质量的数据分配独立相机编码器进行混合训练。在内部 1B 文生视频模型上、所有基线用同一代码库与数据复现的条件下，作者报告自建数据的 GT 对比与回访对比中 PSNR、LPIPS、FID、FVD 均优于 DFoT、FramePack、VMem、Context-as-Memory；在无遮挡的 CaM 数据上与 CaM 接近，并补充 Wan2.1、SpatialVID 结果与用户研究。该工作面向相机控制的场景生成，未涉及机器人动作条件或下游决策，代码与数据未公开。
+  venue: ECCV 2026
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 把规则式上下文检索换成可学习查询，是视频世界模型记忆机制上的明确但局部的改进，与具身任务关联较弱。
+    E: 三个数据集、多基线统一复现、消融与用户研究较完整，但主实验基于内部模型与自建数据，无下游决策验证。
+    O: 未找到官方仓库，仅有项目页，自建数据未发布。
+    T: 港大刘希慧组与快手可灵团队在视频生成与世界模型方向有多项成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 项目页是否后续发布代码或 Unreal Engine 数据集
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有项目页 https://yujiwen.github.io/memlearner/ ；主实验基于内部 1B 模型。
+  uses: []
+  new_resources: []
+- arxiv_id: '2607.06291'
+  title: 'AlayaWorld: Long-Horizon and Playable Video World Generation'
+  triage: exclude
+  reason: 重复：同一项目的完整技术报告 2607.18367 已覆盖本版内容，本版仅有定性结果
+  date_v1: '2026-07-07'
+  category: world-model
+  route: null
+  contribution: null
+  tags:
+  - video-world-model
+  affiliations:
+  - Alaya Lab
+  one_liner: Alaya Lab 的可交互游戏世界生成框架短版报告（仅定性结果），已由完整技术报告 2607.18367 取代。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/AlayaLab/AlayaWorld
+    weights: open
+    data: open
+    license: custom
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2607.06403'
+  title: 'From Foundation to Application: Improving VLA Models in Practice'
+  triage: include
+  reason: null
+  date_v1: '2026-07-07'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - vla
+  - cross-embodiment
+  - mixture-of-experts
+  - mobile-manipulation
+  - egocentric-video
+  affiliations: []
+  one_liner: LingBot-VLA 2.0 用约 6 万小时数据（5 万小时 20 种机器人轨迹+1 万小时人类第一视角视频）预训练，加入动作专家 MoE 与深度/视频双教师未来预测蒸馏；作者报告 GM-100 通才设置下优于 1.0 版。
+  summary: |
+    为缩小 VLA 基础模型在实验室与实际部署之间的差距，作者在 LingBot-VLA 基础上推出 2.0 版：重做数据清洗管线（基于 jerk 与导数 Z 分数过滤、URDF 投影人工核对），从约 9 万小时原始数据中保留 5 万小时、覆盖 20 种机器人构型的轨迹，并加入 1 万小时人类第一视角视频，用 VLM 自动分割子任务与标注；动作空间扩展到头部、腰部、移动底盘与灵巧手；动作专家采用无辅助损失的 token 级稀疏 MoE；并以 LingBot-Depth 与 DINO-Video 为教师对当前与未来观测做双查询蒸馏。在 GM-100 九个双臂任务的通才混合训练设置下，作者报告 Agilex 与 Galaxea R1 Pro 上平均进度/成功率分别为 66.2/34.4 与 34.6/15.6，高于 GR00T N1.7 与 LingBot-VLA 1.0 等基线；两款平台的长程移动操作（每设置 15 次）在域内与 OOD 下也有提升。但各任务提升不均，成功率总体偏低、试验次数少，且缺少对各新组件的系统消融。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 4
+  rationale:
+    C: 大规模多本体数据、全身自由度动作空间与开源权重，对通用 VLA 实践有明确资源与方法增量。
+    E: 有两款平台的真机多任务与长程移动操作对比，但每任务试验次数少、提升不均，缺少组件级消融。
+    O: 代码实质开源（Apache-2.0）并发布 6B 权重，预训练数据未公开。
+    T: LingBot 系列团队已有 VLA、深度估计等多项连续开源成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 以 PDF 核对作者单位（HTML 未列出，项目页在 robbyant 域名下）
+  - GM-100 每任务试验次数及第二列基线名称
+  open:
+    code: substantive
+    repo: https://github.com/robbyant/lingbot-vla-v2
+    weights: open
+    data: none
+    license: Apache-2.0
+    note: HF 发布 lingbot-vla-v2-6b 及 RoboTwin 微调权重；预训练数据未公开。
+  uses: []
+  new_resources: []
+- arxiv_id: '2607.06558'
+  title: 'RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation'
+  triage: include
+  reason: null
+  date_v1: '2026-07-07'
+  category: teleoperation
+  route: adjacent
+  contribution: system
+  tags:
+  - digital-teleoperation
+  - world-model
+  - data-generation
+  - dexterous-manipulation
+  - video-diffusion
+  affiliations:
+  - Hong Kong Embodied AI Lab
+  - CUHK
+  - Alibaba Group
+  - Ant Group
+  - DAMO Academy, Alibaba Group
+  - Hupan Lab
+  one_liner: 提出“数字遥操作”：操作者手部位姿流驱动机器人视角视频世界模型实时生成演示（单卡 H100 40+ FPS）；作者报告 300 条真机数据叠加 300 条生成数据后 π0.5 平均成功率由 82.9% 升至 89.3%。
+  summary: |
+    为摆脱物理遥操作对真机硬件与固定工作空间的依赖，作者提出数字遥操作范式：操作者的手部位姿流驱动以机器人为中心的生成式世界模型，从单张参考图合成机器人第一视角视频，而记录的位姿经 IK 重定向后即为动作标签，从而得到可直接用于模仿学习的轨迹。RynnWorld-Teleop 基于 Wan2.2-TI2V-5B，以深度感知骨架渲染作为控制信号，先在 EgoDex、VITRA 人类视频上预训练，再用 1800 条人-机配对数据适配机器人域，并蒸馏为因果自回归学生模型。在 TIANJI M6 双臂+WUJI 灵巧手平台的 4 个任务上（每任务 35 次），作者报告仅用 300 条生成数据训练的 DP/π0/π0.5 平均成功率为 54–64%，低于 300 条真机数据（77–83%）；而真机数据加 300 条生成数据可稳定提升，优于颜色增强与 H2R 对照，加 600 条时 π0 约 92.8%。结果提示生成数据可作有效增广，但单独使用仍不及真机数据，任务均为短程桌面操作，生成视频的物理一致性未做独立检验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 用实时动作条件世界模型替代真机完成遥操作采集，是数据采集方式上的明确新思路。
+    E: 真机 4 任务×35 次、三种策略、纯生成与混合数据、颜色增强与 H2R 对照及预训练消融，证据较完整。
+    O: 代码实质开源（Apache-2.0）并发布模型权重，采集的真机数据未公开。
+    T: 达摩院具身团队与港中文合作，在 VLA、具身世界模型方向有连续成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 1800 条人-机配对数据与生成数据是否发布
+  open:
+    code: substantive
+    repo: https://github.com/alibaba-damo-academy/RynnWorld-Teleop
+    weights: open
+    data: none
+    license: Apache-2.0
+    note: HF 发布 RynnWorld-Teleop 与因果蒸馏版权重。
+  uses: []
+  new_resources: []
+- arxiv_id: '2607.06559'
+  title: 'RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-07-07'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - 4d-world-model
+  - depth
+  - optical-flow
+  - inverse-dynamics
+  - dexterous-manipulation
+  affiliations:
+  - Hong Kong Embodied AI Lab
+  - CUHK
+  - Hupan Lab
+  - DAMO Academy, Alibaba Group
+  one_liner: 由单张 RGB-D 图与语言指令同步生成未来 RGB、深度与光流的 4D 世界模型，配套 2.54 亿帧 Rynn4DDataset 与逆动力学策略头；作者报告真机灵巧操作上优于 π0.5、DP 等基线。
+  summary: |
+    为弥补 2D 像素视频世界模型缺乏几何与运动约束、与机器人低层动作差距大的问题，作者以同步 RGB、深度和光流（RGB-DF）作为投影式 4D 表示，深度与光流可反投影为 3D 场景流。RynnWorld-4D 将 Wan2.2-TI2V-5B 扩展为三分支 DiT，用带帧级 3D RoPE 的跨模态联合注意力保持外观、几何与运动一致；训练数据 Rynn4DDataset 1.0 汇集 Epic-Kitchens、EgoVid、RoboMIND、AgiBot 等人类与机器人视频共 2.54 亿帧，以外部模型生成深度、光流与描述伪标签。RynnWorld-4D-Policy 冻结世界模型、单次前向抽取内部特征，经 Flow Former 与动作头输出动作，RTX 5090 上约 9 Hz。在 50 段留出视频上，作者报告深度、光流与重建指标优于 TesserAct、4DNeX 等 4D 基线，并给出架构消融；在 TIANJI M6+WUJI 灵巧手的 6 个真机任务上，策略优于 DP、π0、π0.5、VPP、Mimic-Video，受控对比显示 RGB-DF 表征优于仅 RGB 或 RGB-深度-法线。局限是伪标签依赖外部估计器、真机评测限于单一平台、世界模型测试集较小。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 用 RGB-深度-光流联合生成把视频世界模型推向可直接服务动作的 4D 表示，并配大规模数据与策略头，增量清晰。
+    E: 世界模型多指标对比与消融、6 个真机任务多类基线及表征受控对比，较完整，但测试集与平台规模有限。
+    O: 代码实质开源（Apache-2.0）并发布模型权重，Rynn4DDataset 发布情况未确认。
+    T: 达摩院具身团队与港中文合作，在具身世界模型与 VLA 方向有连续成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 真机 6 个任务每任务试验次数
+  - Rynn4DDataset 1.0 伪标签是否公开
+  open:
+    code: substantive
+    repo: https://github.com/alibaba-damo-academy/RynnWorld-4D
+    weights: open
+    data: unknown
+    license: Apache-2.0
+    note: HF 发布 RynnWorld-4D 权重。
+  uses:
+  - resource: agibot-world
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2607.15065'
+  title: 'DriftWorld: Fast World Modeling through Drifting'
+  triage: include
+  reason: null
+  date_v1: '2026-07-16'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - action-conditioned-world-model
+  - one-step-generation
+  - policy-evaluation
+  - drifting-model
+  affiliations:
+  - Massachusetts Institute of Technology
+  - Harvard University
+  one_liner: 将 drifting 生成模型用于动作条件世界模型，单次前向生成未来帧（40+ FPS）；作者报告在 Bridge-V2、RT-1 等 5 个数据集上比扩散基线快 12 倍以上且画质相当或更好，并可用于动作筛选与离线策略评估。
+  summary: |
+    为解决扩散式机器人世界模型多步去噪导致推理过慢、难以支撑在线动作搜索和大规模策略评估的问题，作者提出 DriftWorld：把原用于类别条件图像生成的 drifting 模型改造为动作条件视频预测，在训练期学习漂移场，推理时单次前向即可生成未来帧；关键设计包括单正样本漂移目标、把当前帧作为额外负样本的动作强调，以及在 DINOv2/v3 特征空间计算核并对运动区域加权。在 Push-T、Robomimic、Bridge-V2、RT-1、Language Table 上，作者报告其相对 IRASim、Ctrl-World、GPC、LVDM 等基线快 12 倍以上，多数视觉指标相当或更优；用于 GPC-RANK 动作筛选时 Push-T IoU 由 0.635 升至 0.772；作为离线模拟器，策略得分与真值的相关系数在 Push-T 为 0.98、Robomimic 为 0.996/0.962。该结果提示单步生成可显著降低世界模型规划成本，但闭环验证仅在仿真中完成，真实数据集只做开环视觉评估，U-Net 架构在长时域与复杂场景下的能力仍待检验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 首次把单步 drifting 生成引入动作条件世界模型，明显降低世界模型用于规划与评估的成本。
+    E: 五个数据集、多类世界模型基线、动作筛选与策略评估两类下游及消融，但无真机闭环。
+    O: 仓库含各数据集训练与评测代码，README 提供 HF 检查点，但未声明许可证。
+    T: Yilun Du 团队在视频世界模型与生成式规划方向有多项标志性工作。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 仓库许可证
+  open:
+    code: substantive
+    repo: https://github.com/Susie-Lu/driftworld
+    weights: open
+    data: n/a
+    license: unknown
+    note: 探测为 no-repo，项目页链接仓库 Susie-Lu/driftworld；README 提供 HF 检查点，RT-1/Bridge 需另下 DINOv3 与 SD3 VAE；未见 LICENSE 文件。
+  uses:
+  - resource: bridgedata-v2
+    role: pretrain
+  - resource: bridgedata-v2
+    role: eval
+  new_resources: []
+- arxiv_id: '2607.15330'
+  title: 'Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories'
+  triage: include
+  reason: null
+  date_v1: '2026-07-16'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - vla
+  - umi
+  - scaling
+  - mobile-manipulation
+  - auto-labeling
+  affiliations:
+  - Xiaomi Robotics
+  one_liner: 小米以 10 万+小时 UMI 真实轨迹（VLM 自动标注状态转移）预训练 2.6B–10.5B VLA，再用约 1 万小时跨本体数据后训练；作者报告 RoboCasa365 成功率 57.4%（此前最佳 46.6%）。
+  summary: |
+    为突破真机遥操作数据难以扩展的瓶颈，作者提出 Xiaomi-Robotics-1：采用 Qwen3-VL 主干与 DiT 流匹配动作专家的 Mixture-of-Transformers 结构，并以 Choice Policies 在 VLM 端加辅助动作监督。预训练使用 10 万小时以上的 UMI 手持夹爪与第一视角真实轨迹，以 Qwen3.5-27B 对等长片段自动标注“场景状态转移”描述；后训练用约 1 万小时跨本体数据（含 7200 小时自有移动/双臂机器人数据）对齐机器人本体与祈使式指令。作者报告：在 2 万小时子集上，验证动作误差随数据与模型规模下降；后训练后在 4 个未见环境任务上的开箱成功率从无动作预训练的 26% 升至 75%（5B），10B 达 79%；少量数据微调即可完成装手机、装洗衣机、打印机加纸等新任务；在 RoboCasa、RoboCasa365、VLABench、RoboDojo 四个仿真基准上超过此前方法。结果支持非机器人真实轨迹预训练可扩展的判断，但扩展实验仅用 2 万小时子集，真机试验次数与对照细节需查原文，预训练数据未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 以 10 万小时级 UMI 数据加自动状态转移标注训练 VLA 并给出扩展规律，对数据扩展路线有明确影响。
+    E: 数据/模型扩展、真机开箱泛化、少样本微调与四个仿真基准对比较完整，但扩展实验只用部分数据。
+    O: 代码含后训练、推理与评测（Apache-2.0），发布 5B 权重及基准微调权重，数据与预训练代码未公开。
+    T: 小米机器人团队已有前作 Xiaomi-Robotics-0 等可核实的 VLA 成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 真机开箱评测与微调任务的每任务试验次数
+  open:
+    code: substantive
+    repo: https://github.com/XiaomiRobotics/Xiaomi-Robotics-1
+    weights: partial
+    data: none
+    license: Apache-2.0
+    note: 探测为 no-repo，项目页链接 XiaomiRobotics/Xiaomi-Robotics-1；已发布 5B 权重与 RoboCasa/RoboCasa365/VLABench 微调权重，2B/10B 与预训练检查点未列出。
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2607.18367'
+  title: 'AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report'
+  triage: include
+  reason: null
+  date_v1: '2026-07-20'
+  category: world-model
+  route: adjacent
+  contribution: model
+  tags:
+  - video-world-model
+  - interactive-generation
+  - long-horizon
+  - distillation
+  - open-source
+  affiliations:
+  - Alaya Lab
+  one_liner: 基于 LTX-2.3 视频 DiT 的交互式长时视频世界模型，结合时空记忆、防漂移训练与 4 步蒸馏；作者报告在 iWorld-Bench 多数指标上优于 Matrix-Game 2.0、HY-World 1.5 等开源模型。
+  summary: |
+    为让视频世界模型同时具备交互控制、空间一致、长时稳定与低延迟，Alaya Lab 提出 AlayaWorld：在 LTX-2.3 视频 DiT 上分三阶段训练——双向全参微调适配领域；自回归阶段加入历史压缩模块、基于深度重投影的空间记忆缓存、AdaLN 相机控制与 next forcing 头，并用受损历史与自身 rollout 残差做防漂移训练；最后结合 DMD、self-forcing++ 与一致性蒸馏把每块采样步数从约 30 降到 4。训练数据混合 Sekai-Real、SpatialVid、RealEstate10K、DL3DV 等真实视频与自有游戏录像、生成事件视频，并以 VLM 做分轨时间段标注。在 iWorld-Bench（480p、4 步）上，作者报告亮度一致性、轨迹精度、记忆对称性等多数指标优于 Cosmos、HunyuanVideo-1.5、Yume 1.5、Matrix-Game 2.0、HY-World 1.5，图像质量略低于部分基线；另参与 WorldMark 竞技场人工盲评。框架代码、权重与数据已开源，但应用主要是游戏与场景漫游，动作限于相机轨迹与文本提示，未验证对具身决策或机器人控制的作用，也缺少组件消融。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 全栈开源的交互式视频世界模型，工程整合扎实，但方法多为已有技术组合，具身相关性有限。
+    E: 单一 iWorld-Bench 上与多个开源世界模型对比并有人工盲评，缺少组件消融与具身下游验证。
+    O: 代码、多阶段权重与训练数据均已发布，但为自定义许可，条款未核对。
+    T: Alaya Lab 在交互式世界模型方向有一定成果，信息有限，默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 自定义许可证是否允许研究/商业使用
+  - 以 PDF 核对作者单位
+  open:
+    code: substantive
+    repo: https://github.com/AlayaLab/AlayaWorld
+    weights: open
+    data: open
+    license: custom
+    note: HF 发布多阶段权重与 AlayaWorld-v1.1-data 数据集。
+  uses: []
+  new_resources: []

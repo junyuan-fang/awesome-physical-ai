@@ -1,0 +1,765 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2608.17962'
+  title: 'PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: manipulation
+  route: adjacent
+  contribution: data
+  tags:
+  - dataset
+  - contact-rich
+  - industrial-assembly
+  - force-tactile
+  - teleoperation
+  affiliations:
+  - State Key Laboratory of General Artificial Intelligence, School of Intelligence Science and Technology, Peking University
+  - Delta Intelligence
+  - PKU-Wuhan Institute for Artificial Intelligence
+  - Hubei Humanoid Robot Innovation Center Co., Ltd.
+  - China Academy of Information and Communications Technology
+  one_liner: 面向工业精密装配的多模态接触丰富操作数据集：25+任务、5000+条遥操作轨迹（45小时），同步RGB-D、力/力矩、触觉与本体状态，覆盖3种机器人与3种遥操作方式。
+  summary: |
+    为弥补现有大规模机器人数据集多为短时程、弱接触的抓放任务、缺少工业装配所需力/触觉信号的缺口，作者发布PRISM数据集：覆盖NIST装配任务板与包装、轴承安装、传送带分拣等25余项任务，用Realman外骨骼、Franka追踪器、乐聚VR三种遥操作平台采集5000余条轨迹（约45小时），同步多视角RGB-D、6维力/力矩、视触觉图像、关节力矩与本体状态。实验上，作者在双臂Realman平台以ACT、Diffusion Policy和π0类基线测试电子元件插拔、卡尺包装、传送带分拣三项任务（每配置20次真机试验），作者报告：任务示教从100增至200条、以及先在全量数据上预训练再微调均带来成功率提升，外骨骼采集数据训练的策略优于VR采集数据。结果提示该数据可作为接触丰富工业操作的训练与评测资源，但评测仅3个任务、试验次数少，未系统检验力/触觉模态对策略的贡献，跨机器人迁移也未验证。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 填补工业接触丰富多模态数据空白，规模与多平台多遥操作方式有价值，但数据集形式本身增量中等。
+    E: 有真机基线、预训练与遥操作方式对比，但仅3个任务、每配置20次，缺少模态消融。
+    O: 项目页称数据已在ModelScope开放；GitHub仓库目前只有项目页文件，无处理/训练代码。
+    T: 北大/通用人工智能国家重点实验室团队在双臂操作方向有一定相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - ModelScope数据集是否完整可下载（5000条轨迹、全部模态）及许可证
+  open:
+    code: placeholder
+    repo: https://github.com/Tengbo-Yu/PRISM
+    weights: none
+    data: open
+    license: unknown
+    note: 探针误取huggingface/lerobot（仅为训练框架）；官方仓库Tengbo-Yu/PRISM只含项目页文件；数据在 https://modelscope.cn/datasets/Turboyuuuu/PRISM（未逐项核验）。
+  uses: []
+  new_resources:
+  - kind: dataset
+    id: prism-industrial
+    name: PRISM
+    desc: Real-world contact-rich industrial manipulation dataset, 25+ tasks, 5k+ teleoperated trajectories with RGB-D, F/T, tactile and robot state across 3 robots.
+    links:
+      project: https://tengbo-yu.github.io/PRISM/
+      paper: https://arxiv.org/abs/2608.17962
+      data: https://modelscope.cn/datasets/Turboyuuuu/PRISM
+    subcategory: manipulation-demos
+- arxiv_id: '2608.18077'
+  title: 'Hydra-0: Action Flow for Generalist World Modeling and Control'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - action-flow
+  - cross-embodiment
+  - policy-evaluation
+  - deformable
+  affiliations:
+  - NVIDIA
+  - Brown University
+  - Columbia University
+  - Harvard University
+  one_liner: 以“动作流”（像素平面轨迹）统一表示跨本体动作的视频世界模型，作者报告机器人/物体运动误差较动作条件基线降90.4%/60.2%，RoboLab开环评测成功率相关r=0.96。
+  summary: |
+    为解决动作条件视频世界模型依赖关节或末端指令、难以跨本体迁移的问题，作者提出Hydra-0：把机器人指令经控制器与相机标定投影为图像平面上的可见点轨迹（action flow），作为视频生成的统一条件；在DROID、ABC-130k、EgoDex等七个来源约2200小时（以可变形物体交互为主）的数据上做多本体中训练，并在Cosmos 2.5与Wan2.2多个骨干上实现，结合自回归转换与DMD2蒸馏加速推理。作者报告：最佳配置相对Cosmos 2.5原生动作条件基线，机器人运动误差降低90.4%、物体运动误差降低60.2%；在IWS六个任务上中训练模型零样本与少数据适配更好；在RoboLab五个策略×六任务开环回放中，生成成功率与参考成功率Pearson r=0.96；反向模式可由人类示范的物体流推断机器人动作。结果提示动作流是连接异构数据、策略评测与控制的有效接口，但真机控制仅有单一弯管任务的定性展示，开环评测不等于闭环仿真，代码尚未发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 5
+  rationale:
+    C: 用像素动作流统一跨本体世界模型条件并兼顾策略评测与反向控制，对世界模型子方向有明确增量。
+    E: 五个验证集、多骨干对比、数据效率曲线与RoboLab相关性分析较完整，但真机控制仅定性单任务。
+    O: 项目页代码标注coming soon，暂无权重与代码。
+    T: NVIDIA Isaac团队与Yilun Du、Yunzhu Li、Konidaris等在世界模型与机器人学习方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 代码与权重是否按项目页承诺发布
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 探针误取ModelTC/LightX2V（论文使用的第三方推理库）；官方项目页 https://nvidia-isaac.github.io/video_to_data/hydra-0/ 代码标注coming soon。
+  uses:
+  - resource: droid
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2608.18234'
+  title: 'GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction'
+  triage: include
+  reason: null
+  date_v1: '2026-08-18'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - whole-body-tracking
+  - teleoperation
+  - terrain-interaction
+  - fall-recovery
+  affiliations: []
+  one_liner: 行为世界模型式人形全身跟踪控制器，联合预测动作、下一状态与行为分布；作者报告地形交互成功率81.3%（最佳基线4.3倍）、摔倒恢复率99.3%。
+  summary: |
+    为解决通用人形动作跟踪器只在平地训练、无法利用地形与物体交互的问题，作者提出GigaBrain-WBC-0.5（初版名InterTrack）：因果Transformer在输出动作的同时预测下一本体状态与下一行为指令的混合分布，以学习环境条件下的动力学；用自动标注管线从重定向动作中重建3D支撑几何以扩充交互训练数据；部署时用预测分布过滤不可行指令实现“尽力而为”执行，并结合倒地初始化训练恢复。在MuJoCo sim-to-sim评测中（AMASS标准集、Bones-Seed地形集、MotionMillion不可行指令集、摔倒集），对比SONIC、HoloMotion-1、Humanoid-GPT官方权重，作者报告地形成功率81.3%、摔倒恢复99.3%、标准集MPKPE 76.6mm，消融显示两项核心组件贡献明显；G1真机演示了跨地形遥操作与倒地恢复。结果提示预测式目标有助于交互感知的全身控制，但真机证据以定性为主，命令过滤识别的是陌生行为而非物理风险。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 将行为世界模型目标与自动地形标注引入通用全身跟踪，统一交互与鲁棒性，对人形控制子方向有明确增量。
+    E: 四类sim-to-sim基准对比三个强基线并有组件消融，真机为多场景定性对比，缺少真机定量统计。
+    O: 仅有技术报告与项目页，未见代码或权重。
+    T: HTML与缓存未列出作者单位，无法核实，按信息不足默认3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 作者单位需从PDF核实（HTML未列出）
+  - 是否计划开源代码/权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 项目页 https://shepherd1226.github.io/gigabrain-wbc-0.5/ ；未见代码仓库。
+  uses:
+  - resource: amass
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.18433'
+  title: The Embodiment Gap in Robot Foundation Models
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - cross-embodiment
+  - robot-foundation-models
+  - evaluation-reporting
+  affiliations:
+  - National Institute of Advanced Industrial Science and Technology (AIST), Japan
+  one_liner: 围绕“本体差距”的机器人基础模型综述：用双轴图定位跨本体共享结构与目标机器人剩余工作，并提出报告卡与本体适配曲线（EAC）补充成功率之外的报告。
+  summary: |
+    为说明机器人基础模型在“可泛化”与“能在特定机器人上执行”之间仍存在的工程工作，作者将可复用模型/表征/数据转化为目标机器人可执行动作时的差距定义为“本体差距”，并据此组织综述：用“共享结构离执行的距离”与“剩余工作发生阶段”两轴对21个代表性系统或方法组做定性定位（三名研究者独立编码，作者报告共享结构轴三人一致率76.2%），再从共享语义与感知、共享机器人数据与接口、学习跨本体对应三个方向梳理工作。最后提出最小报告卡、本体适配曲线（EAC）与失败原因分组，用于报告达到某成功率所需的示范量、真机调参与人工干预等工作量。该框架为比较跨本体结果提供了有用的报告视角，但属于定性综述，没有新的实验验证，所提报告卡尚未在实际研究中检验，范围也以操作任务为主。
+  venue: TMLR 2026
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 本体差距视角与报告卡对跨本体评估有参考价值，但作为综述增量有限。
+    E: 有编码一致性统计与案例应用，无实证实验检验所提框架。
+    O: 综述无代码、数据等开放资源。
+    T: AIST团队在机器人系统与工业应用方面有积累，但在机器人基础模型方向标志性成果有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - appendix
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: n/a
+    license: unknown
+    note: 综述论文，无代码。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.18618'
+  title: 'LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - benchmark
+  - dexterous-hand
+  - laboratory-automation
+  - long-horizon
+  - real-and-sim
+  affiliations:
+  - University of Science and Technology of China
+  - The Chinese University of Hong Kong
+  - iFLYTEK
+  one_liner: 化学实验室灵巧操作的分层真机+仿真基准，含原子技能、组合技能与长时程流程三级；作者报告π0.5原子技能最佳，但三种策略均无法完成完整实验流程。
+  summary: |
+    为弥补现有实验室操作基准多用平行夹爪、灵巧操作基准又不涉及实验室流程的缺口，作者发布LabDex：基于Franka Research 3加XHand灵巧手，用VIVE Tracker与Manus数据手套遥操作采集化学实验室示范，并按抓取、放置、插入、倾倒、搅拌、按压等原子技能，组合技能和长时程实验流程三级组织；示范在线标注原子边界，并由真机关键位姿生成对应仿真数据。作者在真机与仿真上用ACT、Diffusion Policy与π0.5进行跨层级评测（每任务50次，默认200条示范），作者报告π0.5在原子技能上平均成功率最高，组合与长时程任务中DP未完成任何原子步骤，三种方法都无法完成完整流程，主要瓶颈在初始抓取与技能衔接（如漏斗插入）；干扰物与新物体测试显示泛化有限。该基准揭示了实验室灵巧操作的难点，但仅单一机器人平台，任务以化学实验为主，数据与评测代码的开放情况尚待确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 填补实验室灵巧操作分层基准空白，但任务与平台单一，增量中等。
+    E: 真机与仿真、三种代表性策略、每任务50次并有数据量/干扰物/新物体消融，对照合理但基线均为通用模仿学习方法。
+    O: 仅有数据集主页，未见代码仓库，数据是否可下载未核实。
+    T: 中科大张燕咏团队等在相关方向有一定成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 数据集主页 https://zhipeng-tang.github.io/LabDex/ 是否提供数据下载与评测代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 论文给出数据集主页 https://zhipeng-tang.github.io/LabDex/ ，未见代码仓库。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.18701'
+  title: 'SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - benchmark
+  - visuo-tactile
+  - deformable-objects
+  - simulation
+  - evaluation-metric
+  affiliations:
+  - Tuojing Intelligence
+  - Tsinghua University
+  - King’s College London
+  - Southeast University
+  - Stevens Institute of Technology
+  - The Hong Kong University of Science and Technology (Guangzhou)
+  - University of Manchester
+  - Simple AI
+  - Imperial College London
+  - Carnegie Mellon University
+  - Zhejiang University
+  - Beihang University
+  - The University of Hong Kong
+  one_liner: 可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。
+  summary: |
+    为解决可变形物体操作只以任务成功评估、无法识别打滑或过度挤压的问题，作者在Isaac Sim/Isaac Lab中构建SoftVTBench：4个诊断套件、40个任务、4000条脚本示范，含体积可变形物体及外观质量匹配的刚体孪生，每回合以20Hz同步多视角RGB、双指触觉图像与标记位移、本体、语言及二值/连续夹爪动作，并另行记录策略不可见的FEM节点状态；基于逐物体标定的形变容限定义DSR（完成任务且峰值形变不超限）。对Diffusion Policy、π0.5与FastWAM的视觉/视触觉变体评测，作者报告12个分布内配置的成功回合中有0.7%–24%超出形变容限；在光照、质量、刚度九种分布外条件下，视触觉变体在六组对比中任务成功率均更高、五组DSR更高，而分布内收益不一致；感知与夹爪控制粒度交叉消融显示触觉增益需与控制粒度匹配才能识别。结果提示过程级评估能暴露成功率掩盖的问题，但全部为仿真、仅抓放技能，触觉为渲染模拟，真机对应性未验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 引入策略不可见的物理真值与DSR指标，把交互质量纳入操作评估，可能影响触觉与可变形操作评测。
+    E: 三类策略、分布内外与刚柔孪生、感知/控制交叉消融设计严谨，但仅仿真单一技能。
+    O: Apache-2.0代码仓库为实质代码，HuggingFace上有数据集；策略权重未确认。
+    T: 拓竞智能与多所高校合作，含罗平、赵鼎等有相关积累的作者，但该团队方向积累难以统一评估。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 基线策略权重是否随仓库发布
+  open:
+    code: substantive
+    repo: https://github.com/TuojingAI/SoftVTBench
+    weights: unknown
+    data: open
+    license: Apache-2.0
+    note: 探针发现HF数据集 Arthur12137/SoftVTBench。
+  uses: []
+  new_resources:
+  - kind: benchmark
+    id: softvtbench
+    name: SoftVTBench
+    desc: Isaac-based visuo-tactile deformable-object pick-and-place dataset and benchmark with evaluator-only FEM states and Deformation-aware Success Rate (DSR).
+    links:
+      paper: https://arxiv.org/abs/2608.18701
+      code: https://github.com/TuojingAI/SoftVTBench
+      data: https://huggingface.co/datasets/Arthur12137/SoftVTBench
+    subcategory: manipulation
+- arxiv_id: '2608.18787'
+  title: 'Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - reward-model
+  - flow-matching
+  - offline-rl
+  - online-rl
+  - real-robot
+  affiliations:
+  - School of Artificial Intelligence, University of Chinese Academy of Sciences
+  - State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences
+  - JD Explore Academy
+  one_liner: 仅用成功示范学习语言条件的潜空间成功转移场，以方向与幅度对齐给出稠密奖励；作者报告真机失败检测AUC 0.95，并提升LIBERO在线RL与真机离线RL效果。
+  summary: |
+    为解决基于进度估计的奖励在行为偏离示范后仍可能给高分、易被奖励投机的问题，作者提出Dream2Reward：在冻结的RAEv2/DINOv3潜空间中，用条件流匹配从语言与视觉历史预测成功执行后的终点潜变量，得到“成功转移位移”，再以带符号余弦方向一致性与对称幅度一致性给观测转移打分，无需失败标注、进度标签或合成负样本；训练数据为EgoDex与Open X-Embodiment中的正示范。作者报告：在400条真机轨迹上失败检测AUC为0.95（去掉语言条件降至0.80，单用方向或幅度为0.92），优于ROBOMETER与Robo-Dopamine；在LIBERO-90两个任务的SAC在线RL（5个种子）中学习更好且奖励投机更少；在robo_arena上奖励信号质量更好；四个真机任务的Q引导流离线RL中成功率高于BC与其他奖励。结果提示转移级对齐是把正示范转化为稠密奖励的有效途径，但在线RL仅两个简单任务，真机离线RL每任务50次、提升幅度有限，代码未开放。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 用预测成功转移而非状态进度构造奖励，思路清晰，但属于奖励模型方向的方法改进。
+    E: 机制诊断、消融、仿真在线RL与真机离线RL层层验证并对比两种近期奖励模型，覆盖较完整。
+    O: 未见代码、权重或项目页。
+    T: 中科院自动化所与京东探索研究院在机器人学习方向有一定积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: ''
+  uses:
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.18948'
+  title: 'RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: manipulation
+  route: adjacent
+  contribution: data
+  tags:
+  - human-to-robot
+  - video-editing
+  - cross-embodiment
+  - dexterous-hand
+  - data-generation
+  affiliations:
+  - University of California, Los Angeles
+  - Massachusetts Institute of Technology
+  - University of Utah
+  one_liner: 将人手操作视频编辑为多种机器人手的物理合理视频并解码3D手部状态，构建17.4万对、1410万帧配对数据集RoboEdit-14M；作者报告编辑质量优于8种视频编辑基线。
+  summary: |
+    为解决机器人手-物体交互数据昂贵且绑定本体、而大量人手视频无法直接用于机器人训练的问题，作者提出RoboEdit套件：RoboEdit-ADC从单目RGB视频重建手-物体-相机3D交互（HaMeR、SAM 2、TRELLIS、FoundationPose、VGGT），经深度正则与物理优化重定向到目标机器人并渲染，生成RoboEdit-14M（来自DexYCB、HOT3D等的17.4万对视频、7种本体）；RoboEdit-Trans基于Wan2.1-VACE-1.3B加LoRA与残差适配器实现跨本体视频编辑，并用3D机器人状态解码器恢复逐帧手部状态。在300例基准上，作者报告其重建与局部编辑指标优于VACE、UniVideo等8个基线；解码出的轨迹经Genesis中训练的残差PPO控制器跟踪，在Franka夹爪与XHand上部署四个YCB任务（每设置10次）。结果提示人手视频可转化为带状态标签的机器人数据，但下游策略收益未与真实机器人数据对比，真机实验规模小，代码与数据暂未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 自动化人-机配对视频管线与千万帧级跨本体数据集，对利用人类视频的方向有明确增量。
+    E: 编辑质量有多基线定量对比与消融，但下游控制仅小规模真机演示，缺少策略学习收益的对照。
+    O: 项目页只有论文与补充材料，未见代码、权重或数据下载。
+    T: UCLA蒋陈凡夫、Terzopoulos团队在物理仿真与图形学方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - RoboEdit-14M数据集与模型是否计划公开
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探针误取Genesis仿真器仓库（论文仅用其训练控制器）；项目页 https://roboedit.github.io/ 无代码/数据链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.19182'
+  title: 'ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - rl-pretraining
+  - sim2real
+  - visuo-tactile
+  - geometric-fabrics
+  affiliations:
+  - NVIDIA Corporation
+  - Robotics Department, University of Michigan
+  one_liner: 先在通用物体摆位任务上大规模RL预训练灵巧策略，再以BC蒸馏+评论家预热+保守PPO后训练下游任务，零样本迁移至Kuka-Allegro与Flexiv-Sharpa真机完成插孔等长时程任务。
+  summary: |
+    为避免多指灵巧手每个新任务都从零用RL重新发现抓取、提起、手内重定向等基础技能，作者提出ADEPT：先在16种随机尺度基本形状的物体摆位任务上用PPO+ADR+PBT大规模预训练，再迁移到下游接触丰富任务；针对直接PPO微调会迅速遗忘预训练行为的问题，采用BC演员蒸馏、冻结演员的评论家预热与保守学习率/裁剪的PPO；用关节空间几何织物（Geometric Fabric）约束关节极限与碰撞；最后用DAgger蒸馏为双目RGB或RGB+五指触觉学生策略零样本上真机。作者报告预训练策略可零样本完成下游任务的摆位阶段，直接微调会使成功率跌至零而ADEPT稳定提升，并在23自由度Kuka-Allegro上完成FMB星形与方圆插销及碗碟上架、在29自由度Flexiv-Sharpa上完成FMB插销，触觉学生优于纯视觉学生。结果提示RL预训练可作为灵巧操作的可复用先验，但下游任务数量有限，每任务仍需数十亿步后训练，感知遮挡仍是主要失败来源。
+  venue: CoRL 2026
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 5
+  rationale:
+    C: 系统化的灵巧RL预训练-后训练范式与稳定迁移配方，对高自由度sim-to-real方向有明确增量。
+    E: 仿真消融、从零训练与直接微调对比，两种本体真机分阶段成功率与视触觉对比，下游任务数较少。
+    O: 仅项目页，未见代码仓库。
+    T: NVIDIA西雅图机器人实验室（Handa、Ratliff、Van Wyk）与密歇根Fazeli在灵巧sim-to-real方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目页 https://adept-dexterity.github.io/ 是否提供代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 论文仅给项目页。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.19188'
+  title: 'PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views'
+  triage: include
+  reason: null
+  date_v1: '2026-08-19'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - bimanual-grasping
+  - partial-observation
+  - occupancy-network
+  - force-closure
+  affiliations:
+  - Robotics Research Center, IIIT Hyderabad
+  one_liner: 从单视角部分点云生成力封闭双臂抓取对，用卷积占据网络推断隐藏局部几何并做占据引导细化；作者报告DG16M测试集力封闭率55.2%，显著高于各基线。
+  summary: |
+    为解决现有双臂抓取方法依赖完整物体点云、在单视角部分观测下易把遮挡边界误当可抓面的问题，作者提出PartialBiGrasp：用旋转等变点特征投影到三平面并经U-Net得到连续占据条件特征场，在候选接触点查询局部特征以预测可抓性与单臂抓取位姿，再用学习的力封闭评判器配对，最后以局部占据编码器在SE(3)李代数邻域内采样优化修正碰撞与接触。在DG16M未见物体测试集上，作者报告力封闭率55.16%、仿真抓取成功率67.87%、穿透率17.48%，均优于ContactGraspNet配对、部分点云DAGDiff等基线；在RealSense采集的真实物体数据上力封闭率51.06%，并在xArm7+xArm6异构双臂上演示执行。消融显示残差设计与局部细化均有贡献。结果提示隐式几何推理有助于部分观测双臂抓取，但未建模可达性与运动可行性，真机执行仅定性展示。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 将部分观测隐式几何推理引入双臂抓取生成，问题明确但属已有技术的组合改进。
+    E: 合成与真实点云上有多基线与消融，真机仅定性执行，指标主要为解析力封闭与仿真。
+    O: 仅项目页，未见代码。
+    T: IIIT Hyderabad Madhava Krishna团队在抓取与移动机器人方向有一定积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 项目页 https://partialbigrasp.github.io
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.14022'
+  title: 'ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-14'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-model
+  - video-generation
+  - distillation
+  - game
+  - interactive
+  affiliations:
+  - CUHK
+  - Tencent PCG
+  - FDU
+  - Shanghai AI Laboratory
+  - HKUST
+  one_liner: 四阶段渐进因果训练把双向动作条件视频生成器蒸馏为1/2/4步交互世界模型；作者报告在Minecraft配对轨迹上多项画质与控制指标领先，1步版约72 FPS。
+  summary: |
+    为解决交互式动作条件视频世界模型在因果化与少步蒸馏时，键盘离散动作与鼠标连续动作难以与压缩潜块对齐、误差随自回归累积的问题，作者提出ForgeWM：从Matrix-Game 2.0出发，依次进行双向领域适配、教师强制因果训练、因果一致性蒸馏和基于自生成历史的分布匹配（DMD），得到稳态1/2/4步去噪的学生模型，并提出交互后对保存草稿再加噪精修的回放细化。在GF-Minecraft 77帧配对轨迹上，作者报告其在成像质量、运动轮廓、动作符号准确率与鼠标控制准确率上优于Matrix-Game 2.0和HY-WorldPlay，1步模型延迟168ms、约72 FPS；41人盲测中偏好率60.7%；同一配方迁移到手柄控制的FPS游戏。该工作对需要低延迟交互仿真的世界模型有参考意义，但实验全部在游戏场景，未涉及机器人或物理控制任务，与具身决策的关联需进一步验证，长时程仍有结构退化。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 少步因果世界模型训练配方扎实，但组合了已有因果蒸馏技术，且仅面向游戏而非具身任务。
+    E: 单一Minecraft定量基准对比两个基线并有人评与阶段消融，FPS迁移仅定性/单独报告。
+    O: Apache-2.0实质代码，HuggingFace有权重与数据；复现说明完整度未核验。
+    T: 港中文林伟团队与腾讯PCG、上海AI实验室合作，在世界模型方向积累有限可核实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 仓库README是否包含完整训练与评测复现说明
+  open:
+    code: substantive
+    repo: https://github.com/asdfo123/ForgeWM
+    weights: open
+    data: open
+    license: Apache-2.0
+    note: 探针发现 HF 权重 ForgeWM/ForgeWM 与数据集 ForgeWM/ForgeWM-data。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.19574'
+  title: 'HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - tactile
+  - world-action-model
+  - contact-rich
+  - action-selection
+  - real-robot
+  affiliations:
+  - Institute of Automation, Chinese Academy of Sciences
+  - ImprintX Robotics
+  - Beijing Academy of Artificial Intelligence
+  one_liner: 为世界动作模型的每个候选动作块预测接触→形变→滑移的分层触觉未来，用于候选排序与执行中偏差重规划；作者报告三项真机任务平均成功率由31.1%升至72.2%。
+  summary: |
+    为解决世界动作模型的视觉推演难以反映接触结果、外观相似的候选动作可能导致滑移或卡滞的问题，作者提出HiTac-WAM：在预训练DreamZero世界动作模型上加触觉分支，通过定向注意力掩码让触觉查询读取视频-动作上下文，并按接触状态→接触条件3D形变→滑移风险的有向层级（带stop-gradient）预测每个候选动作块的未来触觉轨迹；规划时综合触觉代价与任务进度给候选排序，执行时把所选预测作为参考，持续偏差触发安全回撤与重规划。在IMETA-Y1机器人与DM-Tac W2触觉传感器上，作者报告平均接触F1为0.921，有向层级较纯形变预测器3D位移误差降17.6%、较纯滑移预测器AUPRC提升60.4%；在薯片抓取、擦黑板、USB插入（共360次真机试验）中，DreamZero单候选31.1%、反应式触觉40.0%、触觉预测排序61.1%、完整系统72.2%。结果提示结构化触觉预测能改善动作选择，但逐任务训练、每任务仅200条示范，滑移风险未校准，代码未开放。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 分层触觉预测与预测-验证闭环设计合理，但属于在既有世界动作模型上的模块化扩展。
+    E: 预测精度、层级消融与360次真机对比较完整，并有固定预算下与任务进度排序的对照。
+    O: 未见官方代码；探针链接属于另一篇论文。
+    T: 中科院自动化所王硕、崔少伟团队在视触觉方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探针误取2608.19613的仓库（What-Matters-for-Latent-Actions），本文未给出代码链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.19613'
+  title: What Matters for Latent Actions in Robot Learning
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: vla
+  route: adjacent
+  contribution: method
+  tags:
+  - latent-action
+  - empirical-study
+  - vla
+  - video-pretraining
+  affiliations:
+  - College of Intelligent Robotics and Advanced Manufacturing, Fudan University
+  - Xiaomi EV
+  - Tsinghua Shenzhen International Graduate School, Tsinghua University
+  - Research Center for Intelligent Robotics, School of Astronautics, Northwestern Polytechnical University
+  - School of Artificial Intelligence, Wuhan University
+  - Morphi Intelligence Technology Co., Ltd.
+  one_liner: 在统一框架下系统比较41种潜动作模型设计（建模范式、正则、集成方式），结论包括LAPO仍是强基线、正则强度比类型更关键，潜动作微调VLM可改善下游策略。
+  summary: |
+    为解决潜动作模型（LAM）研究设定不一致、难以判断哪些设计真正影响下游操作的问题，作者把代表性方法统一到预训练LAM、用潜动作微调VLM骨干（Qwen3-VL-4B，OpenVLA-OFT式）、少量动作数据后训练的三阶段流程中，系统比较7种建模范式、21种正则设置和15种集成策略共41种设计，并检验4个代理指标与下游成功率的相关性；Stage II使用约5900万帧无动作视频语料。在LIBERO、LIBERO-Plus与RoboTwin2.0（3个种子平均）上，作者报告LAPO综合最好、DINO特征差分接近，光流类方法最差；正则强度比正则类型更关键，VQ-VAE在LIBERO-Plus零样本扰动下最稳健；仅有视频时LAP优于DAP；潜动作维度存在较优取值；加入OXE扩充Stage II语料在LIBERO-Plus上最多提升9个百分点；Franka真机四任务上潜动作微调版收敛更快。结果为LAM设计提供了实用参考，但结论基于单一骨干与有限基准，真机规模小，扩展规律仅在两档语料上观察。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 4
+    T: 3
+  rationale:
+    C: 系统化实证比较为潜动作方向提供可操作结论，但不提出新模型，增量有限。
+    E: 三个基准、多种设计与多种子、代理指标相关分析并有真机验证，覆盖较广。
+    O: MIT许可实质代码，HF上有LAM权重与一份Franka数据。
+    T: 复旦、小米汽车等多单位合作，在潜动作与VLA方向有一定相关成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/XizoB/What-Matters-for-Latent-Actions-in-Robot-Learning
+    weights: open
+    data: partial
+    license: MIT
+    note: HF权重 XizoB/LAM；HF数据集 XizoB/franka_20260617_lerobotv2.1（仅真机数据，非完整训练语料）。
+  uses:
+  - resource: libero
+    role: eval
+  - resource: open-x-embodiment
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2608.19759'
+  title: 'GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous-grasping
+  - grasp-synthesis
+  - object-agnostic
+  - cvae
+  affiliations:
+  - Université Paris-Saclay, CEA, List, F-91120 Palaiseau, France
+  - Ecole Centrale de Lyon, CNRS, LIRIS, UMR5205, Institut Universitaire de France (IUF), F-69130 Ecully, France
+  one_liner: 训练时只用夹爪自身几何与抓取分类学学习接触分布的CVAE抓取规划器，推理时才引入物体；作者报告MultiDex三种灵巧手平均成功率86.93%，且无需物体抓取数据。
+  summary: |
+    为解决数据驱动灵巧抓取规划器依赖特定物体抓取数据库、对新物体泛化差的问题，作者提出GOAG：基于“抓取时夹爪与物体在接触处几何一致”的观察，在夹爪规范坐标系下用工作空间BPS编码，从夹爪运动学采样与抓取分类学定义的可接触区域生成训练数据，训练CVAE学习夹爪接触分布与指节映射，完全不使用物体几何；推理时将物体点云变换到夹爪工作空间检索可兼容接触，再经力封闭估计与关节联合优化得到抓取。在MultiDex测试物体上（Isaac Gym施力扰动判定），作者报告Barrett、Allegro、Shadow平均成功率86.93%，高于DFC、GenDexGrasp、DRO-Grasp，批量生成时单抓耗时约0.2秒；按DGA协议在五个抓取数据集上Shadow手平均53.97%，低于逐数据集训练的DGA（58.48%）但不需物体训练数据；Allegro真机成功抓取11个YCB物体。结果提示夹爪中心的物体无关训练能缓解数据依赖，但抓取位姿需外部采样，真机仅定性展示。
+  venue: IROS 2026
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 物体无关的夹爪中心训练范式有新意，但仍是灵巧抓取规划子问题上的方法改进。
+    E: 三种手、多数据集与多基线对比，真机仅11物体定性结果，缺少真机成功率统计。
+    O: 有实质代码与HF权重，但仓库未见许可证。
+    T: CEA List与Liming Chen团队在抓取方向有一定相关成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库许可证
+  open:
+    code: substantive
+    repo: https://github.com/CEA-LIST/GOAG
+    weights: open
+    data: n/a
+    license: unknown
+    note: 探针未找到LICENSE文件；HF权重 JulienMERAND/GOAG。
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.19776'
+  title: 'CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning'
+  triage: include
+  reason: null
+  date_v1: '2026-08-20'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous-grasping
+  - grasp-taxonomy
+  - functional-grasp
+  - object-agnostic
+  affiliations:
+  - Université Paris-Saclay, CEA, List, F-91120 Palaiseau, France
+  - Ecole Centrale Lyon, CNRS, LIRIS, UMR5205, Institut Universitaire de France (IUF), F-69130 Ecully, France
+  one_liner: 以21种接触拓扑模板为条件、在夹爪规范工作空间中物体无关训练的灵巧抓取生成器；作者报告在DexGraspNet上稳定性与拓扑符合度优于分类学感知基线Dexonomy。
+  summary: |
+    为解决灵巧抓取规划器只优化稳定性、倾向生成包络式力量抓取而难以按功能需求生成指定抓型的问题，作者在GOAG的物体无关范式上提出CoToGrasp：将Gonzalez分类学改编为21个夹爪接触拓扑模板，在夹爪规范工作空间中用DGCNN局部特征、Transformer与Set Transformer学习“给定拓扑时哪些夹爪区域被激活”，训练数据仅由夹爪运动学采样与模板配对生成（21万样本，不需物体网格）；推理时将物体特征投影到同一工作空间预测接触模板，并经标签一致性检查与优化得到抓取，同时提出拓扑符合度与熵指标。作者报告：相对DFC、GenDexGrasp、DRO-Grasp与GOAG等无条件规划器，其成功率较低（36.94%）但语义熵最高、生成更快；相对Dexonomy在DexGraspNet上成功率与拓扑符合度更高，尤其是精细抓取；Allegro真机演示多种拓扑抓取。结果提示拓扑条件化能缓解抓型模式坍塌，但物理成功率明显低于无条件方法，真机仅静态保持的定性验证。
+  venue: ECCV 2026
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 把抓取分类学作为显式条件并保持物体无关训练，对功能性抓取有一定增量，但建立在作者前作GOAG之上。
+    E: 与无条件及分类学感知基线对比并提出新指标，有消融与物体复杂度分析，真机仅定性。
+    O: 官方仓库含训练与验证代码，并发布Shadow/Allegro检查点，但未见许可证。
+    T: CEA List与Liming Chen团队在抓取方向有一定相关成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - project
+  - code
+  pending_checks:
+  - 仓库许可证
+  open:
+    code: substantive
+    repo: https://github.com/CEA-LIST/CoToGrasp
+    weights: open
+    data: n/a
+    license: unknown
+    note: 探针误取GOAG仓库；项目页指向CEA-LIST/CoToGrasp，含train.py与Isaac Gym验证代码，README链接v1.0检查点与HF页 JulienMERAND/CoToGrasp；未见LICENSE。
+  uses: []
+  new_resources: []

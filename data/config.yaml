@@ -1,0 +1,61 @@
+# Pipeline configuration. See docs/METHODOLOGY.md for what each knob means.
+
+timezone: Asia/Shanghai
+
+# Per-run inclusion cap: d = max(1, scan_date - last_covered_end); cap = min(cap_per_day * d, cap_max).
+# The cap is a ceiling, not a target — never pad a run to reach it.
+cap_per_day: 5
+cap_max: 20
+overlap_days: 2          # look back this many days before the last covered end to catch late arrivals
+weekly_cap: 15
+monthly_cap: 30
+
+# How many prefiltered candidates go to layer-1 (LLM triage) per included slot.
+triage_pool_factor: 4
+triage_pool_max: 80
+
+# Open-status recheck cadence (days since first check → recheck interval).
+recheck:
+  weekly_until_days: 182
+  weekly_interval_days: 7
+  monthly_interval_days: 30
+
+# Discovery: arXiv categories and relevance keywords (lower-case, matched on title+abstract).
+arxiv_categories: [cs.RO, cs.CV, cs.AI, cs.LG]
+# A paper outside cs.RO must hit at least one strong keyword to be considered.
+strong_keywords:
+  - vision-language-action
+  - vision language action
+  - " vla"
+  - embodied
+  - humanoid
+  - robot
+  - manipulation
+  - locomotion
+  - legged
+  - quadruped
+  - dexterous
+  - teleoperation
+  - sim-to-real
+  - sim2real
+  - world model
+  - physical ai
+  - autonomous driving
+weak_keywords:
+  - policy
+  - imitation learning
+  - reinforcement learning
+  - diffusion policy
+  - flow matching
+  - action
+  - grasp
+  - bimanual
+  - navigation
+  - benchmark
+  - dataset
+  - foundation model
+  - egocentric
+  - tactile
+  - whole-body
+  - gaussian splatting
+  - digital twin

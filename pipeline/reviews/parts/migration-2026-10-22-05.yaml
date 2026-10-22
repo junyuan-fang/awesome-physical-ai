@@ -1,0 +1,759 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2606.06155'
+  title: 'AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding'
+  triage: include
+  reason: null
+  date_v1: '2026-06-04'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - affordance
+  - mixture-of-transformers
+  - intermediate-representation
+  - flow-matching
+  affiliations:
+  - Peking University
+  - HKUST (GZ)
+  - The Chinese University of Hong Kong
+  - Knowin AI
+  one_liner: 在 MoT 架构中加入 Which2Act/Where2Act/How2Act 结构化可供性预测作为中间监督，用 8.8M 定位/指点样本三阶段训练；作者报告 LIBERO 平均 95.8%，真机复杂任务 82.9% 对 π0 44.8%。
+  summary: |
+    为缓解 VLM 语义空间与具身控制之间的结构错配、视频预测类中间表示冗余且推理慢的问题，AffordanceVLA 将结构化可供性（操作哪个物体、在哪接触、如何从 3D 形状/布局角度交互）作为训练期中间监督，构建理解专家、可供性生成专家和动作专家组成的 Mixture-of-Transformer 架构，并以三阶段课程训练：先用约 8.8M 条通用定位/指点数据预训练，再在带自动可供性标注的 InternData-A1 仿真数据上协同训练，最后在目标任务微调。作者报告在 LIBERO 四套件平均成功率 95.8%、CALVIN ABC→D 平均链长 4.33，并在 RoboCasa 与 LIBERO-Plus OOD 评测上优于所列基线；消融显示仅加数据（Pi0 架构）提升有限、冻结可供性专家性能崩溃，去掉 Stage II 主要损害泛化。真机上（每任务 15 次）基础任务平均 88.3% 对 π0 70.8%，同图像不同指令的复杂任务 82.9% 对 44.8%。结果提示可供性中间表示有助保持语言-视觉对齐并改进指令跟随，但真机试次较少、训练数据与算力（16×H200）投入大，与基线的数据量对齐程度仍需细看。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 将可供性系统化为 VLA 中间监督并配合 MoT 与大规模定位数据，方法增量清晰，可能影响 VLA 中间表示方向。
+    E: 覆盖 LIBERO、CALVIN、RoboCasa、LIBERO-Plus 及真机，并有针对数据/结构/训练阶段的对照消融；真机每任务仅 15 次。
+    O: 仓库含实质代码且为 MIT 许可，但未确认是否发布本文训练权重与增广标注数据。
+    T: 北大、港科广（梁俊卫）、港中文等团队在可供性与 VLA 方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 仓库是否发布 AffordanceVLA 训练好的权重及自动可供性标注数据
+  - 真机机器人平台型号与 DROID 预训练子集规模
+  open:
+    code: substantive
+    repo: https://github.com/Skywalker-yqz/AffordanceVLA
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: 探测到的 HF 链接均为第三方基础模型（PaliGemma、pi0_base、Flux 等），非本文权重。
+  uses:
+  - resource: libero
+    role: eval
+  - resource: calvin
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  - resource: droid
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2606.06491'
+  title: 'TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies'
+  triage: include
+  reason: null
+  date_v1: '2026-06-04'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - speed-control
+  - data-augmentation
+  - trajectory-retiming
+  - vlm-scheduler
+  affiliations:
+  - UNC
+  - RUC
+  one_liner: 通过合并/拆分动作对示教重定时（VSTA）并把速度作为条件输入，使单个 VLA 可双向调速；作者报告 LIBERO 上默认速度成功率不降反升，并可借 GPT-4o 动态调度速度。
+  summary: |
+    现有 VLA 只能继承示教数据中的固定执行速度，已有加速工作只是把策略从一个固定速度移到另一个，且几乎不涉及减速。TempoVLA 观察到每步预测动作的幅值直接决定机器人运动速度，于是在数据侧提出可变速轨迹增广 VSTA：按运动模式与方向切分示教片段，再在片段内合并或拆分动作，把示教在线重定时到目标速度；在模型侧以文本前缀、调制 RMSNorm 或软提示把速度作为显式条件输入 π0 类流匹配 VLA，不改低层控制器。作者报告在 LIBERO 上 VSTA 重放的数据速度比基本贴合目标；三种注入方式效果相当；单速度基线平均 96.7%，多速度训练在 1× 处持平或略高，峰值出现在 1.2× 左右（最高约 97.4%）；极端速度（如 0.25×、3×）成功率明显下降，原因之一是高速时低层控制器跟踪带宽饱和。Franka 真机 5 个任务中作者报告 VSTA 提升默认速度成功率，并能配合 GPT-4o 在低风险阶段加速、接触阶段减速。该工作提示速度可作为轻量控制维度加入现有 VLA，但仅在单一仿真基准和少量真机任务上验证，对照只有自身单速度基线，调度器的保守性也限制了实际加速收益。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 显式双向速度控制的问题设定新颖但方法简单轻量，属扎实的有限增量。
+    E: LIBERO 单基准加 Franka 5 任务，有注入方式、速度范围和极端速度分析，但缺少与其他加速方法的对比。
+    O: 未找到代码、权重或项目页。
+    T: UNC（Mingyu Ding、Huaxiu Yao）与人大卢志武团队在具身与多模态方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 真机实验的具体成功率数值（缓存中数字缺失）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文与 arXiv 元数据均未给出代码或项目页链接。
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.06493'
+  title: 'HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers'
+  triage: include
+  reason: null
+  date_v1: '2026-06-04'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - whole-body-control
+  - policy-distillation
+  - mixture-of-experts
+  - fall-recovery
+  affiliations:
+  - California Institute of Technology
+  - The Institute for Human & Machine Cognition
+  one_liner: 把动作跟踪、行走、摔倒恢复三个教师按动作切片与上下文蒸馏进单个 MoE 学生，以 10 维任务空间指令驱动 29 自由度 G1；作者报告匹配对比中鲁棒工作空间最大并完成 VLM 驱动的真机移动操作。
+  summary: |
+    为让高层规划器（人、几何规划器或 VLM）只需给出稀疏的任务空间指令、而不必生成密集的全身运动参考，HANDOFF 分别训练全身动作跟踪、速度指令行走和基于 AMP 的摔倒恢复三个 PPO 教师，再用按动作切片、按上下文加权的多教师 KL 损失加软混合专家，把它们蒸馏为一个 29 自由度学生策略；学生只接收 10 维指令（平面速度、根高度、双腕目标），部署时无需切换策略。作者在 mjlab/MuJoCo 中报告：逐步加入各教师与机制的消融显示速度跟踪误差逐步下降；在统一的差分 IK 适配接口下与 FALCON、OpenHomie、AMO、SONIC 比较，HANDOFF 鲁棒工作空间为 0.277 m³（SONIC 0.265，但可行率 96.2% 高于其 93.0%）；500 个摔倒初始状态下恢复专家才能学会站起；5 类任务各 500 次随机试验中总体成功率 67.2%–100%。真机 G1 上同一策略执行了 6 段 VLM 指令序列，但真机仅为定性展示。结果提示多教师蒸馏是获得紧凑全身控制接口的可行路径，但对比依赖作者设计的适配协议，任务级统计来自仿真。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 动作切片+上下文条件的多教师蒸馏给出面向规划器的紧凑全身控制接口，对人形 WBC 子方向有明确增量。
+    E: 有逐级消融、与四个 WBC 的匹配对比、恢复与大规模仿真任务试验及真机演示；真机缺少定量统计。
+    O: 项目页链接的官方仓库含训练与部署代码，README 称附带蒸馏策略 ONNX，但未见许可证。
+    T: Caltech Aaron Ames 团队与 IHMC 在双足/人形控制方向积累深厚。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 仓库许可证及 deploy/ckpt/policy.onnx 是否确实提供
+  open:
+    code: substantive
+    repo: https://github.com/lzyang2000/HANDOFF
+    weights: partial
+    data: none
+    license: unknown
+    note: 原探测仓库 ccrpRepo/AMP_mjlab 为第三方实现；官方仓库取自项目页，含训练脚本与 sim2sim/sim2real 部署代码，README 称附带蒸馏策略 ONNX；动作数据集需外部获取。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.05699'
+  title: 'DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use'
+  triage: include
+  reason: null
+  date_v1: '2026-06-04'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - bimanual
+  - tool-use
+  - hierarchical-policy
+  - future-state-prediction
+  affiliations:
+  - UC San Diego
+  one_liner: 高层从视觉-本体历史预测未来手-工具-物体目标轨迹，低层目标条件策略高频跟踪；作者报告 OakInk2 双手工具任务上达到特权目标策略约 90% 表现，比 DexWM 式 CEM 规划快约 250 倍。
+  summary: |
+    目标条件的灵巧操作策略通常依赖从示教中提取的未来参考状态，这在部署时属于特权信息；而动作条件世界模型配合在线规划又太慢，难以支撑高频接触控制。DexFuture 将问题分层：高层“未来状态视觉运动目标预测器”把手部各连杆投影到图像上采集局部视觉特征，构建手-工具-物体结构化嵌入，再用带时域条件的 Transformer 一次性预测多步未来目标；低层逐连杆 Transformer 策略（PPO 训练）以插值后的预测目标为条件输出双手动作，按滚动时域执行。作者在 OakInk2 的切、倒、擦、剪、搅等双手工具任务上报告：DexFuture 的成功率约为特权目标基线（PhysGraph/ManipTrans 使用真值未来目标）的 90%，而去掉目标的策略几乎失败；部分任务如水果刀切苹果甚至略超特权基线；与在 EgoDex 上训练、再在 OakInk2 上微调的 DexWM 式 CEM 规划相比成功率更高、速度约快 250 倍（60 Hz）。结果提示“预测未来目标而非未来动作”可保留目标条件控制的优势，但全部实验在仿真中完成，窄接触与突变动作任务（如剪纸）仍明显困难，尚未做真机部署。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 以预测目标替代特权参考的分层设计合理，但属于已有目标条件策略框架上的扎实增量。
+    E: 仅 OakInk2 仿真任务，与特权基线、无目标基线和 DexWM 规划对照合理，并有时域消融；无真机实验。
+    O: 只有项目网站，未找到代码仓库。
+    T: UCSD（Nikolay Atanasov、Truong Nguyen）在机器人学习与感知方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目网站是否提供代码或数据链接
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有项目网站 https://blarklee.github.io/DexFuture_official_website/ 。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.06218'
+  title: 'TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-04'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - torque-adaptation
+  - sim-to-real
+  - dynamics-mismatch
+  - cross-embodiment
+  affiliations:
+  - KAIST
+  - Allen Institute for AI
+  - University of Toronto
+  - University of Washington
+  one_liner: 在低层控制器与力矩接口之间插入只看本体历史的学习型残差力矩模块，纯仿真训练即可零样本上真机；作者报告在 Franka 上同一组权重改善 RL 推箱、BC 翻转与 MPC 平衡任务，优于在线辨识与 RMA。
+  summary: |
+    为解决同一策略在不同机器人实例、负载或仿真与真实之间动力学差异导致的运动偏差，而又不想让策略本身做域随机化或为每台机器人重新采集辨识数据，TAM 把适应层下移到力矩接口：历史编码器把关节位置、速度与施加力矩的长时历史（附加以理想模型逆动力学计算的物理残差特征）压缩为潜变量，力矩适配器据此对名义力矩输出残差修正，使目标机器人的局部运动响应匹配理想模型。TAM 不读取策略观测、奖励或动作空间，只用与任务无关的随机关节运动在随机化仿真中训练，先在 Panda、Piper、RBY-1、iiwa14、Rizon4 五种机器人上预训练，再做目标机器人仿真微调，不使用真机数据。作者报告在真实 Franka 上，同一组权重挂在视觉 RL 推箱、BC 翻转与 MPC 球盘平衡策略下方，均优于直接执行、粒子滤波在线辨识和 RMA；切换 OSC 控制器和加负载时末端跟踪误差下降；仿真中对未见过的 Google Robot、Unitree Z1 也降低跟踪误差。局限是需要力矩接口与匹配的运动学结构，只学习一步局部对齐、无长时稳定性保证，接触丰富任务中外力仍可能被误判为本体失配。
+  venue: CoRL 2026
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 5
+  rationale:
+    C: 把动力学适应从策略内部移到力矩接口、可复用于不同策略与动作空间，思路清晰且有实际价值。
+    E: 真机三类策略对比在线辨识与 RMA，并有控制器切换、负载、跨机器人仿真和消融；任务数量有限。
+    O: 仅有项目网站，未找到官方代码仓库（探测结果为引用的 MuJoCo Menagerie）。
+    T: Dieter Fox、Beomjoon Kim、Florian Shkurti 团队在机器人学习与 sim2real 方向成果突出。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 真机任务成功率具体数值（缓存表格数字缺失）
+  - 项目页是否给出代码或权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测到的 google-deepmind/mujoco_menagerie 是论文引用的机器人模型库而非本文代码；仅有项目页 https://dongwon-son.github.io/tam-project-page/ 。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.06390'
+  title: 'HomeWorld: A Unified Floorplan-to-Furnished Framework for Generating Controllable, Densely Interactive Whole-Home
+    Scenes'
+  triage: include
+  reason: null
+  date_v1: '2026-06-04'
+  category: scene
+  route: adjacent
+  contribution: infra
+  tags:
+  - scene-generation
+  - floorplan
+  - indoor-simulation
+  - llm
+  - procedural-content
+  affiliations:
+  - Ace Robotics
+  - CUHK MMLab
+  - Shenzhen Loop Area Institute
+  one_liner: 以 30 万真实户型训练 LLM 生成可控户型，再经俯视/第一视角“漫游”式图像生成、VLM 纠错与小物体摆放得到可仿真的整屋场景；作者报告布局碰撞与越界率低于 Holodeck、LayoutVLM 等。
+  summary: |
+    为弥补具身仿真缺少大规模、全局一致且可交互的整屋场景的缺口，HomeWorld 把整屋生成拆成可控的分层阶段：先从房产图库中自动矢量化并标注约 30 万个真实户型，以 K-D 树表示微调 Qwen3-4B 生成满足文字约束的户型；再在 Blender 中建立空壳，用图像生成模型做俯视与第一视角“漫游”式补画，经 SAM3/SAM 3D 落地为三维家具框；随后以微调的 VLM 迭代检查碰撞、堵门、越界等问题并修正；最后在桌面、柜面等支撑面上放置可操作小物体，并附加基础物理属性、材质与灯光。作者报告户型生成在连通有效性与多样性上优于基线，用户研究偏好更高；家具布局的碰撞率与越界率低于 LayoutGPT、Holodeck、LayoutVLM，消融显示 VLM 纠错器对物理合理性最关键。作者计划发布户型数据集与 5K 套完整场景。该工作为整屋级仿真环境提供了可扩展的生成管线，但评测主要是布局指标与用户研究，尚未展示在导航或操作策略训练中的下游收益，且依赖闭源图像生成模型，数据与代码目前仍未公开。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 户型到家具到小物体的分层管线与大规模户型数据有实用价值，但多为现有生成模型的组合。
+    E: 有户型与布局的定量对比、用户研究和模块消融，但缺少具身下游任务验证。
+    O: 官方仓库仅有 README、标注即将开源，数据集与场景尚未发布。
+    T: 港中文 MMLab 李鸿升团队在视觉生成方向成果丰富，具身方向积累相对较少。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 30 万户型数据集与 5K 场景是否已发布及其许可
+  open:
+    code: placeholder
+    repo: https://github.com/Kairos-HomeWorld/HomeWorld
+    weights: none
+    data: none
+    license: unknown
+    note: 该仓库此前被误挂在 MotionWAM 条目下；项目页 https://kairos-homeworld.github.io/ 指向本文，仓库目前仅 README 且注明 coming soon。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.06832'
+  title: 'STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images'
+  triage: include
+  reason: null
+  date_v1: '2026-06-05'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - symbolic-world-model
+  - task-planning
+  - strips
+  - cp-sat
+  - visual-rearrangement
+  affiliations:
+  - Department of Robotics Engineering, Worcester Polytechnic Institute, United States
+  one_liner: 仅从“图像-高层动作-图像”转移中学出抽象任务图，再用 CP-SAT 学二值谓词与 STRIPS 算子并蒸馏到视觉分类器，实现由起止图像做经典规划；作者报告在视觉重排任务上规划成功率优于 LatPlan 等基线。
+  summary: |
+    长时程视觉操作的规划只依赖少量与动作相关的事实，而从原始图像中学出带前置条件与增删效果的符号模型仍很困难。STRIPS-WM 在只给定“当前图像、执行的高层动作编号、结果图像”三元组、无物体标注或手工谓词的设定下分三步学习：先用 JEPA 式动作条件 FSQ 离散动态模型把图像压缩为抽象状态，归纳出图像落地的任务图；再用 CP-SAT 为图节点分配二值谓词向量，并为每个动作学一个具备稀疏前置条件与增删效果的命题算子；最后把谓词蒸馏到视觉分类器，测试时由起始和目标图像直接做 BFS 规划。作者报告在 BlocksWorld、DinnerTable 仿真及 DinnerTable 真实图像域上，学到的状态数与真值一致或接近，图像到规划成功率高于 WM-Rollout、WM-BFS、LSR 和 LatPlan-AMA3；在 PyBullet 中的 UR10 执行实验显示，抓放误差会随规划长度累积降低端到端成功率。结果提示可从视觉经验中学到可供经典规划器使用的符号世界模型，但域规模小、假设确定性转移，学到的是命题而非提升式算子，不能组合泛化到新物体或新参数。
+  venue: CoRL 2026
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 把视觉动力学、SAT 算子学习与谓词分类串成完整管线，思路清楚但局限于命题级小域。
+    E: 三个小规模域与四个基线、负证据消融和仿真执行实验，对照合理但规模有限且无真机执行。
+    O: 仅有项目网站，未找到代码仓库。
+    T: WPI 团队有视觉任务规划相关前作，整体积累中等。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目网站是否提供代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有项目网站 https://elpislab.org/projects/strips-wm/ 。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.06904'
+  title: 'ActionMap: Robot Policy Learning via Voxel Action Heatmap'
+  triage: include
+  reason: null
+  date_v1: '2026-06-05'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - action-head
+  - heatmap
+  - action-representation
+  - data-efficiency
+  affiliations:
+  - Show Lab, National University of Singapore
+  - NVIDIA
+  one_liner: 用预测平移/旋转体素热力图的动作头替换 VLA 原生解码器，以高斯软标签交叉熵训练；作者报告 LIBERO 上相对 OpenVLA-OFT 的 L1 头同步数提升 8.2 个点，并在低数据下更高效。
+  summary: |
+    当前 VLA 的动作解码器（离散 token、L1 回归或流匹配）基本都是单点预测，没有利用相邻动作在几何上相近的结构。ActionMap 提出可直接替换原解码器的体素热力图动作头：对每个动作步分别输出三维平移网格、三维欧拉角网格与夹爪二分类的概率分布，训练时以真值为中心的归一化高斯软标签做交叉熵，推理时用 top-k 软 argmax 还原连续动作。作者在 OpenVLA-OFT（L1 回归头）和 π 系列流匹配模型两种骨干上验证：同等训练步数下 LIBERO 四套件平均分别提升 8.2 个点（97.3% 对 89.1%）和 1.6 个点（98.5% 对 96.9%），LIBERO-Long 提升最大；在 10%–50% 数据子集上优势更明显；Franka 真机拾放、清扫、插卡等任务在少数据时表现更好，满数据时与流匹配基线持平。解码策略与网格分辨率消融显示结果对超参数不太敏感。结果提示动作表示本身是值得调整的设计维度，但收益在已充分训练的强基线上有限，真机每格仅 10–15 次试验，网格参数量随分辨率多项式增长也限制精度。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 将热力图动作头引入大规模预训练 VLA 是清晰但有限的增量，对强基线增益不大。
+    E: 两种骨干、LIBERO 与两组 Franka 真机、数据效率与解码/网格消融，证据较完整；真机试次少。
+    O: 仅有项目页，未找到代码仓库。
+    T: NUS Show Lab 与 NVIDIA 研究者在多模态与高效模型方向有可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目页是否给出代码或权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有项目页 https://showlab.github.io/ActionMap/ 。
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.06944'
+  title: 'T-GMP: Terrain-conditioned Generative Motion Priors for Versatile and Natural Humanoid Locomotion'
+  triage: include
+  reason: null
+  date_v1: '2026-06-05'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - motion-prior
+  - adversarial-motion-prior
+  - cvae
+  - terrain-perception
+  affiliations:
+  - Harbin Institute of Technology
+  - Leju Robotics
+  one_liner: 用 CVAE 从少量地形配对的动捕-状态数据学习地形条件运动先验，并以地形条件判别器做对抗式 RL；作者报告七类地形通过率均高于 AMP 与纯 RL 基线，并在 Kuavo 人形真机上部署。
+  summary: |
+    为兼顾人形机器人行走的拟人自然度与复杂地形通过能力，避免固定运动先验在不同地形下与任务目标冲突，T-GMP 先在动捕棚中针对每类地形采集人体动作，重定向后为每种地形训练带特权信息的专家策略以滤除物理不可行片段，收集约 29.6 分钟“状态-高度图”配对数据；再以条件 β-VAE 学习以局部高度图为条件的运动流形，其解码器作为生成式运动先验；最后在 AMP 框架中引入地形条件判别器，并加入基于射线距离的落脚惩罚，训练统一的感知策略。作者在 Isaac Lab 中训练、在 28 自由度 Kuavo 上部署，报告：轮廓系数与 MMD 显示其运动风格按地形分离且更接近动捕分布；在间隙、平衡木、台阶、楼梯上下、斜坡上下七类地形上通过率均最高（如平衡木 96.88%，AMP 86.72%）；消融显示 CVAE、地形条件与落脚惩罚各有贡献；真机在平衡木、间隙、楼梯等地形上展示了拟人行为。该工作提示地形条件化先验可缓解风格与鲁棒性的冲突，但基线只有纯 RL 与标准 AMP，真机结果为定性展示，且依赖地形配对动捕数据和 LiDAR 高程图。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 将地形条件 CVAE 先验与条件判别器结合，属对 AMP 的扎实但有限扩展。
+    E: 七类地形仿真通过率、自然度与多样性指标及消融较齐，但基线较少且真机仅定性。
+    O: 未找到代码、数据或项目页。
+    T: 哈工大与乐聚机器人有人形硬件与控制积累，学习方向信息有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 地形配对动捕数据集是否计划公开
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文未给出代码或项目页链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.07089'
+  title: 'Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning'
+  triage: include
+  reason: null
+  date_v1: '2026-06-05'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - adaptive-reasoning
+  - dynamic-routing
+  - video-diffusion
+  - long-horizon
+  affiliations:
+  - Tsinghua University
+  - Manifold AI
+  one_liner: 用轻量路由器按执行阶段决定是否调用文本子任务推理与视频想象，其余步骤只解码动作；作者报告 LIBERO-Long 99.1%、RoboTwin 2.0 困难子集最优，推理效率接近纯动作 WAM。
+  summary: |
+    世界动作模型（WAM）以视频预测作为动作先验，但每步都联合生成视频代价高，纯动作解码又在精细操作时缺乏前瞻，且语言多被当作静态任务描述。AdaWAM 观察到任务切换时需要文本推理、精细操作时需要视觉推理、普通运动只需动作解码，于是在 Wan2.2-5B 视频 DiT 与动作 DiT 之上加入 Qwen3-VL 文本推理模块和轻量动态路由器，按动作块决定是否更新子任务指令、是否生成未来视觉；路由器用基于轨迹线索与 VLM 校验的自动标注监督。作者报告在 LIBERO 上整体 98.5%、LIBERO-Long 99.1%（Fast-WAM 95.2%）；RoboTwin 2.0 所选 7 个困难任务成功率在干净/随机环境分别为 88.43%/86.57%，高于 Fast-WAM 等基线；ALOHA 真机两项长时程任务各 10 次试验中表现最好或持平；推理耗时与 Fast-WAM 相近而任务时长更短；在 LIBERO 未见子任务组合上文本推理带来明显泛化。结果提示按需“做梦”能平衡效率与精度，但真机试次少、整体 LIBERO 提升有限，路由依赖启发式标注，摘要声称的代码在项目页上尚未见到。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 按需调用文本/视觉推理的路由对 WAM 部署效率有意义，但属现有组件的组合式增量。
+    E: LIBERO、RoboTwin 2.0、真机、变体消融、推理时间与组合泛化均有；真机仅 10 次试验。
+    O: 摘要称代码可在项目页获取，但项目页为匿名评审页，未见代码链接。
+    T: 清华李勇团队与 Manifold AI 在具身与世界模型方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - project
+  pending_checks:
+  - 代码是否已公开发布
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 项目页 https://adawam.github.io/ 为匿名评审页，仅有论文与补充材料 PDF，未见代码链接（2026-10-22 核查）。
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.07100'
+  title: 'LARA: Latent Action Representation Alignment for Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-06-05'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - latent-action
+  - representation-alignment
+  - diffusion-policy
+  - human-video
+  - humanoid
+  affiliations:
+  - State Key Laboratory of General Artificial Intelligence, BIGAI
+  - Peking University
+  - Delta Intelligence
+  one_liner: 以 REPA 式表征对齐联合训练潜动作模型与扩散 VLA，可用于预训练、后训练增强与潜动作精炼；作者报告 OXE 约束下 LIBERO 88.6%，G1 真机少样本适配平均提升约 32%。
+  summary: |
+    潜动作模型（LAM）能从无标注视频中提取动作监督，但通常与 VLA 分开训练：LAM 得不到真实动作约束，VLA 又受制于冻结的 LAM 表征。LARA 借鉴图像扩散中的表征对齐，把 DiT 动作模型中间层特征与 LAM 的潜动作表征对齐，并让两者联合优化，使 LAM 被真实轨迹约束、VLA 被前向动力学正则，流程分为 LAM 视频预训练、联合预训练与联合后训练。作者报告：仅用 OXE 预训练时 LIBERO 平均 88.6%、SimplerEnv 65.2%，高于 Moto-GPT、LAPA 和自身无对齐 DiT 基线；作为后训练插件，GR00T-N1.6-LARA 在 LIBERO（95.6% 对 95.0%）、SimplerEnv、GR1 仿真上小幅提升；在新具身 GR1 仿真与 Unitree G1 真机 50 示教设定下提升明显（G1 两任务平均 74% 对 56%，各 50 次试验）；用 LARA 对齐后的 LAM 训练 Moto-GPT 也在 SimplerEnv 上更好。消融显示对齐层深度与联合优化都重要，最优层依骨干而异。结果提示表征对齐是连接视频潜动作与动作学习的轻量途径，但在强基线上增益很小，真机任务仅两个。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 用表征对齐打通 LAM 与 VLA 联合训练，适用预训练、后训练和 LAM 精炼三种场景，增量明确。
+    E: LIBERO、SimplerEnv、GR1 仿真与 G1 真机，含受限/非受限两种对比和消融；强基线上增益小。
+    O: 代码仓库实质完整并有 HF 权重，但未找到许可证。
+    T: BIGAI 黄思远团队在具身智能与 3D 场景理解方向有多项代表性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 仓库许可证
+  - 是否被 ICML 2026 录用（正文关键词与链接暗示，元数据未写明）
+  open:
+    code: substantive
+    repo: https://github.com/lmy1001/LARA
+    weights: open
+    data: n/a
+    license: unknown
+    note: HF 权重 https://huggingface.co/MengyaLiu/LARA_full ；仓库未见许可证文件。
+  uses:
+  - resource: libero
+    role: eval
+  - resource: simplerenv
+    role: eval
+  - resource: open-x-embodiment
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2606.08828'
+  title: 'Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video'
+  triage: include
+  reason: null
+  date_v1: '2026-06-07'
+  category: sim2real
+  route: core
+  contribution: system
+  tags:
+  - dexterous-manipulation
+  - human-video
+  - digital-twin
+  - residual-rl
+  - sim-to-real
+  affiliations:
+  - Georgia Institute of Technology
+  - University of Pennsylvania
+  - Toyota Research Institute
+  - Carnegie Mellon University
+  one_liner: 从单段人类 RGB-D 视频重建数字孪生、以物体中心关键帧优化重定向轨迹，再用 IL 校准感知误差与残差 RL 微调手指；作者报告 7 个真机灵巧任务平均成功率 95.7%，FoundationPose 基线 15.7%。
+  summary: |
+    直接把人类视频中的手部动作重定向到机器人，会受遮挡导致的估计误差与形态差异影响，难以复现原本的物体交互。Video2Sim2Real 构建全栈流程：用 Gemini、SAM3、SAM 3D 等现成模型从单段 RGB-D 视频重建仿真可用的数字孪生，用 HaMeR、Mink、CoTracker 提取手与物体运动先验；在接触、交互、脱离三个物体中心关键帧上利用仿真中的物体信息优化机器人位形，作为锚点插值修正重定向轨迹；为跨越 sim2real 差距，把对噪声点云的鲁棒性（IL 学习位形重校准）与手物交互动力学变化（手指级残差 RL）解耦训练；另以碰撞感知运动规划支持新物体位姿。作者在 Kinova 机械臂加 LEAP Hand 上报告：仿真中相对 5 种 RL 精炼基线成功率、安全率与轨迹平滑度均最好（平均成功率 91.4%）；随机化仿真中优于纯 RL、纯 IL；真机 7 个任务各 10 次局部位姿扰动试验平均 95.7%，FoundationPose 位姿校正基线 15.7%。结果提示单视频可支撑自主获取灵巧技能，但仅限非铰接物体、关键帧检测为启发式、需 AprilTag 标定，真机泛化范围也较局部。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 关键帧锚点精炼与解耦 sim2real 策略有新意，但整体以现成模块集成为主。
+    E: 七任务、五种精炼基线与三种 sim2real 基线、真机 70 次试验与消融；真机仅局部扰动。
+    O: 仅有项目网站，未找到官方代码仓库（探测结果为第三方 IK 库 mink）。
+    T: 佐治亚理工 Ravichandar、Kira、Gombolay 团队及 TRI 在灵巧操作与机器人学习方向积累扎实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目网站是否计划发布代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测到的 kevinzakka/mink 是论文使用的第三方逆运动学库；仅有项目网站 https://video2sim2real.github.io/ 。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.09215'
+  title: 'MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-08'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - humanoid
+  - loco-manipulation
+  - whole-body-control
+  - video-diffusion
+  affiliations:
+  - Mondo Robotics
+  - HKUST (GZ)
+  - HKUST
+  one_liner: 以 Cosmos 视频 DiT 单次前向的中间去噪特征条件化动作 DiT，预测统一全身运动潜变量驱动人形移动操作；作者报告 G1 九项真机任务总体成功率比最强 VLA 基线高 30 个点以上。
+  summary: |
+    WAM 依赖对高维视频-动作潜变量的迭代去噪，速度难以满足人形实时控制；主流分层方案又让上肢输出关节目标、下肢只跟踪粗粒度底盘指令，腿部被限制为保持平衡。MotionWAM 将初始化自 Cosmos-Predict2.5-2B 的视频 DiT 在纯噪声端只做一次前向，截取中间层特征条件化动作 DiT，输出基于 SONIC 全身控制器的统一运动潜变量，覆盖行走、躯干、高度、脚部交互和手部操作；训练分三阶段：约 2136 小时第一人称人类与人形视频预训练视频分支，跨 G1 异构数据做动作后训练，再用 VR 全身遥操作数据在目标任务上微调。作者在 Unitree G1 九项需要腿部与躯干参与的真机任务（每项 20 次）上报告：MotionWAM 每项都优于 Diffusion Policy、ACT、π 系列、GR00T-N1.7 及同参数量的 Qwen3-VL 基线，总体高出最强基线 30 个点以上，并完成踢球等脚部交互；去掉第一或第二阶段平均分别下降 11 和 28 个点；A100 上 4.9 Hz，约为 Cosmos Policy 的 7 倍。结果提示视频预训练 WAM 可扩展到全身人形控制，但仅在 G1 一种平台验证、缺少新物体泛化测试，单头部相机在物体出视野时易失败。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 4
+  rationale:
+    C: 把 WAM 推到实时全身人形移动操作并统一上下肢动作空间，对人形 WAM 子方向有明确增量。
+    E: 九项真机任务各 20 次、五类基线、分阶段消融与推理频率对比；仅单一平台、无 OOD 物体测试。
+    O: 未找到官方代码或项目页（原探测结果属于其他论文）。
+    T: 港科广梁俊卫团队在具身导航与操作方向有可核实的持续产出。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否有官方项目页或代码发布计划
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 原记录的 Kairos-HomeWorld/HomeWorld 仓库与 kairos-homeworld 项目页属于 HomeWorld（2606.06390），已更正为 no-repo。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.09499'
+  title: Targeting World Models to Compromise Robot Learning Pipelines
+  triage: include
+  reason: null
+  date_v1: '2026-06-08'
+  category: world-model
+  route: adjacent
+  contribution: method
+  tags:
+  - security
+  - data-poisoning
+  - backdoor
+  - world-model
+  - adversarial-attack
+  affiliations:
+  - Northeastern University
+  - University of Massachusetts Amherst
+  one_liner: 提出视觉提示劫持与视觉转移劫持两类攻击，在看似安全的遥操作数据中植入扰动，经世界模型生成后毒化下游策略；作者报告在 DINO-WM 上实现端到端 PPO 后门，并对 Cosmos-Predict2.5 给出概念验证。
+  summary: |
+    世界模型正被用于生成机器人训练数据和替代仿真，这为数据供应链引入了新的攻击面。该文设想恶意遥操作数据提供方在外观安全的数据中嵌入经优化的图像扰动与触发物体，只有输入世界模型后才会激活：针对文本条件世界模型的“视觉提示劫持”让生成视频忽略用户提示、改为执行危险操作（如把刀放到炉上）；针对动作条件世界模型的“视觉转移劫持”使除预定动作外的所有动作导致预测崩溃，从而在其中训练的 RL 策略学到后门。作者在 LIBERO 数据上微调的 Cosmos-Predict2.5-2B 及自建的三类安全相关任务上报告，分布外任务与模糊提示更易被攻击；在 DINO-WM 的 Single Wall 环境中训练 PPO，实现了见到触发物才偏离目标的后门；对 Cosmos-Predict2.5 动作条件模型和 r2Dreamer 给出预测退化的概念验证；附录显示朴素的 Cosmos Guardrail 等防护基本无效。该工作提示世界模型应被纳入机器人安全评估，但 VLA 场景仅为概念验证，攻击尚未在更真实的端到端管线中验证，作者也承认攻击实现远非最优。
+  venue: CoRL Spotlight
+  scores:
+    C: 4
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 首次系统提出经世界模型毒化机器人学习管线的威胁模型与攻击方法，开辟具身安全的新问题。
+    E: 覆盖文本与动作条件两类模型并有 DRL 端到端后门，但规模小、VLA 侧仅概念验证。
+    O: 未找到代码；作者仅表示将上传微调模型。
+    T: 东北大学 Alina Oprea（安全）与 Christopher Amato（RL）团队在各自方向积累扎实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 录用年份（arXiv 注释仅写 CoRL Spotlight）
+  - 微调的 Cosmos LIBERO 模型是否已上传
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文称去匿名后将上传 LIBERO 微调的 Cosmos 模型，目前未见链接。
+  uses:
+  - resource: libero
+    role: finetune
+  new_resources: []
+- arxiv_id: '2606.09813'
+  title: 'iMaC: Translating Actions into Motion and Contact Images for Embodied World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-06-08'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - action-conditioned-video
+  - policy-evaluation
+  - world-model
+  - rgbd-prediction
+  - long-horizon-rollout
+  affiliations:
+  - GigaAI
+  - Tsinghua University
+  - Nanyang Technological University
+  - Beijing University of Posts and Telecommunications
+  one_liner: 把未来关节动作经 URDF/FK 渲染为运动图像、结合预测深度构建机器人-场景接触图像，作为视频世界模型的稠密控制；作者报告八项真机任务中六项的世界模型评分与真实策略表现强相关。
+  summary: |
+    动作条件视频世界模型常把未来动作编码为紧凑向量再经注意力或调制注入，模型需要间接推断厘米级动作差异对接触与物体运动的影响，这限制了其作为策略评估器的可靠性。iMaC 基于 WAN2.2 图生视频 DiT，把未来关节动作经 URDF 与正运动学渲染为三视角机器人运动图像，同时联合预测彩色化深度，并用预测深度构建的点云生成当前场景与未来机器人之间的双流距离热力图（接触图像），作为稠密图像式控制；训练时采用多块连续展开以缓解自回归生成的暴露偏差，支持分钟级生成。作者在八项真机长时程操作任务上报告：相对 Ctrl-World 与 ABot-PhysWorld，FID、PSNR、SSIM、FVD 等视频指标更优；以 π 系列与 GigaBrain-0.5 各三个训练检查点做闭环评估，六项任务中世界模型成功率与真机成功率强正相关，两项因相机看不到关键高度关系而相关较弱；定性消融显示运动图像与接触图像缺一不可。结果提示空间显式的动作控制能提升世界模型对动作的响应，但每任务需单独微调模型、依赖估计深度精度，消融主要是定性对比。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 用运动与接触图像作为显式动作控制，对具身世界模型的动作条件化方式有明确增量。
+    E: 八项真机任务、两个基线和策略排序相关性分析，但基线少、消融以定性为主且每任务单独微调。
+    O: 官方仓库含大量代码，但未确认权重与许可证。
+    T: 清华鲁继文团队与极佳科技在具身世界模型方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否发布模型权重；仓库许可证
+  - HF 数据集 CVPR-2026-WorldModel-Track-Dataset 与本文训练数据的关系
+  open:
+    code: substantive
+    repo: https://github.com/imac-wm/iMac
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 仓库探测为实质代码（271 个代码文件），未找到许可证；缓存元数据中的摘要为旧版本，正文以 v1 HTML 为准。
+  uses: []
+  new_resources: []

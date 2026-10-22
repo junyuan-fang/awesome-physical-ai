@@ -1,0 +1,800 @@
+run:
+  scan_date: '2026-10-22'
+  kind: daily
+  window_start: '2026-09-02'
+  window_end: '2026-10-22'
+  last_covered_end: '2026-09-04'
+  d: 48
+  cap: 20
+  stats:
+    fetched: 6029
+    already_tracked_or_triaged: 1
+    out_of_scope: 1413
+    below_pool_cut: 4535
+    pool: 80
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items:
+- arxiv_id: '2609.17210'
+  title: 'FluxVLA Engine: A One-Stop VLA Engineering Platform for Embodied Intelligence'
+  prefilter_score: 18.0
+  triage: exclude
+  reason: 工程平台：VLA 工程化平台，无实质研究增量
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/FluxVLA/FluxVLA
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.15770'
+  title: 'JEPLO: Joint-Embedding Predictive Learning for LiDAR-Based Legged Locomotion'
+  prefilter_score: 18.0
+  triage: exclude
+  reason: 增量有限：LiDAR 腿足运动 JEPA
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: https://github.com/ASIG-X/JEPLO.
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.02521'
+  title: 'Spatial Memory Intelligence: Endowing World Models with Understanding-Driven Long-Term Memory'
+  prefilter_score: 18.0
+  triage: exclude
+  reason: 方向偏离：长视频/世界模型长时记忆，偏生成娱乐
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/xbyym/SMI
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.26625'
+  title: 'EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience'
+  prefilter_score: 18.0
+  triage: include
+  reason: null
+  category: foundation-general
+  route: core
+  contribution: model
+  tags:
+  - egocentric
+  - 3d-reconstruction
+  - hand-object
+  - dataset
+  - benchmark
+  affiliations:
+  - Ropedia
+  - Nanyang Technological University
+  - Tsinghua University
+  - Peking University
+  one_liner: EgoXperience 构建 50 小时自我中心数据 EgoX-Data-6M 与基准 EgoX-Bench，EgoX 单次前向联合重建相机、深度、双手与物体 6DoF；作者报告 EgoX-Bench 手部误差降至
+    113.24 mm。
+  summary: 为解决自我中心视频中相机、场景几何与手–物交互通常分开重建、尺度与坐标系不一致的问题，作者提出全栈方案 EgoXperience：EgoX-Engine 用立体深度与 SLAM 把手部 MANO、物体轨迹和场景对齐到同一度量世界坐标，据此标注
+    50 小时的 EgoX-Data-6M（101 个物体、270 个任务脚本），并留出 1 小时作为 EgoX-Bench；EgoX 在 VGGT 式骨干上加手、物体与尺度 token，单次前向预测位姿、深度、双手与物体 6DoF。在 HOT3D、EgoX-Bench、HOI4D、H2O
+    上作者报告世界坐标手部 W-MPJPE 均最低（EgoX-Bench 由 WiLoR+SLAM 的 328.81 mm 降至 113.24 mm）、深度 AbsRel 最优，但相机 nATE 在 HOT3D 与 EgoX-Bench 不及
+    VGGT-，且仅支持刚性物体、无真机验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 把自动标注引擎、50 小时联合标注数据、评测基准与单次前向联合重建模型打包成全栈方案，相对 HaWoR/ReViV 等只恢复子集的工作有清晰增量
+    E: 在 HOT3D、EgoX-Bench、HOI4D、H2O 四个基准上与手部、物体、几何三类基线对比，并给出 ScaleHead/DepthHead 消融与效率表，但无真机或下游任务验证，且部分相机指标不及 VGGT-
+    O: 代码仓库仅 5 个文件且 README 称即将发布，HF 模型页与 EgoX-Data-6M/EgoX-Bench 数据集页均为空占位，均无许可证
+    T: Ropedia 与 NTU S-Lab（Ziwei Liu、Fangzhou Hong 等）在自我中心视觉与 3D 人体/场景重建方向有可核实积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - project
+  pending_checks:
+  - 核实代码、权重与 EgoX-Data-6M/EgoX-Bench 的实际发布时间、体积与许可证
+  open:
+    code: placeholder
+    repo: https://github.com/Ropedia/EgoXperience
+    weights: none
+    data: none
+    license: unknown
+    note: 沿用探测：主仓库 5 个文件、0 个代码文件、README 称即将发布。核对 HF 后修正权重/数据：ropedia-ai/EgoX 模型卡写 weights coming soon，EgoX-Data-6M 与 EgoX-Bench
+      数据集页文件为空（约 3 kB）并写 data/benchmark coming soon，故 weights/data 由 unknown 改为 none。
+  uses:
+  - resource: egox-data-6m
+    role: proposes
+  - resource: egox-bench
+    role: proposes
+  - resource: hoi4d
+    role: eval
+  new_resources:
+  - kind: dataset
+    id: egox-data-6m
+    name: EgoX-Data-6M
+    desc: 50 小时任务驱动的自我中心操作与移动视频（101 个刚性物体、270 个任务脚本），含统一度量世界坐标下的相机、深度、双手、物体标注与秒级任务描述。
+    links:
+      paper: https://arxiv.org/abs/2610.26625
+      project: https://ropedia.github.io/EgoXperience
+      data: https://huggingface.co/datasets/ropedia-ai/EgoX-Data-6M
+    subcategory: egocentric-human
+  - kind: benchmark
+    id: egox-bench
+    name: EgoX-Bench
+    desc: 从 EgoX-Data-6M 留出的 1 小时质量受控子集，覆盖工作台操作、跨房间交互与户外 loco-manipulation，用于联合评测相机、深度、手与物体重建。
+    links:
+      paper: https://arxiv.org/abs/2610.26625
+      project: https://ropedia.github.io/EgoXperience
+      data: https://huggingface.co/datasets/ropedia-ai/EgoX-Bench
+    subcategory: manipulation
+- arxiv_id: '2610.28594'
+  title: Learning the 4D World through Point Trajectory Forecasting
+  prefilter_score: 17.9
+  triage: exclude
+  reason: 方向偏离：多视图视频预测世界模型，非具身控制主线
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: KAIST'
+  - 'Affiliation: ETH Zürich'
+  - 'Affiliation: Seoul National University'
+  - 'Affiliation: Physics Sim Lab'
+  - 'Affiliation: RLWRLD'
+  - 'Affiliation: New York University'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/rootyJeon/VPM
+    weights: unknown
+    data: unknown
+    license: CC-BY-NC
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.18950'
+  title: '$λ_0$: Scaling Open-World Egocentric Human Data for Humanoid Loco-Manipulation'
+  prefilter_score: 17.7
+  triage: exclude
+  reason: 与 Ropedia/EgoXperience 的 egocentric human 数据路线重叠
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Alibaba Token Hub and Amap , Alibaba Group'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/LambdaHumanoid/openlambda
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.28660'
+  title: 'Morphometric Imitation: From Morphology and Contact Aware Hand Retargeting to Sim-to-Real Visuomotor Policy'
+  prefilter_score: 17.7
+  triage: exclude
+  reason: 增量有限：手部 retargeting 三阶段框架
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: S. Shankar Sastry, Claire Tomlin*, and Jitendra Malik*'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/tsadja/morphometric
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.12036'
+  title: 'Pelican-Sim 1.0: A General World Model Simulator for Embodied Intelligence'
+  prefilter_score: 17.6
+  triage: defer
+  reason: 材料不足：技术报告，通用世界模型仿真器的实质开源与可用性待后续核实
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/ZouShilong1024/Pelican-Sim1.0
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.07498'
+  title: 'CosmoH2G: A Hand-to-Gripper Transfer Dataset and Baseline Method for Object Manipulation with Complex Spatial Movements'
+  prefilter_score: 17.6
+  triage: exclude
+  reason: 增量有限：手到夹爪迁移数据集
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - SSE, CUHKSZ
+  - China
+  - GenuX
+  - SSE, CUHKSZ;
+  - FNii-Shenzhen
+  - FNii-Shenzhen;
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/GAP-LAB-CUHK-SZ/CosmoH2G
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.20968'
+  title: 'SOMA: Stack-of-Objects Manipulation using a Quadruped Robot'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 增量有限：四足非抓取堆叠操作
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.19594'
+  title: 'RoboSpan: Learning Modular Coordination Policies for High-DoF Whole-Body Mobile Manipulation with Teleoperation'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 增量有限：高自由度全身移动操作模块化策略
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Jiangsu Key Laboratory of Advanced Food Manufacturing Equipment and Technology, School of Mechanical Engineering,
+    Jiangnan University, Wuxi 214122, China. This work was supported by the Wuxi Taihu Lake Talent Plan. This work was also
+    supported by Linkerbot Beijing Technology Co., Ltd.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.12465'
+  title: 'A Balanced Data Diet: Addressing the Exploration Bottleneck in Mega-Scale RL for Robot Control'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 增量有限：大规模 RL 数据配比
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: University of Washington'
+  - 'Affiliation: NVIDIA*Equal contribution†Equal advising'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.09455'
+  title: 'RLHND: Video Foundation Models as Physically Grounded Hand Trackers for Robot Learning'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 增量有限：视频基础模型手部追踪器
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: RLWRLD'
+  - 'Affiliation: KAIST'
+  - 'Email: seungjun.moon@rlwrld.ai'
+  - 'Affiliation: Seoul National University'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/seungjun-moon/rlhnd
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.38653'
+  title: 'TERRA: Terrain-Aware Reconstruction, Retargeting and Control for Musculoskeletal Locomotion'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 方向小众：肌肉骨骼运动，增量有限
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: EPFL'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/amathislab/terra
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.36915'
+  title: 'AeroManip-VLA: Scalable Vision-Language-Action Learning for Aerial Manipulation with RL-Generated Demonstrations'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 方向较边缘：空中操作 VLA
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: National University of Singapore'
+  - 'Affiliation: Beijing Institute of Technology'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.21045'
+  title: 'DEXTERA: From a Single Image to Deployable Dexterous Manipulation via Real-to-Sim-to-Real'
+  prefilter_score: 17.5
+  triage: exclude
+  reason: 增量有限：单图到可部署灵巧操作流水线
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: The University of Texas at Austin;'
+  - 'Affiliation: University of Florida;'
+  - 'Affiliation: BrainCo.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.14973'
+  title: 'PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models'
+  prefilter_score: 17.5
+  triage: include
+  reason: null
+  category: foundation-general
+  route: core
+  contribution: model
+  tags:
+  - physical-foundation-model
+  - vla
+  - autoregressive
+  - human-video-pretraining
+  - embodied-understanding
+  affiliations:
+  - DeepCybo
+  one_liner: PhysBrain 1.5 在 Qwen3-VL 上把语言、末端轨迹与未来 RGB/深度/机器人掩码统一为离散 token 联合自回归训练，8B 模型在 28 个具身理解基准上平均 72.5，为开源最高。
+  summary: 为把具身理解、动作生成与未来状态预测纳入同一学习框架，作者以 Qwen3-VL-Instruct 8B 为底座扩展动作与视觉词表：末端轨迹经 ActionPiece 编码为 16 步相对动作 token，未来 RGB、深度与机器人掩码共享一个
+    VQ-VAE，三者与语言共用同一自回归目标；预训练用约 3 万小时人类交互视频（含 Ego4D、EgoDex、EgoVerse、Ego-Exo4D 等）生成感知、动作与未来状态监督，再用人类/真机/仿真混合数据 SFT。作者报告 28
+    个具身理解基准平均 72.5、为开源最高，与闭源 Gemini 3.6 Flash（73.0）和 GPT-6-Astra（73.3）接近，12 个通用多模态基准大体保持；但动作与未来预测仅有定性图示，无真机成功率与消融，评测多为 VLM
+    式问答而非闭环执行。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 在 Qwen3-VL 上把语言理解、动作 token 与未来视觉 token 统一进一个自回归模型并用约 3 万小时人类视频预训练，是明确的模型与资源增量，但组件多为已有做法（ActionPiece、VQ-VAE、UniVLA/RynnVLA
+      式统一）的组合
+    E: 28 个具身理解基准 + 12 个通用多模态基准、与十余个开源/闭源模型对比，范围广且对照合理，但动作与未来状态预测只有定性图示，无真机成功率、无消融
+    O: 8B/2B 权重已在 HF 以 safetensors 提供，含 28 个基准评测脚本的 EvalKit 已开源，但主仓库仅 README 与技术报告，训练代码与训练数据未开放且无许可证
+    T: DeepCybo 为新兴团队，除本系列（1.5 版本）外无可核实的具身方向标志性成果，信息不足按默认给 3
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 核实 DeepCybo 团队背景及其在具身方向的可核实产出
+  - 确认是否计划开源训练代码与动作/未来状态预测的定量评测协议
+  open:
+    code: partial
+    repo: https://github.com/DeepCybo-PhysAI/PhysBrain-1.5
+    weights: open
+    data: none
+    license: unknown
+    note: 探测为主仓库 4 个文件、0 代码文件，核对后仍只有 README、tech_report.pdf 与资源图，无训练/推理源码；论文另给出 PhysBrainEvalKit（含 28 个基准的评测脚本与打分聚合），故 code
+      由 placeholder 改为 partial。HF 上 PhysBrain1.5-8B/2B 提供 safetensors 权重，weights 由 unknown 改为 open；训练数据与许可证均未提供。
+  uses:
+  - resource: ego4d
+    role: pretrain
+  - resource: bridgedata-v2
+    role: finetune
+  - resource: agibot-world
+    role: finetune
+  new_resources: []
+- arxiv_id: '2609.13053'
+  title: 'Dynin-Robotics: Omnimodal Unified Diffusion Vision-Language-Action Model'
+  prefilter_score: 17.3
+  triage: exclude
+  reason: 增量有限：统一扩散 VLA
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: AIDAS Lab Seoul National University Project Page Code Model'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/AIDASLab/Dynin-Robotics
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2609.04355'
+  title: 'VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models'
+  prefilter_score: 17.3
+  triage: exclude
+  reason: 增量有限：非对称 co-bootstrapping 在线 RL
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/scy-v/VLA-Precision
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.01092'
+  title: 'Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation'
+  prefilter_score: 17.3
+  triage: exclude
+  reason: 增量有限：自我中心视频目标操作评测
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Nanyang Technological University'
+  - 'Affiliation: Mohamed bin Zayed University of Artificial Intelligence Independent Researcher'
+  - 'Affiliation: University of North Carolina at Chapel Hill Code Dataset Website'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/ego2act/ego2act
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []

@@ -1,8 +1,8 @@
 {#- Jinja2 template — DO NOT edit README.md directly, edit this file -#}
 {%- macro paper_line(p) -%}
-- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** — *{{ p.authors }}* · `{{ p.date }}`{% if p.venue %} · 🏛️ **{{ p.venue }}**{% endif %}
+- {% if p.highlight %}{{ p.highlight }} {% endif %}**[{{ p.title }}]({{ p.links.arxiv }})** — *{{ p.authors }}* · `{{ p.date }}`{% if p.venue %} · 🏛️ **{{ p.venue }}**{% endif %}{% if p.review.total %} · `{{ p.review.total }}/100`{% endif %}{% if code_badge[p.open.code] %} · {{ code_badge[p.open.code] }}{% endif %}{% if p.route == "adjacent" %} · 🧩 *adjacent*{% endif %}
 
-  > {{ p.abstract_short | clean_abstract }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}
+  > {{ p.abstract_short | clean_abstract }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}{% if p.digest and p.summary %} · [📝 review]({{ p.digest }}){% endif %}
 
 {% endmacro -%}
 <div align="center">
@@ -21,11 +21,25 @@
 
 📊 **{{ stats.papers }}** papers&nbsp; · &nbsp;🏢 **{{ stats.companies }}** companies&nbsp; · &nbsp;🎮 **{{ stats.simulators }}** simulators&nbsp; · &nbsp;📦 **{{ stats.datasets }}** datasets&nbsp; · &nbsp;📊 **{{ stats.benchmarks }}** benchmarks
 
-<sub>🤖 Auto-synced daily from arXiv + HuggingFace daily papers · 每日自动同步</sub>
+🔥 **{{ priority_counts["must-read"] }}** must-read&nbsp; · &nbsp;👀 **{{ priority_counts["notable"] }}** notable&nbsp; · &nbsp;📋 **{{ priority_counts["watching"] + priority_counts["unrated"] }}** also tracked
+
+<sub>🤖 Discovered daily from arXiv + HuggingFace daily papers, then screened & scored by a [two-layer review](docs/METHODOLOGY.md) · 每日从原始渠道发现，经两层筛选与四维评分后收录</sub>
 
 </div>
 
-> 💡 **Legend / 图例**: 🔥 must-read · 👀 worth-knowing · 📜 classic landmark · 🏛️ accepted venue · 🌐 project · 💻 code. Click any **▸ section** to expand / 点击展开折叠区.
+> 💡 **Legend / 图例**: 🔥 must-read（总分 ≥80 且证据 ≥3）· 👀 notable（65–79）· 📜 classic landmark · `81/100` = 贡献 30% + 证据 25% + 开放 30% + 团队 15% · 💻 substantive code · 🟡 partial · 📄 placeholder repo · 🧩 adjacent（数据/基准/基础设施）· 🏛️ accepted venue · 📝 full review. Click any **▸ section** to expand / 点击展开折叠区.
+>
+> 📚 Full ranked index with affiliations & open status: [docs/index.md](docs/index.md) · Scan reports: [digests/](digests/){% if latest_digest %} (latest: [{{ latest_digest.split("/")[-1][:-3] }}]({{ latest_digest }})){% endif %}
+
+---
+
+## ⭐ This week's picks / 本周精选
+
+{% if picks %}
+{% for p in picks %}{{ paper_line(p) }}{% endfor %}
+{% else %}
+*No must-read / notable additions in the last 7 days — see the [latest scan report]({{ latest_digest }}).*
+{% endif %}
 
 ---
 
@@ -119,7 +133,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <summary>📁 <b>{{ sub.title }}</b> · {{ items | length }} datasets</summary>
 
 {% for d in items -%}
-- **[{{ d.name }}]({{ d.links.project if d.links.project else (d.links.code if d.links.code else d.links.paper) }})** — {{ d.desc }}{% if d.size %} · *{{ d.size }}*{% endif %}{% if d.links.paper %} · [paper]({{ d.links.paper }}){% endif %}{% if d.links.code %} · [code]({{ d.links.code }}){% endif %}{{ "" }}
+- **[{{ d.name }}]({{ d.links.project if d.links.project else (d.links.code if d.links.code else d.links.paper) }})** — {{ d.desc }}{% if d.size %} · *{{ d.size }}*{% endif %}{% if d.access %} · access: `{{ d.access }}`{% endif %}{% if d.license %} · {{ d.license }}{% endif %}{% if d.links.paper %} · [paper]({{ d.links.paper }}){% endif %}{% if d.links.code %} · [code]({{ d.links.code }}){% endif %}{% if used_by[d.id] %} · 🔗 used by [{{ used_by[d.id] | length }} tracked paper{% if used_by[d.id] | length > 1 %}s{% endif %}](docs/index.md#resource-{{ d.id }}){% endif %}{{ "" }}
 {% endfor %}
 
 </details>
@@ -144,7 +158,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <summary>📐 <b>{{ sub.title }}</b> · {{ items | length }} benchmarks</summary>
 
 {% for b in items -%}
-- **[{{ b.name }}]({{ b.links.project if b.links.project else (b.links.code if b.links.code else b.links.paper) }})** — {{ b.desc }}{% if b.links.paper %} · [paper]({{ b.links.paper }}){% endif %}{% if b.links.code %} · [code]({{ b.links.code }}){% endif %}{{ "" }}
+- **[{{ b.name }}]({{ b.links.project if b.links.project else (b.links.code if b.links.code else b.links.paper) }})** — {{ b.desc }}{% if b.links.paper %} · [paper]({{ b.links.paper }}){% endif %}{% if b.links.code %} · [code]({{ b.links.code }}){% endif %}{% if used_by[b.id] %} · 🔗 used by [{{ used_by[b.id] | length }} tracked paper{% if used_by[b.id] | length > 1 %}s{% endif %}](docs/index.md#resource-{{ b.id }}){% endif %}{{ "" }}
 {% endfor %}
 
 </details>
@@ -162,24 +176,23 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 {%- else %}
 
-{% set cat_papers = papers | selectattr("category", "equalto", cat.id) | sort(attribute="date", reverse=true) | list %}
-{% set recent_year = cat_papers | selectattr("date", "ge", "2026") | list %}
-{% set earlier = cat_papers | rejectattr("date", "ge", "2026") | list %}
-{% if cat_papers %}
-{% if recent_year %}
-<details open>
-<summary>🆕 <b>2026</b> · {{ recent_year | length }} paper{% if recent_year | length > 1 %}s{% endif %}</summary>
+{% set blocks = sections[cat.id] %}
+{% if blocks %}
+{% for block in blocks %}
+{% if block.title %}
 
-{% for p in recent_year %}{{ paper_line(p) }}{% endfor %}
-</details>
-{% endif %}
-{% if earlier %}
-<details>
-<summary>📜 <b>Earlier landmarks</b> · {{ earlier | length }} paper{% if earlier | length > 1 %}s{% endif %}</summary>
+### {{ block.title }} · {{ block.count }}
 
-{% for p in earlier %}{{ paper_line(p) }}{% endfor %}
-</details>
 {% endif %}
+{% for g in block.groups %}
+<details{% if g.open %} open{% endif %}>
+<summary>{{ g.icon }} <b>{{ g.title }}</b> · {{ g.papers | length }} paper{% if g.papers | length > 1 %}s{% endif %}</summary>
+
+{% for p in g.papers %}{{ paper_line(p) }}{% endfor %}
+</details>
+
+{% endfor %}
+{% endfor %}
 {% else %}
 *No entries yet — [contribute one!](CONTRIBUTING.md)*
 {% endif %}
@@ -192,23 +205,13 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ---
 
-## 🆕 Recent additions (last 45 days)
+## 🗞️ Scan reports / 扫描报告
 
-{% set recent = papers | selectattr("date", "ge", recent_cutoff) | sort(attribute="date", reverse=true) | list %}
-{% if recent %}
-<details>
-<summary><b>Show {{ recent[:15] | length }} recently added papers</b></summary>
+Each daily run writes a report with its coverage window, inclusion cap, candidate / exclusion statistics and a full review per included paper (problem → method → results & conditions → limits, open status with `last_check`). Weekly (≤15) and monthly (≤30) picks are rolled up from them.
 
-{% for p in recent[:15] -%}
-- {{ p.highlight | default("") }} **[{{ p.title }}]({{ p.links.arxiv }})** `{{ p.date }}`{% if p.venue %} · 🏛️ {{ p.venue }}{% endif %} · *{{ p.authors }}*{% if p.links.project %} · [🌐]({{ p.links.project }}){% endif %} · `{{ p.category }}`{{ "" }}
-{% endfor %}
-
-</details>
-{% else %}
-*No recent additions in the rolling window — see full sections above.*
+{% if latest_digest %}- Latest daily report: [{{ latest_digest.split("/")[-1][:-3] }}]({{ latest_digest }})
 {% endif %}
-
-> 🤖 *Auto-rolled forward from `data/papers.yaml` every push. Older entries naturally drop out of this window but remain in their category section.*
+- All reports: [digests/](digests/) · Methodology: [docs/METHODOLOGY.md](docs/METHODOLOGY.md) · Ranked index: [docs/index.md](docs/index.md)
 
 ---
 
@@ -218,7 +221,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ## 🤝 Contributing
 
-This list is auto-fed from a daily paper aggregation pipeline, but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+This list is fed by a daily discovery → two-layer review pipeline ([methodology](docs/METHODOLOGY.md)), but PRs are very welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **Inclusion criteria / 收录标准** (keep the list high-signal):
 - ✅ Has a public paper (arXiv/venue) **or** open-source code / project page

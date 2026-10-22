@@ -1,0 +1,759 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2606.09828'
+  title: Latent Spatial Memory for Video World Models
+  triage: include
+  reason: null
+  date_v1: '2026-06-08'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - video-world-model
+  - spatial-memory
+  - 3d-consistency
+  - camera-control
+  affiliations:
+  - Zhejiang University
+  - Microsoft Research
+  - Adelaide University
+  - Monash University
+  one_liner: 把视频世界模型的 3D 记忆从 RGB 点云搬到扩散潜空间，作者报告端到端生成最高提速 10.57 倍、显存降 55 倍，WorldScore 平均分 70.36 居对比方法首位。
+  summary: |
+    为缓解视频世界模型依赖 RGB 点云记忆所带来的反复渲染、VAE 重编码开销与信息损失，作者提出 latent spatial memory：把 VAE 潜变量 token 经深度引导反投影存入 3D 缓存，读取时直接在潜分辨率上投影到目标相机视角，并通过 ControlNet 式旁路与 LoRA 注入 Wan2.2-5B 主干；生成后再把新帧回写记忆，同时滤除动态物体和天空（v2 中方法名为 LSM-World，v1 摘要称 Mirage）。在 RealEstate10K 上训练后，作者报告 WorldScore 平均分 70.36，高于 Spatia 等带 3D 缓存的方法与通用视频模型；RealEstate10K 新视角合成 SSIM/LPIPS 最佳，闭环回访 PSNR_C/SSIM_C 最佳；单卡 H100 下缓存读取时间与显存增长远慢于 RGB 缓存。消融显示潜空间记忆优于同源 RGB 记忆、动态过滤有助长时稳定。该结果提示潜空间缓存是兼顾一致性与效率的可行设计，但实验仅限相机轨迹控制的场景生成，未涉及机器人动作条件或下游决策，对具身任务的价值尚未验证。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 潜空间 3D 记忆是对 RGB 点云记忆的清晰工程改进，但属于相机控制视频生成，与具身决策关联间接。
+    E: WorldScore 与 RealEstate10K 两套评测、对照较全并有消融和效率测量，但无动作条件或机器人任务验证。
+    O: 官方仓库含实质代码（MIT），未见公开权重与数据说明。
+    T: 浙江大学庄博涵团队与微软研究院在高效生成与 3D 场景生成方面有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库是否提供训练好的权重与训练脚本
+  open:
+    code: substantive
+    repo: https://github.com/microsoft/LatentSpatialMemory
+    weights: unknown
+    data: n/a
+    license: MIT
+    note: 探测为实质代码；未核实是否含权重。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.11129'
+  title: 'WorldOlympiad: Can Your World Model Survive a Triathlon?'
+  triage: include
+  reason: null
+  date_v1: '2026-06-09'
+  category: world-model
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - world-model-benchmark
+  - video-generation
+  - physical-reasoning
+  - 3d-consistency
+  affiliations:
+  - The Hong Kong University of Science and Technology
+  - Monash University
+  - TRE, Alibaba Group
+  - DAMO Academy, Alibaba Group
+  - Zhejiang University
+  one_liner: 提出覆盖机器人、游戏、真实视频的视频世界模型基准，从物理、几何、交互三条赛道评测 8 个模型，作者报告几何一致性普遍不足（最高 0.424）。
+  summary: |
+    为弥补现有视频生成基准偏重画质与短时一致性、且多局限单一领域的缺口，作者构建 WorldOlympiad：1,000 段长视频测试集（400 机器人视频取自 RoboCOIN 双臂操作数据、400 游戏视频、200 真实视频），并设三条赛道——物理赛道用 SAM3 分割加 MLLM 裁判判断力学、热学、材料规则；几何赛道用 Gaussian splatting 重建生成视频，评估结构、跨视角与相机轨迹一致性；交互赛道评估分块指令遵循与块间过渡。作者在统一默认配置下评测 Matrix-Game 2.0、LingBot-World、Cosmos-Predict-2.5、WoW 等 8 个模型，报告 LingBot-World 总分 0.683 最高，Cosmos-Predict-2.5（2B）以 0.671 接近；几何一致性最高仅 0.424，热学与材料题较力学更脆弱；并给出与人类偏好排名的对齐分析。该结果提示当前视频世界模型在 3D 一致性和长时交互上仍有明显短板，但评测高度依赖 MLLM 裁判和重建管线，且只考察生成视频质量，不直接衡量其对机器人策略评估或训练的有效性。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 多领域、多维度的世界模型诊断基准有参考价值，但核心指标沿用 MLLM 裁判与重建，方法增量有限。
+    E: 评测 8 个代表性模型并做人类偏好对齐，但样本量与裁判可靠性分析较有限，未连到下游具身任务。
+    O: 代码仓库实质且 HF 上有数据集，但未发现许可证文件。
+    T: 阿里达摩院与庄博涵团队在视频生成与世界模型评测方面有可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 仓库与数据集的许可证
+  open:
+    code: substantive
+    repo: https://github.com/alibaba-damo-academy/WorldOlympiad
+    weights: n/a
+    data: open
+    license: unknown
+    note: 探测未找到许可证；数据集见 https://huggingface.co/datasets/ziplab/WorldOlympiad
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.13460'
+  title: 'VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models'
+  triage: include
+  reason: null
+  date_v1: '2026-06-11'
+  category: scene
+  route: core
+  contribution: method
+  tags:
+  - occupancy
+  - autonomous-driving
+  - vlm-distillation
+  - world-model
+  affiliations:
+  - University of Maryland College Park, USA
+  - Independent Researcher, USA
+  - Stanford University, USA
+  one_liner: 训练期让离线 VLM 对物体裁剪做结构化"语义审计"并蒸馏进占据栅格世界模型，作者报告 nuScenes 上 GaussianWorld mIoU 21.36→21.91，推理不变。
+  summary: |
+    为缓解语义 3D 占据世界模型在相似类别和长尾物体上的语义错误，作者先通过诊断实验指出：把 3D 特征与裁剪图像描述的文本嵌入对齐虽提高文本相似度，却不能稳定提升闭集 mIoU。据此提出 VISA：训练前用 Qwen3-VL-8B 对 nuScenes 每个物体实例的代表性裁剪做盲审，输出闭集类别假设、易混类别、可靠度与属性，沿目标轨迹传播并落到匹配的体素上，再通过可靠度加权的类别、属性因子和场景级审计图损失蒸馏到语义 logits，推理时无需 VLM。作者在 nuScenes 占据基准三次运行平均下报告 OccWorld mIoU 19.06→20.05、GaussianWorld 21.36→21.91，后者物体 mIoU 18.18→19.16、稀有类 15.60→16.79，并附消融与预测 rollout 诊断。该结果提示 VLM 更适合作为带可靠度的语义审计者而非嵌入对齐目标，但增益幅度有限，依赖真值框与轨迹标注，仅在单一驾驶数据集上验证。
+  venue: ''
+  scores:
+    C: 2
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 训练期辅助损失式的小幅改进，诊断结论有启发但不改变占据世界模型范式。
+    E: 单一 nuScenes 基准、两个主干、三种子平均与较全消融，增益约 0.5–1 mIoU。
+    O: 未找到代码或其他开放资源。
+    T: Dinesh Manocha 团队在机器人与自动驾驶感知方向有长期可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 论文与 arXiv 页面未给出仓库链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.13494'
+  title: 'NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-11'
+  category: navigation
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - image-goal-navigation
+  - video-diffusion
+  - real-robot
+  affiliations:
+  - The University of Tokyo
+  - National Institute of Informatics
+  - AIRoA
+  - ATR
+  one_liner: 在 Cosmos Predict2 潜画布中联合去噪未来视角、目标进度值与动作块，免去 CEM 规划；作者报告 Diablo 真机 24 次图像目标导航成功率 79.2%。
+  summary: |
+    为解决导航世界模型只能预测未来视角、仍需外部 CEM 规划器选动作的问题，作者提出 NavWAM：以 Cosmos Predict2 视频扩散 Transformer 为主干，把当前观测、目标图像、机器人状态、动作块、未来状态、两帧未来视角和目标进度值排进同一个九帧潜画布联合去噪，并用策略/世界模型/价值三种条件模式共享权重训练；推理时默认直接输出动作块做滚动执行。在 go stanford 图像目标导航上，作者报告 NavWAM 的 ATE 低于 NWM 与 Cosmos Predict2+CEM，微调后进一步下降；在 sit 数据上与 7B 的 OmniVLA 相当或略优；消融显示仅预测图像不足以导航，加入动作、状态与价值监督最佳；在 Diablo 轮足机器人四个室内环境 24 次闭环试验中成功率 79.2%（NWM 16.7%、OmniVLA 58.3%）。该结果提示把视觉预见与动作、价值联合学习可让世界模型直接充当策略，但真机规模小、仅限室内图像目标导航，尚未验证语言或物体目标。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 将 Cosmos Policy 式潜画布思路迁移到图像目标导航，问题设定清楚但方法增量中等。
+    E: 两个离线数据集、规划与直接策略基线、监督目标消融加小规模真机闭环，样本量有限。
+    O: 只有项目页，未见官方代码或权重；探测到的 cosmos-predict2 为所用主干而非本文代码。
+    T: 东京大学松尾研究室在基础模型与机器人方向有一定成果，具身导航方向积累待核实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目页是否后续发布代码与模型
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 探测误把主干 nvidia-cosmos/cosmos-predict2 当作官方仓库；论文仅给出项目页 https://dachii-azm.github.io/navwam/
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.13672'
+  title: '$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-11'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - policy-evaluation
+  - policy-improvement
+  - test-time-planning
+  - droid
+  affiliations:
+  - Mila - Québec AI Institute
+  - Université de Montréal
+  - Carnegie Mellon University
+  - McGill University
+  one_liner: 多视角潜空间流匹配世界模型，兼顾保真、长时一致与速度；作者报告真机策略评估相关性 0.870、合成数据使 π0.5 成功率提升 38%、测试时规划提升 14%。
+  summary: |
+    为让机器人世界模型同时满足保真、长时一致和高效三个条件，从而支撑策略评估、策略改进与测试时规划，作者提出 WEAVER：928M 参数、预测腕部与外部双视角潜变量和本体状态的世界模型，结合稀疏长时记忆+短时历史、diffusion forcing 余弦噪声日程、KV cache 与 rectified flow 蒸馏，并在潜空间上蒸馏 Robometer 奖励头与 critic。在 DROID 上预训练、五个真机 Franka 任务各 50 条数据微调后，作者报告：DROID 验证集与分布外数据上 FID/FVD 优于 Ctrl-World 且推理时间约为其 1/3；真机策略评估中与真实成功率相关系数 0.870；用 WEAVER 生成并按优势筛选的合成数据微调 π0.5，真机成功率平均提升 38%，接近用真实数据微调；best-of-N 测试时规划提升 14%。该结果提示潜空间世界模型已能在中等规模真机设置中替代部分真实交互，但任务仅五个、单一平台，奖励依赖外部模型，规划仍限单个动作块的短视程。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 把世界模型三项下游用途在同一模型上打通并给出关键设计取舍，对机器人世界模型子方向有明确推动。
+    E: 视觉指标、策略评估、策略改进与规划均有真机验证并对比 Ctrl-World，但仅五个任务、单一机器人。
+    O: 代码 MIT 开源，HF 上有权重与分布外评测数据；复现说明完整度未核实。
+    T: Andrea Bajcsy（CMU）与 Gokul Swamy 等在机器人学习与模仿学习方面有可核实的强相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 仓库是否包含 DROID 预训练与真机微调的完整复现说明
+  open:
+    code: substantive
+    repo: https://github.com/arnavkj1995/WEAVER
+    weights: open
+    data: partial
+    license: MIT
+    note: 权重 https://huggingface.co/arnavkj1995/WEAVER；公开的是分布外评测数据 yilin-wu/droid_ood_data，真机微调数据未确认。
+  uses:
+  - resource: droid
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2606.13677'
+  title: 'Mana: Dexterous Manipulation of Articulated Tools'
+  triage: include
+  reason: null
+  date_v1: '2026-06-11'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - articulated-tools
+  - sim2real
+  - data-generation
+  - reinforcement-learning
+  affiliations:
+  - UC Berkeley
+  - CMU
+  - Stanford University
+  - Amazon FAR
+  one_liner: 把灵巧铰接工具操作当作"动画"问题：程序化抓取关键帧+运动规划+RL 生成仿真数据训练点云扩散策略，作者报告四类工具零样本真机抓取与操作约 70% 成功。
+  summary: |
+    为解决多指手操作钳子、夹子、镊子、注射器等铰接工具时需同时稳定抓握与施加功能性力、而位置式遥操作难以提供足够力的问题，作者提出 Mana：用户只需不到一分钟点选功能区域，系统基于改进的碰撞感知 Lightning Grasp+ 生成大量抓取与驱动关键帧，再用 GPU RRT-Connect 规划非接触段、用 IsaacLab PPO（含力相关域随机化）学习接触段，产出仿真轨迹后蒸馏为点云条件扩散策略，部署在 xArm7+Allegro 手（定制柔性指尖）上。作者报告四类工具、各两个实例、每项 10 次试验中，抓取与开合成功率约 70%，明显高于开环回放与 GeoRT 遥操作基线（遥操作在夹子上几乎为零）；消融显示真机性能随轨迹数、关键帧多样性和力扰动强度提升；组合技能的工具使用任务成功率 5/10–7/10，但对准阶段借助人工腕部遥操作。该结果提示面向接触的仿真数据生成可以零样本迁移到薄小铰接工具，但受限于手的力矩、缺少触觉滑移检测，且长任务尚未完全自主。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 5
+  rationale:
+    C: 将铰接工具灵巧操作系统化为关键帧+规划+RL 的数据生成框架并实现零样本迁移，对灵巧操作子方向有明确增量。
+    E: 有真机多工具多实例评测与数据规模消融，但每格仅 10 次试验，基线只有开环与遥操作。
+    O: 仅有项目页，未见代码、数据或模型发布。
+    T: Pieter Abbeel、C. Karen Liu、Guanya Shi 在灵巧操作与 sim-to-real 方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 项目页是否发布代码或生成数据
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅项目页 https://zhaohengyin.github.io/mana
+  uses:
+  - resource: isaac-lab
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2606.13769'
+  title: '$\mu_0$: A Scalable 3D Interaction-Trace World Model'
+  triage: include
+  reason: null
+  date_v1: '2026-06-11'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - 3d-trace
+  - world-model
+  - action-free-pretraining
+  - cross-embodiment
+  affiliations:
+  - Seoul National University
+  - University of Maryland, College Park
+  - All Purpose AI
+  one_liner: 从异构视频自动提取事件级 3D 交互轨迹训练轨迹世界模型 μ0，冻结后接动作专家；作者报告 UR3 真机三任务平均 91.7%，RoboCasa365 上 30.25% 高于 π0。
+  summary: |
+    为在不依赖具身专属动作标签的情况下从大规模视频学习可迁移的运动先验，作者提出以 3D 交互轨迹为预测目标的世界模型 μ0。数据侧的 TraceExtract 用 DINOv2 实体聚类选取物体、工具、手和接触区域的关键点，分块重建并对齐到全局坐标得到 3D 轨迹，再按轨迹加速度切分事件并分层生成描述；模型侧在 SmolVLM2 前缀上加置换等变的 trace expert，以 B 样条控制点和语义流匹配预测未来轨迹。预训练后冻结 μ0，只训练读取其去噪特征的动作专家。作者报告在五个来源的留出集上 2D/3D 轨迹预测 ADE/FDE/DTW 优于 TraceGen 与 VLM 基线；RoboCasa365 八个任务平均成功率 30.25%，高于 Diffusion Policy、π0 与 TraceGen，但低于 π0.5（42%）；UR3 真机三任务平均 91.7%，高于去掉 trace expert 的版本 18.4 个百分点。该结果提示 3D 轨迹可作为无动作预训练的紧凑接口，但实验以桌面夹爪任务为主，不建模力与接触，且对比的 VLA 并非数据量匹配。
+  venue: CoRL 2026
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 以查询式 3D 交互轨迹作为可复用世界模型接口并配套可扩展数据引擎，较 TraceGen 有清晰增量。
+    E: 轨迹预测基准、RoboCasa365 仿真与真机三任务均有对比和消融，但真机任务少且仿真上不及 π0.5。
+    O: 代码 Apache-2.0 开源，HF 上有模型权重；TraceExtract 预训练数据是否公开未确认。
+    T: UMD 的 Furong Huang、Jia-Bin Huang 与 SNU 的 H. Jin Kim 在相关方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - TraceExtract 生成的轨迹数据集是否公开
+  open:
+    code: substantive
+    repo: https://github.com/Yoonkyo/mu0
+    weights: open
+    data: unknown
+    license: Apache-2.0
+    note: 权重见 https://huggingface.co/furonghuang-lab/mu0
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.13877'
+  title: 'ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-11'
+  category: world-model
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - visuo-tactile
+  - latent-world-model
+  - contact-rich
+  - representation-study
+  affiliations:
+  - Department of Industrial Engineering, Purdue University
+  - Department of Mechanical Engineering, Texas A&M University
+  one_liner: 固定世界模型与 MPC 规划框架，系统比较视觉与触觉表征在 12 个接触密集任务上的作用；作者报告点云+触觉力场仿真平均成功率 36.1% 最高，并做 900 次真机验证。
+  summary: |
+    为回答"何种视觉与触觉表征最适合接触密集操作的世界模型"，作者构建 ContactWorld 基准与对照研究：12 个仿真任务覆盖插入、拆卸、旋拧和探索，共 1,872 条示教；在固定的 JEPA 式潜空间世界模型、训练流程和 CEM-MPC 规划下，比较腕部 RGB、前视 RGB、点云与触觉 RGB、触觉深度、触觉力场的组合，并从空间保真、运动连贯和预测稳定性三方面分析。作者报告点云单模态平均规划成功率 32.1%，高于腕部 RGB（20.7%）和前视 RGB（22.0%）；触觉普遍减缓长时预测误差累积，但对成功率的提升因任务和视觉表征而异，点云+触觉力场达到最高 36.1%；维度匹配、仅视觉代价等对照显示增益不只来自容量或代价项；两台真机、三种触觉传感器共 900 次试验趋势一致。该结果为视触觉世界模型的表征选择提供了经验指导，但绝对成功率偏低，结论绑定于单一 GRU 潜空间模型与 CEM 规划器。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 受控的表征对照研究与任务集对视触觉世界模型设计有参考价值，但不提出新模型。
+    E: 12 个仿真任务×多模态组合、三种子、多项对照消融，并有 900 次跨平台真机试验。
+    O: 只有项目网站，未找到官方代码或数据发布；探测到的 librealsense 为相机 SDK 而非本文代码。
+    T: Purdue 的 Yu She 团队在触觉感知操作方面有一定成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 项目网站是否发布基准代码、仿真环境与数据
+  - 仿真任务所用的仿真器
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 探测误把 IntelRealSense/librealsense 当作官方仓库；论文仅给出 https://contact-world.github.io
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.14561'
+  title: 'ORCA: A Platform for Open-Source Dexterity Research'
+  triage: include
+  reason: null
+  date_v1: '2026-06-12'
+  category: teleoperation
+  route: adjacent
+  contribution: infra
+  tags:
+  - dexterous-hand
+  - open-source-hardware
+  - teleoperation
+  - retargeting
+  - lerobot
+  affiliations:
+  - University of Oxford
+  - ETH Zurich
+  - Orca Dexterity
+  one_liner: 围绕可 3D 打印的 17 自由度 Orcahand 发布控制、MuJoCo 仿真、消费级设备遥操作与重定向一体化软件栈，原生接入 LeRobot，全部 MIT 开源。
+  summary: |
+    为解决灵巧手研究中控制、仿真、遥操作和重定向代码分散、与主流机器人学习生态脱节的问题，作者发布 orca 学习栈：基于开源、可 3D 打印、肌腱驱动的 17 自由度 Orcahand，拆分为 orca_core（真机与仿真共用的关节空间接口、标定与张紧）、orca_sim（MuJoCo 手与 Gymnasium 任务环境）、orca_arm（OpenArm 双臂与 Franka 平台描述文件）和 orca_teleop（支持摄像头、VR 头显、动捕手套的 MANO 关键点重定向与遥操作），并原生对接 LeRobot 的数据、训练与评测流程。论文以 Meta Quest 3 遥操作采集手内重定向示教、用 LeRobot 训练行为克隆策略并评测的端到端流程作为演示。该工作降低了灵巧手进入通用机器人学习管线的门槛，但论文主要是系统描述，缺少系统性定量实验与对比；作者也承认肌腱耦合与软指接触仿真仍很粗略，软件分为四个子包可能增加使用摩擦。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 5
+    T: 3
+  rationale:
+    C: 把开源灵巧手软硬件整合进 LeRobot 生态是实用的基础设施贡献，但技术新意有限。
+    E: 仅展示单一任务的端到端工作流，缺少定量评测与基线对比。
+    O: GitHub 组织下 orca_core、orca_retargeter、orcahand_description 等实质代码与 CAD/打印文件公开，MIT 许可，附安装与教程。
+    T: 团队与 ETH 及初创公司 Orca Dexterity 相关，在开源灵巧手硬件上有一定积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - orca_sim 与 orca_teleop 仓库的许可证文件
+  open:
+    code: substantive
+    repo: https://github.com/orcahand/orca_core
+    weights: n/a
+    data: unknown
+    license: MIT
+    note: 探测未发现仓库；核对 GitHub 组织 orcahand，含 orca_core（MIT）、orca_sim、orca_teleop、orca_retargeter、硬件 CAD 等仓库。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.16993'
+  title: 'DreamX-World 1.0: A General-Purpose Interactive World Model'
+  triage: include
+  reason: null
+  date_v1: '2026-06-15'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - interactive-world-model
+  - camera-control
+  - autoregressive-video
+  - scene-memory
+  affiliations:
+  - DreamX Team
+  one_liner: 基于 Wan2.2 的通用交互式视频世界模型，含 E-PRoPE 相机控制、场景记忆与可组合事件，作者报告 8 卡 RTX 5090 达 16 FPS，自建评测总分 84.76。
+  summary: |
+    为让视频世界模型在多种画风下响应相机控制、回访时保持场景一致并支持提示事件，作者发布 DreamX-World 1.0：数据上结合 Unreal Engine 渲染（含精确相机位姿与按键动作）、游戏录像与恢复相机几何的真实视频；方法上提出只在空间降采样 token 上做投影位置编码的 E-PRoPE 相机控制、基于相机几何检索历史帧的场景记忆与残差回收、可组合事件的指令微调，再经 causal forcing、DMD 蒸馏与长 rollout 训练转为少步自回归模型，最后用强化学习恢复相机控制与画质。作者报告在自建 5 秒基础评测上相机控制 73.75、总分 84.76，高于 HY-WorldPlay 1.5（80.79）与 LingBot-World（80.45），并给出 30 秒长时、回访一致性评测和盲测人类偏好；推理优化后 8 张 RTX 5090 最高 16 FPS。该结果显示交互式世界模型工程上的进展，但评测套件为作者自建，对照仅两个模型，且面向游戏与相机漫游而非机器人动作条件，具身应用价值尚待验证。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 整合相机控制、记忆、事件与蒸馏的完整系统，单项技术多为已有思路的组合，且与具身控制关联间接。
+    E: 有基础、长时、记忆一致性与人类偏好多项评测，但基准为自建、仅两个对照模型。
+    O: 推理代码 Apache-2.0 开源，HF 上公开 5B 权重；训练数据未公开。
+    T: 署名仅为 DreamX Team（仓库属 AMAP-ML），团队相关积累信息不足，默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 论文 PDF 中的具体机构署名
+  - 仓库是否包含训练代码
+  open:
+    code: substantive
+    repo: https://github.com/AMAP-ML/DreamX-World
+    weights: open
+    data: none
+    license: Apache-2.0
+    note: 权重见 https://huggingface.co/GD-ML/DreamX-World-5B 与 DreamX-World-5B-Cam。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.17011'
+  title: 'ROVE: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning'
+  triage: include
+  reason: null
+  date_v1: '2026-06-15'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - human-in-the-loop
+  - vla-post-training
+  - humanoid
+  - offline-rl
+  - value-estimation
+  affiliations:
+  - XPENG Robotics
+  - Fudan University
+  - The Chinese University of Hong Kong
+  - Shanghai Jiao Tong University
+  one_liner: 针对人形机器人遥操作干预数据不完美，提出乐观价值估计与人类经验视频辅助的 VLA 后训练；作者报告两项真机任务三轮迭代后成功率分别升至 80.0% 和 86.7%。
+  summary: |
+    为解决人形机器人带灵巧手的干预数据常含犹豫、重定向误差等次优动作、直接当专家监督会被吸收的问题，作者提出 ROVE：搭建支持全身动捕接管的人在回路采集管线，把干预回合拆成自主执行、适应和恢复三段并在适应段末设置保守边界；用 n 步 TD 自举加期望分位回归的乐观价值估计（OVE）从混合质量轨迹中估计状态价值，并引入跨具身的人类经验视频补充失败与恢复状态；再以二值优势条件化微调 VLA。在 IRON 人形机器人擦白板与放面包入烤面包机两项真机任务上，作者报告 ROVE 优于 SFT、HG-DAgger、Filtered BC 与 RECAP，三轮迭代后成功率由 45.0% 升至 80.0%、由 56.7% 升至 86.7%；价值曲线分析显示人类视频与 OVE 使价值估计更贴合任务进度。该结果提示对不完美干预做价值加权优于盲目模仿，但只有两个任务、单一平台，评测次数与统计不确定性未充分说明，且尚为迭代离线框架。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 在 RECAP 式优势条件化框架上针对人形干预次优性做阶段标注与乐观价值估计，增量明确但较局部。
+    E: 真机两任务、多个经验学习基线与迭代曲线，另有 D4RL 价值目标对比，任务覆盖面窄。
+    O: 仅有项目页，未见代码、模型或数据发布。
+    T: 小鹏机器人与复旦张力、Yao Mu、Yixiao Ge 等在 VLA 与视觉方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 每项任务的评测试验次数
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅项目页 https://xpeng-robotics.github.io/rove
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.17030'
+  title: 'Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-15'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - video-world-model
+  - language-conditioned
+  - cross-embodiment
+  - embodied-data
+  affiliations:
+  - Qwen Team
+  one_liner: 以自然语言为统一动作接口的 20B 具身视频世界模型，在 860 万视频-文本对上训练；作者报告 EWMBench 总分 4.60、DreamGen Bench 4.952 均居首。
+  summary: |
+    为弥合通用视频模型缺乏具身物理、领域专用世界模型又受限于具体动作接口的矛盾，作者提出 Qwen-RobotWorld：把 20 多种具身、500 多类动作统一映射为自然语言，构建 860 万视频-文本对的 EWK 语料（含 DROID、Bridge V2、AgiBot World、EPIC-Kitchens 等操作数据及驾驶、室内导航、人到机器人迁移数据）；模型为冻结 Qwen2.5-VL 编码动作、Wan-VAE 编码状态、60 层双流 MMDiT（20B）作转移函数，并以先通用后具身的两阶段课程训练，另设 Scene2Robot 多段条件做跨具身合成。作者报告 EWMBench 总分 4.60（次优 LVP 4.05）、DreamGen Bench 总分 4.952 居首，在 WorldModelBench 与 PBench 上优于所有开源模型，并给出 RoboTwin-IF 零样本定性案例。该结果提示大规模跨域语言条件视频模型能提升具身视频生成质量，但评测集中于生成视频指标（EWMBench 仅 21 个样本），未展示用于策略训练或评估的下游收益，且未见消融与开放资源。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 大规模跨具身语言条件世界模型与数据整合具有资源意义，可能影响具身视频生成方向。
+    E: 四个生成基准、对照通用与具身模型较全，但缺少消融与下游策略验证，部分基准样本量小。
+    O: 仅有博客页面，未见代码、权重或数据发布；探测到的 LTX-Video 并非本文仓库。
+    T: Qwen 团队在多模态基础模型上有多项标志性成果，具身世界模型方向为新拓展。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否发布模型权重或 EWK 数据
+  - 是否有消融与下游策略训练实验
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测误把 Lightricks/LTX-Video（对比基线）当作官方仓库；仅有博客 https://qwen.ai/blog?id=qwen-robotworld
+  uses:
+  - resource: droid
+    role: pretrain
+  - resource: bridgedata-v2
+    role: pretrain
+  - resource: agibot-world
+    role: pretrain
+  - resource: epic-kitchens-100
+    role: pretrain
+  - resource: ego4d
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2606.17046'
+  title: Geometric Action Model for Robot Policy Learning
+  triage: include
+  reason: null
+  date_v1: '2026-06-15'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - geometric-foundation-model
+  - world-action-model
+  - 3d-policy
+  - robustness
+  affiliations:
+  - KAIST AI
+  - ETH Zurich
+  - ETH AI Center
+  one_liner: 把几何基础模型 DA3 在中间层切开插入因果预测器，同时解码未来深度与动作；作者报告 1.4B 模型 LIBERO-Plus 85.5%、单步 6.9 ms，真机换视角更稳健。
+  summary: |
+    为弥补 VLA 与视频世界-动作模型主要在 2D 表征上工作、对相机视角和环境变化泛化不足的问题，作者提出 Geometric Action Model（GAM）：把预训练几何基础模型 DA3-Giant 在中间层拆开，浅层作观测编码器，在切分处插入以语言、本体状态和历史动作为条件的块因果预测器，预测未来几何潜 token 与动作 token，再交回深层与 DPT 头同时解码未来深度和动作块；在 RoboCasa365、MimicGen 与 Open X-Embodiment 共 78.4 万条轨迹上预训练后按基准后训练。作者报告 LIBERO 上 97.6%，零样本 LIBERO-Plus 扰动评测 85.5%，相机扰动子项较次优提升 9.7 个百分点；单次前向 6.9 ms，约比 Cosmos-Policy 快 55 倍；真机四任务在换外部相机位置时明显优于 π0.5 类基线与 Spatial Forcing；消融显示预训练和切分层位置至关重要。该结果提示把几何先验贯穿整个预测通路可提升视角鲁棒性，但语言推理受冻结 T5 限制，真机每任务仅 20 次试验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 5
+  rationale:
+    C: 将几何基础模型直接改造为世界-动作策略的结构设计新颖，对 3D 感知策略子方向有明确增量。
+    E: LIBERO、LIBERO-Plus、RoboCasa、真机与多组消融和延迟测试，基线覆盖 VLA、WAM 与几何增强 VLA。
+    O: 代码 MIT 开源，HF 上有 LIBERO 后训练权重；预训练权重是否公开未确认。
+    T: KAIST Seungryong Kim、ETH Marco Hutter 与 Marc Pollefeys 均为相关方向公认领先团队。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 预训练（78.4 万轨迹）权重是否公开
+  open:
+    code: substantive
+    repo: https://github.com/cvlab-kaist/Geometric-Action-Model
+    weights: partial
+    data: n/a
+    license: MIT
+    note: HF 上见 SeonghuJeon/3da-libero-gam（LIBERO 权重）。
+  uses:
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: robocasa-gen
+    role: pretrain
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.17055'
+  title: 'T-Rex: Tactile-Reactive Dexterous Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-15'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - tactile
+  - dexterous-manipulation
+  - mixture-of-transformers
+  - bimanual
+  - vla
+  affiliations:
+  - UC Berkeley
+  - NVIDIA
+  - Stanford
+  - Panasonic
+  - La Sapienza University
+  - ItalAI
+  one_liner: 100 小时触觉同步双臂灵巧数据中训练+低频动作专家/高频触觉专家级联流匹配的 VLA；作者报告 12 项真机触觉任务平均成功率 65%，比最强基线高 30 个百分点。
+  summary: |
+    为让 VLA 具备对触觉信号的快速反应能力，作者同时补数据和架构两方面短板：一是采集 100 小时、200 多种物体、22 类运动基元的触觉同步双臂灵巧遥操作数据集，用于"中训练"；二是提出 T-Rex 模型，以 Mixture-of-Transformers 包含预测未来视觉潜变量的 latent expert、低频去噪的 action expert 与高频触觉 refinement 的 tactile expert，在固定时间步切分流匹配轨迹实现异步级联去噪，并用时序 VQ-VAE 编码指尖力历史。训练分三阶段：沿用 EgoScale 的 2.2 万小时人类第一视角视频预训练、触觉中训练、约 100 条示教的任务后训练。在 Dexmate Vega-1 双臂加 Sharpa 22 自由度手上的 12 项任务（每项 16 次）中，作者报告平均成功率 65%，最强基线 EgoScale 为 35%；消融显示去掉触觉降 23 个百分点，中训练显著提升低数据下表现。该结果提示触觉中训练与高频细化可有效增强灵巧 VLA，但依赖特定硬件，评测为单平台，数据开源情况尚待核实。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 5
+  rationale:
+    C: 大规模触觉灵巧数据集加异步触觉专家架构，对触觉 VLA 子方向有明确的方法与资源增量。
+    E: 12 项真机任务、6 个基线、模态与架构及训练阶段消融较完整，但为单一平台。
+    O: 论文称数据集开源，但未找到官方仓库或数据链接；探测到的 Isaac-GR00T 并非本文代码。
+    T: Trevor Darrell、Jitendra Malik、Pieter Abbeel、李飞飞与 NVIDIA GEAR 等为公认领先团队。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 100 小时 T-Rex 数据集的实际发布位置与许可
+  - 是否发布代码与模型权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 探测误把 Nvidia/Isaac-GR00T 当作官方仓库；仅项目页 https://tactile-rex.github.io/，论文称数据集开源但未给出链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.17639'
+  title: 'ERQA-Plus: A Diagnostic Benchmark for Reasoning in Embodied AI'
+  triage: include
+  reason: null
+  date_v1: '2026-06-16'
+  category: scene
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - embodied-reasoning
+  - vqa-benchmark
+  - vlm-evaluation
+  affiliations:
+  - Centre for Frontier AI Research, Agency for Science, Technology and Research, Singapore
+  - College of Computing and Data Science, Nanyang Technological University, Singapore
+  one_liner: 基于 711 张机器人视角图像构建 1,766 道按具身推理分类的问答诊断基准；作者报告最强 Qwen3-VL-32B 选择题准确率 83.4%，时序推理与路径规划仍是短板。
+  summary: |
+    为解决现有 VQA/EQA 基准难以区分真正的具身推理与语言或视觉捷径的问题，作者构建 ERQA-Plus：在原 ERQA 的 630 张机器人视角图像及 COIN、ScanNet 的 81 张图像上，按感知、动作、社交交互、导航环境、情境常识五大类、12 个子类生成问答，采用 GPT-4o 生成、Gemini 3 Pro 评判、迭代修订再加人工评估的流程，得到 1,766 道题，支持选择题与开放式回答（SBERT 相似度）。作者评测 LLaVA-NeXT、Prismatic、MiniCPM-V、Qwen3-VL、RoboRefer、RoboBrain2.5 等模型，报告 Qwen3-VL-32B-Thinking 选择题 83.4%、开放式 61.4 最高；RoboBrain2.5-8B 在时序推理（73.3%）和路径规划（86.7%）上领先；裁判一致性分析显示 Gemini 3 Pro 与人类评分相关仅 0.42。该基准可用于细粒度诊断 VLM 的具身推理弱项，但只基于静态图像、不涉及闭环控制，类别分布偏向空间与物体，题目由 LLM 生成且裁判与人类一致性有限。
+  venue: ''
+  scores:
+    C: 2
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 在 ERQA 基础上扩充为带分类体系的静态图像问答，属于对已有基准的扩展，与机器人动作关联间接。
+    E: 评测多类通用与具身模型并做生成器、裁判与人类对齐分析，但仅静态问答。
+    O: 数据集在 HuggingFace 公开；论文给出的 GitHub 链接带句点且探测不可达，代码状态不明。
+    T: A*STAR CFAR 的 Basura Fernando 在视觉推理方向有一定成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - GitHub 仓库 LUNAProject22/erqa-plus 是否存在及内容
+  - 数据集许可证
+  open:
+    code: no-repo
+    repo: https://github.com/LUNAProject22/erqa-plus
+    weights: n/a
+    data: open
+    license: unknown
+    note: 原链接末尾多一个句点导致探测失败，已去掉句点但仍未核实可访问；数据集 https://huggingface.co/datasets/huggingdas/erqa-plus
+  uses: []
+  new_resources: []

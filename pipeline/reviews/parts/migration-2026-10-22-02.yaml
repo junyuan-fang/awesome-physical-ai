@@ -1,0 +1,746 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2605.12090'
+  title: 'World Action Models: The Next Frontier in Embodied AI'
+  triage: include
+  reason: null
+  date_v1: '2026-05-12'
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - world-model
+  - wam-taxonomy
+  - vla
+  affiliations: []
+  one_liner: 综述「世界动作模型」(WAM)：给出定义，按 Cascaded / Joint 两类及生成模态、条件方式、动作解码细分已有工作，并梳理数据生态与评测协议。
+  summary: |
+    VLA 模型多学习反应式的观测到动作映射，不显式建模物理世界在干预下如何演化；把世界模型（环境动力学预测模型）并入动作生成的工作日益增多，但分散在不同架构、目标与场景中。为此，作者提出「世界动作模型」(World Action Models, WAM) 这一概念：同时建模未来状态与动作联合分布的具身基础模型，并与相关概念作区分，追溯 VLA 与世界模型研究的交汇历史。综述把现有方法组织为 Cascaded 与 Joint 两大类，再按生成模态、条件机制与动作解码策略细分；同时梳理支撑 WAM 的数据来源（机器人遥操作、便携式人类示范、仿真、互联网第一人称视频），并按视觉保真度、物理常识与动作合理性归纳评测协议，最后讨论开放问题。配套的 Awesome-WAM 仓库持续整理相关论文。该工作为快速增长的 VLA+世界模型方向提供了统一术语和分类框架；但本次仅读到摘要（arXiv 无 HTML 版本），分类是否完整、对各路线权衡的分析深度尚未核验，作为综述也不提供新的实验证据。
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - project
+  pending_checks:
+  - arXiv 无 HTML 版本，需阅读 PDF 正文后再评分（分类体系、数据与评测章节）
+  - 作者单位需从 PDF 首页核对（缓存中未提取到）
+  open:
+    code: partial
+    repo: https://github.com/OpenMOSS/Awesome-WAM
+    weights: n/a
+    data: n/a
+    license: MIT
+    note: 仓库为配套的论文列表（Awesome list），非方法代码；综述本身无模型或数据发布。
+  uses: []
+  new_resources: []
+- arxiv_id: '2604.07993'
+  title: 'HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-04-09'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - humanoid
+  - whole-body
+  - cross-embodiment
+  - mixture-of-experts
+  - vla
+  affiliations:
+  - Beijing Innovation Center of Humanoid Robotics
+  - Xi’an Jiaotong University
+  - Nankai University
+  - Peking University
+  one_liner: 面向全尺寸双足人形的全身操作 VLA：人形对齐的统一状态表示 + MoE 本体感知预测器 + 历史 token；作者报告在天工 2.0/3.0 真机 7 项任务上优于 π0、GR00T N1.5 等基线。
+  summary: |
+    为解决多数 VLA 把机器人各身体部位独立处理、难以在高自由度人形上产生协调全身动作的问题，HEX 采用「高层 VLA + 低层 RL 全身控制器」的分层框架：高层提出人形对齐的通用状态表示，把不同本体的本体感知映射到手臂、手、腿、头、腰等规范身体部位槽位；用基于形态的 MoE 统一本体感知预测器 (UPP) 建模全身协调与短期状态演化；用轻量历史查询特征缓存汇总过去视觉上下文，避免重复编码历史图像；再以残差门控融合与 flow-matching 动作头生成动作；预训练语料超过 1200 万帧、覆盖 7 种人形本体。在天工 2.0 / 3.0 真机 7 项任务（每项 12 次）及长时程搬箱任务上，作者报告 HEX 成功率高于 ACT、SwitchVLA、GR00T N1.5 和 π0，快速反应与长时程场景优势明显，泛化测试中保持领先；消融显示 UPP 贡献最大，预训练主要加快收敛、对单任务最终成功率影响有限。局限：评测仅在自家两款平台、试验次数较少，跨本体收益在多任务设置下尚未充分验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 4
+  rationale:
+    C: 针对全尺寸双足人形全身操作提出结构化状态表示与本体感知预测，方法增量清晰，可能影响人形 VLA 子方向。
+    E: 两款真机平台 7 项任务 + 长时程任务，对比 4 个强基线，含消融、泛化与失败分析；但每任务试验次数较少（12–18 次）。
+    O: 仓库含实质代码，HF 上有权重与数据集，但未找到许可证文件，按许可不清晰降档。
+    T: 北京人形机器人创新中心与北大张尚彰团队等，有可核实的人形与 VLA 相关积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库许可证未找到，需确认代码/权重/数据的使用许可
+  open:
+    code: substantive
+    repo: https://github.com/Open-X-Humanoid/HEX
+    weights: open
+    data: open
+    license: unknown
+    note: 探测到 HF 权重 X-Humanoid/HEX-Model 与数据集 X-Humanoid/HEX-Datasets；仓库未见 LICENSE 文件。
+  uses:
+  - resource: agibot-world
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2601.12993'
+  title: 'Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization'
+  triage: include
+  reason: null
+  date_v1: '2026-01-19'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - cross-embodiment
+  - human-video
+  - pretraining
+  - mixture-of-transformers
+  - vla
+  affiliations:
+  - BeingBeyond Team
+  one_liner: 以人类交互轨迹为「母语」的跨本体 VLA：3.5 万小时 UniHand-2.0 语料、30 种本体统一动作空间；作者报告 LIBERO 98.9%、RoboCasa 53.9%，单一检查点控制 5 种真机。
+  summary: |
+    为缓解 VLA 面对形态异构与数据稀缺时难以跨本体迁移的问题，Being-H0.5 提出以人为中心的学习范式：把人类手部交互轨迹视作物理交互的通用「母语」，构建 UniHand-2.0 预训练配方（3.5 万小时以上，含人类第一人称视频、30 种本体的机器人数据及视觉-语言数据），并用统一动作空间把不同机器人控制映射到语义对齐的槽位。模型采用 Mixture-of-Transformers 架构，用 Mixture-of-Flow 区分共享运动基元与本体专属专家；部署侧提出 Manifold-Preserving Gating 应对感知偏移、Universal Async Chunking 适配不同延迟与频率。作者报告 LIBERO 平均成功率 98.9%、RoboCasa 24 任务 53.9%，并以单一检查点在五种真机上完成多类任务，消融显示人本预训练与 MPG+UAC 对少样本适配、长时程和双臂任务有益。该结果提示人类数据可为低资源本体提供先验，但数据配方中各来源的贡献尚未完全拆分，UniHand-2.0 目前仅公开预览版，真机评测由作者自建任务完成。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 大规模人本预训练配方 + 统一动作空间 + 部署期稳定化技术，形成完整的跨本体基础模型方案，增量明确。
+    E: LIBERO 与 RoboCasa 两个仿真基准对比大量 VLA 基线，另有 5 种真机评测和多组消融；真机任务为自建，跨工作数字不宜直接比较。
+    O: Apache-2.0 代码与 HF 权重已公开，数据仅发布 UniHand 预览版，README 仍有部分 coming soon。
+    T: BeingBeyond 团队（卢宗青等）此前发布 Being-H0 等工作，在人类视频驱动的机器人学习方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - README 标注部分内容 coming soon，需确认训练代码与完整 UniHand-2.0 是否开放
+  open:
+    code: substantive
+    repo: https://github.com/BeingBeyond/Being-H
+    weights: open
+    data: partial
+    license: Apache-2.0
+    note: HF 上有 BeingBeyond 模型集合；数据仅见 UniHand_Preview；README 提示部分内容 coming soon。
+  uses:
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: agibot-world
+    role: pretrain
+  - resource: libero
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2501.03575'
+  title: Cosmos World Foundation Model Platform for Physical AI
+  triage: include
+  reason: null
+  date_v1: '2025-01-07'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - video-generation
+  - tokenizer
+  - nvidia
+  - physical-ai
+  affiliations:
+  - NVIDIA
+  one_liner: NVIDIA 开放的世界基础模型平台：视频数据筛选管线、因果视频 tokenizer、扩散与自回归预训练 WFM 及后训练示例，权重以宽松许可发布。
+  summary: |
+    物理 AI 的数据难以安全、规模化地采集，作者提出以「世界基础模型」(WFM) 作为物理世界的数字孪生，采用先预训练通用模型、再针对具体场景后训练的范式。Cosmos 平台包括：基于 Ray 的视频筛选管线，从约 2000 万小时原始视频中切分、过滤、VLM 标注并去重，得到约 1 亿个 2–60 秒片段；一组在小波空间工作、时间因果的连续与离散视频 tokenizer；基于扩散和自回归 Transformer 的预训练 WFM；以及相机控制、机器人操作、自动驾驶等后训练示例和安全护栏。作者报告其 tokenizer 在 DAVIS 与自建 TokenBench（含 BridgeData V2、Ego-Exo4D、BDD100K 等视频）上的重建质量优于 CogVideoX、Omni-Tokenizer 等对照，并开放代码与权重。该平台为机器人策略评估、合成数据和规划等用途提供了可微调的基础模型；但作者明确说明，论文未给出把 WFM 用于策略评估、策略训练或 MPC 的实证结果，训练数据含专有视频且未公开，下游控制价值仍需后续工作验证。
+  venue: ''
+  scores:
+    C: 5
+    E: 4
+    O: 4
+    T: 5
+  rationale:
+    C: 首个系统开放的物理 AI 世界基础模型平台，覆盖数据、tokenizer、预训练与后训练全链路，已成为后续工作的基础资源。
+    E: tokenizer 与生成模型有多数据集定量对比和后训练示例，但缺少把 WFM 用于下游策略学习的实证（作者自述）。
+    O: 代码与权重公开（论文指向 cosmos-predict1），训练数据含专有视频未公开。
+    T: NVIDIA 在仿真、生成模型与机器人基础设施方向有大量标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/nvidia-cosmos/cosmos-predict1
+    weights: open
+    data: none
+    license: Apache-2.0
+    note: 探测命中的 NVIDIA/Cosmos 为索引仓库（无代码）；论文摘要指向的 cosmos-predict1 含实质代码，代码 Apache-2.0，权重采用 NVIDIA Open Model License。
+  uses:
+  - resource: bridgedata-v2
+    role: eval
+  new_resources: []
+- arxiv_id: '2503.14734'
+  title: 'GR00T N1: An Open Foundation Model for Generalist Humanoid Robots'
+  triage: include
+  reason: null
+  date_v1: '2025-03-18'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - foundation-model
+  - humanoid
+  - dual-system
+  - data-pyramid
+  - nvidia
+  affiliations:
+  - NVIDIA
+  one_liner: NVIDIA 开放的人形通用 VLA：System 2 VLM + System 1 DiT flow-matching 双系统，用真机、仿真、神经生成轨迹与人类视频「数据金字塔」训练；作者报告在三套仿真基准与 GR-1 真机上优于基线。
+  summary: |
+    人形机器人缺乏可用于大规模预训练的数据，不同本体数据又形成「数据孤岛」。GR00T N1 为此提出双系统 VLA：以 Eagle-2 VLM 作为 System 2 理解视觉与语言，以 DiT flow-matching 动作模块作为 System 1 生成高频动作，二者端到端联合训练，并用逐本体的状态/动作编码器支持从单臂到双手灵巧人形的多种本体。训练数据组织为金字塔：底层为人类视频（以 VQ-VAE 潜动作为标签），中层为仿真与神经生成轨迹，顶层为 GR-1 遥操作、Open X-Embodiment 与 AgiBot-Alpha 真机数据。作者报告在 RoboCasa、DexMimicGen 跨本体套件和 GR-1 桌面任务三套仿真基准上（每任务 100 条示范）优于 Diffusion Policy 等基线，在 GR-1 真机双手操作任务上少量数据即可取得较高成功率，神经轨迹协同训练在低数据量下带来提升。该工作提供了开放权重的人形基础模型和可复现的仿真评测；但真机对照主要是 Diffusion Policy，评测集中于桌面操作，未涉及行走等全身控制。
+  venue: ''
+  scores:
+    C: 5
+    E: 4
+    O: 5
+    T: 5
+  rationale:
+    C: 开放权重的人形通用基础模型与异构数据金字塔训练方案，已成为人形 VLA 的常用起点。
+    E: 三套仿真基准 + GR-1 真机 + 数据量与神经轨迹消融，较完整；真机基线较少且限于桌面操作。
+    O: Apache-2.0 代码、HF 权重与部分仿真训练数据公开，并给出复现仿真结果的说明。
+    T: NVIDIA GEAR 团队在机器人基础模型、仿真与数据生成方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/NVIDIA/Isaac-GR00T
+    weights: open
+    data: partial
+    license: Apache-2.0
+    note: 权重在 HF nvidia 组织下（后续版本已到 N1.7）；论文给出仿真数据集 nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim，真机自采数据未公开。
+  uses:
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: droid
+    role: pretrain
+  - resource: bridgedata-v2
+    role: pretrain
+  - resource: agibot-world
+    role: pretrain
+  - resource: ego4d
+    role: pretrain
+  - resource: hoi4d
+    role: pretrain
+  - resource: robocasa
+    role: pretrain
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2406.09246'
+  title: 'OpenVLA: An Open-Source Vision-Language-Action Model'
+  triage: include
+  reason: null
+  date_v1: '2024-06-13'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - foundation-model
+  - open-source
+  - vla
+  - lora
+  affiliations:
+  - Stanford University
+  - UC Berkeley
+  - Toyota Research Institute
+  - Google DeepMind
+  - Physical Intelligence
+  - MIT
+  one_liner: 基于 Llama 2 + DINOv2/SigLIP 的 7B 开源 VLA，用 97 万条 OXE 示范训练；作者报告 29 项真机任务上比 RT-2-X 高 16.5 个百分点，支持 LoRA 与量化。
+  summary: |
+    VLA 当时多为闭源模型，且缺少在新机器人与新任务上高效微调的实践，限制了社区采用。OpenVLA 以 Prismatic-7B VLM（DINOv2 与 SigLIP 融合视觉编码器 + Llama 2）为骨干，把每维连续动作离散为 256 个 token，在经筛选与配比的 Open X-Embodiment 约 97 万条真机示范上训练。作者在 WidowX（BridgeData V2 设置，17 项任务 170 次）与 Google 机器人（12 项任务 60 次）上做 A/B 对比，报告 OpenVLA 整体成功率比 RT-2-X 高 16.5 个百分点，明显优于 RT-1-X 与 Octo，但在语义泛化上 RT-2-X 仍更强；在 Franka 上用 10–150 条示范微调时，多物体语言任务上优于从零训练的 Diffusion Policy（约高 20.4%）；LoRA 仅训练 1.4% 参数即接近全参微调，4-bit 量化成功率与 bf16 相当。模型与代码全部开源，成为后续 VLA 常用基线。局限包括单图像输入、推理约 6Hz、对高频灵巧控制支持不足，以及 DROID 数据拟合不佳等作者自述问题。
+  venue: ''
+  scores:
+    C: 5
+    E: 5
+    O: 5
+    T: 5
+  rationale:
+    C: 首个性能具竞争力的完全开源 VLA 及训练代码库，奠定社区 VLA 基线与微调范式。
+    E: 两种真机平台多维泛化评测、对比闭源 RT-2-X 等强基线，含微调、LoRA、量化、设计选择消融与 LIBERO 仿真。
+    O: MIT 代码、HF 权重（含 LIBERO 微调版）公开，训练数据为公开的 Open X-Embodiment，复现说明完整。
+    T: Stanford、Berkeley、TRI、Google DeepMind 等团队，在机器人学习方向有大量标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/openvla/openvla
+    weights: open
+    data: open
+    license: MIT
+    note: 训练数据为公开的 Open X-Embodiment 子集与配比；权重在 HF openvla 组织下。
+  uses:
+  - resource: openvla
+    role: proposes
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: droid
+    role: pretrain
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2410.07864'
+  title: 'RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2024-10-10'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - foundation-model
+  - bimanual
+  - diffusion
+  - unified-action-space
+  affiliations:
+  - Department of Computer Science & Technology, Institute for AI, BNRist Center, Tsinghua-Bosch Joint ML Center, THBI Lab, Tsinghua University
+  one_liner: 1.2B 参数扩散 Transformer 双臂操作基础模型，用物理可解释的统一动作空间在多机器人数据上预训练；作者报告在 ALOHA 真机上零样本泛化与 1–5 次示范学新技能均优于 ACT、OpenVLA、Octo。
+  summary: |
+    双臂操作动作分布多模态、数据又稀缺，难以训练基础模型。RDT 用扩散模型表示多模态动作分布，基于 DiT 并针对机器人物理量的非线性与高频变化加入 QKNorm、RMSNorm、MLP 解码器等设计；提出物理可解释的统一动作空间，按物理含义把各机器人的本体感知与动作填入统一向量，从而在超过 100 万条轨迹的多机器人数据集合上预训练，并扩展到 1.2B 参数；再在自采的 6K+ 条多任务双臂数据上微调。在 ALOHA 双臂真机上，作者设计了未见物体、未见场景、指令跟随（如「倒三分之一」）、1/5 次示范学习和推摇杆等灵巧任务，报告 RDT 成功率显著高于 ACT、OpenVLA 和 Octo，消融显示去掉大模型、预训练数据或扩散建模都会明显下降，从零训练的 RDT 在未见物体与场景上表现差。该结果提示跨机器人预训练与统一动作空间对双臂泛化有帮助；但评测只在单一 ALOHA 平台、每项任务试验数有限，且缺少标准仿真基准对比。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 5
+    T: 4
+  rationale:
+    C: 早期大规模扩散式双臂基础模型与统一动作空间设计，对双臂 VLA 子方向影响明显。
+    E: 真机多维度泛化任务、对比 3 个强基线并有模型/数据/扩散的消融；仅单一平台、无标准仿真基准。
+    O: MIT 代码、1B 与 170M 权重及微调数据集均已公开，README 有训练与部署说明。
+    T: 清华朱军团队在扩散模型与机器学习方向积累深厚，机器人方向积累相对较新。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/thu-ml/RoboticsDiffusionTransformer
+    weights: open
+    data: open
+    license: MIT
+    note: HF 上有 rdt-1b、rdt-170m 与微调数据集 rdt-ft-data。
+  uses: []
+  new_resources: []
+- arxiv_id: '2410.13126'
+  title: 'ALOHA Unleashed: A Simple Recipe for Robot Dexterity'
+  triage: include
+  reason: null
+  date_v1: '2024-10-17'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - bimanual
+  - diffusion
+  - dexterous
+  - imitation
+  - deformable
+  affiliations:
+  - Google DeepMind
+  one_liner: 在 ALOHA 2 上采集 2.6 万条示范并训练 Transformer 扩散策略，首次端到端完成系鞋带、挂衬衫等灵巧双臂任务；作者报告扩散损失明显优于 ACT 式 L1 回归。
+  summary: |
+    模仿学习的成功多集中于抓放、推动等非灵巧任务，单纯扩大模仿学习能否解决可形变物体、接触丰富的双臂灵巧操作尚不清楚。ALOHA Unleashed 给出一个简单配方：在 ALOHA 2 机群上由多名操作员采集超过 2.6 万条真机示范（5 项任务）和 2000 余条仿真示范，训练以多视角图像与本体感知为条件、带动作分块的 Transformer 编码器-解码器扩散策略（DDIM 采样，每任务单独训练）。在挂衬衫、系鞋带、更换机械手指、齿轮插装和随机厨具堆叠 5 项真机任务上每项 20 次试验，作者报告取得较高成功率，并称首次实现端到端策略自主系鞋带与挂 T 恤；消融显示数据量对困难变体（ShirtMessy）影响大、按时长适度过滤数据有益，同规模下扩散损失明显优于 ACT 式 L1 回归，3 项 MuJoCo 仿真任务中扩散在多数任务上更好。该结果提示「大规模高质量示范 + 表达力强的策略」可推进灵巧操作；但每个任务需数千条示范、策略为单任务且 1 秒重规划，代码与数据未公开。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 5
+  rationale:
+    C: 证明规模化示范 + 扩散策略可完成系鞋带等此前难以实现的灵巧双臂任务，对灵巧模仿学习有明确参考价值。
+    E: 5 项真机任务各 20 次试验，含数据量、数据过滤、扩散 vs L1 消融和仿真多种子实验；基线主要为 ACT 变体。
+    O: 未见官方代码、权重或数据发布；探测到的 mujoco_menagerie 只是 ALOHA 2 仿真模型库。
+    T: Google DeepMind 机器人团队（Tony Zhao、Chelsea Finn 等）在 ALOHA 系列与模仿学习方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 作者单位仅提取到 Google DeepMind，需核对 PDF 是否还列有其他单位（如 Stanford）
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 原探测命中的 google-deepmind/mujoco_menagerie 并非本文代码仓库（仅为仿真用 ALOHA 2 模型），已更正为 no-repo。
+  uses: []
+  new_resources: []
+- arxiv_id: '2407.01512'
+  title: 'OpenTeleVision: Open-source Immersive Teleoperation with Stereo Visual Feedback'
+  triage: include
+  reason: null
+  date_v1: '2024-07-01'
+  category: teleoperation
+  route: adjacent
+  contribution: system
+  tags:
+  - vr
+  - stereo
+  - active-perception
+  - humanoid
+  - open-source
+  affiliations:
+  - UC San Diego
+  - MIT
+  one_liner: 基于 Apple Vision Pro 的沉浸式遥操作系统：机器人头部主动立体相机随操作者头部转动并回传立体视频；作者报告在 H1、GR-1 人形上采集数据训练的 ACT 策略完成 4 项长时程精细任务。
+  summary: |
+    遥操作是采集机器人示范的主要手段，但现有系统常因操作者视线被遮挡、缺乏深度感知而难以完成精细任务。Open-TeleVision 用 VR 头显（文中为 Apple Vision Pro）采集操作者手、腕、头部位姿，经 IK 与重定向控制双臂和多指手或夹爪，同时在机器人头部装 2–3 自由度主动颈部与 ZED Mini 立体相机，相机随操作者头部运动，以 60Hz 回传立体视频，实现「所见即机器人所见」，并支持跨城市远程操作。作者在 Unitree H1（灵巧手）与 Fourier GR-1（夹爪）上采集 Can Sorting、Can Insertion、Folding、Unloading 四项任务数据，训练以 DINOv2 为骨干、立体图像为输入的 ACT 策略，报告其成功率高于 ResNet18 骨干和单目输入的对照，用户研究显示立体显示缩短完成时间、提高成功率。该系统为人形数据采集提供了开源参考实现；但策略评测每项仅 5 个完整回合，对照均为自身消融，系统缺少触觉/力反馈，也只使用上半身自由度。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 4
+  rationale:
+    C: 把主动立体视觉反馈引入人形遥操作并开源，成为人形数据采集常用参考方案。
+    E: 两款人形真机 4 项任务 + 设计消融 + 用户研究，但试验次数少、对照仅为自身变体。
+    O: Apache-2.0 代码公开，README 提供数据集下载链接；无训练好的策略权重。
+    T: UCSD 王小龙团队在人形遥操作与灵巧操作方向有可核实的持续积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/OpenTeleVision/TeleVision
+    weights: none
+    data: open
+    license: Apache-2.0
+    note: README 提供 Google Drive 数据集下载；未提供训练好的检查点（需自行训练 ACT）。
+  uses: []
+  new_resources: []
+- arxiv_id: '2401.02117'
+  title: 'Mobile ALOHA: Learning Bimanual Mobile Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2024-01-04'
+  category: teleoperation
+  route: adjacent
+  contribution: system
+  tags:
+  - mobile-manipulation
+  - bimanual
+  - low-cost
+  - co-training
+  - whole-body
+  affiliations:
+  - Stanford University
+  one_liner: 低成本（<3.2 万美元）全身遥操作双臂移动操作平台，并与静态 ALOHA 数据协同训练；作者报告每任务 50 条示范时协同训练可将成功率最多提升 90 个百分点。
+  summary: |
+    模仿学习成果多局限于桌面操作，缺少可负担的双臂移动操作硬件和全身遥操作接口。Mobile ALOHA 在 ALOHA 基础上加装 AgileX Tracer 移动底盘，操作者通过与底盘绑定的主从臂同时控制双臂和底盘，系统自带电源与算力，总成本低于 3.2 万美元，软硬件开源。策略方面，作者把 Mobile ALOHA 任务数据与 825 条静态 ALOHA 数据协同训练，不做特殊处理。在擦红酒、炒虾、开柜放锅、呼叫并进入电梯、冲洗锅、推椅子、击掌 7 项真机任务上（多数 20 次试验），作者报告用 ACT 协同训练时多数任务成功率达 80–95%，在 7 项中的 5 项提升 20–95 个百分点；Diffusion Policy 与 VINN 同样受益；消融显示协同训练提高数据效率、对混合比例不敏感且优于先预训练再微调；用户研究显示新手很快接近专家速度。局限：策略为单任务、示范由两名专家采集，底盘与固定臂高限制可达范围。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 5
+  rationale:
+    C: 低成本全身遥操作移动操作平台 + 协同训练方案，推动了双臂移动操作的数据采集与研究普及。
+    E: 7 项复杂真机任务、3 种模仿学习方法、协同训练消融与用户研究；为单任务策略且无外部系统对照。
+    O: MIT 代码与硬件说明公开，任务数据可下载；无预训练策略权重。
+    T: Stanford Chelsea Finn 团队在模仿学习与 ALOHA 系列方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/MarkFzp/mobile-aloha
+    weights: none
+    data: open
+    license: MIT
+    note: 硬件教程与训练代码（ACT/协同训练）公开；Mobile ALOHA 任务数据集已公开（亦被 LeRobot 收录为 aloha_mobile_* 数据集）。
+  uses: []
+  new_resources: []
+- arxiv_id: '2308.04079'
+  title: 3D Gaussian Splatting for Real-Time Radiance Field Rendering
+  triage: include
+  reason: null
+  date_v1: '2023-08-08'
+  category: scene
+  route: adjacent
+  contribution: method
+  tags:
+  - gaussian-splatting
+  - novel-view-synthesis
+  - scene-representation
+  - real-time-rendering
+  affiliations:
+  - Inria, Université Côte d’Azur, France
+  - Max-Planck-Institut für Informatik, Germany
+  one_liner: 以可优化的各向异性 3D 高斯表示场景并配合可微分块光栅化，在 1080p 下实现 ≥30fps 实时新视角合成，作者报告画质与 Mip-NeRF360 相当且训练更快。
+  summary: |
+    辐射场方法要么画质高但训练与渲染昂贵，要么速度快但牺牲质量，无法在完整无界场景中以 1080p 实时渲染。3D Gaussian Splatting 从 SfM 稀疏点云初始化一组 3D 高斯，优化其位置、不透明度、各向异性协方差与球谐颜色；在优化中交替执行克隆与分裂的自适应致密化；并实现支持各向异性 splatting 的可见性感知分块光栅化器，使训练与渲染都很快。在 Mip-NeRF360、Tanks&Temples、Deep Blending 共 13 个真实场景及 Blender 合成数据上，作者报告 PSNR/SSIM/LPIPS 与 Mip-NeRF360 相当或更好，训练时间与 InstantNGP、Plenoxels 等快速方法相当，并实现实时渲染；消融验证了 SfM 初始化、致密化策略、各向异性和不限制梯度高斯数量的作用。该表示已广泛用于机器人 real2sim、场景重建与仿真资产生成；但论文本身是图形学工作，不涉及具身决策，且存在欠观测区域伪影、显存占用较大等局限。
+  venue: ACM TOG 2023
+  scores:
+    C: 5
+    E: 5
+    O: 4
+    T: 5
+  rationale:
+    C: 新的显式场景表示范式，已成为机器人 3D 场景重建与 real2sim 管线的基础组件（对具身方向属间接贡献）。
+    E: 三个真实数据集 13 个场景与合成数据，对比 Mip-NeRF360、InstantNGP、Plenoxels，含系统消融与速度/显存报告。
+    O: 代码完整公开，但许可为 Inria 自定义的非商业研究许可；评测数据为公开数据集。
+    T: Inria GraphDeco（Drettakis）团队在基于点与图像的渲染方向长期领先。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/graphdeco-inria/gaussian-splatting
+    weights: n/a
+    data: open
+    license: custom
+    note: Inria/MPII 自定义非商业许可；作者在项目页提供场景数据与预训练模型。
+  uses: []
+  new_resources: []
+- arxiv_id: '2303.04137'
+  title: 'Diffusion Policy: Visuomotor Policy Learning via Action Diffusion'
+  triage: include
+  reason: null
+  date_v1: '2023-03-07'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - diffusion
+  - imitation
+  - visuomotor
+  - action-chunking
+  affiliations:
+  - Columbia University
+  - Toyota Research Institute
+  - MIT
+  - Stanford University
+  one_liner: 把视觉运动策略表示为动作空间的条件去噪扩散过程，配合滚动时域控制与时序扩散 Transformer；作者报告在 4 个基准 15 项任务上平均提升 46.9%。
+  summary: |
+    模仿学习中的动作分布常常多模态、具有时序相关性且要求高精度，显式回归会平均化多模态，隐式策略（IBC）训练又不稳定。Diffusion Policy 把视觉运动策略建模为条件 DDPM：以观测为条件，对未来一段动作序列逐步去噪，执行其中部分动作后再滚动重规划；提供 1D 时序 CNN（FiLM 条件）与时序扩散 Transformer 两种骨干，配合端到端训练的 ResNet-18 视觉编码器、平方余弦噪声调度和 DDIM 加速推理（真机约 0.1 秒延迟）。在 Robomimic、Push-T、Block Pushing、Franka Kitchen 等 4 个基准 15 项任务上（3 个种子、多次初始化），作者报告其在所有任务上优于 LSTM-GMM、IBC、BET，平均成功率提升 46.9%；真机 Push-T、马克杯翻转、倒酱与抹酱及双臂任务也取得较高成功率，分析了多模态表达、位置控制协同、动作序列预测和训练稳定性。该方法已成为视觉运动策略的默认基线；局限是推理比单步策略慢，且依赖较多高质量示范。
+  venue: RSS 2023
+  scores:
+    C: 5
+    E: 5
+    O: 5
+    T: 5
+  rationale:
+    C: 把扩散模型引入动作生成的奠基性工作，确立了动作分块 + 扩散的主流策略范式。
+    E: 4 个基准 15 项任务、多种子与强基线对比，配合大量消融与多项真机实验（含双臂与液体操作）。
+    O: MIT 代码、实验数据与训练配置公开，作者网站提供实验检查点，复现说明完整。
+    T: Columbia/Stanford 宋舒然团队与 TRI、MIT Tedrake 团队在机器人操作学习方向领先。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/real-stanford/diffusion_policy
+    weights: open
+    data: open
+    license: MIT
+    note: 项目页提供训练数据与实验检查点下载。
+  uses:
+  - resource: diffusion-policy
+    role: proposes
+  new_resources: []
+- arxiv_id: '2506.13751'
+  title: 'LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction'
+  triage: include
+  reason: null
+  date_v1: '2025-06-16'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - humanoid
+  - whole-body
+  - latent-action
+  - sim2real
+  - benchmark
+  affiliations:
+  - University of California Berkeley
+  - Norwegian University of Science and Technology
+  - Simon Fraser University
+  - Carnegie Mellon University
+  one_liner: 人形全身控制的视觉-语言基准 LeVERB-Bench（150+ 任务/10 类）与分层潜动作框架 LeVERB；作者报告零样本总成功率 58.5%，约为朴素分层 VLA 的 7.8 倍。
+  summary: |
+    多数 VLA 依赖末端位姿、底盘速度等手工设计的低层动作接口，难以表达敏捷的人形全身行为。为此作者先构建 LeVERB-Bench：在 IsaacSim 中用光线追踪回放重定向后的动捕运动，随机化场景、物体、视角并由 VLM 标注指令，得到约 17.1 小时视觉-语言数据和 2.7 小时纯语言数据，覆盖 150 余个任务、10 个类别。随后提出 LeVERB：高层 LeVERB-VL 以残差 CVAE 从合成运动学示范中学习潜在「动作词表」，并用判别器对齐两类数据；低层 LeVERB-A 先用 PPO 训练跟踪教师，再用 DAgger 蒸馏为以潜变量为条件的 Transformer 全身控制策略。在基准的闭环评测中（每类 20 个未见组合场景），作者报告简单视觉导航成功率 80%、总体 58.5%，约为去掉采样的朴素分层 VLA 的 7.8 倍，并在多数类别优于各消融变体；在 Unitree G1 上展示了潜动作开环回放的零样本 sim-to-real。局限：对照仅为自身消融，真机未做闭环视觉评测，长时程规划能力有限。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 5
+  rationale:
+    C: 首个面向人形全身控制的视觉-语言闭环基准与潜动作分层框架，为人形 VLA 提供新接口思路。
+    E: 自建仿真基准上的系统消融，真机仅开环回放演示，缺少外部方法对照。
+    O: 仅确认有项目页；探测到的 big_vision 为 SigLIP 依赖仓库而非本文代码，未找到官方代码或基准下载。
+    T: UC Berkeley（Sreenath、Darrell、Sastry、Peng）与 CMU 石冠亚等团队，在人形控制与 VLM 方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 官方代码与 LeVERB-Bench 数据是否发布（项目页链接返回 404，未能核实）
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测命中的 google-research/big_vision 是 SigLIP 所在仓库，非本文代码，已更正为 no-repo。
+  uses:
+  - resource: isaac-sim
+    role: eval
+  new_resources: []
+- arxiv_id: '2603.05410'
+  title: 'PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking'
+  triage: include
+  reason: null
+  date_v1: '2026-03-05'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - whole-body
+  - flow-matching
+  - latent-action
+  affiliations:
+  - Department of Automation, Shanghai Jiao Tong University
+  one_liner: 仿生「多脑」人形全身 VLA：CVAE 语义潜变量 + flow matching 动作生成 + RL 跟踪器；作者报告 Isaac Lab 9 项任务平均成功率 74.9%，复现的 LeVERB 为 65.0%。
+  summary: |
+    人形 VLA 全身控制面临推理效率低或缺乏语义引导、动态全身协调不稳定的问题。PhysiFlow 提出三层「多脑」架构：Neocortical Brain 借鉴 LeVERB 的残差 CVAE，以带 LoRA 的 SigLIP 编码第一/第三人称图像和语言，经两阶段课程训练得到融合任务语义与运动意图的潜变量；Basal Ganglionic Brain 以该潜变量和机器人状态为条件，用轻量 Gemma 解码器做 flow matching，10Hz 生成动作块、约 50Hz 有效控制；Cerebellar Brain 参照 TWIST 用教师-学生 RL 训练跟踪器。作者报告 flow matching 生成比 DDPM 快 5.3 倍、比自回归快 126 倍且平滑性相当；在 Isaac Lab 中 9 项任务上平均成功率 74.9%，高于本地复现的 LeVERB（65.0%），长距离导航提升明显，短距离导航略低；真机仅为 G1 上生成动作序列的开环执行。该结果提示潜变量+flow matching 可兼顾速度与平滑，但对照单一、真机无闭环定量评测，代码与数据未公开。
+  venue: ''
+  scores:
+    C: 2
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 主要组合 LeVERB 残差 CVAE、flow matching 与 TWIST 式跟踪器，增量有限。
+    E: 仿真内对复现基线 LeVERB 的对比与组件消融较合理，但仅单一基线，真机为开环定性展示。
+    O: 未找到代码、权重、数据或项目页。
+    T: 上海交大王贺升团队有机器人控制方向积累，人形 VLA 方向成果较少可核实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文未给出项目页或仓库链接。
+  uses:
+  - resource: isaac-lab
+    role: eval
+  new_resources: []
+- arxiv_id: '2603.08122'
+  title: Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA
+  triage: include
+  reason: null
+  date_v1: '2026-03-09'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - dexterous
+  - tactile
+  - force
+  - shared-autonomy
+  - bimanual
+  affiliations:
+  - Zhongguancun Academy
+  - National University of Singapore
+  - Shanghai Jiao Tong University
+  - Sharpa
+  - Shanghai AI Lab
+  - Shanghai Innovation Institute
+  one_liner: RL 原子技能 IMCopilot 既辅助遥操作采集又作 VLA 底层原语，MoDE-VLA 以残差注入融合力/触觉；作者报告 4 项接触密集真机任务平均成功率 34%，π0 基线为 15%。
+  summary: |
+    VLA 多局限于低自由度夹爪的视觉抓放，扩展到双手灵巧的手内操作时面临高质量数据难采、多技能难学、力/触觉模态难融合三大问题。作者在 SharpaNorth 双臂 + 22 自由度灵巧手平台上提出两项组件：IMCopilot 是在 IsaacLab 中用 PPO 与教师-学生蒸馏训练的手内原子技能（稳定抓持、绕轴旋转），采集时作为共享自主助手接管困难的手内阶段，执行时作为 VLA 可调用的底层原语；MoDE-VLA 在 π0 骨干上增加专用通路，用稀疏专家路由关节力矩与指尖触觉信号，并以残差方式注入，以免破坏预训练知识。作者报告 IMCopilot 使手内旋转成功率从遥操作的 34% 提升到 89%，力/触觉可视化反馈提升采集效率；在削苹果、试管转移、齿轮装配、插充电器 4 项任务上（每项 20 次），MoDE-VLA 平均成功率 34%，π0 为 15%，消融显示去掉力输入下降最多。该结果提示分层技能与专门的力触觉融合对接触密集灵巧操作有益；但绝对成功率仍较低，只对比单一基线、单一平台，且未公开代码或数据。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 把 RL 手内技能同时用于采集与执行、并为 VLA 设计力/触觉专家融合，思路扎实但各组件增量有限。
+    E: 4 项真机任务各 20 次、含逐组件消融与采集系统评估，但只有 π0 一个基线、单一平台。
+    O: 仅有项目主页，未见代码、权重或数据。
+    T: 上海交大卢策吾、上海 AI Lab 庞江淼、NUS 邵林等团队在操作与具身方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 仅有项目主页 https://sites.google.com/view/mode-vla。
+  uses: []
+  new_resources: []

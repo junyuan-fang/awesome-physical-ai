@@ -1,0 +1,739 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2608.09771'
+  title: 'SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-08-10'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - compact-policy
+  - latent-dynamics
+  - flow-matching
+  - mixture-of-transformers
+  - efficiency
+  affiliations:
+  - Fudan University
+  - Beijing Academy of Artificial Intelligence
+  - Tsinghua University
+  - Renmin University of China
+  one_liner: 0.5B 紧凑策略 SLIM 用掩码轨迹预测学习动作锚定的观测隐变量，作者报告 LIBERO 97.5%、LIBERO-Plus 零样本 77.45%、CALVIN 平均长度 4.556，并做了真机验证。
+  summary: |
+    大型 VLA 在每个控制步都要跑完整的多模态骨干，像素级世界模型又要预测许多与控制无关的外观细节，两者都推高了计算与延迟。为此作者提出 0.5B 参数的 SLIM：以 DINOv2 观测隐变量和连续动作 token 为输入，用 Mixture-of-Transformers 骨干建模二者的交互。第一阶段做自监督掩码轨迹预测，同时包含逆动力学分支（由当前与未来隐变量重建动作）和前向动力学分支（由当前观测与动作预测 EMA 目标下的未来隐变量）；第二阶段用 flow matching 训练可部署策略。作者报告：仅用 LIBERO 数据训练时原始 LIBERO 达 97.5%，同一 checkpoint 在 LIBERO-Plus 零样本为 77.45%，CALVIN ABC→D 平均序列长度 4.556；在 5 个真机任务（共 750 条示教，含背景、光照、干扰物扰动）上，平均进度分在多数设置下最高，背景扰动下略低于 π0.5 类基线；推理延迟与显存明显低于 7B 级基线。消融显示第一阶段训练和 EMA 目标都有贡献。这提示把动力学作为训练信号塑造紧凑表征，可能是大骨干之外的一条高效路线，但目前只验证了单一模型规模、没有跨本体预训练，也未说明能否扩展到更多样的任务。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 用逆/前向动力学掩码预测训练紧凑隐空间策略，思路清晰，但与 JEPA 式表征学习和现有 WAM 相比增量有限
+    E: 覆盖 LIBERO、LIBERO-Plus 零样本和 CALVIN 三个仿真基准，另有 5 个真机任务和扰动测试，并做了 Stage-1、损失比例与 EMA 的消融
+    O: 仓库有实质代码（MIT），HF 上公开了 CALVIN 和 LIBERO 的权重；真机数据未见公开
+    T: 作者来自复旦、智源（BAAI）、清华，在具身模型方向有可核实的积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 真机示教数据是否公开
+  open:
+    code: substantive
+    repo: https://github.com/kzz1031/SLIM
+    weights: open
+    data: unknown
+    license: MIT
+    note: HF 上有 kzzwang/SLIM-CALVIN 与 kzzwang/SLIM-LIBERO 两个权重
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  - resource: calvin
+    role: finetune
+  - resource: calvin
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.09853'
+  title: 'RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance'
+  triage: include
+  reason: null
+  date_v1: '2026-08-10'
+  category: foundation-general
+  route: core
+  contribution: model
+  tags:
+  - reward-model
+  - value-function
+  - temporal-distance
+  - robot-rl
+  - foundation-model
+  affiliations:
+  - DAMO Academy, Alibaba Group
+  - Hupan Lab
+  one_liner: RynnValue 以“到目标的时间距离”为监督，在 7000+ 小时异构数据上训练价值基础模型，作者报告 RBM-EVAL-OOD 上 Kendall τ 为 0.704，并在真机 RL、数据筛选和推理引导中带来提升。
+  summary: |
+    通用奖励模型正成为扩展机器人学习的瓶颈：现有方法依赖偏好对或轨迹内归一化进度这类与任务绑定的监督，难以跨本体、跨数据源复用。为此作者提出 RynnValue：以 RynnBrain 为骨干，以从当前观测到语言目标的有向时间距离（cost-to-go）为回归目标。这个标签可以直接从时间戳和重标注的完成点得到，因此能扩展到约 7000 小时、300 万条指令片段（AgiBot、OXE、EgoDex、RoboMIND 等）。为防止模型走捷径，训练中加入随机时间采样、时序打乱、价值隔离注意力和指令错配增强。作者报告：8B 模型在 RBM-EVAL-OOD 六个 OOD 数据集上平均 Kendall τ 为 0.704，高于用偏好监督训练的 Robometer（0.655）和只用进度的对照（0.292）；4B 模型为 0.679。在下游应用中，基于势函数的奖励塑形把真机在线 RL 成功率从 52.5% 提到 72.5%，离线从 63.8% 提到 82.5%；数据筛选把多任务 BC 从 35.0% 提到 42.5%；价值引导把冻结策略从 67.5% 提到 80.0%。消融显示打乱与隔离注意力都很关键。这提示时间距离可以作为可扩展的价值接口，但真机实验任务数量少（四个任务级别），与偏好监督方法的比较也只在单一基准上。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 用时间戳派生的时间距离替代偏好/进度监督，把通用价值模型扩展到数千小时异构数据，对机器人奖励建模子方向有明确增量
+    E: 有 OOD 排序基准与多条强基线、组件消融、规模对比，并在真机在线/离线 RL、数据筛选和价值引导三类应用中验证；真机任务数较少
+    O: 仓库有实质代码，HF 公开了 4B/8B 等多个权重；仓库未检出许可证文件
+    T: 阿里达摩院在具身大模型（RynnBrain、RynnVLA 等）方向有可核实的连续产出
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库许可证（探测未找到 LICENSE）
+  - 训练数据的整理与重标注结果是否公开
+  open:
+    code: substantive
+    repo: https://github.com/alibaba-damo-academy/RynnValue
+    weights: open
+    data: unknown
+    license: none-found
+    note: HF 合集 Alibaba-DAMO-Academy/rynnvalue 中有 RynnValue-4B、4B-Quantile 和 8B
+  uses:
+  - resource: agibot-world
+    role: pretrain
+  - resource: open-x-embodiment
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2608.09892'
+  title: 'XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment'
+  triage: include
+  reason: null
+  date_v1: '2026-08-10'
+  category: vla
+  route: adjacent
+  contribution: infra
+  tags:
+  - policy-evaluation
+  - deployment
+  - standardization
+  - client-server
+  - leaderboard
+  affiliations:
+  - MMLab@HKU
+  - THU
+  one_liner: XPolicyLab 用统一观测/动作 schema 和依赖隔离的 client/server 服务接入 42 个机器人策略，同一套 adapter 可以在 RoboTwin、RoboDojo 仿真和真机评测中复用。
+  summary: |
+    机器人策略的评测和部署被各自的软件依赖、数据格式和运行接口割裂：把 N 个策略接到 M 个环境，需要 O(NM) 次单独集成，预处理约定也在反复重写中悄悄改变，导致结果难以横向比较。为此作者发布 XPolicyLab：定义统一的观测、动作和轨迹 schema，以及只有 update_obs / get_action / reset 和批量接口的最小 adapter 协议；再通过 WebSocket + MessagePack 的依赖隔离服务，把策略推理与环境执行分在不同进程甚至不同机器上。配套的分级一致性检查和可供编码 agent 执行的 skills 用来规范接入流程。作者报告：截至 2026 年 8 月已接入 42 个策略（VLA、WAM、扩散策略等）；各 adapter 的模型侧代码量差异达一个数量级，而面向环境的循环保持在固定参考的几行以内；在小规模对照实验中，接入一个代表性策略的时间从 5 小时以上降到 2 小时，使用 agent skills 后降到约 30 分钟；同一套 adapter 驱动了 RoboTwin、RoboDojo 仿真和 RoboDojo-RealEval（三种双臂本体、18 个真机任务）的排行榜。这提示统一接口能降低复现和比较的成本，但它本身不评测算法，集成工作量研究的参与者人数有限，也无法消除真机评测中的物理方差。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 4
+  rationale:
+    C: 把策略侧接口标准化为可复用的生态，覆盖 42 个策略和仿真/真机多个评测平台，对复现与公平比较有实际价值
+    E: 证据主要是接入覆盖面、adapter 代码量统计、小规模集成耗时对照和排行榜快照，属于系统可用性证据，而非严格的对照实验
+    O: Apache-2.0 仓库含大量实质代码；仓库 README 仍有部分 coming soon 字样，各策略权重依赖上游发布
+    T: 由 HKU MMLab 与清华牵头，与 RoboTwin 等基准团队有可核实的积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - README 中标为 coming soon 的部分具体是什么
+  open:
+    code: substantive
+    repo: https://github.com/XPolicyLab/XPolicyLab
+    weights: n/a
+    data: n/a
+    license: Apache-2.0
+    note: 基础设施项目；策略权重来自各上游仓库，不由本项目发布
+  uses:
+  - resource: robotwin
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: robotwin
+    name: RoboTwin 2.0
+    desc: Bimanual manipulation simulation benchmark with 50 tasks under clean and domain-randomized settings.
+    links:
+      project: https://robotwin-platform.github.io
+      paper: https://arxiv.org/abs/2506.18088
+    subcategory: manipulation
+- arxiv_id: '2608.10383'
+  title: Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations
+  triage: include
+  reason: null
+  date_v1: '2026-08-11'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - bimanual
+  - dexterous-grasp
+  - diffusion
+  - teleoperation-data
+  - humanoid
+  affiliations:
+  - School of Computer Science, The University of Auckland
+  - College of Computer Science, Chongqing University
+  - College of Electronic and Information Engineering, Southwest University
+  one_liner: 用遥操作采集的真机多模态数据训练 DDPM，从单视角点云生成双臂灵巧手的抓取关节构型，再结合运动规划和力引导微调执行；作者报告在未见过的大物体上总成功率为 61.9%。
+  summary: |
+    双臂灵巧手协同抓取大物体的研究多停留在仿真，并且依赖完整的物体网格，也不考虑真机上的可达性与接触稳定性。为此作者提出一个真机框架：先在 Unitree H1-2 加 Inspire 灵巧手上用 Apple Vision Pro 遥操作，采集 33 个大物体、353 次抓取的多模态数据（关节角、RGB-D、关节力矩、触觉）；再用 SAM 分割出物体，经 PointNet++ 编码后由 DDPM 生成双臂关节构型；执行时先做带中间路点的运动规划，再进行“手臂内收直到受阻、手指弯曲直到接触”的力引导微调。在按物体划分的测试集上（7 个未见物体，每个 5 种位姿、每种 3 次），作者报告总成功率 61.90%，高于 BimanGrasp-DDPM（28.57%）、ViSiL-HD（37.14%）以及单手方法 GraspNet 和 DexGraspAnything；去掉运动规划、力微调或 DDPM 后成功率都明显下降。这提示真机数据加上执行期反馈对大物体协同抓取很关键，但物体数量少、场景单一（统一背景的桌面），基线需要改造才能跨本体对比，而且模型只预测静态构型，没有把触觉纳入学习。
+  venue: IROS 2026
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 把扩散抓取生成、真机数据和执行期力反馈组合起来，解决双臂大物体抓取的真机落地问题，属于扎实但有限的增量
+    E: 全部为真机实验，有 4 个基线和逐模块消融，但测试物体只有 7 个、每个 15 次试验，场景条件单一
+    O: 论文给出的 GitHub 仓库包含遥操作、数据和 DDPM 训练/推理代码，代码为 Apache-2.0；完整数据集（约 40GB）放在百度网盘，仅限非商业研究
+    T: 奥克兰大学与重庆大学团队，在该方向的积累难以核实，按默认给 3
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 仓库代码的完整性（只看了目录和 README）
+  - 团队在灵巧操作方向的过往成果
+  open:
+    code: substantive
+    repo: https://github.com/zhangdana483/real_bi_dex_grasp
+    weights: unknown
+    data: open
+    license: Apache-2.0
+    note: 探测漏掉了论文正文给出的仓库；README 写明包含遥操作、数据集和 DDPM 训练/推理代码。数据只附了样例，完整数据在百度网盘，限非商业研究使用
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.10393'
+  title: 'Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-11'
+  category: vla
+  route: adjacent
+  contribution: method
+  tags:
+  - adversarial-attack
+  - vla-safety
+  - diffusion
+  - black-box
+  - physical-patch
+  affiliations:
+  - Xi'an Jiaotong University
+  - Shanghai AI Laboratory
+  - University of Science and Technology of China
+  one_liner: DURA 沿预训练扩散模型的隐轨迹优化外观自然的对抗贴片，支持只用动作输出的黑盒攻击；作者报告在 LIBERO 上对 OpenVLA 的白盒 ASR 为 100%，并在 Franka 真机上打印贴片复现了攻击效果。
+  summary: |
+    现有针对 VLA 的视觉攻击多在像素空间加扰动，或者依赖白盒梯度，生成的贴片显眼，难以在真实系统中部署。为此作者提出 DURA：从一个良性种子贴片出发，在冻结的潜扩散模型的 DDIM 去噪轨迹上做攻击引导优化，用扩散先验保持外观自然，用目标动作损失把策略引向攻击者指定的动作。白盒设置下通过反传计算更新方向；黑盒设置下只观察预测动作，用得分函数估计器估计方向。实验以 OpenVLA 和 π0-FAST 在 LIBERO 四个 suite 上为受害模型，作者报告：白盒下 DURA 在仿真与物理两种贴片设置中 ASR 均为 100%，与需要动作 token 真值的 UADA 持平；黑盒下 ASR 为 86.0%/79.3%，比改造的 TMA-NES 高约 40 个点；在 π0-FAST 上白盒和黑盒都达到 100%。另外，在六项自然度指标上它最接近无贴片参考，对 JPEG、位深压缩和高斯噪声防御仍然有效，Franka 打印贴片实验能诱发冻结等目标行为。这提示物理工作空间中看似普通的内容也可能成为攻击面，但真机实验只有单一任务、以定性展示为主，评测的受害模型也集中在 LIBERO 微调版本上。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 把扩散隐空间优化用于 VLA 的自然贴片攻击并支持黑盒，是安全分析方向的扎实增量
+    E: 两种 VLA 架构、白盒/黑盒多条基线、自然度指标、防御鲁棒性、查询预算与贴片大小分析，另有打印贴片的真机演示，但真机部分较简略
+    O: 未找到代码或项目页
+    T: 西安交大、上海 AI Lab、中科大合作，在 VLA 安全方向的积累信息不足，按默认给 3
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否会发布代码或贴片
+  - 真机实验的试验次数和定量结果
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: n/a
+    license: unknown
+    note: ''
+  uses:
+  - resource: libero
+    role: eval
+  - resource: openvla
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.10484'
+  title: 'Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-11'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - action-tokenizer
+  - language-grounding
+  - vq-vae
+  - interpretability
+  - bridgev2
+  affiliations:
+  - Carnegie Mellon University
+  one_liner: SALT 在 VQ-VAE 动作 tokenizer 中加入“让冻结语言模型从量化动作隐变量还原指令”的对齐损失；作者报告 SimplerEnv 平均成功率为 71.9%，VQ-VAE 和 FAST 分别为 42.7% 和 31.2%。
+  summary: |
+    VLA 的离散动作表征通常只在原始动作空间按 L1/L2 重建误差优化，数值上相近不等于语义上相近，动词所表达的“怎么做”可能在 tokenization 中丢失。作者先在 BridgeV2 上做诊断：动作轨迹包含视觉状态变化之外的动词信息，而仅以重建为目标的离散化会系统性地削弱这部分信息。为此提出 SALT：保持残差 VQ-VAE 的结构，额外要求冻结的语言模型能从量化后的动作隐变量（作为软前缀）还原整条 episode 的指令，从而只改变 tokenizer 对动作空间的划分，不改动下游 VLA。在 BridgeV2 上训练 0.5B 的 miniVLA、只替换 tokenizer 的对照中，作者报告：SimplerEnv WidowX 四个任务的平均成功率，SALT 为 71.9%，同结构的 VQ-VAE 为 42.7%，FAST 为 31.2%；SALT 在 token ID 和学到的动作嵌入上的动词可解码性也最高，重建误差与 VQ-VAE 接近，并出现了专门对应 flip、turn 等动词的码字。这提示动作表征与语言对齐可能是提升语言条件控制的有效杠杆，但实验只用了单一数据集、小模型和仿真评测，没有真机验证，也没有建立语义码字与性能提升之间的因果机制。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 从语言对齐角度改进动作 tokenizer，提出了新的诊断视角和简洁的损失，但适用范围限于可学习隐空间的 tokenizer
+    E: 有严格控制变量的 tokenizer 对照和较充分的表征诊断，但下游评测只有 SimplerEnv 的 4 个任务，没有真机
+    O: 探测到的 openvla-mini 是基线框架的仓库，不是本文代码；未找到官方代码
+    T: CMU Yonatan Bisk 组在语言落地与具身方向有可核实的积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否发布 SALT 的 tokenizer 代码与权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 探测命中的 Stanford-ILIAD/openvla-mini 是所用 miniVLA 基线的仓库，不是本文代码，已更正为 no-repo
+  uses:
+  - resource: bridgedata-v2
+    role: finetune
+  - resource: simplerenv
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.10618'
+  title: Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent
+  triage: include
+  reason: null
+  date_v1: '2026-08-11'
+  category: world-model
+  route: core
+  contribution: system
+  tags:
+  - autonomous-racing
+  - world-model
+  - near-limit-control
+  - real-vehicle
+  - continual-refinement
+  affiliations:
+  - School of Mechanical and Aerospace Engineering, Nanyang Technological University
+  - K2 Holding, L.L.C, Abu Dhabi, United Arab Emirates
+  one_liner: 以世界模型为中心的自动驾驶赛车智能体，从接近极限的成功与失败数据中学习交互演化和动力学边界；作者报告真车定位感知在 256.3 km/h 下稳定，仿真对抗场景交互成功率为 88.3%。
+  summary: |
+    多数具身系统在保守的安全裕度内评测，在极端条件下的能力边界缺少理解。作者以自动驾驶赛车为测试平台，构建以世界模型为中心的智能体：多传感器融合负责高频定位与对手感知；世界模型同时预测对手交互演化、自车动力学和可行运动边界；基于 transformer 的多模态规划器生成候选轨迹，在世界模型中推演后按安全性、可行性和速度综合打分；最后由带物理极限包络约束的 CiLQR 执行；真实比赛数据持续用于更新世界模型和策略。作者报告：全尺寸真车在最高 256.3 km/h、峰值侧向加速度 26.8 m/s² 下保持了稳定的定位与感知，训练数据来自真车比赛；在全尺寸仿真赛车的多种对抗场景中，交互成功率为 88.3%；闭环迭代后圈速、平均速度、状态覆盖、超车与避碰能力，以及对轮胎/路面变化和未见赛道的适应都有提升。这提示世界模型可以作为连接认知推理与物理控制的边界感知机制，但关键的交互结果主要在仿真中得到，与已有赛车系统的定量对照有限，系统大量依赖规划与优化控制等工程模块，也没有公开代码或数据。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 把世界模型放在赛车智能体的核心，统一交互预测、动力学边界与控制，系统完整，但方法上多为已有模块的组合
+    E: 有真车高速运行与数据采集，但交互成功率等核心指标来自仿真，与已有方法的直接对照不足
+    O: 未找到代码、数据或模型
+    T: 南洋理工 Chen Lv 组在自动驾驶决策与控制方向有较多可核实的成果
+  evidence_read:
+  - abstract
+  - intro
+  - experiments
+  - method
+  - appendix
+  pending_checks:
+  - 是否有真车闭环对抗比赛的定量结果
+  - 与已有赛车栈（如 Indy Autonomous Challenge 队伍）的对比
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.10744'
+  title: 'Beyond Pixels: From Video Priors to 4D Worlds'
+  triage: exclude
+  reason: 超出范围：通用文本/图像到 4D 场景生成，与决策和控制无关，具身相关内容只有操作/导航隐变量的定性兼容性演示
+  date_v1: '2026-08-11'
+  category: world-model
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - ReLER, CCAI, Zhejiang University
+  one_liner: Latent-to-4D 把视频扩散模型的最终去噪隐变量直接映射到 4D 重建解码器；作者报告在 Text4D-200/I4D-200 上的 DINO-F1 比同隐变量的 Wan+4RC 级联高 2.88–5.81。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - experiments
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/hayd-zju/Beyond-Pixels
+    weights: none
+    data: none
+    license: none-found
+    note: 仓库只有 README，写明代码 coming soon
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.10824'
+  title: Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models
+  triage: include
+  reason: null
+  date_v1: '2026-08-11'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - inference-efficiency
+  - kv-cache
+  - training-free
+  - uncertainty
+  - openvla
+  affiliations:
+  - Graduate School of Information Science and Technology, The University of Tokyo
+  one_liner: Gated VLA-Cache 用 top-2 动作 token 的 logit 间隔作为置信度，在低置信时让 KV 缓存失效并完整重算；作者报告在 LIBERO-Goal/Long 上收回了 VLA-Cache 损失的全部精度，同时保留约 80% 的算力节省。
+  summary: |
+    VLA-Cache 等方法根据相邻帧图像块的相似度复用 KV 缓存以降低算力，但复用决策只看观测空间，察觉不到模型自身的不确定性；在抓取对准等关键时刻，过期的缓存会把误差带进自回归动作解码。为此作者提出 Gated VLA-Cache：一个无需训练的扩展，在解码时读取 top-1 与 top-2 动作 token 概率之差（几乎零开销），当该间隔低于阈值时，下一步让整个缓存失效并完整重算。在 LIBERO 四个 suite（每个 500 个 episode）上，作者报告：在 OpenVLA 上平均成功率为 69.9%、1.53 TFLOPs，VLA-Cache 为 68.1%、1.43 TFLOPs，完整推理为 70.1%、1.87 TFLOPs；在 Goal 和 Long 上分别收回了缓存造成损失的 106% 和 121%，Object 上略低于两条基线；在 OpenVLA-OFT 上缓存本身几乎不掉点，三种方法相差不到 0.8%，门控很少触发。阈值在一段较宽的区间内结果稳定，动作熵和注意力熵作为门控信号效果不佳。这提示模型输出置信度可以作为缓存复用的低成本安全阀，但收益只在离散 token 输出的 OpenVLA 上明显，阈值是在评测 suite 上调的，没有真机或实际延迟测量。
+  venue: IROS 2026
+  scores:
+    C: 2
+    E: 3
+    O: 1
+    T: 4
+  rationale:
+    C: 在 VLA-Cache 上加一个基于 logit 间隔的门控，属于小而实用的改进
+    E: 两种 VLA、四个 LIBERO suite 各 500 个 episode，附阈值敏感性分析，但只在仿真中验证，阈值在 Spatial 上调参，提升幅度也较小
+    O: 只有项目页，未找到代码仓库
+    T: 东京大学 JSK 实验室（Okada、Kawaharazuka）在机器人系统方向积累深厚
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 项目页是否链接了代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: n/a
+    data: n/a
+    license: unknown
+    note: 项目页 https://zjw4321.github.io/neural-introspection-gating-page/
+  uses:
+  - resource: libero
+    role: eval
+  - resource: openvla
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.10860'
+  title: 'Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility'
+  triage: include
+  reason: null
+  date_v1: '2026-08-11'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - 3d-pointmap
+  - bimanual
+  - mixture-of-transformers
+  - flexible-inference
+  affiliations:
+  - University of Washington
+  - Allen Institute for AI
+  one_liner: Flex-π 用冻结的 Wan VAE 同时编码 RGB 与 3D 点图，加上 DINO 语义，与动作联合去噪，单个 checkpoint 支持从纯动作到全联合生成；作者报告在真机双臂灵巧任务上比最强基线高 2–7 倍。
+  summary: |
+    现有世界-动作模型（WAM）几乎都只预测为像素重建训练的 RGB 隐变量，缺少操作所需的 3D 几何和物体语义监督。作者发现，冻结的视频生成 VAE 几乎能无损地编码 3D 点图，据此提出 6B 参数的 Flex-π：由 Depth Anything 3 生成的点图和 DINOv3 特征与 RGB 一起投影到共享隐空间，在 Mixture-of-Transformers 中与动作联合做 flow matching 去噪；逐流 dropout 加跨模态强制，使同一 checkpoint 可以在任意输入/输出流组合下运行，不需要新传感器，也可以不增加推理延迟。模型在 AgiBot World 上预训练后按任务微调。作者报告：在 YAM 双臂真机的五个任务（含毫米级插装的自修夹爪、软包拉链）上，纯动作模式和全联合模式都优于 π0.5、Fast-WAM 和 ManiFlow，任务越难优势越大；在未见物体、杂乱干扰和半量数据条件下仍保持领先；RoboTwin 50 任务平均成功率为 94.6%，高于所列 VLA 与 WAM 基线；消融显示 DINO 和点图流都带来提升。这提示把几何与语义引入 WAM 的联合预测可以提高示教效率和泛化，但收敛较慢，全联合模式仍比同规模 VLA 慢，在 LIBERO-Plus 上仍落后于数据更多的强 VLM 方法。
+  venue: ''
+  scores:
+    C: 4
+    E: 5
+    O: 4
+    T: 5
+  rationale:
+    C: 发现视频 VAE 可编码点图，并以此构建多流、算力可调的 WAM，对世界-动作模型子方向有明确的方法增量
+    E: 五个难度较高的真机双臂任务，含 OOD 与半量数据测试，另有 RoboTwin、LIBERO、LIBERO-Plus 大规模对比，以及输入/输出流和跨模态强制的消融
+    O: 仓库（MIT）含训练、评测、真机服务代码，HF 已发布 RoboTwin 与 LIBERO 权重；大规模预训练权重尚未发布
+    T: 华盛顿大学 Dieter Fox 组与 AI2，在机器人学习领域是公认的领先团队
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 在 AgiBot/YAM/DROID 上大规模预训练的 checkpoint 何时发布
+  open:
+    code: substantive
+    repo: https://github.com/geyan21/flex-pi
+    weights: partial
+    data: none
+    license: MIT
+    note: 探测未发现仓库，项目页链接到 geyan21/flex-pi；HF 已有 flexpi-robotwin、flexpi-libero 权重，README 写明大规模预训练 checkpoint 计划后续发布
+  uses:
+  - resource: agibot-world
+    role: pretrain
+  - resource: robotwin
+    role: eval
+  - resource: libero
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: robotwin
+    name: RoboTwin 2.0
+    desc: Bimanual manipulation simulation benchmark with 50 tasks under clean and domain-randomized settings.
+    links:
+      project: https://robotwin-platform.github.io
+      paper: https://arxiv.org/abs/2506.18088
+    subcategory: manipulation
+- arxiv_id: '2608.11174'
+  title: 'VIScore: Diagnosing Planning-Relevant Quality in Latent World Models'
+  triage: exclude
+  reason: 材料不足：arXiv 上两个版本都已被移除或撤回（管理员注明许可证问题，后续版本由作者撤回），没有可核查的全文
+  date_v1: '2026-08-11'
+  category: world-model
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: 提出综合编码器、预测器和规划器三方面的 VIScore 来解释隐空间世界模型的规划成功率（论文已撤回）。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.06729'
+  title: 'AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models'
+  triage: include
+  reason: null
+  date_v1: '2026-08-07'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - memory
+  - wrist-camera
+  - 3d-representation
+  - long-horizon
+  - diffusion-transformer
+  affiliations:
+  - Institute of Automation, Chinese Academy of Sciences
+  - University of Chinese Academy of Sciences
+  - Beijing Freedo Technology Co., Ltd.
+  - Beihang University
+  one_liner: AtlasVLA 只用腕部相机，靠体素哈希的 4D 持久世界记忆和自我工作记忆为 DiT 动作头提供条件；作者报告 LIBERO 平均 97.6%，真机长时程任务比 MemoryVLA 高 9 个点。
+  summary: |
+    反应式 VLA 在只有腕部相机时，物体一出视野就被“遗忘”，多步任务中也会丢失进度。为此作者提出 AtlasVLA：用 Depth Anything v3 估计深度，结合手眼标定得到的外参，把 2D 视觉 token 反投影成 3D，并以 TSDF 风格的体素哈希持续更新“4D 持久世界状态记忆”；同时用可学习的意图查询在 VLM（基于 OpenVLA-7B）中聚合信息，形成“自我工作记忆”来跟踪任务进度；动作由一个以 World-Ego 状态检索结果为条件的 300M DiT 生成。在只用腕部相机的设定下，作者报告：LIBERO 五个 suite 平均 97.6%，LIBERO-Long 为 94.6%，比同样只用腕部相机的 MemoryVLA 高 7.0 个点；RLBench 6 个任务平均 70.8%；Franka 真机 6 个通用任务平均 78.7%、4 个长时程任务平均 69.5%（每个任务 50 次），均高于使用第三人称视角的 π0 和 MemoryVLA。消融显示，去掉世界记忆后真机长时程成功率从 69.5% 降到 54.0%。这提示显式持久 3D 状态能弥补腕部相机的局部可观测性，但方法依赖准确的深度估计和外参，真机任务与基线数量有限，且没有公开代码。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 把显式 3D 体素记忆与任务进度记忆接入 VLA，以解决腕部相机设定下的部分可观测问题，属于明确但有限的方法增量
+    E: 覆盖 LIBERO、RLBench 和两组真机任务（每任务 50 次），有逐模块消融；真机基线只有 π0 和 MemoryVLA
+    O: 未找到代码、权重或项目页
+    T: 中科院自动化所刘静组在多模态大模型方向有积累，具身方向的成果信息有限，按默认给 3
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否计划开源代码与权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: ''
+  uses:
+  - resource: openvla
+    role: finetune
+  - resource: libero
+    role: eval
+  - resource: rlbench
+    role: eval
+  new_resources: []
+- arxiv_id: '2608.09926'
+  title: 'Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning'
+  triage: include
+  reason: null
+  date_v1: '2026-08-10'
+  category: world-model
+  route: adjacent
+  contribution: method
+  tags:
+  - video-world-model
+  - physical-dynamics
+  - ood-extrapolation
+  - structured-latent
+  - kinematics
+  affiliations:
+  - UCSD
+  - Adobe
+  one_liner: LDR 把隐状态转移写成显式运动学积分，只回归三阶及以上残差；作者报告在 PhyWorld 五类物理任务上，ID-OOD 误差差距比 DiT 基线小 20 倍以上，参数少 26 倍。
+  summary: |
+    主流视频扩散模型主要拟合像素外观，并不建模“像素如何随时间转移”，因此在训练分布之外往往违反运动规律。为此作者提出 Latent Dynamics Reasoning（LDR）：先用 soft-argmax 把每帧编码为只含几何位置与尺度的结构化隐变量，再从三帧条件中用有限差分得到速度和加速度，模型只回归三阶及以上的残差，低阶量通过数值积分逐步展开，最后通过扭曲条件帧解码出未来帧。在基于 PhyWorld 模拟器构建的白盒基准（匀速、抛物线、碰撞、弹跳、缩放五类，单球或双球）上，作者报告：在 256² 分辨率下，单任务与五任务联合训练时，LDR 的 ID-OOD 位置误差差距都比 DiT-S 基线小 20 倍以上；参数少 26 倍，速度快 143 倍；分辨率提高时 LDR 误差下降而基线 OOD 误差上升；只在红球上训练，也能预测地球纹理物体和反向运动。消融显示，动力学推理和结构化隐变量两个组件都必要。这提示把物理先验写进隐空间转移有助于外推，但实验限于简单二维刚体合成场景、单次运行，结构化隐变量也无法表示外观动态，离机器人决策中的真实世界模型还有较大距离。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 以显式运动学积分约束隐空间动力学，针对世界模型的 OOD 外推问题给出了清晰思路，但适用范围很窄
+    E: 受控白盒基准上 ID/OOD 拆分清楚、消融完整，但只有合成小球场景、单个随机种子，没有真实视频或决策任务
+    O: 仓库有部分代码（CC-BY-NC），HF 上有权重和数据集
+    T: UCSD Chandraker 组与 Adobe Research 在视觉与生成方向有可核实的积累
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 仓库是否包含训练代码（探测只有 7 个代码文件）
+  open:
+    code: partial
+    repo: https://github.com/adobe-research/LDR
+    weights: open
+    data: open
+    license: CC-BY-NC
+    note: HF 有 haodongli/LDR 权重与数据集，仅限非商业使用
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.11215'
+  title: 'Poor Man''s Agentic Modeling: Simulating Large LLM-Agent Societies on a Laptop'
+  triage: exclude
+  reason: 超出范围：用低参数代理模型替代 LLM 智能体来模拟社会/经济系统，属于多智能体与统计物理研究，与具身或物理世界交互无关
+  date_v1: '2026-07-19'
+  category: foundation-general
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - Independent Researcher, Tel Aviv, Israel
+  one_liner: 用少量 LLM 查询拟合低参数代理模型来替代 LLM 智能体，在笔记本上模拟任意规模的 LLM 智能体社会。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/YehudaItkin/poor-mans-agentic-modeling
+    weights: n/a
+    data: open
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2608.11216'
+  title: 'AutoWorldModel-Bench: A State-Centric Benchmark for Automated World-Model Research'
+  triage: exclude
+  reason: 超出范围：评测编码智能体在游戏结构化状态上自主改进世界模型的能力，不涉及具身感知、机器人或物理控制
+  date_v1: '2026-07-20'
+  category: world-model
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - Electronic Arts
+  - Simon Fraser University
+  one_liner: 在 8 个游戏环境的结构化状态上，评测前沿编码智能体在固定算力下自主改进基础世界模型的能力。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  pending_checks: []
+  open:
+    code: unknown
+    repo: ''
+    weights: n/a
+    data: unknown
+    license: unknown
+    note: 探测命中的 harbor-framework/harbor 是通用评测框架，不确定是否为本文官方仓库
+  uses: []
+  new_resources: []

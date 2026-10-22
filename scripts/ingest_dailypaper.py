@@ -24,6 +24,9 @@ from typing import Any
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from migrate_v2 import migrate_paper  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[1]
 PAPERS_YAML = ROOT / "data" / "papers.yaml"
 
@@ -97,7 +100,9 @@ def convert(paper: dict[str, Any]) -> dict[str, Any]:
             "code": paper.get("code_url", ""),
             "demo": paper.get("demo_url", ""),
         },
-        "highlight": paper.get("review_rating", "👀"),
+        # The upstream 🔥/👀 is only a triage hint; the displayed badge comes from
+        # the two-layer review (docs/METHODOLOGY.md).
+        "upstream_rating": paper.get("review_rating", ""),
         "added": date.today().isoformat(),
         "source": "dailypaper",
     }
@@ -134,7 +139,7 @@ def main(argv: list[str]) -> int:
             continue
         if p.get("arxiv_id") in existing_ids:
             continue
-        entry = convert(p)
+        entry = migrate_paper(convert(p))
         existing_papers.append(entry)
         existing_ids.add(entry["arxiv_id"])
         added += 1

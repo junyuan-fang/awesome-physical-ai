@@ -1,0 +1,720 @@
+run:
+  scan_date: '2026-10-22'
+  kind: migration
+  note: re-review of all papers tracked before the v2 pipeline
+items:
+- arxiv_id: '2606.17906'
+  title: 'WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT'
+  triage: include
+  reason: null
+  date_v1: '2026-06-16'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-action-model
+  - reinforcement-learning
+  - online-finetuning
+  - manipulation
+  affiliations:
+  - State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University
+  - Northeastern University
+  - Tsinghua University
+  one_liner: 在 Genie Envisioner-ACT 上对世界模型做在线视频 SFT（KL 约束）、对动作头用重建奖励做 RL；作者报告 LIBERO-Object 成功率 68%→82%，RLBench Water Plants 19%→22%。
+  summary: |
+    为缓解世界-动作（WA）模型只依赖专家示范、无法通过交互持续改进的问题，作者提出 WAM-RL：以 Genie Envisioner-ACT 为基座，世界模型用在线收集的成功轨迹做视频自监督微调，并加 KL 正则稳定其潜空间以免动作头失配；动作头则以“想象未来与实际执行观测的一致性”作为重建奖励做策略梯度优化，比较了像素 MSE、光流、DINOv2、V-JEPA2 四种相似度。在 LIBERO-Object 与 RLBench 单任务 Water Plants 上，作者报告联合优化使成功率由 68% 升至 82%、19% 升至 22%，并优于只优化动作头的 RL；消融显示像素 MSE 奖励最佳，光流虽区分度最高却未带来收益，定性上视频 SFT 后世界模型会预测重抓等恢复行为。该结果提示长时程任务中世界模型质量是瓶颈，但实验仅覆盖两个仿真设置、未见真机与多种子统计，RLBench 增益很小，KL 约束也限制了世界模型的适应幅度。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 4
+  rationale:
+    C: 首次系统地把 RL 引入 WA 范式并区分世界模型/动作头的作用，思路清楚但方法是已有组件（在线 SFT+重建奖励 RL）的组合。
+    E: 仅 LIBERO-Object 与 RLBench 单任务两组仿真结果，RLBench 提升 3 个点，无真机、无方差统计，证据偏薄。
+    O: 未找到官方仓库；探测到的 cvlab-kaist/Geometric-Action-Model 与本文无关。
+    T: 通讯作者张尚鸿（北大）团队在具身 VLA/机器人学习方向有多项可核实成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否会发布代码与微调权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 探测命中的 cvlab-kaist/Geometric-Action-Model 为另一篇 KAIST 工作的仓库，与本文无关；本文未给出官方代码链接。
+  uses:
+  - resource: libero
+    role: eval
+  - resource: rlbench
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.18112'
+  title: 'Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System'
+  triage: include
+  reason: null
+  date_v1: '2026-06-16'
+  category: navigation
+  route: core
+  contribution: model
+  tags:
+  - navigation-foundation-model
+  - vln
+  - agentic-system
+  - qwen3-vl
+  - autonomous-driving
+  affiliations:
+  - Qwen Team
+  one_liner: 基于 Qwen3-VL 的多任务导航模型，以可在推理时重配置的任务模式与观测参数服务上层智能体；作者报告 VLN-CE RxR SR 76.5%、EVT-Bench TR 90.0%、NAVSIM PDMS 91.4。
+  summary: |
+    为让同一导航模型在指令跟随、目标搜索、目标跟踪和自动驾驶间按需切换观测策略，Qwen 团队提出 Qwen-RobotNav：在 Qwen3-VL 上加轻量 MLP 轨迹头，以统一航点预测形式建模所有任务，并开放任务模式与 token 预算、时间衰减、相机权重、帧采样方式等参数，训练时对这些参数全部随机化；训练数据 15.6M 样本，含仿真轨迹、文生视频自动合成的导航数据与约 15% 视觉语言数据。作者报告在 VLN-CE RxR、EVT-Bench、NAVSIM 等基准取得最优或可比结果，作为上层规划器调用模块时在 HM-EQA 与 EXPRESS-Bench 上比此前最好方法分别提升 10.8% 与 15.4% 且导航步数减少 77%，并在 Unitree Go2 上做了零样本真机部署和 2B→8B 扩展分析。该结果提示“可配置观测上下文”是多任务导航基础模型的有效接口，但目前仓库仅有 README，权重与数据未开放，跨基准数字条件各异不宜横比。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 4
+  rationale:
+    C: 将多任务导航重构为可配置观测上下文建模并面向智能体调用，覆盖室内导航到自动驾驶，对导航基础模型子方向有明确增量。
+    E: 覆盖 VLN-CE、VLNVerse、VLN-PE、HM3D/OVON、EVT-Bench、EQA、NAVSIM、AlpaSim 等多基准并有消融、扩展曲线与 Go2 真机部署。
+    O: 官方仓库仅 4 个文件、无代码，权重与训练数据未公开。
+    T: Qwen 团队及作者中 NaVid/NavFoM 系列作者在 VLM 与具身导航方向积累可核实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 论文未在 HTML 中列出具体机构，需核对 PDF 署名（Qwen Team 之外是否有合作单位）
+  - 仓库是否后续发布模型权重
+  open:
+    code: placeholder
+    repo: https://github.com/QwenLM/Qwen-RobotNav
+    weights: none
+    data: none
+    license: none-found
+    note: 仓库仅含 README 等 4 个文件，无代码。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.18208'
+  title: Looped World Models
+  triage: exclude
+  reason: 超出范围：在 ScienceWorld/ALFWorld 文本环境中做状态描述预测，以 EM/BLEU 对比 LLM API，无视觉感知或物理控制成分
+  date_v1: '2026-06-16'
+  category: world-model
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - FaceMind Research Asia
+  one_liner: 把参数共享的循环 Transformer 用于世界建模，实验仅在 ScienceWorld/ALFWorld 文本环境做下一状态文本预测。
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.18589'
+  title: 'DREAM-Chunk: Reactive Action Chunking with Latent World Model'
+  triage: include
+  reason: null
+  date_v1: '2026-06-17'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - action-chunking
+  - test-time-scaling
+  - latent-world-model
+  - reactive-control
+  affiliations:
+  - Purdue University
+  - Stanford University
+  one_liner: 测试时采样多条动作块并用轻量潜在世界模型推演，按观测潜态最接近者切换执行块，无需微调 VLA；作者报告 SO-101 上 USB 插拔 75%→95% 等真机提升。
+  summary: |
+    为缓解 VLA 动作块一旦提交即开环执行、在随机动力学和执行误差下脆弱的问题，作者提出 DREAM-Chunk：测试时从固定策略批量采样多条候选动作块，用与策略同数据训练的轻量潜在世界模型（RSSM 或 JEPA 式，约 15M 参数）并行推演各块的潜在未来，执行中每步把真实观测编码后与同相位“梦境”潜态匹配并切换到最一致的块，无需策略微调。在 Kinetix 12 个 2D 环境中，作者报告随动作噪声与候选数增大收益增加，且依赖示范中含纠正行为；在 SO-101（SmolVLA）三项任务 20 次试验中成功率由 75%/60%/35% 升至 95%/80%/45%，并在 Franka 上做了扰动下插罐实验。世界模型开销 <10 ms，但批量采样使 VLA 推理从约 129 ms 增至 300 ms 以上。该结果提示轻量世界模型可作为动作块的反应式选择器，但它只能挑选策略已有的纠正模式，真机任务与试验数较少，边缘设备上的采样规模受限。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 以潜在世界模型做动作块测试时选择是扎实的增量，与 BID/RTC 等测试时方法同一脉络，不改变策略本身。
+    E: Kinetix 仿真有多基线与消融，真机覆盖两种机械臂、两种 VLA，但每任务仅 20 次试验、任务数较少。
+    O: 仅有项目页，未找到代码仓库。
+    T: Purdue 与 Stanford 作者在动作块解码（BID）与腿足/控制方向有一定相关成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否发布代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文仅给出项目页 wenxichen2746.github.io/DREAM-Chunk。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.18953'
+  title: Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement
+  triage: include
+  reason: null
+  date_v1: '2026-06-17'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - residual-rl
+  - sim-to-real
+  - vla
+  - object-pose
+  - self-improvement
+  affiliations:
+  - KAIST, South Korea
+  - Microsoft Research Asia - Tokyo, Japan
+  - The University of Tokyo, Japan
+  one_liner: 以 6-DoF 物体位姿+本体状态+VLA 基础动作为观测，在 MuJoCo 中训练残差 RL 并零样本迁移到 FR3；作者报告五项真机任务平均成功率 42%→76%。
+  summary: |
+    为让仿真中训练的 RL 在不做真机 RL 或蒸馏的情况下改进真实 VLA，作者提出以物体为中心的残差 RL：残差策略只观测 6-DoF 物体位姿、本体状态和冻结 VLA 给出的基础动作，避开视觉域差；同时把同一批遥操作轨迹在简化 MuJoCo 场景中回放，训练一个“仿真版”VLA 与真实 VLA 动作分布对齐，残差在仿真中用 TD3 训练并加入位姿噪声与随机丢弃，部署时由 FoundationPose+SAM2 提供位姿、低置信度时置零。基于 GR00T-N1.5、每任务 30 条示范，作者报告五项 FR3 桌面任务平均成功率由 42% 升至 76%，另一 VLA 骨干上也有提升；消融显示图像式残差与特权状态蒸馏迁移更差，位姿丢弃贡献最大；用残差修正后的真机轨迹再微调 VLA 可进一步提升。该结果提示低维物体中心观测是残差 sim-to-real 的有效接口，但依赖手动指定物体与位姿跟踪，接触动力学差异未被弥合，任务均为较简单的桌面操作。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 4
+  rationale:
+    C: 以物体位姿为残差观测并配对仿真/真实 VLA 的设计实用清晰，但属已有残差 RL 与位姿估计的组合。
+    E: 五项真机任务零样本迁移、跨两种 VLA、观测空间与鲁棒训练消融以及自我改进实验，较完整。
+    O: 仅有微软研究院文章页，未找到代码仓库。
+    T: MSRA、东京大学（Ikeuchi/Matsushita）与 KAIST（Choo）在视觉与机器人学习方向积累可核实。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 正文表格数值在缓存中缺失，42%/76% 取自摘要
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 项目页为 Microsoft Research 文章页，无代码链接。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.18960'
+  title: 'Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation'
+  triage: include
+  reason: null
+  date_v1: '2026-06-17'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - action-conditioned-world-model
+  - memory
+  - policy-evaluation
+  - wrist-camera
+  affiliations:
+  - Dalian University of Technology
+  - Samsung R&D Institute China-Beijing (SRCB), China
+  one_liner: 以腕部视角 4D surfel 记忆按未来动作检索历史帧，增强多视角动作条件世界模型；作者报告策略评估与真机相关性比 Ctrl-World 高 14.5%，合成数据使长时程任务成功率 58%→72%。
+  summary: |
+    为解决操作场景中末端遮挡和腕部相机快速运动导致世界模型遗忘或幻觉此前见过的场景细节，作者提出 Mem-World：在 Ctrl-World 基础上加入 W-VMem，一种以腕部视角为中心、带时间与任务相关属性的 4D surfel 记忆；通过正运动学由未来动作推算腕部相机位姿，渲染 surfel 并打分以检索信息量大且不冗余的历史帧作为生成条件，生成后再更新记忆。在 34 条精选 DROID 回放轨迹上，作者报告第三视角与腕部视角的 PSNR/SSIM/LPIPS 及物体一致性均优于 Cosmos Predict 2.5 与 Ctrl-World，并优于短时窗与步长采样记忆；在自建 Franka 五项任务上，以世界模型评估两种通用策略，其成功率与真机的 Pearson 相关比 Ctrl-World 高 14.5%；用其生成并人工筛选的成功轨迹后训练，三项长时程任务真机成功率由 58% 升至 72%。该结果提示几何感知记忆检索能提升长时程操作仿真的持久性，但模型不显式约束物理，评测轨迹与任务规模有限。
+  venue: CoRL 2026
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 把 VMem 式 surfel 记忆扩展到动态多视角操作场景，针对性强但属已有记忆机制的迁移与改造。
+    E: 有生成质量对比、记忆检索消融、与真机的策略评估相关性和合成数据后训练三类实验，含真机验证，但评测轨迹数与任务数偏少。
+    O: 未找到代码或权重。
+    T: 大连理工卢湖川团队与三星北京研究院在视觉方向有积累，机器人世界模型方向成果较新。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否发布代码与模型
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: ''
+  uses:
+  - resource: droid
+    role: finetune
+  new_resources: []
+- arxiv_id: '2606.19928'
+  title: 'SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour'
+  triage: include
+  reason: null
+  date_v1: '2026-06-18'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - quadruped
+  - parkour
+  - equivariance
+  - latent-world-model
+  - sim-to-real
+  affiliations:
+  - Mirrorme Technology Co., Ltd. Shanghai, China.
+  - Center for X-Mechanics, Zhejiang University, Hangzhou, China.
+  - ZJU-Hangzhou Global Scientific and Technology Innovation Center, Hangzhou, China.
+  one_liner: 把左右镜像等变性硬嵌入 RSSM 世界模型与 actor-critic，用于四足跑酷；作者报告真机跨越 2.13 m 间隙、攀上 1.63 m 平台，并对镜像地形零样本泛化。
+  summary: |
+    为解决潜在世界模型把左右对称的交互当作独立模式重复编码、增加学习负担并限制极限跑酷探索的问题，作者提出 SWAP：在 WMP 式 RSSM 世界模型中用反射群等变 CNN/MLP/GRU 构造对称潜空间，并配合等变 actor 与不变 critic，连 AMP 判别器也做成对称不变，在 Isaac Gym 中单阶段端到端训练。仿真中，作者以每点 1500 次试验比较完整 SWAP、去掉等变策略、去掉全部等变（即 WMP）和对称损失正则四种配置，报告在只见过单侧倾斜地形后对镜像地形的成功率更高、重建误差更稳定，且在高难度跳跃与攀爬上不易出现探索崩溃。真机方面，Apollo 四足机器人零样本跨越 2.13 m 间隙、攀上 1.63 m 平台，作者称为四足跑酷记录，并展示多种户外地形。该结果提示对称等变是推进敏捷运动极限的有效结构先验，但对比主要在自家消融间进行，真机结果以示范为主、缺少系统成功率统计，离散落脚点等场景尚未验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 首次把硬等变约束同时嵌入世界模型与策略并取得极限跑酷真机结果，对腿足世界模型子方向有明确增量。
+    E: 仿真消融试验量大、含镜像泛化测试，真机室内外零样本部署，但真机缺少系统成功率统计与外部基线对比。
+    O: 仅有项目页，未找到代码仓库。
+    T: 浙大与镜识科技团队有四足机器人研发积累，学习型运动控制的可核实成果相对有限。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否发布代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: 论文仅给出项目页 swap-parkour.github.io。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.20104'
+  title: 'Sensorimotor World Models: Perception for Action via Inverse Dynamics'
+  triage: include
+  reason: null
+  date_v1: '2026-06-18'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - jepa
+  - inverse-dynamics
+  - representation-collapse
+  - latent-planning
+  affiliations:
+  - Max Planck Institute for Intelligent Systems, Tübingen, Germany
+  - Department of Computer Science, Brown University, Providence, RI, USA
+  - ELLIS Institute, Tübingen, Germany
+  - ETH Zürich, Zürich, Switzerland
+  one_liner: 用单一逆动力学正则端到端训练 JEPA 式潜在世界模型，防止表征坍缩并偏向可控自由度；作者报告在四个仿真控制任务上规划成功率持平或优于 SIGReg 基线。
+  summary: |
+    为解决 JEPA 式潜在世界模型端到端训练易坍缩、且表征未必与动作相关的问题，作者提出感觉运动世界模型 SMWM：在前向潜在动力学损失之外，只加一个由相邻两帧嵌入预测中间动作的逆动力学头，无需冻结编码器、EMA 目标或分布正则；该约束迫使表征保留与动作相关的信息、丢弃不受控的干扰。在已知真实状态的“点世界”中，作者展示嵌入的有效维数与可控自由度一致、能过滤随机运动干扰点；在 TwoRoom、Reacher、Push-T、OGBench-Cube 四个仿真任务上沿用 LeWM 的 CEM 规划协议，报告规划成功率与 SIGReg 基线持平或更高，在 5 维动作的 OGBench-Cube 上优势最大，但 Push-T 在较远目标偏移下两者均明显下降。该结果提示逆动力学是一种简单的“为动作而感知”的归纳偏置，但仅在中等规模仿真中验证，单帧编码无法表达速度等量，且假设动作可由相邻观测辨识。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 4
+  rationale:
+    C: 以逆动力学作为 JEPA 世界模型的唯一防坍缩正则，概念简洁并有表征分析，但逆动力学辅助损失本身并非新思路。
+    E: 四个仿真环境与强基线 SIGReg 对比，含探针、几何分析与超参敏感性，无真机。
+    O: 仓库含实质训练与规划代码（MIT），基于公开数据集；未见发布权重。
+    T: Schölkopf（MPI）与 Balestriero 在因果表征与 JEPA/自监督方向有多项标志性工作。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否提供训练好的模型权重
+  open:
+    code: substantive
+    repo: https://github.com/petr-ivashkov/sensorimotor-world-model
+    weights: unknown
+    data: open
+    license: MIT
+    note: 数据集为 LeWM/DINO-WM 等公开离线数据。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.20521'
+  title: 'HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining'
+  triage: include
+  reason: null
+  date_v1: '2026-06-18'
+  category: foundation-general
+  route: adjacent
+  contribution: data
+  tags:
+  - egocentric-video
+  - pretraining-data
+  - world-action-model
+  - scaling
+  affiliations:
+  - PKU
+  - NUS
+  - MIT
+  - UCSB
+  - NVIDIA
+  one_liner: 在 5000 小时等规模下比较第一视角人类视频与遥操作机器人数据做 WAM 预训练；作者报告人类视频在未见任务上动作验证损失约低 20%，且随规模对数线性下降。
+  summary: |
+    为回答“第一视角人类视频能否替代遥操作机器人数据做具身预训练”，作者从 HumanNet 第一视角部分筛选 5000 小时并以手部重定向估计末端位姿作伪动作，与等时长多本体机器人数据分别预训练同一个基于 Wan 2.2 的 MoT 自回归世界-动作模型，再用 AgiBot World 15 个任务各 100 条示范统一后训练。作者报告：人类视频预训练从 100 到 5000 小时验证损失单调下降、符合对数线性规律；在已见任务上两种来源接近（0.0067 vs 0.0071），在未见任务上人类视频为 0.0204、机器人数据停滞在约 0.025。AgiBot 双臂三项真机任务中，人类视频预训练模型分布内/外成功率为 92.5%/90%，但对照是未经具身预训练的 Wan 2.2（40%/0%），并非机器人数据预训练模型。该结果提示人类视频的覆盖度在预训练阶段有价值，但主要证据是验证损失，后训练集与架构单一，摘要中的成功率对比口径需注意，代码与数据尚未发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 等规模受控对比人类视频与机器人数据作预训练来源，结论对具身数据策略有直接参考价值。
+    E: 有规模曲线与两种来源对照，但核心指标是动作验证损失，真机仅对比无具身预训练基线、未与机器人数据预训练对比，后训练设置单一。
+    O: 给出的 HumanNet 仓库现含 StableVLA 等其他项目代码，本文预训练代码、模型与 HumanNet 语料标注为即将发布。
+    T: 北大周大权、NUS 蔡达成、MIT Matusik 与 NVIDIA 等团队在视频生成与具身方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 机器人数据预训练模型的真机成功率未报告，需核对 PDF 是否另有对照
+  - HumanNet 语料与本文后训练验证代码的发布情况
+  open:
+    code: placeholder
+    repo: https://github.com/DAGroup-PKU/HumanNet
+    weights: none
+    data: none
+    license: none-found
+    note: 仓库为 HumanNet 研究主页，含 StableVLA 与 RoVid-X 相关代码，未见本文 WAM 预训练代码；HumanNet 语料、筛选管线与后训练验证代码 README 标注即将发布。探测到的 HF 权重/数据集属其他项目。
+  uses:
+  - resource: agibot-world
+    role: finetune
+  new_resources: []
+- arxiv_id: '2606.20562'
+  title: 'MemoryWAM: Efficient World Action Modeling with Persistent Memory'
+  triage: include
+  reason: null
+  date_v1: '2026-06-18'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - memory
+  - long-horizon
+  - bimanual
+  affiliations:
+  - The Chinese University of Hong Kong
+  - Tsinghua University
+  - Zhejiang University
+  one_liner: 以近期帧、事件边界锚帧与少量 gist token 组成混合记忆的世界-动作模型；作者报告 RMBench 平均成功率比 LingBot-VA 高 4.8 个百分点，且推理延迟与显存更低。
+  summary: |
+    为解决世界-动作模型在“只看有限近期窗口”（非马尔可夫任务失败）与“缓存全部历史”（时延与显存随长度增长）之间的取舍，作者提出 MemoryWAM：基于 Wan2.2-TI2V-5B 视频 DiT 与约 1B 动作 DiT 的 MoT 结构，推理时不生成视频，只用视频分支维护 KV 缓存；记忆由滑动窗口近期帧、任务起始等事件边界锚帧和压缩长程历史的 gist token 组成，并设计相应注意力掩码。在 RMBench 九项记忆依赖双臂任务（每任务 50 条示范、100 次评测）上，作者报告平均成功率比保留全历史的 LingBot-VA 高 4.8 个百分点、各任务均不低于对手，而短窗口的 π 系列 VLA 基线与 FastWAM 仅约 10% 与 6%；ARX 双臂真机 Shell Game 与 Look and Press 任务上也优于两者，并在单层效率对比中显示延迟与显存低于全注意力、TTT 与 RNN。消融显示去掉 gist token 下降最大，全注意力反而更差。该结果提示紧凑混合记忆可兼顾效率与长时依赖，但部分任务使用了额外预训练或动作历史以对齐基线，真机任务少，语义推理能力受视频扩散骨干限制。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 5
+  rationale:
+    C: 面向 WAM 的记忆-效率矛盾给出完整的混合记忆设计，对长时程记忆依赖操作有明确增量。
+    E: RMBench 九任务、强 VLA/WAM 基线、记忆机制效率对比、组件消融及两项真机任务，较完整。
+    O: 仅有项目页，未找到代码或权重。
+    T: 许华哲、庞江淼、林达华团队在机器人学习与具身基础模型方向有多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否发布代码与权重
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 论文仅给出项目页 yangsizhe.github.io/MemoryWAM。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.20781'
+  title: 'World Action Models: A Survey'
+  triage: include
+  reason: null
+  date_v1: '2026-06-18'
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - world-action-model
+  - video-generation
+  - vla
+  affiliations:
+  - National University of Singapore
+  one_liner: 世界-动作模型（WAM）综述：界定其与 VLA、视频世界模型的边界，按“渲染后解码/仅潜空间/无视频生成”三类及四轴结构梳理现有工作与数据、评测和开放问题。
+  summary: |
+    为厘清近两年快速膨胀的“世界-动作模型”与通用世界模型、视频生成模型、VLA 之间的模糊边界，这篇 57 页综述先给出定义：只有当预测的未来进入动作产生、打分或训练路径时才算 WAM。随后从两个互补视角组织文献：一是推理时必须生成到哪一步——渲染像素后解码动作（如 UniPi、AVDC）、只用中间潜变量或特征（如 VPP、Genie Envisioner）、完全不用视频生成骨干（如 FLARE、JEPA 类）；二是按预测基底、骨干族、动作耦合方式和部署方式四轴拆解，并以统一记号把每项工作列入普查表。在此基础上讨论可交互性、因果性、持久性、物理合理性与泛化，以及数据、评测与开放挑战，归纳出“少生成未来、保留控制所需信息”的趋势。该综述为快速变化的 WAM 方向提供了分类框架与工作清单，但收录截至 2026 年 5 月，分类边界属作者界定，未做统一实验对比。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 4
+  rationale:
+    C: 为新兴的 WAM 方向提供明确定义、双视角分类与较全的普查表，参考价值高。
+    E: 综述覆盖面广且有统一形式化，但无实验性比较，结论属归纳。
+    O: 配套 awesome 列表仓库与主页可用，但无代码类资源（综述本身无需代码）。
+    T: NUS 王鑫超、颜水成团队在视觉生成与多模态方向有多项知名成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/world-action-models/awesome-world-action-models
+    weights: n/a
+    data: n/a
+    license: none-found
+    note: 仓库为文献列表（awesome list），无代码。
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.23085'
+  title: 'Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents'
+  triage: include
+  reason: null
+  date_v1: '2026-06-22'
+  category: manipulation
+  route: adjacent
+  contribution: method
+  tags:
+  - failure-detection
+  - runtime-monitoring
+  - v-jepa
+  - conformal-prediction
+  - long-horizon
+  affiliations:
+  - University of Michigan
+  - Princeton University
+  - University of Virginia
+  one_liner: 用 V-JEPA 2-AC 动作条件预测潜变量+因果 Transformer 做长时程操作失败检测，仅需轨迹级成败标签并用函数型共形预测定阈；作者报告 BEHAVIOR-1K 上 ROC-AUC 0.76、平衡准确率 0.78。
+  summary: |
+    为解决长时程操作中失败起点模糊、缺少逐帧标注而难以在线检测失败的问题，作者提出 Foresight：冻结 V-JEPA 2-AC 视觉编码器，在各数据集上训练动作条件预测器，取“给定策略下一动作块后预测的潜态”作为时间步 token，输入因果 Transformer 输出逐步失败分数，只用轨迹级成败标签训练，并以函数型共形预测在成功轨迹上校准随时间变化的阈值。它不依赖策略内部状态，可跨策略使用。在 LIBERO-Long、自建 ManiSkill-Long 与 BEHAVIOR-1K 上，与 FAIL-Detect、SAFE、RND、Gauge 比较，作者报告平衡准确率均为最佳（LIBERO-Long 0.94），在两个更长基准上 ROC-AUC 也最佳，BEHAVIOR-1K 上 0.76/0.78 对比最强基线 0.72/0.64；ReactorX 与 Franka 真机四种策略中三种设置 ROC-AUC 最佳，跨策略迁移可行但不对称。该结果提示动作条件世界模型潜变量是可扩展的监控信号，但 LIBERO 上 ROC-AUC 并不领先，世界模型计算开销大，共形保证依赖校准分布匹配。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 4
+  rationale:
+    C: 把动作条件世界模型潜变量用于长时程失败检测是合理的新组合，与 Gauge 等同类工作相比增量中等。
+    E: 三个仿真基准、四个强基线、真机两种机械臂四种策略及跨策略与骨干/特征消融，较完整。
+    O: 仅有项目页；探测到的仓库是通用学术主页模板，非官方代码。
+    T: Princeton 王梦迪、UMich Jenkins 等在 RL 与机器人学习方向有可核实积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - 是否发布代码与采集的 rollout 数据
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: 探测命中的 eliahuhorwitz/Academic-project-page-template 是项目页模板仓库，非本文代码。
+  uses:
+  - resource: libero
+    role: eval
+  - resource: behavior-1k
+    role: eval
+  new_resources: []
+- arxiv_id: '2606.23444'
+  title: 'SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors'
+  triage: include
+  reason: null
+  date_v1: '2026-06-22'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - quadrotor
+  - jepa
+  - mppi
+  - sim-to-real
+  - dynamics-model
+  affiliations:
+  - University of California Berkeley, Department of Electrical Engineering and Computer Sciences, Berkeley, CA 94720, USA
+  - New York University, New York, NY, USA
+  - Brown University, Providence, RI, USA
+  one_liner: JEPA 式潜在动力学模型+物理启发探针+MPPI 用于四旋翼实时控制，仅用域随机化仿真数据训练并零样本上机；作者报告长时程开环预测误差低于直接预测模型，户外负载/换桨下仍稳定跟踪。
+  summary: |
+    为缓解神经动力学模型自回归推演误差累积、难以支撑敏捷四旋翼长时程预测控制的问题，作者提出 SkyJEPA：以 TCN 编码状态与动作历史，在潜空间用 GRU 多步推演，并以 SIGReg 防止表征坍缩；第二阶段冻结潜在模型，训练一个经可微运动学的物理启发探针把潜态映射为可解释的位置、速度、姿态，从而在 MPPI 中计算跟踪代价与约束，在 Orin NX 上满足 10 ms 控制预算。训练数据来自 500 个域随机化参数下的 2 万条高斯过程随机参考轨迹仿真跟踪记录。作者报告开环推演中位置、速度、姿态 RMSE 随步长增长明显慢于直接预测模型，对观测噪声更鲁棒；户外零样本闭环跟踪多种参考轨迹，在加载负载和更换螺旋桨时无需重训仍能跟踪。该结果提示 JEPA 式潜在动力学可用于高频反馈控制而不仅是运动学规划，但输入为全状态估计而非视觉，户外试验每条轨迹仅 5 次，对比基线以神经预测模型为主。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 5
+  rationale:
+    C: 把 JEPA 式潜在动力学带入高频四旋翼控制并配物理探针，有新意，但输入为低维状态，方法组件较成熟。
+    E: 开环多模型对比、噪声鲁棒性与数据规模分析，加户外零样本闭环、负载与换桨测试。
+    O: 未找到代码、数据或权重。
+    T: Loianno 的空中机器人团队与 LeCun、Balestriero 的 JEPA 工作在各自方向均属领先。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否发布代码与仿真数据生成管线
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.24089'
+  title: 'DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous
+    Stairs'
+  triage: include
+  reason: null
+  date_v1: '2026-06-23'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - wheel-legged
+  - stair-climbing
+  - teacher-student
+  - world-model-regularization
+  affiliations:
+  - School of Mechatronical Engineering, Beijing Institute of Technology
+  one_liner: 在并发师生框架中以世界模型状态预测正则教师编码器、以动量目标编码器稳定学生蒸馏，用于双足轮式机器人连续楼梯；作者报告 20 cm 宽台阶成功率 89.3%，CTS 等基线失败。
+  summary: |
+    为解决双足轮式机器人在连续楼梯上，师生蒸馏框架的教师编码器只保留与即时奖励相关的地形信息、学生直接回归快速变化的教师表征导致维度坍缩的问题，作者提出 DynaWM：在 CTS 框架中加入深残差世界模型，由教师编码器输出与特权观测预测下一特权状态，以预测损失作为动力学感知正则；学生侧借鉴 BYOL 维护指数滑动平均的动量目标编码器提供稳定蒸馏目标，并增设关节范围、轮距等奖励。在 Isaac Gym 中与 RMA 教师、CTS、纯域随机化及多种消融比较，作者报告 PCA 第一主成分与地形高度相关性和线性探针得分更高，运动更平滑，20 cm 宽台阶成功率 89.3% 而 CTS 与去掉世界模型或动量目标的变体失败；真机在带边缘凸起等未见楼梯上做了各 5 次试验。该结果提示前向动力学正则能改善特权地形信息的蒸馏，但真机试验少，平台单一，方法由已有组件组合而成。
+  venue: IROS 2026
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 世界模型正则与 BYOL 式动量目标在师生蒸馏中的组合，针对轮腿楼梯有效但增量有限。
+    E: 仿真有多基线、组件消融与表征分析，真机仅两类楼梯各 5 次试验。
+    O: 未找到代码。
+    T: 北理工余张国团队在双足/仿人机器人方向有长期积累，学习型控制成果中等。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否发布代码
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2606.24101'
+  title: 'NavWM: A Unified Navigation World Model for Foresight-Driven Planning'
+  triage: include
+  reason: null
+  date_v1: '2026-06-23'
+  category: navigation
+  route: core
+  contribution: model
+  tags:
+  - navigation-world-model
+  - image-goal-navigation
+  - multimodal-trajectory
+  - mamba
+  affiliations:
+  - Institute of Automation, Chinese Academy of Sciences
+  - School of Artificial Intelligence, University of Chinese Academy of Sciences
+  - Beihang University
+  one_liner: 以 Mamba 骨干统一潜在世界推理、锚点式多模态轨迹提议与 CDiT 视觉前瞻，用世界模型挑选候选轨迹；作者报告图像目标导航已见环境 SR 0.72，高于 UniWM 的 0.66。
+  summary: |
+    为缓解视觉导航策略短视、模式坍缩以及感知、生成与控制模块彼此割裂的问题，作者提出 NavWM：以双向 Mamba 为共享骨干，引入可学习的潜在世界 token，由 Depth Anything V2 与 SAM 生成的伪标签监督其预测未来深度与语义；在此之上用锚点式目标预测加目标条件轨迹生成提出多条候选轨迹，再由以光流编码动作、交叉注意力注入场景特征的 CDiT 世界模型生成各候选的未来画面，据此选择最优路径；训练分教师强制与基于预测轨迹微调两阶段。在 Go Stanford、SCAND、RECON、HuRoN 混合数据上，作者报告离线轨迹误差与生成质量（PSNR、LPIPS）均优于 NWM 与 UniWM；在基于数据集轨迹的图像目标导航推演中，已见环境 SR 0.72（UniWM 0.66），未见环境同样领先，消融支持三部分协同与多模态提议的作用。该结果提示统一训练与多候选视觉前瞻可提升导航规划，但评测均为离线数据集推演，未做真机闭环，生成器推理开销未充分讨论。
+  venue: ECCV 2026
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 把场景抽象、多模态轨迹与视觉前瞻统一到一个导航世界模型，属 NWM/UniWM 路线上的扎实改进。
+    E: 多数据集离线评测、强基线与较完整消融，但无真机或仿真闭环导航。
+    O: 未找到代码或权重。
+    T: 中科院自动化所刘静团队在多模态理解与生成方向有积累，具身导航方向成果相对较新。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 是否发布代码与模型
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: n/a
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
