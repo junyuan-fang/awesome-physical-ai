@@ -8,3 +8,4 @@ __pycache__/
 .vscode/
 pipeline/cache/
 pipeline/candidates/
+pipeline/logs/
