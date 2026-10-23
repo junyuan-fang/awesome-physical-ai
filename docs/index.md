@@ -3,19 +3,19 @@
 > 自动生成于 2026-10-23，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
 > 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
 
-共 233 篇：🔥 37 · 👀 67 · 观察中 125 · 暂不评级 4
+共 238 篇：🔥 38 · 👀 70 · 观察中 126 · 暂不评级 4
 
 - [Other Generalist Models](#cat-foundation-general) · 8
 - [Locomotion / Whole-Body](#cat-locomotion) · 20
-- [Manipulation](#cat-manipulation) · 29
+- [Manipulation](#cat-manipulation) · 31
 - [Navigation](#cat-navigation) · 11
 - [RL & Imitation Learning](#cat-rl-il) · 6
 - [3D Scene Understanding](#cat-scene) · 5
 - [Sim-to-Real](#cat-sim2real) · 9
 - [Teleoperation](#cat-teleoperation) · 10
 - [Tutorials & Surveys](#cat-tutorials) · 6
-- [Vision-Language-Action (VLA)](#cat-vla) · 67
-- [World Models](#cat-world-model) · 62
+- [Vision-Language-Action (VLA)](#cat-vla) · 69
+- [World Models](#cat-world-model) · 63
 - [数据集 / 基准使用关系](#resources)
 
 ## <a id="cat-foundation-general"></a>Other Generalist Models
@@ -63,11 +63,13 @@
 | [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](https://arxiv.org/abs/2610.02089) | 2026-10-01 | 相邻 | 🔥 重点阅读 | **86** (4/4/5/4) | 💻 实质代码 · MIT (2026-10-22) | Seoul National University; University of Massachusetts Amherst; Google Research | [📝](../digests/daily/2026-10-22.md) |
 | [RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](https://arxiv.org/abs/2609.03199) | 2026-09-02 | 相邻 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · MIT (2026-10-22) | Rice University; NVIDIA | [📝](../digests/daily/2026-10-22.md) |
 | [SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701) | 2026-08-19 | 相邻 | 👀 值得关注 | **72** (4/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Tuojing Intelligence; Tsinghua University; King’s College London | [📝](../digests/migration-2026-10-22.md) |
+| [DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](https://arxiv.org/abs/2610.29997) | 2026-10-21 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 (2026-10-23) | Ropedia | [📝](../digests/daily/2026-10-23.md) |
 | [MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](https://arxiv.org/abs/2609.38078) | 2026-09-29 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 (2026-10-22) | University of Illinois Urbana-Champaign | [📝](../digests/daily/2026-10-22.md) |
 | [TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](https://arxiv.org/abs/2609.05266) | 2026-09-04 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 · MIT (2026-10-22) | School of Data Science, Fudan University; Shanghai Innovation Institute; NeoteAI | [📝](../digests/migration-2026-10-22.md) |
 | [Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033) | 2026-07-22 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 (2026-10-22) | Beijing Institute of Technology; X Square Robot; Tsinghua University | [📝](../digests/migration-2026-10-22.md) |
 | [Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](https://arxiv.org/abs/2610.25736) | 2026-10-19 | 核心 | 👀 值得关注 | **68** (4/4/2/4) | 🟡 部分开放 · Apache-2.0 (2026-10-22) | Tsinghua University; AgiBot; Infinigence AI | [📝](../digests/daily/2026-10-22.md) |
 | [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](https://arxiv.org/abs/2608.02580) | 2026-08-03 | 相邻 | 👀 值得关注 | **68** (4/4/2/4) | 未找到仓库 (2026-10-22) | AIM3 Lab, Renmin University of China; Qwen Team, Alibaba Inc.; ShanghaiTech University | [📝](../digests/migration-2026-10-22.md) |
+| [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](https://arxiv.org/abs/2610.27861) | 2026-10-20 | 相邻 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · MIT (2026-10-23) | Fudan University; Shenzhen Loop Area Institute; The Chinese University of Hong Kong | [📝](../digests/daily/2026-10-23.md) |
 | [Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917) | 2026-08-16 | 核心 | 👀 值得关注 | **66** (4/3/2/5) | 未找到仓库 (2026-10-22) | Stanford University; MIT; Scale AI | [📝](../digests/migration-2026-10-22.md) |
 | [Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383) | 2026-08-11 | 核心 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | School of Computer Science, The University of Auckland; College of Computer Science, Chongqing University; College of Electronic and Information Engineering, Southwest University | [📝](../digests/migration-2026-10-22.md) |
 | [UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](https://arxiv.org/abs/2608.17432) | 2026-08-18 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-22) | Tsinghua University Shenzhen International Graduate School; Nanyang Technological University; X Square Robot | [📝](../digests/migration-2026-10-22.md) |
@@ -191,6 +193,7 @@
 | [LARA: Latent Action Representation Alignment for Vision-Language-Action Models](https://arxiv.org/abs/2606.07100) | 2026-06-05 | 核心 | 👀 值得关注 | **74** (4/4/3/4) | 💻 实质代码 (2026-10-22) | State Key Laboratory of General Artificial Intelligence, BIGAI; Peking University; Delta Intelligence | [📝](../digests/migration-2026-10-22.md) |
 | [AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding](https://arxiv.org/abs/2606.06155) | 2026-06-04 | 核心 | 👀 值得关注 | **74** (4/4/3/4) | 💻 实质代码 · MIT (2026-10-22) | Peking University; HKUST (GZ); The Chinese University of Hong Kong | [📝](../digests/migration-2026-10-22.md) |
 | [HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](https://arxiv.org/abs/2604.07993) | 2026-04-09 | 核心 | 👀 值得关注 | **74** (4/4/3/4) | 💻 实质代码 (2026-10-22) | Beijing Innovation Center of Humanoid Robotics; Xi’an Jiaotong University; Nankai University | [📝](../digests/migration-2026-10-22.md) |
+| [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](https://arxiv.org/abs/2610.28589) | 2026-10-20 | 核心 | 👀 值得关注 | **72** (4/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-23) | University of Central Florida; University of Southern California; Michigan State University | [📝](../digests/daily/2026-10-23.md) |
 | [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306) | 2026-10-15 | 核心 | 👀 值得关注 | **71** (3/4/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Zhejiang University; Central South University | [📝](../digests/daily/2026-10-22.md) |
 | [What Matters for Latent Actions in Robot Learning](https://arxiv.org/abs/2608.19613) | 2026-08-20 | 相邻 | 👀 值得关注 | **71** (3/4/4/3) | 💻 实质代码 · MIT (2026-10-22) | College of Intelligent Robotics and Advanced Manufacturing, Fudan University; Xiaomi EV; Tsinghua Shenzhen International Graduate School, Tsinghua University | [📝](../digests/migration-2026-10-22.md) |
 | [World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730) | 2026-08-10 | 核心 | 👀 值得关注 | **71** (3/4/4/3) | 💻 实质代码 · MIT (2026-10-22) | JIUTIAN Research; Zhongguancun Academy | [📝](../digests/migration-2026-10-22.md) |
@@ -208,6 +211,7 @@
 | [GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models](https://arxiv.org/abs/2606.03240) | 2026-06-02 | 核心 | 观察中 | **62** (3/4/2/4) | 未找到仓库 (2026-10-22) | Tongji University; Shanghai Innovation Institute; Shanghai Jiao Tong University | [📝](../digests/migration-2026-10-22.md) |
 | [Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation](https://arxiv.org/abs/2606.02486) | 2026-06-01 | 核心 | 观察中 | **62** (4/4/1/4) | 未找到仓库 (2026-10-22) | Robotics Institute, Carnegie Mellon University, Pittsburgh, USA | [📝](../digests/migration-2026-10-22.md) |
 | [Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring](https://arxiv.org/abs/2605.30834) | 2026-05-29 | 相邻 | 观察中 | **62** (3/4/2/4) | 📄 占位仓库 (2026-10-22) | University of Wisconsin–Madison; Georgia Institute of Technology | [📝](../digests/migration-2026-10-22.md) |
+| [From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation](https://arxiv.org/abs/2610.29560) | 2026-10-21 | 核心 | 观察中 | **60** (3/3/3/3) | 💻 实质代码 · Apache-2.0 (2026-10-23) | University of Science and Technology of China; Shanghai Artificial Intelligence Laboratory; Shanghai Jiao Tong University | [📝](../digests/daily/2026-10-23.md) |
 | [Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence](https://arxiv.org/abs/2609.35432) | 2026-09-28 | 核心 | 观察中 | **60** (4/3/2/3) | 📄 占位仓库 (2026-10-22) | HexaFuture | [📝](../digests/daily/2026-10-22.md) |
 | [Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](https://arxiv.org/abs/2608.16590) | 2026-08-17 | 核心 | 观察中 | **60** (4/3/2/3) | 未找到仓库 (2026-10-22) | Institute for AI Industry Research (AIR), Tsinghua University; Z-Trans AI | [📝](../digests/migration-2026-10-22.md) |
 | [Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models](https://arxiv.org/abs/2606.19297) | 2026-06-17 | 相邻 | 观察中 | **60** (3/3/3/3) | 💻 实质代码 · MIT (2026-10-22) | CogAI Lab; FusionBrain Lab; IAI MSU | [📝](../digests/migration-2026-10-22.md) |
@@ -249,6 +253,7 @@
 | [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](https://arxiv.org/abs/2610.26855) | 2026-10-19 | 核心 | 🔥 重点阅读 | **86** (5/4/4/4) | 🟡 部分开放 · Apache-2.0 (2026-10-22) | Nanyang Technological University; Ropedia; Duke University | [📝](../digests/daily/2026-10-22.md) |
 | [LeWAM: End-to-End World and Action Modeling with JEPAs](https://arxiv.org/abs/2610.12818) | 2026-10-08 | 核心 | 🔥 重点阅读 | **86** (4/4/5/4) | 💻 实质代码 · MIT (2026-10-22) | UC San Diego; ETH Zurich; University of British Columbia | [📝](../digests/daily/2026-10-22.md) |
 | [OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining](https://arxiv.org/abs/2609.07398) | 2026-09-07 | 核心 | 🔥 重点阅读 | **86** (5/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | National University of Singapore; Tsinghua University; Peking University | [📝](../digests/daily/2026-10-22.md) |
+| [Agentic World Action Models](https://arxiv.org/abs/2610.30136) | 2026-10-21 | 核心 | 🔥 重点阅读 | **83** (4/4/4/5) | 💻 实质代码 · Apache-2.0 (2026-10-23) | UC Berkeley; NVIDIA; University of Pennsylvania | [📝](../digests/daily/2026-10-23.md) |
 | [CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406) | 2026-08-27 | 核心 | 🔥 重点阅读 | **83** (4/4/5/3) | 💻 实质代码 · MIT (2026-10-22) | Princeton University | [📝](../digests/migration-2026-10-22.md) |
 | [RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](https://arxiv.org/abs/2607.06559) | 2026-07-07 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Hong Kong Embodied AI Lab; CUHK; Hupan Lab | [📝](../digests/migration-2026-10-22.md) |
 | [$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](https://arxiv.org/abs/2606.13672) | 2026-06-11 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · MIT (2026-10-22) | Mila - Québec AI Institute; Université de Montréal; Carnegie Mellon University | [📝](../digests/migration-2026-10-22.md) |
@@ -541,6 +546,7 @@
 
 ### <a id="resource-robocasa-bench"></a>RoboCasa-Bench
 
+- 评测 · [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](https://arxiv.org/abs/2610.27861) · 2026-10 · [报告](../digests/daily/2026-10-23.md)
 - 评测 · [Long-WAM: Scaling the Context of World-Action Models](https://arxiv.org/abs/2610.10528) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives](https://arxiv.org/abs/2609.39601) · 2026-09 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining](https://arxiv.org/abs/2609.07398) · 2026-09 · [报告](../digests/daily/2026-10-22.md)

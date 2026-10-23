@@ -437,3 +437,94 @@ entries:
   reason: 增量有限：自我中心视频目标操作评测
   date: '2026-10-22'
   run: '2026-10-22'
+- arxiv_id: '2610.27998'
+  title: 'LocoPilot: Single-Operator Bilateral Teleoperation for Loco-Manipulation Policy Learning'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；单操作员遥操作数据采集系统，贡献偏系统/硬件，方法增量有限
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.30097'
+  title: 'AtomicRL: Atomic Reinforcement Learning for Long-Horizon Robotic Manipulation'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；VLA 后训练方法（SAPO/BATE）较扎实，但无开源、相对 PPO 增益有限（LIBERO-LONG +3.6~4.0%）
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.28698'
+  title: 'Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds'
+  decision: exclude
+  reason: 超出范围：虚拟游戏世界（Minecraft 等）中键盘/鼠标控制的具身智能体持续预训练，非物理机器人或物理世界模型
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.28432'
+  title: 'Physical AI for Intralogistics: Benchmarking the NVIDIA Sim-to-Real Ecosystem for Cosmos-Enhanced COMPASS Navigation
+    on Industrial Mobile Robots'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；NVIDIA 生态（X-Mobility/COMPASS/Cosmos）工业导航验证，价值偏厂商案例、方法增量有限
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.30108'
+  title: 'Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；PAPAV 为能力框架综述/观点性工作，无新实验或基准
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.30876'
+  title: 'LocoManiLab: A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；人形 loco-manipulation 测试台较全面，但代码/数据均未开源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.31166'
+  title: 'Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；人形记忆机制（WholeBodyMem+HuMeGo）有真机验证，但无开源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.30988'
+  title: In-Context Learning World Models for Robot Dual-Arm Manipulation of Soft Garment with Partial Observations
+  decision: defer
+  reason: 本轮名额有限（cap=5）；软体对象世界模型，真机定量证据偏弱（60 次滚动）且无开源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.30438'
+  title: 'Tactile-Based Robotic Manipulation: From Mechanics-Driven to Data-Driven Perspectives'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；触觉操作综述（已刊 Annual Review of Control, Robotics, and Autonomous Systems），本轮优先收录新方法/资源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.28164'
+  title: 'From Predictive Geometry to Action: Learning Complementary Predictive Representations for Embodied Manipulation'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；互补预测表征方法有效，但仓库不可达（代码未放出）
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.29989'
+  title: 'Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation'
+  decision: exclude
+  reason: 超出范围：纯视频生成训练方法（未来块预测 FCP），无机器人/具身控制成分，仅面向视频世界模型生成
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.30044'
+  title: 'SP-HLM: Sparse-Pose-Driven Motion Generation and Whole-Body Control for Humanoid Loco-Manipulation'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；稀疏姿态接口的人形 loco-manipulation 方法，无开源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.31423'
+  title: 'FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；多视角动态路由方法（CoRL 2026），无开源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.28626'
+  title: 'UniWALM: Unified World Action Language Model for Embodied Robot Control'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；统一视频-动作-语言模型（语言即记忆）方法，无开源
+  date: '2026-10-23'
+  run: '2026-10-23'
+- arxiv_id: '2610.28431'
+  title: 'Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future'
+  decision: defer
+  reason: 本轮名额有限（cap=5）；阶段混淆纠偏方法 + StageBench 基准，无开源
+  date: '2026-10-23'
+  run: '2026-10-23'

@@ -49,3 +49,28 @@ runs:
   - benchmark:egox-bench
   digest: digests/daily/2026-10-22.md
   applied: '2026-10-22'
+- scan_date: '2026-10-23'
+  kind: daily
+  window_start: '2026-10-20'
+  window_end: '2026-10-23'
+  last_covered_end: '2026-10-22'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 255
+    already_tracked_or_triaged: 1
+    out_of_scope: 45
+    below_pool_cut: 189
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 5
+  excluded: 2
+  deferred: 13
+  removed: 0
+  new_resources:
+  - dataset:bihoi
+  - benchmark:robocasa-shift
+  digest: digests/daily/2026-10-23.md
+  applied: '2026-10-23'

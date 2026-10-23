@@ -12,9 +12,9 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-📊 **233** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **22** datasets&nbsp; · &nbsp;📊 **25** benchmarks
+📊 **238** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **23** datasets&nbsp; · &nbsp;📊 **26** benchmarks
 
-🔥 **37** must-read&nbsp; · &nbsp;👀 **67** notable&nbsp; · &nbsp;📋 **129** also tracked
+🔥 **38** must-read&nbsp; · &nbsp;👀 **70** notable&nbsp; · &nbsp;📋 **130** also tracked
 
 <sub>🤖 Discovered daily from arXiv + HuggingFace daily papers, then screened & scored by a [two-layer review](docs/METHODOLOGY.md) · 每日从原始渠道发现，经两层筛选与四维评分后收录</sub>
 
@@ -22,7 +22,7 @@
 
 > 💡 **Legend / 图例**: 🔥 must-read（总分 ≥80 且证据 ≥3）· 👀 notable（65–79）· 📜 classic landmark · `81/100` = 贡献 30% + 证据 25% + 开放 30% + 团队 15% · 💻 substantive code · 🟡 partial · 📄 placeholder repo · 🧩 adjacent（数据/基准/基础设施）· 🏛️ accepted venue · 📝 full review. Click any **▸ section** to expand / 点击展开折叠区.
 >
-> 📚 Full ranked index with affiliations & open status: [docs/index.md](docs/index.md) · Scan reports: [digests/](digests/) (latest: [2026-10-22](digests/daily/2026-10-22.md))
+> 📚 Full ranked index with affiliations & open status: [docs/index.md](docs/index.md) · Scan reports: [digests/](digests/) (latest: [2026-10-23](digests/daily/2026-10-23.md))
 ---
 
 ## ⭐ This week's picks / 本周精选
@@ -51,6 +51,9 @@
 - 🔥 **[Has GPT-6-Astra Achieved Embodied Intelligence?](https://arxiv.org/abs/2610.22471)** — *SenseNova et al.* · `2026-10-15` · `85/100`（C4·E5·O4·T4） · 💻 · 🧩 *adjacent*
   > 该报告在 12 个基准上用 ICL+扩展步数协议评测 GPT-6-Astra，并在 8 类真机平台验证；作者报告 LIBERO-Ultra-Long 98.8%、RoboDojo 81.9%，但成本与实体验证仍是瓶颈。 · [🌐 project](https://sensenova.ai/has-gpt-6-astra-achieved-embodied-intelligence) · [💻 code](https://github.com/OpenSenseNova/SenseNova-RoboRSI) · [📝 review](digests/daily/2026-10-22.md)
 
+- 🔥 **[Agentic World Action Models](https://arxiv.org/abs/2610.30136)** — *Zhuoyang Liu et al.* · `2026-10-21` · `83/100`（C4·E4·O4·T5） · 💻
+  > 把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。 · [🌐 project](https://agentic-wam.github.io/) · [💻 code](https://github.com/NVIDIA/Isaac-GR00T) · [📝 review](digests/daily/2026-10-23.md)
+
 - 🔥 **[Reflex: Visually Grounded Reactive Humanoid Control](https://arxiv.org/abs/2610.12772)** — *Taoyang Jia et al.* · `2026-10-08` · `80/100`（C4·E4·O4·T4） · 💻
   > 三阶段训练的人形全身接箱框架：仿真第一视角 RGB-D 抓接成功率 85.7%，Unitree G1 真机 2.5 m/5 m 处达 65%/40%。 · [🌐 project](https://toberj.github.io/reflex/) · [💻 code](https://github.com/ToberJ/reflex) · [📝 review](digests/daily/2026-10-22.md)
 
@@ -66,11 +69,8 @@
 - 👀 **[GreenWAM: A World Foundation Model for Robotics](https://arxiv.org/abs/2610.18774)** — *Gennady Sidorov et al.* · `2026-10-13` · `77/100`（C4·E4·O4·T3） · 🟡
   > GreenWAM 以 79 维解剖动作空间统一 20 类双臂机器人，世界模型与策略共用一套权重；作者报告 RoboTwin 2.0 平均 67.54%、人形真机 ID 95.6%。 · [🌐 project](https://greenvla.github.io/GreenWAM/) · [💻 code](https://github.com/greenvla/GreenWAM) · [📝 review](digests/daily/2026-10-22.md)
 
-- 👀 **[VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306)** — *Qi Lu et al.* · `2026-10-15` · `71/100`（C3·E4·O4·T3） · 💻
-  > VLA-Δ 在预训练中用未来状态差文本、结构化转移槽与光流显式监督物理状态变化；作者报告 LIBERO 98.4%、RoboTwin 2.0 平均 90.06%，真机 68.0%。 · [🌐 project](https://zju-omniai.github.io/VLA-Delta/) · [💻 code](https://github.com/ZJU-OmniAI/VLA-Delta) · [📝 review](digests/daily/2026-10-22.md)
-
-- 👀 **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](https://arxiv.org/abs/2609.38078)** — *Bingxuan Li et al.* · `2026-09-29` · `71/100`（C4·E4·O3·T3） · 💻
-  > MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。 · [🌐 project](https://motor-mind.github.io) · [💻 code](https://github.com/Motor-Mind/MotorMind-Code) · [📝 review](digests/daily/2026-10-22.md)
+- 👀 **[AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](https://arxiv.org/abs/2610.28589)** — *Xinxin Liu et al.* · `2026-10-20` · `72/100`（C4·E3·O4·T3） · 💻
+  > 把编码智能体的 SFT+多轮 RL 后训练搬给机器人 planner；9B 规划器在 LIBERO-PRO 成功率 18.1%→71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%，并开源框架与 checkpoint。 · [🌐 project](https://xinxinliu-ai.github.io/AgenticRoboRL/) · [💻 code](https://github.com/xinxinliu-ai/AgenticRoboRL) · [📝 review](digests/daily/2026-10-23.md)
 
 
 ---
@@ -124,20 +124,20 @@
 15. 🔥 **[Has GPT-6-Astra Achieved Embodied Intelligence?](https://arxiv.org/abs/2610.22471)** — *SenseNova et al.* · `2026-10-15` · `85/100`（C4·E5·O4·T4） · 💻 · 🧩 *adjacent*
   > 该报告在 12 个基准上用 ICL+扩展步数协议评测 GPT-6-Astra，并在 8 类真机平台验证；作者报告 LIBERO-Ultra-Long 98.8%、RoboDojo 81.9%，但成本与实体验证仍是瓶颈。 · [🌐 project](https://sensenova.ai/has-gpt-6-astra-achieved-embodied-intelligence) · [💻 code](https://github.com/OpenSenseNova/SenseNova-RoboRSI) · [📝 review](digests/daily/2026-10-22.md)
 
-16. 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** — *Liu, Kechen et al.* · `2026-08-27` · `83/100`（C4·E4·O5·T3） · 💻
+16. 🔥 **[Agentic World Action Models](https://arxiv.org/abs/2610.30136)** — *Zhuoyang Liu et al.* · `2026-10-21` · `83/100`（C4·E4·O4·T5） · 💻
+  > 把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。 · [🌐 project](https://agentic-wam.github.io/) · [💻 code](https://github.com/NVIDIA/Isaac-GR00T) · [📝 review](digests/daily/2026-10-23.md)
+
+17. 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** — *Liu, Kechen et al.* · `2026-08-27` · `83/100`（C4·E4·O5·T3） · 💻
   > CLAP 用末端位姿、语言与潜动作统一异构动作空间并以课程式训练跨具身视频世界模型，作者报告在 DROID 上接近或超过单具身 Ctrl-World，并可零样本用于多策略规划。 · [💻 code](https://github.com/omni-CLAP/clap) · [📝 review](digests/migration-2026-10-22.md)
 
-17. 🔥 **[Geometric Action Model for Robot Policy Learning](https://arxiv.org/abs/2606.17046)** — *Han, Jisang et al.* · `2026-06-15` · `83/100`（C4·E4·O4·T5） · 💻
+18. 🔥 **[Geometric Action Model for Robot Policy Learning](https://arxiv.org/abs/2606.17046)** — *Han, Jisang et al.* · `2026-06-15` · `83/100`（C4·E4·O4·T5） · 💻
   > 把几何基础模型 DA3 在中间层切开插入因果预测器，同时解码未来深度与动作；作者报告 1.4B 模型 LIBERO-Plus 85.5%、单步 6.9 ms，真机换视角更稳健。 · [🌐 project](https://cvlab-kaist.github.io/Geometric-Action-Model/) · [💻 code](https://github.com/cvlab-kaist/Geometric-Action-Model) · [📝 review](digests/migration-2026-10-22.md)
 
-18. 🔥 **[World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis](https://arxiv.org/abs/2606.05979)** — *Yang, Yi et al.* · `2026-06-04` · `83/100`（C4·E4·O5·T3） · 💻
+19. 🔥 **[World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis](https://arxiv.org/abs/2606.05979)** — *Yang, Yi et al.* · `2026-06-04` · `83/100`（C4·E4·O5·T3） · 💻
   > 提出世界-语言-动作模型 WLA：自回归 VLM 骨干同时预测文本子任务与经 World Expert 监督的物理动态，推理可关闭世界分支；WLA-0（2B 激活）作者报告 RoboTwin2.0 Clean 92.94%、RMBench 56.5%、单次推理 40 ms。 · [💻 code](https://github.com/SJTU-DENG-Lab/WLA) · [📝 review](digests/migration-2026-10-22.md)
 
-19. 🔥 **[GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](https://arxiv.org/abs/2606.05160)** — *Xie, Tianyi et al.* · `2026-06-03` · `83/100`（C4·E4·O4·T5） · 💻 · 🧩 *adjacent*
+20. 🔥 **[GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](https://arxiv.org/abs/2606.05160)** — *Xie, Tianyi et al.* · `2026-06-03` · `83/100`（C4·E4·O4·T5） · 💻 · 🧩 *adjacent*
   > 在已知几何与尺度的 3D 场景中用视频基础模型生成人-物交互、再做度量 4D 重建并重定向到人形的全虚拟数据流水线 GRAIL；生成 2 万+序列，仅用其数据训练的 G1 真机拾取 84%、爬楼 90%。 · [🌐 project](https://research.nvidia.com/labs/dair/grail/) · [💻 code](https://github.com/NVlabs/GRAIL) · [📝 review](digests/migration-2026-10-22.md)
-
-20. 📜 **[Mobile ALOHA: Learning Bimanual Mobile Manipulation](https://arxiv.org/abs/2401.02117)** — *Fu et al.* · `2024-01-04` · `83/100`（C4·E4·O4·T5） · 💻 · 🧩 *adjacent*
-  > 低成本（<3.2 万美元）全身遥操作双臂移动操作平台，并与静态 ALOHA 数据协同训练；作者报告每任务 50 条示范时协同训练可将成功率最多提升 90 个百分点。 · [🌐 project](https://mobile-aloha.github.io) · [💻 code](https://github.com/MarkFzp/mobile-aloha) · [📝 review](digests/migration-2026-10-22.md)
 
 
 ---
@@ -202,10 +202,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Generalist policies, VLA, world models*
 
-### Vision-Language-Action (VLA) · 67
+### Vision-Language-Action (VLA) · 69
 
 <details open>
-<summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 29 papers</summary>
+<summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 30 papers</summary>
 
 - 🔥 **[Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models](https://arxiv.org/abs/2609.12641)** — *Jianman Lin et al.* · `2026-09-11` · `86/100`（C4·E4·O5·T4） · 💻
   > 提出 Latent Interface Training 两阶段训练：先学无图像的空间目标动作先验，再经位姿监督潜接口注入视觉；4 个 VLA/WAM 架构上 LIBERO-Plus 总体提升 3.87–10.70 点。 · [🌐 project](https://magiclab-nus.github.io/LIT/?v=37955c5) · [💻 code](https://github.com/MAGICLAB-NUS/LIT) · [📝 review](digests/daily/2026-10-22.md)
@@ -258,6 +258,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - 👀 **[HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](https://arxiv.org/abs/2604.07993)** — *Bai, Shuanghao et al.* · `2026-04-09` · `74/100`（C4·E4·O3·T4） · 💻
   > 面向全尺寸双足人形的全身操作 VLA：人形对齐的统一状态表示 + MoE 本体感知预测器 + 历史 token；作者报告在天工 2.0/3.0 真机 7 项任务上优于 π0、GR00T N1.5 等基线。 · [💻 code](https://github.com/Open-X-Humanoid/HEX) · [📝 review](digests/migration-2026-10-22.md)
 
+- 👀 **[AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](https://arxiv.org/abs/2610.28589)** — *Xinxin Liu et al.* · `2026-10-20` · `72/100`（C4·E3·O4·T3） · 💻
+  > 把编码智能体的 SFT+多轮 RL 后训练搬给机器人 planner；9B 规划器在 LIBERO-PRO 成功率 18.1%→71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%，并开源框架与 checkpoint。 · [🌐 project](https://xinxinliu-ai.github.io/AgenticRoboRL/) · [💻 code](https://github.com/xinxinliu-ai/AgenticRoboRL) · [📝 review](digests/daily/2026-10-23.md)
+
 - 👀 **[VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306)** — *Qi Lu et al.* · `2026-10-15` · `71/100`（C3·E4·O4·T3） · 💻
   > VLA-Δ 在预训练中用未来状态差文本、结构化转移槽与光流显式监督物理状态变化；作者报告 LIBERO 98.4%、RoboTwin 2.0 平均 90.06%，真机 68.0%。 · [🌐 project](https://zju-omniai.github.io/VLA-Delta/) · [💻 code](https://github.com/ZJU-OmniAI/VLA-Delta) · [📝 review](digests/daily/2026-10-22.md)
 
@@ -297,7 +300,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 </details>
 
 <details>
-<summary>📋 <b>Also tracked / 观察中与暂不评级</b> · 35 papers</summary>
+<summary>📋 <b>Also tracked / 观察中与暂不评级</b> · 36 papers</summary>
 
 - **[EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](https://arxiv.org/abs/2609.01281)** — *Wang, Wei et al.* · `2026-09-01` · `63/100`（C3·E3·O3·T4） · 💻
   > EmbodiedSkills 以三个独立世界动作模型预测冻结 VLA 候选动作的潜在后果并据分歧与效应一致性选优，作者报告 MetaWorld MT50 成功率由 76.28% 升至 78.64%、CLIPort 由 33.94% 升至 36.83%。 · [💻 code](https://github.com/DCDmllm/EmbodiedSkills) · [📝 review](digests/migration-2026-10-22.md)
@@ -313,6 +316,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 - **[Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring](https://arxiv.org/abs/2605.30834)** — *Park, Seongheon et al.* · `2026-05-29` · 🏛️ **NeurIPS 2026** · `62/100`（C3·E4·O2·T4） · 📄 · 🧩 *adjacent*
   > Hide-and-Seek 仅用轨迹级成败标签，以轨迹间/内对比损失训练 VLA 运行时失败检测器；作者报告在 LIBERO-10、VLABench 与真机上对 OpenVLA、π0、π0.5 均优于 SAFE 等基线。 · [🌐 project](https://seongheon-96.github.io/hide_and_seek_site/) · [📝 review](digests/migration-2026-10-22.md)
+
+- **[From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation](https://arxiv.org/abs/2610.29560)** — *Tingwen Du et al.* · `2026-10-21` · `60/100`（C3·E3·O3·T3） · 💻
+  > 用可编辑 harness 把高层 VLM 组织成自进化机器人 agent（SERA），配固定 VLA 执行器；RoboMME 上作者报告 51.38% 成功率（无自进化 44.38%）。 · [🌐 project](https://stevenkkxs.github.io/sera-webpage/) · [💻 code](https://github.com/StevenKKXS/SERA) · [📝 review](digests/daily/2026-10-23.md)
 
 - **[Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence](https://arxiv.org/abs/2609.35432)** — *Hongcheng Gao et al.* · `2026-09-28` · `60/100`（C4·E3·O2·T3） · 📄
   > 提出 Physical Coding（Code as World + Code as Policy）与 HexaAnything 智能体；在 RoboCasa365 上把 XR-1 的总体成功率从 56.6% 提到 61.1%。 · [🌐 project](https://hexafuture.ai/blog/physical-coding) · [📝 review](digests/daily/2026-10-22.md)
@@ -421,10 +427,10 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 </details>
 
 
-### World Models · 62
+### World Models · 63
 
 <details open>
-<summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 29 papers</summary>
+<summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 30 papers</summary>
 
 - 🔥 **[Long-WAM: Scaling the Context of World-Action Models](https://arxiv.org/abs/2610.10528)** — *Wei Huang et al.* · `2026-10-07` · `88/100`（C4·E5·O4·T5） · 💻
   > 自回归视频预训练 + 因果世界-动作模型：GR-1 上 19.2 s 上下文把成功率从 63.3% 提到 78.7%，RTX 5090 每动作块 107.4 ms。 · [🌐 project](https://nvlabs.github.io/LongLive/Long-WAM/) · [💻 code](https://github.com/NVlabs/LongLive) · [📝 review](digests/daily/2026-10-22.md)
@@ -440,6 +446,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 - 🔥 **[OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining](https://arxiv.org/abs/2609.07398)** — *Yuran Wang et al.* · `2026-09-07` · `86/100`（C5·E4·O4·T4） · 💻
   > OpenWAM 把世界-动作模型拆成可组合模块并系统消融，用 6,369 小时数据训练 OpenWAM-α；作者报告 LIBERO 99.3%、EBench 49.4、真机 RoboDojo 24.4% 成功率。 · [🌐 project](https://openwam-official.github.io/) · [💻 code](https://github.com/OpenWAM-Official/OpenWAM) · [📝 review](digests/daily/2026-10-22.md)
+
+- 🔥 **[Agentic World Action Models](https://arxiv.org/abs/2610.30136)** — *Zhuoyang Liu et al.* · `2026-10-21` · `83/100`（C4·E4·O4·T5） · 💻
+  > 把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。 · [🌐 project](https://agentic-wam.github.io/) · [💻 code](https://github.com/NVIDIA/Isaac-GR00T) · [📝 review](digests/daily/2026-10-23.md)
 
 - 🔥 **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406)** — *Liu, Kechen et al.* · `2026-08-27` · `83/100`（C4·E4·O5·T3） · 💻
   > CLAP 用末端位姿、语言与潜动作统一异构动作空间并以课程式训练跨具身视频世界模型，作者报告在 DROID 上接近或超过单具身 Ctrl-World，并可零样本用于多策略规划。 · [💻 code](https://github.com/omni-CLAP/clap) · [📝 review](digests/migration-2026-10-22.md)
@@ -668,7 +677,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Grasping, dexterous, bimanual manipulation*
 <details open>
-<summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 11 papers</summary>
+<summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 13 papers</summary>
 
 - 🔥 **[HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](https://arxiv.org/abs/2610.02089)** — *Kyochul Jang et al.* · `2026-10-01` · `86/100`（C4·E4·O5·T4） · 💻 · 🧩 *adjacent*
   > 发布 HumanoidToolBench：18 个人形工具使用任务（3 场景×3 执行层级×2 工具集模式）与 3.1k 条仿真/真机 G1 示教；7 个策略仿真、3 个真机评测，移动使用阶段成功率大幅下降。 · [🌐 project](https://snu-pi.github.io/HumanoidToolBench/) · [💻 code](https://github.com/SNU-PI/HumanoidToolBench) · [📝 review](digests/daily/2026-10-22.md)
@@ -678,6 +687,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 - 👀 **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701)** — *Jing, Bowen et al.* · `2026-08-19` · `72/100`（C4·E3·O4·T3） · 💻 · 🧩 *adjacent*
   > 可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。 · [💻 code](https://github.com/TuojingAI/SoftVTBench) · [📝 review](digests/migration-2026-10-22.md)
+
+- 👀 **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](https://arxiv.org/abs/2610.29997)** — *Mingze Sun et al.* · `2026-10-21` · `71/100`（C4·E4·O3·T3） · 💻
+  > 首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。 · [🌐 project](https://ropedia.github.io/DONIC/) · [💻 code](https://github.com/Ropedia/DONIC) · [📝 review](digests/daily/2026-10-23.md)
 
 - 👀 **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](https://arxiv.org/abs/2609.38078)** — *Bingxuan Li et al.* · `2026-09-29` · `71/100`（C4·E4·O3·T3） · 💻
   > MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。 · [🌐 project](https://motor-mind.github.io) · [💻 code](https://github.com/Motor-Mind/MotorMind-Code) · [📝 review](digests/daily/2026-10-22.md)
@@ -693,6 +705,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 - 👀 **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](https://arxiv.org/abs/2608.02580)** — *Wang, Ye et al.* · `2026-08-03` · `68/100`（C4·E4·O2·T4） · 🧩 *adjacent*
   > 将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。 · [🌐 project](https://arxiv.org/abs/2608.02580) · [📝 review](digests/migration-2026-10-22.md)
+
+- 👀 **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](https://arxiv.org/abs/2610.27861)** — *Haocheng Wang et al.* · `2026-10-20` · `66/100`（C3·E3·O4·T3） · 💻 · 🧩 *adjacent*
+  > 基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。 · [💻 code](https://github.com/HaochengWang23/RoboCasa-Shift) · [📝 review](digests/daily/2026-10-23.md)
 
 - 👀 **[Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917)** — *Kamat, Sarthak et al.* · `2026-08-16` · `66/100`（C4·E3·O2·T5）
   > SPD 用 VR 在 MuJoCo 中遥操作采集 75 小时双手灵巧操作数据预训练扩散 Transformer，再用 1–2 小时真机数据微调；作者报告在 5 项 56 自由度真机任务上均优于从零训练的 BC。 · [🌐 project](https://gigabrain0.github.io/) · [📝 review](digests/migration-2026-10-22.md)
@@ -1070,7 +1085,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Robot trajectories, demonstrations, scene datasets*
 <details>
-<summary>📁 <b>Manipulation Demonstrations</b> · 7 datasets</summary>
+<summary>📁 <b>Manipulation Demonstrations</b> · 8 datasets</summary>
 
 - **[Open X-Embodiment (RT-X)](https://robotics-transformer-x.github.io)** — Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories. · *1M+ episodes* · [paper](https://arxiv.org/abs/2310.08864) · [code](https://github.com/google-deepmind/open_x_embodiment) · 🔗 used by [11 tracked papers](docs/index.md#resource-open-x-embodiment)
 - **[DROID](https://droid-dataset.github.io)** — Diverse real-world manipulation dataset from 564 scenes, 13 institutions. · *76k demonstrations* · [paper](https://arxiv.org/abs/2403.12945) · 🔗 used by [18 tracked papers](docs/index.md#resource-droid)
@@ -1079,6 +1094,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - **[AgiBot World](https://agibot-world.com)** — Large-scale humanoid manipulation dataset from AgiBot's real-world deployments. · 🔗 used by [19 tracked papers](docs/index.md#resource-agibot-world)
 - **[PRISM](https://tengbo-yu.github.io/PRISM/)** — Real-world contact-rich industrial manipulation dataset, 25+ tasks, 5k+ teleoperated trajectories with RGB-D, F/T, tactile and robot state across 3 robots. · [paper](https://arxiv.org/abs/2608.17962)
 - **[ToolBook](https://snu-pi.github.io/HumanoidToolBench/)** — 3,094 human demonstrations of humanoid tool use, 3,003 in simulation and 91 on a real Unitree G1. · [code](https://github.com/SNU-PI/HumanoidToolBench)
+- **[BiHOI](https://ropedia.github.io/DONIC/)** — 多视角双手-物体交互数据集：1,575 段序列、229 个物体、约 14.77 小时，强调持续双手接触（双手同时接触率 65.91%），重建交互并重定向为灵巧手参考轨迹。 · [paper](https://arxiv.org/abs/2610.29997)
 
 </details>
 <details>
@@ -1140,7 +1156,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 *Standardized evaluations for embodied AI*
 <details>
-<summary>📐 <b>Manipulation</b> · 12 benchmarks</summary>
+<summary>📐 <b>Manipulation</b> · 13 benchmarks</summary>
 
 - **[CALVIN](http://calvin.cs.uni-freiburg.de)** — Long-horizon, language-conditioned manipulation benchmark. · [paper](https://arxiv.org/abs/2112.03227) · [code](https://github.com/mees/calvin) · 🔗 used by [5 tracked papers](docs/index.md#resource-calvin)
 - **[Meta-World](https://meta-world.github.io)** — 50 manipulation tasks for multi-task and meta-RL evaluation. · [paper](https://arxiv.org/abs/1910.10897) · [code](https://github.com/Farama-Foundation/Metaworld) · 🔗 used by [1 tracked paper](docs/index.md#resource-meta-world)
@@ -1154,6 +1170,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 - **[SoftVTBench](https://github.com/TuojingAI/SoftVTBench)** — Isaac-based visuo-tactile deformable-object pick-and-place dataset and benchmark with evaluator-only FEM states and Deformation-aware Success Rate (DSR). · [paper](https://arxiv.org/abs/2608.18701) · [code](https://github.com/TuojingAI/SoftVTBench)
 - **[HumanoidToolBench](https://snu-pi.github.io/HumanoidToolBench/)** — 18-task humanoid tool-use benchmark: 3 scenarios x 3 execution levels x 2 tool-set modes, 55 tool assets. · [code](https://github.com/SNU-PI/HumanoidToolBench)
 - **[EgoX-Bench](https://ropedia.github.io/EgoXperience)** — 从 EgoX-Data-6M 留出的 1 小时质量受控子集，覆盖工作台操作、跨房间交互与户外 loco-manipulation，用于联合评测相机、深度、手与物体重建。 · [paper](https://arxiv.org/abs/2610.26625) · 🔗 used by [1 tracked paper](docs/index.md#resource-egox-bench)
+- **[RoboCasa-Shift](https://github.com/HaochengWang23/RoboCasa-Shift)** — 基于 RoboCasa365 的 VLA 诊断式鲁棒性基准：受控单因子分布偏移（光照/相机朝向/底座初始化/高斯模糊，各三档严重度）+ 配对 clean-perturbed 反事实 rollout + 仿真器状态谓词阶段感知诊断，共 1,040 次正式 rollout。 · [paper](https://arxiv.org/abs/2610.27861) · [code](https://github.com/HaochengWang23/RoboCasa-Shift)
 
 </details>
 <details>
@@ -1185,7 +1202,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 <summary>📐 <b>Multi-Skill / Long-Horizon</b> · 3 benchmarks</summary>
 
 - **[BEHAVIOR-1K](https://behavior.stanford.edu/behavior-1k)** — 1,000 long-horizon household activities in OmniGibson — the largest activity benchmark. · [paper](https://arxiv.org/abs/2403.09227) · 🔗 used by [4 tracked papers](docs/index.md#resource-behavior-1k)
-- **[RoboCasa-Bench](https://robocasa.ai)** — 100+ atomic + composite household tasks running on RoboCasa-Gen scenes. · [paper](https://arxiv.org/abs/2406.02523) · 🔗 used by [12 tracked papers](docs/index.md#resource-robocasa-bench)
+- **[RoboCasa-Bench](https://robocasa.ai)** — 100+ atomic + composite household tasks running on RoboCasa-Gen scenes. · [paper](https://arxiv.org/abs/2406.02523) · 🔗 used by [13 tracked papers](docs/index.md#resource-robocasa-bench)
 - **[Xp-Teleop](https://ropedia.github.io/ropedia-w0/)** — Unitree G1 双六自由度灵巧手长时程 loco-manipulation 遥操作世界模型评测集，27 段约 1 小时、543 个原子片段/30 类技能，含 RGB-D、位姿、骨架与触觉。 · [code](https://github.com/Ropedia/ropedia-w0)
 
 </details>
@@ -1308,7 +1325,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 Each daily run writes a report with its coverage window, inclusion cap, candidate / exclusion statistics and a full review per included paper (problem → method → results & conditions → limits, open status with `last_check`). Weekly (≤15) and monthly (≤30) picks are rolled up from them.
 
-- Latest daily report: [2026-10-22](digests/daily/2026-10-22.md)
+- Latest daily report: [2026-10-23](digests/daily/2026-10-23.md)
 - All reports: [digests/](digests/) · Methodology: [docs/METHODOLOGY.md](docs/METHODOLOGY.md) · Ranked index: [docs/index.md](docs/index.md)
 
 ---

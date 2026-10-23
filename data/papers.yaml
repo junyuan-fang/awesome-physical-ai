@@ -16364,3 +16364,351 @@ papers:
   added: '2026-10-22'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-22.md
+- arxiv_id: '2610.29997'
+  title: 'DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations'
+  authors: Mingze Sun et al.
+  affiliations:
+  - Ropedia
+  date: '2026-10-21'
+  category: manipulation
+  route: core
+  contribution: model
+  tags:
+  - dexterous-manipulation
+  - bimanual
+  - reference-tracking
+  - ppo-bc
+  - dataset
+  abstract_short: 首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73
+    个百分点（仿真）。
+  summary: 为解决现有灵巧跟踪只做单手、缺乏持续双手接触数据的问题，作者提出 DONIC——首个跨操作类别与人体运动来源联合训练的通用双手跟踪器，并发布 BiHOI 多视角数据集（1,575 段、229 物体、65.91% 双手同时接触率）。方法上用「物体中心逐手奖励」保持物体运动反馈并按各手参考接触角色监督，用
+    Clip-Centered Advantages 消除参考间优势偏移，再以 PPO+BC 循环把验证成功的执行回灌为示范。作者报告单个 checkpoint 无需微调，在未见轨迹上成功率 86.79%、未见物体上 57.32%，分别比最强双手基线
+    Dexplore-bi 高 77.36/45.73 个百分点，消融支持两个学习信号与 BiHOI 数据增益。结果提示统一策略可跨异构参考协调双手，但评估限于仿真单物体、依赖重定向的运动参考。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29997
+    code: https://github.com/Ropedia/DONIC
+    project: https://ropedia.github.io/DONIC/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 首个通用双手灵巧跟踪器并配套首个强调持续双手接触的数据集，相对单手跟踪工作增量清晰。
+      E: 多基线（DexTrack-bi、Dexplore-bi）+ 双 held-out 划分 + 消融 + 数据集对比，证据完整；但为纯仿真、依赖重建参考。
+      O: 代码仓库较实质（689 个代码文件），但 license none-found、README 标注 coming soon，权重与 BiHOI 数据公开状态待核实。
+      T: Ropedia 为新兴公司，公开可核实的积累有限，按默认 3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - appendix
+    pending_checks:
+    - BiHOI 数据集是否公开下载
+    - 仓库 license 未标注，发布条款待确认
+    reviewed: '2026-10-23'
+    reviewer: claude (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/Ropedia/DONIC
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 代码主体已存在但 README 标注 coming soon、license 未找到；BiHOI 数据公开状态待核实。
+    stats:
+      files: 975
+      code_files: 689
+      config_files: 170
+      last_commit: '2026-10-22'
+      readme_says_coming_soon: true
+    first_check: '2026-10-23'
+    last_check: '2026-10-23'
+  added: '2026-10-23'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-23.md
+  late_found: true
+- arxiv_id: '2610.29560'
+  title: 'From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation'
+  authors: Tingwen Du et al.
+  affiliations:
+  - University of Science and Technology of China
+  - Shanghai Artificial Intelligence Laboratory
+  - Shanghai Jiao Tong University
+  - Mohamed bin Zayed University of Artificial Intelligence
+  - Zhejiang University
+  date: '2026-10-21'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - agentic
+  - memory
+  - hierarchical
+  - self-evolution
+  - vla
+  abstract_short: 用可编辑 harness 把高层 VLM 组织成自进化机器人 agent（SERA），配固定 VLA 执行器；RoboMME 上作者报告 51.38% 成功率（无自进化 44.38%）。
+  summary: 为解决长程操作中历史依赖决策（相似观测需不同动作）与执行反馈难以沉淀为规划改进的问题，作者提出 SERA：以可编辑 harness 把高层 VLM 组织成 agent，在固定 VLA 执行器之上维护任务上下文、利用执行反馈更新规划，并通过
+    rollout 自进化（分析/修订 agent 加验证器）改进规划引导、评估标准与控制规则，配置在留出测试前冻结。在 RoboMME（16 个历史依赖任务、800 例）上作者报告 SERA 成功率 51.38%，比无自进化的 44.38%
+    高 7.0 个百分点，超过 MemER（42.38%）、FrameSamp+Modul（44.51%）等基线，在 Reference/Permanence 套件表现最佳。结果提示把规划器组织为可自进化 agent 是历史依赖操作的有力方向，但
+    VLM 推理引入规划延迟、无真机评测，且相对基线增益有限。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29560
+    code: https://github.com/StevenKKXS/SERA
+    project: https://stevenkkxs.github.io/sera-webpage/
+  highlight: ''
+  review:
+    scores:
+      C: 3
+      E: 3
+      O: 3
+      T: 3
+    rationale:
+      C: 把可编辑 harness 与执行驱动自进化用于历史依赖操作的规划层，属 agentic VLA 方向的扎实增量，但核心仍是围绕已有 VLA 的组织方式。
+      E: 单一 RoboMME 基准（800 例）+ 多类基线 + 自进化消融；无真机、单基准。
+      O: 代码实质（Apache-2.0），权重/数据未公开。
+      T: 中科大/上海人工智能实验室/MBZUAI 等学术团队，信息有限按默认 3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - SERA 的 VLA 执行器具体为哪一模型及是否开源
+    - 自进化依赖 gpt-5.6-sol 等闭源 API，复现性待核实
+    reviewed: '2026-10-23'
+    reviewer: claude (agent review, human-auditable)
+    total: 60
+    priority: watching
+  open:
+    code: substantive
+    repo: https://github.com/StevenKKXS/SERA
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    stats:
+      files: 299
+      code_files: 164
+      config_files: 74
+      last_commit: '2026-10-19'
+      readme_says_coming_soon: false
+    first_check: '2026-10-23'
+    last_check: '2026-10-23'
+  added: '2026-10-23'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-23.md
+  late_found: true
+- arxiv_id: '2610.28589'
+  title: 'AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics'
+  authors: Xinxin Liu et al.
+  affiliations:
+  - University of Central Florida
+  - University of Southern California
+  - Michigan State University
+  date: '2026-10-20'
+  updated: '2026-10-21'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - agentic
+  - planner-post-training
+  - rl
+  - sft
+  - libero
+  abstract_short: 把编码智能体的 SFT+多轮 RL 后训练搬给机器人 planner；9B 规划器在 LIBERO-PRO 成功率 18.1%→71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%，并开源框架与
+    checkpoint。
+  summary: 为检验「后训练规划器本身」能否提升 agentic 机器人系统（而非只改进 harness 或外部记忆），作者提出 AgenticRoboRL：跨 harness 的规划器后训练框架，以 SFT 在成功轨迹上初始化、再以多轮
+    RL 优化，通过 harness 专用 adapter 把录制的模型调用与 episode 结果对齐，从而用同一管线支持 VLA 技能调用（RPent）与控制代码生成（CaP-X）两种执行机制。作者报告 9B Qwen3.5 规划器在
+    LIBERO-PRO 成功率由 18.1% 升至 SFT 65.1%、再经 RL 达 71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%；同一 checkpoint 零样本在 LIBERO-Plus 达
+    72.2%，并推广到 CaP-X harness。结果提示后训练规划器是提升 agentic 机器人系统的有效路线，但主评测为仿真、无真机，且 SFT 依赖更强 teacher 的轨迹。
+  links:
+    arxiv: https://arxiv.org/abs/2610.28589
+    code: https://github.com/xinxinliu-ai/AgenticRoboRL
+    project: https://xinxinliu-ai.github.io/AgenticRoboRL/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 3
+      O: 4
+      T: 3
+    rationale:
+      C: 把编码智能体的后训练范式系统化迁移到机器人规划器并跨 harness 通用，是本方向清晰且有示范意义的方法增量。
+      E: LIBERO-PRO 800 例 + LIBERO-Plus 10030 例 + CaP-X harness + 消融与符号检验；但均为仿真、无真机。
+      O: 框架与 checkpoint 已开源（Apache-2.0，HF 可见 9B 规划器权重），许可清晰。
+      T: UCF/USC/MSU 学术团队，相关积累可核实但非该方向顶级，按默认 3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - HF 上的 AgenticRoboRL-Qwen3.5-9B 是否为论文所述 RPent 规划器 checkpoint
+    reviewed: '2026-10-23'
+    reviewer: claude (agent review, human-auditable)
+    total: 72
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/xinxinliu-ai/AgenticRoboRL
+    weights: open
+    data: unknown
+    license: Apache-2.0
+    note: HF 可见 AgenticRoboRL-Qwen3.5-9B 规划器权重；teacher 轨迹承诺发布、目前未见。
+    stats:
+      files: 78
+      code_files: 43
+      config_files: 4
+      last_commit: '2026-10-21'
+      readme_says_coming_soon: false
+    first_check: '2026-10-23'
+    last_check: '2026-10-23'
+  added: '2026-10-23'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-23.md
+  late_found: true
+- arxiv_id: '2610.27861'
+  title: 'RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation'
+  authors: Haocheng Wang et al.
+  affiliations:
+  - Fudan University
+  - Shenzhen Loop Area Institute
+  - The Chinese University of Hong Kong
+  - University of Chinese Academy of Sciences
+  - Shanghai Jiao Tong University
+  date: '2026-10-20'
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - robustness
+  - benchmark
+  - vla
+  - distribution-shift
+  - long-horizon
+  abstract_short: 基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
+  summary: 为弥补 VLA 鲁棒性评测只看聚合成功率、无法看清分布偏移下单次执行如何变化及长程任务失败发生在哪一步的问题，作者构建 RoboCasa-Shift：在 RoboCasa365 上做受控单因子偏移（光照、相机朝向、底座初始化、高斯模糊，各三档严重度）、配对的
+    clean-perturbed 反事实 rollout（每对仅差目标偏移），并基于仿真器状态谓词做阶段感知诊断。对 GR00T N1.5 在 4 个通过 clean 门槛的长程任务上共 1,040 次正式 rollout，作者报告不同因子/任务的鲁棒性响应差异显著、严重度增加并非单调退化（如某相机条件
+    ΔSR=0 但 8/80 配对结局翻转），相同端到端退化可对应不同失败深度。结果提示 VLA 鲁棒性应作为执行的多维属性评估，但仅单策略、四任务且全仿真。
+  links:
+    arxiv: https://arxiv.org/abs/2610.27861
+    code: https://github.com/HaochengWang23/RoboCasa-Shift
+  highlight: 👀
+  review:
+    scores:
+      C: 3
+      E: 3
+      O: 4
+      T: 3
+    rationale:
+      C: 把配对反事实与阶段感知诊断引入 VLA 鲁棒性评测，是评测协议层面的扎实增量，但非新任务集。
+      E: 1,040 次受控 rollout + 三档严重度 + bootstrap 置信区间 + 完整性审计；但仅 GR00T N1.5 单策略、4 任务、纯仿真。
+      O: 代码（MIT）与数据集（HF）公开，许可清晰。
+      T: 复旦/上交/港中大等学术团队，相关积累有限，按默认 3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - HF 数据集 robocasa-shift 是否包含全部 1,040 次 rollout 记录
+    reviewed: '2026-10-23'
+    reviewer: claude (agent review, human-auditable)
+    total: 66
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/HaochengWang23/RoboCasa-Shift
+    weights: n/a
+    data: open
+    license: MIT
+    stats:
+      files: 108
+      code_files: 55
+      config_files: 13
+      last_commit: '2026-10-23'
+      readme_says_coming_soon: false
+    first_check: '2026-10-23'
+    last_check: '2026-10-23'
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  added: '2026-10-23'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-23.md
+  late_found: true
+- arxiv_id: '2610.30136'
+  title: Agentic World Action Models
+  authors: Zhuoyang Liu et al.
+  affiliations:
+  - UC Berkeley
+  - NVIDIA
+  - University of Pennsylvania
+  date: '2026-10-21'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - agentic
+  - code-as-policy
+  - bimanual
+  - real-robot
+  abstract_short: 把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM
+    基线。
+  summary: 为解决世界动作模型（WAM）缺乏组合式技能复用、而 agentic 机器人又缺少物理动力学预测落地的问题，作者提出 AW-0：在统一 mixture-of-transformers 主干中把「代码（技能规划）」「未来视频」「机器人动作」作为三条耦合生成流联合去噪（代码用离散
+    masked diffusion，视频/动作用 flow matching），并配自动标注流水线把机器人与人类视频轨迹标注为可复用技能库。在 RoboTwin 2.0 上作者报告平均成功率 50.7%（clean 80.8%、random
+    20.6%），超过 π0.5、DreamZero、EgoScale、WLA 等基线；在 YAM 双臂与 Tianji–Sharpa 灵巧手共 8 个真机任务上平均 rubric 71.1%，比最强基线高 25.1 分，hybrid 执行进一步改善鲁棒性。结果提示代码规划能把
+    WAM 的规划、预测与执行连接起来，但 random 场景性能骤降暴露像素级 OOD 预测的局限。
+  links:
+    arxiv: https://arxiv.org/abs/2610.30136
+    code: https://github.com/NVIDIA/Isaac-GR00T
+    project: https://agentic-wam.github.io/
+  highlight: 🔥
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 5
+    rationale:
+      C: 把代码规划/技能复用与视频-动作预测统一进单一 WAM，是 agentic WAM 的范式级尝试，方法+技能库管线增量清晰。
+      E: RoboTwin 2.0（50 任务）+ 8 个真机任务（双臂/灵巧手），多强基线与消融（注意力序、ViT vs VAE、代码内容、joint vs AR），证据较完整。
+      O: 代码落在 NVIDIA/Isaac-GR00T（Apache-2.0）并有基座权重，但 AW-0 专有权重与训练数据/技能库未单独公开。
+      T: UC Berkeley + NVIDIA（Goldberg、Darrell、Jim Fan、Yuke Zhu 等）为 embodied AI/WAM 公认领先团队，近期多项标志性成果。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - AW-0 专有 checkpoint 是否在 NVIDIA 集合页公开
+    - YAM/egocentric 技能库与自动标注流水线是否开源
+    reviewed: '2026-10-23'
+    reviewer: claude (agent review, human-auditable)
+    total: 83
+    priority: must-read
+  open:
+    code: substantive
+    repo: https://github.com/NVIDIA/Isaac-GR00T
+    weights: partial
+    data: unknown
+    license: Apache-2.0
+    note: 论文基于 GR00T-N1.7 等；HF 可见基座权重，AW-0 专有权重与训练数据未见单独公开。
+    stats:
+      files: 445
+      code_files: 194
+      config_files: 44
+      last_commit: '2026-10-22'
+      readme_says_coming_soon: false
+    first_check: '2026-10-23'
+    last_check: '2026-10-23'
+  added: '2026-10-23'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-23.md
+  late_found: true

@@ -227,3 +227,12 @@ datasets:
   subcategory: egocentric-human
   added: '2026-10-22'
   last_check: '2026-10-22'
+- id: bihoi
+  name: BiHOI
+  desc: 多视角双手-物体交互数据集：1,575 段序列、229 个物体、约 14.77 小时，强调持续双手接触（双手同时接触率 65.91%），重建交互并重定向为灵巧手参考轨迹。
+  links:
+    project: https://ropedia.github.io/DONIC/
+    paper: https://arxiv.org/abs/2610.29997
+  subcategory: manipulation-demos
+  added: '2026-10-23'
+  last_check: '2026-10-23'

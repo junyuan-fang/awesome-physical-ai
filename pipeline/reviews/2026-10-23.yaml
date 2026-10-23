@@ -1,0 +1,839 @@
+run:
+  scan_date: '2026-10-23'
+  kind: daily
+  window_start: '2026-10-20'
+  window_end: '2026-10-23'
+  last_covered_end: '2026-10-22'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 255
+    already_tracked_or_triaged: 1
+    out_of_scope: 45
+    below_pool_cut: 189
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items:
+- arxiv_id: '2610.29997'
+  title: 'DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations'
+  prefilter_score: 23.0
+  triage: include
+  reason: null
+  category: manipulation
+  route: core
+  contribution: model
+  tags:
+  - dexterous-manipulation
+  - bimanual
+  - reference-tracking
+  - ppo-bc
+  - dataset
+  affiliations:
+  - Ropedia
+  one_liner: 首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。
+  summary: |-
+    为解决现有灵巧跟踪只做单手、缺乏持续双手接触数据的问题，作者提出 DONIC——首个跨操作类别与人体运动来源联合训练的通用双手跟踪器，并发布 BiHOI 多视角数据集（1,575 段、229 物体、65.91% 双手同时接触率）。方法上用「物体中心逐手奖励」保持物体运动反馈并按各手参考接触角色监督，用 Clip-Centered Advantages 消除参考间优势偏移，再以 PPO+BC 循环把验证成功的执行回灌为示范。作者报告单个 checkpoint 无需微调，在未见轨迹上成功率 86.79%、未见物体上 57.32%，分别比最强双手基线 Dexplore-bi 高 77.36/45.73 个百分点，消融支持两个学习信号与 BiHOI 数据增益。结果提示统一策略可跨异构参考协调双手，但评估限于仿真单物体、依赖重定向的运动参考。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 首个通用双手灵巧跟踪器并配套首个强调持续双手接触的数据集，相对单手跟踪工作增量清晰。
+    E: 多基线（DexTrack-bi、Dexplore-bi）+ 双 held-out 划分 + 消融 + 数据集对比，证据完整；但为纯仿真、依赖重建参考。
+    O: 代码仓库较实质（689 个代码文件），但 license none-found、README 标注 coming soon，权重与 BiHOI 数据公开状态待核实。
+    T: Ropedia 为新兴公司，公开可核实的积累有限，按默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  pending_checks:
+  - BiHOI 数据集是否公开下载
+  - 仓库 license 未标注，发布条款待确认
+  open:
+    code: substantive
+    repo: https://github.com/Ropedia/DONIC
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 代码主体已存在但 README 标注 coming soon、license 未找到；BiHOI 数据公开状态待核实。
+  uses: []
+  new_resources:
+  - kind: dataset
+    id: bihoi
+    name: BiHOI
+    desc: 多视角双手-物体交互数据集：1,575 段序列、229 个物体、约 14.77 小时，强调持续双手接触（双手同时接触率 65.91%），重建交互并重定向为灵巧手参考轨迹。
+    links:
+      project: https://ropedia.github.io/DONIC/
+      paper: https://arxiv.org/abs/2610.29997
+    subcategory: manipulation-demos
+- arxiv_id: '2610.29560'
+  title: 'From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation'
+  prefilter_score: 18.5
+  triage: include
+  reason: null
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - agentic
+  - memory
+  - hierarchical
+  - self-evolution
+  - vla
+  affiliations:
+  - University of Science and Technology of China
+  - Shanghai Artificial Intelligence Laboratory
+  - Shanghai Jiao Tong University
+  - Mohamed bin Zayed University of Artificial Intelligence
+  - Zhejiang University
+  one_liner: 用可编辑 harness 把高层 VLM 组织成自进化机器人 agent（SERA），配固定 VLA 执行器；RoboMME 上作者报告 51.38% 成功率（无自进化 44.38%）。
+  summary: |-
+    为解决长程操作中历史依赖决策（相似观测需不同动作）与执行反馈难以沉淀为规划改进的问题，作者提出 SERA：以可编辑 harness 把高层 VLM 组织成 agent，在固定 VLA 执行器之上维护任务上下文、利用执行反馈更新规划，并通过 rollout 自进化（分析/修订 agent 加验证器）改进规划引导、评估标准与控制规则，配置在留出测试前冻结。在 RoboMME（16 个历史依赖任务、800 例）上作者报告 SERA 成功率 51.38%，比无自进化的 44.38% 高 7.0 个百分点，超过 MemER（42.38%）、FrameSamp+Modul（44.51%）等基线，在 Reference/Permanence 套件表现最佳。结果提示把规划器组织为可自进化 agent 是历史依赖操作的有力方向，但 VLM 推理引入规划延迟、无真机评测，且相对基线增益有限。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 把可编辑 harness 与执行驱动自进化用于历史依赖操作的规划层，属 agentic VLA 方向的扎实增量，但核心仍是围绕已有 VLA 的组织方式。
+    E: 单一 RoboMME 基准（800 例）+ 多类基线 + 自进化消融；无真机、单基准。
+    O: 代码实质（Apache-2.0），权重/数据未公开。
+    T: 中科大/上海人工智能实验室/MBZUAI 等学术团队，信息有限按默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - SERA 的 VLA 执行器具体为哪一模型及是否开源
+  - 自进化依赖 gpt-5.6-sol 等闭源 API，复现性待核实
+  open:
+    code: substantive
+    repo: https://github.com/StevenKKXS/SERA
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.27998'
+  title: 'LocoPilot: Single-Operator Bilateral Teleoperation for Loco-Manipulation Policy Learning'
+  prefilter_score: 17.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；单操作员遥操作数据采集系统，贡献偏系统/硬件，方法增量有限
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Authors are with Dynamic Legged Systems Lab, Istituto Italiano di Tecnologia (IIT). name.lastname@iit.it.
+    *Equal contribution'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/iit-DLSLab/LocoPilot
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.28589'
+  title: 'AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics'
+  prefilter_score: 16.2
+  triage: include
+  reason: null
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - agentic
+  - planner-post-training
+  - rl
+  - sft
+  - libero
+  affiliations:
+  - University of Central Florida
+  - University of Southern California
+  - Michigan State University
+  one_liner: 把编码智能体的 SFT+多轮 RL 后训练搬给机器人 planner；9B 规划器在 LIBERO-PRO 成功率 18.1%→71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%，并开源框架与 checkpoint。
+  summary: |-
+    为检验「后训练规划器本身」能否提升 agentic 机器人系统（而非只改进 harness 或外部记忆），作者提出 AgenticRoboRL：跨 harness 的规划器后训练框架，以 SFT 在成功轨迹上初始化、再以多轮 RL 优化，通过 harness 专用 adapter 把录制的模型调用与 episode 结果对齐，从而用同一管线支持 VLA 技能调用（RPent）与控制代码生成（CaP-X）两种执行机制。作者报告 9B Qwen3.5 规划器在 LIBERO-PRO 成功率由 18.1% 升至 SFT 65.1%、再经 RL 达 71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%；同一 checkpoint 零样本在 LIBERO-Plus 达 72.2%，并推广到 CaP-X harness。结果提示后训练规划器是提升 agentic 机器人系统的有效路线，但主评测为仿真、无真机，且 SFT 依赖更强 teacher 的轨迹。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 把编码智能体的后训练范式系统化迁移到机器人规划器并跨 harness 通用，是本方向清晰且有示范意义的方法增量。
+    E: LIBERO-PRO 800 例 + LIBERO-Plus 10030 例 + CaP-X harness + 消融与符号检验；但均为仿真、无真机。
+    O: 框架与 checkpoint 已开源（Apache-2.0，HF 可见 9B 规划器权重），许可清晰。
+    T: UCF/USC/MSU 学术团队，相关积累可核实但非该方向顶级，按默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - HF 上的 AgenticRoboRL-Qwen3.5-9B 是否为论文所述 RPent 规划器 checkpoint
+  open:
+    code: substantive
+    repo: https://github.com/xinxinliu-ai/AgenticRoboRL
+    weights: open
+    data: unknown
+    license: Apache-2.0
+    note: HF 可见 AgenticRoboRL-Qwen3.5-9B 规划器权重；teacher 轨迹承诺发布、目前未见。
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.30097'
+  title: 'AtomicRL: Atomic Reinforcement Learning for Long-Horizon Robotic Manipulation'
+  prefilter_score: 16.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；VLA 后训练方法（SAPO/BATE）较扎实，但无开源、相对 PPO 增益有限（LIBERO-LONG +3.6~4.0%）
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Sun Yat-sen University'
+  - 'Affiliation: JD Explore Academy'
+  - 'Affiliation: The Hong Kong Polytechnic University'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.28698'
+  title: 'Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds'
+  prefilter_score: 15.3
+  triage: exclude
+  reason: 超出范围：虚拟游戏世界（Minecraft 等）中键盘/鼠标控制的具身智能体持续预训练，非物理机器人或物理世界模型
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: miHoYo Honkai AI R&D Team'
+  - 'Affiliation: College AI, Tsinghua University'
+  - Equal Contribution Work done while interning at miHoYo
+  - 'Affiliation: University of Chinese Academy of Sciences'
+  - 'Affiliation: MMLab, The University of Hong Kong'
+  - 'Affiliation: National University of Singapore'
+  - Work done while interning at miHoYo
+  - 'Affiliation: Peking University'
+  - Corresponding Author
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: partial
+    repo: https://github.com/THUSI-Lab/GameScaling
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.28432'
+  title: 'Physical AI for Intralogistics: Benchmarking the NVIDIA Sim-to-Real Ecosystem for Cosmos-Enhanced COMPASS Navigation
+    on Industrial Mobile Robots'
+  prefilter_score: 15.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；NVIDIA 生态（X-Mobility/COMPASS/Cosmos）工业导航验证，价值偏厂商案例、方法增量有限
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Idealworks'
+  - 'Affiliation: NVIDIA'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/NVlabs/COMPASS
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.30108'
+  title: 'Multimodal Embodied Agents: A Unified Capability-centric Perspective from Computer-Use to Robot-Use'
+  prefilter_score: 14.6
+  triage: defer
+  reason: 本轮名额有限（cap=5）；PAPAV 为能力框架综述/观点性工作，无新实验或基准
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: placeholder
+    repo: https://github.com/showlab/Awesome-Multimodal-Embodied-Agent
+    weights: unknown
+    data: unknown
+    license: custom
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.30876'
+  title: 'LocoManiLab: A Unified Testbed for Data, Policies, Controllers, and Deployment in Humanoid Loco-Manipulation'
+  prefilter_score: 14.5
+  triage: defer
+  reason: 本轮名额有限（cap=5）；人形 loco-manipulation 测试台较全面，但代码/数据均未开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.31166'
+  title: 'Memory before Goal: Role of Pre-History Memory for Humanoid Loco-Manipulation'
+  prefilter_score: 14.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；人形记忆机制（WholeBodyMem+HuMeGo）有真机验证，但无开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, UAE'
+  - 'Affiliation: {chenyuan.chen, yoshihiko.nakamura}@mbzuai.ac.ae'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.30988'
+  title: In-Context Learning World Models for Robot Dual-Arm Manipulation of Soft Garment with Partial Observations
+  prefilter_score: 14.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；软体对象世界模型，真机定量证据偏弱（60 次滚动）且无开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Darwin Caldwell, and Fei Chen,'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.30438'
+  title: 'Tactile-Based Robotic Manipulation: From Mechanics-Driven to Data-Driven Perspectives'
+  prefilter_score: 14.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；触觉操作综述（已刊 Annual Review of Control, Robotics, and Autonomous Systems），本轮优先收录新方法/资源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign, Urbana, Illinois,
+    USA, 61801; email: yuanwz@illinois.edu'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.28164'
+  title: 'From Predictive Geometry to Action: Learning Complementary Predictive Representations for Embodied Manipulation'
+  prefilter_score: 14.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；互补预测表征方法有效，但仓库不可达（代码未放出）
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Beihang University'
+  - 'Affiliation: Shanghai Artificial Intelligence Laboratory'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: https://github.com/xuxiaoxxxx/CPR.
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.29989'
+  title: 'Looking Ahead: Modeling Future Evolution in Autoregressive Video Generation'
+  prefilter_score: 14.0
+  triage: exclude
+  reason: 超出范围：纯视频生成训练方法（未来块预测 FCP），无机器人/具身控制成分，仅面向视频世界模型生成
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/TencentARC/Looking-Ahead
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.27861'
+  title: 'RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation'
+  prefilter_score: 13.9
+  triage: include
+  reason: null
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - robustness
+  - benchmark
+  - vla
+  - distribution-shift
+  - long-horizon
+  affiliations:
+  - Fudan University
+  - Shenzhen Loop Area Institute
+  - The Chinese University of Hong Kong
+  - University of Chinese Academy of Sciences
+  - Shanghai Jiao Tong University
+  one_liner: 基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
+  summary: |-
+    为弥补 VLA 鲁棒性评测只看聚合成功率、无法看清分布偏移下单次执行如何变化及长程任务失败发生在哪一步的问题，作者构建 RoboCasa-Shift：在 RoboCasa365 上做受控单因子偏移（光照、相机朝向、底座初始化、高斯模糊，各三档严重度）、配对的 clean-perturbed 反事实 rollout（每对仅差目标偏移），并基于仿真器状态谓词做阶段感知诊断。对 GR00T N1.5 在 4 个通过 clean 门槛的长程任务上共 1,040 次正式 rollout，作者报告不同因子/任务的鲁棒性响应差异显著、严重度增加并非单调退化（如某相机条件 ΔSR=0 但 8/80 配对结局翻转），相同端到端退化可对应不同失败深度。结果提示 VLA 鲁棒性应作为执行的多维属性评估，但仅单策略、四任务且全仿真。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 把配对反事实与阶段感知诊断引入 VLA 鲁棒性评测，是评测协议层面的扎实增量，但非新任务集。
+    E: 1,040 次受控 rollout + 三档严重度 + bootstrap 置信区间 + 完整性审计；但仅 GR00T N1.5 单策略、4 任务、纯仿真。
+    O: 代码（MIT）与数据集（HF）公开，许可清晰。
+    T: 复旦/上交/港中大等学术团队，相关积累有限，按默认 3。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - HF 数据集 robocasa-shift 是否包含全部 1,040 次 rollout 记录
+  open:
+    code: substantive
+    repo: https://github.com/HaochengWang23/RoboCasa-Shift
+    weights: n/a
+    data: open
+    license: MIT
+    note: ''
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: robocasa-shift
+    name: RoboCasa-Shift
+    desc: 基于 RoboCasa365 的 VLA 诊断式鲁棒性基准：受控单因子分布偏移（光照/相机朝向/底座初始化/高斯模糊，各三档严重度）+ 配对 clean-perturbed 反事实 rollout + 仿真器状态谓词阶段感知诊断，共 1,040 次正式 rollout。
+    links:
+      code: https://github.com/HaochengWang23/RoboCasa-Shift
+      data: https://huggingface.co/datasets/HaochengWang23/robocasa-shift
+      paper: https://arxiv.org/abs/2610.27861
+    subcategory: manipulation
+- arxiv_id: '2610.30044'
+  title: 'SP-HLM: Sparse-Pose-Driven Motion Generation and Whole-Body Control for Humanoid Loco-Manipulation'
+  prefilter_score: 13.5
+  triage: defer
+  reason: 本轮名额有限（cap=5）；稀疏姿态接口的人形 loco-manipulation 方法，无开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: 1Shanghai Jiao Tong University 2Moore Threads 3The University of Hong Kong'
+  - 'Affiliation: 1Equal contribution. 2Interns at Shanghai Jiao Tong University. 3Corresponding author: muyao@sjtu.edu.cn'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.30136'
+  title: Agentic World Action Models
+  prefilter_score: 13.2
+  triage: include
+  reason: null
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-action-model
+  - agentic
+  - code-as-policy
+  - bimanual
+  - real-robot
+  affiliations:
+  - UC Berkeley
+  - NVIDIA
+  - University of Pennsylvania
+  one_liner: 把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。
+  summary: |-
+    为解决世界动作模型（WAM）缺乏组合式技能复用、而 agentic 机器人又缺少物理动力学预测落地的问题，作者提出 AW-0：在统一 mixture-of-transformers 主干中把「代码（技能规划）」「未来视频」「机器人动作」作为三条耦合生成流联合去噪（代码用离散 masked diffusion，视频/动作用 flow matching），并配自动标注流水线把机器人与人类视频轨迹标注为可复用技能库。在 RoboTwin 2.0 上作者报告平均成功率 50.7%（clean 80.8%、random 20.6%），超过 π0.5、DreamZero、EgoScale、WLA 等基线；在 YAM 双臂与 Tianji–Sharpa 灵巧手共 8 个真机任务上平均 rubric 71.1%，比最强基线高 25.1 分，hybrid 执行进一步改善鲁棒性。结果提示代码规划能把 WAM 的规划、预测与执行连接起来，但 random 场景性能骤降暴露像素级 OOD 预测的局限。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 5
+  rationale:
+    C: 把代码规划/技能复用与视频-动作预测统一进单一 WAM，是 agentic WAM 的范式级尝试，方法+技能库管线增量清晰。
+    E: RoboTwin 2.0（50 任务）+ 8 个真机任务（双臂/灵巧手），多强基线与消融（注意力序、ViT vs VAE、代码内容、joint vs AR），证据较完整。
+    O: 代码落在 NVIDIA/Isaac-GR00T（Apache-2.0）并有基座权重，但 AW-0 专有权重与训练数据/技能库未单独公开。
+    T: UC Berkeley + NVIDIA（Goldberg、Darrell、Jim Fan、Yuke Zhu 等）为 embodied AI/WAM 公认领先团队，近期多项标志性成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - AW-0 专有 checkpoint 是否在 NVIDIA 集合页公开
+  - YAM/egocentric 技能库与自动标注流水线是否开源
+  open:
+    code: substantive
+    repo: https://github.com/NVIDIA/Isaac-GR00T
+    weights: partial
+    data: unknown
+    license: Apache-2.0
+    note: 论文基于 GR00T-N1.7 等；HF 可见基座权重，AW-0 专有权重与训练数据未见单独公开。
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.31423'
+  title: 'FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models'
+  prefilter_score: 13.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；多视角动态路由方法（CoRL 2026），无开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Nanjing Institute of Software Technology'
+  - 'Affiliation: Institute of Software, Chinese Academy of Sciences'
+  - 'Affiliation: University of Chinese Academy of Sciences, Nanjing'
+  - 'Affiliation: Nanjing University of Posts and Telecommunications'
+  - 'Affiliation: Hohai University* Corresponding author'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.28626'
+  title: 'UniWALM: Unified World Action Language Model for Embodied Robot Control'
+  prefilter_score: 13.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；统一视频-动作-语言模型（语言即记忆）方法，无开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Brown University'
+  - 'Affiliation: Amazon'
+  - 'Affiliation: Northeastern University'
+  - 'Affiliation: UT Austin'
+  - 'Affiliation: University of WashingtonProject page: rahulsajnani.github.io/projects/uniwalm/'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.28431'
+  title: 'Plausible Future, Wrong Choice: Steering World-Action Models toward Intended Future'
+  prefilter_score: 13.0
+  triage: defer
+  reason: 本轮名额有限（cap=5）；阶段混淆纠偏方法 + StageBench 基准，无开源
+  category: null
+  route: null
+  contribution: null
+  tags: []
+  affiliations:
+  - 'Affiliation: Sun Yat-sen University'
+  - 'Affiliation: Shenzhen Loop Area Institute'
+  - 'Affiliation: The Hong Kong University of Science and Technology (Guangzhou)'
+  - 'Affiliation: Xi’an Jiaotong University'
+  - 'Affiliation: Southern University of Science and Technology'
+  - 'Affiliation: Beijing Institute of Technology'
+  - 'Affiliation: Peng Cheng Laboratory'
+  - 'Affiliation: The Chinese University of Hong Kong Shenzhen'
+  - 'Affiliation: Ainoro'
+  - 'Affiliation: King Abdullah University of Science and Technology'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read: []
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []

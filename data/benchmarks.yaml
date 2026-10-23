@@ -250,3 +250,14 @@ benchmarks:
   subcategory: manipulation
   added: '2026-10-22'
   last_check: '2026-10-22'
+- id: robocasa-shift
+  name: RoboCasa-Shift
+  desc: 基于 RoboCasa365 的 VLA 诊断式鲁棒性基准：受控单因子分布偏移（光照/相机朝向/底座初始化/高斯模糊，各三档严重度）+ 配对 clean-perturbed 反事实 rollout + 仿真器状态谓词阶段感知诊断，共
+    1,040 次正式 rollout。
+  links:
+    code: https://github.com/HaochengWang23/RoboCasa-Shift
+    data: https://huggingface.co/datasets/HaochengWang23/robocasa-shift
+    paper: https://arxiv.org/abs/2610.27861
+  subcategory: manipulation
+  added: '2026-10-23'
+  last_check: '2026-10-23'
