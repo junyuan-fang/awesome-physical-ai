@@ -71,7 +71,7 @@ def paper_groups(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
     other = sorted([p for p in rest if PRIORITY_RANK[p["review"]["priority"]] > 1], key=sort_key)
     groups = []
     if top:
-        groups.append({"icon": "🔥", "title": "Must-read & notable / 重点与值得关注", "open": True, "papers": top})
+        groups.append({"icon": "🔥", "title": "Must-read & notable / 重点与值得关注", "open": False, "papers": top})
     if other:
         groups.append({"icon": "📋", "title": "Also tracked / 观察中与暂不评级", "open": False, "papers": other})
     if classic:
@@ -120,7 +120,9 @@ def main() -> int:
         for u in p.get("uses") or []:
             used_by.setdefault(u["resource"], []).append({"paper": p, "role": u["role"]})
 
-    week_ago = (date.today() - timedelta(days=7)).isoformat()
+    runs = load_yaml(DATA / "runs.yaml", "runs")
+    latest_scan = max((str(r["scan_date"]) for r in runs if r.get("kind") == "daily"), default="")
+    week_ago = (date.today() - timedelta(days=6)).isoformat()
     picks = sorted(
         [
             p
@@ -146,7 +148,7 @@ def main() -> int:
         "simulators": load_yaml(DATA / "simulators.yaml", "simulators"),
         "benchmarks": load_yaml(DATA / "benchmarks.yaml", "benchmarks"),
         "tools": load_yaml(DATA / "tools.yaml", "tools"),
-        "last_updated": date.today().isoformat(),
+        "last_updated": latest_scan or "unknown",
         "year": date.today().year,
         "priority_counts": priority_counts,
     }

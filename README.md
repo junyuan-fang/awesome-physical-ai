@@ -2,7 +2,7 @@
 
 # 🤖 Awesome Physical AI
 
-**A continuously maintained, auto-updated list of Physical AI · Embodied AI · Humanoid Robotics — focused on 2025–2026+ state-of-the-art.**
+**Physical AI · Embodied AI · Humanoid Robotics — curated papers, reproducible resources, and evidence-based reading priorities.**
 
 *持续自动更新的具身智能 / 物理 AI / 人形机器人资源列表 · 论文描述中英双语，面向中文社区*
 
@@ -10,7 +10,7 @@
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
 ![Last updated](https://img.shields.io/badge/Last%20updated-2026--10--23-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 📊 **238** papers&nbsp; · &nbsp;🏢 **19** companies&nbsp; · &nbsp;🎮 **8** simulators&nbsp; · &nbsp;📦 **23** datasets&nbsp; · &nbsp;📊 **26** benchmarks
 
@@ -20,12 +20,16 @@
 
 </div>
 
+**快速入口 / Quick links** · [本周精选](#weekly-picks) · [Top 20](#top-20) · [分类目录](#contents) · [完整评分索引](docs/index.md) · [专题](#topics) · [评分方法](#scoring) · [扫描报告](#scan-reports)
+
+> 最近完成扫描：**2026-10-23**（北京时间）· [查看覆盖范围、收录与排除记录](digests/daily/2026-10-23.md)。每日 **08:00 Asia/Shanghai** 由本地 Codex 任务执行；机器须开机、登录且联网，实际完成情况以扫描报告为准。
+
 > 💡 **Legend / 图例**: 🔥 must-read（总分 ≥80 且证据 ≥3）· 👀 notable（65–79）· 📜 classic landmark · `81/100` = 贡献 30% + 证据 25% + 开放 30% + 团队 15% · 💻 substantive code · 🟡 partial · 📄 placeholder repo · 🧩 adjacent（数据/基准/基础设施）· 🏛️ accepted venue · 📝 full review. Click any **▸ section** to expand / 点击展开折叠区.
 >
 > 📚 Full ranked index with affiliations & open status: [docs/index.md](docs/index.md) · Scan reports: [digests/](digests/) (latest: [2026-10-23](digests/daily/2026-10-23.md))
 ---
 
-## ⭐ This week's picks / 本周精选
+## <a id="weekly-picks"></a>⭐ This week's picks / 本周精选
 
 - 🔥 **[Long-WAM: Scaling the Context of World-Action Models](https://arxiv.org/abs/2610.10528)** — *Wei Huang et al.* · `2026-10-07` · `88/100`（C4·E5·O4·T5） · 💻
   > 自回归视频预训练 + 因果世界-动作模型：GR-1 上 19.2 s 上下文把成功率从 63.3% 提到 78.7%，RTX 5090 每动作块 107.4 ms。 · [🌐 project](https://nvlabs.github.io/LongLive/Long-WAM/) · [💻 code](https://github.com/NVlabs/LongLive) · [📝 review](digests/daily/2026-10-22.md)
@@ -75,7 +79,7 @@
 
 ---
 
-## 🏆 Top-20 / 总榜
+## <a id="top-20"></a>🏆 Top-20 / 总榜
 
 当前评分前 20（优先级 → 总分 → 首次公开日期），括号内为 `C/E/O/T` 分数构成；完整索引见 [docs/index.md](docs/index.md)。
 
@@ -166,9 +170,9 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ---
 
-## 📐 How we score / 打分标准
+## <a id="scoring"></a>📐 How we score / 打分标准
 
-每篇按四个维度各打 1–5 分，总分 = **6×C + 5×E + 6×O + 3×T**（满分 100）。分数构成会直接显示在每条论文后面，例如 `86/100（C5·E4·O4·T4）`。
+每篇按四个维度各打 1–5 分，总分 = **6×C + 5×E + 6×O + 3×T**（满分 100）。分数构成会直接显示在每条论文后面，例如 `86/100（C5·E4·O4·T4）`。这是仓库内的阅读优先级，不是跨任务的性能排行榜；团队背景占 15%，代码、权重和数据的实际开放程度占 30%。
 
 - **C 贡献重要性（30%）** — 新范式 / 基础模型 / 关键资源的增量大小。
 - **E 证据强度（25%）** — 多基准、强基线、消融、真机或大规模验证。
@@ -189,7 +193,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ---
 
-## 🧭 Topics / 专题
+## <a id="topics"></a>🧭 Topics / 专题
 
 纵向深挖某个方向或系列，不受每日扫描篇幅限制；数据仍以 `data/papers.yaml` 为准，评分与开放状态随索引更新。
 
@@ -204,7 +208,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ### Vision-Language-Action (VLA) · 69
 
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 30 papers</summary>
 
 - 🔥 **[Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models](https://arxiv.org/abs/2609.12641)** — *Jianman Lin et al.* · `2026-09-11` · `86/100`（C4·E4·O5·T4） · 💻
@@ -429,7 +433,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ### World Models · 63
 
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 30 papers</summary>
 
 - 🔥 **[Long-WAM: Scaling the Context of World-Action Models](https://arxiv.org/abs/2610.10528)** — *Wei Huang et al.* · `2026-10-07` · `88/100`（C4·E5·O4·T5） · 💻
@@ -636,7 +640,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ### Other Generalist Models · 8
 
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 5 papers</summary>
 
 - 🔥 **[GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives](https://arxiv.org/abs/2609.39601)** — *Qize Yu et al.* · `2026-09-30` · `80/100`（C4·E4·O4·T4） · 💻
@@ -676,7 +680,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="manipulation"></a>🦾 Manipulation
 
 *Grasping, dexterous, bimanual manipulation*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 13 papers</summary>
 
 - 🔥 **[HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](https://arxiv.org/abs/2610.02089)** — *Kyochul Jang et al.* · `2026-10-01` · `86/100`（C4·E4·O5·T4） · 💻 · 🧩 *adjacent*
@@ -790,7 +794,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="locomotion"></a>🦿 Locomotion
 
 *Humanoid, quadruped, bipedal walking and running*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 8 papers</summary>
 
 - 🔥 **[GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](https://arxiv.org/abs/2606.05160)** — *Xie, Tianyi et al.* · `2026-06-03` · `83/100`（C4·E4·O4·T5） · 💻 · 🧩 *adjacent*
@@ -866,7 +870,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="teleoperation"></a>🕹️ Teleoperation
 
 *VR, wearable, and exoskeleton-based data collection*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 3 papers</summary>
 
 - 🔥 **[RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation](https://arxiv.org/abs/2607.06558)** — *Zhao, Haoyu et al.* · `2026-07-07` · `80/100`（C4·E4·O4·T4） · 💻 · 🧩 *adjacent*
@@ -917,7 +921,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="sim2real"></a>🌉 Sim-to-Real
 
 *Domain randomization, sim-to-real transfer, deployment*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 4 papers</summary>
 
 - 👀 **[Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](https://arxiv.org/abs/2608.20087)** — *Huang, Tao et al.* · `2026-08-20` · `74/100`（C4·E4·O3·T4） · 💻
@@ -960,7 +964,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="scene"></a>🌍 3D Scene Understanding
 
 *NeRF, Gaussian Splatting, segmentation for robotics*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 1 paper</summary>
 
 - 👀 **[PhysX-Omni: Unified Simulation-Ready Physical 3D Generation for Rigid, Deformable, and Articulated Objects](https://arxiv.org/abs/2605.21572)** — *Cao, Ziang et al.* · `2026-05-20` · `78/100`（C4·E3·O4·T5） · 💻 · 🧩 *adjacent*
@@ -996,7 +1000,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="navigation"></a>🧭 Navigation & Mobility
 
 *Visual navigation, embodied QA, mobile robots*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 4 papers</summary>
 
 - 🔥 **[ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation](https://arxiv.org/abs/2610.25690)** — *Yihui Yang et al.* · `2026-10-19` · `86/100`（C4·E4·O5·T4） · 💻
@@ -1045,7 +1049,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 ## <a id="rl-il"></a>🎯 RL & Imitation Learning
 
 *Diffusion policies, behavior cloning, RL for robotics*
-<details open>
+<details>
 <summary>🔥 <b>Must-read & notable / 重点与值得关注</b> · 1 paper</summary>
 
 - 👀 **[Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](https://arxiv.org/abs/2608.15938)** — *Zeng, Michael et al.* · `2026-08-16` · `77/100`（C4·E4·O3·T5） · 📄 · 🧩 *adjacent*
@@ -1229,6 +1233,8 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 *Humanoid and embodied AI startups with valuation tracker*
 ### 💰 Valuation Tracker
 
+以下融资与估值是按表内日期记录的历史快照，不代表当前估值。
+
 | Company | Region | Focus | Latest Round | Valuation | Date |
 |---|---|---|---|---|---|
 | **Figure** | US | humanoid, manipulation | Series B $675,000,000 | $2,600,000,000 | 2024-02 |
@@ -1321,7 +1327,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ---
 
-## 🗞️ Scan reports / 扫描报告
+## <a id="scan-reports"></a>🗞️ Scan reports / 扫描报告
 
 Each daily run writes a report with its coverage window, inclusion cap, candidate / exclusion statistics and a full review per included paper (problem → method → results & conditions → limits, open status with `last_check`). Weekly (≤15) and monthly (≤30) picks are rolled up from them.
 
@@ -1346,4 +1352,4 @@ This list is fed by a daily discovery → two-layer review pipeline ([methodolog
 
 ## 📜 License
 
-[MIT](LICENSE) © 2026 [@junyuan-fang](https://github.com/junyuan-fang)
+[Apache License 2.0](LICENSE) · Maintained by [@junyuan-fang](https://github.com/junyuan-fang)

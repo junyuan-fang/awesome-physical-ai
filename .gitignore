@@ -9,3 +9,4 @@ __pycache__/
 pipeline/cache/
 pipeline/candidates/
 pipeline/logs/
+.claude/

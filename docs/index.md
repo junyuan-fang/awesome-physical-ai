@@ -1,6 +1,6 @@
 # 累积索引 / Ranked index
 
-> 自动生成于 2026-10-23，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
+> 最近完成扫描：2026-10-23，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
 > 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
 
 共 238 篇：🔥 38 · 👀 70 · 观察中 126 · 暂不评级 4

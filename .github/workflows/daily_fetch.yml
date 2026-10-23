@@ -1,15 +1,8 @@
-name: Daily fetch (08:00 Asia/Shanghai)
+name: Manual candidate fetch (fallback)
 
-# Deterministic half of the daily pipeline: discover candidates, write the review
-# stub, and commit it. The review itself needs an agent/human (docs/DAILY_AGENT.md);
-# run scripts/run_agent_daily.sh from your scheduler to apply once the stub is filled.
-#
-# Note: GitHub only runs scheduled workflows on the default branch, so this is
-# inert until the v2 pipeline is merged there.
+# Manual fallback only. Windows Codex owns the daily 08:00 schedule (docs/DAILY_AGENT.md).
 
 on:
-  schedule:
-    - cron: "0 0 * * *"   # 00:00 UTC = 08:00 Asia/Shanghai
   workflow_dispatch:
 
 permissions:
@@ -37,7 +30,7 @@ jobs:
       - name: Fetch candidates and write the review stub
         run: |
           if [[ ! -f scripts/fetch_candidates.py ]]; then
-            echo "v2 pipeline not present on this branch — nothing to do."
+            echo "v2 pipeline not present on this branch 閳?nothing to do."
             exit 0
           fi
           DAY=$(TZ=Asia/Shanghai date +%F)

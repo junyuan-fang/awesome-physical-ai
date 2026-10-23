@@ -184,7 +184,7 @@ def main() -> int:
     ap.add_argument("review_file")
     ap.add_argument("--no-readme", action="store_true")
     ap.add_argument("--check", action="store_true", help="validate the review file only; change nothing")
-    ap.add_argument("--reviewer", default="claude (agent review, human-auditable)")
+    ap.add_argument("--reviewer", default="codex (agent review, human-auditable)")
     args = ap.parse_args()
 
     review_path = Path(args.review_file)
