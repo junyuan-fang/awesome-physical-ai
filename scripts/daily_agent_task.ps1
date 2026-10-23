@@ -11,7 +11,10 @@
 #   schtasks /Create /SC DAILY /ST 08:00 /TN "awesome-physical-ai daily" ^
 #     /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -File <this file>"
 #
-param([string]$Day = (Get-Date).ToString("yyyy-MM-dd"))
+param(
+    [string]$Day = (Get-Date).ToString("yyyy-MM-dd"),
+    [switch]$Preflight
+)
 
 $ErrorActionPreference = "Stop"
 $repo = Split-Path -Parent $PSScriptRoot
@@ -23,6 +26,15 @@ $log = Join-Path $logDir "daily-$Day.log"
 function Log($m) { $m | Tee-Object -FilePath $log -Append }
 
 Log "=== daily run $Day ($repo) ==="
+
+if ($Preflight) {
+    Log "preflight: repo=$repo wsl=$wslRepo"
+    wsl -d Ubuntu -- bash -lc "cd $wslRepo && python3 --version && python3 scripts/validate.py" *>> $log
+    if ($LASTEXITCODE -ne 0) { Log "preflight failed"; exit $LASTEXITCODE }
+    Log ("git status: " + ((git -C $repo status --short) -join "; "))
+    Log "preflight OK"
+    exit 0
+}
 
 # Sync the branch: master once the v2 scripts are merged there, otherwise feat/curation-v2.
 git -C $repo fetch origin --prune *>> $log
