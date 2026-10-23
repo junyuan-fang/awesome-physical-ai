@@ -3,6 +3,24 @@
 Self-contained instructions for the scheduled agent that runs the paper pipeline every morning.
 Rules: [METHODOLOGY.md](METHODOLOGY.md) · field-by-field procedure: [REVIEWER_GUIDE.md](REVIEWER_GUIDE.md).
 
+## Trigger / 自动触发
+
+- **08:00 Asia/Shanghai（00:00 UTC）**：`.github/workflows/daily_fetch.yml` 自动执行
+  `run_daily.sh fetch`，把当天的评审 stub 提交到 `pipeline/reviews/<date>.yaml`。
+  GitHub 的定时工作流只在默认分支运行，所以 v2 合并到 master 前它不会生效；合并前
+  请在本地/feature 分支用下面的方式触发。
+- **评审 + 落地**：`run_daily.sh apply` 要求评审文件已填写，因此这一步由 agent/人完成。
+  外部调度器（cc-connect cron、Windows 任务计划、Claude Code headless 等）在 08:00 运行：
+
+  ```bash
+  bash scripts/run_agent_daily.sh "$(TZ=Asia/Shanghai date +%F)"
+  ```
+
+  若评审仍是 stub，脚本以退出码 2 停下并提示先填 `pipeline/reviews/<date>.yaml`；
+  填好后重跑同一命令即可 apply、生成 digest、渲染并校验。
+- **可选：CI 内全自动**。若仓库配置了 `ANTHROPIC_API_KEY`，可以在 `daily_fetch.yml`
+  之后追加一个调用 Claude Code headless 的 job；这会产生 API 费用，默认未启用。
+
 ## 0. Setup
 
 ```bash

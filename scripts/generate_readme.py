@@ -170,6 +170,17 @@ def main() -> int:
         for cid in dict.fromkeys(p["category"] for p in sorted(papers, key=lambda p: p["category"]))
     ]
 
+    # Top-20 overall ranking (priority → total → newest date) and category titles.
+    cat_titles: dict[str, str] = {}
+    for c in categories:
+        cat_titles[c["id"]] = c["title"]
+        for sub in c.get("subcategories") or []:
+            cat_titles[sub["id"]] = sub["title"]
+    context["category_titles"] = cat_titles
+    context["top_papers"] = sorted(
+        [p for p in papers if (p.get("review") or {}).get("total")], key=sort_key
+    )[:20]
+
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES)),
         trim_blocks=True,
