@@ -1,8 +1,21 @@
 {#- Jinja2 template — DO NOT edit README.md directly, edit this file -#}
-{%- macro paper_line(p) -%}
-- {% if p.highlight %}{{ p.highlight }} {% endif %}**[{{ p.title }}]({{ p.links.arxiv }})** — *{{ p.authors }}* · `{{ p.date }}`{% if p.venue %} · 🏛️ **{{ p.venue }}**{% endif %}{% if p.review.total %} · `{{ p.review.total }}/100`{% endif %}{% if code_badge[p.open.code] %} · {{ code_badge[p.open.code] }}{% endif %}{% if p.route == "adjacent" %} · 🧩 *adjacent*{% endif %}
-
+{%- macro score_tag(p) -%}
+{%- if p.review.total %} · `{{ p.review.total }}/100`{% if p.review.scores %}（C{{ p.review.scores.C }}·E{{ p.review.scores.E }}·O{{ p.review.scores.O }}·T{{ p.review.scores.T }}）{% endif %}{% endif -%}
+{%- endmacro -%}
+{%- macro paper_meta(p) -%}
+{% if p.highlight %}{{ p.highlight }} {% endif %}**[{{ p.title }}]({{ p.links.arxiv }})** — *{{ p.authors }}* · `{{ p.date }}`{% if p.venue %} · 🏛️ **{{ p.venue }}**{% endif %}{{ score_tag(p) }}{% if code_badge[p.open.code] %} · {{ code_badge[p.open.code] }}{% endif %}{% if p.route == "adjacent" %} · 🧩 *adjacent*{% endif %}
+{%- endmacro -%}
+{%- macro paper_body(p) %}
   > {{ p.abstract_short | clean_abstract }}{% if p.links.project %} · [🌐 project]({{ p.links.project }}){% endif %}{% if p.links.code %} · [💻 code]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [🎬 demo]({{ p.links.demo }}){% endif %}{% if p.digest and p.summary %} · [📝 review]({{ p.digest }}){% endif %}
+{%- endmacro -%}
+{%- macro paper_line(p) -%}
+- {{ paper_meta(p) }}
+{{ paper_body(p) }}
+
+{% endmacro -%}
+{%- macro paper_line_ranked(p, n) -%}
+{{ n }}. {{ paper_meta(p) }}
+{{ paper_body(p) }}
 
 {% endmacro -%}
 <div align="center">
@@ -43,6 +56,14 @@
 
 ---
 
+## 🏆 Top-20 / 总榜
+
+当前评分前 20（优先级 → 总分 → 首次公开日期），括号内为 `C/E/O/T` 分数构成；完整索引见 [docs/index.md](docs/index.md)。
+
+{% for p in top_papers %}{{ paper_line_ranked(p, loop.index) }}{% endfor %}
+
+---
+
 ## 🌐 What is Physical AI?
 
 **Physical AI** is AI that perceives, reasons about, and acts in the *physical* world through a body — robots, humanoids, manipulators. Unlike chatbots that output text, these systems output **actions** and must obey physics, contact, and real-time constraints.
@@ -67,6 +88,19 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 ---
 
+## 📐 How we score / 打分标准
+
+每篇按四个维度各打 1–5 分，总分 = **6×C + 5×E + 6×O + 3×T**（满分 100）。分数构成会直接显示在每条论文后面，例如 `86/100（C5·E4·O4·T4）`。
+
+- **C 贡献重要性（30%）** — 新范式 / 基础模型 / 关键资源的增量大小。
+- **E 证据强度（25%）** — 多基准、强基线、消融、真机或大规模验证。
+- **O 开放与可复现（30%）** — 代码 / 权重 / 数据 / 许可在**当前**是否真的开放。
+- **T 团队背景（15%）** — 可核实的相关积累；信息不足默认 3，不因没有高校排名扣分。
+
+**优先级**：🔥 总分 ≥80 且 E≥3 · 👀 65–79 · 观察中 <65 · 暂不评级（关键依据不足）。完整评分锚点与复查规则见 [docs/METHODOLOGY.md](docs/METHODOLOGY.md)。
+
+---
+
 ## Contents
 
 - **📚 Research** — {% for cat in categories if cat.group == "research" %}[{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}){% if not loop.last %} · {% endif %}{% endfor %}
@@ -75,6 +109,17 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 - **🏢 Industry** — {% for cat in categories if cat.group == "industry" %}[{{ cat.icon }} {{ cat.title }}](#{{ cat.id }}){% if not loop.last %} · {% endif %}{% endfor %}
 
+- **🧭 Topics** — [World-Action Models](topics/world-action-models.md) · [Ropedia W0](topics/ropedia-w0.md)
+
+
+---
+
+## 🧭 Topics / 专题
+
+纵向深挖某个方向或系列，不受每日扫描篇幅限制；数据仍以 `data/papers.yaml` 为准，评分与开放状态随索引更新。
+
+- **[World-Action Models](topics/world-action-models.md)** — 统一分类、已跟踪 WAM 系统、评测与开放问题
+- **[Ropedia W0](topics/ropedia-w0.md)** — 跨具身 loco-manipulation 世界模型与 Xp-Data / Xp-Teleop
 
 ---
 
