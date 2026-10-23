@@ -16,7 +16,9 @@ param(
     [switch]$Preflight
 )
 
-$ErrorActionPreference = "Stop"
+# "Continue" (not "Stop"): PowerShell 5.1 wraps native-command stderr in
+# ErrorRecords, so `git checkout` would otherwise abort this script.
+$ErrorActionPreference = "Continue"
 $repo = Split-Path -Parent $PSScriptRoot
 Set-Location $repo
 $wslRepo = "/mnt/" + $repo.Substring(0, 1).ToLower() + ($repo.Substring(2) -replace '\\', '/')
@@ -39,10 +41,12 @@ if ($Preflight) {
 
 # Sync the branch: master once the v2 scripts are merged there, otherwise feat/curation-v2.
 git -C $repo fetch origin --prune *>> $log
+if ($LASTEXITCODE -ne 0) { Log "git fetch failed"; exit $LASTEXITCODE }
 git -C $repo cat-file -e "origin/master:scripts/fetch_candidates.py" 2>$null
 $branch = if ($LASTEXITCODE -eq 0) { "master" } else { "feat/curation-v2" }
 Log "branch: $branch"
 git -C $repo checkout $branch *>> $log
+if ($LASTEXITCODE -ne 0) { Log "checkout failed"; exit $LASTEXITCODE }
 git -C $repo pull --rebase --autostash origin $branch *>> $log
 if ($LASTEXITCODE -ne 0) { Log "pull failed"; exit $LASTEXITCODE }
 
