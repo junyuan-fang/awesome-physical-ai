@@ -18,6 +18,7 @@ param(
 
 $ErrorActionPreference = "Stop"
 $repo = Split-Path -Parent $PSScriptRoot
+Set-Location $repo
 $wslRepo = "/mnt/" + $repo.Substring(0, 1).ToLower() + ($repo.Substring(2) -replace '\\', '/')
 $logDir = Join-Path $repo "pipeline\logs"
 New-Item -ItemType Directory -Force -Path $logDir | Out-Null
