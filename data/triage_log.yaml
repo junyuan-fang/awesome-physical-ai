@@ -528,3 +528,290 @@ entries:
   reason: 本轮名额有限（cap=5）；阶段混淆纠偏方法 + StageBench 基准，无开源
   date: '2026-10-23'
   run: '2026-10-23'
+- arxiv_id: '2610.29677'
+  title: Toward Recursive Self-Improvement in Physical AI
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Toward Recursive Self-Improvement in Physical AI 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32271'
+  title: 'From Tabletop to Walking Bot: Deploying a VLA Model on a Legged Manipulator Robot'
+  decision: defer
+  reason: 材料不足：缓存仅有摘要，缺少可核验的方法和实验正文，需取得全文后评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32312'
+  title: 'MAST-VLA: Skill-Conditioned Adaptation with Trajectory-Affordance Priors for Multi-Skill Robot Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 MAST-VLA: Skill-Conditioned Adaptation with Trajectory-Affordance Priors for Multi-Skill
+    Robot Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30732'
+  title: 'SmolVLA-MoE: Sparse Mixture-of-Experts for Efficient Multi-Task Robotic Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 SmolVLA-MoE: Sparse Mixture-of-Experts for Efficient Multi-Task Robotic Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32208'
+  title: Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI
+    Systems 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29438'
+  title: 'A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body Multi-IMU Systems on Legged
+    Robots'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 A2I-Calib++: A Kinematics-Driven Anti-noise Active Calibration Framework for Whole-Body
+    Multi-IMU Systems on Legged Robots 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30197'
+  title: 'Alpha: Systematic Fault Injection and Robustness Evaluation for LLM-Driven Embodied Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 Alpha: Systematic Fault Injection and Robustness Evaluation for LLM-Driven Embodied Manipulation
+    保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29030'
+  title: 'PHD-Hand: A Printable Humanoid Dexterous Hand with Linkage-Driven 3-DOA Digits'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 PHD-Hand: A Printable Humanoid Dexterous Hand with Linkage-Driven 3-DOA Digits 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31427'
+  title: 'FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 FastHarness: Experience-Driven Review Scheduling for Vision-Language-Action Policies 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29161'
+  title: 'SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 SimPT: An Automated Simulation Framework for Intervention-Based VLA Post-Training 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30043'
+  title: 'TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social
+    Environments'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving
+    Physical and Social Environments 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31845'
+  title: 'EgoForesight: Effectively Scaling Policy Learning with Noisy Egocentric Actions'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 EgoForesight: Effectively Scaling Policy Learning with Noisy Egocentric Actions 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31064'
+  title: 'AstroBench: Benchmarking Free-Floating Capture and Space Robotic Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 AstroBench: Benchmarking Free-Floating Capture and Space Robotic Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30540'
+  title: Motion Retargeting with Spatiotemporal Preferences for Humanoid Loco-Manipulation
+  decision: defer
+  reason: 材料不足：缓存仅有摘要，缺少可核验的方法和实验正文，需取得全文后评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30781'
+  title: 'DeXplicit: Making Physical State Explicit in Dexterous Manipulation World Models'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 DeXplicit: Making Physical State Explicit in Dexterous Manipulation World Models 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30334'
+  title: 'MPBRS: Multi-Potential-Based Reward Shaping for Unified Reward Configuration in Humanoid Locomotion'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 MPBRS: Multi-Potential-Based Reward Shaping for Unified Reward Configuration in Humanoid
+    Locomotion 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30051'
+  title: 'From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation
+    Tasks 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29903'
+  title: 'HuMiT: Low-Latency Whole-Body Humanoid Teleoperation via Compact Reference Tracking'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 HuMiT: Low-Latency Whole-Body Humanoid Teleoperation via Compact Reference Tracking 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31670'
+  title: 'Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31613'
+  title: 'Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 Progress Probes $P^2$: Lightweight Runtime Monitoring for Vision-Language-Action Models
+    保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31121'
+  title: 'RGraph-Eval: Task-Grounded Scene Graphs for Evaluating Robot Video Generation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 RGraph-Eval: Task-Grounded Scene Graphs for Evaluating Robot Video Generation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29329'
+  title: 'Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 Plan First, Act Later: Streaming Reasoning for Executable Memory in Robot Control 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31474'
+  title: Skeleton-Grounded Latent Action Model for Robot World Models
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Skeleton-Grounded Latent Action Model for Robot World Models 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30819'
+  title: 'TEAR: Task-Evidence Authority Routing for Robotic Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 TEAR: Task-Evidence Authority Routing for Robotic Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30817'
+  title: Robot Motion Transition with a Human Motion Prior
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Robot Motion Transition with a Human Motion Prior 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29730'
+  title: Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Post-hoc Epistemic Uncertainty for Vision-Language-Action Policies 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29692'
+  title: 'FlowVLA: Learning Flow-Aware Physical Completion for Quantitative Robotic Pouring'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 FlowVLA: Learning Flow-Aware Physical Completion for Quantitative Robotic Pouring 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29586'
+  title: End-to-End Reinforcement Learning for Quadrupedal Jumping in Lunar Gravity
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 End-to-End Reinforcement Learning for Quadrupedal Jumping in Lunar Gravity 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32277'
+  title: Delay Randomization Widens the Delay Margin of Learned Humanoid Motion Trackers
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Delay Randomization Widens the Delay Margin of Learned Humanoid Motion Trackers 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32225'
+  title: 'RoboCode: Learning Reusable Action Primitives for Robot Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 RoboCode: Learning Reusable Action Primitives for Robot Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31859'
+  title: Full-Weight VLA Fine-Tuning Without an fp32 Master Copy Silently Erases Most Updates
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Full-Weight VLA Fine-Tuning Without an fp32 Master Copy Silently Erases Most Updates 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31010'
+  title: Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic Robotic Manipulation
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Revisiting Distribution Matching for State-to-Vision Policy Distillation in Laparoscopic
+    Robotic Manipulation 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30671'
+  title: 'Co^2Gen: Collaboratively Generating Task Plans for Decentralized Multi-Robot and Human Collaboration'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 Co^2Gen: Collaboratively Generating Task Plans for Decentralized Multi-Robot and Human
+    Collaboration 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31494'
+  title: 'AgentVQA: A Unified Benchmark for Agentic Visual Understanding'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 AgentVQA: A Unified Benchmark for Agentic Visual Understanding 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31841'
+  title: 'FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 FORCA: A Force-Aware Coding Agent for Contact-Rich Robot Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31812'
+  title: 'PrefO2O: Zero-Shot Preference-Based Reinforcement Learning via Offline-to-Online Latent Preference Transfer'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 PrefO2O: Zero-Shot Preference-Based Reinforcement Learning via Offline-to-Online Latent
+    Preference Transfer 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30605'
+  title: 'PATH: Preference-Aware Traversability Estimation for Robotic Teleoperation in Off-Road Navigation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 PATH: Preference-Aware Traversability Estimation for Robotic Teleoperation in Off-Road
+    Navigation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30478'
+  title: 'Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent''s Experience Should Live'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 Externalise the Memory: A Pre-Registered Study of Where an Embodied Agent''s Experience
+    Should Live 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32330'
+  title: 'DynaSlots: Slot-Centric 3D Dynamics Pretraining for Robot Manipulation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 DynaSlots: Slot-Centric 3D Dynamics Pretraining for Robot Manipulation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31275'
+  title: Learning Robot Behavior Priors from Non-Robotic Synthetic Data
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 Learning Robot Behavior Priors from Non-Robotic Synthetic Data 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.30969'
+  title: 'IORA: Irregular Object Immobilization under Restricted Actuation'
+  decision: exclude
+  reason: 超出范围：摘要描述几何图匹配、局部搜索和物理 rollout 抓取合成，未体现学习系统或学习组件。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29676'
+  title: 'DriveMLP: When Training Strategy Outperforms Model Complexity in Autonomous Driving'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 DriveMLP: When Training Strategy Outperforms Model Complexity in Autonomous Driving 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.32431'
+  title: When to Stop Penalizing Actions? Martingale GRPO for VLA Reinforcement Learning
+  decision: defer
+  reason: over cap：本轮新增上限为 15 篇；候选 When to Stop Penalizing Actions? Martingale GRPO for VLA Reinforcement Learning 保留供后续复评，未在摘要层面评分。
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.29646'
+  title: 'From Association to Decision Value: Testing Paired Instruction Dependence for VLA Corpus Selection'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 From Association to Decision Value: Testing Paired Instruction Dependence for VLA Corpus
+    Selection 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'
+- arxiv_id: '2610.31623'
+  title: 'F2G-Pose: Geometry-Aware Foundation Feature Lifting for Direct RGB-D Category-Level Object Pose Estimation'
+  decision: defer
+  reason: 'over cap：本轮新增上限为 15 篇；候选 F2G-Pose: Geometry-Aware Foundation Feature Lifting for Direct RGB-D Category-Level Object
+    Pose Estimation 保留供后续复评，未在摘要层面评分。'
+  date: '2026-10-26'
+  run: '2026-10-26'

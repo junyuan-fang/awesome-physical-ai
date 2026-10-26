@@ -16712,3 +16712,959 @@ papers:
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-23.md
   late_found: true
+- arxiv_id: '2610.30320'
+  title: Self-Distilling Future Video Representations for World Action Models
+  authors: Huiwon Jang et al.
+  affiliations:
+  - KAIST
+  date: '2026-10-21'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-action-model
+  - self-distillation
+  - human-to-robot
+  abstract_short: FRED 用未来表征自蒸馏增强单步世界动作模型，OpenArm 人类视频技能迁移成功率达 50.0%。
+  summary: 为缓解单步世界动作模型从噪声提取的未来特征不充分、进而限制动作预测的问题，FRED 将视频骨干视为未来表征生成器，以动量教师从真实未来观测提取的特征为目标进行自蒸馏，并加入历史观测提供时序上下文。动作解码器直接利用一次视频前向的中间特征，避免多轮视频去噪。在
+    DROID 训练后跨环境真机测试和 OpenArm 人机视频联合训练中，作者报告一致收益；仅在人类视频出现的技能上，成功率为 50.0%，最佳竞争 WAM 为 19.4%。RoboCasa Kitchen 消融中完整模型成功率为 68.8%，移除蒸馏与历史输入后为
+    61.4%。这些结果支持优先优化控制所需的未来表征，而非仅追求生成视频质量；但人类迁移依赖特定采集环境与平台，尚不能外推为任意人类视频到任意机器人技能的迁移。
+  links:
+    arxiv: https://arxiv.org/abs/2610.30320
+    code: https://github.com/suhyeok-jang/FRED
+    project: https://huiwon-jang.github.io/FRED/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 3
+    rationale:
+      C: 以未来表征自蒸馏和历史条件直接改善世界动作模型的动作接口。
+      E: 含跨环境真机、人类技能迁移、多基准和组件消融，证据较完整。
+      O: 缓存探测支持实质作者代码、明确许可和对应模型权重入口。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 77
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/suhyeok-jang/FRED
+    weights: open
+    data: unknown
+    license: Apache-2.0
+    note: 依据本地论文缓存及仓库探测记录；未直接阅读作者代码，资源状态仅按明确证据填写。 RLWRLD 是致谢资助方，不按署名单位列入。
+    stats:
+      files: 1873
+      code_files: 461
+      config_files: 457
+      last_commit: '2026-10-23'
+      readme_says_coming_soon: false
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: droid
+    role: pretrain
+  - resource: robocasa-bench
+    role: finetune
+  - resource: robocasa-bench
+    role: eval
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  added: '2026-10-26'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.30120'
+  title: 'ALPS: Visual State Encoders for World Models'
+  authors: Yanqing Liu et al.
+  affiliations:
+  - University of California, Santa Cruz
+  - University of California, Santa Barbara
+  - Google
+  date: '2026-10-21'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - visual-representation
+  - world-model
+  - pretraining
+  abstract_short: ALPS 统一状态、语言和重建表征，作者报告冻结编码器的 LIBERO 策略平均成功率为 85.5%。
+  summary: 为解决世界模型的视觉编码器难以同时保留物理状态、语言语义和像素细节的问题，ALPS 从静态图文数据训练统一的 ViT-B/16 表征。第一阶段将图文对齐、描述生成、重建与空间对应联合施加到同一组 patch token，第二阶段通过已知裁剪几何的跨视角自蒸馏增强状态信息；下游控制、规划与预测均使用冻结编码器。作者在十五种公共编码器的统一比较中报告，ALPS
+    的 LIBERO 聚合状态探针误差在 ViT-B 组最低，配合原生文本塔的策略平均成功率为 85.5%；在 PushT、Wall 与 Granular 上也展示规划与可解码未来预测。结果提示静态图文预训练可以为机器人世界模型提供共享状态基础，但当前验证集中于仿真和单一骨干尺度，尚缺真机部署证据；各预训练目标还存在容量竞争，不能据此认定统一表征在所有语义与几何任务上均最优。
+  links:
+    arxiv: https://arxiv.org/abs/2610.30120
+    code: https://github.com/UCSC-VLAA/ALPS
+    project: https://ucsc-vlaa.github.io/ALPS/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 3
+      O: 4
+      T: 3
+    rationale:
+      C: 统一状态、语言与像素接口，跨视角精炼改善控制所需表征。
+      E: 十五种编码器受控比较及控制规划消融充分，但具身验证仅在仿真。
+      O: 缓存探测支持实质作者代码、明确许可和对应模型权重入口。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 72
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/UCSC-VLAA/ALPS
+    weights: open
+    data: partial
+    license: Apache-2.0
+    note: 依据本地论文缓存及仓库探测记录；未直接阅读作者代码，资源状态仅按明确证据填写。 Recap-DataComp-1B 有数据入口，但不表示全部预训练数据开放。
+    stats:
+      files: 1016
+      code_files: 172
+      config_files: 717
+      last_commit: '2026-10-21'
+      readme_says_coming_soon: false
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: libero
+    role: eval
+  added: '2026-10-26'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.31569'
+  title: 'Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models'
+  authors: Yufeng Liu et al.
+  affiliations:
+  - SJTU
+  - Spirit AI
+  - THU
+  - USTC
+  - Tongji
+  - HIT
+  date: '2026-10-22'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - failure-detection
+  - flow-matching
+  abstract_short: Echo 将停止与失败信号同动作共同去噪，作者在五项真机任务及 LIBERO-Recovery 中报告收益。
+  summary: 为使 VLA 在执行中识别完成与失败，并利用状态判断改善动作，Echo 将停止信号和失败信号追加为动作块的两个维度，与机器人动作共同去噪。训练组合成功、终局失败与恢复轨迹，不依赖逐帧进度标注，但多子任务数据仍需边界信息；通过控制信号与动作的交互，并让信号更快去噪，使后续动作生成利用更干净的状态估计。作者在插花、胶囊玩具、插笔、糖葫芦和开抽屉五项真机任务中报告状态预测与任务完成收益，并以外部分数模型和其他状态增强策略作比较。在
+    LIBERO-Recovery 的每模型 4500 次试验中，成功率为 34.76%，同成功和恢复数据的纯动作基线为 32.67%，帧级状态准确率为 89.97%。该设计把监控融入策略，但收益仍依赖失败与恢复数据的覆盖，特定任务评分和阈值也限制了跨任务结论，尚未验证长期开放环境运行。
+  links:
+    arxiv: https://arxiv.org/abs/2610.31569
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 联合去噪使状态信号参与动作生成，超出单纯旁路监控。
+      E: 五项真机、分布偏移分析、信号干预消融及仿真补充支持结论。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: libero
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.32102'
+  title: Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies
+  authors: Jiabing Yang et al.
+  affiliations:
+  - School of Artificial Intelligence, University of Chinese Academy of Sciences
+  - New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences
+  - FiveAges
+  - National University of Singapore
+  - Shanghai Jiao Tong University
+  date: '2026-10-23'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - flow-matching
+  - inference
+  abstract_short: 联合调节流匹配 VLA 的采样深度和执行时域，在 LIBERO、RoboTwin 及 Franka 上报告免训练部署收益。
+  summary: 为解释流匹配 VLA 的快速采样何时改善、何时损害控制，论文将数值求解深度与动作块的开环执行时域联合研究。其分析认为，提前截断 Euler 积分会压缩动作云的横向离散度，同时近似保留轨迹中心；短时域高频重规划可能因此丢失有益变化，而长时域开环执行则可减少随机漂移的累积。作者在
+    LIBERO 与 RoboTwin 2.0 合计五十五项仿真任务，以及五项 Franka 真机任务中，比较多个代表性 VLA 骨干，并通过固定噪声的动作云几何诊断支持这一机制，报告联合选择时域和深度可降低推理延迟并改善任务成功。该结果把采样步数转化为可调控制参数，部署前值得与执行时域共同扫描；但不能据此认定单步在所有闭环频率下更好，结论受模型、训练成熟度和任务模式影响，几何近似也不等于一般非线性接触过程的稳定性保证。
+  links:
+    arxiv: https://arxiv.org/abs/2610.32102
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 揭示采样深度与执行时域的耦合，提供无需重训的部署方法。
+      E: 多骨干、五十五仿真任务、五项真机及配对动作云诊断支持机制。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+- arxiv_id: '2610.30814'
+  title: 'DRILL: Training World Models to Improve Policies, Not Predict Pixels'
+  authors: Zhaolu Kang et al.
+  affiliations:
+  - Hunyuan, Tencent
+  - Peking University
+  date: '2026-10-22'
+  venue: NeurIPS 2026
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-model
+  - reinforcement-learning
+  - bilevel
+  abstract_short: DRILL 按策略更新后回报训练世界模型，五个仿真基准上作者报告比 WMPO 平均高 13.1 个百分点。
+  summary: 为纠正世界模型的像素预测目标与策略学习效用不一致的问题，DRILL 将世界模型训练改为双层优化：内层用想象轨迹执行一次 GRPO 更新，外层依据更新后策略在目标环境的回报给世界模型分配信用。VWI 版本按访问分布、带符号优势和置信度重加权预测误差，IMG
+    版本则用截断 Hessian 向量积估计元梯度。在 LIBERO-Long、CALVIN、RoboCasa、Meta-World MT50 和 SimplerEnv、两个 VLA 骨干的比较中，作者报告 IMG 平均成功率比 WMPO
+    高 13.1 个百分点、比 RLVR-World 高 7.9 个百分点，尽管下一帧像素 MSE 高 17%。结果支持用下游学习信号评价世界模型，但实验全部为仿真，目标环境回报并非真机；IMG 仍消耗额外模拟器交互和计算，局部代理与完整元梯度的联系也依赖小残差等假设，不能直接推广到长时程真实机器人。
+  links:
+    arxiv: https://arxiv.org/abs/2610.30814
+  highlight: ''
+  review:
+    scores:
+      C: 4
+      E: 3
+      O: 1
+      T: 3
+    rationale:
+      C: 将世界模型训练对齐策略更新后回报，代理和元梯度两种实现增量清楚。
+      E: 五个仿真基准、双骨干、预算匹配对照及消融，但没有真机结果。
+      O: 缓存未提供可核实的作者代码、权重或数据公开入口。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 54
+    priority: watching
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本地论文缓存及仓库探测记录；未直接阅读作者代码，资源状态仅按明确证据填写。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: calvin
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  - resource: meta-world
+    role: eval
+  - resource: simplerenv
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.29866'
+  title: 'GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models'
+  authors: Qinfan Zhang et al.
+  affiliations:
+  - BUAA
+  - X-Humanoid
+  - RUC
+  - USTC
+  - CUHK(SZ)
+  - FDU
+  date: '2026-10-21'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - geometry
+  - memory
+  abstract_short: GeoMem-VLA 将三维监督融入时序记忆，作者报告 LIBERO 平均成功率 98.9%、五项真机任务 78.0%。
+  summary: 为缓解 VLA 只依赖当前二维观测、无法持续积累几何信息的问题，GeoMem-VLA 用冻结几何教师监督专用 GeoPlan token，让其同时编码当前点图与未来末端轨迹，再以事件感知记忆保留历史观测和几何表征。推理时只检索并融合记忆，不调用三维教师或显式重建完整场景。经各基准分别适配，作者报告
+    LIBERO 平均成功率 98.9%，RoboTwin 2.0 的 clean 与 randomized 设置分别为 91.10% 和 91.24%；在 Astribot S1 与 AgileX 平台的五项真机任务上平均成功率为 78.0%。移除几何监督或时序记忆的消融支持二者互补。该结果提示可把训练期三维先验压缩为控制所需的持续状态，但表中部分基线来自不同原始协议，不能视作完全受控排名；真机每任务仅十次
+    rollout，且高成功率来自基准专门适配，尚不能说明零样本跨平台或长期记忆泛化。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29866
+    code: https://github.com/GeoMem-VLA/GeoMem-VLA
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 3
+    rationale:
+      C: 以几何监督和事件记忆持续保留三维任务状态。
+      E: 两套仿真、几何与记忆消融及双平台真机，真机每任务样本仍少。
+      O: 缓存探测支持实质作者代码、明确许可和对应模型权重入口。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 77
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/GeoMem-VLA/GeoMem-VLA
+    weights: open
+    data: unknown
+    license: MIT
+    note: 依据本地论文缓存及仓库探测记录；未直接阅读作者代码，资源状态仅按明确证据填写。
+    stats:
+      files: 186
+      code_files: 119
+      config_files: 19
+      last_commit: '2026-10-22'
+      readme_says_coming_soon: false
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: finetune
+  - resource: robotwin-2
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.32093'
+  title: 'DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning'
+  authors: Minho Park et al.
+  affiliations:
+  - KAIST
+  - Holiday Robotics
+  date: '2026-10-23'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - imitation-learning
+  - data-generation
+  - diversity
+  abstract_short: DiscoDemo 用特权 RL 生成多样成功示范，四项任务下游真机平均成功率为 78%，最强基线为 39%。
+  summary: 为缓解模仿学习示范覆盖不足且人工采集昂贵的问题，DiscoDemo 不把强化学习策略直接部署，而将其作为多样化成功数据的生成器。方法从少量人类示范状态构造并行反向课程，用潜变量条件和成功门控的多样性目标发现不同解法，再过滤不安全行为，导出静态数据训练仅观察图像与本体状态的策略。在
+    Isaac Sim 重建的放香蕉、叠方块与两项 FMB 插接任务中，作者报告下游仿真平均成功率为 62%，最强基线为 40%；对应真机平均成功率为 78%，最强基线为 39%。覆盖分析与目标权重消融显示，扩大成功状态空间有益，但过强多样性也会损害任务能力，且收益与纠正数据互补。结果支持把
+    RL 用于数据发现，但依赖可重置的特权模拟器、少量示范和任务重建，安全筛选也不保证现实无风险，尚未验证跨大量任务与机器人形态的规模化收益。
+  links:
+    arxiv: https://arxiv.org/abs/2610.32093
+    code: https://github.com/DAVIAN-Robotics/DiscoDemo
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 以成功门控多样性和反向课程生成用于视觉模仿的示范。
+      E: 四任务仿真与真机、生成器基线、覆盖及多样性消融支持主张。
+      O: 缓存探测支持实质作者代码，未核实对应模型或数据完整发布。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/DAVIAN-Robotics/DiscoDemo
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 依据本地论文缓存及仓库探测记录；未直接阅读作者代码，资源状态仅按明确证据填写。
+    stats:
+      files: 571
+      code_files: 448
+      config_files: 25
+      last_commit: '2026-10-23'
+      readme_says_coming_soon: false
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: isaac-sim
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+- arxiv_id: '2610.29612'
+  title: 'Watch Your Step: Anticipated Perception for Humanoid Locomotion'
+  authors: Matthias Heyrman et al.
+  affiliations:
+  - Robotic Systems Laboratory, ETH Zürich, Switzerland
+  - ETH AI Center, ETH Zürich, Switzerland
+  date: '2026-10-21'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - locomotion
+  - perception
+  - sim2real
+  abstract_short: 预测未来落脚点并只观察局部地形，作者报告约三分之一训练迭代达到相同难度，且零样本部署 G1。
+  summary: 为减少人形行走策略处理整幅高程图的冗余，论文提出预期感知：轻量落脚点预测模型仅根据本体状态与速度指令预测接下来两次落脚，策略只接收这些位置周围的小块地形。预测器与 PPO 策略交替训练，定期利用当前策略 rollout 更新预测，避免早期步态与后期控制之间的分布错位。作者在匹配奖励、网络和课程的多种地形与五个训练种子比较中报告，达到同样地形难度所需迭代约为整图输入的三分之一，在稀疏落脚与未见地形上也更强；完整模型的未见地形成功率为
+    83.1%。策略零样本部署于 Unitree G1，展示跨越台阶、间隙与室内外障碍。结果支持先按未来动作筛选感知，而非让策略从密集输入自行发现关键区域；但仍依赖可用的高程地图和预测落脚，若目标落脚估计偏移或障碍不在局部采样窗口，信息可能被主动丢弃，尚缺长期复杂动态地形的系统验证。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29612
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 共训练落脚预测主动筛选地形输入，减少控制学习中的感知冗余。
+      E: 匹配训练设置的多基线、多种子与未见地形测试，并有 G1 真机。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.29264'
+  title: 'Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation'
+  authors: Chun Gu et al.
+  affiliations:
+  - School of Data Science, Fudan University
+  - Shanghai Innovation Institute
+  - Logos Intelligence Lab
+  - University of Surrey
+  date: '2026-10-21'
+  category: rl-il
+  route: core
+  contribution: system
+  tags:
+  - online-learning
+  - human-in-the-loop
+  - manipulation
+  abstract_short: TIDE 在部署中异步吸收人工接管数据，缓存 v2 在四项双臂真机任务上报告收益，每任务会话不足一小时。
+  summary: 为使机器人在部署中及时学习接触、恢复与精细操作状态，TIDE 将双臂执行、人工接管、数据记录、在线更新和检查点交接放入同一会话。系统保留行为来源标签，区分人工干预和策略执行的数据块，以来源条件的监督学习联合更新世界动作模型各可训练模块，无需学习评论家、奖励模型或动作打分器，并异步处理学习和模型切换。缓存正文
+    v2 在 UR5e 双臂平台的批头插接、毛巾折叠、挂毛巾和链条装箱四项任务中，作者报告相对热启动及匹配额外离线示范，里程碑进度和完整任务成功均改善；每任务会话不足一小时。最终表现与固定策略采集后训练的基线相近，因此主要价值是更早获得更新模型，而非已证实最终性能更高。该结果仍依赖人工监督和人工确认成功轨迹，可能存在选择偏差；只有一平台、一骨干和有限任务，未量化重复在线会话方差，也未验证长期保持与跨平台迁移。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29264
+  highlight: ''
+  review:
+    scores:
+      C: 4
+      E: 3
+      O: 2
+      T: 3
+    rationale:
+      C: 整合来源条件监督和异步部署学习，无需另学价值模型。
+      E: 四项双臂真机任务及匹配离线对照，但缺少重复会话方差。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 60
+    priority: watching
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.29702'
+  title: 'CausGround: Causal Interaction Grounding for Adaptive Embodied Planning'
+  authors: Yijun Shen et al.
+  affiliations:
+  - East China Normal University
+  - Beijing Academy of Artificial Intelligence (BAAI)
+  - Northwestern Polytechnical University
+  - School of Artificial Intelligence, University of Chinese Academy of Sciences
+  - Institute of Automation, Chinese Academy of Sciences
+  date: '2026-10-21'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - embodied-planning
+  - causal-knowledge
+  - memory
+  abstract_short: CausGround 提取动作前置条件与效果，作者报告 VirtualHome 平均成功率从 24.9% 提高至 53.3%。
+  summary: 为缓解多模态大模型不知道动作何时可执行、以及动作如何改变环境的问题，CausGround 从交互经验提取以动作为中心的前置条件与状态效果，并用物体属性和物体关系构成可复用的分解世界状态。规划时从目标反向查找所需条件，结合当前观测检索知识，再前向推演动作后果，整个适配过程不更新模型参数。作者在改编的视觉
+    VirtualHome 与 RoboCasa 上报告，跨骨干平均任务成功率分别由 24.9% 提升至 53.3%、闭环规划成功率由 43.0% 提升至 57.0%；SWITCH 交互推理准确率由 25.8% 提升至 31.9%，另有真机顺序操作展示。消融区分状态结构与因果知识的作用，支持显式条件帮助长程规划。但这些知识来自特定环境交互，并非自动保证因果正确；VirtualHome
+    部分渲染还经过图像修正，真机规模有限，尚不能推断在感知误差大或物理动力学持续变化的环境中同样可靠。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29702
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 把交互经验整理为可复用动作条件与效果，改善长程具身规划。
+      E: 两套规划环境、交互推理基准、消融及真机展示支持主要收益。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: robocasa
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.31608'
+  title: Humanoid Mobility via Attention-based Contacts
+  authors: Junzhe He et al.
+  affiliations:
+  - Robotic Systems Lab, ETH Zurich, 8092 Zurich, Switzerland
+  - Department of Electrical and Computer Engineering, National University of Singapore, Singapore
+  - Apple
+  - ETH AI Center
+  - NVIDIA
+  date: '2026-10-22'
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - contact-planning
+  - reinforcement-learning
+  abstract_short: 以接触规划连接运动先验与强化学习，作者在 G1 展示无参考轨迹的攀爬、穿越及失败恢复。
+  summary: 为兼顾人形机器人运动的自然全身协调与复杂地形适应，论文以身体接触而非完整关节轨迹作为规划和控制接口。注意力规划器根据本体观测、目标与地形预测九个身体部位的未来接触位置和占用标记，接触条件跟踪器再生成全身运动。三阶段训练先从重定向人体动作学习跟踪，再用成功轨迹的事后接触标签训练规划器，最后以目标到达强化学习探索超出参考动作的环境变化。作者在
+    Unitree G1 室内外展示爬梯、登箱、稀疏落脚、坐下起身及失败后恢复；仿真区分参考地形、目标微调地形和未见地形，分析规划结构与微调的贡献。结果提示运动数据可以只作为训练先验，部署时无需参考动作或技能标签。但真实展示并不等同于长期可靠性统计，策略仍依赖地形观测、接触建模和多阶段高成本训练；无公开资源核实支持独立复现，也尚未建立任意障碍或碰撞条件下的安全保证。
+  links:
+    arxiv: https://arxiv.org/abs/2610.31608
+  highlight: ''
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 1
+      T: 3
+    rationale:
+      C: 以多部位接触接口连接人体先验和自主强化学习探索。
+      E: 分组仿真和组件分析结合 G1 多接触与恢复展示，但长期统计不足。
+      O: 缓存未提供可核实的作者代码、权重或数据公开入口。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    - 单位抽取包含现任与既往单位，需按 PDF 脚注核对 Apple、NVIDIA 和 NUS 署名归属。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 59
+    priority: watching
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存未提供作者仓库、权重或数据的公开入口，不根据实验展示推定开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: isaac-lab
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.31762'
+  title: 'See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space'
+  authors: Jiawei Chen et al.
+  affiliations:
+  - Peking University
+  - University College London, University of London
+  - DataCanvas
+  date: '2026-10-22'
+  category: navigation
+  route: core
+  contribution: model
+  tags:
+  - navigation
+  - representation-learning
+  - latent-world-model
+  abstract_short: RepresentNav 联合学习导航表征与未来潜变量；正文单目干扰跟踪成功率为 68.3%，85.5% 是跟踪率。
+  summary: 为使导航策略主动选择视觉信息，RepresentNav 用轻量 Representation Residuals 读取多个冻结基础模型的不同层，再在同一空间预测未来潜变量。表征由导航目标共同塑造，JEPA 式预测与目标正则化维持潜变量有效，统一输出支持语言导航、目标跟踪与点目标导航。作者在
+    VLNVerse、VLN-CE、EVT-Bench 和两类点目标设置中报告收益，并展示 Go2 和人形平台真机导航。正文 EVT-Bench 表格中，单目干扰跟踪的跟踪率为 85.5%、成功率为 68.3%，不能把摘要的 85.5% 当作任务成功率；消融支持跨层融合优于直接拼接，潜变量可解码几何信息。结果提示任务驱动表征与未来预测可互补，但多编码器带来额外计算，解码探针并不说明已掌握通用物理动力学。自动探测的
+    OpenD4RT 是第三方骨干，作者仓库本次访问未成功，开放性需后续核验。
+  links:
+    arxiv: https://arxiv.org/abs/2610.31762
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 在任务目标下联合构建跨编码器表征和未来预测空间。
+      E: 多类导航基准、接口消融及双平台真机；摘要指标口径须按正文校正。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    - 核验作者项目页、本文实现、权重、数据及许可；本次外部页面访问失败。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: https://github.com/wang-yinxi/RepresentNav
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 自动探测命中第三方基础库，已撤销其对应代码、权重、数据和许可推断；作者资源外部页面访问失败，暂仅按项目入口计 O=2。
+    stats:
+      files: 83
+      code_files: 51
+      config_files: 5
+      last_commit: '2026-08-12'
+      readme_says_coming_soon: true
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.30735'
+  title: 'When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies'
+  authors: Shivakanth Sujit et al.
+  affiliations:
+  - Araya Inc., Tokyo
+  date: '2026-10-22'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - flow-matching
+  - inference
+  abstract_short: 充分训练的大型流匹配 VLA 常能直接单步采样，作者在 36 个仿真单元中判定 23 个等效。
+  summary: 为检验流匹配机器人策略是否必须多步积分，论文直接比较同一已训练检查点的单步 Euler 与原始采样步数，避免把重新训练或蒸馏收益混入推理比较。仿真采用相同初态与随机种子，真机采用配对试验，覆盖六类 VLA、额外 DiT、四套仿真基准与
+    Franka 操作。作者报告三十六个仿真测试单元中二十三个满足等效判据，四个多步更好、两个单步更好、七个证据不确定；差距主要集中于较小模型和长程任务。进一步分析将单步表现与容量、训练成熟度和预训练视觉语言特征联系起来。结果提示部署大型成熟策略时，可以先评测免费获得的单步版本，再决定是否采用额外加速训练；但等效并非所有条件下都成立，使用公开检查点造成模型与基准覆盖不均，部分真机任务仍有明显差异，需要更大样本。该结论也不能代替对执行时域、延迟和闭环稳定性的具体部署核验。
+  links:
+    arxiv: https://arxiv.org/abs/2610.30735
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 跨模型配对研究检验单步等效性，为部署加速提供直接依据。
+      E: 跨六类 VLA、四套仿真和真机配对试验，并报告不确定结果。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: calvin
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.30105'
+  title: Asymmetric On-Policy Distillation Learns In-Context Exploration
+  authors: Sriyash Poddar et al.
+  date: '2026-10-21'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - exploration
+  - distillation
+  - partial-observability
+  abstract_short: ASTEROID 在学生自身历史上蒸馏特权教师，十一类环境及无视觉真机抓取支持其学习主动探索。
+  summary: 为缓解部分可观测任务中离线模仿只平均专家动作、难以学会主动获取信息的问题，ASTEROID 让学生先按自身策略收集交互历史，再由拥有特权信息的教师提供与该上下文相容的动作监督，交替更新历史条件学生。这样训练数据覆盖实际部署时会遇到的不确定历史，而非要求穷举随机上下文。在十一种环境的探索、操作与导航评估中，作者报告固定探索预算下更高回报和更少训练交互，并以
+    BC、DAgger、离线蒸馏及元 RL 等对照分析上下文来源。在无相机真机抓取中，学生利用本体和夹爪反馈尝试不同位置，展示比标准蒸馏更有效的恢复与搜索。结果支持通过在策略分布上的监督学习获得测试时探索，但训练仍需要特权教师及可交互环境，各环境种子数不完全相同，不能把汇总交互效率视为所有任务的统一倍率。缓存误抓的
+    TRL 仓库不属于本文，项目页本次访问未成功，作者实现与单位仍待核验。
+  links:
+    arxiv: https://arxiv.org/abs/2610.30105
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 学生自身历史上的非对称监督支持主动信息收集，方法适用面广。
+      E: 十一环境、多种蒸馏和 RL 对照及无视觉真机迁移，部分种子数有限。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    - 核验作者项目页、本文实现、权重、数据及许可；本次外部页面访问失败。
+    - 缓存未提取署名单位，需核对 PDF 完整单位列表。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 自动探测命中第三方基础库，已撤销其对应代码、权重、数据和许可推断；作者资源外部页面访问失败，暂仅按项目入口计 O=2。
+    stats:
+      files: 565
+      code_files: 339
+      config_files: 54
+      last_commit: '2026-10-25'
+      readme_says_coming_soon: false
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  uses:
+  - resource: isaac-lab
+    role: eval
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true
+- arxiv_id: '2610.29845'
+  title: 'RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation'
+  authors: Samuel Foo Enze et al.
+  affiliations:
+  - Robotic Systems Lab (RSL), ETH Zurich, Switzerland
+  - NVIDIA
+  date: '2026-10-21'
+  updated: '2026-10-22'
+  category: navigation
+  route: core
+  contribution: method
+  tags:
+  - navigation
+  - lidar
+  - sim2real
+  abstract_short: RangeNav 以 18.3 万参数 LiDAR 编码器导航，未见仿真场景成功率比仅重建预训练平均高 23.73 个百分点。
+  summary: 为降低全景 LiDAR 表征在并行强化学习中的成本，RangeNav 将点云投影为距离图，以各向异性卷积和环形填充处理狭长比例与方位接缝。编码器在合成数据上联合学习距离重建、语义分割和鸟瞰占用预测，之后冻结，由循环导航策略读取空间潜变量；模型仅约十八万三千参数。缓存
+    v2 中，作者报告相对仅重建的 LiDAR 预训练，在程序生成训练环境与留出逼真场景中的成功率分别平均提高 32.03 和 23.73 个百分点，并与前视深度策略及更大的通用点云编码器比较。在带 32 线 LiDAR 的 Unitree
+    B2-W 上，系统无需真实微调，展示人群、低光和施工区域导航。结果说明与任务对齐的紧凑预训练可兼顾环视感知和控制效率；但距离图与特定扫描几何绑定，后部载荷还遮挡一个扇区，细小或低矮障碍可能丢失，动态障碍目前仅反应式处理。正文仅承诺未来开放代码和模型，不能按已发布资源计分。
+  links:
+    arxiv: https://arxiv.org/abs/2610.29845
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 面向导航设计紧凑全景距离图编码器及任务对齐预训练。
+      E: 固定场景评估、架构与目标消融、传感器对照及机载零样本部署。
+      O: 缓存仅支持项目入口或发布承诺，未核实本文对应实质实现。
+      T: 尚未核实团队近五年的直接相关代表成果，按未知团队默认 3 分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 核对作者团队近五年的直接相关代表成果，T 暂按 3 分。
+    reviewed: '2026-10-26'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 缓存正文明确称代码和模型将开源；未核实已发布，O=2。
+    first_check: '2026-10-26'
+    last_check: '2026-10-26'
+  added: '2026-10-26'
+  source: arxiv
+  digest: digests/daily/2026-10-26.md
+  late_found: true

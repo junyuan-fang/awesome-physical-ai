@@ -1,21 +1,21 @@
 # 累积索引 / Ranked index
 
-> 最近完成扫描：2026-10-23，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
+> 最近完成扫描：2026-10-26，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
 > 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
 
-共 238 篇：🔥 38 · 👀 70 · 观察中 126 · 暂不评级 4
+共 253 篇：🔥 38 · 👀 82 · 观察中 129 · 暂不评级 4
 
 - [Other Generalist Models](#cat-foundation-general) · 8
-- [Locomotion / Whole-Body](#cat-locomotion) · 20
-- [Manipulation](#cat-manipulation) · 31
-- [Navigation](#cat-navigation) · 11
-- [RL & Imitation Learning](#cat-rl-il) · 6
+- [Locomotion / Whole-Body](#cat-locomotion) · 22
+- [Manipulation](#cat-manipulation) · 32
+- [Navigation](#cat-navigation) · 13
+- [RL & Imitation Learning](#cat-rl-il) · 9
 - [3D Scene Understanding](#cat-scene) · 5
 - [Sim-to-Real](#cat-sim2real) · 9
 - [Teleoperation](#cat-teleoperation) · 10
 - [Tutorials & Surveys](#cat-tutorials) · 6
-- [Vision-Language-Action (VLA)](#cat-vla) · 69
-- [World Models](#cat-world-model) · 63
+- [Vision-Language-Action (VLA)](#cat-vla) · 73
+- [World Models](#cat-world-model) · 66
 - [数据集 / 基准使用关系](#resources)
 
 ## <a id="cat-foundation-general"></a>Other Generalist Models
@@ -41,9 +41,11 @@
 | [Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](https://arxiv.org/abs/2606.03985) | 2026-06-02 | 核心 | 👀 值得关注 | **74** (4/4/3/4) | 🟡 部分开放 · Apache-2.0 (2026-10-22) | Tsinghua University; Galbot Inc.; Shanghai Jiao Tong University | [📝](../digests/migration-2026-10-22.md) |
 | [LadderMan: Learning Humanoid Perceptive Ladder Climbing](https://arxiv.org/abs/2606.05873) | 2026-06-04 | 核心 | 👀 值得关注 | **71** (4/4/2/5) | 未找到仓库 (2026-10-22) | Amazon FAR; USC; UC Berkeley | [📝](../digests/migration-2026-10-22.md) |
 | [Towards a General Humanoid Loco-Manipulation Model via Egocentric Whole-Body Human Data Pretraining](https://arxiv.org/abs/2610.00438) | 2026-09-30 | 核心 | 👀 值得关注 | **68** (4/4/2/4) | 未找到仓库 (2026-10-22) | Alibaba Group; Sichuan University; Shanghai Innovation Institute | [📝](../digests/daily/2026-10-22.md) |
+| [Watch Your Step: Anticipated Perception for Humanoid Locomotion](https://arxiv.org/abs/2610.29612) | 2026-10-21 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | Robotic Systems Laboratory, ETH Zürich, Switzerland; ETH AI Center, ETH Zürich, Switzerland | [📝](../digests/daily/2026-10-26.md) |
 | [GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](https://arxiv.org/abs/2608.18234) | 2026-08-18 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-22) | Cheng, Ziyang et al. | [📝](../digests/migration-2026-10-22.md) |
 | [M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](https://arxiv.org/abs/2606.04829) | 2026-06-03 | 核心 | 👀 值得关注 | **65** (3/4/3/3) | 💻 实质代码 (2026-10-22) | School of Automation, Southeast University; School of Vehicle and Mobility, Tsinghua University; Department of Robotics, Mohamed Bin Zayed University of Artificial Intelligence | [📝](../digests/migration-2026-10-22.md) |
 | [TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](https://arxiv.org/abs/2606.05880) | 2026-06-04 | 核心 | 观察中 | **62** (3/4/2/4) | 未找到仓库 (2026-10-22) | MarmotLab, National University of Singapore; Center of X-Mechanics, Zhejiang University; South China University of Technology | [📝](../digests/migration-2026-10-22.md) |
+| [Humanoid Mobility via Attention-based Contacts](https://arxiv.org/abs/2610.31608) | 2026-10-22 | 核心 | 观察中 | **59** (4/4/1/3) | 未找到仓库 (2026-10-26) | Robotic Systems Lab, ETH Zurich, 8092 Zurich, Switzerland; Department of Electrical and Computer Engineering, National University of Singapore, Singapore; Apple | [📝](../digests/daily/2026-10-26.md) |
 | [StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](https://arxiv.org/abs/2606.25765) | 2026-06-24 | 核心 | 观察中 | **59** (3/4/2/3) | 未找到仓库 (2026-10-22) | Shanghai Jiao Tong University | [📝](../digests/migration-2026-10-22.md) |
 | [SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](https://arxiv.org/abs/2606.19928) | 2026-06-18 | 核心 | 观察中 | **59** (4/4/1/3) | 未找到仓库 (2026-10-22) | Mirrorme Technology Co., Ltd. Shanghai, China.; Center for X-Mechanics, Zhejiang University, Hangzhou, China.; ZJU-Hangzhou Global Scientific and Technology Innovation Center, Hangzhou, China. | [📝](../digests/migration-2026-10-22.md) |
 | [MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation](https://arxiv.org/abs/2606.06139) | 2026-06-04 | 核心 | 观察中 | **57** (4/3/1/4) | 未找到仓库 (2026-10-22) | Technical University of Munich, Germany; New York University, USA; Carnegie Mellon University, USA | [📝](../digests/migration-2026-10-22.md) |
@@ -72,6 +74,7 @@
 | [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](https://arxiv.org/abs/2610.27861) | 2026-10-20 | 相邻 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · MIT (2026-10-23) | Fudan University; Shenzhen Loop Area Institute; The Chinese University of Hong Kong | [📝](../digests/daily/2026-10-23.md) |
 | [Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917) | 2026-08-16 | 核心 | 👀 值得关注 | **66** (4/3/2/5) | 未找到仓库 (2026-10-22) | Stanford University; MIT; Scale AI | [📝](../digests/migration-2026-10-22.md) |
 | [Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383) | 2026-08-11 | 核心 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | School of Computer Science, The University of Auckland; College of Computer Science, Chongqing University; College of Electronic and Information Engineering, Southwest University | [📝](../digests/migration-2026-10-22.md) |
+| [CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](https://arxiv.org/abs/2610.29702) | 2026-10-21 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | East China Normal University; Beijing Academy of Artificial Intelligence (BAAI); Northwestern Polytechnical University | [📝](../digests/daily/2026-10-26.md) |
 | [UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](https://arxiv.org/abs/2608.17432) | 2026-08-18 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-22) | Tsinghua University Shenzhen International Graduate School; Nanyang Technological University; X Square Robot | [📝](../digests/migration-2026-10-22.md) |
 | 📜 [ALOHA Unleashed: A Simple Recipe for Robot Dexterity](https://arxiv.org/abs/2410.13126) | 2024-10-17 | 核心 | 👀 值得关注 | **65** (4/4/1/5) | 未找到仓库 (2026-10-22) | Google DeepMind | [📝](../digests/migration-2026-10-22.md) |
 | [RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](https://arxiv.org/abs/2608.18948) | 2026-08-19 | 相邻 | 观察中 | **63** (4/3/2/4) | 未找到仓库 (2026-10-22) | University of California, Los Angeles; Massachusetts Institute of Technology; University of Utah | [📝](../digests/migration-2026-10-22.md) |
@@ -100,6 +103,8 @@
 | [Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation](https://arxiv.org/abs/2608.17512) | 2026-08-18 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · MulanPSL-2.0 (2026-10-22) | School of Software Technology, Zhejiang University; Zhejiang Humanoid Robot Innovation Center Co., Ltd. | [📝](../digests/migration-2026-10-22.md) |
 | [HumanCLAW: Can Vision-Language Models Act Through a Body?](https://arxiv.org/abs/2607.27180) | 2026-07-29 | 相邻 | 👀 值得关注 | **75** (4/3/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Meta; Nanyang Technological University; University of Washington | [📝](../digests/migration-2026-10-22.md) |
 | [Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](https://arxiv.org/abs/2606.18112) | 2026-06-16 | 核心 | 👀 值得关注 | **68** (4/4/2/4) | 📄 占位仓库 (2026-10-22) | Qwen Team | [📝](../digests/migration-2026-10-22.md) |
+| [See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space](https://arxiv.org/abs/2610.31762) | 2026-10-22 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | Peking University; University College London, University of London; DataCanvas | [📝](../digests/daily/2026-10-26.md) |
+| [RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation](https://arxiv.org/abs/2610.29845) | 2026-10-21 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | Robotic Systems Lab (RSL), ETH Zurich, Switzerland; NVIDIA | [📝](../digests/daily/2026-10-26.md) |
 | [MAD: Mapping-Aware World Models for Agile Quadrotor Flight](https://arxiv.org/abs/2606.04534) | 2026-06-03 | 核心 | 观察中 | **56** (3/4/1/4) | 未找到仓库 (2026-10-22) | State Key Lab of Autonomous Intelligent Unmanned Systems, Beijing Institute of Technology; Zhongguancun Academy; School of Computer Science and Technology, Tongji University | [📝](../digests/migration-2026-10-22.md) |
 | [HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](https://arxiv.org/abs/2608.12860) | 2026-08-13 | 相邻 | 观察中 | **54** (3/3/2/3) | 未找到仓库 (2026-10-22) | VinMotion, Inc., Vietnam; University of Southern California, USA | [📝](../digests/migration-2026-10-22.md) |
 | [NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695) | 2026-07-22 | 相邻 | 观察中 | **54** (3/3/2/3) | 未找到仓库 (2026-10-22) | University of Michigan, Ann Arbor; Tsinghua University | [📝](../digests/migration-2026-10-22.md) |
@@ -114,7 +119,10 @@
 |---|---|---|---|---|---|---|---|
 | 📜 [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](https://arxiv.org/abs/2303.04137) | 2023-03-07 | 核心 | 🔥 重点阅读 | **100** (5/5/5/5) | 💻 实质代码 · MIT (2026-10-22) | Columbia University; Toyota Research Institute; MIT | [📝](../digests/migration-2026-10-22.md) |
 | [Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](https://arxiv.org/abs/2608.15938) | 2026-08-16 | 相邻 | 👀 值得关注 | **77** (4/4/3/5) | 📄 占位仓库 · MIT (2026-10-22) | Massachusetts Institute of Technology; Mundane Systems Inc.; University of California, Berkeley | [📝](../digests/migration-2026-10-22.md) |
+| [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](https://arxiv.org/abs/2610.32093) | 2026-10-23 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 · Apache-2.0 (2026-10-26) | KAIST; Holiday Robotics | [📝](../digests/daily/2026-10-26.md) |
+| [Asymmetric On-Policy Distillation Learns In-Context Exploration](https://arxiv.org/abs/2610.30105) | 2026-10-21 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | Sriyash Poddar et al. | [📝](../digests/daily/2026-10-26.md) |
 | [RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing](https://arxiv.org/abs/2608.16195) | 2026-08-17 | 核心 | 观察中 | **63** (4/3/2/4) | 未找到仓库 (2026-10-22) | Shanghai Jiao Tong University; Shanghai Artificial Intelligence Laboratory; Huazhong University of Science and Technology | [📝](../digests/migration-2026-10-22.md) |
+| [Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation](https://arxiv.org/abs/2610.29264) | 2026-10-21 | 核心 | 观察中 | **60** (4/3/2/3) | 未找到仓库 (2026-10-26) | School of Data Science, Fudan University; Shanghai Innovation Institute; Logos Intelligence Lab | [📝](../digests/daily/2026-10-26.md) |
 | [ROVE: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning](https://arxiv.org/abs/2606.17011) | 2026-06-15 | 核心 | 观察中 | **57** (3/3/2/4) | 未找到仓库 (2026-10-22) | XPENG Robotics; Fudan University; The Chinese University of Hong Kong | [📝](../digests/migration-2026-10-22.md) |
 | [Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation](https://arxiv.org/abs/2608.18787) | 2026-08-19 | 核心 | 观察中 | **53** (3/4/1/3) | 未找到仓库 (2026-10-22) | School of Artificial Intelligence, University of Chinese Academy of Sciences; State Key Laboratory of Multimodal Artificial Intelligence Systems, Institute of Automation, Chinese Academy of Sciences; JD Explore Academy | [📝](../digests/migration-2026-10-22.md) |
 | [Prism-GRPO: Faster VLA Policy Optimization via Splitting Same-outcome Groups](https://arxiv.org/abs/2608.17423) | 2026-08-18 | 核心 | 观察中 | **53** (3/4/1/3) | 未找到仓库 (2026-10-22) | Purdue University; AWS AI | [📝](../digests/migration-2026-10-22.md) |
@@ -185,6 +193,7 @@
 | [TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](https://arxiv.org/abs/2607.27205) | 2026-07-29 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Huazhong University of Science and Technology | [📝](../digests/migration-2026-10-22.md) |
 | [Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330) | 2026-07-16 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Xiaomi Robotics | [📝](../digests/migration-2026-10-22.md) |
 | [Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](https://arxiv.org/abs/2601.12993) | 2026-01-19 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | BeingBeyond Team | [📝](../digests/migration-2026-10-22.md) |
+| [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) | 2026-10-21 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · MIT (2026-10-26) | BUAA; X-Humanoid; RUC | [📝](../digests/daily/2026-10-26.md) |
 | [$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](https://arxiv.org/abs/2607.23782) | 2026-07-26 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | NeoteAI; Fudan TEAI | [📝](../digests/migration-2026-10-22.md) |
 | [GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture](https://arxiv.org/abs/2608.15875) | 2026-08-16 | 核心 | 👀 值得关注 | **75** (4/3/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | GigaBrain Team | [📝](../digests/migration-2026-10-22.md) |
 | [XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment](https://arxiv.org/abs/2608.09892) | 2026-08-10 | 相邻 | 👀 值得关注 | **75** (4/3/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | MMLab@HKU; THU | [📝](../digests/migration-2026-10-22.md) |
@@ -206,6 +215,9 @@
 | [BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](https://arxiv.org/abs/2608.05042) | 2026-08-05 | 核心 | 👀 值得关注 | **67** (3/5/2/4) | 未找到仓库 (2026-10-22) | New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences; FiveAges | [📝](../digests/migration-2026-10-22.md) |
 | [Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](https://arxiv.org/abs/2607.02501) | 2026-07-02 | 相邻 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Southeast University; Nanjing University; Microsoft Research | [📝](../digests/migration-2026-10-22.md) |
 | [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751) | 2025-06-16 | 核心 | 👀 值得关注 | **66** (4/3/2/5) | 未找到仓库 (2026-10-22) | University of California Berkeley; Norwegian University of Science and Technology; Simon Fraser University | [📝](../digests/migration-2026-10-22.md) |
+| [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](https://arxiv.org/abs/2610.32102) | 2026-10-23 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | School of Artificial Intelligence, University of Chinese Academy of Sciences; New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences; FiveAges | [📝](../digests/daily/2026-10-26.md) |
+| [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](https://arxiv.org/abs/2610.31569) | 2026-10-22 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | SJTU; Spirit AI; THU | [📝](../digests/daily/2026-10-26.md) |
+| [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](https://arxiv.org/abs/2610.30735) | 2026-10-22 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | Araya Inc., Tokyo | [📝](../digests/daily/2026-10-26.md) |
 | [EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](https://arxiv.org/abs/2609.01281) | 2026-09-01 | 核心 | 观察中 | **63** (3/3/3/4) | 💻 实质代码 (2026-10-22) | College of Computer Science and Technology, Zhejiang University; Nanjing University of Aeronautics and Astronautics; Cornell University | [📝](../digests/migration-2026-10-22.md) |
 | [ActionMap: Robot Policy Learning via Voxel Action Heatmap](https://arxiv.org/abs/2606.06904) | 2026-06-05 | 核心 | 观察中 | **62** (3/4/2/4) | 未找到仓库 (2026-10-22) | Show Lab, National University of Singapore; NVIDIA | [📝](../digests/migration-2026-10-22.md) |
 | [GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models](https://arxiv.org/abs/2606.03240) | 2026-06-02 | 核心 | 观察中 | **62** (3/4/2/4) | 未找到仓库 (2026-10-22) | Tongji University; Shanghai Innovation Institute; Shanghai Jiao Tong University | [📝](../digests/migration-2026-10-22.md) |
@@ -259,11 +271,13 @@
 | [$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](https://arxiv.org/abs/2606.13672) | 2026-06-11 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · MIT (2026-10-22) | Mila - Québec AI Institute; Université de Montréal; Carnegie Mellon University | [📝](../digests/migration-2026-10-22.md) |
 | [$\mu_0$: A Scalable 3D Interaction-Trace World Model](https://arxiv.org/abs/2606.13769) | 2026-06-11 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Seoul National University; University of Maryland, College Park; All Purpose AI | [📝](../digests/migration-2026-10-22.md) |
 | [OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](https://arxiv.org/abs/2606.04463) | 2026-06-03 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 🟡 部分开放 · Apache-2.0 (2026-10-22) | Peking University; University of Michigan; NVIDIA | [📝](../digests/migration-2026-10-22.md) |
+| [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) | 2026-10-21 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-26) | KAIST | [📝](../digests/daily/2026-10-26.md) |
 | [GreenWAM: A World Foundation Model for Robotics](https://arxiv.org/abs/2610.18774) | 2026-10-13 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 🟡 部分开放 · OpenMDW-1.1 (2026-10-22) | Brain Team, Sber Robotics Center | [📝](../digests/daily/2026-10-22.md) |
 | [Keep the Future, Drop the Rollout: RIFT for World Action Models](https://arxiv.org/abs/2608.11521) | 2026-08-12 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · MIT (2026-10-22) | Australian National University; FreiNexus; Beijing Normal University | [📝](../digests/migration-2026-10-22.md) |
 | [$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](https://arxiv.org/abs/2607.23783) | 2026-07-26 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · CC-BY-NC (2026-10-22) | NeoteAI Team; Fudan TEAI Team | [📝](../digests/migration-2026-10-22.md) |
 | [PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](https://arxiv.org/abs/2608.27345) | 2026-08-27 | 相邻 | 👀 值得关注 | **74** (3/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Shanghai Jiao Tong University; Shanghai AI Laboratory; Krea AI | [📝](../digests/migration-2026-10-22.md) |
 | [DriftWorld: Fast World Modeling through Drifting](https://arxiv.org/abs/2607.15065) | 2026-07-16 | 核心 | 👀 值得关注 | **74** (4/4/3/4) | 💻 实质代码 (2026-10-22) | Massachusetts Institute of Technology; Harvard University | [📝](../digests/migration-2026-10-22.md) |
+| [ALPS: Visual State Encoders for World Models](https://arxiv.org/abs/2610.30120) | 2026-10-21 | 核心 | 👀 值得关注 | **72** (4/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-26) | University of California, Santa Cruz; University of California, Santa Barbara; Google | [📝](../digests/daily/2026-10-26.md) |
 | [Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](https://arxiv.org/abs/2606.16533) | 2026-06-15 | 核心 | 👀 值得关注 | **72** (4/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Kairos Team et al. | [📝](../digests/migration-2026-10-22.md) |
 | [stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](https://arxiv.org/abs/2605.21800) | 2026-05-20 | 相邻 | 👀 值得关注 | **72** (3/3/4/5) | 💻 实质代码 · MIT (2026-10-22) | Mila & Université de Montréal; New York University; Universidade Federal de Minas Gerais | [📝](../digests/migration-2026-10-22.md) |
 | [Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](https://arxiv.org/abs/2608.18484) | 2026-08-19 | 相邻 | 👀 值得关注 | **71** (3/4/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Texas A&M University | [📝](../digests/migration-2026-10-22.md) |
@@ -295,6 +309,7 @@
 | [Wonder: Video World Model Done Better](https://arxiv.org/abs/2607.26037) | 2026-07-28 | 核心 | 观察中 | **57** (3/3/2/4) | 未找到仓库 (2026-10-22) | Adobe Research; Johns Hopkins University | [📝](../digests/migration-2026-10-22.md) |
 | [MemLearner: Learning to Query Context memory for Video World Models](https://arxiv.org/abs/2606.31734) | 2026-06-30 | 相邻 | 观察中 | **57** (3/3/2/4) | 未找到仓库 (2026-10-22) | The University of Hong Kong; Fudan University; Zhejiang University | [📝](../digests/migration-2026-10-22.md) |
 | [Targeting World Models to Compromise Robot Learning Pipelines](https://arxiv.org/abs/2606.09499) | 2026-06-08 | 相邻 | 观察中 | **57** (4/3/1/4) | 未找到仓库 (2026-10-22) | Northeastern University; University of Massachusetts Amherst | [📝](../digests/migration-2026-10-22.md) |
+| [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) | 2026-10-22 | 核心 | 观察中 | **54** (4/3/1/3) | 未找到仓库 (2026-10-26) | Hunyuan, Tencent; Peking University | [📝](../digests/daily/2026-10-26.md) |
 | [DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](https://arxiv.org/abs/2608.13489) | 2026-08-13 | 核心 | 观察中 | **54** (3/3/2/3) | 📄 占位仓库 · MIT (2026-10-22) | DreamX Team | [📝](../digests/migration-2026-10-22.md) |
 | [WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](https://arxiv.org/abs/2608.04964) | 2026-08-05 | 核心 | 观察中 | **54** (3/3/2/3) | 未找到仓库 (2026-10-22) | The Hong Kong University of Science and Technology; Wuhan University; AI Technology Center, Tencent Video, Tencent | [📝](../digests/migration-2026-10-22.md) |
 | [STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](https://arxiv.org/abs/2606.06832) | 2026-06-05 | 核心 | 观察中 | **54** (3/3/2/3) | 未找到仓库 (2026-10-22) | Department of Robotics Engineering, Worcester Polytechnic Institute, United States | [📝](../digests/migration-2026-10-22.md) |
@@ -331,6 +346,7 @@
 
 ### <a id="resource-droid"></a>DROID
 
+- 预训练 · [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 预训练 · [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 预训练 · [Hydra-0: Action Flow for Generalist World Modeling and Control](https://arxiv.org/abs/2608.18077) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
@@ -432,6 +448,8 @@
 
 ### <a id="resource-calvin"></a>CALVIN
 
+- 评测 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](https://arxiv.org/abs/2610.30735) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [GreenWAM: A World Foundation Model for Robotics](https://arxiv.org/abs/2610.18774) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](https://arxiv.org/abs/2609.01281) · 2026-09 · [报告](../digests/migration-2026-10-22.md)
 - 微调/后训练 · [SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](https://arxiv.org/abs/2608.09771) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
@@ -440,10 +458,20 @@
 
 ### <a id="resource-meta-world"></a>Meta-World
 
+- 评测 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](https://arxiv.org/abs/2609.01281) · 2026-09 · [报告](../digests/migration-2026-10-22.md)
 
 ### <a id="resource-libero"></a>LIBERO
 
+- 评测 · [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](https://arxiv.org/abs/2610.32102) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](https://arxiv.org/abs/2610.31569) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](https://arxiv.org/abs/2610.30735) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 微调/后训练 · [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [ALPS: Visual State Encoders for World Models](https://arxiv.org/abs/2610.30120) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 微调/后训练 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](https://arxiv.org/abs/2610.26855) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [Has GPT-6-Astra Achieved Embodied Intelligence?](https://arxiv.org/abs/2610.22471) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
@@ -519,6 +547,7 @@
 
 ### <a id="resource-simplerenv"></a>SimplerEnv
 
+- 评测 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 评测 · [Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](https://arxiv.org/abs/2608.10484) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 评测 · [World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](https://arxiv.org/abs/2608.09730) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
@@ -546,6 +575,9 @@
 
 ### <a id="resource-robocasa-bench"></a>RoboCasa-Bench
 
+- 评测 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 微调/后训练 · [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](https://arxiv.org/abs/2610.27861) · 2026-10 · [报告](../digests/daily/2026-10-23.md)
 - 评测 · [Long-WAM: Scaling the Context of World-Action Models](https://arxiv.org/abs/2610.10528) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives](https://arxiv.org/abs/2609.39601) · 2026-09 · [报告](../digests/daily/2026-10-22.md)
@@ -562,6 +594,10 @@
 
 ### <a id="resource-robotwin-2"></a>RoboTwin 2.0
 
+- 评测 · [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](https://arxiv.org/abs/2610.32102) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](https://arxiv.org/abs/2610.30735) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 微调/后训练 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](https://arxiv.org/abs/2610.26855) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [GreenWAM: A World Foundation Model for Robotics](https://arxiv.org/abs/2610.18774) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
@@ -592,12 +628,15 @@
 
 ### <a id="resource-isaac-lab"></a>Isaac Lab
 
+- 评测 · [Humanoid Mobility via Attention-based Contacts](https://arxiv.org/abs/2610.31608) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
+- 评测 · [Asymmetric On-Policy Distillation Learns In-Context Exploration](https://arxiv.org/abs/2610.30105) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](https://arxiv.org/abs/2608.15897) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 预训练 · [Mana: Dexterous Manipulation of Articulated Tools](https://arxiv.org/abs/2606.13677) · 2026-06 · [报告](../digests/migration-2026-10-22.md)
 - 评测 · [PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](https://arxiv.org/abs/2603.05410) · 2026-03 · [报告](../digests/migration-2026-10-22.md)
 
 ### <a id="resource-isaac-sim"></a>Isaac Sim
 
+- 评测 · [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](https://arxiv.org/abs/2610.32093) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](https://arxiv.org/abs/2608.12860) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 评测 · [NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](https://arxiv.org/abs/2607.19695) · 2026-07 · [报告](../digests/migration-2026-10-22.md)
 - 评测 · [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751) · 2025-06 · [报告](../digests/migration-2026-10-22.md)
@@ -612,6 +651,7 @@
 
 ### <a id="resource-robocasa"></a>RoboCasa
 
+- 评测 · [CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](https://arxiv.org/abs/2610.29702) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 微调/后训练 · [Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343) · 2026-07 · [报告](../digests/migration-2026-10-22.md)
 - 预训练 · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](https://arxiv.org/abs/2503.14734) · 2025-03 · [报告](../digests/migration-2026-10-22.md)
 
