@@ -815,3 +815,93 @@ entries:
     Pose Estimation 保留供后续复评，未在摘要层面评分。'
   date: '2026-10-26'
   run: '2026-10-26'
+- arxiv_id: '2610.33446'
+  title: 'MOTIO: Agentic Skill Engineering for Reality-Grounded Humanoid Loco-Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.33807'
+  title: 'RoboWorM: Evaluating Movement Realism, Consistency and Acceleration Affects in Embodied Video World Models'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.33685'
+  title: 'EXE: Egocentric Cross-Embodiment Pretraining via Factorized Latent Actions for VLA Models'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.35010'
+  title: 'JevVLA: Jev-Inspired Energy-Based Adaptation for Vision-Language-Action Policies'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34370'
+  title: 'ThinkLocoManip: A Whole-Body Control Agentic Harness for Legged Loco-Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.33565'
+  title: 'WorldFailBench: Do World Models Understand Policy Failures?'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34649'
+  title: 'RobotAgentBench: Towards Open-world Robot Autonomy'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.33486'
+  title: 'Learning Dexterous Manipulation: Hands, Simulators, Training, and Evaluation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.33494'
+  title: 'RBGA: Residual-Budget Guide Arbitration for Offline-to-Online Safe Reinforcement Learning in Dexterous Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34519'
+  title: 'TRIAGE: Efficient Vision-Language-Action Inference Needs Both Reuse and Pruning'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34453'
+  title: Scaling Dexterous Manipulation via Action Representation Pretraining
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34740'
+  title: 'Networked Humanoid Intelligence: Communication, Coordination, Collaboration, and Social Interaction'
+  decision: defer
+  reason: 材料不足：缓存截断于协调章节，协作、社会交互与安全讨论缺失，暂缓完整综述评价。
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34051'
+  title: 'Behavior Spatial Benchmark: Evaluating Spatial Understanding for Robotics'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.34251'
+  title: Variational Cognitive Memory Abstraction for Long-Horizon Vision-Language-Action Models
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'
+- arxiv_id: '2610.33866'
+  title: 'Late Breaking Results: Audio-Language-Action Models with Direct Speech Conditioning for Robotic Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-10-27'
+  run: '2026-10-27'

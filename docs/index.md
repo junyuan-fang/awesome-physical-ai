@@ -1,20 +1,20 @@
 # 累积索引 / Ranked index
 
-> 最近完成扫描：2026-10-26，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
+> 最近完成扫描：2026-10-27，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
 > 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
 
-共 253 篇：🔥 38 · 👀 82 · 观察中 129 · 暂不评级 4
+共 258 篇：🔥 39 · 👀 86 · 观察中 129 · 暂不评级 4
 
 - [Other Generalist Models](#cat-foundation-general) · 8
 - [Locomotion / Whole-Body](#cat-locomotion) · 22
-- [Manipulation](#cat-manipulation) · 32
+- [Manipulation](#cat-manipulation) · 34
 - [Navigation](#cat-navigation) · 13
 - [RL & Imitation Learning](#cat-rl-il) · 9
 - [3D Scene Understanding](#cat-scene) · 5
-- [Sim-to-Real](#cat-sim2real) · 9
+- [Sim-to-Real](#cat-sim2real) · 10
 - [Teleoperation](#cat-teleoperation) · 10
 - [Tutorials & Surveys](#cat-tutorials) · 6
-- [Vision-Language-Action (VLA)](#cat-vla) · 73
+- [Vision-Language-Action (VLA)](#cat-vla) · 75
 - [World Models](#cat-world-model) · 66
 - [数据集 / 基准使用关系](#resources)
 
@@ -63,6 +63,7 @@
 | 论文 | 首次公开 | 路线 | 优先级 | 总分 (C/E/O/T) | 开源（last_check） | 作者/单位 | 报告 |
 |---|---|---|---|---|---|---|---|
 | [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](https://arxiv.org/abs/2610.02089) | 2026-10-01 | 相邻 | 🔥 重点阅读 | **86** (4/4/5/4) | 💻 实质代码 · MIT (2026-10-22) | Seoul National University; University of Massachusetts Amherst; Google Research | [📝](../digests/daily/2026-10-22.md) |
+| [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](https://arxiv.org/abs/2610.33852) | 2026-10-24 | 核心 | 🔥 重点阅读 | **83** (4/4/5/3) | 💻 实质代码 · BSD-3-Clause (2026-10-27) | Tsinghua University; UC San Diego | [📝](../digests/daily/2026-10-27.md) |
 | [RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](https://arxiv.org/abs/2609.03199) | 2026-09-02 | 相邻 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · MIT (2026-10-22) | Rice University; NVIDIA | [📝](../digests/daily/2026-10-22.md) |
 | [SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](https://arxiv.org/abs/2608.18701) | 2026-08-19 | 相邻 | 👀 值得关注 | **72** (4/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Tuojing Intelligence; Tsinghua University; King’s College London | [📝](../digests/migration-2026-10-22.md) |
 | [DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](https://arxiv.org/abs/2610.29997) | 2026-10-21 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 (2026-10-23) | Ropedia | [📝](../digests/daily/2026-10-23.md) |
@@ -71,6 +72,7 @@
 | [Robots Acquire Manipulation Skills in Seconds from a Single Human Video](https://arxiv.org/abs/2607.20033) | 2026-07-22 | 核心 | 👀 值得关注 | **71** (4/4/3/3) | 💻 实质代码 (2026-10-22) | Beijing Institute of Technology; X Square Robot; Tsinghua University | [📝](../digests/migration-2026-10-22.md) |
 | [Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](https://arxiv.org/abs/2610.25736) | 2026-10-19 | 核心 | 👀 值得关注 | **68** (4/4/2/4) | 🟡 部分开放 · Apache-2.0 (2026-10-22) | Tsinghua University; AgiBot; Infinigence AI | [📝](../digests/daily/2026-10-22.md) |
 | [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](https://arxiv.org/abs/2608.02580) | 2026-08-03 | 相邻 | 👀 值得关注 | **68** (4/4/2/4) | 未找到仓库 (2026-10-22) | AIM3 Lab, Renmin University of China; Qwen Team, Alibaba Inc.; ShanghaiTech University | [📝](../digests/migration-2026-10-22.md) |
+| [VISTA: Active Exploration for Self-Improvement in Embodied Agents](https://arxiv.org/abs/2610.35051) | 2026-10-26 | 核心 | 👀 值得关注 | **66** (4/3/3/3) | 🟡 部分开放 · Apache-2.0 (2026-10-27) | Tsinghua University; National University of Singapore | [📝](../digests/daily/2026-10-27.md) |
 | [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](https://arxiv.org/abs/2610.27861) | 2026-10-20 | 相邻 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · MIT (2026-10-23) | Fudan University; Shenzhen Loop Area Institute; The Chinese University of Hong Kong | [📝](../digests/daily/2026-10-23.md) |
 | [Pre-training Visual Dexterity in Simulation](https://arxiv.org/abs/2608.15917) | 2026-08-16 | 核心 | 👀 值得关注 | **66** (4/3/2/5) | 未找到仓库 (2026-10-22) | Stanford University; MIT; Scale AI | [📝](../digests/migration-2026-10-22.md) |
 | [Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](https://arxiv.org/abs/2608.10383) | 2026-08-11 | 核心 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | School of Computer Science, The University of Auckland; College of Computer Science, Chongqing University; College of Electronic and Information Engineering, Southwest University | [📝](../digests/migration-2026-10-22.md) |
@@ -145,6 +147,7 @@
 | [ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning](https://arxiv.org/abs/2608.19182) | 2026-08-19 | 核心 | 👀 值得关注 | **71** (4/4/2/5) | 未找到仓库 (2026-10-22) | NVIDIA Corporation; Robotics Department, University of Michigan | [📝](../digests/migration-2026-10-22.md) |
 | [TAM: Torque Adaptation Module for Robust Motion Transfer in Manipulation](https://arxiv.org/abs/2606.06218) | 2026-06-04 | 核心 | 👀 值得关注 | **71** (4/4/2/5) | 未找到仓库 (2026-10-22) | KAIST; Allen Institute for AI; University of Toronto | [📝](../digests/migration-2026-10-22.md) |
 | [Mana: Dexterous Manipulation of Articulated Tools](https://arxiv.org/abs/2606.13677) | 2026-06-11 | 核心 | 👀 值得关注 | **66** (4/3/2/5) | 未找到仓库 (2026-10-22) | UC Berkeley; CMU; Stanford University | [📝](../digests/migration-2026-10-22.md) |
+| [Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](https://arxiv.org/abs/2610.35075) | 2026-10-26 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-27) | Dianyi Yang et al. | [📝](../digests/daily/2026-10-27.md) |
 | [RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction](https://arxiv.org/abs/2608.28693) | 2026-08-27 | 核心 | 观察中 | **63** (3/3/3/4) | 🟡 部分开放 · MIT (2026-10-22) | Tsinghua University; Galbot Inc.; Beijing Institute of Technology | [📝](../digests/migration-2026-10-22.md) |
 | [Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](https://arxiv.org/abs/2608.15897) | 2026-08-16 | 核心 | 观察中 | **62** (4/4/1/4) | 未找到仓库 (2026-10-22) | University of Michigan, Ann Arbor, MI, USA; Google DeepMind | [📝](../digests/migration-2026-10-22.md) |
 | [Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video](https://arxiv.org/abs/2606.08828) | 2026-06-07 | 核心 | 观察中 | **62** (3/4/2/4) | 未找到仓库 (2026-10-22) | Georgia Institute of Technology; University of Pennsylvania; Toyota Research Institute | [📝](../digests/migration-2026-10-22.md) |
@@ -193,6 +196,7 @@
 | [TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](https://arxiv.org/abs/2607.27205) | 2026-07-29 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Huazhong University of Science and Technology | [📝](../digests/migration-2026-10-22.md) |
 | [Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](https://arxiv.org/abs/2607.15330) | 2026-07-16 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Xiaomi Robotics | [📝](../digests/migration-2026-10-22.md) |
 | [Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](https://arxiv.org/abs/2601.12993) | 2026-01-19 | 核心 | 🔥 重点阅读 | **80** (4/4/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | BeingBeyond Team | [📝](../digests/migration-2026-10-22.md) |
+| [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) | 2026-10-25 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-27) | Hong Kong Embodied AI Lab; CUHK; PUMC | [📝](../digests/daily/2026-10-27.md) |
 | [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) | 2026-10-21 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · MIT (2026-10-26) | BUAA; X-Humanoid; RUC | [📝](../digests/daily/2026-10-26.md) |
 | [$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](https://arxiv.org/abs/2607.23782) | 2026-07-26 | 核心 | 👀 值得关注 | **77** (4/4/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | NeoteAI; Fudan TEAI | [📝](../digests/migration-2026-10-22.md) |
 | [GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture](https://arxiv.org/abs/2608.15875) | 2026-08-16 | 核心 | 👀 值得关注 | **75** (4/3/4/4) | 💻 实质代码 · Apache-2.0 (2026-10-22) | GigaBrain Team | [📝](../digests/migration-2026-10-22.md) |
@@ -215,6 +219,7 @@
 | [BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](https://arxiv.org/abs/2608.05042) | 2026-08-05 | 核心 | 👀 值得关注 | **67** (3/5/2/4) | 未找到仓库 (2026-10-22) | New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences; FiveAges | [📝](../digests/migration-2026-10-22.md) |
 | [Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](https://arxiv.org/abs/2607.02501) | 2026-07-02 | 相邻 | 👀 值得关注 | **66** (3/3/4/3) | 💻 实质代码 · Apache-2.0 (2026-10-22) | Southeast University; Nanjing University; Microsoft Research | [📝](../digests/migration-2026-10-22.md) |
 | [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](https://arxiv.org/abs/2506.13751) | 2025-06-16 | 核心 | 👀 值得关注 | **66** (4/3/2/5) | 未找到仓库 (2026-10-22) | University of California Berkeley; Norwegian University of Science and Technology; Simon Fraser University | [📝](../digests/migration-2026-10-22.md) |
+| [HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](https://arxiv.org/abs/2610.34186) | 2026-10-25 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-27) | Westlake University; Beijing University of Posts and Telecommunications; Southwest University of Finance and Economics | [📝](../digests/daily/2026-10-27.md) |
 | [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](https://arxiv.org/abs/2610.32102) | 2026-10-23 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | School of Artificial Intelligence, University of Chinese Academy of Sciences; New Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences; FiveAges | [📝](../digests/daily/2026-10-26.md) |
 | [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](https://arxiv.org/abs/2610.31569) | 2026-10-22 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | SJTU; Spirit AI; THU | [📝](../digests/daily/2026-10-26.md) |
 | [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](https://arxiv.org/abs/2610.30735) | 2026-10-22 | 核心 | 👀 值得关注 | **65** (4/4/2/3) | 未找到仓库 (2026-10-26) | Araya Inc., Tokyo | [📝](../digests/daily/2026-10-26.md) |
@@ -332,6 +337,7 @@
 
 ### <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
+- 预训练 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 预训练 · [CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 预训练 · [What Matters for Latent Actions in Robot Learning](https://arxiv.org/abs/2608.19613) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 预训练 · [Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation](https://arxiv.org/abs/2608.18787) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
@@ -346,6 +352,7 @@
 
 ### <a id="resource-droid"></a>DROID
 
+- 预训练 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 预训练 · [Self-Distilling Future Video Representations for World Action Models](https://arxiv.org/abs/2610.30320) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 预训练 · [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](https://arxiv.org/abs/2610.21306) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
@@ -368,6 +375,7 @@
 
 ### <a id="resource-bridgedata-v2"></a>BridgeData V2
 
+- 预训练 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 微调/后训练 · [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](https://arxiv.org/abs/2609.14973) · 2026-09 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](https://arxiv.org/abs/2608.27406) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 微调/后训练 · [G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
@@ -463,6 +471,7 @@
 
 ### <a id="resource-libero"></a>LIBERO
 
+- 评测 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 评测 · [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](https://arxiv.org/abs/2610.32102) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](https://arxiv.org/abs/2610.31569) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](https://arxiv.org/abs/2610.30814) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
@@ -568,6 +577,8 @@
 
 ### <a id="resource-behavior-1k"></a>BEHAVIOR-1K
 
+- 预训练 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
+- 预训练 · [HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](https://arxiv.org/abs/2610.34186) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 评测 · [Has GPT-6-Astra Achieved Embodied Intelligence?](https://arxiv.org/abs/2610.22471) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 - 评测 · [G0.5: One Autoregressive Stream for Robot Reasoning and Action](https://arxiv.org/abs/2608.11739) · 2026-08 · [报告](../digests/migration-2026-10-22.md)
 - 评测 · [Masked Visual Actions for Unified World Modeling](https://arxiv.org/abs/2607.19343) · 2026-07 · [报告](../digests/migration-2026-10-22.md)
@@ -594,6 +605,9 @@
 
 ### <a id="resource-robotwin-2"></a>RoboTwin 2.0
 
+- 评测 · [VISTA: Active Exploration for Self-Improvement in Embodied Agents](https://arxiv.org/abs/2610.35051) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
+- 预训练 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
+- 评测 · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](https://arxiv.org/abs/2610.34356) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 评测 · [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](https://arxiv.org/abs/2610.32102) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](https://arxiv.org/abs/2610.30735) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 微调/后训练 · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](https://arxiv.org/abs/2610.29866) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
@@ -626,8 +640,13 @@
 
 - 提出 · [EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](https://arxiv.org/abs/2610.26625) · 2026-10 · [报告](../digests/daily/2026-10-22.md)
 
+### <a id="resource-zero-hlm-bench"></a>Zero-HLM-Bench
+
+- 提出 · [Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](https://arxiv.org/abs/2610.35075) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
+
 ### <a id="resource-isaac-lab"></a>Isaac Lab
 
+- 评测 · [Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](https://arxiv.org/abs/2610.35075) · 2026-10 · [报告](../digests/daily/2026-10-27.md)
 - 评测 · [Humanoid Mobility via Attention-based Contacts](https://arxiv.org/abs/2610.31608) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [Asymmetric On-Policy Distillation Learns In-Context Exploration](https://arxiv.org/abs/2610.30105) · 2026-10 · [报告](../digests/daily/2026-10-26.md)
 - 评测 · [Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](https://arxiv.org/abs/2608.15897) · 2026-08 · [报告](../digests/migration-2026-10-22.md)

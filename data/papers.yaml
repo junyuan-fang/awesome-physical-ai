@@ -17668,3 +17668,321 @@ papers:
   source: arxiv
   digest: digests/daily/2026-10-26.md
   late_found: true
+- arxiv_id: '2610.34356'
+  title: 'RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions'
+  authors: Haoyu Zhao et al.
+  affiliations:
+  - Hong Kong Embodied AI Lab
+  - CUHK
+  - PUMC
+  - DAMO Academy, Alibaba Group
+  - Alibaba Group
+  - Hupan Lab
+  date: '2026-10-25'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - latent-actions
+  - video-pretraining
+  - cross-embodiment
+  abstract_short: RynnVLA以三维潜在动作利用异构视频预训练，作者报告4B模型在LIBERO成功率98.8%，并验证六项真机任务。
+  summary: 为缓解机器人动作标注稀缺和不同本体控制空间不兼容的问题，RynnVLA-Latent先用RynnLAM从视频转移学习连续潜在动作，以未来特征残差、相机补偿三维流和相机运动解耦减少外观干扰，再通过流匹配预训练策略并适配原生动作。训练语料来自人类、机器人和仿真视频，规模约3.01万小时。作者报告4B模型在LIBERO、无需专项适配的LIBERO-Plus和RoboTwin
+    2.0上分别取得98.8%、84.7%和88.6%成功率，并在两类双臂平台完成六项真实操作评测。这提示几何约束的视频监督可以补充昂贵的动作示范，但不能据此认定潜在动作具有严格视角不变性或无需下游机器人数据。已发布权重主要是预训练初始化，复现闭环控制仍需本体后训练，完整语料与真机泛化范围也有待补证。
+  links:
+    arxiv: https://arxiv.org/abs/2610.34356
+    code: https://github.com/alibaba-damo-academy/RynnVLA-Latent
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 3
+    rationale:
+      C: 三维运动与相机解耦监督提供可扩展的跨本体视频预训练接口。
+      E: 多仿真基准和两类真机平台有验证，缓存未完整呈现全部消融。
+      O: 实质训练代码及预训练权重已发布，完整语料和闭环策略权重未确认。
+      T: 材料不足以核实团队近五年代表性相关成果，按规范默认3分。
+    evidence_read:
+    - abstract
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 核实团队近五年本方向代表性成果，以校准T分。
+    reviewed: '2026-10-27'
+    reviewer: codex (agent review, human-auditable)
+    total: 77
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/alibaba-damo-academy/RynnVLA-Latent
+    weights: partial
+    data: partial
+    license: Apache-2.0
+    note: 官方README及目录确认Apache-2.0训练代码、RynnLAM和2B/4B预训练权重入口；只附合成样例，未发布完整语料。2B/4B是Stage-1初始化而非闭环策略。https://github.com/alibaba-damo-academy/RynnVLA-Latent
+    stats:
+      files: 167
+      code_files: 121
+      config_files: 24
+      last_commit: '2026-10-23'
+      readme_says_coming_soon: false
+    first_check: '2026-10-27'
+    last_check: '2026-10-27'
+  uses:
+  - resource: droid
+    role: pretrain
+  - resource: open-x-embodiment
+    role: pretrain
+  - resource: bridgedata-v2
+    role: pretrain
+  - resource: behavior-1k
+    role: pretrain
+  - resource: robotwin-2
+    role: pretrain
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  added: '2026-10-27'
+  source: arxiv
+  digest: digests/daily/2026-10-27.md
+  late_found: true
+- arxiv_id: '2610.35075'
+  title: 'Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data'
+  authors: Dianyi Yang et al.
+  date: '2026-10-26'
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - sim-to-real
+  - data-generation
+  abstract_short: Zero-HLM用实景重建和仿真示范训练人形策略，三项G1任务平均成功率66.7%，真实数据训练对照为46.7%。
+  summary: 为降低人形移动操作对真实示范的依赖，Zero-HLM从手机拍摄构建高斯外观与可编辑物理网格，以智能体检查对齐场景，再通过动作与环境协同调整生成可执行全身轨迹。系统仍使用每任务十五条仿真遥操作源示范和冻结SONIC控制器，并非完全无需示范。作者生成4800条物理验证轨迹，训练GR00T
+    N1.7，在G1移动取放、低位取帽和腿辅助搬运三项任务中，使用每任务800条仿真示范的平均完整成功率为66.7%，真实100条示范对照为46.7%；仿真也仅用100条时为43.3%。因此主要结果同时反映生成数据质量与规模优势。扩展配置下作者还报告更强泛化，但当前仅覆盖有限场景与任务；模拟和真实策略排序并不总一致，Zero-HLM-Bench适合近似难度评估，尚不能视为可靠部署排名器。
+  links:
+    arxiv: https://arxiv.org/abs/2610.35075
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 把高斯场景重建和动作环境协同调整连接成人形数据生成流程。
+      E: 三项真机任务有真实数据、仿真基线和消融，但任务场景仍有限。
+      O: 有项目页入口，尚未核实方法代码、场景与训练语料实际发布。
+      T: 材料不足以核实团队近五年代表性相关成果，按规范默认3分。
+    evidence_read:
+    - abstract
+    - method
+    - experiments
+    pending_checks:
+    - 核实团队近五年本方向代表性成果，以校准T分。
+    - 缓存未提取有效作者单位，需核对论文署名页；不据姓名或邮箱推断。
+    reviewed: '2026-10-27'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次正文缓存和仓库探测；未把引用资源或承诺发布视为已开放。
+    first_check: '2026-10-27'
+    last_check: '2026-10-27'
+  uses:
+  - resource: isaac-lab
+    role: eval
+  - resource: zero-hlm-bench
+    role: proposes
+  added: '2026-10-27'
+  source: arxiv
+  digest: digests/daily/2026-10-27.md
+- arxiv_id: '2610.34186'
+  title: 'HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience'
+  authors: Yang Liu et al.
+  affiliations:
+  - Westlake University
+  - Beijing University of Posts and Telecommunications
+  - Southwest University of Finance and Economics
+  - University of Science and Technology of China
+  - University of Sussex
+  - Xi’an Jiaotong University
+  - Zhejiang University
+  - Shanghai Innovation Institute
+  - Shanghai Jiao Tong University
+  - Hebei University of Technology
+  date: '2026-10-25'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - humanoid
+  - egocentric
+  - whole-body
+  abstract_short: HuGe结合第一人称预训练、伪本体状态和视觉适配，在G1取放任务中作者报告成功率从43.3%提高至66.7%。
+  summary: 为把丰富的人类第一人称经验迁移到人形全身控制，HuGe把三种已有VLA架构接入SONIC潜在运动接口，输出全身运动码和双手开合信号，再依次进行第一人称预训练、人形适配和下游微调。其关键处理是为人类示范构建伪本体状态，并通过手臂去除、补绘和机器人手渲染减小外观差异。作者使用超过两千小时的人类与机器人数据，在HumanoidArena七项任务上分析训练策略和数据规模；在真实G1可乐瓶取放任务中，固定110条机器人示范，加入400条原始人类示范使成功率由13/30升至18/30，视觉适配后为20/30。结果支持人类经验的补充价值，但视觉适配相对原始视频仅多两次成功，尚需更大样本确认。真实评测仅一个任务，外观分布距离缩小也不能直接代表因果迁移机制或跨场景稳定性。
+  links:
+    arxiv: https://arxiv.org/abs/2610.34186
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 伪本体状态和视觉适配支持三类人形VLA的人类经验迁移。
+      E: 七项仿真任务及单项真机三十次试验支持有效性，跨场景证据有限。
+      O: 有官方项目与仓库地址，但访问失败，不能认定实质代码已开放。
+      T: 材料不足以核实团队近五年代表性相关成果，按规范默认3分。
+    evidence_read:
+    - abstract
+    - method
+    - experiments
+    pending_checks:
+    - 核实团队近五年本方向代表性成果，以校准T分。
+    - 复核HuGe官方仓库可用性及代码、权重发布范围。
+    reviewed: '2026-10-27'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: https://github.com/yliu-cs/HuGe
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存署名尾部发现官方仓库链接，本次访问cache miss，未验证可用性；不据地址认定实质代码开放。
+    first_check: '2026-10-27'
+    last_check: '2026-10-27'
+  uses:
+  - resource: behavior-1k
+    role: pretrain
+  added: '2026-10-27'
+  source: arxiv
+  digest: digests/daily/2026-10-27.md
+  late_found: true
+- arxiv_id: '2610.33852'
+  title: 'AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking'
+  authors: Jianibieke Adalibieke et al.
+  affiliations:
+  - Tsinghua University
+  - UC San Diego
+  date: '2026-10-24'
+  venue: CVPR 2026
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous
+  - tracking
+  - sim-to-real
+  abstract_short: AdaDexTrack动态调制参考、物体表示与位置目标，在未见轨迹和物体上优于固定跟踪器，并实现零样本真机迁移。
+  summary: 为抑制文本生成动作噪声与人机重定向误差造成的长时漂移，AdaDexTrack先训练大量强化学习专家并蒸馏通用跟踪器，再在其前加入同目标训练的调制策略，闭环修正参考轨迹、物体潜变量和位置目标。作者以DiffH2O生成并筛选2765条参考，覆盖50个物体，分别建立未见轨迹和未见物体划分，在Isaac
+    Gym中比较DexTrack、ObjDex及普通PPO，并通过逐组件消融分析收益。在xArm6与LEAP Hand真机上，作者另测试覆盖15个物体的60条未见轨迹和两个新物体的20条轨迹，报告加入调制后完成率优于仅跟踪器。结果支持把参考本身纳入反馈，但仍依赖显式六维物体位姿估计，轴对称物体因旋转歧义被排除，不能据此推断对任意物体稳健。官方仓库已提供参考语料、训练流程与预训练检查点，便于进一步复核。
+  links:
+    arxiv: https://arxiv.org/abs/2610.33852
+    code: https://github.com/Janebek/AdaDexTrack
+  highlight: 🔥
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 5
+      T: 3
+    rationale:
+      C: 联合调制参考、物体潜变量和位置目标，闭环抑制长时跟踪漂移。
+      E: 未见轨迹和物体划分、组件消融及真机测试形成较完整证据。
+      O: 官方仓库提供训练部署代码、参考数据和预训练模型，许可与获取说明清楚。
+      T: 材料不足以核实团队近五年代表性相关成果，按规范默认3分。
+    evidence_read:
+    - abstract
+    - method
+    - experiments
+    - code
+    - project
+    pending_checks:
+    - 核实团队近五年本方向代表性成果，以校准T分。
+    - 项目页第一单位以图片链接显示，需核对署名页以补全单位全称。
+    reviewed: '2026-10-27'
+    reviewer: codex (agent review, human-auditable)
+    total: 83
+    priority: must-read
+  open:
+    code: substantive
+    repo: https://github.com/Janebek/AdaDexTrack
+    weights: open
+    data: open
+    license: BSD-3-Clause
+    note: 官方项目和README确认训练部署代码、2765参考动作、物体资源及预训练跟踪器和调制器，公开下载无需登录，第三方资源沿用原条款。https://github.com/Janebek/AdaDexTrack
+    first_check: '2026-10-27'
+    last_check: '2026-10-27'
+  added: '2026-10-27'
+  source: arxiv
+  digest: digests/daily/2026-10-27.md
+  late_found: true
+- arxiv_id: '2610.35051'
+  title: 'VISTA: Active Exploration for Self-Improvement in Embodied Agents'
+  authors: Zhang Zhang et al.
+  affiliations:
+  - Tsinghua University
+  - National University of Singapore
+  date: '2026-10-26'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - robot-agent
+  - active-exploration
+  - self-improvement
+  abstract_short: VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
+  summary: 为把执行后的静态反思转成可验证的具身自我改进，VISTA保持底层模型参数固定，由元智能体检索带谱系的编排版本和执行记录，提出失败假设，主动进入仿真采集诊断证据，再修改工具逻辑、终止规则或技能协调。候选版本冻结后通过自主回合验证，与匹配初始化的现有版本比较并保留谱系。作者在LIBERO-Pro、RoboCasa365和RoboTwin中报告逐轮成功率改善；四项LIBERO-Goal消融中，第一轮主动探索相对初始版本提高50.0个百分点，被动反思提高39.1个百分点，对应每任务元token用量为4220万与9420万。结果提示定向试验可改善开发效率，但开发集合上的选择并不等于独立任务迁移，计算开销仍大，且没有真实机器人验证。当前代码只覆盖LIBERO-Pro的T/S协议，其余两基准集成尚待发布，不能视为完整复现全部实验。
+  links:
+    arxiv: https://arxiv.org/abs/2610.35051
+    code: https://github.com/AgenticEI/VISTA
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 3
+      O: 3
+      T: 3
+    rationale:
+      C: 执行证据、主动诊断及版本图谱驱动可执行编排改进，增量明确。
+      E: 三套仿真环境与主动对被动消融支持收益，缺少真机和独立迁移评估。
+      O: 已开放LIBERO-Pro开发运行时，其余两基准集成尚待发布。
+      T: 材料不足以核实团队近五年代表性相关成果，按规范默认3分。
+    evidence_read:
+    - abstract
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 核实团队近五年本方向代表性成果，以校准T分。
+    reviewed: '2026-10-27'
+    reviewer: codex (agent review, human-auditable)
+    total: 66
+    priority: notable
+  open:
+    code: partial
+    repo: https://github.com/AgenticEI/VISTA
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 官方README提供LIBERO-Pro T/S运行时、初始编排和配置；RoboCasa/RoboTwin集成后续发布。https://github.com/AgenticEI/VISTA
+    first_check: '2026-10-27'
+    last_check: '2026-10-27'
+  uses:
+  - resource: robotwin-2
+    role: eval
+  added: '2026-10-27'
+  source: arxiv
+  digest: digests/daily/2026-10-27.md
