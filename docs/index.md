@@ -1,6 +1,6 @@
 # 累积索引 / Ranked index
 
-> 最近完成扫描：2026-10-27，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
+> 最近完成扫描：2026-10-28，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
 > 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
 
 共 258 篇：🔥 39 · 👀 86 · 观察中 129 · 暂不评级 4

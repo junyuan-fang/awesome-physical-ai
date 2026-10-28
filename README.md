@@ -8,7 +8,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Maintained](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://github.com/junyuan-fang/awesome-physical-ai/commits/master)
-![Last updated](https://img.shields.io/badge/Last%20updated-2026--10--27-blue.svg)
+![Last updated](https://img.shields.io/badge/Last%20updated-2026--10--28-blue.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
@@ -22,11 +22,11 @@
 
 **快速入口 / Quick links** · [本周精选](#weekly-picks) · [Top 20](#top-20) · [分类目录](#contents) · [完整评分索引](docs/index.md) · [专题](#topics) · [评分方法](#scoring) · [扫描报告](#scan-reports)
 
-> 最近完成扫描：**2026-10-27**（北京时间）· [查看覆盖范围、收录与排除记录](digests/daily/2026-10-27.md)。每日 **08:00 Asia/Shanghai** 由本地 Codex 任务执行；机器须开机、登录且联网，实际完成情况以扫描报告为准。
+> 最近完成扫描：**2026-10-28**（北京时间）· [查看覆盖范围、收录与排除记录](digests/daily/2026-10-28.md)。每日 **08:00 Asia/Shanghai** 由本地 Codex 任务执行；机器须开机、登录且联网，实际完成情况以扫描报告为准。
 
 > 💡 **Legend / 图例**: 🔥 must-read（总分 ≥80 且证据 ≥3）· 👀 notable（65–79）· 📜 classic landmark · `81/100` = 贡献 30% + 证据 25% + 开放 30% + 团队 15% · 💻 substantive code · 🟡 partial · 📄 placeholder repo · 🧩 adjacent（数据/基准/基础设施）· 🏛️ accepted venue · 📝 full review. Click any **▸ section** to expand / 点击展开折叠区.
 >
-> 📚 Full ranked index with affiliations & open status: [docs/index.md](docs/index.md) · Scan reports: [digests/](digests/) (latest: [2026-10-27](digests/daily/2026-10-27.md))
+> 📚 Full ranked index with affiliations & open status: [docs/index.md](docs/index.md) · Scan reports: [digests/](digests/) (latest: [2026-10-28](digests/daily/2026-10-28.md))
 ---
 
 ## <a id="weekly-picks"></a>⭐ This week's picks / 本周精选
@@ -1392,7 +1392,7 @@ New to the field? Pick a track by your background / 新手按背景选择起点�
 
 Each daily run writes a report with its coverage window, inclusion cap, candidate / exclusion statistics and a full review per included paper (problem → method → results & conditions → limits, open status with `last_check`). Weekly (≤15) and monthly (≤30) picks are rolled up from them.
 
-- Latest daily report: [2026-10-27](digests/daily/2026-10-27.md)
+- Latest daily report: [2026-10-28](digests/daily/2026-10-28.md)
 - All reports: [digests/](digests/) · Methodology: [docs/METHODOLOGY.md](docs/METHODOLOGY.md) · Ranked index: [docs/index.md](docs/index.md)
 
 ---
