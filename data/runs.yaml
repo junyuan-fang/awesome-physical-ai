@@ -144,3 +144,28 @@ runs:
   new_resources: []
   digest: digests/daily/2026-10-28.md
   applied: '2026-10-28'
+- scan_date: '2026-11-01'
+  kind: daily
+  window_start: '2026-10-26'
+  window_end: '2026-11-01'
+  last_covered_end: '2026-10-28'
+  d: 4
+  cap: 20
+  stats:
+    fetched: 277
+    already_tracked_or_triaged: 1
+    out_of_scope: 0
+    below_pool_cut: 196
+    pool: 80
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 20
+  excluded: 4
+  deferred: 56
+  removed: 0
+  new_resources:
+  - tool:schedulegen
+  - tool:sonic-k1
+  digest: digests/daily/2026-11-01.md
+  applied: '2026-11-01'

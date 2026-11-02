@@ -1,4 +1,3 @@
-
 tools:
 - id: lerobot
   name: LeRobot
@@ -57,3 +56,19 @@ tools:
   tags:
   - differentiable-rendering
   - nvidia
+- id: schedulegen
+  name: ScheduleGen
+  desc: 从少量示范生成多臂操作调度与训练轨迹的方法及项目；完整生成代码和资产待核验。
+  links:
+    project: https://schedulegen.github.io/
+    paper: https://arxiv.org/abs/2610.39429
+  added: '2026-11-01'
+  last_check: '2026-11-01'
+- id: sonic-k1
+  name: SONIC-K1
+  desc: K1人形机器人动作跟踪训练与部署复现，提供代码和权重；动作数据需另行取得。
+  links:
+    code: https://github.com/Kyk0/sonic-k1
+    paper: https://arxiv.org/abs/2610.39327
+  added: '2026-11-01'
+  last_check: '2026-11-01'

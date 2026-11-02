@@ -905,3 +905,364 @@ entries:
   reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
   date: '2026-10-27'
   run: '2026-10-27'
+- arxiv_id: '2610.39528'
+  title: 'PRIME W0: Physical Priors from World Models for Embodied Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36789'
+  title: A fully articulated humanoid dexterous hand with human-level joint structure enabled by linkage-based actuation
+  decision: defer
+  reason: 材料不足：缓存仅有硬件摘要，无法核验实验协议及对机器人学习的具体支撑，需正文。
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40349'
+  title: 'TouchBridge: Tactile-Conditioned Human-to-Robot Transfer for Dexterous Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40532'
+  title: 'BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37799'
+  title: 'DexSuite: An All-in-One Framework for Dexterous Manipulation Across Arms, Hands, and Tasks'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37330'
+  title: 'Tokens of Motion: Primitive Motion Learning for Human-Humanoid Skill Transfer'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37378'
+  title: 'VLA-Stem: A Lightweight Safety Mechanism for Vision-Language-Action Models via Reinforcement Learning'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40248'
+  title: LLM-guided Planar Loco-Manipulation for Quadruped Robots
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37974'
+  title: 'FORGE: Feasible Online Reduced-Order Reference Generation and Whole-Body Execution for Agile Humanoid Locomotion'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36859'
+  title: 'ActiveAlign: Aligning Egocentric Manipulation via Active Perception'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39385'
+  title: UMI-Live for In-The-Wild Bimanual Robotics Data Collection
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38266'
+  title: 'Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40646'
+  title: 'SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40210'
+  title: 'AcrossDEX 1.0: From Human Motion Pretraining to Bimanual Dexterous Manipulation across Hand Embodiments'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39076'
+  title: 'Tactus: Tactile & Pose Sensing Glove for Natural Dexterity Data Collection'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37381'
+  title: 'PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40026'
+  title: 'RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource Affordability,
+    and Research Evidence'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38000'
+  title: Self-Labeled Preference Transfer for Steerable Robot Manipulation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37203'
+  title: 'Remember Where You Walk: Learning Spatial Memory for End-to-End Legged Robot Exploration'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36420'
+  title: 'SO-101 Bench: Accessible Spatial Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.35832'
+  title: 'Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40430'
+  title: Improving Fine-Grained Manipulation through Demonstration Expansion and Execution Design
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38388'
+  title: 'ELEVATE: Agentic Controller Acquisition from Task Failure for Quadrupedal Manipulation'
+  decision: defer
+  reason: 材料不足：缓存无正文，补查 arXiv HTML 返回 404，控制器获取和真机实验尚无法深评。
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37582'
+  title: 'EgoThumb: A Vision-Driven Supernumerary Robotic Thumb for Autonomous Grasp and Holding Assistance'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36825'
+  title: 'HC2Robot: Hyper-Connection Transformers with Predicted Foresight for Multi-Terrain Humanoid Parkour'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39232'
+  title: 'Seeing and Imagining as One: Unified Video Generation and 4D Perception for Embodied World Modeling'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40565'
+  title: 'Gym-Anything for Robotics: Scaling physical simulations with digital agents'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40373'
+  title: 'HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39582'
+  title: Kinematic-Tactile Aligned Dexterous Retargeting with Contact Wrench Space Alignment
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39119'
+  title: 'CAPTURER: A Dexterous Aerial Manipulator for Dynamic and Precise Grasping across Diverse Environments'
+  decision: exclude
+  reason: 超出范围：核心为标记定位、协同规划及抗扰控制，所读正文未体现学习方法或直接机器人学习资源。
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38502'
+  title: 'OmniQuad: a Wheeled-Legged Hybrid Robot with Omnidirectional Wheels'
+  decision: exclude
+  reason: 超出范围：轮足机械设计与传统控制验证，未展示学习系统或学习数据基础设施。
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37801'
+  title: An Empirical Study of Wrist-Target Construction and Joint-Angle Limits in Humanoid Arm Retargeting
+  decision: exclude
+  reason: 增量过小：单一人形手臂的腕部目标和关节边界对照，尚无学习策略或可推广学习资源验证。
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36452'
+  title: Whole-Body Humanoid Control via Stochastic Motion Tokenization
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.34717'
+  title: 'VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.34650'
+  title: 'Dream to Assist: Intent-Conditioned World Models for Shared Vehicle Control'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40364'
+  title: Is It the Curriculum or Just the Easy Start? Benchmarking Unsupervised Environment Design on Quadrupeds
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39689'
+  title: 'AI for Science in Space: Orbital Laboratories, Planetary Fieldwork, and Embodied Autonomy'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38357'
+  title: 'CSO: Refining Robotic Policies via Skill Distribution Alignment and Skill-Grained Optimization'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38221'
+  title: 'CuraEval: Evaluating Demonstration Curation on Mixed-Skill Robot Data'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37509'
+  title: 'Ego-CEVR: Learning Cross-Embodiment Visual Representations from Human Egocentric Videos'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36694'
+  title: 'TOPS: Reshaping Flow Source and Transport for Multi-Task Robot Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36662'
+  title: 'SWIM: Learning What Matters from Behaviors for JEPA World Models'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40559'
+  title: 'A Tutorial on Shape Servoing of Deformable Objects-Part I: Fundamentals'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40075'
+  title: Learning Safe Flow Matching Robot Policies from Binary Feasibility Oracles
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39998'
+  title: Gaze-Assisted Supervisory Control for Lunar Robotic Arm Teleoperation Under Concurrent Monitoring
+  decision: exclude
+  reason: 超出范围：以虚拟现实注视交互和有界自主抓放的人因对照为核心，未涉及学习策略或示教数据学习。
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39054'
+  title: Robotic Data Inoculation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37865'
+  title: 'Echo: Scaling Visual Reinforcement Learning with Off-policy Experience'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37806'
+  title: 'TACOS: Terrain-Aware COntact Supervision for Visual Footstep Planning'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40109'
+  title: Coupled Guidance for Flow Matching
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40002'
+  title: How Much Should a VLA Trust Its Reasoning? Step-Level Guidance as a Measured Action-Value Function
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.39167'
+  title: 'EgoContact: Evaluating Physical Intelligence with Egocentric Video'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37547'
+  title: 'When, Where, and What to Correct: Human-Guided Adaptive Residual Correction for Robot Policies'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.37543'
+  title: Rendering-Free Event Frame Simulation for Fast Reinforcement Learning of Autonomous Robot Navigation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36852'
+  title: 'When Black-Box Robot Policies Fail: Online Sensor Diagnosis and Repair with a Transparent Surrogate'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36599'
+  title: Camera-to-Quadruped Robot Pose Estimation from Sequential Images
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36537'
+  title: A Trainable CPG Framework for Quadruped Locomotion
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.36013'
+  title: 'OmniBrain-0: A Unified Agentic Model for Embodied Intelligence'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.34674'
+  title: Benchmarking Obstacle-Conditioned Safety in Household Robot Navigation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.40401'
+  title: 'Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'
+- arxiv_id: '2610.38657'
+  title: 'Explore Where It Matters: Targeted Exploration for Efficient Rover Adaptation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-01'
+  run: '2026-11-01'

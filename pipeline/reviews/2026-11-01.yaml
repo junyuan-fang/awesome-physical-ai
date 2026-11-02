@@ -1,0 +1,3999 @@
+run:
+  scan_date: '2026-11-01'
+  kind: daily
+  window_start: '2026-10-26'
+  window_end: '2026-11-01'
+  last_covered_end: '2026-10-28'
+  d: 4
+  cap: 20
+  stats:
+    fetched: 277
+    already_tracked_or_triaged: 1
+    out_of_scope: 0
+    below_pool_cut: 196
+    pool: 80
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items:
+- arxiv_id: '2610.39528'
+  title: 'PRIME W0: Physical Priors from World Models for Embodied Manipulation'
+  prefilter_score: 16.5
+  triage: include
+  reason: 分层语义、历史上下文和预测子目标形成明确的动作生成增量。
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - vla
+  - world-model
+  - flow-matching
+  affiliations:
+  - Lumos SZ Lab Team
+  - Lumos Robotics
+  - THU
+  - CUHK
+  - NTU
+  one_liner: PRIME W0 融合历史视觉、世界模型子目标与分层动作专家，作者报告 LIBERO 平均成功率99.1%。
+  summary: |
+    为缓解当前观测驱动的VLA缺少时序上下文及动作结构约束，PRIME W0把视觉语言骨干逐层KV注入混合专家动作头，并异步生成子目标图像；历史帧经DINOv2桥接，协方差噪声则用于流匹配动作生成。训练分为视觉语言预训练、离散动作预训练、解码器组装和联合微调。补读原文实验后，作者报告LIBERO四套任务平均成功率99.1%，自建真机五类任务平均78.1%，对比表中的π0.5为69.1%；这些数字对应各自评测设置，不能与其他论文直接排名。组件消融支持历史信息和子目标条件的作用，但多个模块及约一万小时混合数据共同变化，贡献拆分仍需谨慎。缓存未保留完整实验样本与重复试验信息，项目页本次不可访问，训练资产和复现条件仍待确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 分层语义、历史上下文和预测子目标形成明确的动作生成增量。
+    E: 有仿真、真机与消融表，但试验计数和独立复现证据不充分。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.38199'
+  title: 'Embodied at Sea: Imitation Learning for Multi-Task Underwater Manipulation'
+  prefilter_score: 16.0
+  triage: include
+  reason: 水下真实场景系统性比较扩展了模仿学习的应用证据。
+  category: manipulation
+  route: core
+  contribution: system
+  tags:
+  - underwater
+  - imitation-learning
+  - field-robotics
+  affiliations:
+  - New York University
+  - L-Università ta’ Malta
+  one_liner: 水下模仿学习比较观测配置和模型，泳池最高93.3%含部分成功，海试ACT表现优于SmolVLA。
+  summary: |
+    为把主要在陆地训练的策略用于有水流、视觉畸变和平台漂移的水下操作，研究调整机器人观测与动作接口，并比较单任务ACT和通用VLA。泳池部分采集1616段示教，在三项任务上完成1260次可评分实机运行；作者报告14个配置中10个超过视觉基线，最佳ATTITUDE配置的93.3%包含部分成功，不能理解为严格完成率。海洋部分在沉船及码头开展抓取和系泊，748段示教对应508次可评分运行，ACT和SmolVLA汇总成功率分别为47.9%与7.9%。观测维度增加并非总有收益，较简单的姿态输入有时更有效。这为水下策略接口设计提供了实地证据，但不同场所、任务和模型的试验数量不均，海试低成功率仍说明领域迁移困难；BLUEMBODIED KIT的开放声明也需逐项验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 水下真实场景系统性比较扩展了模仿学习的应用证据。
+    E: 泳池与海洋实机运行规模较大，提供分任务结果及置信区间。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37091'
+  title: 'GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation'
+  prefilter_score: 15.0
+  triage: include
+  reason: 紧凑潜空间预测为低延迟多任务控制提供明确方法增量。
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - latent-dynamics
+  - compact-policy
+  affiliations:
+  - Genisom AI, Beijing, China
+  one_liner: GAWM用小型潜空间预测器辅助动作生成；补查原文还报告黄瓶交接真机46/50次成功。
+  summary: |
+    为降低视频世界动作模型的体量和延迟，GAWM使用冻结DINOv3特征，将每个相机观测压缩为少量令牌，再依据任务编码并行预测两个未来时域；动作解码器直接利用当前和未来特征回归动作块。补读原文显示，LIBERO评估区分标准与扩展数据，扩展设置包含6585条轨迹，不能与标准数据结果无条件比较。作者在RoboTwin 2.0混合训练协议下报告较强双臂表现，并以减少数据或训练步数的消融检验预测器价值。真机除81段留出示教的离线误差外，还在黄瓶交接任务报告46/50次闭环成功，对照π0.5为39/50。方法适合固定任务集合，尚不能说明开放语言泛化；官方仓库已提供推理评测和权重，但训练代码明确标为待发布，因此只认定部分开放。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 紧凑潜空间预测为低延迟多任务控制提供明确方法增量。
+    E: 两套仿真、受控消融和单任务真机闭环均可核查，但真实任务广度有限。
+    O: 官方仓库已发布推理评测和权重，训练代码尚未发布，且许可附加条款需核对。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核对附加条款下的实际许可范围及后续训练代码发布。
+  open:
+    code: partial
+    repo: https://github.com/gaoxiang12/ga-wm
+    weights: open
+    data: unknown
+    license: unknown
+    note: 已读官方README与LICENSE：推理、评测及模型入口已发布，训练代码仍标为coming soon。LICENSE自称MIT但附加提交保留条款，未按标准MIT登记。来源：https://github.com/gaoxiang12/ga-wm
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.36789'
+  title: A fully articulated humanoid dexterous hand with human-level joint structure enabled by linkage-based actuation
+  prefilter_score: 15.0
+  triage: defer
+  reason: 材料不足：缓存仅有硬件摘要，无法核验实验协议及对机器人学习的具体支撑，需正文。
+  category: manipulation
+  route: adjacent
+  contribution: hardware
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 材料不足：缓存仅有硬件摘要，无法核验实验协议及对机器人学习的具体支撑，需正文。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40349'
+  title: 'TouchBridge: Tactile-Conditioned Human-to-Robot Transfer for Dexterous Manipulation'
+  prefilter_score: 14.5
+  triage: include
+  reason: 接触保持与视觉动作转换联合支撑直接人类到机器人策略迁移。
+  category: teleoperation
+  route: core
+  contribution: method
+  tags:
+  - tactile
+  - retargeting
+  - human-to-robot
+  affiliations:
+  - Tsinghua University
+  - Zhejiang University
+  - Nanyang Technological University
+  - Hunan University
+  - Peking University
+  one_liner: TouchBridge把人类视觉触觉示教转换为机器人训练数据，四项真机任务平均成功率72.5%。
+  summary: |
+    为减少灵巧操作对昂贵机器人遥操作数据的依赖，TouchBridge联合设计人类采集端与机器人端的视觉、指尖触觉接口，并用Tac-Retarget保持接触区域及手内、双手之间的空间关系。随后通过视觉合成和相机坐标中的动作转换，将人类示教变为机器人域数据，用于微调预训练VLA。作者在翻书、拧灯泡、挤酱和抓易碎蛋卷四项真实任务中报告，仅用转换数据训练的策略平均成功率72.5%，等量机器人遥操作数据为77.5%，人类采集速度为后者七倍。与DexPilot、UniDex及触觉消融的对照支持接触约束的重要性。该流程重定向时不依赖物体网格或物理仿真，但接触评估使用了仿真重建；示教规模和任务范围仍小，不能据此断言跨任意手型及物体泛化，代码和资产开放情况未确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 接触保持与视觉动作转换联合支撑直接人类到机器人策略迁移。
+    E: 四项接触丰富真机任务、等量示教基线及触觉组件消融较完整。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: isaac-sim
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.40532'
+  title: 'BURGER: Benchmarking and Understanding Robotic Generalization via Embodied Drawing'
+  prefilter_score: 14.0
+  triage: include
+  reason: 绘图任务消除部分视觉捷径，为语言与连续动作泛化提供可扩展诊断。
+  category: vla
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - benchmark
+  - language-grounding
+  - drawing
+  affiliations:
+  - Tsinghua University
+  - Shanghai Qizhi Institute
+  one_liner: BURGER用282项绘图任务诊断VLA语言理解、空间组合及多模态动作，包含28200段仿真示教。
+  summary: |
+    为分离语言理解与初始图像捷径，BURGER让机器人每次从空白画布出发，按照语言而非目标草图执行绘制。提示驱动流程把图形内容转换为连续末端轨迹，允许同一指令对应不同笔画顺序和有效形状。作者构建282项任务、28200段仿真示教，对五种VLA比较数据规模、任务多样性、空间关系和动作分布，发现不同架构存在不同失败模式，部分模型能组合已知对象形成未见布局。Franka Panda实验还展示了依据人类新画笔画继续完成图案的闭环行为。该基准适合分析语言到动作的联系，但真实实验使用平台数据微调，不能描述为纯仿真零样本迁移；任务简化了笔刷动力学与接触过程，自动笔画顺序也可能引入偏差。原探测的LeRobot是依赖项目，本文代码和数据的实际发布状态仍待核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 绘图任务消除部分视觉捷径，为语言与连续动作泛化提供可扩展诊断。
+    E: 有多模型规模与泛化分析及真实绘图，但物理任务覆盖有限。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 LeRobot，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses:
+  - resource: burger-bench
+    role: proposes
+  new_resources:
+  - kind: benchmark
+    id: burger-bench
+    name: BURGER
+    desc: 282项操作任务的行为属性评测，论文报告28200条仿真示范；发布完整性待核验。
+    links:
+      project: https://siyingzhao.github.io/BURGER/
+      paper: https://arxiv.org/abs/2610.40532
+    subcategory: vla-generalization
+- arxiv_id: '2610.37799'
+  title: 'DexSuite: An All-in-One Framework for Dexterous Manipulation Across Arms, Hands, and Tasks'
+  prefilter_score: 14.0
+  triage: include
+  reason: 跨形态统一接口及基准数据有明确基础设施价值。
+  category: manipulation
+  route: adjacent
+  contribution: infra
+  tags:
+  - dexterous
+  - benchmark
+  - simulation
+  affiliations:
+  - Mila
+  - McGill University
+  - Hugging Face
+  - Kinova
+  - Amazon FAR
+  one_liner: DexSuite统一灵巧操作仿真、遥操作和评测，提供16个任务形态配对与4700段成功示教。
+  summary: |
+    为弥补灵巧手研究在机器人配置、示教采集和策略评测之间工具分散的问题，DexSuite在Genesis上统一任务接口、机械臂与末端组合、遥操作及模拟触觉。框架覆盖30项任务、10种机械臂和12种末端，并选取16个任务形态配对构成基准，配套4700段来自人工、脚本及学习策略的成功轨迹。作者比较状态和图像输入下的多种模仿策略，发现灵巧手并非总因动作维度较高而更难，性能取决于任务和策略；堆叠、连续多物体操作与工具使用仍明显困难。资源价值在于统一条件下分离形态差异与任务复杂性，但当前证据集中在仿真，成功示教也不能代表失败覆盖。项目页可见数据入口与格式说明，原探测Genesis仓库不能代替DexSuite代码；因此认可明确的部分资源开放，训练框架发布和许可仍需补核。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 跨形态统一接口及基准数据有明确基础设施价值。
+    E: 多策略和形态的受控比较充分，但全部集中于仿真环境。
+    O: 已确认项目关联的公开数据条目，完整框架代码及全部资产许可尚未核实。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: partial
+    license: unknown
+    note: Genesis是依赖而非DexSuite代码。已读 https://dexsuiteorg.github.io/ 及其 https://huggingface.co/dexsuite 入口，确认35个公开数据条目；未逐个核对4700回合覆盖和资产许可。
+    last_check: '2026-11-01'
+  uses:
+  - resource: genesis
+    role: eval
+  - resource: dexsuite-bench
+    role: proposes
+  - resource: dexsuite-demos
+    role: proposes
+  new_resources:
+  - kind: benchmark
+    id: dexsuite-bench
+    name: DexSuite Benchmark
+    desc: 16组任务与本体组合的灵巧操作评测，统一观测、动作和成功条件。
+    links:
+      project: https://dexsuiteorg.github.io/
+      paper: https://arxiv.org/abs/2610.37799
+    subcategory: manipulation
+  - kind: dataset
+    id: dexsuite-demos
+    name: DexSuite Demonstrations
+    desc: 论文报告4700条成功仿真轨迹，包含人工遥操作、脚本和学习策略来源；已确认公开数据条目，完整覆盖仍待核验。
+    links:
+      data: https://huggingface.co/dexsuite
+      paper: https://arxiv.org/abs/2610.37799
+    subcategory: sim-generated
+- arxiv_id: '2610.37330'
+  title: 'Tokens of Motion: Primitive Motion Learning for Human-Humanoid Skill Transfer'
+  prefilter_score: 14.0
+  triage: include
+  reason: 把共享运动原语与形态实现分离，形成可复用的迁移接口。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - motion-primitives
+  - human-to-robot
+  - humanoid
+  affiliations:
+  - United Imaging Intelligence, Boston, MA, USA
+  - Purdue University, West Lafayette, IN, USA
+  one_liner: M-PACT冻结共享运动词表，仅适配机器人解码器，研究人类轨迹向人形动作的迁移。
+  summary: |
+    缓存开头摘要误载了另一项AFIL工作，故依据标题一致的正文并补查arXiv摘要评审M-PACT。为降低跨形态迁移对机器人示教的需求，方法先用SkillSeg分割人手轨迹，再把平移、开合和旋转分解为共享运动表示；迁移时冻结分割器、编码器和词表，只拟合目标机器人的效果解码器。作者在EgoDex、HoloAssist和HumanoidEveryday上比较重建、冻结迁移、上下文预测及少量机器人数据适配，并展示真实人形机器人的重建回放和闭环原语组合。定量结果支持平移和旋转表示复用，但机器人开合幅度很小，归一化误差并未超过零变化基线。真实展示尚不足以建立广泛任务成功率，表示重建与自主操纵能力应分开解读；此外未确认本工作代码、权重或数据再发布情况。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 把共享运动原语与形态实现分离，形成可复用的迁移接口。
+    E: 跨数据集重建与消融可读，真机主要为展示且开合重建有明显限制。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37378'
+  title: 'VLA-Stem: A Lightweight Safety Mechanism for Vision-Language-Action Models via Reinforcement Learning'
+  prefilter_score: 13.5
+  triage: include
+  reason: 冻结任务策略与学习执行层结合，为动态约束下的VLA控制提供增量。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - safety
+  - reinforcement-learning
+  affiliations:
+  - University of Science and Technology of China (USTC)
+  - University of Macau (UM)
+  - Peking University (PKU)
+  one_liner: VLA-Stem在冻结VLA下学习避障执行层，六种受限仿真设置无碰撞成功率52.8%。
+  summary: |
+    为使VLA在执行动作块时及时响应障碍，VLA-Stem不重新训练基础策略，而把其输出转成轨迹参考，由强化学习执行层依据本体状态和局部障碍信息调整运动与时间。训练结合特权教师、学生蒸馏和递进课程，并通过轨迹级引导维持原任务意图。作者在ManiSkill的抓取、堆叠及收纳任务中比较无障碍、静态障碍和动态障碍条件，六种受限设置平均无碰撞任务成功率为52.8%，最强安全基线为23.7%。UR7e真机的收纳与堆叠实验中，每任务每场景15次试验，障碍条件下碰撞率由73%—100%降至20%—40%。结果支持分层执行的实用性，却不构成无碰撞保证；实机依赖AprilTag估计障碍位置，样本和障碍类型有限，开放资产亦未核实。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 冻结任务策略与学习执行层结合，为动态约束下的VLA控制提供增量。
+    E: 仿真安全基线与真实静动态障碍试验齐备，但真机样本有限。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: maniskill-3
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.36539'
+  title: 'CARD: Contact-Anchored Retargeting for Dexterous Manipulation'
+  prefilter_score: 13.5
+  triage: include
+  reason: 以接触力目标作为跨形态接口，比纯运动学重定向有明确增量。
+  category: teleoperation
+  route: core
+  contribution: method
+  tags:
+  - contact
+  - retargeting
+  - tactile
+  affiliations:
+  - Carnegie Mellon University
+  - Amazon Frontier AI & Robotics (FAR)
+  - University of Maryland, College Park
+  - UC Berkeley
+  one_liner: CARD以接触力目标重定向人类示教，GRAB上物理重定向严格成功率由12%升至32%。
+  summary: |
+    为避免只匹配手部运动而丢失实际接触，CARD把视频、触觉手套与动作捕捉统一为手表面接触目标，联合优化接触位置、方向、手指姿态及平滑性。视频缺少直接力测量时，Vid-HACO先估计接触，再构造目标；硬件回放通过触觉跟踪控制器维持期望法向力。作者在自采数据与GRAB上比较运动学和物体感知重定向，报告更高接触保持率，并把接触约束加入SPIDER后，将GRAB严格成功率从12%提高至32%。真机对照显示，单纯位置回放容易滑落，触觉跟踪是复现力的重要组成。该方法的重定向本身无需物体模型，但评估及物理版本仍会使用网格和仿真；视频估力并非直接观测，开放环回放不能恢复较大物体位移，训练广泛闭环策略的效果仍属后续问题。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 以接触力目标作为跨形态接口，比纯运动学重定向有明确增量。
+    E: 多来源接触指标、物理重定向对照及触觉真机消融支持主要结论。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: hoi4d
+    role: pretrain
+  new_resources: []
+- arxiv_id: '2610.40248'
+  title: LLM-guided Planar Loco-Manipulation for Quadruped Robots
+  prefilter_score: 13.0
+  triage: include
+  reason: 规划与推物技能组合扎实，但结构化状态和固定场景限制了普适性。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - quadruped
+  - loco-manipulation
+  - planning
+  affiliations:
+  - Department of Mechanical Engineering, Politecnico di Milano
+  - Robotics and AI Institute
+  - Flexion Robotics
+  one_liner: LLM规划器联合选择技能与目标，四足推物导航在真机45次试验中完成34次。
+  summary: |
+    为穿越被可移动物体堵塞的环境，研究将语言条件规划与强化学习运动技能组合：高层模型在结构化场景中选择对象、技能和几何目标，底层策略执行导航与全身平面推物。规划器利用合成场景微调，推物控制则比较端到端与分层策略。作者报告仿真推物成功率93.3%，分层基线为83.5%，完成时间降低超过六成；完整系统在Unitree Go2的45次真机试验中有44次技能组合正确，但仅34次最终成功。这个差距表明，语义组合正确仍不足以保证低层可执行性。实验也区分预训练对几何目标和技能组合的影响。当前测试局限于单房间布局，依赖已知实体位姿，高层只在离散切换点重新推理，因而不能直接代表仅凭局部视觉的未知场景自主导航；项目资源入口尚待实质开放核验。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 规划与推物技能组合扎实，但结构化状态和固定场景限制了普适性。
+    E: 具有匹配设置的控制基线、高层比较及完整真机系统测试。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37974'
+  title: 'FORGE: Feasible Online Reduced-Order Reference Generation and Whole-Body Execution for Agile Humanoid
+    Locomotion'
+  prefilter_score: 13.0
+  triage: include
+  reason: 降阶参考与全身强化学习结合合理，但主要体现系统整合。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - locomotion
+  - reference-generation
+  affiliations: []
+  one_liner: FORGE用简化动力学生成在线参考并训练全身跟踪，在G1展示多方向行走与单腿跳。
+  summary: |
+    为让单一人形策略覆盖多种速度和运动方式，FORGE采用两阶段学习：先将单刚体动力学与完整人形运动学结合，在降阶空间学习命令条件参考生成器；再冻结生成器，在线产生全身跟踪策略的训练目标。两个阶段部署时均以50Hz运行，无需按步态切换独立控制器。作者在Unitree G1上展示前后移动、侧移、转向及单腿跳，报告纵向速度范围为负2.0至2.8米每秒，并给出连续命令变化下的跟踪曲线。方法说明简化动力学先验可能帮助扩大可跟踪运动范围，且存在真实硬件演示。然而结论明确把基线比较、消融和更系统的跟踪分析列为未来工作，不能将动作展示等同于已经验证优于现有控制器。当前也缺少多地形、长时间可靠性和复现资产证据，因此贡献按整合型方法评估，证据分保持审慎。
+  venue: Humanoids 2026
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 降阶参考与全身强化学习结合合理，但主要体现系统整合。
+    E: 真机行为可见，但作者明确尚缺基线、消融及系统跟踪分析。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36859'
+  title: 'ActiveAlign: Aligning Egocentric Manipulation via Active Perception'
+  prefilter_score: 13.0
+  triage: include
+  reason: 将主动视觉标定与触觉几何修正结合，直接改善细粒度操作。
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - active-perception
+  - sim2real
+  - tactile
+  affiliations:
+  - NVIDIA
+  - UC San Diego
+  one_liner: ActiveAlign通过主动挥手标定与触觉对齐，提升G1按钮及滑块等毫米尺度操作成功率。
+  summary: |
+    为减小被动观察带来的真实到仿真对齐误差，ActiveAlign把机器人动作作为额外感知手段。Waving模块利用多姿态手部运动和可微渲染标定相机，Touching模块通过触觉反馈建立局部高度及接触关系，补偿几何重建与规划误差。作者在多个已有机器人数据集上比较标定后的掩码重合及相机位置一致性，并在真实G1上评估滑块、开关等精细操作。三项任务各20次试验中，关键点规划为3、2、8次成功，主动对齐后分别达到14、9、15次。附加实验检验采样策略与相机标定的作用，支持主动交互改善对齐。但结果依赖预建机器人模型、专门触觉硬件及局部交互，不能直接外推至任意物体和动态环境；这种提升是感知与规划组合的效果，并非已经训练出通用操作策略，公开代码和资产尚未确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 将主动视觉标定与触觉几何修正结合，直接改善细粒度操作。
+    E: 多平台标定对照和三项真实精细操作支撑方法，但任务规模有限。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36791'
+  title: 'RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions'
+  prefilter_score: 13.0
+  triage: include
+  reason: 通用潜动作接口连接异构视频学习与机器人数据生成，有明确资源和方法价值。
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - latent-action
+  - cross-embodiment
+  affiliations:
+  - Hong Kong Embodied AI Lab
+  - CUHK
+  - DAMO Academy, Alibaba Group
+  - Hupan Lab
+  one_liner: RynnWorld-Latent用通用潜动作联合学习多形态视频动力学，并研究合成数据对操作策略的作用。
+  summary: |
+    为统一人类视频与机器人间互不兼容的动作空间，RynnWorld-Latent采用RynnLAM的三维接地潜动作作为视频生成条件。模型在预训练视频Transformer中结合全局动作令牌和局部对齐通路，再对目标机器人进行后训练。作者汇总23个数据集、约5.535亿帧进行预训练，设计数字遥操作和潜动作合成两条数据生成路线：前者接收机器人命令，后者迁移来源动作并配对伪动作。缓存实验设置与图表说明覆盖公开视频预测、两类真实机器人，以及LIBERO和LIBERO-Plus下的合成中间训练；作者报告视频指标和下游成功率改善。该证据支持共享潜动作作为异构经验接口，但缓存实验正文在预测评估处截断，不能完整复核各下游提升与所有对照。代码探测显示本工作实质代码、Apache许可和对应权重入口，数据完整发布状态仍不明确。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 通用潜动作接口连接异构视频学习与机器人数据生成，有明确资源和方法价值。
+    E: 已读实验设置及预测评估，后续策略实验在缓存中截断，保守取3分。
+    O: 本工作代码与权重已公开，许可及使用说明明确。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: substantive
+    repo: https://github.com/alibaba-damo-academy/RynnWorld-Latent
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39385'
+  title: UMI-Live for In-The-Wild Bimanual Robotics Data Collection
+  prefilter_score: 12.5
+  triage: include
+  reason: 完整采集到训练部署链路有实际价值，但核心为现有组件整合。
+  category: teleoperation
+  route: adjacent
+  contribution: system
+  tags:
+  - teleoperation
+  - umi
+  - bimanual
+  affiliations:
+  - Yale University
+  - Carnegie Mellon University
+  - AfterQuery
+  - University of Pennsylvania
+  - Harvard University
+  one_liner: UMI-Live整合双手采集与异步处理，作者报告一项真实双臂任务10/10和8/10次成功。
+  summary: |
+    为减少野外双手示教对外部追踪、环境标定和离线处理的依赖，UMI-Live把相机、激光惯性传感、计算与电源集成到手持夹具，通过统一界面录制，随后异步完成SLAM重建和训练数据导出。系统还连接双YAM遥操作、统一任务空间表示以及VLA训练部署。作者声明发布三项任务约40小时数据，并在橙子入碗双臂任务上使用以UMI数据为主的混合示教微调π0.5和MolmoAct2，分别完成10/10和8/10次真机测试。这说明采集链路能支持实际策略学习，但不能将单任务小样本解释为广泛野外泛化，也不能把混合训练收益全部归因于UMI数据。已核实约39.7小时公开数据及其Apache-2.0许可，但底层机器人API分支不能视为完整系统发布，训练与采集流程仍待核验。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 3
+    T: 3
+  rationale:
+    C: 完整采集到训练部署链路有实际价值，但核心为现有组件整合。
+    E: 仅一项双臂任务的小样本验证，缺少采集质量及规模化对照。
+    O: 已核实约39.7小时处理后示范数据及数据许可，完整系统代码与训练流程尚未确认。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  - project
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验UMI-Live完整采集与训练代码、原始激光数据覆盖及其各自许可。
+  open:
+    code: unknown
+    repo: ''
+    weights: unknown
+    data: open
+    license: unknown
+    note: 原探测的AfterQuery-Research/i2rt是底层机器人API分支，未确认其等于UMI-Live完整实现。已核实 https://huggingface.co/datasets/brandonyang/umi-live-dataset
+      的数据卡、文件入口及Apache-2.0数据许可；本字段license不以数据许可代替系统代码许可。
+    last_check: '2026-11-01'
+  uses:
+  - resource: umi-live-data
+    role: proposes
+  new_resources:
+  - kind: dataset
+    id: umi-live-data
+    name: UMI-Live Dataset
+    desc: 公开双腕视频与状态示范，数据卡列3255个回合、约39.7小时；处理后的动作与状态同帧对齐，训练需构造未来目标。
+    links:
+      data: https://huggingface.co/datasets/brandonyang/umi-live-dataset
+      paper: https://arxiv.org/abs/2610.39385
+    subcategory: manipulation-demos
+- arxiv_id: '2610.39044'
+  title: 'Catch It All!: Generalizable Dynamic Catching with a Dexterous Hand'
+  prefilter_score: 12.5
+  triage: include
+  reason: 单相机灵巧动态接取结合安全课程，对泛化接触控制有明确增量。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous
+  - catching
+  - sim2real
+  affiliations:
+  - UC San Diego
+  - Harvey Mudd College
+  one_liner: Catch It All!用单个自视角相机接取未见物体，真机下手与上手接球成功率约39%和36%。
+  summary: |
+    为应对抛掷物体形状、弹性和接触时序的不确定性，Catch It All!通过强化学习奖励与安全课程学习灵巧手动态接取。训练考虑指尖抓握、视觉位置噪声及硬件扭矩限制，再将特权教师能力蒸馏给可部署学生。作者在IsaacGym、MuJoCo与真实Unitree G1之间检验迁移，仿真覆盖20种物体，并对奖励和扭矩课程进行消融。真实测试使用九种训练未见物体，涵盖毛绒、可变形和刚性弹性类别，每个物体尝试不同距离抛掷，汇总下手及上手成功率分别为38.9%和36.1%。结果表明无需外部动捕也能处理多类物理特性，但真实可靠性远未接近饱和，少量人工抛掷也限制统计结论。当前控制不覆盖全身运动；缓存中的HumanoidVerse链接属于基础工具，不能认定为本工作开源实现。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 单相机灵巧动态接取结合安全课程，对泛化接触控制有明确增量。
+    E: 跨模拟器、未见物体和真机验证齐备，真实成功率仍有限。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 HumanoidVerse，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.38266'
+  title: 'Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation'
+  prefilter_score: 12.5
+  triage: include
+  reason: 为易混淆的自我改进主张建立可审核分类，属于扎实综述增量。
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - self-improvement
+  - evaluation
+  affiliations: []
+  one_liner: 该综述区分任务内适应、持久能力提升与改进过程自身更新，提出L0—L3证据分级。
+  summary: |
+    为澄清物理智能中递归自我改进的含义，综述把被更新的学习器与产生更新的改进过程分开讨论，并以变化对象、保留边界和后续复用来组织已有研究。作者归纳策略和价值更新、世界模型想象经验、记忆技能积累及可执行程序，再分析课程、奖励与研究流程如何被经验修订。L0—L3量表区分任务局部适应、持久能力增长、继承的流程修订和经过验证的改进器收益，强调这些主张需要不同对照。材料进一步提出共享初始学习器、共同数据和交互式比较，避免把额外采集数据的作用误归因于学习算法。价值主要是概念梳理和评估设计，而非新实机性能；缓存后半部分覆盖不足，接触有效性、恢复和资源成本的完整案例仍应回查。综述列表入口被探测为不可达，尚不能据此确认可维护的开放资源。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 为易混淆的自我改进主张建立可审核分类，属于扎实综述增量。
+    E: 已读机制分类与证据分级，属于文献综合而非新的实验验证。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  - 核验去除末尾句号后的官方仓库及其实际发布范围。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: unknown
+    repo: https://github.com/nkd-lkz/physical-ai-rsi-survey
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。 原探测URL带末尾句号，已清理；该探测失败不足以判断规范URL失效，保留unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40646'
+  title: 'SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing'
+  prefilter_score: 12.0
+  triage: include
+  reason: 模块化触觉工具把硬件接口与策略学习联通，具有清晰系统增量。
+  category: manipulation
+  route: adjacent
+  contribution: system
+  tags:
+  - tool-use
+  - tactile
+  - imitation-learning
+  affiliations:
+  - University of Washington
+  one_liner: SwapBot用可快速更换的触觉工具末端完成操作，触觉示教较纯RGB策略提高15—25个百分点。
+  summary: |
+    为覆盖切割、涂抹、夹取等不同工具需求，SwapBot采用统一机器人侧耦合接口和低成本工具适配器，而非要求一个末端承担所有操作。适配器支持部分关节工具，嵌入紧凑触觉传感，并配套遥操作接口采集演示，随后训练模仿学习策略执行烹饪及其他接触丰富动作。作者通过传感表征、操作者比较和策略消融检验系统，报告遥操作时间与工作负担下降，触觉增强策略相对RGB-only版本在相关技能上提高15—25个百分点。结果支持工具专用形态和触觉信息协同降低控制难度，但收益依赖具体工具、任务划分与示教条件，不能视为通用自主工具规划。论文指出传感器分辨率低、易磨损，布置依赖人工经验，长任务仍使用预定义分段；结论中的代码发布为未来计划，不能沿用摘要措辞判作完整开源。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 模块化触觉工具把硬件接口与策略学习联通，具有清晰系统增量。
+    E: 包含人因比较、传感测量及真实策略触觉消融。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40210'
+  title: 'AcrossDEX 1.0: From Human Motion Pretraining to Bimanual Dexterous Manipulation across Hand Embodiments'
+  prefilter_score: 12.0
+  triage: include
+  reason: 统一人体与两类手型的数据接口合理，但主要是组合式学习系统。
+  category: manipulation
+  route: core
+  contribution: system
+  tags:
+  - bimanual
+  - human-motion
+  - imitation-learning
+  affiliations: []
+  one_liner: AcrossDEX连接人类运动预训练与双手仿真策略，报告两种手型上的重定向与动作连续性结果。
+  summary: |
+    为复用人类双手经验，AcrossDEX先在HOT3D Aria图像和手部状态上预测未来运动，再通过仿真专家生成机器人视觉与动作数据。共享视觉编码器、时间骨干和腕部参数保留跨形态结构，独立手指字段与有效性掩码适配Inspire和Allegro，策略以滚动时域方式输出并执行动作块。作者在仿真开盖回位和闭盖重定向任务中比较直接回归、扩散及流匹配：回归开盖成功率40.6%，Inspire和Allegro重定向分别为100%和93.3%，流匹配在Allegro达到90%。连续动作块之间加入前序计划约束有助于稳定执行。需特别注意，这些属于物理仿真而非真机结果，主表挑选完整评估批次中最佳模型及运行；因此更适合作为表示与执行接口的早期验证，尚不能说明随机种子稳定性、真实接触迁移或大范围跨手泛化。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 统一人体与两类手型的数据接口合理，但主要是组合式学习系统。
+    E: 有仿真架构及连续性比较，最佳运行选取且无真机验证限制证据。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39543'
+  title: 'From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models'
+  prefilter_score: 12.0
+  triage: include
+  reason: 把意图和预期后果显式用于动作优化，超出仅用推理条件化。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - reasoning
+  - world-model
+  affiliations:
+  - Peking University, Beijing, China
+  - Beijing Innovation Center of Humanoid Robotics, Beijing, China
+  - Renmin University of China, Beijing, China
+  - Beijing Forestry University, Beijing, China
+  one_liner: CoRAct把运动意图和未来路标转成奖励，在动作噪声空间优化推理与执行的一致性。
+  summary: |
+    为避免具身思维链只作为文本条件而不约束动作，CoRAct把运动方向和未来夹爪路标转为可验证对齐信号。统一混合Transformer联合生成推理、动作与动作条件未来预测，再冻结骨干，用候选动作的运动一致性及预测结果与路标的吻合奖励优化初始噪声分布；部署仅需单样本动作生成。作者在RoboCasa、VLABench和三项真实操作任务上比较直接VLA及推理基线，报告任务成功、泛化和推理执行对应改善，并分析组件、细粒度指令及闭环自纠错。结果说明未来预测可以提供推理到行动的监督，但奖励依赖学习世界模型而非直接物理真值，模型误差可能被优化放大。真实系统还以预测头替代部分自回归推理以降低延迟，故与仿真流程并不完全相同；项目和数据入口存在声明，具体代码及可复现资产仍待核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 把意图和预期后果显式用于动作优化，超出仅用推理条件化。
+    E: 双仿真基准、组件分析和真实任务提供较完整证据。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: robocasa-bench
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.39076'
+  title: 'Tactus: Tactile & Pose Sensing Glove for Natural Dexterity Data Collection'
+  prefilter_score: 12.0
+  triage: include
+  reason: 自然操作条件下联合力与姿态测量及跨设备协议具有资源价值。
+  category: teleoperation
+  route: adjacent
+  contribution: hardware
+  tags:
+  - tactile
+  - data-collection
+  - wearable
+  affiliations:
+  - Meta Reality Labs Research
+  one_liner: Tactus薄型触觉手套结合IMU与视觉追踪，面向自然操作示教测量接触力和遮挡下手姿。
+  summary: |
+    为在自然人类操作中同时记录接触力与手部姿态，Tactus将电容触觉单元织入薄型手套，并用分布式惯性测量与自视角视觉融合追踪关节。设计围绕厚度、刚度、摩擦及接触分布展开，配套跨手套与每次佩戴校准，减少手套本身改变示教行为的影响。作者建立自然操作、触觉力回归与手姿三个协议，对本系统及两种商用触觉手套进行比较，报告95%置信条件下最低可检出力0.59牛顿，操作遮挡时指尖相对误差11毫米，并展示材质判断、滑移检测等应用。它直接服务于接触感知数据采集，不能当作纯硬件宣传处理；但测量质量尚不等于已证实下游机器人策略收益，姿态指标来自离线优化，长期漂移、用户差异和部署成本仍有边界。当前未核实硬件文件、校准实现及训练数据公开范围。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 自然操作条件下联合力与姿态测量及跨设备协议具有资源价值。
+    E: 硬件表征和商业基线比较充分，但下游机器人学习收益尚未直接验证。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37381'
+  title: 'PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations'
+  prefilter_score: 12.0
+  triage: include
+  reason: 以轻量动态表示替代在线视频预测，兼顾动作条件与部署成本。
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - vla
+  - physical-dynamics
+  - future-prediction
+  affiliations:
+  - Peking University
+  - JD.com
+  one_liner: PDRVLA用轻量物理令牌代替在线视频生成，四套仿真基准展示较高成功率。
+  summary: |
+    为降低视频预测融入VLA后的实时成本，PDRVLA从视觉语言特征提取物理令牌，用未来RGB、深度和光流监督其动态表示，并借冻结视频模型提供辅助训练信号。部署时移除视频生成路径，保留轻量模块给动作专家提供条件。训练组合公开机器人、手持接口、仿真和视觉语言数据，并扩展人体到机器人合成、子任务与思维链标注。补读实验设置后，作者在LIBERO、LIBERO-Plus、RoboTwin 2.0和SimplerEnv分别报告99.3%、89.9%、93.6%与81.5%的汇总成功率，其中RoboTwin包含清洁及随机化条件。结果支持低成本动态条件化，但主对照取自不同论文和仓库的各自协议，微小领先不等同于匹配训练预算下的显著收益；尚无真机验证。原imagehash链接是依赖工具，不能作为本模型代码或权重发布证据。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 以轻量动态表示替代在线视频预测，兼顾动作条件与部署成本。
+    E: 四仿真基准及辅助监督分析可核查，但基线协议异质且没有真机。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 imagehash，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  - resource: simplerenv
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.35862'
+  title: Learning Force-Reactive Humanoid Loco-Manipulation
+  prefilter_score: 12.0
+  triage: include
+  reason: 把力作为示教、策略和全身控制共同接口，方法增量明确。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - force-control
+  - imitation-learning
+  affiliations:
+  - Amazon FAR (Frontier AI & Robotics)
+  - New York University
+  - Carnegie Mellon University
+  - University of Chicago
+  one_liner: FLoRe统一力标注示教、扩散策略和全身控制，三项真机任务成功率80%，位置基线26.7%。
+  summary: |
+    为使人形机器人在推车、转箱和擦拭时既协调全身又控制接触力，FLoRe用带力传感的双手UMI式夹具及身体追踪器采集免机器人示教。高层扩散策略从视觉、本体和测得力矩预测动作与每手力命令，底层混合柔顺全身控制器沿目标方向跟踪力，并在其余方向保持柔顺。作者在仿真比较力跟踪与运动精度，再在三项接触任务上对比同一示教、同一控制器下的力反应策略与仅位置策略，平均成功率为80%与26.7%。这项匹配对照把力反馈价值与控制器选择部分分离，体现了在视觉无法辨别阻力时的实际作用。结果仍限于少数任务、硬件和力传感配置，不能直接推出无传感器或任意接触条件下的能力；需进一步核实采集设备、完整训练流程和部署代码的开放范围，缓存基础控制仓库不等于本系统发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 把力作为示教、策略和全身控制共同接口，方法增量明确。
+    E: 同数据同执行器的位置基线及仿真力跟踪对照支持真机收益。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 sim2real，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40026'
+  title: 'RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource
+    Affordability, and Research Evidence'
+  prefilter_score: 11.5
+  triage: include
+  reason: 多维测量与缺失证据处理有实用价值，评分框架本身增量适中。
+  category: vla
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - evaluation
+  - vla
+  - reproducibility
+  affiliations:
+  - Northwestern Polytechnical University
+  - Jiangsu Yunmu Intelligent Manufacturing Co., Ltd.
+  - National University of Singapore
+  - Xi’an University of Posts and Telecommunications
+  - The University of Hong Kong
+  - The Hong Kong Polytechnic University
+  one_liner: RoboSeed从能力、训练成本、部署成本及证据质量评估机器人模型，缺测时不输出完整排名。
+  summary: |
+    为避免仅凭成功率选型，RoboSeed将机器人模型的能力、下游训练可负担性、部署可负担性、本地研究价值和复现证据分成五个维度。评估单元同时绑定检查点、训练配方、执行接口和评测器，使用固定锚点归一化，并提供不同资源约束下的权重设定；缺测维度保持显式，不把不完整证据拼成总体榜单。作者对ABot-M0、LingBot-VLA以及若干WAM开展本地训练、发布权重测试和任务级审计，揭示骨干选择与适配配方会改变资源收益关系。此工作有助于把结果解释和实测成本放在同一记录中，但多种模型采用不同接口与协议，部署轨迹也不齐全，不能据此宣称统一数值优胜者。较小的成功率差异仍需多种子检验；仓库克隆超时仅表示未核实，评分实现及机器可读证据是否完整公开有待确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 多维测量与缺失证据处理有实用价值，评分框架本身增量适中。
+    E: 有本地实验审计，但协议差异和部署缺测限制综合比较。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: unknown
+    repo: https://github.com/PrimitiveX/RoboSeed
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
+    last_check: '2026-11-01'
+  uses:
+  - resource: roboseed
+    role: proposes
+  new_resources:
+  - kind: tool
+    id: roboseed
+    name: RoboSeed
+    desc: 具身策略部署评测与多维能力画像工具；论文公开仓库入口，实质发布内容待确认。
+    links:
+      code: https://github.com/PrimitiveX/RoboSeed
+      paper: https://arxiv.org/abs/2610.40026
+- arxiv_id: '2610.39429'
+  title: 'ScheduleGen: Demonstration Generation via Skill Scheduling for Multi-Arm Imitation Learning'
+  prefilter_score: 11.5
+  triage: include
+  reason: 把时序调度纳入多臂示教扩展，解决独立轨迹适配的关键缺口。
+  category: teleoperation
+  route: core
+  contribution: method
+  tags:
+  - data-generation
+  - bimanual
+  - scheduling
+  affiliations:
+  - NVIDIA
+  - The University of Texas at Austin
+  one_liner: ScheduleGen联合规划与调度多臂示教，28种仿真变体数据生成成功率79.6%。
+  summary: |
+    为减少多机械臂示教生成中的碰撞、等待和时序冲突，ScheduleGen把对象中心技能适配、运动规划与多臂联合调度连接起来，显式满足任务先后、同步和碰撞约束。作者通常每任务使用五段共享源示教，为每种变体生成成功轨迹，再训练流匹配视觉策略；对照包括DexMimicGen及加入人工等待约束的调整版本。评估覆盖28种双臂、四臂、人形及外部任务变体，作者报告平均数据生成成功率79.6%，训练所得策略平均成功率65.5%。在八种真实YAM任务变体中，仿真到真实或真实到仿真再回真实的策略成功率为50%—80%，没有真实策略微调。结果支持把协同时间安排作为数据生成的一部分，但依赖技能标注、校准几何和任务约束，尚不是无需准备的任意多臂示教扩展；项目页声明之外的实质发布仍待核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 把时序调度纳入多臂示教扩展，解决独立轨迹适配的关键缺口。
+    E: 多形态、多变体、强生成基线及八项真实迁移实验较完整。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: isaac-lab
+    role: eval
+  - resource: schedulegen
+    role: proposes
+  new_resources:
+  - kind: tool
+    id: schedulegen
+    name: ScheduleGen
+    desc: 从少量示范生成多臂操作调度与训练轨迹的方法及项目；完整生成代码和资产待核验。
+    links:
+      project: https://schedulegen.github.io/
+      paper: https://arxiv.org/abs/2610.39429
+- arxiv_id: '2610.38661'
+  title: 'Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models'
+  prefilter_score: 11.5
+  triage: include
+  reason: 以闭环成功直接驱动量化配置，比独立层敏感度提供明确增量。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - quantization
+  - vla
+  - deployment
+  affiliations:
+  - Colorado School of Mines
+  - Northeastern University
+  - USC Institute for Creative Technologies
+  - University of Central Florida
+  one_liner: QbD-VLA以短闭环成功率选择混合精度；仿真选出的配置在真实X-VLA有效，在π0.5上失败。
+  summary: |
+    为避免离线敏感度指标与机器人任务成功不一致，QbD-VLA直接用短时闭环评估选择各层组的权重和激活位宽，并在当前其他组件精度下测量候选，考虑组件相互作用。算法按置信区间分配试验，再把选定配置冻结到独立初始状态完整评估。作者在四种VLA与LIBERO四套任务中获得约四位权重、低于六位激活的配置，部分统一低位量化失效时仍保持较强成功率。SIMPLER上的收益较小；真实Franka平台中，仿真配置在X-VLA未检测到成功率损失，却在π0.5上失败，不能宣称普遍无损迁移。分配每次需数百次模拟运行且采用贪心搜索，名义位宽也不直接等价于实际内存和延迟。代码入口存在，但缓存克隆超时，尚需核实实现与部署测量范围。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 以闭环成功直接驱动量化配置，比独立层敏感度提供明确增量。
+    E: 跨模型仿真、分配对照和真实失败案例均有报告，证据较平衡。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: unknown
+    repo: https://github.com/jiuyixu25/QbD-VLA
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: simplerenv
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.38000'
+  title: Self-Labeled Preference Transfer for Steerable Robot Manipulation
+  prefilter_score: 11.5
+  triage: include
+  reason: 复用偏好识别能力避免目标任务重复标注，方法增量明确。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - preference-learning
+  - vla
+  - self-labeling
+  affiliations:
+  - University of Illinois Urbana-Champaign
+  - University of California, Berkeley
+  - Harvard University
+  - Stanford University
+  - University of Illinois Chicago
+  one_liner: SPT冻结偏好识别器给新任务自标注，真实跨任务偏好遵循率由52.5%升至92.5%。
+  summary: |
+    为让机器人在新任务上保持抓取位置、避障间距等执行偏好而无需重新人工标注，SPT先在来源任务联合学习偏好条件动作和偏好识别，再冻结识别器给目标示教生成标签，用这些标签适配策略。目标示教本身须包含需要的行为，方法转移的是标注能力而非凭空创造新偏好。作者在RoboTwin 2.0五类二元偏好上报告识别准确率96.4%、偏好遵循84.8%和任务成功89.2%，朴素微调对应遵循59.4%、成功88.0%；UR5e两种任务迁移中遵循率从52.5%提高到92.5%。对两阶段设计和同时偏好控制的实验支持识别器冻结的作用。但词汇和偏好组合仍预定义，连续偏好、未见组合及识别不确定性尚未覆盖；结果不能泛化为开放词汇个性化，代码和训练资产的公开状态未确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 复用偏好识别能力避免目标任务重复标注，方法增量明确。
+    E: 五类偏好、两种真机任务迁移及两阶段消融较完整。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.37203'
+  title: 'Remember Where You Walk: Learning Spatial Memory for End-to-End Legged Robot Exploration'
+  prefilter_score: 11.5
+  triage: include
+  reason: 空间索引记忆改善环境保留，但探索覆盖本身未超越强基线。
+  category: navigation
+  route: core
+  contribution: method
+  tags:
+  - spatial-memory
+  - navigation
+  - quadruped
+  affiliations:
+  - Technical University of Darmstadt, Germany
+  - Robotics Institute Germany (RIG)
+  - German Research Center for AI (DFKI)
+  - hessian.AI
+  one_liner: LSMM给探索策略加入位置索引记忆，迷宫覆盖与基线相近，但地图重建误差约降低三倍。
+  summary: |
+    为让足式机器人记住视野外的环境，LSMM在局部位置窗口内更新空间矩阵记忆，使与地点有关的潜在信息在离开后仍保留。该架构与关节级强化学习策略端到端训练，并辅以地图重建等监督，避免显式规划器和路径点指令。作者将其与LSTM、SRU、Transformer及固定历史窗口比较，各方法共享观测、位置估计和辅助损失，并在单张3090内选择可容纳的记忆容量，运行三个训练种子。迷宫探索覆盖率并未明显超过强基线，但空间布局重建误差约降三倍，访问更均匀，并展示Go2真实户外迷宫探索。贡献主要是保留可用地图而非提高所有探索指标。当前记忆区域固定，依赖外部定位，小型平坦迷宫允许反应式策略达到类似覆盖，尚需大场景、粗糙地形及机载定位验证；公开资产未确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 空间索引记忆改善环境保留，但探索覆盖本身未超越强基线。
+    E: 匹配训练条件、多种记忆基线及真实探索展示支持限定结论。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36420'
+  title: 'SO-101 Bench: Accessible Spatial Manipulation'
+  prefilter_score: 11.5
+  triage: include
+  reason: 面向普及型机械臂建立空间泛化与仿真真实对应基准，资源增量明确。
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - benchmark
+  - low-cost
+  - sim2real
+  affiliations:
+  - Independent
+  one_liner: SO-101 Bench评估低成本机械臂空间操作，五种策略的仿真排名与真实排名一致。
+  summary: |
+    为弥补低成本机械臂缺少可复用空间操作评测的问题，SO-101 Bench在Isaac Lab建立真实装置的数字孪生，提供四项任务、五类评分、138种物体与916个评测片段，并以3629段仿真示教在等算力下微调学习策略。测试区分已见、未见实例和未见类别，另设外观变化、旋转入位与遮挡记忆子集。作者报告九种学习模型中最优约61%，带学习抓取模块的代码智能体达到83.2%，消融显示框架和语言模型都影响领先幅度。五种纯仿真训练策略在真实新环境中保持完全相同排名，但仅覆盖一个真实场所及45种布局，仿真绝对成功率高估9—31个百分点。它支持把孪生用于相对比较，不能据排名相关性推断任意策略或环境的真实性能；代码链接与私有测试资产的可获得性仍需核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 面向普及型机械臂建立空间泛化与仿真真实对应基准，资源增量明确。
+    E: 等预算多模型比较和五策略真实排名验证较强，但真实场景范围窄。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: unknown
+    repo: https://github.com/5hadytru/so101_bench
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
+    last_check: '2026-11-01'
+  uses:
+  - resource: so101-bench
+    role: proposes
+  new_resources:
+  - kind: benchmark
+    id: so101-bench
+    name: SO101Bench
+    desc: 面向低成本SO-101操作的仿真与实物对照评测，包含138种对象及示范；代码入口可追踪，内容待核验。
+    links:
+      code: https://github.com/5hadytru/so101_bench
+      paper: https://arxiv.org/abs/2610.36420
+    subcategory: manipulation
+- arxiv_id: '2610.35832'
+  title: 'Profiling a Frontier Agent with EBench: From Direct Control to Harness with Policy'
+  prefilter_score: 11.5
+  triage: include
+  reason: 对智能体与低层策略的互补能力提供实用诊断，主要为评测分析。
+  category: foundation-general
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - embodied-agent
+  - benchmark
+  - manipulation
+  affiliations:
+  - Shanghai Artificial Intelligence Laboratory
+  - Shanghai Jiao Tong University
+  - Fudan University
+  - Zhejiang University
+  one_liner: EBench分析前沿多模态智能体直接控制与调用策略的能力边界，直接控制成功率46.7%。
+  summary: |
+    为比较通用多模态智能体与机器人后训练策略，报告在EBench中研究直接末端路径点控制，以及由智能体调用低层VLA或WAM的工具式执行。直接控制每项任务只提供一段带注释示教，不更新参数；比较策略则使用同任务的大量机器人轨迹后训练，因此这是不同使用范式的能力画像，而非等数据学习效率实验。作者报告直接控制整体成功率46.7%，短时任务表现较好，精细接触、长时程和双臂协调更弱，分阶段得分也高于严格完成率所呈现的能力。接入低层策略旨在缓解动作块之间反馈不足，并在510个测试片段比较工具配置。价值在于定位推理与执行之间的边界，但缓存对后半工具式执行结果截断，不能完整复核全部提升；结论还依赖特定闭源模型、提示与调用预算，开放模型及真实硬件上的可迁移性尚待验证。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 对智能体与低层策略的互补能力提供实用诊断，主要为评测分析。
+    E: 直接控制细分结果可核查，工具式执行后半结果及硬件验证不足。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: ebench-astra
+    role: proposes
+  new_resources:
+  - kind: benchmark
+    id: ebench-astra
+    name: EBench-Astra
+    desc: 面向前沿具身智能体的长短程任务评测，项目提供技术报告；完整执行框架开放状态待核验。
+    links:
+      project: https://internrobotics.github.io/EBench-Astra-Tech-Report/
+      paper: https://arxiv.org/abs/2610.35832
+    subcategory: multi-skill
+- arxiv_id: '2610.40430'
+  title: Improving Fine-Grained Manipulation through Demonstration Expansion and Execution Design
+  prefilter_score: 11.0
+  triage: include
+  reason: 数据配对与执行调参组合实用，但方法创新及外推范围有限。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - data-augmentation
+  - manipulation
+  - execution
+  affiliations:
+  - Nanjing University
+  one_liner: DEED结合一致性示教扩展与任务化执行配置，MetaFine官方综合评分85.55%。
+  summary: |
+    为改善细粒度指令选择与精确接触执行，DEED同时处理训练数据和部署接口。训练时在同一初始场景中配对不同指令及相应轨迹，并生成保持物理状态、动作一致的视觉变化，降低模型利用场景种子猜任务的机会；执行时将末端偏移经逆运动学转成关节命令，并按任务选择夹爪阈值、去噪步数和动作块执行长度。作者微调Xiaomi-Robotics-1，在MetaFine五项任务的感知、理解和控制综合协议中报告85.55%，发布基线为43.01%。固定策略的执行参数扫描进一步显示，部署设计本身能显著改变结果。不过部分比较沿用会保留历史状态的评估器，并非逐场景物理初态严格配对；总收益也混合数据扩展、微调及执行调参，不能归结为单个模块。证据限于该基准，真实机器人和跨平台泛化仍未建立，开放资产尚未核实。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 数据配对与执行调参组合实用，但方法创新及外推范围有限。
+    E: 官方五任务结果与固定策略扫描可读，部分对照不完全配对。
+    O: 论文提供方法相关仓库入口，但缓存克隆超时，未确认实质代码及复现资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: unknown
+    repo: https://github.com/Hiangx-robotics/MetaFine-Challenge_CoRL
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39267'
+  title: 'RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon'
+  prefilter_score: 11.0
+  triage: include
+  reason: 生成式先验与在线优化互补，直接解决拖车耦合导航的实时性。
+  category: navigation
+  route: core
+  contribution: system
+  tags:
+  - quadruped
+  - navigation
+  - flow-matching
+  affiliations:
+  - Robotics and Artificial Intelligence Lab, KAIST, Daejeon, South Korea
+  one_liner: RAIBO-Wagon以流匹配初始化MPPI并用学习动力学细化，40次室外拖车导航成功34次。
+  summary: |
+    为让四足机器人牵引欠驱动拖车穿过狭窄通道，RAIBO-Wagon把条件流匹配与学习动力学下的MPPI控制组合。全栈系统从机载感知构建地图，高层提供路径点，流模型生成候选命令序列，再由MPPI迭代修正，兼顾初始化速度与训练分布外可行性。离线专家使用同类优化器产生流模型训练数据，底层负责腿式运动。作者在15米室外路线、六种静态与两种动态障碍配置中各测试五次，共34/40次成功，最高拖载40公斤，计算与传感均在机器人上完成。仿真消融支持生成先验与优化互补；失败分析将六次失败均分为建图和局部规划问题。成果适用于具有相似连接动力学的拖载系统，但试验数量和布局仍有限，无法代表长距离复杂地形可靠性，精确动力学适配和资源发布也需进一步核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 生成式先验与在线优化互补，直接解决拖车耦合导航的实时性。
+    E: 有仿真消融、动态障碍和载荷下的机载室外真机测试。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.38388'
+  title: 'ELEVATE: Agentic Controller Acquisition from Task Failure for Quadrupedal Manipulation'
+  prefilter_score: 11.0
+  triage: defer
+  reason: 材料不足：缓存无正文，补查 arXiv HTML 返回 404，控制器获取和真机实验尚无法深评。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 材料不足：缓存无正文，补查 arXiv HTML 返回 404，控制器获取和真机实验尚无法深评。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37666'
+  title: 'ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning'
+  prefilter_score: 11.0
+  triage: include
+  reason: 通过想象结果强化共享动作思考，为无动作视频提供明确学习接口。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - human-video
+  - world-model
+  affiliations:
+  - NVIDIA
+  - KAIST
+  one_liner: ThinkWorld以预测未来与实测未来的吻合强化运动令牌推理，研究人类视频技能组合迁移。
+  summary: |
+    为利用缺少机器人动作标注的人类视频，ThinkWorld把中间动作思考表示为共享离散运动令牌序列Chain-of-Dynamics。先以有动作的机器人及人手轨迹建立令牌接地和未来预测，再让模型想象每段动作思考引起的未来，用预测与实际未来的特征吻合作为强化学习信号，更新推理空间而非直接要求视频提供机器人关节命令。作者在仿真及真实YAM任务中比较Diffusion Policy、MolmoAct2和世界动作模型，并在颜色、类别变化与烤箱技能组合设置中报告迁移改善。方法展示了用状态变化监督动作推理的可能性，但真实每配置试验数较少，依赖已有原子机器人技能和学习特征奖励，尚不能保证任意人类视频都能生成可执行动作。训练使用较大GPU规模，缓存LeRobot仓库只是依赖，完整模型和数据公开范围仍需核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 通过想象结果强化共享动作思考，为无动作视频提供明确学习接口。
+    E: 有仿真、真实分布变化和组合迁移比较，但真实试验较小。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 LeRobot，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: libero
+    role: finetune
+  - resource: simplerenv
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.37582'
+  title: 'EgoThumb: A Vision-Driven Supernumerary Robotic Thumb for Autonomous Grasp and Holding Assistance'
+  prefilter_score: 11.0
+  triage: include
+  reason: 紧凑辅助手指与视觉模仿结合具有实用性，主要为系统贡献。
+  category: manipulation
+  route: core
+  contribution: system
+  tags:
+  - wearable
+  - imitation-learning
+  - assistive-robotics
+  affiliations:
+  - Department of Computer Science and Engineering, University of California San Diego, La Jolla, CA 92093, USA
+  - Sudo AI GmbH, 8050 Zurich, Switzerland
+  one_liner: EgoThumb用掌向相机和视觉模仿学习自主控制额外拇指，示教者四任务平均成功率90%。
+  summary: |
+    为让单只人手完成握持与操作并行任务，EgoThumb把额外拇指的双腱驱动装置移至前臂，减少手部重量，并以掌向广角相机观察手与物体。系统采集遥操作示教，训练视觉模仿策略直接输出连续关节位置，根据视觉环境决定何时抓握和松开，而不是仅由显式手势触发。作者在抓方块、拧瓶盖、搅茶和转移小球四项真实协作任务中测试，示教者平均成功率90%，并评估不同手型与场所的迁移。证据说明相机布局与紧凑结构能支撑低速辅助操作，但任务仍需人类提供整体移动和部分动作，不能称为独立操作机器人。长时程和大范围位置变化会降低表现，高速模糊、不同接近角度及佩戴舒适性尚未充分验证。论文声明硬件软件开源，当前仅确认项目入口，需核验发布内容及许可。
+  venue: IROS (year unspecified)
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 紧凑辅助手指与视觉模仿结合具有实用性，主要为系统贡献。
+    E: 多任务及跨用户真机测试存在，但对照和任务规模较有限。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36825'
+  title: 'HC2Robot: Hyper-Connection Transformers with Predicted Foresight for Multi-Terrain Humanoid Parkour'
+  prefilter_score: 11.0
+  triage: include
+  reason: 可部署的触地事件预测明确连接特权监督与在线足点选择。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - parkour
+  - perception
+  affiliations:
+  - The Hong Kong University of Science and Technology (Guangzhou)
+  - CLAI-LAB, CL-TECH
+  - South China Agricultural University
+  - Southern University of Science and Technology
+  one_liner: HC2Robot预测下一次落脚时刻与支撑质量，四类地形仿真平均通过率97.60%。
+  summary: |
+    为缩小人形视觉运动中训练特权信息与部署观测的差距，HC2Robot用Predicted Foresight Module从本体状态和深度预测每只脚下一次触地的时间、位置及支撑质量，再与多流Hyper-Connection Transformer联合处理时间上下文。未来运动预测作为辅助正则，运行时不读取特权地形真值。作者在台阶、间隙、高平台和斜坡上采用相同训练预算和评测条件，五个种子分别进行大量试验，平均通过率97.60%，对照ParkourFormer为94.17%，并报告安全落脚率及模块消融。真实G1进一步展示独立障碍和混合地形零样本迁移。结果支持事件预见性和时间特征复用，但仿真百分比不能直接视为真实地形可靠性，硬件部署仍主要是有限场景演示；复杂感知失效、动态障碍及可复现训练资产的证据尚不完整。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 可部署的触地事件预测明确连接特权监督与在线足点选择。
+    E: 匹配强基线、多种子、组件消融和真实迁移展示较完整。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36507'
+  title: 'GRAFT: Geometry-Aware Residual Adaptation for Foundation Trackers'
+  prefilter_score: 11.0
+  triage: include
+  reason: 冻结运动先验并聚焦下肢执行修正，为地形适配提供清晰分解。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - residual-learning
+  - terrain
+  affiliations: []
+  one_liner: GRAFT冻结全身跟踪器，仅学习地形条件下肢残差，在四种基础控制器及真实G1上验证。
+  summary: |
+    为使平地预训练的人形跟踪器获得地形适应能力，GRAFT保留基础模型和参考动作接口，只在下肢关节目标上叠加轻量残差。残差利用任务与足部几何奖励训练，在平地受到抑制，并通过教师学生过程把特权地形条件蒸馏为机载深度输入。作者比较动作残差、潜令牌残差、LoRA、一步深度训练和从零强化学习，在Isaac Lab训练后用MuJoCo测试台阶、间隙及平台；分别适配四种冻结基础控制器，说明方法不只依赖单一基座。真实G1使用未修改参考与机载深度跨越台阶、平台，并展示推车场景。收益主要在训练效率及保持原动作接口，不意味着所有性能都优于微调；仿真每格仅十次测试，硬件以定性展示为主，而且每个基础模型仍需各自训练适配器。更复杂地形和上肢接触协调尚未充分验证。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 冻结运动先验并聚焦下肢执行修正，为地形适配提供清晰分解。
+    E: 多种适配路线、四基础控制器与跨模拟器及真实部署支持结论。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39287'
+  title: 'OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation'
+  prefilter_score: 10.5
+  triage: include
+  reason: 统一空中视觉语言能力与低成本闭环动作生成，系统增量明确。
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - aerial
+  - vla
+  - onboard
+  affiliations:
+  - Shanghai Artificial Intelligence Laboratory
+  - Northwestern Polytechnical University
+  - Beihang University
+  - Shanghai Jiao Tong University
+  - University of Science and Technology of China
+  - Zhejiang University
+  - Institute of Artificial Intelligence of China Telecom (TeleAI)
+  one_liner: OpenFlyV2在Orin NX全机载运行视觉语言动作模型，真实四场景导航成功率48%。
+  summary: |
+    为在小型飞行平台同时支持语言理解与闭环控制，OpenFlyV2组合共享视觉语言骨干、紧凑动作专家、运动感知历史记忆和动作先验，以事件令牌减少历史图像开销，并输出短时飞行路径点。训练数据主要来自仿真导航和视觉语言问答，部署无需真实飞行训练。作者在相同仿真片段比较多种空中导航模型，并通过记忆和动作先验消融分析单步生成的收益；系统在Jetson Orin NX上以10Hz生成动作块，四个真实环境汇总成功率48%。这表明机载语义推理和控制可共存，但距离可靠自主飞行仍有明显差距。仿真成功允许在目标25米内停止，且基线无法运行于该机载平台，不能把仿真比较写成真实同硬件优势；误差恢复与持续任务跟踪仍是开放问题，代码在论文中为未来发布承诺。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 统一空中视觉语言能力与低成本闭环动作生成，系统增量明确。
+    E: 相同仿真协议、组件消融及真实机载飞行支撑部署主张。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  - 核验去除末尾句号后的官方仓库及其实际发布范围。
+  open:
+    code: unknown
+    repo: https://github.com/Ideal-ljl/AeroBrain
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。 原探测URL带末尾句号，已清理；该探测失败不足以判断规范URL失效，保留unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39232'
+  title: 'Seeing and Imagining as One: Unified Video Generation and 4D Perception for Embodied World Modeling'
+  prefilter_score: 10.5
+  triage: include
+  reason: 将生成与多模态稠密感知合并，具有明确表示学习增量。
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - video-generation
+  - dense-perception
+  affiliations:
+  - RoboScience
+  - Nanjing University
+  - The Hong Kong Polytechnic University
+  - National University of Singapore
+  one_liner: GenSight统一未来视频、深度、分割及二维流预测，并以同一骨干支持观察视频的稠密感知。
+  summary: |
+    为减少视频生成与几何感知相互独立造成的不一致，GenSight把RGB、深度、形态分割和首帧相对二维流映射到共享图像式表示，使用冻结视频编解码器与共同DiT骨干，在统一速度预测空间联合训练。生成模式多步产生未来视频及对齐稠密输出，感知模式则对已有视频单步读取结构信息。作者利用RoboMIND 2.0多个机器人形态与EgoTable人类桌面视频，共约22万段轨迹训练，在留出任务和RoboTwin 2.0上比较视频及稠密指标，并分析共享前缀长度和读出噪声。多数指标改善但并非所有流误差都领先，不能把视觉逼真度等同于可控制物理正确性。标签部分来自传感补全与已有估计器，存在偏差；当前尚未评估闭环策略收益或动作条件控制，项目入口之外的权重、数据和实现发布仍待核实。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 将生成与多模态稠密感知合并，具有明确表示学习增量。
+    E: 有多数据源指标与消融，但未验证闭环控制或实际策略收益。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37215'
+  title: 'Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution'
+  prefilter_score: 10.5
+  triage: include
+  reason: 几何运动检索补充视觉策略，对部署扰动有明确方法增量。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - retrieval
+  - robustness
+  affiliations:
+  - Center for AI Research, VinUniversity
+  - VinRobotics
+  - Hanoi University of Science and Technology
+  - German Research Center for Artificial Intelligence (DFKI)
+  - University of Oldenburg
+  - University of Arkansas
+  - Technische Universität Darmstadt
+  - Universität Stuttgart
+  - Max Planck Research School for Intelligent Systems (IMPRS-IS)
+  one_liner: R2A以运动原语图检索修正冻结VLA，研究视觉扰动下的执行稳定性与真实迁移。
+  summary: |
+    为避免视觉分布变化破坏VLA的运动执行，R2A从成功示教构建离线时空运动原语图，用机器人当前运动状态查询几何上相容的未来片段，再由学习门控按维度融合检索先验和基础策略动作。初始状态超出训练分布时，另有扩散模块把它校正回可检索范围，基础VLA无需微调。作者对GR00T N1.7、π0.5和StableVLA进行LIBERO-Plus、RoboTwin2.0-Plus及真实扰动测试，报告仿真最高约12个百分点、真实最高40个百分点的成功率提升，并分析配对片段中修复与破坏的比例。结果支持利用既有成功运动经验缓解视觉脆弱性，但检索图不显式表示场景障碍，仍依赖原策略反应，不能推出碰撞安全或陌生失败恢复保证。原探测openpi及其数据链接属于依赖资产，本方法新增代码、图构建与训练发布尚待确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 几何运动检索补充视觉策略，对部署扰动有明确方法增量。
+    E: 跨三种VLA、扰动基准及真实场景的对照与配对分析较完整。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 openpi，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.36533'
+  title: 'RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding'
+  prefilter_score: 10.5
+  triage: include
+  reason: 物体物理知识、主动试验与阶段验证组合强化了可复用程序搜索。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - embodied-agent
+  - program-search
+  - manipulation
+  affiliations:
+  - Washington University in St. Louis
+  one_liner: RoboAuto用对象知识、场景接地与主动试验搜索机器人程序，在多基准及真实长任务中验证。
+  summary: |
+    为让代码式机器人智能体理解执行失败的物理原因，RoboAuto建立包含对象可供性、空间关系、动作后果及可执行技能的分层知识库，并把知识与当前场景中的动作关键量对应。程序搜索按阶段验证预期结果，遇到物理不确定性时主动设计实验区分假设，而非只重写整段代码。作者在LIBERO-PRO、LIBERO-Plus、Robosuite和RoboTwin等设置中使用分离的搜索与评测场景，与ASPIRE及策略基线比较；还在真实WidowX三项长时精细任务中展示优势。组件消融、知识库规模及跨形态复用分析支持知识与程序协同的价值。但真实试验仍由人类重置环境并负责安全，不能将仿真程序搜索自治称为完全无人真实部署；性能还依赖强闭源模型和推理预算。项目入口可定位，搜索代码、知识库及可复现模型版本未确认完整发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 物体物理知识、主动试验与阶段验证组合强化了可复用程序搜索。
+    E: 多基准、知识转移和真机任务加组件分析支持方法，仍有人类环境支持。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.40565'
+  title: 'Gym-Anything for Robotics: Scaling physical simulations with digital agents'
+  prefilter_score: 10.0
+  triage: include
+  reason: 自动化创建和审计丰富物理任务，基础设施潜力明确。
+  category: rl-il
+  route: adjacent
+  contribution: infra
+  tags:
+  - simulation
+  - benchmark
+  - embodied-agent
+  affiliations:
+  - Carnegie Mellon University
+  one_liner: Gym-Anything用创建与审查循环生成机器人仿真，RoboWorld包含25个仿真及200个训练测试环境。
+  summary: |
+    为降低创建多样机器人任务所需的专家工程量，Gym-Anything把仿真构建交给编码智能体，通过相互独立的创建、审计与修复过程检查物理合理性、可执行任务和难度，并用统一接口连接不同物理引擎、机器人和策略。作者以经济活动覆盖为线索构建RoboWorld，包含25个仿真、175个训练环境和25个测试环境，涉及液体、布料及接触等现象。三种前沿模型在测试任务上均未完成任何任务，最高平均奖励0.06；重复尝试、特权教师提示与代码生成示教能够改善部分训练设置。资源有助于扩展仿真任务范围，但测试失败不能单独证明真实工作能力上限，奖励、智能体接口和仿真近似共同影响难度。现有证据主要是生成环境中的模型评测，缺少独立真实物理校验与广泛迁移，代码和数据实际可获得性仍需确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 自动化创建和审计丰富物理任务，基础设施潜力明确。
+    E: 多模型与改进路线比较存在，但物理真实性及真机迁移尚未独立验证。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: roboworld
+    role: proposes
+  new_resources:
+  - kind: benchmark
+    id: roboworld
+    name: RoboWorld
+    desc: GymAnything构建的机器人仿真任务评测，含175个训练及25个测试环境；物理真实性与完整发布待核验。
+    links:
+      project: https://gym-anything.github.io/robotics
+      paper: https://arxiv.org/abs/2610.40565
+    subcategory: multi-skill
+- arxiv_id: '2610.40373'
+  title: 'HiFOR: Hierarchical Foresight with Action-Guided World Grounding for Vision-Language-Action Model'
+  prefilter_score: 10.0
+  triage: include
+  reason: 联合多时域预测与动作相关检索，为未来条件化策略提供明确增量。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - hierarchical-prediction
+  - world-model
+  affiliations:
+  - Nanjing University of Science and Technology
+  - National University of Singapore
+  - Shenyang Institute of Automation, Chinese Academy of Sciences
+  - The Chinese University of Hong Kong
+  one_liner: HiFOR联合预测短期状态、语义里程碑及终局，并按动作需求检索潜在未来信息。
+  summary: |
+    为避免不同预测时域彼此割裂，HiFOR通过分层依赖掩码联合建模短期变化、中间里程碑和最终目标，再按时域、视角及空间位置组织未来潜表示。动作去噪过程中，模型依据当前动作特征进行因子化检索，只读取与执行需求相关的预测信息，而非把全部未来特征无差别注入。作者在LIBERO四套任务和RoboTwin 2.0困难设置评测，其中后者选择20项任务，每项100次运行；真实AgileX Piper还覆盖六项泛化与长时程任务，各任务50次测试。对比与组件分析支持分层预测和动作引导检索的作用。结果仍依赖任务示教、视觉预测质量和固定相机配置，困难仿真仅覆盖所选子集，不能视为整个RoboTwin基准完整评测；训练使用较大算力，当前缓存未确认本模型代码、权重及复现资产公开，独立复现仍存在障碍。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 联合多时域预测与动作相关检索，为未来条件化策略提供明确增量。
+    E: 两类仿真及六项真实任务协议清楚，但基准子集和示教条件需保留。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.40016'
+  title: 'LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks'
+  prefilter_score: 10.0
+  triage: include
+  reason: 持续条件验证把动作完成与后果保持分开，改善长任务恢复机制。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - planning
+  - recovery
+  - task-graph
+  affiliations:
+  - CUHKSZ
+  - A*STAR
+  - Caltech
+  - NUS
+  - HKUST
+  - COCO Matrix
+  - NTU
+  one_liner: LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
+  summary: |
+    为防止已完成子任务的物理后果在后续操作中失效，LOGIV把计划编译为条件支持与资源顺序图，执行时以观测检查条件是否仍成立，沿依赖关系定位恢复范围，并在保留可用未完成动作的前提下验证修复后的继续计划。该框架位于已有VLA和WAM上方，不新增可训练组件。作者在RoboTwin V2和BiCoord共20项双臂任务、三种执行骨干上比较无扰动成功率、预设扰动后的完成率及条件恢复率，均显示改善；三项真实任务总成功次数从12/30提高到17/30。消融支持依赖追踪与局部修复的价值，但恢复仍依赖状态识别、符号条件与可恢复扰动假设，小样本不代表任意现场故障处理。缓存确认官方仓库有相关实质代码，但未发现明确许可；其列出的第三方WAM权重和基准数据不能计为LOGIV自产资产。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 持续条件验证把动作完成与后果保持分开，改善长任务恢复机制。
+    E: 多骨干双基准、扰动对照与真实恢复试验较完整。
+    O: 已核实实质代码或明确的部分开放，完整训练资产与复现链仍有限。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: substantive
+    repo: https://github.com/Enqiao-Lu/LOGIV
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.39582'
+  title: Kinematic-Tactile Aligned Dexterous Retargeting with Contact Wrench Space Alignment
+  prefilter_score: 10.0
+  triage: include
+  reason: 力旋量空间对齐有明确物理意义，但主要为窄任务示教转换增量。
+  category: teleoperation
+  route: adjacent
+  contribution: method
+  tags:
+  - retargeting
+  - tactile
+  - data-collection
+  affiliations:
+  - State Key Laboratory of Mechanical System and Vibration, School of Mechanical Engineering, Shanghai Jiao Tong
+    University
+  - College of Electronics and Information Engineering, Tongji University
+  - International Collaboration for Creative Research Teams, Shanghai Jiao Tong University
+  - School of Artificial Intelligence, The Chinese University of Hong Kong, Shenzhen
+  one_liner: 该重定向方法对齐人类与机器人接触力空间，三种倒料条件60次真机回放成功58次。
+  summary: |
+    为在跨手型示教转换中保留接触力作用，研究建立三阶段重定向：先根据动作捕捉重建手姿并对齐运动学，再保持接触几何，最后以物体中心的接触力旋量空间优化机器人指尖法向力，并将目标力转成关节位置修正。作者在UR7e搭载Sharpa Wave的纸杯倒料任务中测试米粒、陶瓷珠和钢珠三种载荷，每种20次回放，汇总成功率96.7%，对照DexPilot预载版本为80%，还比较接触力空间覆盖和适当性。模拟实验显示近饱和成功，凸显真实硬件更有区分力。方法可为后续接触策略提供更合适示教，但当前没有训练学习策略验证数据收益，也无在线纠错；仅单操作者、固定工作区和一个任务族。不同基线使用原生仿真器，仿真数字不应无条件横比，完整采集和优化实现开放状态尚未确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 力旋量空间对齐有明确物理意义，但主要为窄任务示教转换增量。
+    E: 有60次真实回放和物理指标对照，任务族及操作者单一。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39119'
+  title: 'CAPTURER: A Dexterous Aerial Manipulator for Dynamic and Precise Grasping across Diverse Environments'
+  prefilter_score: 10.0
+  triage: exclude
+  reason: 超出范围：核心为标记定位、协同规划及抗扰控制，所读正文未体现学习方法或直接机器人学习资源。
+  category: manipulation
+  route: core
+  contribution: system
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.38502'
+  title: 'OmniQuad: a Wheeled-Legged Hybrid Robot with Omnidirectional Wheels'
+  prefilter_score: 10.0
+  triage: exclude
+  reason: 超出范围：轮足机械设计与传统控制验证，未展示学习系统或学习数据基础设施。
+  category: locomotion
+  route: adjacent
+  contribution: hardware
+  tags: []
+  affiliations:
+  - Department of Information Engineering of University of Pisa, Via Girolamo Caruso 16 , Pisa, 56122, Italy
+  - Research Center Enrico Piaggio, Largo Lucio Lazzarino 1, Pisa, 56122, Italy
+  one_liner: null
+  summary: null
+  venue: Mechanism and Machine Theory 214 (2025), 106125
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 moteus，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.38234'
+  title: 'SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery'
+  prefilter_score: 10.0
+  triage: include
+  reason: 面向接替牵开器的迁移设计将仿真示教推进到真实协作任务。
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - sim2real
+  - imitation-learning
+  - surgical-robotics
+  affiliations:
+  - Department of Biomedical Informatics, Harvard Medical School
+  - Department of Surgery, Massachusetts General Hospital
+  - Weill Cornell Medical College
+  - Department of Biostatistics, Yale School of Public Health
+  one_liner: SimRetract仅用仿真示教学习接替牵开器，模型手术场景50次呈递中抓取90%、保持牵拉78%。
+  summary: |
+    为减少外科助手机器人对昂贵真实示教的依赖，SimRetract在仿真中生成牵开器接替轨迹，突出器械掩码、抓取几何、偏离状态恢复和留有余量的执行路径，再用模仿学习训练策略直接迁移。真实评估使用腹部模型与WidowX机械臂，两名外科医生各设25种牵拉姿态，各策略按呈递编号配对。作者报告完整模型在50次呈递中90%成功抓住器械，78%在交接时保持牵拉；去掉器械掩码后分别下降至22%和12%，并用未见器械检验相似抓握几何的迁移。多配置及约1200次仿真和真实试验支持感知隔离与恢复示教的重要性。但这不是患者或生物组织实验，机器人在闭合夹爪后停止，尚不能代表持续手术协作或临床安全；匿名代码入口的内容与可复现范围仍需核验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 面向接替牵开器的迁移设计将仿真示教推进到真实协作任务。
+    E: 配对医生呈递、多消融与未见器械测试较强，证据限定于模型场景。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37801'
+  title: An Empirical Study of Wrist-Target Construction and Joint-Angle Limits in Humanoid Arm Retargeting
+  prefilter_score: 10.0
+  triage: exclude
+  reason: 增量过小：单一人形手臂的腕部目标和关节边界对照，尚无学习策略或可推广学习资源验证。
+  category: teleoperation
+  route: adjacent
+  contribution: method
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36452'
+  title: Whole-Body Humanoid Control via Stochastic Motion Tokenization
+  prefilter_score: 10.0
+  triage: include
+  reason: 紧凑运动词表贯通生成和控制，主要为已有生成范式的扎实扩展。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - motion-tokenization
+  - whole-body-control
+  affiliations:
+  - Technical University of Darmstadt
+  - German Research Center for AI (DFKI)
+  - hessian.AI
+  - Robotics Institute Germany (RIG)
+  one_liner: 随机运动令牌连接动作生成与全身控制，在G1执行舞蹈、行走及35秒战斗到舞蹈序列。
+  summary: |
+    为给人形高层决策提供紧凑而可组合的运动接口，研究分三阶段训练随机运动自动编码器、条件自回归生成器和低层跟踪策略。令牌化阶段使用已重定向到G1的LAFAN1与BONES-SEED动作，生成器按行为或文本组织令牌，跟踪器读取潜编码并响应环境状态。作者在匹配容量的条件下比较DAPS、FSQ及VQ-VAE重建，报告随机令牌具有更低重建误差，并允许通过温度改变编码。随后在真实Unitree G1执行每段16.8秒的舞蹈、战斗和行走动作，以及35秒跨行为转换，说明离散接口可贯通生成与硬件控制。证据侧重重建和动作实现，不等同于长期自主任务成功或复杂接触操作；生成范围依赖已有动作库，真实试验的统计覆盖仍有限。论文已明确被Humanoids 2026接收，但代码、模型和训练数据再发布未确认。
+  venue: Humanoids 2026
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 紧凑运动词表贯通生成和控制，主要为已有生成范式的扎实扩展。
+    E: 匹配容量令牌比较、多数据集与真实连续动作支持主要结论。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.34717'
+  title: 'VLA-HWBench: Where the Time Goes When VLA Models Run on Edge Hardware'
+  prefilter_score: 10.0
+  triage: include
+  reason: 统一边缘硬件上的分阶段测量补足VLA部署评估的重要缺口。
+  category: vla
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - vla
+  - benchmark
+  - deployment
+  affiliations:
+  - National University of Singapore
+  - 0G Labs
+  one_liner: VLA-HWBench 在两类边缘平台剖析18个VLA，作者报告参数量只能解释不超过15%的延迟变化。
+  summary: |
+    为解决机器人部署常用参数量推测速度、却忽略异构计算与动作生成流程的问题，VLA-HWBench把推理划分为七个阶段，在Jetson AGX Thor与AMD平台测量18个模型。缓存对应更新版本，作者报告两平台模型间延迟跨度分别约82倍和157倍，参数量对延迟变动的解释度不超过15%。分阶段分析揭示视觉编码、语言骨干与迭代动作解码可能形成不同瓶颈；对两个可运行模型比较编译和低比特实现，特定Jetson配置取得约2.6至2.9倍加速。结果支持按实际硬件与执行路径选择部署方案，而非仅按模型规模筛选。但调用延迟、动作块摊销和闭环控制频率含义不同，不能直接换算任务成功率；优化收益也未覆盖所有模型与平台。缓存中的FlashRT链接属于依赖，不能据此认定基准本身代码已发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 统一边缘硬件上的分阶段测量补足VLA部署评估的重要缺口。
+    E: 覆盖18个模型及两类平台并给出优化对照，但缺少真实闭环任务收益验证。
+    O: 可核实链接仅为被测模型及FlashRT等依赖，未确认本基准自身的开放资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 FlashRT，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: lerobot
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.34650'
+  title: 'Dream to Assist: Intent-Conditioned World Models for Shared Vehicle Control'
+  prefilter_score: 10.0
+  triage: include
+  reason: 将驾驶意图推断与可学习世界模型辅助策略结合，形成明确的交互控制贡献。
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-model
+  - shared-control
+  - intent
+  affiliations:
+  - Toyota Research Institute, Cambridge, MA 02139, USA
+  - Toyota Research Institute, Los Altos, CA 94022, USA
+  - Massachusetts Institute of Technology, Cambridge, MA 02139, USA
+  one_liner: Dream2Assist 以意图条件世界模型学习共享驾驶辅助，但不同用户研究中的收益并不一致。
+  summary: |
+    为缓解共享驾驶中辅助策略误读驾驶者目标的问题，Dream2Assist以循环状态空间模型联合表征车辆动态和潜在意图，并通过人类驾驶模型与辅助策略共同训练，学习兼顾任务进展和驾驶意图的干预。作者在仿真及用户研究中评估超车、城市驾驶等场景，并给出小规模车辆试验。补读实验发现，首轮24人研究中辅助并未改善全部指标：超车成功率由无辅助的72.1%降至63.0%，碰撞指标也变差；后续六人研究调整系统后有所改善，但样本小且部分差异不显著。城市驾驶研究为意图适配提供进一步证据，不能抵消前一设置中的失败。结果提示学习意图可成为辅助控制的条件变量，但效益依赖交互设计、任务与用户分布。车辆试验仅三名参与者，尚不足以支持普遍安全性或真实道路部署结论，缓存也未确认完整训练资产开放。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 将驾驶意图推断与可学习世界模型辅助策略结合，形成明确的交互控制贡献。
+    E: 有多场景用户研究与初步车辆试验，但首轮负结果和后续小样本限制结论。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40364'
+  title: Is It the Curriculum or Just the Easy Start? Benchmarking Unsupervised Environment Design on Quadrupeds
+  prefilter_score: 9.5
+  triage: include
+  reason: 统一预算、多机器人和分布外测试使课程学习比较更有可解释性。
+  category: locomotion
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - locomotion
+  - curriculum
+  - benchmark
+  affiliations: []
+  one_liner: 该基准在五种四足机器人上统一比较14种环境课程，作者发现不存在跨设置稳定占优的方法。
+  summary: |
+    为解决无监督环境设计研究在不同任务、预算和机器人上难以比较的问题，作者建立统一四足运动课程评测，在MuJoCo MJX中固定PPO训练流程与交互预算，比较14种课程方案及五种机器人。评测同时考察训练分布内表现、地形变化与分布外迁移，并通过重复实验和重采样分析排名稳定性。作者报告，简单的TerrainCL在20种设置中有13种进入领先组，ACCEL为11种，均匀域随机化未进入该组；这一结果依赖具体任务集合，不能解读为所有场景的绝对优劣。容易的初始环境往往有利于学习，而分布外测试可改变课程排名。工作提供了较清晰的共同预算与失败案例，说明复杂课程不必然优于简单策略。证据仍全部来自仿真，未检验硬件接触误差、真实部署成本及长期适应；已核实实质代码和MIT许可，但完整训练产物仍待确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 统一预算、多机器人和分布外测试使课程学习比较更有可解释性。
+    E: 多种课程与机器人有重复统计对照，但结论尚无真机验证。
+    O: 已核实实质代码或明确的部分开放，完整训练资产与复现链仍有限。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: substantive
+    repo: https://github.com/Solvro/ml-wojtek-ued
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: mujoco-mjx
+    role: eval
+  - resource: quadruped-ued-bench
+    role: proposes
+  new_resources:
+  - kind: benchmark
+    id: quadruped-ued-bench
+    name: Quadruped UED Benchmark
+    desc: 统一PPO预算比较14种环境课程与五类四足机器人，含MuJoCo MJX地形空间和评测代码。
+    links:
+      code: https://github.com/Solvro/ml-wojtek-ued
+      paper: https://arxiv.org/abs/2610.40364
+    subcategory: locomotion
+- arxiv_id: '2610.39689'
+  title: 'AI for Science in Space: Orbital Laboratories, Planetary Fieldwork, and Embodied Autonomy'
+  prefilter_score: 9.5
+  triage: include
+  reason: 空间自主实验的具身闭环与证据组织具有参考价值，但主要贡献是综述框架。
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - survey
+  - space
+  - embodied-science
+  affiliations:
+  - Astroup Lab, Beijing, China
+  - Harbin Institute of Technology, Beijing Research Institute
+  - Peking University
+  one_liner: 该综述按数据分析、决策与物理执行梳理空间AI科学实验，强调自主实验闭环及证据完整性。
+  summary: |
+    为梳理人工智能如何参与空间环境中的科学实验，综述将既有工作沿数据分析、实验决策、物理操作与证据管理展开，讨论轨道环境中的生物、流体及其他科学任务。其具身相关性主要来自机器人执行实验、调整操作并形成观测反馈的闭环，而非一般遥感分类或离线语言推理。作者强调，自主系统不仅需要提出候选实验，还需保留测量过程、操作条件与结果来源，使后续科学结论可以审计。该组织方式有助于区分辅助分析与实际自主实验，避免把模型预测直接等同于完成科学发现。缓存提供了问题背景和框架内容，但在后续章节之前截断，尚不能核对完整文献覆盖、筛选过程或所有案例的验证等级。因此按邻接综述收录并对证据保守评分，不将其视为新的通用机器人系统或已验证的在轨自主实验能力；完整综述范围仍需补读。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 空间自主实验的具身闭环与证据组织具有参考价值，但主要贡献是综述框架。
+    E: 缓存只能核对部分综述内容，缺少完整检索与案例验证依据。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 补读缓存截断后的综述章节，核验文献筛选方法、覆盖范围与案例验证级别。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.38357'
+  title: 'CSO: Refining Robotic Policies via Skill Distribution Alignment and Skill-Grained Optimization'
+  prefilter_score: 9.5
+  triage: include
+  reason: 针对技能策略表征漂移设计分阶段强化学习，机制与增量清晰。
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - reinforcement-learning
+  - skill-token
+  - vla
+  affiliations:
+  - Harbin Institute of Technology (Shenzhen)
+  - Mashang Consumer Finance Co., Ltd.
+  - Shenzhen Institute for Advanced Study, University of Electronic Science and Technology of China
+  one_liner: CSO 先用成功轨迹稳定技能表征，再冻结编码器优化策略，作者报告LIBERO成功率从80.1%升至97.5%。
+  summary: |
+    为缓解技能离散化策略在强化学习微调时表征漂移、概率比不稳定的问题，CSO采用分阶段优化：先以在线成功轨迹进行强化监督微调，使技能表示适应当前任务，再冻结编码器，以技能级概率比进行PPO更新。方法保留多步动作技能结构，减少策略更新与编码空间同时变化造成的耦合。作者在LIBERO、RoboTwin及真实机器人任务上比较技能策略与微调基线，报告LIBERO成功率从80.1%提高至97.5%；五项真机任务的汇总结果为61%，对照QueST为41%。阶段与更新方式消融支持稳定表示的作用，实验也涉及少量示范初始化的条件。结果提示分离表示适配与策略改进可能提高技能强化学习效率，但收益仍受初始示范质量、在线交互预算和技能量化精度制约。不同数据及任务条件的结果不能直接拼成统一提升幅度，缓存未确认本方法的公开代码与训练资产。
+  venue: NeurIPS 2026
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 针对技能策略表征漂移设计分阶段强化学习，机制与增量清晰。
+    E: 有多基准、真机及阶段消融，技能精度和交互预算仍限制外推。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.38221'
+  title: 'CuraEval: Evaluating Demonstration Curation on Mixed-Skill Robot Data'
+  prefilter_score: 9.5
+  triage: include
+  reason: 以协议审计揭示示范筛选中的统计与训练混杂，具有明确评测价值。
+  category: rl-il
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - imitation-learning
+  - data-curation
+  - benchmark
+  affiliations:
+  - Colorado School of Mines
+  - University of Southern California – Institute for Creative Technologies
+  - Northeastern University
+  one_liner: CuraEval 审计机器人示范筛选协议，显示部分筛选收益会随检查点选择和评估次数改变。
+  summary: |
+    为解决示范数据筛选方法常因训练预算、检查点选择与评估噪声产生不可比结论的问题，CuraEval建立统一模仿学习评估流程，并重新考察基于轨迹长度、动作统计等指标的筛选策略。作者使用robomimic的can、square和transport多操作者数据，各任务约300条示范，比较扩散策略与循环行为克隆。分析发现，部分复杂评分与轨迹长度高度相关，例如功率谱相关指标与长度的相关系数接近0.999。检查点和测试次数也会改变结论：square上长度筛选的表面优势，在采用最终检查点与更多评估回合后不再保持。结果提示数据筛选收益必须与完整数据基线在一致协议下检验，多重比较后不能把偶然提高当成普遍优势。证据主要来自少量状态输入任务，尚未覆盖大规模视觉预训练、真实采集成本或跨机器人数据；公开入口存在，但完整执行资产仍待核实。
+  venue: 'CoRL 2026 Workshop: Oops, I Erred'
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 以协议审计揭示示范筛选中的统计与训练混杂，具有明确评测价值。
+    E: 多个任务和两类策略有对照及统计分析，但任务规模与输入类型较有限。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  - 核验去除末尾句号后的官方仓库及其实际发布范围。
+  open:
+    code: unknown
+    repo: https://github.com/jiuyixu25/CuraEval
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。 原探测URL带末尾句号，已清理；该探测失败不足以判断规范URL失效，保留unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: curaeval
+    role: proposes
+  new_resources:
+  - kind: tool
+    id: curaeval
+    name: CuraEval
+    desc: 统一机器人示范筛选的训练、检查点选择和统计评估协议；官方仓库链接已去除末尾句号，实质内容待核验。
+    links:
+      code: https://github.com/jiuyixu25/CuraEval
+      paper: https://arxiv.org/abs/2610.38221
+- arxiv_id: '2610.37652'
+  title: Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well
+  prefilter_score: 9.5
+  triage: include
+  reason: 将持续手内操作与安全过滤结合，并系统呈现任务表现和掉落权衡。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - safety
+  - reinforcement-learning
+  affiliations:
+  - University of California, Berkeley
+  - University of California, Davis
+  one_liner: DexSafe 结合触觉状态与安全过滤进行持续手内操作，作者在13.3小时真机评估中报告较高目标达成率。
+  summary: |
+    为降低灵巧手连续操作中的掉落并减少人工复位，DexSafe通过强化学习策略与安全过滤协同控制物体位置和姿态，并比较不同观测条件。作者在四种物体、六种手腕姿态上执行约4800个目标、累计13.3小时的真实机器人评估；状态输入策略在位置两厘米、姿态约0.4弧度的成功容差下达到95.2%，启用安全过滤的相应设置为91.5%，掉落次数由16次降至4次。结果体现安全干预与任务完成率之间的权衡，不能只引用最高成功率。不同物体和策略分别训练，深度输入版本的表现也明显弱于精确状态输入，因此尚不能推断对未知物体或纯视觉部署同样稳健。长时间实测提供了较强的持续操作证据，但对象与容差范围仍有限。项目页提供演示并注明代码即将发布，本次未确认完整训练代码、数据或可下载权重。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 将持续手内操作与安全过滤结合，并系统呈现任务表现和掉落权衡。
+    E: 长时间真机与多物体姿态测试较充分，但独立训练和观测差异限制泛化结论。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 已读官方项目 https://ian-chuang.github.io/dexsafe/ ，代码标为coming soon；演示及浏览器策略不等于完整训练代码、权重与数据发布。原bam链接是依赖。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37509'
+  title: 'Ego-CEVR: Learning Cross-Embodiment Visual Representations from Human Egocentric Videos'
+  prefilter_score: 9.5
+  triage: include
+  reason: 全局视频先验与局部动作对齐的组合针对人机迁移形成明确方法增量。
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - vla
+  - egocentric-video
+  - world-model
+  affiliations:
+  - Maniformer
+  - Tsinghua University
+  - Nanyang Technological University
+  - Huazhong University of Science and Technology
+  - The Chinese University of Hong Kong, Shenzhen
+  - Zhejiang University
+  - Harbin Institute of Technology
+  one_liner: EgoCEVR 以第一视角未来预测与腕部动作对齐训练VLA，在仿真和双机器人真机设置评估迁移。
+  summary: |
+    为利用大规模人类第一视角视频中的交互知识、同时缓解人与机器人动作空间不同的问题，EgoCEVR采用全局未来视频建模与局部腕部动作对齐相结合的训练路径。全局模块从无需机器人动作标签的视频学习场景演化，局部模块将近距离视觉变化与机器人动作关联，并通过残差路径向控制策略注入表示。缓存对应更新后的第二版，实验覆盖LIBERO、其扰动扩展和RoboTwin，并在Agibot G1及G2平台考察少样本学习与任务迁移；作者报告相较所列基线的成功率改善，组件消融支持两条路径的互补作用。结果提示人类视频可以提供动作之外的交互先验，但不能把未来画面质量直接当作控制可靠性。迁移效果仍依赖机器人微调、相机条件及任务分布，尚不足以说明通用零样本跨本体控制。缓存中的Wan2.2链接属于基础依赖，未确认本工作代码与训练资产发布。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 全局视频先验与局部动作对齐的组合针对人机迁移形成明确方法增量。
+    E: 有多基准、真机迁移和组件对照，但仍依赖机器人数据适配。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 Wan2.2，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.36694'
+  title: 'TOPS: Reshaping Flow Source and Transport for Multi-Task Robot Manipulation'
+  prefilter_score: 9.5
+  triage: include
+  reason: 以任务多模态先验改进动作流匹配的少步采样，效率贡献清晰。
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - flow-matching
+  - manipulation
+  - action-prior
+  affiliations:
+  - MARS Lab, Nanyang Technological University
+  one_liner: TOPS 用任务相关源分布缩短动作流匹配采样，作者在LIBERO-10报告两次函数求值取得69.67%成功率。
+  summary: |
+    为降低流匹配动作策略从通用噪声出发反复去噪的计算成本，TOPS从已有离线轨迹构造任务相关、多模态的源分布，并通过反向专家调度设置其协方差，使采样起点更接近可行专家动作。方法不增加在线检索环节，主要改变训练与推断时的源分布选择。作者在LIBERO、CALVIN及八项真机任务中比较标准流匹配和少步采样方案；在LIBERO-10指定配置中，两次函数求值的单步方案成功率由标准对照的53.44%提高至69.67%，采样耗时约为六分之一。真机每任务20次评估，抽屉任务的相应结果由20%升至80%，其他任务结果需分别理解。少步生成与源分布消融支持其效率收益，但任务标识和离线专家分布是重要前提。LIBERO扰动评估未覆盖相机变化，不能据此外推全部视觉泛化；未知任务的源分布构造与完整复现资产仍未核实。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 以任务多模态先验改进动作流匹配的少步采样，效率贡献清晰。
+    E: 有多基准、八项真机任务及消融，但任务先验与扰动覆盖存在边界。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: calvin
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.36662'
+  title: 'SWIM: Learning What Matters from Behaviors for JEPA World Models'
+  prefilter_score: 9.5
+  triage: include
+  reason: 对潜在规划度量做可控性重加权有合理价值，但总体方法增量有限。
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-model
+  - planning
+  - representation
+  affiliations:
+  - Boston University
+  - Unity Technologies
+  one_liner: SWIM 用逆动力学相关性重加权潜在规划距离，在OGBench五项任务上取得有限但可测的改进。
+  summary: |
+    为缓解潜在世界模型规划时各表征维度与可控状态并不等价的问题，SWIM利用逆动力学学习状态特征的重要性，再以门控权重构造SCALE潜在距离，使规划更关注与动作变化相关的部分。方法在训练阶段使用候选状态特征，推断时保留原有规划结构，不额外引入大型模型调用。作者在OGBench五项离线任务上使用五个随机种子、每项共600次评估，并比较均匀度量及其他表征方案。默认配置的汇总收益约为一个百分点，表格中带星号设置的更大增益来自额外调参，不能混作统一默认效果；个别任务也未优于所有视觉表示基线。结果说明任务相关距离可能改善潜在规划，但幅度与特征选择、环境和超参数密切相关。证据仅来自仿真，训练阶段的状态可得性与真实机器人部署不同，尚缺跨本体、传感器噪声和硬件闭环验证，开放资源也未获确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 对潜在规划度量做可控性重加权有合理价值，但总体方法增量有限。
+    E: 五任务多种子对照较清楚，默认收益较小且仅有仿真证据。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40559'
+  title: 'A Tutorial on Shape Servoing of Deformable Objects-Part I: Fundamentals'
+  prefilter_score: 9.0
+  triage: include
+  reason: 对数据驱动形状伺服提供系统教学与实现说明，主要价值在知识整合。
+  category: tutorials
+  route: adjacent
+  contribution: survey
+  tags:
+  - tutorial
+  - deformable-object
+  - visual-servoing
+  affiliations: []
+  one_liner: 该教程统一说明可变形物体形状伺服中的局部数据驱动雅可比估计，并以双臂弹性杆仿真示例展示流程。
+  summary: |
+    为帮助读者理解机器人如何依据观测形状调节可变形物体，教程将形状误差、局部运动映射和反馈控制串联起来，讨论利用观测数据回归或在线更新雅可比矩阵的方法。其学习成分主要在局部输入输出关系估计，而非大规模预训练策略。作者以双臂操纵平面弹性杆为示例，说明形状表示、控制律和估计更新如何配合，并分析局部稳定性所依赖的秩与模型条件。仿真示例提供可操作的教学路径，有助于区分解析物理建模和数据驱动局部近似的适用前提。该文的价值主要是系统讲解与实现参考，不能据此主张提出了显著优于已有工作的通用控制方法。所给稳定性条件也不等于在遮挡、接触切换、大形变或三维复杂材料下全局收敛。缓存未呈现广泛真机比较；教程提供代码及演示入口，但本次未确认完整执行环境和资产，作者单位也需补证。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 对数据驱动形状伺服提供系统教学与实现说明，主要价值在知识整合。
+    E: 有理论条件和仿真示例，但缺少广泛任务、强基线和真机比较。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  - 核验去除末尾句号后的官方仓库及其实际发布范围。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: unknown
+    repo: https://github.com/nachocz/tutorial_on_shape_servoing_of_deformable_objects
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。 原探测URL带末尾句号，已清理；该探测失败不足以判断规范URL失效，保留unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: shape-servoing-tutorial
+    role: proposes
+  new_resources:
+  - kind: tool
+    id: shape-servoing-tutorial
+    name: Shape Servoing Tutorial
+    desc: 可变形物体数据驱动形状伺服教学代码与互动示例；当前实现可用性待核验。
+    links:
+      project: https://nachocz.github.io/tutorial_on_shape_servoing_of_deformable_objects/
+      paper: https://arxiv.org/abs/2610.40559
+- arxiv_id: '2610.40075'
+  title: Learning Safe Flow Matching Robot Policies from Binary Feasibility Oracles
+  prefilter_score: 9.0
+  triage: include
+  reason: 以二值判定器联合训练和修正动作流，为无梯度约束提供明确方法。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - vla
+  - safety
+  - flow-matching
+  affiliations:
+  - Shanghai Jiao Tong University
+  - Tongji University
+  one_liner: 该方法用二值可行性判定器修正动作流，在单项RoboTwin任务报告满足约束的动作生成。
+  summary: |
+    为在无法直接获得约束梯度时约束流匹配动作策略，作者使用仅返回可行或不可行的二值判定器，在前向采样时修正不可行动作，再从局部边界信息构造反向训练信号。训练与部署采用一致的安全处理，使策略适应被修正后的动作分布，减少只在测试阶段追加过滤造成的分布偏移。作者在RoboTwin的一项抓取放置任务上使用150条示范、约三万训练步比较不同约束处理方式，并报告测试动作达到100%的约束满足率。相关消融支持训练时纳入可行性修正的作用，但这一数字对应有限测试集和特定判定器。实验依赖仿真提供的精确可行性查询，尚未展示真实感知误差、判定延迟或错误标签下的安全性。有限边界查询也不能覆盖任意非凸约束的全部结构。因此结果可视为受控设置下的算法证据，不能当作通用机器人安全认证；公开实现未获确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 以二值判定器联合训练和修正动作流，为无梯度约束提供明确方法。
+    E: 有单任务对照和消融，但依赖特权仿真判定器且无真机验证。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.39998'
+  title: Gaze-Assisted Supervisory Control for Lunar Robotic Arm Teleoperation Under Concurrent Monitoring
+  prefilter_score: 9.0
+  triage: exclude
+  reason: 超出范围：以虚拟现实注视交互和有界自主抓放的人因对照为核心，未涉及学习策略或示教数据学习。
+  category: teleoperation
+  route: adjacent
+  contribution: system
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39327'
+  title: 'SONIC-K1: Porting a Universal Humanoid Motion Tracker to a Small Humanoid on a Single GPU'
+  prefilter_score: 9.0
+  triage: include
+  reason: 实用的训练与部署复现贡献明确，但核心算法新颖性有限。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - humanoid
+  - motion-tracking
+  - reproducibility
+  affiliations:
+  - Kaunas Faculty, Vilnius University, Lithuania
+  one_liner: SONIC-K1 复现全身动作跟踪并开放代码与权重，在1985段留出动作上报告97.4%的宽松标准通过率。
+  summary: |
+    为降低大规模人形动作跟踪研究的复现门槛，SONIC-K1在共享H100条件下实现面向K1机器人的训练、重定向和部署流程，以约9991段动作训练跟踪策略，累计计算量约百个GPU小时。作者在1985段留出动作上报告按SONIC判据97.4%的成功率，而更严格标准下降至91.9%，说明成功定义会显著影响评价。在完整LAFAN动作上的结果更弱，按宽松标准仅18.5%，严格标准为零，不能将主要测试集结果视为普适运动能力。硬件演示也暴露腿部跟踪可靠性不足。工作的重要价值在于给出可检查的工程复现、权重和失败边界，而不是证明达到接近人类的全面控制。仓库具有实质实现、Apache-2.0许可及模型入口，满足代码与权重开放；训练动作数据未随仓库再分发，使用者仍需自行获得BONES等来源的访问权。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 4
+    T: 3
+  rationale:
+    C: 实用的训练与部署复现贡献明确，但核心算法新颖性有限。
+    E: 留出动作与跨数据评估揭示边界，真实硬件表现仍不足以支持强泛化。
+    O: 本工作代码与权重已公开，许可及使用说明明确。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: substantive
+    repo: https://github.com/Kyk0/sonic-k1
+    weights: open
+    data: none
+    license: Apache-2.0
+    note: 官方仓库README提供实质实现、模型权重和使用说明；未再分发动作数据，BONES等来源需自行获得访问权。来源：https://github.com/Kyk0/sonic-k1
+    last_check: '2026-11-01'
+  uses:
+  - resource: sonic-k1
+    role: proposes
+  new_resources:
+  - kind: tool
+    id: sonic-k1
+    name: SONIC-K1
+    desc: K1人形机器人动作跟踪训练与部署复现，提供代码和权重；动作数据需另行取得。
+    links:
+      code: https://github.com/Kyk0/sonic-k1
+      paper: https://arxiv.org/abs/2610.39327
+- arxiv_id: '2610.39212'
+  title: 'Event2Reward: Learning Robotic Rewards from Progress Relations'
+  prefilter_score: 9.0
+  triage: include
+  reason: 事件时序与恢复过程进入奖励建模，针对稀疏反馈形成明确增量。
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - reward-learning
+  - reinforcement-learning
+  - event
+  affiliations:
+  - Peking University
+  - JD Explore Academy
+  one_liner: Event2Reward 将视频事件转为时序奖励，在LIBERO及真机在线学习中评估稀疏奖励改进。
+  summary: |
+    为缓解机器人强化学习仅靠终点成功信号难以判断进展和恢复的问题，Event2Reward从真实交互记录中构造事件监督，学习带时间锚点的任务进度表示，并将停滞、倒退与恢复纳入相对势函数奖励。方法以事件变化而非静态画面相似度衡量进展，减少策略重复触发同一视觉状态获取奖励的机会。作者使用约十万条原始真实记录构建训练材料，在LIBERO四十项任务上报告相对稀疏奖励平均提高18.16个百分点；六项真机任务采用每项约三十分钟在线学习，精细操作与物体操作的汇总结果分别约60%和90%。同预算对照与组件消融支持事件表示的作用，不能把不同任务组的增益互换。方法仍依赖事件标注质量、任务时序结构与奖励模型的分布覆盖，未排除新环境中的奖励误判。论文给出资源入口，但本次未核实完整代码、数据及训练资产可下载性。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 事件时序与恢复过程进入奖励建模，针对稀疏反馈形成明确增量。
+    E: 多任务仿真和真机短时学习有预算对照与消融，但奖励分布外可靠性仍有限。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: https://github.com/niejunnan25/Event2Reward
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.39054'
+  title: Robotic Data Inoculation
+  prefilter_score: 9.0
+  triage: include
+  reason: 通过学习扰动主动采集恢复示范，直接改进机器人数据覆盖。
+  category: teleoperation
+  route: core
+  contribution: method
+  tags:
+  - teleoperation
+  - data-collection
+  - robustness
+  affiliations:
+  - UC Berkeley
+  one_liner: Robotic Data Inoculation 用在线残差扰动促使操作者示范恢复，在三项真机精细操作中评估鲁棒性。
+  summary: |
+    为弥补人工示范通常只覆盖顺利轨迹、缺少偏离后恢复行为的问题，该方法在遥操作时加入强化学习产生的残差扰动，让操作者在保持任务控制的同时应对失误与状态偏移。采集到的恢复轨迹随后用于行为克隆或离线强化学习，目标是让最终自主策略学会回到可完成任务的状态。作者在插线、T形块和键帽三类真实精细操作中比较干净示范、随机扰动和学习扰动的数据，报告在所设分布偏移下的成功率改善，并分析扰动强度与恢复覆盖的关系。结果支持把采集过程主动扩展到失败邻域，但不能据此把采集称为无人操作：人类仍负责连续控制和纠正，残差学习也需要任务奖励。部分条件的采集成功率及轨迹组成不同，数据质量与扰动机制的贡献不能完全分离。项目入口可追踪，完整代码、各类采集轨迹和许可仍需核实。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 通过学习扰动主动采集恢复示范，直接改进机器人数据覆盖。
+    E: 有三类真机任务及数据方案对照，但人类投入与采集分布存在混杂。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存署名页明确列出 data-inoculation.github.io 项目入口；未确认代码、训练权重与数据发布。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37865'
+  title: 'Echo: Scaling Visual Reinforcement Learning with Off-policy Experience'
+  prefilter_score: 9.0
+  triage: include
+  reason: 利用状态经验辅助视觉策略有实用增量，但与高吞吐训练实现耦合。
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - visual-rl
+  - distillation
+  - sample-efficiency
+  affiliations: []
+  one_liner: Echo 用无需渲染的状态策略扩展视觉强化学习经验，在五项仿真任务报告训练耗时下降。
+  summary: |
+    为减少视觉强化学习中图像渲染和交互的成本，Echo先学习状态输入的模仿策略，再通过逆向蒸馏与共享价值网络将额外状态经验引入视觉策略训练。方法将部分不需要图像的环境步骤用于扩展经验覆盖，并采用高吞吐的离策略训练流程。作者在Genesis中的五项任务上评估，其中三项为运动控制、两项为手部操作；相对所列SDPG实现，两个任务组的训练耗时分别减少约60%和56%，峰值表现也有提高。结果说明状态特权信息与视觉训练分工可能节省计算，但对比系统在网络、优化器和超参数上并非只改变经验扩展模块。缓存没有同架构、同预算且仅使用渲染经验的FastTD3对照，因此不能把全部提速归因于Echo机制本身。证据尚限于仿真和可获得状态信息的训练阶段，真实传感器、视觉域偏移以及硬件执行收益没有被验证，代码开放情况亦未确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 利用状态经验辅助视觉策略有实用增量，但与高吞吐训练实现耦合。
+    E: 五项仿真任务有比较，缺少隔离核心机制的严格同配置速度对照。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: genesis
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.37806'
+  title: 'TACOS: Terrain-Aware COntact Supervision for Visual Footstep Planning'
+  prefilter_score: 9.0
+  triage: include
+  reason: 把接触估计反馈用于视觉地形风险学习，具有明确的自主监督贡献。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - locomotion
+  - terrain
+  - contact
+  affiliations:
+  - Northern Robotics Laboratory, Université Laval, Canada
+  - Mobile Robotics Group, University of Oxford, United Kingdom
+  one_liner: TACOS 从足端接触残差构建地形不稳定监督，并在户外轨迹和森林行走中评估视觉预测。
+  summary: |
+    为使四足机器人在踩踏前识别松动或不稳定地形，TACOS通过因子图中的接触残差推断实际支撑情况，离线生成较强的回溯标签，再学习适用于在线预测的软标签与视觉表征。作者在包含1716次接触、275次不稳定事件的数据上调整接触估计，并用独立户外轨迹评估预测。报告的汇总结果中，严重程度指标改善约28%，排序指标改善约58%，加入上下文还带来额外收益；这些数字分别对应不同指标，不能合并为成功率增长。真实森林约五十米闭环演示展示了系统集成可行性。工作将机器人自身接触反馈转为地形学习信号，减少人工逐像素标注，但接触检测参数曾在同一标注数据上调整，检测精度与独立泛化需要区分。闭环演示数量有限，尚不足以量化长期跌倒风险或不同季节、传感器和机器人上的稳健性；仓库可用性仍待确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 把接触估计反馈用于视觉地形风险学习，具有明确的自主监督贡献。
+    E: 有标注接触、独立户外轨迹与真机演示，但检测调参与闭环样本存在限制。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: unknown
+    repo: https://github.com/norlab-ulaval/TACOS
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40109'
+  title: Coupled Guidance for Flow Matching
+  prefilter_score: 8.5
+  triage: include
+  reason: 将源目标耦合结构显式纳入流引导，具有清晰的生成控制方法增量。
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - flow-matching
+  - guidance
+  - reinforcement-learning
+  affiliations:
+  - Huawei
+  one_liner: Coupled Guidance 根据流匹配耦合结构调整引导，在ManiSkill与Adroit仿真任务评估受限动作生成。
+  summary: |
+    为缓解流匹配策略直接添加目标梯度时偏离训练分布的问题，Coupled Guidance将源样本与目标动作之间的耦合关系纳入引导，试图在改善目标值的同时保留模型学习的动作结构。作者给出特定线性、无权重和无噪声条件下的分析，并在合成分布、ManiSkill障碍抓取以及四项Adroit任务上比较常见引导方法。机器人实验涉及多步、九维动作规划，作者报告在目标优化与可行动作质量之间取得更有利的折中，组件比较支持耦合信息的作用。理论结果为局部设计提供依据，但其假设不能直接扩展到所有非线性机器人系统；仿真中的引导质量也不等于真实硬件约束始终满足。该工作主要验证生成分布与目标引导的关系，尚缺感知噪声、接触失配、计算延迟及真机闭环测试。缓存注明会议接收信息，但未确认公开实现、权重和完整复现实验配置。
+  venue: NeurIPS 2026
+  scores:
+    C: 4
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 将源目标耦合结构显式纳入流引导，具有清晰的生成控制方法增量。
+    E: 理论及多项仿真对照较合理，理论条件受限且没有真机证据。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: maniskill-3
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.40002'
+  title: How Much Should a VLA Trust Its Reasoning? Step-Level Guidance as a Measured Action-Value Function
+  prefilter_score: 8.5
+  triage: include
+  reason: 冻结主模型后自适应调整采样引导有实用价值，但方法增量相对有限。
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - autonomous-driving
+  - guidance
+  - vla
+  affiliations:
+  - Department of Mechanical Engineering, Seoul National University
+  one_liner: Q-Adaptive Guidance 在冻结驾驶模型上学习逐步引导强度，Alpasim闭环测试通过数由252升至262。
+  summary: |
+    为避免驾驶生成模型在所有场景采用固定引导强度，作者将每次欧拉采样中的推理链及无分类器引导权重选择建模为序贯决策，在冻结Alpamayo模型的前提下用确定性展开得到训练目标，再拟合价值模型调整采样。方法使用Alpasim中120个场景训练、358个留出场景评估，并在其中300项闭环测试报告通过数从默认引导的252项提高到262项，责任碰撞数从13次降至7次。结果说明自适应采样可以在不更新主模型参数时改善特定驾驶指标。作者还报告Waymo相关评估，但相机与车辆配置转换等条件与公开结果不同，不能直接据其数值判断全面领先。收益依赖价值模型训练分布与采样预算，额外推断成本也应在部署时计入。全部证据来自仿真或离线评价，没有真实道路安全验证；主模型公开不代表该方法代码与训练产物已发布。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 冻结主模型后自适应调整采样引导有实用价值，但方法增量相对有限。
+    E: 留出场景与闭环碰撞指标提供对照，仍是单类仿真平台和有限分布验证。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.39167'
+  title: 'EgoContact: Evaluating Physical Intelligence with Egocentric Video'
+  prefilter_score: 8.5
+  triage: include
+  reason: 面向接触前意图的细粒度数据及迁移验证补足具身感知资源缺口。
+  category: manipulation
+  route: adjacent
+  contribution: data
+  tags:
+  - contact
+  - egocentric-video
+  - dataset
+  affiliations:
+  - University of Cambridge, United Kingdom
+  - Technical University of Munich, Germany
+  - ETH Zurich, Switzerland
+  - Munich Center for Machine Learning (MCML), Germany
+  - Microsoft
+  - Ulm University, Germany
+  one_liner: EgoContact 标注22500个人类第一视角接触意图点，迁移实验中真机成功率由16%升至58%。
+  summary: |
+    为弥补视觉语言模型能够识别物体、却难以精确定位操作接触位置的问题，EgoContact构建基于第一视角视频的接触意图数据，包含约22500个人工核验的接触前像素点标注。作者以该数据评价模型对未来接触位置的理解，并将标注形成记忆库，替换既有可供性迁移流程中的接触检索部分。所设迁移实验中，仿真任务成功率从14.2%提高到31.2%，真实机器人任务从16%提高到58%；这些数字对应特定记忆检索与控制管线，并不意味着通用模型整体具身能力同幅提升。结果表明精细接触信息可以补充语义识别，帮助规划局部操作。但人类动作可能存在多个合理接触点，单点标注不能穷尽意图分布；二维位置还需依赖几何和执行模块转化为机器人动作。项目提供公开入口，完整数据包、标注协议及许可本次未独立核实，跨场景和跨本体覆盖仍需关注。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 面向接触前意图的细粒度数据及迁移验证补足具身感知资源缺口。
+    E: 有人工核验、模型评估和仿真真机迁移，但依赖特定下游管线。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: egocontact
+    role: proposes
+  new_resources:
+  - kind: dataset
+    id: egocontact
+    name: EgoContact
+    desc: 22500个经人工核验的第一视角接触前意图像素点；项目入口公开，完整数据与许可待核验。
+    links:
+      project: https://egocontact.github.io
+      paper: https://arxiv.org/abs/2610.39167
+    subcategory: egocentric-human
+- arxiv_id: '2610.37547'
+  title: 'When, Where, and What to Correct: Human-Guided Adaptive Residual Correction for Robot Policies'
+  prefilter_score: 8.5
+  triage: include
+  reason: 人工门控与低维残差学习结合有实用价值，但主要是已有模块的针对性组合。
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - residual-rl
+  - human-feedback
+  - manipulation
+  affiliations:
+  - University of Maryland, College Park
+  - Enchanted Tools
+  one_liner: ARC 将人工纠正拆成时机与低维方向，再学习残差控制；三项真机任务平均成功率由33.3%升至75%。
+  summary: |
+    为减少模仿学习策略失误后需要重新采集完整示范的成本，ARC把人工干预拆成何时纠正、在哪些动作方向纠正以及施加多大修正三部分。操作者标记介入时机并提供少量方向反馈，系统在低维子空间内学习残差策略，保持原有ACT策略冻结。作者在Miroki机器人三项任务上使用约55条初始示范，每任务加入约八至十条纠正轨迹，再进行两轮自主学习，每轮以12次执行评估。汇总成功率从33.3%提高到75%，所选二维或三维子空间解释了七关节纠正幅度的约96%至97.7%。结果说明特定任务的纠正可以集中在少数方向，从而降低残差学习难度。但低维结构依赖任务和已有策略，不能据此外推所有机器人错误都具有相同性质。人工仍需决定介入时机，评估样本也较少，尚缺更广泛任务、操作者差异及长期失败恢复测试；代码与训练资产未获确认。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 人工门控与低维残差学习结合有实用价值，但主要是已有模块的针对性组合。
+    E: 三项真实任务给出改进和子空间分析，但评估样本与操作者覆盖有限。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.37543'
+  title: Rendering-Free Event Frame Simulation for Fast Reinforcement Learning of Autonomous Robot Navigation
+  prefilter_score: 8.5
+  triage: include
+  reason: 解析事件生成显著降低训练观测成本，并实现微型飞行器部署。
+  category: navigation
+  route: core
+  contribution: method
+  tags:
+  - navigation
+  - event-camera
+  - sim2real
+  affiliations:
+  - Micro Air Vehicle Lab, Faculty of Aerospace Engineering, Delft University of Technology
+  one_liner: 该方法解析生成事件边缘训练微型无人机，作者在三类真实场地共17次避障中完成14次。
+  summary: |
+    为降低事件相机导航策略训练时逐帧渲染的代价，作者以解析移动边缘生成事件观测，将视觉变化直接转成事件输入，再通过域随机化训练轻量控制策略。缓存正文给出的训练时间约34分钟；在64×64输入下，事件生成约17微秒，对照渲染约6.9毫秒，约四百倍差异仅指该生成环节。作者在光线追踪仿真中报告约83%的成功率，未见纹理设置约70%，并将约1.2MB的量化模型部署到56克Crazyflie上，以约13.3Hz运行。三类真实场地分别完成5/5、5/6和4/6次试验，支持低成本事件模拟的初步迁移可行性。样本总量较小，复杂动态障碍与更高速度尚未充分验证。文中对完整渲染训练需约两百天的估计属于外推，不能当成实际完成的对照实验；公开代码入口存在，但仓库内容本次未获确认。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 解析事件生成显著降低训练观测成本，并实现微型飞行器部署。
+    E: 有仿真迁移与真机试验，但真实样本较少且完整渲染成本为估算。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: unknown
+    repo: https://github.com/tudelft/rendering-free-event-nav
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
+    last_check: '2026-11-01'
+  uses:
+  - resource: isaac-sim
+    role: eval
+  - resource: rendering-free-event-nav
+    role: proposes
+  new_resources:
+  - kind: tool
+    id: rendering-free-event-nav
+    name: Rendering-Free Event Navigation
+    desc: 解析事件观测生成及微型无人机导航训练流程；论文给出代码入口，仓库内容待核验。
+    links:
+      code: https://github.com/tudelft/rendering-free-event-nav
+      paper: https://arxiv.org/abs/2610.37543
+- arxiv_id: '2610.36852'
+  title: 'When Black-Box Robot Policies Fail: Online Sensor Diagnosis and Repair with a Transparent Surrogate'
+  prefilter_score: 8.5
+  triage: include
+  reason: 结构化代理模型服务黑盒故障解释与输入修复，贡献明确但适用范围较窄。
+  category: locomotion
+  route: adjacent
+  contribution: method
+  tags:
+  - locomotion
+  - fault-diagnosis
+  - robustness
+  affiliations:
+  - Technical University of Munich
+  - Siemens Mobility
+  one_liner: 该方法用步态傅里叶特征解释黑盒四足策略输入故障，在Go2仿真提高故障条件下的完成次数。
+  summary: |
+    为诊断无法修改内部结构的四足控制策略为何在传感器异常下失败，作者拟合带步态相位的线性可加代理模型，用傅里叶特征描述周期运动，并分析各输入通道在不同相位的贡献。诊断结果用于修复或替换异常输入，使冻结的URMA策略继续运行。Go2仿真中，离线修复在640次故障测试完成429次，原策略为259次；在线方案完成382次，另在64次无故障测试中未触发误报。与通用梯度提升模型的比较显示，步态结构先验有助于此设置中的解释与修复。但部分结果先从37类故障筛选出10类，需要区分筛选后任务与完整故障集合。其他机器人还需分别拟合代理，不能把结果理解为任意基础策略的通用诊断器。实验没有真实硬件传感器故障验证，也未充分覆盖复合故障、非周期运动和长期漂移，故作为邻接鲁棒性分析方法收录。
+  venue: 'CoRL 2026 Workshop: Science of Physical AI Safety (SPAIS)'
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 结构化代理模型服务黑盒故障解释与输入修复，贡献明确但适用范围较窄。
+    E: 故障及无故障仿真有基线对照，筛选过程和无真机证据限制泛化。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36599'
+  title: Camera-to-Quadruped Robot Pose Estimation from Sequential Images
+  prefilter_score: 8.5
+  triage: include
+  reason: 将骨架结构与运动学纳入四足单目姿态估计，属于扎实的针对性方法。
+  category: scene
+  route: core
+  contribution: method
+  tags:
+  - scene
+  - pose-estimation
+  - quadruped
+  affiliations:
+  - Department of Artificial Intelligence Convergence, Chonnam National University, Gwangju, Republic of Korea
+  one_liner: QuadPose 由单目图像估计四足机器人18自由度姿态，在QuadSyn仿真报告92.18%的关键点正确率。
+  summary: |
+    为使外部单目相机估计关节化四足机器人的姿态，QuadPose结合二维关键点检测、骨架注意力、正运动学约束与三维细化，逐步恢复身体及关节配置。作者构建QuadSyn合成数据进行训练与评估，报告关键点正确率92.18%、角度误差约3.65度，并在所设硬件与输入条件下达到约33帧每秒。真实Harper数据上的二维检测评价为64.13 mAP，对照YOLO为60.77，表明骨架结构可能帮助图像关键点定位。但真实数据没有可用于验证的三维姿态真值，因此不能把合成数据上的三维精度直接视为真实场景精度。方法还依赖特定机器人骨架、可见性和合成外观分布，对强遮挡、不同本体或相机条件的稳定性尚需验证。作为具身场景理解方法，其潜在用途包括外部监测与机器人交互；缓存未确认代码、合成数据及生成流程公开，复现实验条件仍有限。
+  venue: ''
+  scores:
+    C: 3
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 将骨架结构与运动学纳入四足单目姿态估计，属于扎实的针对性方法。
+    E: 合成三维与真实二维有对照，但真实三维精度缺少真值验证。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36537'
+  title: A Trainable CPG Framework for Quadruped Locomotion
+  prefilter_score: 8.5
+  triage: include
+  reason: 固定运动先验与低维学习控制结合有效，但总体结构创新相对有限。
+  category: locomotion
+  route: core
+  contribution: method
+  tags:
+  - locomotion
+  - central-pattern-generator
+  - reinforcement-learning
+  affiliations: []
+  one_liner: CPG-ENN 以固定振荡器和学习逆运动学组织六维强化学习动作，在仿真评估五种步态及切换。
+  summary: |
+    为降低四足多步态控制的强化学习动作维度，CPG-ENN以八神经元中央模式发生器生成周期结构，通过离线学习的逆运动学网络将目标足端运动转为关节指令，再由强化学习策略调节六个高层参数。振荡器本身固定，学习贡献来自逆运动学映射与参数调节，不能将所有模块都称为端到端学习。作者在仿真中测试五种步态及20个有向切换，在0.5至2米每秒的设定速度网格上报告约99.39%的切换成功率，并与多步态策略比较。不同基线支持的步态并不完全一致，应只在共同任务范围内解释优劣。真实Go2演示说明该结构具有硬件可实现性，但没有提供同等规模的真机切换统计。结果支持以结构先验压缩策略搜索空间，尚不能说明系统能在未知崎岖地形自主选择最佳步态，扰动恢复与复杂接触场景也需进一步评估。
+  venue: ''
+  scores:
+    C: 3
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 固定运动先验与低维学习控制结合有效，但总体结构创新相对有限。
+    E: 多步态、切换及基线比较较完整，并有真机演示，但硬件统计有限。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 缓存署名未提供可确认的完整单位列表，需核对论文署名页；不按作者姓名推断。
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 缓存未提供可核实的作者单位，需核对论文署名页；不从姓名或邮箱推断。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.36013'
+  title: 'OmniBrain-0: A Unified Agentic Model for Embodied Intelligence'
+  prefilter_score: 8.5
+  triage: include
+  reason: 统一多类具身高层决策并设计多阶段训练，具有明确模型贡献。
+  category: foundation-general
+  route: core
+  contribution: model
+  tags:
+  - foundation-model
+  - embodied-agent
+  - manipulation
+  affiliations:
+  - Xiaomi Embodied Intelligence Team
+  - University of Macau
+  - Tsinghua University
+  one_liner: OmniBrain-0 将操作、导航与空间推理纳入统一工具决策模型，缓存支持多基准设置但未完整覆盖结果。
+  summary: |
+    为减少机器人在操作、导航和空间理解之间切换独立高层模型的需求，OmniBrain-0以Qwen3.5-9B为基础，统一学习任务理解与工具调用，并通过教师蒸馏、带评价规则的多目标策略优化和迭代改进训练决策能力。作者设置LIBERO扰动测试、RoboCasa365、RoboTwin、导航及空间推理评估，并展示三项真实任务。导航部分采用固定的一百个未见验证场景，不能等同于完整导航基准的覆盖范围。缓存呈现了模型组织、训练阶段及多类评估设计，但在汇总实验后续内容前截断，无法独立核对全部任务结果、显著性及各训练环节的贡献。因此其跨任务统一决策是值得跟踪的方法方向，尚不足以据此认定全面优于专用机器人模型。高层工具选择的成功也依赖下游执行器，不能直接解释为统一低层控制。资源开放声明与实际代码、权重和数据发布状态仍需补证。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 2
+    T: 3
+  rationale:
+    C: 统一多类具身高层决策并设计多阶段训练，具有明确模型贡献。
+    E: 可核对多基准与真机评估设置，但缓存不足以核实完整结果和消融。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  - 补读完整总体结果与消融，核验各任务样本数及高层工具决策和执行器贡献。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  new_resources: []
+- arxiv_id: '2610.34674'
+  title: Benchmarking Obstacle-Conditioned Safety in Household Robot Navigation
+  prefilter_score: 8.5
+  triage: include
+  reason: 通过匹配场景把语义理解与实际谨慎运动区分，基准设计增量明确。
+  category: navigation
+  route: adjacent
+  contribution: benchmark
+  tags:
+  - navigation
+  - social-awareness
+  - benchmark
+  affiliations:
+  - Interdisciplinary Program in Artificial Intelligence, Seoul National University
+  - Department of Electrical and Computer Engineering, Seoul National University
+  one_liner: OSMAbench 用625个匹配场景测试语义谨慎行为，揭示物体语义识别与运动避让之间的差距。
+  summary: |
+    为评估机器人能否依据物体或场景含义调整移动方式，OSMAbench构建包含18类实体、三档谨慎等级、七条路线和五种厨房的625个匹配场景，并以距离净空及按行程归一化的速度等指标刻画运动谨慎程度。作者在同一策略家族内改变语义处理方式，比较直接决策与视觉语言模型输出参数后交由运动控制的方案。结果显示，模型能够识别需要谨慎对待的语义对象，却未必在实际轨迹中表现出相应减速或避让；显式分离语义参数与执行有助于缩小这一差距。该设计提供了比问答准确率更贴近行为的评估视角，但谨慎等级由基准设定，不能视为客观通用安全标准。证据仅来自仿真及有限策略家族，未验证真实人机交互或事故风险。缓存中的OpenTau仓库属于依赖，不能据此认定本基准已开放，也没有足够依据登记可下载资源。
+  venue: ''
+  scores:
+    C: 4
+    E: 3
+    O: 1
+    T: 3
+  rationale:
+    C: 通过匹配场景把语义理解与实际谨慎运动区分，基准设计增量明确。
+    E: 受控仿真比较合理，但策略覆盖有限且谨慎等级具有设定依赖。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原探测链接指向依赖或基线 OpenTau，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.40401'
+  title: 'Continuous-Action World Models: Learning Cross-Embodiment Spatiotemporal Dynamics Priors'
+  prefilter_score: 8.0
+  triage: include
+  reason: 连续时间动作表示具有合理探索价值，但当前增量与验证范围仍有限。
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - world-model
+  - continuous-time
+  - action-representation
+  affiliations:
+  - Tongji University
+  one_liner: CoAWM 用连续时间潜在动作连接不同采样频率，当前缓存仅支持初步双臂实验结论。
+  summary: |
+    为缓解世界模型和动作策略依赖固定时间步、难以在不同控制频率之间复用的问题，CoAWM将潜在动作表示为可按时间查询的连续函数。训练先进行动作重建预训练，再将表示接入潜在动作世界模型，使预测与控制可以使用不同时间间隔，并尝试兼顾动作平滑和任务效果。作者以双臂任务给出初步实验，比较不同频率查询及相关结构，对平滑性、能量和执行表现进行讨论。缓存中的结果为连续动作表示提供了可行性线索，但没有充分覆盖大规模任务、强基线、跨机器人泛化及真实部署误差。文中还将更大规模训练列为后续工作，因此不能将计划中的验证当作已完成证据。需要区分连续时间动作编码本身与完整世界模型预测能力，前者成立不代表后者已具备广泛决策价值。按方法探索保留并降低证据评分；完整数值、复现代码与训练资产本次均未得到充分核实。
+  venue: ''
+  scores:
+    C: 3
+    E: 2
+    O: 1
+    T: 3
+  rationale:
+    C: 连续时间动作表示具有合理探索价值，但当前增量与验证范围仍有限。
+    E: 只有初步双臂实验与分析，缺少充分基线和规模化验证。
+    O: 缓存未确认本工作公开的代码、权重、数据或项目资源。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 补核连续时间表示的完整数值对照与不同控制频率下的重复实验。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
+- arxiv_id: '2610.38657'
+  title: 'Explore Where It Matters: Targeted Exploration for Efficient Rover Adaptation'
+  prefilter_score: 8.0
+  triage: include
+  reason: 奖励相关动力学适配与探索规划形成明确的地形迁移方法。
+  category: navigation
+  route: core
+  contribution: method
+  tags:
+  - navigation
+  - online-adaptation
+  - model-based-control
+  affiliations:
+  - Department of Aerospace Engineering, University of Texas at Austin
+  - Jet Propulsion Laboratory, California Institute of Technology
+  one_liner: TERRA 用奖励加权动力学适配与探索规划改善地形迁移，作者报告仿真多数设置五次试验内成功。
+  summary: |
+    为使轮式机器人面对新地形时快速修正动力学误差，TERRA对已有模型进行奖励加权的低秩适配，并学习预测模型损失，用于引导模型预测控制中的探索。方法把少量部署试验集中到可能改善任务表现的状态，避免仅追求全局预测误差下降。作者在仿真中以一百个随机种子、每种设置最多十次试验评估适应速度，报告约90%的设置在五次以内达到目标；真实ERNEST平台在模拟火星风化层材料上的结果显示，通常三至五次试验即可改善通行表现。组件与基线比较支持奖励加权及主动探索的作用，但试验成功率仍依赖任务奖励、损失分箱阈值和初始动力学模型。仿真地形与坡度覆盖有限，真机环境也不足以代表所有户外松软地面。工作展示少次在线适配的潜力，不能推断无需部署奖励或试错即可迁移；项目入口存在，完整复现资产仍待核查。
+  venue: CoRL 2026
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 奖励相关动力学适配与探索规划形成明确的地形迁移方法。
+    E: 多种子仿真、组件比较及真实松软地面试验较充分，但地形覆盖有限。
+    O: 仅确认论文中的资源入口或开放声明，尚不足以确认实质代码和完整资产。
+    T: 缓存不足以核实团队近五年同方向成果，按规范暂取默认3分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 团队近五年同方向代表成果与持续积累尚未独立核验，T暂取3。
+  - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
+    last_check: '2026-11-01'
+  uses: []
+  new_resources: []
