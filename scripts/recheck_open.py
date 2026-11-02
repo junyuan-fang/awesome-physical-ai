@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import logging
+import subprocess
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -56,7 +57,11 @@ def recheck(p: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
         repo = sources.normalize_github(hf.get("github", "")) or sources.find_github_on_page(
             (p.get("links") or {}).get("project", "") or hf.get("project", "")
         )
-    return p, sources.probe_repo(repo) if repo else {"code": "no-repo"}
+    try:
+        return p, sources.probe_repo(repo) if repo else {"code": "no-repo"}
+    except (subprocess.TimeoutExpired, OSError) as exc:
+        log.warning("Probe failed for %s; preserving prior status: %s", repo, exc)
+        return p, {"code": "unknown"}
 
 
 def main() -> int:

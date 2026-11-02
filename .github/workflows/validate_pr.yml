@@ -1,11 +1,15 @@
-name: Validate PR
+name: Validate data and pipeline
 
 on:
+  push:
+    branches: [master]
+    paths: ['scripts/**', 'tests/**', '.github/workflows/validate_pr.yml']
   pull_request:
     paths:
       - "data/**"
       - "templates/**"
       - "scripts/**"
+      - "tests/**"
 
 jobs:
   validate:
@@ -16,6 +20,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -r requirements.txt
+      - name: Test daily failure recovery
+        run: python -m unittest discover -s tests -v
       - name: Validate data schemas
         run: python scripts/validate.py
       - name: Check for duplicates

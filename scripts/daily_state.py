@@ -1,4 +1,4 @@
-"""Exit 10 for a completed daily scan, 0 otherwise. Never accesses the network."""
+"""Exit 10 for an applied daily scan, 0 otherwise. Publishing is the runner's job."""
 import sys
 from pathlib import Path
 

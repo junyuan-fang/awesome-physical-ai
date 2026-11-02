@@ -15,8 +15,15 @@ case "${1:-}" in
     "$PY" scripts/fetch_candidates.py --date "$DAY"
     ;;
   apply)
-    "$PY" scripts/apply_reviews.py "pipeline/reviews/$DAY.yaml" --no-readme
-    "$PY" scripts/recheck_open.py
+    # A render/push failure after apply must not apply the same inclusion cap twice.
+    state=0
+    "$PY" scripts/daily_state.py "$DAY" || state=$?
+    if [ "$state" = 0 ]; then
+      "$PY" scripts/apply_reviews.py "pipeline/reviews/$DAY.yaml" --no-readme
+    elif [ "$state" != 10 ]; then
+      exit "$state"
+    fi
+    # Open-status rechecks run independently in the weekly GitHub workflow.
     # Weekly picks on Mondays (previous ISO week), monthly report on the 1st (previous month).
     if [ "$(date -d "$DAY" +%u)" = "1" ]; then
       "$PY" scripts/digest.py --week "$(date -d "$DAY - 7 days" +%F)"

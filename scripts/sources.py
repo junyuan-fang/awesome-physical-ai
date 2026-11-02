@@ -95,7 +95,7 @@ def arxiv_search(query: str, max_results: int = 2000, page: int = 200) -> list[d
         )
         body = http_get(f"{ARXIV_API}?{params}", timeout=60)
         if body is None:
-            break
+            raise RuntimeError(f"arXiv discovery failed at offset {start}; coverage was not completed")
         entries = ET.fromstring(body).findall("atom:entry", ATOM)
         out += [_parse_entry(e) for e in entries]
         log.info("arXiv %s: +%d (total %d)", query[:60], len(entries), len(out))
