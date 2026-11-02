@@ -17,11 +17,22 @@ class GeneratedPagesTests(unittest.TestCase):
         cls.papers = generator.load('papers.yaml', 'papers')
 
     def test_homepage_has_a_fixed_reading_budget(self):
-        home = self.pages['README.md']
-        self.assertLessEqual(len(home.splitlines()), 130)
-        self.assertLessEqual(len(home.encode('utf-8')), 12000)
-        self.assertLessEqual(len(re.findall(r'^- \*\*\[', home, re.M)), generator.HOME_PICKS)
-        self.assertNotIn('<details', home)
+        for path in ('README.md', 'README.zh-CN.md'):
+            with self.subTest(path=path):
+                home = self.pages[path]
+                self.assertLessEqual(len(home.splitlines()), 130)
+                self.assertLessEqual(len(home.encode('utf-8')), 12000)
+                self.assertLessEqual(len(re.findall(r'^- \*\*\[', home, re.M)), generator.HOME_PICKS)
+                self.assertNotIn('<details', home)
+
+    def test_homepages_share_picks_language_switch_and_star_history(self):
+        en, zh = self.pages['README.md'], self.pages['README.zh-CN.md']
+        self.assertIn('[简体中文](README.zh-CN.md)', en)
+        self.assertIn('[English](README.md)', zh)
+        self.assertEqual(re.findall(r'docs/papers/[\d.]+\.md', en), re.findall(r'docs/papers/[\d.]+\.md', zh))
+        for page in (en, zh):
+            self.assertIn('![Star History Chart](https://api.star-history.com/svg?repos=junyuan-fang/awesome-physical-ai&type=Date)', page)
+            self.assertIn(f'**{generator.compute_total(generator.SCORE_EXAMPLE)}/100', page)
 
     def test_every_paper_has_one_detail_page_and_one_catalog_entry(self):
         expected = {str(p['arxiv_id']) for p in self.papers}

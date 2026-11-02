@@ -52,7 +52,7 @@ def compute_total(scores: dict[str, int]) -> int:
 
 
 def derive_priority(scores: dict[str, int] | None) -> str:
-    """must-read: total ≥ 80 and E ≥ 3 · notable: 65–79 · watching: < 65."""
+    """must-read: total ≥ 80 and E ≥ 3; otherwise notable ≥ 65, watching < 65."""
     if not scores or any(scores.get(k) in (None, "") for k in WEIGHTS):
         return "unrated"
     total = compute_total(scores)

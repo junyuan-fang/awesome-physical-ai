@@ -1,74 +1,97 @@
 # Awesome Physical AI
 
+**English** · [简体中文](README.zh-CN.md)
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-具身智能、机器人基础模型与物理 AI 的论文和资源导航。以中文评审说明贡献、证据与复现条件。
+A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
 
-**{{ papers | length }} 篇论文** · {{ resources.datasets | length }} 个数据集 · {{ resources.simulators | length }} 个仿真器 · {{ resources.benchmarks | length }} 个基准 · {{ resources.tools | length }} 个工具
+**{{ papers | length }} papers** · {{ resources.datasets | length }} datasets · {{ resources.simulators | length }} simulators · {{ resources.benchmarks | length }} benchmarks · {{ resources.tools | length }} tools
 
-[论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [收录方法](docs/METHODOLOGY.md)
+[Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
 
-{% if latest_digest %}> 最近完成扫描：**{{ latest_scan }}** · [查看本次报告]({{ latest_digest }})。评分用于安排阅读顺序，不能替代对论文质量和实验条件的判断。
+> Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
+{% if latest_digest %}> Latest completed scan: **{{ latest_scan }}** · [Read the report]({{ latest_digest }})
 {% endif %}
 
-## <a id="contents"></a>从哪里开始
+## <a id="contents"></a>Start here
 
-| 你想做什么 | 阅读入口 |
+| Your goal | Reading path |
 |---|---|
-| 了解机器人基础模型 | [VLA](docs/catalog/vla.md) → [世界模型](docs/catalog/world-model.md) → [通用模型](docs/catalog/foundation-general.md) |
-| 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
-| 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
-| 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告]({{ latest_digest or 'digests/README.md' }}) · [近期精选](#weekly-picks) |
+| Understand robotics foundation models | [VLA](docs/catalog/vla.md) → [World models](docs/catalog/world-model.md) → [Generalist models](docs/catalog/foundation-general.md) |
+| Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
+| Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
+| Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
+| Catch up on recent work | [Latest report]({{ latest_digest or 'digests/README.md' }}) · [Recent picks](#weekly-picks) |
 
-## <a id="weekly-picks"></a>近期精选
+## <a id="weekly-picks"></a>Recent picks
 
-最近一次扫描日前 7 天新收录的重点论文，首页最多展示 5 篇。[全部优先阅读论文 →](docs/rankings.md)
+Up to 5 priority papers added in the 7-day window ending on the latest scan. [Browse the Top 20 →](docs/rankings.md)
 
 {% for p in picks %}
 - **[{{ p.title | label }}]({{ p.detail }})** · {{ p.date }} · {{ p.review.total }}/100
-  {{ p.abstract_short | brief }}
+  {{ p.category_title }} · {{ priority_names_en[p.review.priority] }} · {{ code_names_en[p.open.code or 'unknown'] }}
 
 {% else %}
-这段时间没有新增的重点论文，可浏览[完整目录](docs/index.md)。
+No new priority picks in this window. Explore the [full catalog](docs/index.md).
 
 {% endfor %}
-## 研究方向
+## Research areas
 
-选择一个方向进入分页目录；每页最多 15 篇，点击论文标题查看完整评审。
+Choose a direction below. Each catalog page has up to 15 papers; select a title for its full review.
 
-| 方向 | 内容 | 篇数 |
+| Area | Browse | Papers |
 |---|---|---:|
 {% for group in groups %}
 | <a id="{{ group.id }}"></a>{{ group.title }} | {% for c in group.entries %}[{{ c.title }}]({{ c.path }}){% if not loop.last %} / {% endif %}{% endfor %} | {{ group.count }} |
 {% endfor %}
 
-[全部论文目录 →](docs/index.md) · [一页式标题索引（便于全文搜索）→](docs/all-papers.md)
+[Full catalog →](docs/index.md) · [All titles on one page for text search →](docs/all-papers.md)
 
-## 资源与产业
+## Resources & industry
 
-| 资源 | 用途 | 数量 |
+| Resource | Purpose | Count |
 |---|---|---:|
 {% for c in resource_groups %}
 | <a id="{{ c.id }}"></a>[{{ c.title }}]({{ c.path }}) | {{ c.desc }} | {{ c.count }} |
 {% endfor %}
 
-## <a id="topics"></a>专题阅读
+## <a id="topics"></a>Topic guides
 
-- [World-Action Models](topics/world-action-models.md) — 研究边界、代表系统与评测问题。
-- [Ropedia W0](topics/ropedia-w0.md) — 跨具身世界模型与配套数据、遥操作体系。
+- [World-Action Models](topics/world-action-models.md) — Scope, representative systems, and evaluation questions.
+- [Ropedia W0](topics/ropedia-w0.md) — Cross-embodiment world models, data, and teleoperation.
 
-## <a id="scoring"></a>如何使用评审
+## <a id="scoring"></a>How to read the scores
 
-每篇详情保留问题、方法、作者报告的结果与条件、局限，以及开源状态和核查日期。历史日报保留当时的判断，当前评分以论文详情页为准。
+**A reading priority, not a research leaderboard.** Each dimension is rated **1–5**; the weighted total is out of **100**.
 
-总分由贡献 **30%**、证据 **25%**、开放与复现 **30%**、团队背景 **15%** 构成。[评分依据与收录规则 →](docs/METHODOLOGY.md)
+| Dimension | What we check | Weight |
+|---|---|---:|
+| **C · Contribution** | What does this add beyond prior work? | **{{ score_weights.C }}%** |
+| **E · Evidence** | Do experiments, baselines, and ablations support the claims? | **{{ score_weights.E }}%** |
+| **O · Openness** | Can others reproduce it with the released code, weights, and data? | **{{ score_weights.O }}%** |
+| **T · Track record** | Is relevant prior work verifiable? Default: 3/5 when unknown. | **{{ score_weights.T }}%** |
 
-<a id="top-20"></a>[查看 Top 20 →](docs/rankings.md) · <a id="scan-reports"></a>[查看全部扫描报告 →](digests/README.md)
+**Example:** C={{ score_example.C }}, E={{ score_example.E }}, O={{ score_example.O }}, T={{ score_example.T }} → `{{ example_formula }}` = **{{ example_total }}/100 · 👀 {{ priority_names_en[example_priority] }}**.
 
-## 参与维护
+| Priority | Rule | How to use it |
+|---|---|---|
+| 🔥 **Must-read** | ≥80 and E≥3 | Read first; inspect the experimental conditions. |
+| 👀 **Notable** | ≥65, without meeting the rule above | Add to your reading queue. |
+| **Watching** | <65 | Follow for updates; a low score is not a rejection. |
+| **Unrated** | Insufficient evidence for a complete score | Check what evidence is still missing. |
 
-欢迎[提交条目或更正](CONTRIBUTING.md)。数据和模板是维护入口，页面自动生成。每日任务的运行方式见[维护说明](docs/DAILY_AGENT.md)。
+Reviews retain the reasoning, limitations, release status, and check date. Historical digests preserve earlier judgments; paper detail pages carry the current scores. [Full rubric (Chinese) →](docs/METHODOLOGY.md)
+
+<a id="top-20"></a>[Browse the Top 20 →](docs/rankings.md) · <a id="scan-reports"></a>[All scan reports →](digests/README.md)
+
+## Contributing
+
+[Suggest a resource or correction](CONTRIBUTING.md). Pages are generated from data and templates. See the [daily runbook](docs/DAILY_AGENT.md) for maintenance.
+
+## <a id="star-history"></a>Star History
+
+{% include 'star-history.md.j2' %}
 
 [Apache License 2.0](LICENSE) · [@junyuan-fang](https://github.com/junyuan-fang)

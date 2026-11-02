@@ -2,51 +2,54 @@
 
 # Awesome Physical AI
 
+**English** · [简体中文](README.zh-CN.md)
+
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-具身智能、机器人基础模型与物理 AI 的论文和资源导航。以中文评审说明贡献、证据与复现条件。
+A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
 
-**278 篇论文** · 23 个数据集 · 8 个仿真器 · 27 个基准 · 8 个工具
+**278 papers** · 23 datasets · 8 simulators · 27 benchmarks · 8 tools
 
-[论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [收录方法](docs/METHODOLOGY.md)
+[Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
 
-> 最近完成扫描：**2026-11-02** · [查看本次报告](digests/daily/2026-11-02.md)。评分用于安排阅读顺序，不能替代对论文质量和实验条件的判断。
+> Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
+> Latest completed scan: **2026-11-02** · [Read the report](digests/daily/2026-11-02.md)
 
-## <a id="contents"></a>从哪里开始
+## <a id="contents"></a>Start here
 
-| 你想做什么 | 阅读入口 |
+| Your goal | Reading path |
 |---|---|
-| 了解机器人基础模型 | [VLA](docs/catalog/vla.md) → [世界模型](docs/catalog/world-model.md) → [通用模型](docs/catalog/foundation-general.md) |
-| 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
-| 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
-| 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-02.md) · [近期精选](#weekly-picks) |
+| Understand robotics foundation models | [VLA](docs/catalog/vla.md) → [World models](docs/catalog/world-model.md) → [Generalist models](docs/catalog/foundation-general.md) |
+| Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
+| Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
+| Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
+| Catch up on recent work | [Latest report](digests/daily/2026-11-02.md) · [Recent picks](#weekly-picks) |
 
-## <a id="weekly-picks"></a>近期精选
+## <a id="weekly-picks"></a>Recent picks
 
-最近一次扫描日前 7 天新收录的重点论文，首页最多展示 5 篇。[全部优先阅读论文 →](docs/rankings.md)
+Up to 5 priority papers added in the 7-day window ending on the latest scan. [Browse the Top 20 →](docs/rankings.md)
 
 - **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](docs/papers/2610.33852.md)** · 2026-10-24 · 83/100
-  AdaDexTrack动态调制参考、物体表示与位置目标，在未见轨迹和物体上优于固定跟踪器，并实现零样本真机迁移。
+  Manipulation · Must-read · Code released
 
 - **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](docs/papers/2610.34356.md)** · 2026-10-25 · 77/100
-  RynnVLA以三维潜在动作利用异构视频预训练，作者报告4B模型在LIBERO成功率98.8%，并验证六项真机任务。
+  Vision-Language-Action (VLA) · Notable · Code released
 
 - **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](docs/papers/2610.36791.md)** · 2026-10-27 · 72/100
-  RynnWorld-Latent用通用潜动作联合学习多形态视频动力学，并研究合成数据对操作策略的作用。
+  World Models · Notable · Code released
 
 - **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](docs/papers/2610.40016.md)** · 2026-10-29 · 71/100
-  LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
+  Manipulation · Notable · Code released
 
 - **[GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](docs/papers/2610.37091.md)** · 2026-10-27 · 71/100
-  GAWM用小型潜空间预测器辅助动作生成；补查原文还报告黄瓶交接真机46/50次成功。
+  World Models · Notable · Partially released
 
-## 研究方向
+## Research areas
 
-选择一个方向进入分页目录；每页最多 15 篇，点击论文标题查看完整评审。
+Choose a direction below. Each catalog page has up to 15 papers; select a title for its full review.
 
-| 方向 | 内容 | 篇数 |
+| Area | Browse | Papers |
 |---|---|---:|
 | <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 156 |
 | <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 40 |
@@ -58,11 +61,11 @@
 | <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 10 |
 | <a id="tutorials"></a>Tutorials & Surveys | [Tutorials & Surveys](docs/catalog/tutorials.md) | 6 |
 
-[全部论文目录 →](docs/index.md) · [一页式标题索引（便于全文搜索）→](docs/all-papers.md)
+[Full catalog →](docs/index.md) · [All titles on one page for text search →](docs/all-papers.md)
 
-## 资源与产业
+## Resources & industry
 
-| 资源 | 用途 | 数量 |
+| Resource | Purpose | Count |
 |---|---|---:|
 | <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 23 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 8 |
@@ -70,21 +73,41 @@
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 8 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 
-## <a id="topics"></a>专题阅读
+## <a id="topics"></a>Topic guides
 
-- [World-Action Models](topics/world-action-models.md) — 研究边界、代表系统与评测问题。
-- [Ropedia W0](topics/ropedia-w0.md) — 跨具身世界模型与配套数据、遥操作体系。
+- [World-Action Models](topics/world-action-models.md) — Scope, representative systems, and evaluation questions.
+- [Ropedia W0](topics/ropedia-w0.md) — Cross-embodiment world models, data, and teleoperation.
 
-## <a id="scoring"></a>如何使用评审
+## <a id="scoring"></a>How to read the scores
 
-每篇详情保留问题、方法、作者报告的结果与条件、局限，以及开源状态和核查日期。历史日报保留当时的判断，当前评分以论文详情页为准。
+**A reading priority, not a research leaderboard.** Each dimension is rated **1–5**; the weighted total is out of **100**.
 
-总分由贡献 **30%**、证据 **25%**、开放与复现 **30%**、团队背景 **15%** 构成。[评分依据与收录规则 →](docs/METHODOLOGY.md)
+| Dimension | What we check | Weight |
+|---|---|---:|
+| **C · Contribution** | What does this add beyond prior work? | **30%** |
+| **E · Evidence** | Do experiments, baselines, and ablations support the claims? | **25%** |
+| **O · Openness** | Can others reproduce it with the released code, weights, and data? | **30%** |
+| **T · Track record** | Is relevant prior work verifiable? Default: 3/5 when unknown. | **15%** |
 
-<a id="top-20"></a>[查看 Top 20 →](docs/rankings.md) · <a id="scan-reports"></a>[查看全部扫描报告 →](digests/README.md)
+**Example:** C=4, E=4, O=3, T=3 → `4/5 × 30 + 4/5 × 25 + 3/5 × 30 + 3/5 × 15` = **71/100 · 👀 Notable**.
 
-## 参与维护
+| Priority | Rule | How to use it |
+|---|---|---|
+| 🔥 **Must-read** | ≥80 and E≥3 | Read first; inspect the experimental conditions. |
+| 👀 **Notable** | ≥65, without meeting the rule above | Add to your reading queue. |
+| **Watching** | <65 | Follow for updates; a low score is not a rejection. |
+| **Unrated** | Insufficient evidence for a complete score | Check what evidence is still missing. |
 
-欢迎[提交条目或更正](CONTRIBUTING.md)。数据和模板是维护入口，页面自动生成。每日任务的运行方式见[维护说明](docs/DAILY_AGENT.md)。
+Reviews retain the reasoning, limitations, release status, and check date. Historical digests preserve earlier judgments; paper detail pages carry the current scores. [Full rubric (Chinese) →](docs/METHODOLOGY.md)
+
+<a id="top-20"></a>[Browse the Top 20 →](docs/rankings.md) · <a id="scan-reports"></a>[All scan reports →](digests/README.md)
+
+## Contributing
+
+[Suggest a resource or correction](CONTRIBUTING.md). Pages are generated from data and templates. See the [daily runbook](docs/DAILY_AGENT.md) for maintenance.
+
+## <a id="star-history"></a>Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=junyuan-fang/awesome-physical-ai&type=Date)](https://star-history.com/#junyuan-fang/awesome-physical-ai&Date)
 
 [Apache License 2.0](LICENSE) · [@junyuan-fang](https://github.com/junyuan-fang)

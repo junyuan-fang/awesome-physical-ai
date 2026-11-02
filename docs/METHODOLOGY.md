@@ -61,7 +61,7 @@ apply_reviews.py ──► data/papers.yaml · data/triage_log.yaml · data/runs
 | 优先级 | 条件 | README 标记 |
 |---|---|---|
 | `must-read` 重点阅读 | 总分 ≥ 80 且 E ≥ 3 | 🔥 |
-| `notable` 值得关注 | 65–79 | 👀 |
+| `notable` 值得关注 | 总分 ≥ 65，但不满足 `must-read` 条件（含总分 ≥ 80 且 E < 3） | 👀 |
 | `watching` 观察中 | < 65（跟进优先级低，不代表工作不可信） | 无 |
 | `unrated` 暂不评级 | 关键依据不足，未打分；在 `pending_checks` 写具体缺什么 | 无 |
 

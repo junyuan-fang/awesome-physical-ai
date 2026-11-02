@@ -25,7 +25,7 @@ Edit the relevant YAML file under `data/`:
 | Tool / library | `data/tools.yaml` |
 | New category section | `data/categories.yaml` |
 
-**Do NOT edit generated pages directly.** `README.md`, `docs/index.md`, `docs/catalog/`,
+**Do NOT edit generated pages directly.** `README.md`, `README.zh-CN.md`, `docs/index.md`, `docs/catalog/`,
 `docs/papers/`, `docs/resources/`, the rankings/title index and `digests/README.md` are
 generated from `data/` and `templates/`. Run the generator and include all resulting
 pages in your commit. The manifest `docs/.generated-pages.json` tracks owned outputs.
