@@ -11,7 +11,7 @@
 
 [论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [收录方法](docs/METHODOLOGY.md)
 
-> 最近完成扫描：**2026-11-01** · [查看本次报告](digests/daily/2026-11-01.md)。评分用于安排阅读顺序，不能替代对论文质量和实验条件的判断。
+> 最近完成扫描：**2026-11-02** · [查看本次报告](digests/daily/2026-11-02.md)。评分用于安排阅读顺序，不能替代对论文质量和实验条件的判断。
 
 ## <a id="contents"></a>从哪里开始
 
@@ -21,7 +21,7 @@
 | 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
 | 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
 | 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-01.md) · [近期精选](#weekly-picks) |
+| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-02.md) · [近期精选](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>近期精选
 
@@ -33,14 +33,14 @@
 - **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](docs/papers/2610.34356.md)** · 2026-10-25 · 77/100
   RynnVLA以三维潜在动作利用异构视频预训练，作者报告4B模型在LIBERO成功率98.8%，并验证六项真机任务。
 
-- **[Self-Distilling Future Video Representations for World Action Models](docs/papers/2610.30320.md)** · 2026-10-21 · 77/100
-  FRED 用未来表征自蒸馏增强单步世界动作模型，OpenArm 人类视频技能迁移成功率达 50.0%。
-
-- **[GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](docs/papers/2610.29866.md)** · 2026-10-21 · 77/100
-  GeoMem-VLA 将三维监督融入时序记忆，作者报告 LIBERO 平均成功率 98.9%、五项真机任务 78.0%。
-
 - **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](docs/papers/2610.36791.md)** · 2026-10-27 · 72/100
   RynnWorld-Latent用通用潜动作联合学习多形态视频动力学，并研究合成数据对操作策略的作用。
+
+- **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](docs/papers/2610.40016.md)** · 2026-10-29 · 71/100
+  LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
+
+- **[GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](docs/papers/2610.37091.md)** · 2026-10-27 · 71/100
+  GAWM用小型潜空间预测器辅助动作生成；补查原文还报告黄瓶交接真机46/50次成功。
 
 ## 研究方向
 
