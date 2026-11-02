@@ -588,7 +588,7 @@ def main() -> int:
         log.info("No git changes after regenerate — exiting.")
         return 0
 
-    git_run("add", "data/papers.yaml", "README.md", "README.zh-CN.md", "docs", "digests/README.md")
+    git_run("add", "data/papers.yaml", "README.md", "README.en.md", "README.zh-CN.md", "docs", "digests/README.md")
     parts = []
     if added: parts.append(f"+{added} papers")
     if backfilled: parts.append(f"refreshed {backfilled} summaries")

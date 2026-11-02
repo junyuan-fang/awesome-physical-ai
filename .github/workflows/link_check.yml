@@ -19,6 +19,7 @@ jobs:
             --accept 200,206,429
             --exclude-path CONTRIBUTING.md
             README.md
+            README.en.md
             README.zh-CN.md
           fail: false   # report but don't block; many arXiv links rate-limit CI
       - name: Upload report

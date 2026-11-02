@@ -101,6 +101,8 @@ def render_all():
     def render(path, template, **extra):
         outputs[path] = MARKER + '\n\n' + env.get_template(template).render(**dict(context, **extra))
     render('README.md', 'README.md.j2')
+    render('README.en.md', 'README.en.md.j2')
+    # Keep existing Chinese links (including section anchors) working.
     render('README.zh-CN.md', 'README.zh-CN.md.j2')
     render('docs/index.md', 'index.md.j2')
     render('docs/rankings.md', 'rankings.md.j2')

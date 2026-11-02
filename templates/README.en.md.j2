@@ -1,0 +1,97 @@
+# Awesome Physical AI
+
+[简体中文](README.md) · **English**
+
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
+
+**{{ papers | length }} papers** · {{ resources.datasets | length }} datasets · {{ resources.simulators | length }} simulators · {{ resources.benchmarks | length }} benchmarks · {{ resources.tools | length }} tools
+
+[Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
+
+> Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
+{% if latest_digest %}> Latest completed scan: **{{ latest_scan }}** · [Read the report]({{ latest_digest }})
+{% endif %}
+
+## <a id="contents"></a>Start here
+
+| Your goal | Reading path |
+|---|---|
+| Understand robotics foundation models | [VLA](docs/catalog/vla.md) → [World models](docs/catalog/world-model.md) → [Generalist models](docs/catalog/foundation-general.md) |
+| Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
+| Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
+| Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
+| Catch up on recent work | [Latest report]({{ latest_digest or 'digests/README.md' }}) · [Recent picks](#weekly-picks) |
+
+## <a id="weekly-picks"></a>Recent picks
+
+Up to 5 priority papers added in the 7-day window ending on the latest scan. [Browse the Top 20 →](docs/rankings.md)
+
+{% for p in picks %}
+- **[{{ p.title | label }}]({{ p.detail }})** · {{ p.date }} · {{ p.review.total }}/100
+  {{ p.category_title }} · {{ priority_names_en[p.review.priority] }} · {{ code_names_en[p.open.code or 'unknown'] }}
+
+{% else %}
+No new priority picks in this window. Explore the [full catalog](docs/index.md).
+
+{% endfor %}
+## Research areas
+
+Choose a direction below. Each catalog page has up to 15 papers; select a title for its full review.
+
+| Area | Browse | Papers |
+|---|---|---:|
+{% for group in groups %}
+| <a id="{{ group.id }}"></a>{{ group.title }} | {% for c in group.entries %}[{{ c.title }}]({{ c.path }}){% if not loop.last %} / {% endif %}{% endfor %} | {{ group.count }} |
+{% endfor %}
+
+[Full catalog →](docs/index.md) · [All titles on one page for text search →](docs/all-papers.md)
+
+## Resources & industry
+
+| Resource | Purpose | Count |
+|---|---|---:|
+{% for c in resource_groups %}
+| <a id="{{ c.id }}"></a>[{{ c.title }}]({{ c.path }}) | {{ c.desc }} | {{ c.count }} |
+{% endfor %}
+
+## <a id="topics"></a>Topic guides
+
+- [World-Action Models](topics/world-action-models.md) — Scope, representative systems, and evaluation questions.
+- [Ropedia W0](topics/ropedia-w0.md) — Cross-embodiment world models, data, and teleoperation.
+
+## <a id="scoring"></a>How to read the scores
+
+**A reading priority, not a research leaderboard.** Each dimension is rated **1–5**; the weighted total is out of **100**.
+
+| Dimension | What we check | Weight |
+|---|---|---:|
+| **C · Contribution** | What does this add beyond prior work? | **{{ score_weights.C }}%** |
+| **E · Evidence** | Do experiments, baselines, and ablations support the claims? | **{{ score_weights.E }}%** |
+| **O · Openness** | Can others reproduce it with the released code, weights, and data? | **{{ score_weights.O }}%** |
+| **T · Track record** | Is relevant prior work verifiable? Default: 3/5 when unknown. | **{{ score_weights.T }}%** |
+
+**Example:** C={{ score_example.C }}, E={{ score_example.E }}, O={{ score_example.O }}, T={{ score_example.T }} → `{{ example_formula }}` = **{{ example_total }}/100 · 👀 {{ priority_names_en[example_priority] }}**.
+
+| Priority | Rule | How to use it |
+|---|---|---|
+| 🔥 **Must-read** | ≥80 and E≥3 | Read first; inspect the experimental conditions. |
+| 👀 **Notable** | ≥65, without meeting the rule above | Add to your reading queue. |
+| **Watching** | <65 | Follow for updates; a low score is not a rejection. |
+| **Unrated** | Insufficient evidence for a complete score | Check what evidence is still missing. |
+
+Reviews retain the reasoning, limitations, release status, and check date. Historical digests preserve earlier judgments; paper detail pages carry the current scores. [Full rubric (Chinese) →](docs/METHODOLOGY.md)
+
+<a id="top-20"></a>[Browse the Top 20 →](docs/rankings.md) · <a id="scan-reports"></a>[All scan reports →](digests/README.md)
+
+## Contributing
+
+[Suggest a resource or correction](CONTRIBUTING.md). Pages are generated from data and templates. See the [daily runbook](docs/DAILY_AGENT.md) for maintenance.
+
+## <a id="star-history"></a>Star History
+
+{% include 'star-history.md.j2' %}
+
+[Apache License 2.0](LICENSE) · [@junyuan-fang](https://github.com/junyuan-fang)

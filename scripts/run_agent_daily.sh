@@ -28,8 +28,8 @@ fi
 
 bash scripts/run_daily.sh apply "$DAY"
 
-if [[ -n "$(git status --porcelain data digests docs README.md README.zh-CN.md pipeline/reviews topics)" ]]; then
-  git add data digests docs README.md README.zh-CN.md pipeline/reviews topics
+if [[ -n "$(git status --porcelain data digests docs README.md README.en.md README.zh-CN.md pipeline/reviews topics)" ]]; then
+  git add data digests docs README.md README.en.md README.zh-CN.md pipeline/reviews topics
   git -c user.name="${GIT_AUTHOR_NAME:-junyuan-fang}" \
       -c user.email="${GIT_AUTHOR_EMAIL:-fangjunyuan1@gmail.com}" \
       commit -m "chore: daily scan $DAY"

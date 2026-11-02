@@ -2,7 +2,7 @@
 
 # Awesome Physical AI
 
-[English](README.md) · **简体中文**
+**简体中文** · [English](README.en.md)
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)

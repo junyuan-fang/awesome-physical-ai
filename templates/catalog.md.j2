@@ -6,7 +6,9 @@
 
 {% for page in pages %}{% if page.number == number %}**{{ number }}**{% else %}[{{ page.number }}]({{ page.name }}){% endif %}{% if not loop.last %} · {% endif %}{% endfor %}
 
-按阅读优先级 → 总分 → 首次公开日期排序。评分是阅读建议；[查看评分口径](../METHODOLOGY.md)。
+按阅读优先级 → 总分 → 首次公开日期排序。
+
+{% include 'score-quickref.zh-CN.md.j2' %}
 
 {% for p in entries %}
 {{ offset + loop.index }}. **[{{ p.title | label }}](../papers/{{ p.arxiv_id }}.md)**

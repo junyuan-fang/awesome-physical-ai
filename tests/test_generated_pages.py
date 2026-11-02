@@ -17,7 +17,7 @@ class GeneratedPagesTests(unittest.TestCase):
         cls.papers = generator.load('papers.yaml', 'papers')
 
     def test_homepage_has_a_fixed_reading_budget(self):
-        for path in ('README.md', 'README.zh-CN.md'):
+        for path in ('README.md', 'README.en.md', 'README.zh-CN.md'):
             with self.subTest(path=path):
                 home = self.pages[path]
                 self.assertLessEqual(len(home.splitlines()), 130)
@@ -26,9 +26,10 @@ class GeneratedPagesTests(unittest.TestCase):
                 self.assertNotIn('<details', home)
 
     def test_homepages_share_picks_language_switch_and_star_history(self):
-        en, zh = self.pages['README.md'], self.pages['README.zh-CN.md']
-        self.assertIn('[简体中文](README.zh-CN.md)', en)
-        self.assertIn('[English](README.md)', zh)
+        en, zh = self.pages['README.en.md'], self.pages['README.md']
+        self.assertIn('[简体中文](README.md)', en)
+        self.assertIn('[English](README.en.md)', zh)
+        self.assertEqual(zh, self.pages['README.zh-CN.md'])
         self.assertEqual(re.findall(r'docs/papers/[\d.]+\.md', en), re.findall(r'docs/papers/[\d.]+\.md', zh))
         for page in (en, zh):
             self.assertIn('![Star History Chart](https://api.star-history.com/svg?repos=junyuan-fang/awesome-physical-ai&type=Date)', page)
