@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](../papers/2608.01397.md)**
+46. **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](../papers/2606.07089.md)**
+    2026-06-05 · 观察中 · **62/100** · 未找到仓库
+
+    用轻量路由器按执行阶段决定是否调用文本子任务推理与视频想象，其余步骤只解码动作；作者报告 LIBERO-Long 99.1%、RoboTwin 2.0 困难子集最优，推理效率接近纯动作 WAM。
+
+47. **[Reinforcing VLAs in Task-Agnostic World Models](../papers/2605.12334.md)**
+    2026-05-12 · 观察中 · **62/100** · 未找到仓库
+
+    RAW-Dream 在任务无关视频世界模型中用 VLM 零样本奖励 RL 微调 VLA，并以双噪声验证过滤幻觉；作者报告 LIBERO 四个未见套件平均成功率从 1-shot SFT 的 43.4% 提至 52.3–57.1%。
+
+48. **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](../papers/2608.01397.md)**
     2026-08-02 · 观察中 · **59/100** · 占位仓库
 
     在策略自身表征空间中用可学习动态 token 与 EMA 目标预测动作条件下的未来潜状态，并以 VGGT 几何监督塑形；0.9B 模型作者报告 LIBERO 98.5%、LIBERO-Plus 零样本 73.0%。
 
-47. **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](../papers/2606.13877.md)**
+49. **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](../papers/2606.13877.md)**
     2026-06-11 · 观察中 · **59/100** · 未找到仓库
 
     固定世界模型与 MPC 规划框架，系统比较视觉与触觉表征在 12 个接触密集任务上的作用；作者报告点云+触觉力场仿真平均成功率 36.1% 最高，并做 900 次真机验证。
 
-48. **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](../papers/2608.13049.md)**
+50. **[WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)**
+    2026-06-16 · 观察中 · **58/100** · 实质代码
+
+    在 Genie Envisioner-ACT 上对世界模型做在线视频 SFT（KL 约束）、对动作头用重建奖励做 RL；作者报告 LIBERO-Object 成功率 68%→82%，RLBench Water Plants 19%→22%。
+
+51. **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](../papers/2608.13049.md)**
     2026-08-13 · 观察中 · **57/100** · 占位仓库
 
     H2R-Bench 用 120 条 EgoDex 人类视频构造 240 个人到机器人（夹爪/灵巧手）视频迁移案例，从目标、动作、接触、具身、画质五个维度评测 11 个视频生成模型；作者报告 Seedance 2.0 居首，多数模型在具身与接触上失败。
 
-49. **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](../papers/2608.02603.md)**
+52. **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](../papers/2608.02603.md)**
     2026-08-03 · 观察中 · **57/100** · 占位仓库
 
     分四层（视觉质量、控制遵循、空间一致、世界反应性）评测视频世界模型的基准，含 8 项任务 1,474 个用例；作者评测 20 个相机/动作/语言驱动模型，发现无一兼顾覆盖与表现。
 
-50. **[Wonder: Video World Model Done Better](../papers/2607.26037.md)**
+53. **[Wonder: Video World Model Done Better](../papers/2607.26037.md)**
     2026-07-28 · 观察中 · **57/100** · 未找到仓库
 
     实时相机可控视频世界模型，用像素空间坐标场做相机条件、稀疏注意力检索长时记忆并改进自蒸馏；作者报告 16 FPS 分钟级生成，在自建 I2V/V2V 基准上视觉质量与相机跟随误差优于近期流式世界模型。
 
-51. **[MemLearner: Learning to Query Context memory for Video World Models](../papers/2606.31734.md)**
+54. **[MemLearner: Learning to Query Context memory for Video World Models](../papers/2606.31734.md)**
     2026-06-30 · 观察中 · **57/100** · 未找到仓库
 
     用视频生成模型自身的 query token 自适应检索历史上下文作为视频世界模型记忆；作者报告在含遮挡与动态物体的自建数据上 PSNR/LPIPS/FVD 均优于 CaM、VMem 等基线。
 
-52. **[Targeting World Models to Compromise Robot Learning Pipelines](../papers/2606.09499.md)**
+55. **[Targeting World Models to Compromise Robot Learning Pipelines](../papers/2606.09499.md)**
     2026-06-08 · 观察中 · **57/100** · 未找到仓库
 
     提出视觉提示劫持与视觉转移劫持两类攻击，在看似安全的遥操作数据中植入扰动，经世界模型生成后毒化下游策略；作者报告在 DINO-WM 上实现端到端 PPO 后门，并对 Cosmos-Predict2.5 给出概念验证。
 
-53. **[DRILL: Training World Models to Improve Policies, Not Predict Pixels](../papers/2610.30814.md)**
+56. **[DRILL: Training World Models to Improve Policies, Not Predict Pixels](../papers/2610.30814.md)**
     2026-10-22 · 观察中 · **54/100** · 未找到仓库
 
     DRILL 按策略更新后回报训练世界模型，五个仿真基准上作者报告比 WMPO 平均高 13.1 个百分点。
 
-54. **[DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](../papers/2608.13489.md)**
+57. **[DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](../papers/2608.13489.md)**
     2026-08-13 · 观察中 · **54/100** · 占位仓库
 
     DreamX-Phi 1.0 在 Wan2.2-5B 上用逐臂 SE(3) 的 PRoPE 注意力编码动作、加深度分支与 SAM3+V-JEPA 物体一致性监督，并做 DMD 少步蒸馏；作者报告在 WorldArena 2.0 快照中 Track 1 第一、Track 2 并列第二。
 
-55. **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](../papers/2608.04964.md)**
+58. **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](../papers/2608.04964.md)**
     2026-08-05 · 观察中 · **54/100** · 未找到仓库
 
     利用可逆动作循环必然回到初始状态这一约束，为交互式视频世界模型构造免标注的空间闭合与时间一致奖励做 RL 后训练；作者报告在自建 CycleBench 上回归漂移最多降 44%。
 
-56. **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](../papers/2606.06832.md)**
+59. **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](../papers/2606.06832.md)**
     2026-06-05 · 观察中 · **54/100** · 未找到仓库
 
     仅从“图像-高层动作-图像”转移中学出抽象任务图，再用 CP-SAT 学二值谓词与 STRIPS 算子并蒸馏到视觉分类器，实现由起止图像做经典规划；作者报告在视觉重排任务上规划成功率优于 LatPlan 等基线。
 
-57. **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](../papers/2606.05773.md)**
+60. **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](../papers/2606.05773.md)**
     2026-06-04 · 观察中 · **54/100** · 未找到仓库
 
     面向 VLA 闭环评测的分块世界模型 PiL-World，交替 VLA 推理与多视角未来观测生成；作者报告在三个双臂真机任务上将真机与想象评测的成功率误差从 63.2%（Ctrl-World）降到 12.0%。
-
-58. **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](../papers/2608.20114.md)**
-    2026-08-20 · 观察中 · **53/100** · 未找到仓库
-
-    DECOWAM 在冻结的 FastWAM 上加入残差适配器、未来信息瓶颈、底盘/机械臂解耦潜变量与底盘速度条件，作者报告在自建 ARMDOG 回放上动作 MSE 降 21.7%，79 次真机试验中全身协调性最好。
-
-59. **[Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation](../papers/2606.18960.md)**
-    2026-06-17 · 观察中 · **53/100** · 未找到仓库
-
-    以腕部视角 4D surfel 记忆按未来动作检索历史帧，增强多视角动作条件世界模型；作者报告策略评估与真机相关性比 Ctrl-World 高 14.5%，合成数据使长时程任务成功率 58%→72%。
-
-60. **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](../papers/2606.05645.md)**
-    2026-06-04 · 观察中 · **53/100** · 未找到仓库
-
-    自动驾驶世界-策略统一模型 Discrete-WAM：视觉、决策与加速度动作共享离散 token 空间，层级决策+并行 token 编辑规划；作者报告 NAVSIM v2 EPDMS 90.4、v1 PDMS 92.2，生成 FVD 80.0。
 
 ---
 

@@ -26,25 +26,25 @@
 
     以可优化的各向异性 3D 高斯表示场景并配合可微分块光栅化，在 1080p 下实现 ≥30fps 实时新视角合成，作者报告画质与 Mip-NeRF360 相当且训练更快。
 
-5. **[Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md)** · **89/100**
+5. **[Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md)** · **92/100**
+    World Models · 2026-10-19 · 实质代码
+
+    Ropedia W0 用相机位姿+投影骨架统一人/机器人运动，建 1.3 万小时 Xp-Data 与 Xp-Teleop；作者报告在 DreamDojo、ω-HOME 等五个跨具身基准上视频预测领先。
+
+6. **[Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md)** · **89/100**
     World Models · 2025-01-07 · 实质代码
 
     NVIDIA 开放的世界基础模型平台：视频数据筛选管线、因果视频 tokenizer、扩散与自回归预训练 WFM 及后训练示例，权重以宽松许可发布。
 
-6. **[Long-WAM: Scaling the Context of World-Action Models](papers/2610.10528.md)** · **88/100**
+7. **[Long-WAM: Scaling the Context of World-Action Models](papers/2610.10528.md)** · **88/100**
     World Models · 2026-10-07 · 实质代码
 
     自回归视频预训练 + 因果世界-动作模型：GR-1 上 19.2 s 上下文把成功率从 63.3% 提到 78.7%，RTX 5090 每动作块 107.4 ms。
 
-7. **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](papers/2608.10860.md)** · **88/100**
+8. **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](papers/2608.10860.md)** · **88/100**
     World Models · 2026-08-11 · 实质代码
 
     Flex-π 用冻结的 Wan VAE 同时编码 RGB 与 3D 点图，加上 DINO 语义，与动作联合去噪，单个 checkpoint 支持从纯动作到全联合生成；作者报告在真机双臂灵巧任务上比最强基线高 2–7 倍。
-
-8. **[Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md)** · **86/100**
-    World Models · 2026-10-19 · 部分开放
-
-    Ropedia W0 用相机位姿+投影骨架统一人/机器人运动，建 1.3 万小时 Xp-Data 与 Xp-Teleop；作者报告在 DreamDojo、ω-HOME 等五个跨具身基准上视频预测领先。
 
 9. **[ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation](papers/2610.25690.md)** · **86/100**
     Navigation & Mobility · 2026-10-19 · 实质代码
@@ -71,38 +71,38 @@
 
     OpenWAM 把世界-动作模型拆成可组合模块并系统消融，用 6,369 小时数据训练 OpenWAM-α；作者报告 LIBERO 99.3%、EBench 49.4、真机 RoboDojo 24.4% 成功率。
 
-14. **[RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation](papers/2410.07864.md)** · **86/100**
+14. **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](papers/2606.04463.md)** · **86/100**
+    World Models · 2026-06-03 · 实质代码
+
+    用 2D 运动学骨架渲染统一条件化多种机械臂与人手的动作条件视频世界模型 OSCAR（微调 Cosmos-Predict2.5-2B），作者报告在 RoboArena 7 个策略上虚拟评测与真机结果显著相关。
+
+15. **[RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation](papers/2410.07864.md)** · **86/100**
     Vision-Language-Action (VLA) · 2024-10-10 · 实质代码
 
     1.2B 参数扩散 Transformer 双臂操作基础模型，用物理可解释的统一动作空间在多机器人数据上预训练；作者报告在 ALOHA 真机上零样本泛化与 1–5 次示范学新技能均优于 ACT、OpenVLA、Octo。
 
-15. **[Has GPT-6-Astra Achieved Embodied Intelligence?](papers/2610.22471.md)** · **85/100**
+16. **[Has GPT-6-Astra Achieved Embodied Intelligence?](papers/2610.22471.md)** · **85/100**
     Vision-Language-Action (VLA) · 2026-10-15 · 实质代码
 
     该报告在 12 个基准上用 ICL+扩展步数协议评测 GPT-6-Astra，并在 8 类真机平台验证；作者报告 LIBERO-Ultra-Long 98.8%、RoboDojo 81.9%，但成本与实体验证仍是瓶颈。
 
-16. **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md)** · **83/100**
+17. **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md)** · **83/100**
     Manipulation · 2026-10-24 · 实质代码
 
     AdaDexTrack动态调制参考、物体表示与位置目标，在未见轨迹和物体上优于固定跟踪器，并实现零样本真机迁移。
 
-17. **[Agentic World Action Models](papers/2610.30136.md)** · **83/100**
+18. **[Agentic World Action Models](papers/2610.30136.md)** · **83/100**
     World Models · 2026-10-21 · 实质代码
 
     把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。
 
-18. **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](papers/2608.27406.md)** · **83/100**
+19. **[GreenWAM: A World Foundation Model for Robotics](papers/2610.18774.md)** · **83/100**
+    World Models · 2026-10-13 · 实质代码
+
+    GreenWAM 以 79 维解剖动作空间统一 20 类双臂机器人，世界模型与策略共用一套权重；作者报告 RoboTwin 2.0 平均 67.54%、人形真机 ID 95.6%。
+
+20. **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](papers/2608.27406.md)** · **83/100**
     World Models · 2026-08-27 · 实质代码
 
     CLAP 用末端位姿、语言与潜动作统一异构动作空间并以课程式训练跨具身视频世界模型，作者报告在 DROID 上接近或超过单具身 Ctrl-World，并可零样本用于多策略规划。
-
-19. **[Geometric Action Model for Robot Policy Learning](papers/2606.17046.md)** · **83/100**
-    Vision-Language-Action (VLA) · 2026-06-15 · 实质代码
-
-    把几何基础模型 DA3 在中间层切开插入因果预测器，同时解码未来深度与动作；作者报告 1.4B 模型 LIBERO-Plus 85.5%、单步 6.9 ms，真机换视角更稳健。
-
-20. **[World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis](papers/2606.05979.md)** · **83/100**
-    Vision-Language-Action (VLA) · 2026-06-04 · 实质代码
-
-    提出世界-语言-动作模型 WLA：自回归 VLM 骨干同时预测文本子任务与经 World Expert 监督的物理动态，推理可关闭世界分支；
 

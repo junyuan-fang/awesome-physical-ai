@@ -36,25 +36,25 @@
 
     在低层控制器与力矩接口之间插入只看本体历史的学习型残差力矩模块，纯仿真训练即可零样本上真机；作者报告在 Franka 上同一组权重改善 RL 推箱、BC 翻转与 MPC 平衡任务，优于在线辨识与 RMA。
 
-4. **[Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)**
+4. **[RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction](../papers/2608.28693.md)**
+    2026-08-27 · 值得关注 · **69/100** · 实质代码
+
+    RoboGesture 结合 300 余类手势数据、分层语音-语义对齐器、流式流匹配动作生成与 MPC 安全过滤，作者报告在 BEAT 与 SemanticBEAT 上优于基线，并在 G1 真机实现实时语音交互手势。
+
+5. **[Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)**
     2026-06-11 · 值得关注 · **66/100** · 未找到仓库
 
     把灵巧铰接工具操作当作"动画"问题：程序化抓取关键帧+运动规划+RL 生成仿真数据训练点云扩散策略，作者报告四类工具零样本真机抓取与操作约 70% 成功。
 
-5. **[SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery](../papers/2610.38234.md)**
+6. **[SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery](../papers/2610.38234.md)**
     2026-10-28 · 值得关注 · **65/100** · 未找到仓库
 
     SimRetract仅用仿真示教学习接替牵开器，模型手术场景50次呈递中抓取90%、保持牵拉78%。
 
-6. **[Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](../papers/2610.35075.md)**
+7. **[Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](../papers/2610.35075.md)**
     2026-10-26 · 值得关注 · **65/100** · 未找到仓库
 
     Zero-HLM用实景重建和仿真示范训练人形策略，三项G1任务平均成功率66.7%，真实数据训练对照为46.7%。
-
-7. **[RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction](../papers/2608.28693.md)**
-    2026-08-27 · 观察中 · **63/100** · 部分开放
-
-    RoboGesture 结合 300 余类手势数据、分层语音-语义对齐器、流式流匹配动作生成与 MPC 安全过滤，作者报告在 BEAT 与 SemanticBEAT 上优于基线，并在 G1 真机实现实时语音交互手势。
 
 8. **[Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](../papers/2608.15897.md)**
     2026-08-16 · 观察中 · **62/100** · 未找到仓库

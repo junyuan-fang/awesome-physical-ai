@@ -41,30 +41,30 @@
 
     基于 Qwen3-VL 的多任务导航模型，以可在推理时重配置的任务模式与观测参数服务上层智能体；作者报告 VLN-CE RxR SR 76.5%、EVT-Bench TR 90.0%、NAVSIM PDMS 91.4。
 
-5. **[RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon](../papers/2610.39267.md)**
+5. **[HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](../papers/2608.12860.md)**
+    2026-08-13 · 值得关注 · **66/100** · 实质代码
+
+    HumanoidVLN 在 Isaac Sim 中用 RL 行走策略加 PD/MPC 跟踪器驱动四种人形机器人做 VLN，含 87 个场景、933 条回合；作者报告 JanusVLN 平均成功率最高（43.55%），H1 上跌倒率最高达 71%。
+
+6. **[RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon](../papers/2610.39267.md)**
     2026-10-29 · 值得关注 · **65/100** · 未找到仓库
 
     RAIBO-Wagon以流匹配初始化MPPI并用学习动力学细化，40次室外拖车导航成功34次。
 
-6. **[See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space](../papers/2610.31762.md)**
-    2026-10-22 · 值得关注 · **65/100** · 未找到仓库
+7. **[See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space](../papers/2610.31762.md)**
+    2026-10-22 · 值得关注 · **65/100** · 占位仓库
 
     RepresentNav 联合学习导航表征与未来潜变量；正文单目干扰跟踪成功率为 68.3%，85.5% 是跟踪率。
 
-7. **[RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation](../papers/2610.29845.md)**
+8. **[RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation](../papers/2610.29845.md)**
     2026-10-21 · 值得关注 · **65/100** · 未找到仓库
 
     RangeNav 以 18.3 万参数 LiDAR 编码器导航，未见仿真场景成功率比仅重建预训练平均高 23.73 个百分点。
 
-8. **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](../papers/2606.04534.md)**
+9. **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](../papers/2606.04534.md)**
     2026-06-03 · 观察中 · **56/100** · 未找到仓库
 
     视觉四旋翼的几何感知世界模型 MAD：以机体中心占据/可见性栅格和本体状态代替原图重建作为监督，作者报告仿真最高 9.66 m/s、真实森林飞行 5.05 m/s。
-
-9. **[HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](../papers/2608.12860.md)**
-    2026-08-13 · 观察中 · **54/100** · 未找到仓库
-
-    HumanoidVLN 在 Isaac Sim 中用 RL 行走策略加 PD/MPC 跟踪器驱动四种人形机器人做 VLN，含 87 个场景、933 条回合；作者报告 JanusVLN 平均成功率最高（43.55%），H1 上跌倒率最高达 71%。
 
 10. **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)**
     2026-07-22 · 观察中 · **54/100** · 未找到仓库

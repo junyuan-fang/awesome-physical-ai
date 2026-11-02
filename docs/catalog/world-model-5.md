@@ -21,40 +21,40 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-61. **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](../papers/2606.03188.md)**
+61. **[Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation](../papers/2606.18960.md)**
+    2026-06-17 · 观察中 · **53/100** · 未找到仓库
+
+    以腕部视角 4D surfel 记忆按未来动作检索历史帧，增强多视角动作条件世界模型；作者报告策略评估与真机相关性比 Ctrl-World 高 14.5%，合成数据使长时程任务成功率 58%→72%。
+
+62. **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](../papers/2606.05645.md)**
+    2026-06-04 · 观察中 · **53/100** · 未找到仓库
+
+    自动驾驶世界-策略统一模型 Discrete-WAM：视觉、决策与加速度动作共享离散 token 空间，层级决策+并行 token 编辑规划；作者报告 NAVSIM v2 EPDMS 90.4、v1 PDMS 92.2，生成 FVD 80.0。
+
+63. **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](../papers/2606.03188.md)**
     2026-06-02 · 观察中 · **53/100** · 未找到仓库
 
     GeoSem-WAM 在 Fast-WAM 训练中加入未来几何与语义预测辅助头、推理时丢弃；作者报告 LIBERO 98.55%、RoboTwin 2.0 92.52%，Franka 真机平均 88.9%→95.4%。
 
-62. **[ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models](../papers/2608.13438.md)**
+64. **[ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models](../papers/2608.13438.md)**
     2026-08-13 · 观察中 · **51/100** · 未找到仓库
 
     ContactGuard 用多视角动作条件潜在世界模型在夹爪闭合前推演策略动作块的后果，以线性探针判断是否中止；作者报告在四个真机抓取场景中优于单视角、当前状态和 FAIL-Detect 等失败检测基线。
 
-63. **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](../papers/2608.10618.md)**
+65. **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](../papers/2608.10618.md)**
     2026-08-11 · 观察中 · **51/100** · 未找到仓库
 
     以世界模型为中心的自动驾驶赛车智能体，从接近极限的成功与失败数据中学习交互演化和动力学边界；作者报告真车定位感知在 256.3 km/h 下稳定，仿真对抗场景交互成功率为 88.3%。
 
-64. **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](../papers/2607.25337.md)**
-    2026-07-28 · 观察中 · **51/100** · 未找到仓库
-
-    在 LeWM 的 JEPA 骨干上从无奖励示范中挖掘有向时序代价用于潜空间 MPC；作者报告 Two-Room 成功率 100%（LeWM 97.4%），OGB-Cube 提升 14.2 个百分点，四个环境均不低于 LeWM 与 RC-aux。
-
-65. **[CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization](../papers/2606.04130.md)**
+66. **[CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization](../papers/2606.04130.md)**
     2026-06-02 · 观察中 · **51/100** · 未找到仓库
 
     CLAW 从无动作标注视频端到端联合学习连续潜动作与扩散世界模型，用梯度反转的对抗正则防止未来信息泄漏；作者报告在 VP2 六任务中四项、Crafter/Procgen 四任务中三项规划成功率最高，并用于真机 UR5 策略预训练。
 
-66. **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](../papers/2607.28443.md)**
+67. **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](../papers/2607.28443.md)**
     2026-07-30 · 观察中 · **48/100** · 未找到仓库
 
     CS-JEPA 让每台机器人仅凭本地历史与邻居消息预测同一潜空间集体未来，无一致性损失；作者报告仿真中集体状态误差较重建基线降 28.4%，拓扑/规模迁移下降 64–76%。
-
-67. **[WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)**
-    2026-06-16 · 观察中 · **46/100** · 未找到仓库
-
-    在 Genie Envisioner-ACT 上对世界模型做在线视频 SFT（KL 约束）、对动作头用重建奖励做 RL；作者报告 LIBERO-Object 成功率 68%→82%，RLBench Water Plants 19%→22%。
 
 68. **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](../papers/2607.23909.md)**
     2026-07-27 · 观察中 · **37/100** · 未找到仓库

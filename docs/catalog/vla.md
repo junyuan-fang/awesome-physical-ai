@@ -61,40 +61,40 @@
 
     FlashVLA 让多个动作块以错开的噪声水平在流式缓冲区中联合去噪，每步产出一个可执行块，作者报告 LIBERO 上异步执行 2.43 倍提速且成功率升至 97.8%，真机 30 Hz 控制。
 
-9. **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](../papers/2608.16885.md)**
+9. **[HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](../papers/2608.16837.md)**
+    2026-08-17 · 重点阅读 · **80/100** · 实质代码
+
+    HAF 将通用流匹配 VLA 改为"行走/头部→腰部→双臂"三阶段分层去噪，并在冻结骨干上做 DCT 低维噪声空间离线到在线 SAC；作者报告 7 项真机人形任务平均分 70.5%，高于最强基线 53.3%。
+
+10. **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](../papers/2608.16885.md)**
     2026-08-17 · 重点阅读 · **80/100** · 实质代码
 
     τ0-VLA 用 40,115 小时真机数据训练分层机器人基础模型，高层以世界模型预测子任务结果并做束搜索；作者报告真机长程任务平均成功率 45%（π0.5 为 22.5%），测试时计算进一步提升，代码与权重已开源。
 
-10. **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](../papers/2607.27205.md)**
+11. **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](../papers/2607.27205.md)**
     2026-07-29 · 重点阅读 · **80/100** · 实质代码
 
     去掉 LLM 主干、以 BERT 文本编码与双向视觉-语言交叉注意力直接映射到动作块的紧凑 VLA；作者报告 0.2B 参数在 LIBERO 平均 97.6%、RTX 4090 上 31.2 ms 与 0.9 GiB 显存，0.4B 版 RoboTwin 2.0 达 88.06%。
 
-11. **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](../papers/2607.15330.md)**
+12. **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](../papers/2607.15330.md)**
     2026-07-16 · 重点阅读 · **80/100** · 实质代码
 
     小米以 10 万+小时 UMI 真实轨迹（VLM 自动标注状态转移）预训练 2.6B–10.5B VLA，再用约 1 万小时跨本体数据后训练；作者报告 RoboCasa365 成功率 57.4%（此前最佳 46.6%）。
 
-12. **[Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](../papers/2601.12993.md)**
+13. **[Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](../papers/2601.12993.md)**
     2026-01-19 · 重点阅读 · **80/100** · 实质代码
 
     以人类交互轨迹为「母语」的跨本体 VLA：3.5 万小时 UniHand-2.0 语料、30 种本体统一动作空间；作者报告 LIBERO 98.9%、RoboCasa 53.9%，单一检查点控制 5 种真机。
 
-13. **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)**
+14. **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)**
     2026-10-25 · 值得关注 · **77/100** · 实质代码
 
     RynnVLA以三维潜在动作利用异构视频预训练，作者报告4B模型在LIBERO成功率98.8%，并验证六项真机任务。
 
-14. **[GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](../papers/2610.29866.md)**
-    2026-10-21 · 值得关注 · **77/100** · 实质代码
+15. **[Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](../papers/2610.31569.md)**
+    2026-10-22 · 值得关注 · **77/100** · 实质代码
 
-    GeoMem-VLA 将三维监督融入时序记忆，作者报告 LIBERO 平均成功率 98.9%、五项真机任务 78.0%。
-
-15. **[$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](../papers/2607.23782.md)**
-    2026-07-26 · 值得关注 · **77/100** · 实质代码
-
-    在大规模视触觉数据上预训练的视觉-触觉-语言-动作模型，以预测的潜触觉 token 条件动作专家，并用 ALTER 离线 RL 从部署数据改进；作者报告 9 个真机任务全胜、20 任务仿真平均 63.8%（最强基线 44.0%）。
+    Echo 将停止与失败信号同动作共同去噪，作者在五项真机任务及 LIBERO-Recovery 中报告收益。
 
 ---
 

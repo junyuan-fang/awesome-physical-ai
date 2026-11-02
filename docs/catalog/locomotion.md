@@ -31,15 +31,15 @@
 
     三阶段训练的人形全身接箱框架：仿真第一视角 RGB-D 抓接成功率 85.7%，Unitree G1 真机 2.5 m/5 m 处达 65%/40%。
 
-3. **[HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](../papers/2606.06493.md)**
+3. **[Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](../papers/2606.03985.md)**
+    2026-06-02 · 重点阅读 · **80/100** · 实质代码
+
+    Humanoid-GPT 把约 300 个 PPO 专家蒸馏进因果 Transformer，基于 20 亿帧动作语料做人形零样本全身跟踪；作者报告 AMASS 测试成功率随规模升至 92.6%，G1 真机零样本跟踪舞蹈。
+
+4. **[HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](../papers/2606.06493.md)**
     2026-06-04 · 值得关注 · **74/100** · 实质代码
 
     把动作跟踪、行走、摔倒恢复三个教师按动作切片与上下文蒸馏进单个 MoE 学生，以 10 维任务空间指令驱动 29 自由度 G1；作者报告匹配对比中鲁棒工作空间最大并完成 VLM 驱动的真机移动操作。
-
-4. **[Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](../papers/2606.03985.md)**
-    2026-06-02 · 值得关注 · **74/100** · 部分开放
-
-    Humanoid-GPT 把约 300 个 PPO 专家蒸馏进因果 Transformer，基于 20 亿帧动作语料做人形零样本全身跟踪；作者报告 AMASS 测试成功率随规模升至 92.6%，G1 真机零样本跟踪舞蹈。
 
 5. **[LadderMan: Learning Humanoid Perceptive Ladder Climbing](../papers/2606.05873.md)**
     2026-06-04 · 值得关注 · **71/100** · 未找到仓库
@@ -66,35 +66,35 @@
 
     预测未来落脚点并只观察局部地形，作者报告约三分之一训练迭代达到相同难度，且零样本部署 G1。
 
-10. **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](../papers/2608.18234.md)**
+10. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
+    2026-08-20 · 值得关注 · **65/100** · 实质代码
+
+    MILD 用离散单元颗粒介质接触模型在仿真中刻画脚-软地非均匀交互并训练地形感知 RL 双足控制器，作者报告真机在泡沫、沙地等六类软地面上成功率与能效优于对比方法。
+
+11. **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](../papers/2608.18234.md)**
     2026-08-18 · 值得关注 · **65/100** · 未找到仓库
 
     行为世界模型式人形全身跟踪控制器，联合预测动作、下一状态与行为分布；作者报告地形交互成功率81.3%（最佳基线4.3倍）、摔倒恢复率99.3%。
 
-11. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
+12. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
     2026-06-03 · 值得关注 · **65/100** · 实质代码
 
     用模态专属编码器把机器人关节角、人体姿态、末端位姿映射到共享潜空间，单阶段 RL 训练一个人形全身控制器 M3imic；作者报告在未见 OMOMO 测试集上末端模态成功率 98.42%，并在 G1 上真机验证。
 
-12. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
+13. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
     2026-06-04 · 观察中 · **62/100** · 未找到仓库
 
     人形主动“注视”感知行走框架 TAGA：用深度图与本体感知预测高度图中的关注区域并裁剪编码，经 RL 自然涌现注视行为；作者报告 G1 真机跨越 1.2 m 沟壑并通过稀疏落脚点。
 
-13. **[Humanoid Mobility via Attention-based Contacts](../papers/2610.31608.md)**
+14. **[Humanoid Mobility via Attention-based Contacts](../papers/2610.31608.md)**
     2026-10-22 · 观察中 · **59/100** · 未找到仓库
 
     以接触规划连接运动先验与强化学习，作者在 G1 展示无参考轨迹的攀爬、穿越及失败恢复。
 
-14. **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](../papers/2606.25765.md)**
+15. **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](../papers/2606.25765.md)**
     2026-06-24 · 观察中 · **59/100** · 未找到仓库
 
     三阶段强化学习框架 StairMaster 结合交叉注意力视觉编码、空间感知循环记忆与深度噪声建模；作者报告 Unitree Go2 零样本迁移后在 37°/55° 镂空楼梯真机成功率 93.3%/63.3%。
-
-15. **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](../papers/2606.19928.md)**
-    2026-06-18 · 观察中 · **59/100** · 未找到仓库
-
-    把左右镜像等变性硬嵌入 RSSM 世界模型与 actor-critic，用于四足跑酷；作者报告真机跨越 2.13 m 间隙、攀上 1.63 m 平台，并对镜像地形零样本泛化。
 
 ---
 

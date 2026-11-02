@@ -36,25 +36,25 @@
 
     RynnValue 以“到目标的时间距离”为监督，在 7000+ 小时异构数据上训练价值基础模型，作者报告 RBM-EVAL-OOD 上 Kendall τ 为 0.704，并在真机 RL、数据筛选和推理引导中带来提升。
 
-4. **[EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](../papers/2610.26625.md)**
+4. **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](../papers/2606.20521.md)**
+    2026-06-18 · 值得关注 · **75/100** · 实质代码
+
+    在 5000 小时等规模下比较第一视角人类视频与遥操作机器人数据做 WAM 预训练；作者报告人类视频在未见任务上动作验证损失约低 20%，且随规模对数线性下降。
+
+5. **[Orca: The World is in Your Mind](../papers/2606.30534.md)**
+    2026-06-29 · 值得关注 · **69/100** · 实质代码
+
+    BAAI 提出以“下一状态预测”学习统一世界隐空间的 Orca，用 12.5 万小时视频与 1.6 亿事件标注预训练；冻结主干后接文本、图像、动作读出头，作者报告优于同规模基线。
+
+6. **[EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](../papers/2610.26625.md)**
     2026-10-19 · 值得关注 · **68/100** · 占位仓库
 
     EgoXperience 构建 50 小时自我中心数据 EgoX-Data-6M 与基准 EgoX-Bench，EgoX 单次前向联合重建相机、深度、双手与物体 6DoF；作者报告 EgoX-Bench 手部误差降至 113.24 mm。
 
-5. **[PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](../papers/2609.14973.md)**
-    2026-09-14 · 值得关注 · **66/100** · 部分开放
+7. **[PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](../papers/2609.14973.md)**
+    2026-09-14 · 观察中 · **60/100** · 占位仓库
 
     PhysBrain 1.5 在 Qwen3-VL 上把语言、末端轨迹与未来 RGB/深度/机器人掩码统一为离散 token 联合自回归训练，8B 模型在 28 个具身理解基准上平均 72.5，为开源最高。
-
-6. **[Orca: The World is in Your Mind](../papers/2606.30534.md)**
-    2026-06-29 · 观察中 · **63/100** · 部分开放
-
-    BAAI 提出以“下一状态预测”学习统一世界隐空间的 Orca，用 12.5 万小时视频与 1.6 亿事件标注预训练；冻结主干后接文本、图像、动作读出头，作者报告优于同规模基线。
-
-7. **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](../papers/2606.20521.md)**
-    2026-06-18 · 观察中 · **63/100** · 占位仓库
-
-    在 5000 小时等规模下比较第一视角人类视频与遥操作机器人数据做 WAM 预训练；作者报告人类视频在未见任务上动作验证损失约低 20%，且随规模对数线性下降。
 
 8. **[Self-Evolving Embodied Agents via Skill-Harness Evolution](../papers/2608.11350.md)**
     2026-08-11 · 观察中 · **51/100** · 未找到仓库

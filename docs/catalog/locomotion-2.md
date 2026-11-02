@@ -21,25 +21,25 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-16. **[MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation](../papers/2606.06139.md)**
+16. **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](../papers/2606.19928.md)**
+    2026-06-18 · 观察中 · **59/100** · 未找到仓库
+
+    把左右镜像等变性硬嵌入 RSSM 世界模型与 actor-critic，用于四足跑酷；作者报告真机跨越 2.13 m 间隙、攀上 1.63 m 平台，并对镜像地形零样本泛化。
+
+17. **[MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation](../papers/2606.06139.md)**
     2026-06-04 · 观察中 · **57/100** · 未找到仓库
 
     不依赖遥操作或人类动作重定向，用 LLM 引导的进化程序搜索接触序列、配合分层运动学/动力学轨迹优化，发现长时程人形 loco-manipulation 动作，并经 RL 跟踪策略零样本部署到真机。
 
-17. **[Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion](../papers/2608.15766.md)**
+18. **[Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion](../papers/2608.15766.md)**
     2026-08-16 · 观察中 · **54/100** · 未找到仓库
 
     Tac4Loco 把每只脚 60 单元的足底压力阵列量化为保拓扑的序数表示，经时空双分支编码后输入人形机器人行走策略；作者报告仿真坡面存活率从 22.0% 升至 77.9%，并在 G1 真机零样本走过泡沫平台与碎石路。
 
-18. **[CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation](../papers/2606.04718.md)**
+19. **[CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation](../papers/2606.04718.md)**
     2026-06-03 · 观察中 · **54/100** · 未找到仓库
 
     两阶段 RL 框架 CoRe-MoE：先用双 AMP 专家学走跑平滑切换，再加以 SwAV 对比学习训练门控的深度感知 MoE 残差分支适应多地形，作者报告 Unitree G1 零样本部署走跑过台阶、坡道、障碍。
-
-19. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
-    2026-08-20 · 观察中 · **53/100** · 未找到仓库
-
-    MILD 用离散单元颗粒介质接触模型在仿真中刻画脚-软地非均匀交互并训练地形感知 RL 双足控制器，作者报告真机在泡沫、沙地等六类软地面上成功率与能效优于对比方法。
 
 20. **[SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints](../papers/2605.28549.md)**
     2026-05-27 · 观察中 · **53/100** · 未找到仓库
@@ -47,7 +47,7 @@
     SPRINT 仅用 5 段（14 秒）人体步态训练频率自适应谱先验，生成参考关节轨迹再由残差 RL 稳定；作者报告 Unitree G1 零样本实机冲刺在 6 m/s 指令下实测约 5.9 m/s，并可平滑切换步态。
 
 21. **[Robust Brachiation on a Life-Sized Dual-Arm Robot Using Waypoint-Guided Reinforcement Learning](../papers/2608.17320.md)**
-    2026-08-18 · 观察中 · **51/100** · 未找到仓库
+    2026-08-18 · 观察中 · **51/100** · 占位仓库
 
     提出路点引导强化学习 WGRL，用稀疏末端路点加任务成功与机械能奖励，在真人尺寸双臂机器人上零样本实现单杠悬臂摆荡移动，真机穿越 4 根横杆并出现失败后加大摆幅重试的恢复行为。
 

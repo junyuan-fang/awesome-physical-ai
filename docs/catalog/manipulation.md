@@ -36,65 +36,65 @@
 
     RoboTok 以躯干中心 3D 手轨迹学习运动嵌入，从网络视频检索演示；作者报告真机灵巧操作平均成功率比最强基线高 42.2 个百分点。
 
-4. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
+4. **[Pre-training Visual Dexterity in Simulation](../papers/2608.15917.md)**
+    2026-08-16 · 值得关注 · **78/100** · 实质代码
+
+    SPD 用 VR 在 MuJoCo 中遥操作采集 75 小时双手灵巧操作数据预训练扩散 Transformer，再用 1–2 小时真机数据微调；作者报告在 5 项 56 自由度真机任务上均优于从零训练的 BC。
+
+5. **[CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](../papers/2610.29702.md)**
+    2026-10-21 · 值得关注 · **77/100** · 实质代码
+
+    CausGround 提取动作前置条件与效果，作者报告 VirtualHome 平均成功率从 24.9% 提高至 53.3%。
+
+6. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
+    2026-10-19 · 值得关注 · **74/100** · 实质代码
+
+    用机队部署经验替代专家纠正：FERT 从成功轨迹检索与失败相关的片段，96 台真机 5 个任务达 93.3–99.2% 成功率。
+
+7. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
     2026-08-19 · 值得关注 · **72/100** · 实质代码
 
     可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。
 
-5. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
+8. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
     2026-10-29 · 值得关注 · **71/100** · 实质代码
 
     LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
 
-6. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
+9. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
     2026-10-21 · 值得关注 · **71/100** · 实质代码
 
     首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。
 
-7. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
+10. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
     2026-09-29 · 值得关注 · **71/100** · 实质代码
 
     MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。
 
-8. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
+11. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
     2026-09-04 · 值得关注 · **71/100** · 实质代码
 
     TacPAC 在预测视觉与触觉的世界-动作模型上加入触觉专家，执行中将实时触觉与缓存的预期接触对照来修正剩余动作，作者报告五个真机接触密集任务平均成功率由 22% 升至 64%。
 
-9. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
+12. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
     2026-07-22 · 值得关注 · **71/100** · 实质代码
 
     HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
 
-10. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
-    2026-10-19 · 值得关注 · **68/100** · 部分开放
-
-    用机队部署经验替代专家纠正：FERT 从成功轨迹检索与失败相关的片段，96 台真机 5 个任务达 93.3–99.2% 成功率。
-
-11. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+13. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
     2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
     将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
 
-12. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
+14. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
     2026-10-26 · 值得关注 · **66/100** · 部分开放
 
     VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
 
-13. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
+15. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
     2026-10-20 · 值得关注 · **66/100** · 实质代码
 
     基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
-
-14. **[Pre-training Visual Dexterity in Simulation](../papers/2608.15917.md)**
-    2026-08-16 · 值得关注 · **66/100** · 未找到仓库
-
-    SPD 用 VR 在 MuJoCo 中遥操作采集 75 小时双手灵巧操作数据预训练扩散 Transformer，再用 1–2 小时真机数据微调；作者报告在 5 项 56 自由度真机任务上均优于从零训练的 BC。
-
-15. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
-    2026-08-11 · 值得关注 · **66/100** · 实质代码
-
-    用遥操作采集的真机多模态数据训练 DDPM，从单视角点云生成双臂灵巧手的抓取关节构型，再结合运动规划和力引导微调执行；作者报告在未见过的大物体上总成功率为 61.9%。
 
 ---
 

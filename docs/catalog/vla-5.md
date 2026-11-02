@@ -21,23 +21,23 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-61. **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](../papers/2603.08122.md)**
+61. **[Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action](../papers/2605.22283.md)**
+    2026-05-21 · 观察中 · **59/100** · 未找到仓库
+
+    SOMA 为 VLA 加入由可动头部相机扫描构建、在线更新并按指令检索的空间记忆，解决目标出视野的操作；作者报告 5 个真实出视野任务均优于 GR00T-N1.5 等基线，SimplerEnv 视觉匹配平均 63.2%。
+
+62. **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](../papers/2603.08122.md)**
     2026-03-09 · 观察中 · **57/100** · 未找到仓库
 
     RL 原子技能 IMCopilot 既辅助遥操作采集又作 VLA 底层原语，MoDE-VLA 以残差注入融合力/触觉；作者报告 4 项接触密集真机任务平均成功率 34%，π0 基线为 15%。
 
-62. **[BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models](../papers/2605.30226.md)**
+63. **[BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models](../papers/2605.30226.md)**
     2026-05-28 · 观察中 · **56/100** · 未找到仓库
 
     BORA 在一致性策略 VLA 中集成动作条件 critic，离线训练后冻结基座、在线只学轻量残差 actor，并用局部策略辅助灵巧手人工纠正；作者报告 6 个真实灵巧任务每任务 20 条在线轨迹后成功率 60.8%→82.5%。
 
-63. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
-    2026-08-20 · 观察中 · **54/100** · 未找到仓库
-
-    EXIMO 以「VLM 编排探索→蒸馏 SFT→残差离策略 RL」三阶段微调 VLA，作者报告在 ALOHA 仿真 22 个长程/推理任务上样本效率与最终成功率均优于直接 RL 基线。
-
 64. **[EATR-Stereo: Embodiment-Aware Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control](../papers/2608.17453.md)**
-    2026-08-18 · 观察中 · **53/100** · 未找到仓库
+    2026-08-18 · 观察中 · **53/100** · 占位仓库
 
     EATR-Stereo 保留主视图 token，用交叉注意力从另一目构建对齐的辅助 token，并按分身体段本体状态路由；作者报告 33 自由度人形真机长程任务全程成功率 60%，遮挡恢复 80%。
 

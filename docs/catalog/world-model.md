@@ -21,25 +21,25 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-1. **[Cosmos World Foundation Model Platform for Physical AI](../papers/2501.03575.md)**
+1. **[Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](../papers/2610.26855.md)**
+    2026-10-19 · 重点阅读 · **92/100** · 实质代码
+
+    Ropedia W0 用相机位姿+投影骨架统一人/机器人运动，建 1.3 万小时 Xp-Data 与 Xp-Teleop；作者报告在 DreamDojo、ω-HOME 等五个跨具身基准上视频预测领先。
+
+2. **[Cosmos World Foundation Model Platform for Physical AI](../papers/2501.03575.md)**
     2025-01-07 · 重点阅读 · **89/100** · 实质代码 · 经典工作
 
     NVIDIA 开放的世界基础模型平台：视频数据筛选管线、因果视频 tokenizer、扩散与自回归预训练 WFM 及后训练示例，权重以宽松许可发布。
 
-2. **[Long-WAM: Scaling the Context of World-Action Models](../papers/2610.10528.md)**
+3. **[Long-WAM: Scaling the Context of World-Action Models](../papers/2610.10528.md)**
     2026-10-07 · 重点阅读 · **88/100** · 实质代码
 
     自回归视频预训练 + 因果世界-动作模型：GR-1 上 19.2 s 上下文把成功率从 63.3% 提到 78.7%，RTX 5090 每动作块 107.4 ms。
 
-3. **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](../papers/2608.10860.md)**
+4. **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](../papers/2608.10860.md)**
     2026-08-11 · 重点阅读 · **88/100** · 实质代码
 
     Flex-π 用冻结的 Wan VAE 同时编码 RGB 与 3D 点图，加上 DINO 语义，与动作联合去噪，单个 checkpoint 支持从纯动作到全联合生成；作者报告在真机双臂灵巧任务上比最强基线高 2–7 倍。
-
-4. **[Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](../papers/2610.26855.md)**
-    2026-10-19 · 重点阅读 · **86/100** · 部分开放
-
-    Ropedia W0 用相机位姿+投影骨架统一人/机器人运动，建 1.3 万小时 Xp-Data 与 Xp-Teleop；作者报告在 DreamDojo、ω-HOME 等五个跨具身基准上视频预测领先。
 
 5. **[LeWAM: End-to-End World and Action Modeling with JEPAs](../papers/2610.12818.md)**
     2026-10-08 · 重点阅读 · **86/100** · 实质代码
@@ -51,45 +51,45 @@
 
     OpenWAM 把世界-动作模型拆成可组合模块并系统消融，用 6,369 小时数据训练 OpenWAM-α；作者报告 LIBERO 99.3%、EBench 49.4、真机 RoboDojo 24.4% 成功率。
 
-7. **[Agentic World Action Models](../papers/2610.30136.md)**
+7. **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](../papers/2606.04463.md)**
+    2026-06-03 · 重点阅读 · **86/100** · 实质代码
+
+    用 2D 运动学骨架渲染统一条件化多种机械臂与人手的动作条件视频世界模型 OSCAR（微调 Cosmos-Predict2.5-2B），作者报告在 RoboArena 7 个策略上虚拟评测与真机结果显著相关。
+
+8. **[Agentic World Action Models](../papers/2610.30136.md)**
     2026-10-21 · 重点阅读 · **83/100** · 实质代码
 
     把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。
 
-8. **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](../papers/2608.27406.md)**
+9. **[GreenWAM: A World Foundation Model for Robotics](../papers/2610.18774.md)**
+    2026-10-13 · 重点阅读 · **83/100** · 实质代码
+
+    GreenWAM 以 79 维解剖动作空间统一 20 类双臂机器人，世界模型与策略共用一套权重；作者报告 RoboTwin 2.0 平均 67.54%、人形真机 ID 95.6%。
+
+10. **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](../papers/2608.27406.md)**
     2026-08-27 · 重点阅读 · **83/100** · 实质代码
 
     CLAP 用末端位姿、语言与潜动作统一异构动作空间并以课程式训练跨具身视频世界模型，作者报告在 DROID 上接近或超过单具身 Ctrl-World，并可零样本用于多策略规划。
 
-9. **[RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](../papers/2607.06559.md)**
+11. **[RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](../papers/2607.06559.md)**
     2026-07-07 · 重点阅读 · **80/100** · 实质代码
 
     由单张 RGB-D 图与语言指令同步生成未来 RGB、深度与光流的 4D 世界模型，配套 2.54 亿帧 Rynn4DDataset 与逆动力学策略头；作者报告真机灵巧操作上优于 π0.5、DP 等基线。
 
-10. **[$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](../papers/2606.13672.md)**
+12. **[$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](../papers/2606.13672.md)**
     2026-06-11 · 重点阅读 · **80/100** · 实质代码
 
     多视角潜空间流匹配世界模型，兼顾保真、长时一致与速度；作者报告真机策略评估相关性 0.870、合成数据使 π0.5 成功率提升 38%、测试时规划提升 14%。
 
-11. **[$\mu_0$: A Scalable 3D Interaction-Trace World Model](../papers/2606.13769.md)**
+13. **[$\mu_0$: A Scalable 3D Interaction-Trace World Model](../papers/2606.13769.md)**
     2026-06-11 · 重点阅读 · **80/100** · 实质代码
 
     从异构视频自动提取事件级 3D 交互轨迹训练轨迹世界模型 μ0，冻结后接动作专家；作者报告 UR3 真机三任务平均 91.7%，RoboCasa365 上 30.25% 高于 π0。
 
-12. **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](../papers/2606.04463.md)**
-    2026-06-03 · 重点阅读 · **80/100** · 部分开放
-
-    用 2D 运动学骨架渲染统一条件化多种机械臂与人手的动作条件视频世界模型 OSCAR（微调 Cosmos-Predict2.5-2B），作者报告在 RoboArena 7 个策略上虚拟评测与真机结果显著相关。
-
-13. **[Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)**
+14. **[Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)**
     2026-10-21 · 值得关注 · **77/100** · 实质代码
 
     FRED 用未来表征自蒸馏增强单步世界动作模型，OpenArm 人类视频技能迁移成功率达 50.0%。
-
-14. **[GreenWAM: A World Foundation Model for Robotics](../papers/2610.18774.md)**
-    2026-10-13 · 值得关注 · **77/100** · 部分开放
-
-    GreenWAM 以 79 维解剖动作空间统一 20 类双臂机器人，世界模型与策略共用一套权重；作者报告 RoboTwin 2.0 平均 67.54%、人形真机 ID 95.6%。
 
 15. **[Keep the Future, Drop the Rollout: RIFT for World Action Models](../papers/2608.11521.md)**
     2026-08-12 · 值得关注 · **77/100** · 实质代码

@@ -56,15 +56,15 @@
 
     CARD以接触力目标重定向人类示教，GRAB上物理重定向严格成功率由12%升至32%。
 
-8. **[MonoDuo: Using One Robot Arm to Learn Bimanual Policies](../papers/2605.29298.md)**
+8. **[HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning](../papers/2606.04825.md)**
+    2026-06-03 · 观察中 · **64/100** · 部分开放
+
+    带操作者触觉反馈的遥操作采集的视触觉语言动作数据集 HapTile：UR5e+双指尖视触觉传感器，38 任务 1726 条示范；Diffusion Policy 与 π0 基线显示触觉输入效果随任务而异。
+
+9. **[MonoDuo: Using One Robot Arm to Learn Bimanual Policies](../papers/2605.29298.md)**
     2026-05-28 · 观察中 · **60/100** · 未找到仓库
 
     MonoDuo 用"单臂机器人+人手协作"采集双臂示范，经手部姿态估计、分割与修复合成目标双臂机器人数据；作者报告 UR5e 双臂零样本成功率最高 70%，加 25 条目标示范微调后较从零训练提升 65–70 个百分点。
-
-9. **[HapTile: A Haptic-Informed Vision-Tactile-Language-Action Dataset for Contact-Rich Imitation Learning](../papers/2606.04825.md)**
-    2026-06-03 · 观察中 · **58/100** · 占位仓库
-
-    带操作者触觉反馈的遥操作采集的视触觉语言动作数据集 HapTile：UR5e+双指尖视触觉传感器，38 任务 1726 条示范；Diffusion Policy 与 π0 基线显示触觉输入效果随任务而异。
 
 10. **[Hand-in-the-Loop: Improving VLA Policies for Dexterous Manipulation via Seamless Hand-Arm Intervention](../papers/2605.15157.md)**
     2026-05-14 · 观察中 · **57/100** · 未找到仓库
@@ -77,7 +77,7 @@
     NestDex 让操作者只控制机械臂、用单自由度离合器调节学习到的手部技能，由视觉语言选择器切换技能来采集灵巧操作示范，再训练外层视觉运动策略；作者报告示范采集成功率与效率高于 AnyTeleop。
 
 12. **[Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning](../papers/2608.20546.md)**
-    2026-08-20 · 观察中 · **43/100** · 未找到仓库
+    2026-08-20 · 观察中 · **43/100** · 占位仓库
 
     Koala 协同设计手持数采器与机器人三自由度夹爪（双拇指、低反射质量连杆），作者展示其可完成多类抓取与工具使用，并以手持与遥操作数据训练扩散策略在 FR3 上执行。
 

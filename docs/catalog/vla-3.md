@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-31. **[RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)**
-    2026-07-29 · 值得关注 · **68/100** · 部分开放
+31. **[World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation](../papers/2608.05369.md)**
+    2026-08-05 · 值得关注 · **71/100** · 实质代码
 
-    在冻结 VLA 推理时，用基于动作专家潜变量训练的离线 RL 流策略组合引导动作采样，且仅在失败检测器报警时启用；作者报告 SIMPLER/PolaRiS 分布外任务最高提升 17.3%。
+    以 VLM 中的潜在建模 token 为接口、结合腕部历史预测未来腕部 V-JEPA 潜变量并注入动作头，辅以 W2-CoT 结构化标注；作者报告 LIBERO 98.5%、LIBERO-Plus 84.0%，推理超 80 Hz。
 
-32. **[Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)**
+32. **[T-Rex: Tactile-Reactive Dexterous Manipulation](../papers/2606.17055.md)**
+    2026-06-15 · 值得关注 · **71/100** · 未找到仓库
+
+    100 小时触觉同步双臂灵巧数据中训练+低频动作专家/高频触觉专家级联流匹配的 VLA；作者报告 12 项真机触觉任务平均成功率 65%，比最强基线高 30 个百分点。
+
+33. **[IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation](../papers/2605.14712.md)**
+    2026-05-14 · 值得关注 · **71/100** · 部分开放
+
+    IntentVLA 用冻结 VGGT 编码近期视觉历史并融入 VLA，抑制观测混叠下的意图切换；作者报告自建 AliasBench 平均成功率 45.8%（基线 9.0%），SimplerEnv 72.9%、LIBERO 98.6%。
+
+34. **[G0.5: One Autoregressive Stream for Robot Reasoning and Action](../papers/2608.11739.md)**
+    2026-08-12 · 值得关注 · **68/100** · 占位仓库
+
+    Galaxea G0.5 用单一自回归解码器在同一 token 流中生成推理与动作，配合跨具身 RVQ 动作分词与视觉记忆；作者报告 R1 真机微调 76.7%、BEHAVIOR 挑战 31.4%、LIBERO 98.9%。
+
+35. **[Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)**
     2026-05-28 · 值得关注 · **68/100** · 占位仓库
 
     Qwen-VLA 以 Qwen3.5-4B 加 DiT 动作专家统一操作、导航与轨迹预测；作者报告单一模型 LIBERO 97.9%、Simpler-WidowX 73.7%、RoboTwin 86.1/87.2%、R2R OSR 69.0%。
 
-33. **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](../papers/2608.05042.md)**
+36. **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](../papers/2608.05042.md)**
     2026-08-05 · 值得关注 · **67/100** · 未找到仓库
 
     在 BridgeVLA 的多视图热力图 3D VLA 上加入时序记忆与可重渲染的点云空间记忆，支持记忆依赖与双臂任务；作者报告 RMBench、MemoryBench 上达到最优，并在两种真机平台验证。
 
-34. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
+37. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
+    2026-08-20 · 值得关注 · **66/100** · 实质代码
+
+    EXIMO 以「VLM 编排探索→蒸馏 SFT→残差离策略 RL」三阶段微调 VLA，作者报告在 ALOHA 仿真 22 个长程/推理任务上样本效率与最终成功率均优于直接 RL 基线。
+
+38. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
     2026-07-02 · 值得关注 · **66/100** · 实质代码
 
     面向 VLA 与世界-动作模型的可移植 C++ 推理运行时，五层架构支持多速率执行与量化；作者报告相对 Python 基线推理加速 1.05–2.70 倍、显存降低 7%–77%，成功率多数接近基线。
 
-35. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
+39. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
     2025-06-16 · 值得关注 · **66/100** · 未找到仓库
 
     人形全身控制的视觉-语言基准 LeVERB-Bench（150+ 任务/10 类）与分层潜动作框架 LeVERB；作者报告零样本总成功率 58.5%，约为朴素分层 VLA 的 7.8 倍。
 
-36. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
+40. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
     2026-10-29 · 值得关注 · **65/100** · 未找到仓库
 
     CoRAct把运动意图和未来路标转成奖励，在动作噪声空间优化推理与执行的一致性。
 
-37. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
+41. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
     2026-10-29 · 值得关注 · **65/100** · 未核查
 
     OpenFlyV2在Orin NX全机载运行视觉语言动作模型，真实四场景导航成功率48%。
 
-38. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
+42. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
     2026-10-28 · 值得关注 · **65/100** · 未核查
 
     QbD-VLA以短闭环成功率选择混合精度；仿真选出的配置在真实X-VLA有效，在π0.5上失败。
 
-39. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
+43. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     ThinkWorld以预测未来与实测未来的吻合强化运动令牌推理，研究人类视频技能组合迁移。
 
-40. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
+44. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     R2A以运动原语图检索修正冻结VLA，研究视觉扰动下的执行稳定性与真实迁移。
 
-41. **[HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](../papers/2610.34186.md)**
+45. **[HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](../papers/2610.34186.md)**
     2026-10-25 · 值得关注 · **65/100** · 未找到仓库
 
     HuGe结合第一人称预训练、伪本体状态和视觉适配，在G1取放任务中作者报告成功率从43.3%提高至66.7%。
-
-42. **[Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](../papers/2610.32102.md)**
-    2026-10-23 · 值得关注 · **65/100** · 未找到仓库
-
-    联合调节流匹配 VLA 的采样深度和执行时域，在 LIBERO、RoboTwin 及 Franka 上报告免训练部署收益。
-
-43. **[Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](../papers/2610.31569.md)**
-    2026-10-22 · 值得关注 · **65/100** · 未找到仓库
-
-    Echo 将停止与失败信号同动作共同去噪，作者在五项真机任务及 LIBERO-Recovery 中报告收益。
-
-44. **[When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](../papers/2610.30735.md)**
-    2026-10-22 · 值得关注 · **65/100** · 未找到仓库
-
-    充分训练的大型流匹配 VLA 常能直接单步采样，作者在 36 个仿真单元中判定 23 个等效。
-
-45. **[EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](../papers/2609.01281.md)**
-    2026-09-01 · 观察中 · **63/100** · 实质代码
-
-    EmbodiedSkills 以三个独立世界动作模型预测冻结 VLA 候选动作的潜在后果并据分歧与效应一致性选优，作者报告 MetaWorld MT50 成功率由 76.28% 升至 78.64%、CLIPort 由 33.94% 升至 36.83%。
 
 ---
 

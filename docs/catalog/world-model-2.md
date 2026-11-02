@@ -26,55 +26,55 @@
 
     触觉原生的世界-动作模型，在同一流匹配目标下联合预测未来视觉、触觉与动作；作者报告 UniVTAC 平均成功率 84.5%，8 项真机接触任务整体优于 π0.5 等基线。
 
-17. **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](../papers/2608.27345.md)**
+17. **[Masked Visual Actions for Unified World Modeling](../papers/2607.19343.md)**
+    2026-07-21 · 值得关注 · **77/100** · 部分开放
+
+    把机器人动作表示为像素空间中被部分揭示的实体轨迹掩膜来条件视频模型，同一检查点兼作前向与逆向模型；作者报告 DROID/BEHAVIOR 上重建指标明显优于 Ctrl-World，并用于策略评估与规划。
+
+18. **[PAWBench: How Far Are We from Probabilistically Aligned World Modeling?](../papers/2608.27345.md)**
     2026-08-27 · 值得关注 · **74/100** · 实质代码
 
     PAWBench 用 50 个随机物理场景检验视频生成模型重复采样能否复现正确的结果分布，作者报告 11 个模型均未能同时匹配参考概率并覆盖全部合理结果。
 
-18. **[DriftWorld: Fast World Modeling through Drifting](../papers/2607.15065.md)**
+19. **[DriftWorld: Fast World Modeling through Drifting](../papers/2607.15065.md)**
     2026-07-16 · 值得关注 · **74/100** · 实质代码
 
     将 drifting 生成模型用于动作条件世界模型，单次前向生成未来帧（40+ FPS）；作者报告在 Bridge-V2、RT-1 等 5 个数据集上比扩散基线快 12 倍以上且画质相当或更好，并可用于动作筛选与离线策略评估。
 
-19. **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](../papers/2610.36791.md)**
+20. **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](../papers/2610.36791.md)**
     2026-10-27 · 值得关注 · **72/100** · 实质代码
 
     RynnWorld-Latent用通用潜动作联合学习多形态视频动力学，并研究合成数据对操作策略的作用。
 
-20. **[ALPS: Visual State Encoders for World Models](../papers/2610.30120.md)**
+21. **[ALPS: Visual State Encoders for World Models](../papers/2610.30120.md)**
     2026-10-21 · 值得关注 · **72/100** · 实质代码
 
     ALPS 统一状态、语言和重建表征，作者报告冻结编码器的 LIBERO 策略平均成功率为 85.5%。
 
-21. **[Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](../papers/2606.16533.md)**
+22. **[Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](../papers/2606.16533.md)**
     2026-06-15 · 值得关注 · **72/100** · 实质代码
 
     4B 原生世界-动作模型栈，以“控制充分状态”为目标，结合跨本体数据课程、混合线性时序注意力与部署协同设计；作者报告在多项具身世界模型与世界-动作基准上领先并具效率优势。
 
-22. **[stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](../papers/2605.21800.md)**
+23. **[stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](../papers/2605.21800.md)**
     2026-05-20 · 值得关注 · **72/100** · 实质代码
 
     世界模型开源统一平台 swm：Lance 数据层、DINO-WM/LeWM/TD-MPC2 等基线、CEM/MPPI 规划器与可控扰动环境；作者在 Push-T 上复现基线，并显示轻微分布偏移即令规划成功率骤降。
 
-23. **[GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](../papers/2610.37091.md)**
+24. **[GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](../papers/2610.37091.md)**
     2026-10-27 · 值得关注 · **71/100** · 部分开放
 
     GAWM用小型潜空间预测器辅助动作生成；补查原文还报告黄瓶交接真机46/50次成功。
 
-24. **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](../papers/2608.18484.md)**
+25. **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](../papers/2608.18484.md)**
     2026-08-19 · 值得关注 · **71/100** · 实质代码
 
     SparsePR 以响应耦合分组与探针拟合残差重建实现免训练块稀疏注意力，作者报告在 Cosmos-Predict2.5 等四个视频/世界模型上端到端加速 1.48–2.61 倍且保真度优于 SVG2 等基线。
 
-25. **[Hydra-0: Action Flow for Generalist World Modeling and Control](../papers/2608.18077.md)**
+26. **[Hydra-0: Action Flow for Generalist World Modeling and Control](../papers/2608.18077.md)**
     2026-08-18 · 值得关注 · **71/100** · 未找到仓库
 
     以“动作流”（像素平面轨迹）统一表示跨本体动作的视频世界模型，作者报告机器人/物体运动误差较动作条件基线降90.4%/60.2%，RoboLab开环评测成功率相关r=0.96。
-
-26. **[Masked Visual Actions for Unified World Modeling](../papers/2607.19343.md)**
-    2026-07-21 · 值得关注 · **71/100** · 未找到仓库
-
-    把机器人动作表示为像素空间中被部分揭示的实体轨迹掩膜来条件视频模型，同一检查点兼作前向与逆向模型；作者报告 DROID/BEHAVIOR 上重建指标明显优于 Ctrl-World，并用于策略评估与规划。
 
 27. **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](../papers/2607.19876.md)**
     2026-07-22 · 值得关注 · **69/100** · 实质代码
