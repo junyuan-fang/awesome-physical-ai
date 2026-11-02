@@ -27,6 +27,14 @@ function Status($state, $message) {
 }
 function Invoke-Logged {
     param([string]$File, [string[]]$CommandArgs, [int]$Attempts=1, [int[]]$AcceptCodes=@(0))
+    # Git does not inherit Windows Internet Settings. Honor the user's active
+    # local proxy without changing global Git config or persisting its address.
+    if ($File -eq 'git') {
+        $proxy = Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' -ErrorAction SilentlyContinue
+        if ($proxy.ProxyEnable -eq 1 -and $proxy.ProxyServer -match '^(127\.0\.0\.1|localhost):\d+$') {
+            $CommandArgs = @('-c', "http.proxy=http://$($proxy.ProxyServer)") + $CommandArgs
+        }
+    }
     for ($attempt=1; $attempt -le $Attempts; $attempt++) {
         & $File @CommandArgs 2>&1 | ForEach-Object { $_.ToString() } | Add-Content -LiteralPath $log -Encoding UTF8
         $script:nativeExit = $LASTEXITCODE

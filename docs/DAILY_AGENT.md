@@ -25,6 +25,8 @@ missed runs start when the machine becomes available. Logs: `pipeline/logs/daily
 7. Commit the resulting files and push directly to master. Preserve failures in the log;
    a rejected push leaves the local commit and checkpoint available for retry.
    Git fetch/push retry three times, 15 seconds apart, for transient network failures.
+   On Windows, Git uses the user's active localhost system proxy when configured;
+   no global Git proxy setting is changed.
 
 Codex only fills the review; the PowerShell wrapper owns synchronization, validation,
 commit and push. The model follows the local Codex configuration (no model is hard-coded).
