@@ -25,7 +25,10 @@ Edit the relevant YAML file under `data/`:
 | Tool / library | `data/tools.yaml` |
 | New category section | `data/categories.yaml` |
 
-**Do NOT edit `README.md` or `docs/index.md` directly** — both are auto-generated from `data/`.
+**Do NOT edit generated pages directly.** `README.md`, `docs/index.md`, `docs/catalog/`,
+`docs/papers/`, `docs/resources/`, the rankings/title index and `digests/README.md` are
+generated from `data/` and `templates/`. Run the generator and include all resulting
+pages in your commit. The manifest `docs/.generated-pages.json` tracks owned outputs.
 
 Use existing entries as a template. A paper needs at least `title / category / date / links / review / open`;
 a PR-submitted paper may enter as `review: {priority: unrated}` and `open: {code: unknown}` — it will be
@@ -62,7 +65,8 @@ Every morning (08:00 Asia/Shanghai) a scheduled agent runs the pipeline describe
    dedupe against `data/papers.yaml` and `data/triage_log.yaml`, prefilter, probe repos, cache full text.
 2. The agent fills `pipeline/reviews/<date>.yaml`: layer-1 triage, then layer-2 reading and four-dimension scoring.
 3. `scripts/run_daily.sh apply` — enforce the run cap, merge, write `digests/daily/<date>.md`,
-   re-check open-source status on the weekly/monthly cadence, roll up weekly/monthly picks, re-render, validate.
+   roll up weekly/monthly picks, re-render all browsing pages, validate. Open-source status
+   rechecks run separately in the weekly workflow.
 
 Every judgement (including exclusions) is committed in `pipeline/reviews/` and `data/triage_log.yaml`,
 so you can audit or overturn it in a PR. The legacy ingesters (`ingest_dailypaper.py`,
@@ -70,4 +74,4 @@ so you can audit or overturn it in a PR. The legacy ingesters (`ingest_dailypape
 
 ## License
 
-By contributing you agree your contributions will be MIT licensed (see [LICENSE](LICENSE)).
+By contributing you agree your contributions will be Apache-2.0 licensed (see [LICENSE](LICENSE)).

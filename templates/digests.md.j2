@@ -1,0 +1,19 @@
+# 扫描报告
+
+[首页](../README.md) / 扫描报告 · [当前论文目录](../docs/index.md)
+
+报告保留扫描当时的评审与覆盖范围；当前评分、开放状态见单篇详情页。
+
+{% for kind, title in [('daily','日报'),('weekly','周报'),('monthly','月报')] %}
+## {{ title }}
+
+{% for path in reports[kind][:10] %}
+- [{{ path.split('/')[-1][:-3] }}]({{ path | replace('digests/', '') }})
+{% else %}
+暂无报告。
+{% endfor %}
+
+[浏览全部{{ title }} →]({{ kind }}/)
+
+{% endfor %}
+[历史迁移评审](migration-2026-10-22.md)

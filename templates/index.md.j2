@@ -1,41 +1,34 @@
-{#- Jinja2 template — renders docs/index.md; DO NOT edit docs/index.md directly -#}
-{%- set PZH = {"must-read": "🔥 重点阅读", "notable": "👀 值得关注", "watching": "观察中", "unrated": "暂不评级"} -%}
-{%- set CZH = {"substantive": "💻 实质代码", "partial": "🟡 部分开放", "placeholder": "📄 占位仓库", "no-repo": "未找到仓库", "unknown": "未核查"} -%}
-{%- set RZH = {"proposes": "提出", "pretrain": "预训练", "finetune": "微调/后训练", "eval": "评测"} -%}
-# 累积索引 / Ranked index
+# 论文目录
 
-> 最近完成扫描：{{ last_updated }}，源数据 `data/papers.yaml`。每个类别内：核心与相邻路线混排，按优先级 → 总分 → 日期排序；评分口径见 [METHODOLOGY](METHODOLOGY.md)。
-> 历史 digest 是时间快照，**当前评分与开放状态以本索引为准**。
+[首页](../README.md) / 论文目录
 
-共 {{ stats.papers }} 篇：🔥 {{ priority_counts["must-read"] }} · 👀 {{ priority_counts["notable"] }} · 观察中 {{ priority_counts["watching"] }} · 暂不评级 {{ priority_counts["unrated"] }}
+**{{ papers | length }} 篇** · 最近扫描 **{{ latest_scan }}** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
 
-{% for c in index_categories %}
-- [{{ c.title }}](#cat-{{ c.id }}) · {{ c.papers | length }}
-{% endfor %}
-- [数据集 / 基准使用关系](#resources)
+分类页每页最多 15 篇，按优先级 → 总分 → 首次公开日期排序。点击论文标题进入完整评审，包含作者单位、评分依据和开放状态。
 
-{% for c in index_categories %}
-## <a id="cat-{{ c.id }}"></a>{{ c.title }}
+{% for group in groups %}
+## {{ group.title }}
 
-| 论文 | 首次公开 | 路线 | 优先级 | 总分 (C/E/O/T) | 开源（last_check） | 作者/单位 | 报告 |
-|---|---|---|---|---|---|---|---|
-{% for p in c.papers %}
-| {% if p.classic %}📜 {% endif %}[{{ p.title | cell }}]({{ p.links.arxiv }}) | {{ p.date }} | {{ {"core": "核心", "adjacent": "相邻"}[p.route] if p.route else "—" }} | {{ PZH[p.review.priority] }} | {% if p.review.total %}**{{ p.review.total }}** ({{ p.review.scores.C }}/{{ p.review.scores.E }}/{{ p.review.scores.O }}/{{ p.review.scores.T }}){% else %}—{% endif %} | {{ CZH[p.open.code or "unknown"] }}{% if p.open.license and p.open.license not in ("unknown", "none-found") %} · {{ p.open.license }}{% endif %}{% if p.open.last_check %} ({{ p.open.last_check }}){% endif %} | {{ ((p.affiliations or [])[:3] | join("; ")) | cell if p.affiliations else p.authors | cell }} | {% if p.digest %}[📝](../{{ p.digest }}){% endif %} |
+{% for c in group.entries %}
+- <a id="cat-{{ c.id }}"></a>[{{ c.title }}]({{ c.path | replace('docs/', '') }}) · **{{ c.count }} 篇**
 {% endfor %}
 
 {% endfor %}
-## <a id="resources"></a>数据集 / 基准使用关系
+## <a id="resources"></a>资源与使用关系
 
-只登记论文正文或实验设置中明确写出的关系；在某基准上评测 ≠ 用其 demos 训练。
+资源页保留项目链接、使用条件，以及使用该资源的已收录论文。评测使用不代表训练使用。
 
-{% for r in datasets + benchmarks + simulators %}
-{% if used_by[r.id] %}
-### <a id="resource-{{ r.id }}"></a>{{ r.name }}
-
-{% for u in used_by[r.id] | sort(attribute="paper.date", reverse=true) %}
-- {{ RZH[u.role] }} · [{{ u.paper.title }}]({{ u.paper.links.arxiv }}) · {{ u.paper.date[:7] }}{% if u.paper.digest %} · [报告](../{{ u.paper.digest }}){% endif %}
-
+{% for group in resource_groups %}
+- [{{ group.title }}]({{ group.path | replace('docs/', '') }}) · {{ group.count }} 项
 {% endfor %}
 
-{% endif %}
+<details>
+<summary>按资源名直达使用关系（兼容旧索引链接）</summary>
+
+{% for group in resource_groups if group.id != 'companies' %}
+{% for r in group.entries if used_by[r.id] %}
+- <a id="resource-{{ r.id }}"></a>[{{ r.name }}]({{ group.path | replace('docs/', '') }}#resource-{{ r.id }}) · {{ used_by[r.id] | length }} 篇论文
 {% endfor %}
+{% endfor %}
+
+</details>

@@ -1,0 +1,14 @@
+# 一页式标题索引
+
+[首页](../README.md) / [分页目录](index.md) / 一页式索引
+
+全部 {{ papers | length }} 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+
+{% for c in research %}
+## <a id="cat-{{ c.id }}"></a>{{ c.title }} · {{ c.count }}
+
+{% for p in c.papers %}
+- [{{ p.title | label }}](papers/{{ p.arxiv_id }}.md) · {{ p.date }}{% if p.review.total %} · {{ p.review.total }}/100{% endif %}{{ "" }}
+{% endfor %}
+
+{% endfor %}

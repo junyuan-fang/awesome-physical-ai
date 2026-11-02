@@ -1,0 +1,60 @@
+# {{ group.title }}
+
+[首页](../../README.md) / [目录](../index.md) / {{ group.title }}
+
+**{{ group.count }} 项** · {{ group.desc }}
+
+{% if group.id == 'companies' %}
+融资和估值是按条目日期记录的历史快照，未实时核验。按地区、名称排列。
+
+{% for r in group.entries | sort(attribute='name') | sort(attribute='region') %}
+## {{ r.name }}
+
+{{ r.region }}{% if r.website %} · [官网]({{ r.website }}){% endif %} · {{ r.focus | join(' / ') }}
+
+{% if r.products %}产品：{{ r.products | join('、') }}
+{% endif %}
+{% if r.notes %}{{ r.notes }}
+{% endif %}
+{% if r.last_valuation_usd %}最近记录估值：${{ '{:,}'.format(r.last_valuation_usd) }}{% if r.funding %} · 融资记录日期 {{ r.funding[-1].date }}{% endif %}
+{% endif %}
+{% if r.funding %}最近融资记录：{{ r.funding[-1].round }} · ${{ '{:,}'.format(r.funding[-1].amount_usd) }} · {{ r.funding[-1].date }}
+{% endif %}
+
+{% endfor %}
+{% else %}
+{% for r in group.entries %}
+- [{{ r.name }}](#resource-{{ r.id }})
+{% endfor %}
+
+{% for r in group.entries %}
+## <a id="resource-{{ r.id }}"></a>{{ r.name }}
+
+{{ r.desc }}
+
+{% if r.links.project %}[项目]({{ r.links.project }}) {% endif %}{% if r.links.code %}[代码]({{ r.links.code }}) {% endif %}{% if r.links.paper %}[论文]({{ r.links.paper }}){% endif %}
+
+{% if r.size %}规模：{{ r.size }}
+{% endif %}
+{% if r.access %}访问条件：{{ r.access }}
+{% endif %}
+{% if r.license %}许可证：{{ r.license }}
+{% endif %}
+{% if r.tags %}标签：{{ r.tags | join(' / ') }}
+{% endif %}
+{% set relations = used_by.get(r.id, []) %}
+{% for batch in relations | batch(10) %}
+<details>
+<summary>关联论文 {{ loop.index0 * 10 + 1 }}–{{ loop.index0 * 10 + batch | length }} / {{ relations | length }}（提出 / 训练 / 评测）</summary>
+
+{% for u in batch %}
+- {{ u.role }} · [{{ u.paper.title | label }}](../papers/{{ u.paper.arxiv_id }}.md)
+{% endfor %}
+
+</details>
+
+{% endfor %}
+{% endfor %}
+{% endif %}
+
+[返回首页](../../README.md) · [全部论文](../index.md)

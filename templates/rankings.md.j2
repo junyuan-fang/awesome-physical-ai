@@ -1,0 +1,13 @@
+# 阅读优先级 Top 20
+
+[首页](../README.md) / Top 20 · [全部论文](index.md)
+
+从已评分条目中，按优先级 → 总分 → 首次公开日期选出 20 篇。这里表示仓库内的阅读顺序，不是跨任务性能排行榜。[评分方法](METHODOLOGY.md)
+
+{% for p in ranked %}
+{{ loop.index }}. **[{{ p.title | label }}](papers/{{ p.arxiv_id }}.md)** · **{{ p.review.total }}/100**
+    {{ p.category_title }} · {{ p.date }} · {{ code_names[p.open.code or 'unknown'] }}
+
+    {{ p.abstract_short | brief(120) }}
+
+{% endfor %}

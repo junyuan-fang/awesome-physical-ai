@@ -1,0 +1,25 @@
+# {{ cat.title }}
+
+[首页](../../README.md) / [论文目录](../index.md) / {{ cat.title }}
+
+**{{ cat.count }} 篇** · 第 **{{ number }} / {{ pages | length }}** 页 · 每页最多 15 篇
+
+{% for page in pages %}{% if page.number == number %}**{{ number }}**{% else %}[{{ page.number }}]({{ page.name }}){% endif %}{% if not loop.last %} · {% endif %}{% endfor %}
+
+按阅读优先级 → 总分 → 首次公开日期排序。评分是阅读建议；[查看评分口径](../METHODOLOGY.md)。
+
+{% for p in entries %}
+{{ offset + loop.index }}. **[{{ p.title | label }}](../papers/{{ p.arxiv_id }}.md)**
+    {{ p.date }} · {{ priority_names[p.review.priority] }}{% if p.review.total %} · **{{ p.review.total }}/100**{% endif %} · {{ code_names[p.open.code or 'unknown'] }}{% if p.classic %} · 经典工作{% endif %}{{ "" }}
+
+    {{ p.abstract_short | brief(150) }}
+
+{% else %}
+暂无条目。
+
+{% endfor %}
+---
+
+{% for page in pages %}{% if page.number == number %}**第 {{ number }} 页**{% else %}[第 {{ page.number }} 页]({{ page.name }}){% endif %}{% if not loop.last %} · {% endif %}{% endfor %}
+
+[返回论文目录](../index.md)

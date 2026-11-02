@@ -1,0 +1,66 @@
+# {{ p.title }}
+
+[首页](../../README.md) / [{{ p.category_title }}](../catalog/{{ p.category }}.md) / 论文详情
+
+[原文]({{ p.links.arxiv }}){% if p.links.project %} · [项目]({{ p.links.project }}){% endif %}{% if p.links.code %} · [代码]({{ p.links.code }}){% endif %}{% if p.links.demo %} · [演示]({{ p.links.demo }}){% endif %}{% if p.digest %} · [历史评审报告](../../{{ p.digest }}){% endif %}{{ "" }}
+
+**首次公开：** {{ p.date }}{% if p.venue %} · **{{ p.venue }}**{% endif %}{{ "" }}
+
+**作者：** {{ p.authors }}
+
+**类型：** {{ p.route or '未分类' }} · {{ p.contribution or '未分类' }}{% if p.tags %} · {{ p.tags | join(' / ') }}{% endif %}{{ "" }}
+{% if p.affiliations %}
+**单位：** {{ p.affiliations | join('；') }}
+{% endif %}
+
+## 贡献与局限
+
+{{ p.summary or p.abstract_short or '暂无评审摘要。' }}
+
+## 阅读优先级
+
+**{{ priority_names[p.review.priority] }}**{% if p.review.total %} · **{{ p.review.total }}/100**{% endif %} · [评分方法](../METHODOLOGY.md)
+
+{% if p.review.scores %}
+| 维度 | 分数 / 5 | 依据 |
+|---|---:|---|
+{% for key, title in [('C','贡献 · 30%'),('E','证据 · 25%'),('O','开放与复现 · 30%'),('T','团队背景 · 15%')] %}
+| {{ title }} | {{ p.review.scores[key] }} | {{ p.review.rationale[key] | cell }} |
+{% endfor %}
+{% endif %}
+
+{% if p.review.evidence_read %}**已核查材料：** {{ p.review.evidence_read | join(' / ') }}
+{% endif %}
+
+## 开放与复现
+
+- 代码：**{{ code_names[p.open.code or 'unknown'] }}**{% if p.open.repo %} · [仓库]({{ p.open.repo }}){% endif %}{{ "" }}
+- 权重：{{ p.open.weights or 'unknown' }} · 数据：{{ p.open.data or 'unknown' }} · 许可证：{{ p.open.license or 'unknown' }}
+- 最近核查：{{ p.open.last_check or '未记录' }}{% if p.open.note %} · {{ p.open.note }}{% endif %}{{ "" }}
+
+{% if p.uses %}
+## 使用的资源
+
+{% for u in p.uses %}
+- {{ u.role }} · [{{ u.resource }}](../index.md#resource-{{ u.resource }})
+{% endfor %}
+{% endif %}
+{% if p.review.pending_checks %}
+## 待核查
+
+{% for item in p.review.pending_checks %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+{% if p.history %}
+<details>
+<summary>状态变化记录</summary>
+
+{% for item in p.history %}
+- {{ item.date }} · {{ item.change }}
+{% endfor %}
+
+</details>
+{% endif %}
+
+[返回 {{ p.category_title }}](../catalog/{{ p.category }}.md) · [全部论文](../index.md)

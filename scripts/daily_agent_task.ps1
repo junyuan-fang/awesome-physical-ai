@@ -52,7 +52,7 @@ function Assert-OwnedChanges($runDay) {
     if ($LASTEXITCODE -ne 0) { throw 'Cannot inspect worktree' }
     foreach ($change in $changes) {
         $path = $change.Substring(3).Trim('"')
-        if ($path -notmatch '^(data/[^/]+\.yaml|README\.md|docs/index\.md|digests/(daily|weekly|monthly)/[^/]+\.md)$' -and
+        if ($path -notmatch '^(data/[^/]+\.yaml|README\.md|docs/(index|rankings|all-papers)\.md|docs/\.generated-pages\.json|docs/(catalog|papers|resources)/[^/]+\.md|digests/README\.md|digests/(daily|weekly|monthly)/[^/]+\.md)$' -and
             $path -ne "pipeline/reviews/$runDay.yaml") {
             throw "Unexpected change outside daily outputs: $path"
         }
@@ -61,7 +61,7 @@ function Assert-OwnedChanges($runDay) {
 function Publish {
     $script:stage = 'publish'
     Status 'running' "Publishing $script:runDay"
-    Invoke-Logged -File git -CommandArgs @('add','data','digests','docs/index.md','README.md',"pipeline/reviews/$script:runDay.yaml")
+    Invoke-Logged -File git -CommandArgs @('add','data','digests','docs','README.md',"pipeline/reviews/$script:runDay.yaml")
     Invoke-Logged -File git -CommandArgs @('diff','--cached','--quiet') -AcceptCodes @(0,1)
     if ($script:nativeExit -eq 1) {
         Invoke-Logged -File git -CommandArgs @('-c','user.name=junyuan-fang','-c','user.email=fangjunyuan1@gmail.com','commit','-m',"chore: Codex daily scan $script:runDay")
