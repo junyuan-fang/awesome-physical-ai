@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**69 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
+**71 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
 
 **1** · [2](world-model-2.md) · [3](world-model-3.md) · [4](world-model-4.md) · [5](world-model-5.md)
 按阅读优先级 → 总分 → 首次公开日期排序。

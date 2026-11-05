@@ -1356,3 +1356,183 @@ entries:
   reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
   date: '2026-11-05'
   run: '2026-11-03'
+- arxiv_id: '2611.05275'
+  title: 'Route Anything: A Study of Model and Policy Routing for General-Purpose AI Systems'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.05080'
+  title: 'CRONOS: Benchmarking Non-Episodic Reinforcement Learning for Robotic Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04972'
+  title: Caging Vision-Language Navigation for Legged Robots via Barrier-Certified Safety Architecture
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.05249'
+  title: Should the Action Expert Train the VLM? Action-Token Supervision and Gradient Routing in Mixture-of-Transformer VLAs
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.05377'
+  title: 'DreamX: Video Diffusion Model is a Universal Latent Action Learner'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04255'
+  title: 'ActOR: Ambient AI-Based Agentic Orchestration for Humanoid Autonomy in Operating Rooms'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.03850'
+  title: 'RoboScope Kit: Unified Interfaces for Fast and Scalable Embodied-AI Evaluation'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04873'
+  title: 'Trusting Imagined Futures: Auditing Imagined Rewards for VLA Post-Training'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04006'
+  title: Controlling Action-Head Co-Adaptation to VLM Representation Anisotropy
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.05129'
+  title: 'WayTrace: A Map-to-Language-to-Trace Hierarchy for Embodied Urban Navigation'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04522'
+  title: 'Action Intent as a Bridge: Transferring Manipulation Knowledge from Human-Centric Videos to Robots'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04424'
+  title: 'ReflexArc: Bottom-Up Integration of Instantaneous Tactile Reflexes into Whole-Body Humanoid Control'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04368'
+  title: 'RAFT: Reasoning-Aligned Fine-Tuning Improves Robustness of VLA Post-Training'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04226'
+  title: 'DiMuRe: Diagnosis-Guided Multilevel Recovery for Robotic Task Execution'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04166'
+  title: 'Say the Same, Act Differently: Diagnosing and Steering Text-Action Divergence in Reasoning VLAs'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.03937'
+  title: 'FlowBench: Counterfactual Imagination Training for Spatial Intelligence'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.05320'
+  title: 'PyRUA-DataFarm: LLM Agent as a Cost-Efficient Teleoperator for Real-Ready Robot Data'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.05113'
+  title: 'HLO-AMP: Hierarchical Loco-Manipulation from Object-Aware Motion Priors'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04477'
+  title: Spectrally Routed Diffusion Policy for Multi-Task Robotic Manipulation
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04096'
+  title: 'Online Hamilton-Jacobi Reachability Onboard the Robot Control Loop: A Real-Time GPU Solver for Safety-Critical Autonomy'
+  decision: exclude
+  reason: 超出范围：贡献是经典Hamilton–Jacobi数值求解器与解析动力学无人机调度；虽以VLA安全为动机，实验未验证学习策略或具身学习管线。
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.03091'
+  title: 'KlaskTron-IL: A Contact-Rich Adversarial Imitation Learning Benchmark with a Validated Sim-to-Real Bridge'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.01748'
+  title: 'CompliantBot: Learning Whole-Body Compliance across Task Interfaces for Humanoid Control'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.01713'
+  title: Route-Guided CBF-QP Repair for Safe Vision-Language-Action Models
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.01404'
+  title: 'Serving Agentic Robot Fleets: Workload Characterization, KV-Cache Thrashing, and Admission Control'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.04083'
+  title: 'MABEL: An Open Anthropomorphic Mobile Bimanual Platform for Teleoperation and Learning'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.03489'
+  title: Exploring Proximity and Tactile Sensing for Robotic Manipulation
+  decision: exclude
+  reason: 超出范围：ToFTouch的贡献是近距与触觉传感器集成，实验使用预设轨迹和传感反馈调整，未训练或评估学习策略。
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.03254'
+  title: 'TRAILS: Trajectory Generation for Automated Indoor Locomotion Studies'
+  decision: exclude
+  reason: 超出范围：TRAILS以WFC、几何路径和速度规划生成VR/遥临场人类实验刺激，未验证学习型机器人策略或具身学习数据训练收益。
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.03168'
+  title: 'Rollout then Recycle: 3,718 Labelled Real-Robot Episodes from Benchmarking 7 Policies on 12 Tasks'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.01483'
+  title: '$TF^2$-Steering: Action Refinement with Tactile Forecasts and Feedback via Velocity-Field Steering'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'
+- arxiv_id: '2611.01390'
+  title: 'Same Path, Less Time: Training-Free Fast Execution of Vision-Language-Action Models under Inference Latency'
+  decision: defer
+  reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-05'

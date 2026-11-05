@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**69 篇** · 第 **3 / 5** 页 · 每页最多 15 篇
+**71 篇** · 第 **3 / 5** 页 · 每页最多 15 篇
 
 [1](world-model.md) · [2](world-model-2.md) · **3** · [4](world-model-4.md) · [5](world-model-5.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -46,55 +46,55 @@
 
     基于 Wan2.2 的通用交互式视频世界模型，含 E-PRoPE 相机控制、场景记忆与可组合事件，作者报告 8 卡 RTX 5090 达 16 FPS，自建评测总分 84.76。
 
-36. **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](../papers/2608.20114.md)**
+36. **[PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](../papers/2611.04870.md)**
+    2026-11-03 · 值得关注 · **65/100** · 占位仓库
+
+    PrimeSim用跨本体示范训练多视角动作条件世界模型；作者报告单A100约10.1 FPS，并在LIBERO验证策略评估及短预算优化。
+
+37. **[Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight](../papers/2611.04839.md)**
+    2026-11-03 · 值得关注 · **65/100** · 未找到仓库
+
+    以潜在视觉前瞻和联合时序先验筛选动作；作者报告SIMPLE平均89.7%，G1未见对象配置下65.7%成功率。
+
+38. **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](../papers/2608.20114.md)**
     2026-08-20 · 值得关注 · **65/100** · 实质代码
 
     DECOWAM 在冻结的 FastWAM 上加入残差适配器、未来信息瓶颈、底盘/机械臂解耦潜变量与底盘速度条件，作者报告在自建 ARMDOG 回放上动作 MSE 降 21.7%，79 次真机试验中全身协调性最好。
 
-37. **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](../papers/2606.20562.md)**
+39. **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](../papers/2606.20562.md)**
     2026-06-18 · 值得关注 · **65/100** · 未找到仓库
 
     以近期帧、事件边界锚帧与少量 gist token 组成混合记忆的世界-动作模型；作者报告 RMBench 平均成功率比 LingBot-VA 高 4.8 个百分点，且推理延迟与显存更低。
 
-38. **[Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning](../papers/2608.09926.md)**
+40. **[Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning](../papers/2608.09926.md)**
     2026-08-10 · 观察中 · **63/100** · 部分开放
 
     LDR 把隐状态转移写成显式运动学积分，只回归三阶及以上残差；作者报告在 PhyWorld 五类物理任务上，ID-OOD 误差差距比 DiT 基线小 20 倍以上，参数少 26 倍。
 
-39. **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](../papers/2607.25337.md)**
+41. **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](../papers/2607.25337.md)**
     2026-07-28 · 观察中 · **63/100** · 实质代码
 
     在 LeWM 的 JEPA 骨干上从无奖励示范中挖掘有向时序代价用于潜空间 MPC；作者报告 Two-Room 成功率 100%（LeWM 97.4%），OGB-Cube 提升 14.2 个百分点，四个环境均不低于 LeWM 与 RC-aux。
 
-40. **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](../papers/2606.25473.md)**
+42. **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](../papers/2606.25473.md)**
     2026-06-24 · 观察中 · **63/100** · 实质代码
 
     将 rCM 扩展到自回归视频扩散，用 teacher-forcing 一致性蒸馏初始化 self-forcing DMD；作者报告 2 步因果 Wan2.1-1.3B 在 VBench-T2V 达 84.63，并演示 Cosmos 3 交互式世界模型。
 
-41. **[World Value Models for Robotic Manipulation](../papers/2606.24742.md)**
+43. **[World Value Models for Robotic Manipulation](../papers/2606.24742.md)**
     2026-06-23 · 观察中 · **63/100** · 占位仓库
 
     以视频世界模型为骨干构建通用机器人价值模型 WVM，并发布含 800 条次优轨迹的 Suboptimal-Value-Bench；作者报告其在专家与次优数据上的 VOC 均优于 GVL、VLAC 等基线。
 
-42. **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](../papers/2606.20104.md)**
+44. **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](../papers/2606.20104.md)**
     2026-06-18 · 观察中 · **63/100** · 实质代码
 
     用单一逆动力学正则端到端训练 JEPA 式潜在世界模型，防止表征坍缩并偏向可控自由度；作者报告在四个仿真控制任务上规划成功率持平或优于 SIGReg 基线。
 
-43. **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)**
+45. **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)**
     2026-06-15 · 观察中 · **63/100** · 未找到仓库
 
     以自然语言为统一动作接口的 20B 具身视频世界模型，在 860 万视频-文本对上训练；作者报告 EWMBench 总分 4.60、DreamGen Bench 4.952 均居首。
-
-44. **[WorldOlympiad: Can Your World Model Survive a Triathlon?](../papers/2606.11129.md)**
-    2026-06-09 · 观察中 · **63/100** · 实质代码
-
-    提出覆盖机器人、游戏、真实视频的视频世界模型基准，从物理、几何、交互三条赛道评测 8 个模型，作者报告几何一致性普遍不足（最高 0.424）。
-
-45. **[Latent Spatial Memory for Video World Models](../papers/2606.09828.md)**
-    2026-06-08 · 观察中 · **63/100** · 实质代码
-
-    把视频世界模型的 3D 记忆从 RGB 点云搬到扩散潜空间，作者报告端到端生成最高提速 10.57 倍、显存降 55 倍，WorldScore 平均分 70.36 居对比方法首位。
 
 ---
 

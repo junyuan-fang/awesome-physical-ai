@@ -88,3 +88,12 @@ tools:
     paper: https://arxiv.org/abs/2611.01112
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: beyondcontact
+  name: BeyondContact
+  desc: 面向机器人强化学习的Isaac Lab气流作用扩展与推吹、重定向训练环境。
+  links:
+    paper: https://arxiv.org/abs/2611.03059
+    code: https://github.com/iit-DLSLab/BeyondContact
+  subcategory: training
+  added: '2026-11-05'
+  last_check: '2026-11-05'

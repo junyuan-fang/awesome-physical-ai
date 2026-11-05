@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**41 篇** · 第 **1 / 3** 页 · 每页最多 15 篇
+**43 篇** · 第 **1 / 3** 页 · 每页最多 15 篇
 
 **1** · [2](manipulation-2.md) · [3](manipulation-3.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -56,45 +56,45 @@
 
     可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。
 
-8. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
+8. **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](../papers/2611.05163.md)**
+    2026-11-03 · 值得关注 · **71/100** · 实质代码
+
+    把人类视频转换为灵巧机器人示范；作者报告两机器人七项无目标任务遥操作示范的平均成功率由约2%升至60%。
+
+9. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
     2026-10-29 · 值得关注 · **71/100** · 实质代码
 
     LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
 
-9. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
+10. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
     2026-10-21 · 值得关注 · **71/100** · 实质代码
 
     首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。
 
-10. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
+11. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
     2026-09-29 · 值得关注 · **71/100** · 实质代码
 
     MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。
 
-11. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
+12. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
     2026-09-04 · 值得关注 · **71/100** · 实质代码
 
     TacPAC 在预测视觉与触觉的世界-动作模型上加入触觉专家，执行中将实时触觉与缓存的预期接触对照来修正剩余动作，作者报告五个真机接触密集任务平均成功率由 22% 升至 64%。
 
-12. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
+13. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
     2026-07-22 · 值得关注 · **71/100** · 实质代码
 
     HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
 
-13. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
+14. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
     2026-11-01 · 值得关注 · **68/100** · 未找到仓库
 
     以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
 
-14. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+15. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
     2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
     将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
-
-15. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
-    2026-10-26 · 值得关注 · **66/100** · 部分开放
-
-    VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
 
 ---
 

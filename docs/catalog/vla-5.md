@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**80 篇** · 第 **5 / 6** 页 · 每页最多 15 篇
+**84 篇** · 第 **5 / 6** 页 · 每页最多 15 篇
 
 [1](vla.md) · [2](vla-2.md) · [3](vla-3.md) · [4](vla-4.md) · **5** · [6](vla-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-61. **[Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action](../papers/2605.22283.md)**
+61. **[SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation](../papers/2608.16172.md)**
+    2026-08-17 · 观察中 · **59/100** · 未找到仓库
+
+    SparkVLA 把子任务终止与动作块执行长度放进同一候选集统一排序，作者报告在 RoboCerebra 上成功率 47.12%，比官方分层基线高 30.57 个百分点，并有真机长程任务验证。
+
+62. **[DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](../papers/2608.06374.md)**
+    2026-08-06 · 观察中 · **59/100** · 未找到仓库
+
+    以未来帧生成监督学习跨本体动力学先验，按本体路由的 MoE 头输出原生动作；单一权重作者报告 LIBERO 98.0%、RoboCasa-GR1 59.25%、RoboTwin 2.0 89.02%。
+
+63. **[3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](../papers/2606.04436.md)**
+    2026-06-03 · 观察中 · **59/100** · 未找到仓库
+
+    通过 3D 数据联合训练、对齐 VGGT 的几何适配器和推理锚点 token 自蒸馏，让 2D 输入的 VLA 隐式获得 3D 空间推理；作者报告 LIBERO 平均 98.7%、LIBERO-Plus 零样本 81.0%、SimplerEnv 72.9%。
+
+64. **[Gaze2Act: Gaze-Conditioned Vision-Language-Action Policies for Interactive Robot Manipulation](../papers/2605.30282.md)**
+    2026-05-28 · 观察中 · **59/100** · 未找到仓库
+
+    Gaze2Act 把第一视角注视映射到机器人视角，以视觉提示和动作头条件注入 GR00T N1.5；作者报告 G1 上 15 个任务平均成功率 83.5%，高于 RoboGround 39.6%、ControlVLA 41.5%。
+
+65. **[Spatial Memory for Out-of-Vision Manipulation in Vision-Language-Action](../papers/2605.22283.md)**
     2026-05-21 · 观察中 · **59/100** · 未找到仓库
 
     SOMA 为 VLA 加入由可动头部相机扫描构建、在线更新并按指令检索的空间记忆，解决目标出视野的操作；作者报告 5 个真实出视野任务均优于 GR00T-N1.5 等基线，SimplerEnv 视觉匹配平均 63.2%。
 
-62. **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](../papers/2603.08122.md)**
+66. **[Towards Human-Like Manipulation through RL-Augmented Teleoperation and Mixture-of-Dexterous-Experts VLA](../papers/2603.08122.md)**
     2026-03-09 · 观察中 · **57/100** · 未找到仓库
 
     RL 原子技能 IMCopilot 既辅助遥操作采集又作 VLA 底层原语，MoDE-VLA 以残差注入融合力/触觉；作者报告 4 项接触密集真机任务平均成功率 34%，π0 基线为 15%。
 
-63. **[BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models](../papers/2605.30226.md)**
+67. **[BORA: Bridging Offline Reinforcement Learning and Online Residual Adaptation for Real-World Dexterous VLA Models](../papers/2605.30226.md)**
     2026-05-28 · 观察中 · **56/100** · 未找到仓库
 
     BORA 在一致性策略 VLA 中集成动作条件 critic，离线训练后冻结基座、在线只学轻量残差 actor，并用局部策略辅助灵巧手人工纠正；作者报告 6 个真实灵巧任务每任务 20 条在线轨迹后成功率 60.8%→82.5%。
 
-64. **[EATR-Stereo: Embodiment-Aware Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control](../papers/2608.17453.md)**
+68. **[EATR-Stereo: Embodiment-Aware Routing of Paired Stereo Evidence for Humanoid Vision-Language-Action Control](../papers/2608.17453.md)**
     2026-08-18 · 观察中 · **53/100** · 占位仓库
 
     EATR-Stereo 保留主视图 token，用交叉注意力从另一目构建对齐的辅助 token，并按分身体段本体状态路由；作者报告 33 自由度人形真机长程任务全程成功率 60%，遮挡恢复 80%。
 
-65. **[StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models](../papers/2608.11671.md)**
+69. **[StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models](../papers/2608.11671.md)**
     2026-08-12 · 观察中 · **53/100** · 未找到仓库
 
     StellaVLA 以检索到的一条结构化示范（任务计划、子目标、语言化 3D 运动）作上下文，并用并行语言专家联合训练；作者报告 LIBERO 98.8%、LIBERO-Plus 85.1%，VLA-Arena 总分 0.63。
 
-66. **[Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models](../papers/2608.10393.md)**
+70. **[Hidden in Plain Sight: Diffusion-Based Unrestricted Robotic Attacks on Vision-Language-Action Models](../papers/2608.10393.md)**
     2026-08-11 · 观察中 · **53/100** · 未找到仓库
 
     DURA 沿预训练扩散模型的隐轨迹优化外观自然的对抗贴片，支持只用动作输出的黑盒攻击；作者报告在 LIBERO 上对 OpenVLA 的白盒 ASR 为 100%，并在 Franka 真机上打印贴片复现了攻击效果。
 
-67. **[AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models](../papers/2608.06729.md)**
+71. **[AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models](../papers/2608.06729.md)**
     2026-08-07 · 观察中 · **53/100** · 未找到仓库
 
     AtlasVLA 只用腕部相机，靠体素哈希的 4D 持久世界记忆和自我工作记忆为 DiT 动作头提供条件；作者报告 LIBERO 平均 97.6%，真机长时程任务比 MemoryVLA 高 9 个点。
 
-68. **[ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models](../papers/2605.29438.md)**
+72. **[ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models](../papers/2605.29438.md)**
     2026-05-28 · 观察中 · **53/100** · 未找到仓库
 
     ElegantVLA 用 RL 调度器按表征稳定性与运动线索为 VLA 骨干和动作头选择计算复用档位，无需重训；作者报告 SimplerEnv 上 CogACT 加速 3.77×，真机控制频率 13.8→26.3 Hz。
 
-69. **[Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](../papers/2608.10484.md)**
+73. **[Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](../papers/2608.10484.md)**
     2026-08-11 · 观察中 · **51/100** · 未找到仓库
 
     SALT 在 VQ-VAE 动作 tokenizer 中加入“让冻结语言模型从量化动作隐变量还原指令”的对齐损失；作者报告 SimplerEnv 平均成功率为 71.9%，VQ-VAE 和 FAST 分别为 42.7% 和 31.2%。
 
-70. **[TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies](../papers/2606.06491.md)**
+74. **[TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies](../papers/2606.06491.md)**
     2026-06-04 · 观察中 · **51/100** · 未找到仓库
 
     通过合并/拆分动作对示教重定时（VSTA）并把速度作为条件输入，使单个 VLA 可双向调速；作者报告 LIBERO 上默认速度成功率不降反升，并可借 GPT-4o 动态调度速度。
 
-71. **[TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models](../papers/2606.03127.md)**
+75. **[TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models](../papers/2606.03127.md)**
     2026-06-02 · 观察中 · **51/100** · 未找到仓库
 
     TTT-VLA 训练时为 VLA 学习一个由状态接地代理任务约束的潜在提示，部署时只用自监督信号在环境交互数据上优化该提示；作者报告 SimplerEnv WidowX 平均成功率 51.1%→67.4%。
-
-72. **[LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models](../papers/2608.17600.md)**
-    2026-08-18 · 观察中 · **48/100** · 未找到仓库
-
-    LIBERO-VIFO 在 40 个 LIBERO 任务上构建 8 类、1,347 个视觉提示实例，同时评测 VLA 跟随授权提示的能力与受未授权提示诱导的风险；作者报告无语言指令时 7 个模型仍有 32–60% 会执行提示所指任务。
-
-73. **[NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation](../papers/2608.16503.md)**
-    2026-08-17 · 观察中 · **48/100** · 未找到仓库
-
-    NebulaVLA 采用 10 Hz 语义规划 + 20 Hz DiT 控制的异步双频架构，配合 GESTURE-7 动作表示与 Guide Action 平滑拼接，作者报告 LIBERO-Plus 总成功率 85.5%，真机延迟降至 42 ms。
-
-74. **[Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning](../papers/2608.13026.md)**
-    2026-08-13 · 观察中 · **48/100** · 未找到仓库
-
-    Temporal GRPO 将任务拆成可检测阶段，只在进入同一阶段的 rollout 间比较，并把阶段优势分配到对应动作区间，缓解 VLA 强化后训练中的轨迹级信用混叠；作者报告 RoboTwin 2.0 各时域组均取得最高成功率。
-
-75. **[DREAM-Chunk: Reactive Action Chunking with Latent World Model](../papers/2606.18589.md)**
-    2026-06-17 · 观察中 · **48/100** · 未找到仓库
-
-    测试时采样多条动作块并用轻量潜在世界模型推演，按观测潜态最接近者切换执行块，无需微调 VLA；作者报告 SO-101 上 USB 插拔 75%→95% 等真机提升。
 
 ---
 

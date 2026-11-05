@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**24 项** · Robot trajectories, demonstrations, scene datasets
+**27 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -30,6 +30,9 @@
 - [EgoX-Data-6M](#resource-egox-data-6m)
 - [BiHOI](#resource-bihoi)
 - [NavAnywhere](#resource-navanywhere)
+- [AIRoA YUBI Handheld Demonstrations](#resource-airoa-yubi-data)
+- [Action-Conditioned Latent Foresight Dataset](#resource-action-conditioned-foresight-data)
+- [ForceLDM Dataset](#resource-forceldm-data)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -70,7 +73,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 规模：76k demonstrations
 标签：real-world / multi-institution
 <details>
-<summary>关联论文 1–10 / 20（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 21（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
 - pretrain · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](../papers/2503.14734.md)
@@ -86,7 +89,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 11–20 / 20（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 21（提出 / 训练 / 评测）</summary>
 
 - finetune · [RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)
 - pretrain · [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)
@@ -98,6 +101,13 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 - pretrain · [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](../papers/2610.21306.md)
 - pretrain · [Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)
 - pretrain · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)
+
+</details>
+
+<details>
+<summary>关联论文 21–21 / 21（提出 / 训练 / 评测）</summary>
+
+- pretrain · [Asynchronous Robot Policies](../papers/2611.05155.md)
 
 </details>
 
@@ -357,6 +367,46 @@ Real-world contact-rich industrial manipulation dataset, 25+ tasks, 5k+ teleoper
 
 - proposes · [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](../papers/2611.01844.md)
 - pretrain · [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](../papers/2611.01844.md)
+
+</details>
+
+## <a id="resource-airoa-yubi-data"></a>AIRoA YUBI Handheld Demonstrations
+
+AIRoA-0报告的16151小时双手手持夹爪示范，含任务与子任务语言标注；官方页面尚标待发布。
+
+[项目](https://a-0.airoa.io) [论文](https://arxiv.org/abs/2611.03815)
+<details>
+<summary>关联论文 1–3 / 3（提出 / 训练 / 评测）</summary>
+
+- proposes · [AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)
+- pretrain · [AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)
+- finetune · [AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)
+
+</details>
+
+## <a id="resource-action-conditioned-foresight-data"></a>Action-Conditioned Latent Foresight Dataset
+
+项目页声明的Unitree G1七任务2600条移动操作示范；HF入口受限，文件内容尚未核验。
+
+[项目](https://ju6276.github.io/Action-Grounded-Foresight/) 
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- proposes · [Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight](../papers/2611.04839.md)
+- finetune · [Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight](../papers/2611.04839.md)
+
+</details>
+
+## <a id="resource-forceldm-data"></a>ForceLDM Dataset
+
+带标定六维力、机器人状态及未来光流可视化的接触操作示范，公开数据卡列474回合。
+
+[代码](https://github.com/tpy001/ForceLDM-code) [论文](https://arxiv.org/abs/2611.03294)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- proposes · [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)
+- finetune · [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)
 
 </details>
 

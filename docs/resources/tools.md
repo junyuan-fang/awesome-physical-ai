@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Tools & Libraries
 
-**10 项** · Open-source frameworks for building embodied AI
+**11 项** · Open-source frameworks for building embodied AI
 
 - [LeRobot](#resource-lerobot)
 - [Diffusion Policy](#resource-diffusion-policy)
@@ -16,6 +16,7 @@
 - [SONIC-K1](#resource-sonic-k1)
 - [Uni Robot Agent](#resource-uni-robot-agent)
 - [Auriga](#resource-auriga)
+- [BeyondContact](#resource-beyondcontact)
 
 ## <a id="resource-lerobot"></a>LeRobot
 
@@ -122,6 +123,18 @@ K1人形机器人动作跟踪训练与部署复现，提供代码和权重；动
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - proposes · [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](../papers/2611.01112.md)
+
+</details>
+
+## <a id="resource-beyondcontact"></a>BeyondContact
+
+面向机器人强化学习的Isaac Lab气流作用扩展与推吹、重定向训练环境。
+
+[代码](https://github.com/iit-DLSLab/BeyondContact) [论文](https://arxiv.org/abs/2611.03059)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation](../papers/2611.03059.md)
 
 </details>
 

@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Simulators
 
-**8 项** · Isaac Sim, MuJoCo, Genesis, and friends
+**9 项** · Isaac Sim, MuJoCo, Genesis, and friends
 
 - [Isaac Lab](#resource-isaac-lab)
 - [Isaac Sim](#resource-isaac-sim)
@@ -14,6 +14,7 @@
 - [RoboCasa](#resource-robocasa)
 - [ManiSkill 3](#resource-maniskill-3)
 - [MotrixSim (Motphys / 谋先飞)](#resource-motrixsim)
+- [PrimeSim](#resource-primesim)
 
 ## <a id="resource-isaac-lab"></a>Isaac Lab
 
@@ -22,7 +23,7 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 [项目](https://isaac-sim.github.io/IsaacLab) [代码](https://github.com/isaac-sim/IsaacLab) 
 标签：rl / gpu-accelerated / nvidia
 <details>
-<summary>关联论文 1–7 / 7（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–9 / 9（提出 / 训练 / 评测）</summary>
 
 - eval · [PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)
 - pretrain · [Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)
@@ -31,6 +32,8 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 - eval · [Asymmetric On-Policy Distillation Learns In-Context Exploration](../papers/2610.30105.md)
 - eval · [Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](../papers/2610.35075.md)
 - eval · [ScheduleGen: Demonstration Generation via Skill Scheduling for Multi-Arm Imitation Learning](../papers/2610.39429.md)
+- eval · [PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)
+- eval · [BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation](../papers/2611.03059.md)
 
 </details>
 
@@ -41,12 +44,13 @@ NVIDIA's full robot simulator with photorealistic rendering.
 [项目](https://developer.nvidia.com/isaac/sim) 
 标签：photorealistic / gpu / nvidia
 <details>
-<summary>关联论文 1–4 / 4（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–5 / 5（提出 / 训练 / 评测）</summary>
 
 - eval · [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)
 - eval · [NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)
 - eval · [HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](../papers/2608.12860.md)
 - eval · [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](../papers/2610.32093.md)
+- eval · [PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)
 
 </details>
 
@@ -116,5 +120,17 @@ Homegrown Chinese real-time physics engine for multibody dynamics & robotics —
 
 [项目](https://www.motphys.com/en/products) [代码](https://github.com/Motphys/motrixsim-docs) 
 标签：physics / gpu / multibody / china
+## <a id="resource-primesim"></a>PrimeSim
+
+跨本体、多视角动作条件生成式机器人仿真器；当前官方仓库为占位，代码与权重待发布。
+
+[项目](https://primebottech.github.io/PrimeSim-website/) [代码](https://github.com/PrimebotTech/PrimeSim) [论文](https://arxiv.org/abs/2611.04870)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](../papers/2611.04870.md)
+
+</details>
+
 
 [返回首页](../../README.md) · [全部论文](../index.md)

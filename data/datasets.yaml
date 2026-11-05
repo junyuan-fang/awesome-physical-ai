@@ -246,3 +246,31 @@ datasets:
     code: https://github.com/OpenSpace-Lab/OpenNWM
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: airoa-yubi-data
+  name: AIRoA YUBI Handheld Demonstrations
+  desc: AIRoA-0报告的16151小时双手手持夹爪示范，含任务与子任务语言标注；官方页面尚标待发布。
+  links:
+    paper: https://arxiv.org/abs/2611.03815
+    project: https://a-0.airoa.io
+  subcategory: manipulation-demos
+  added: '2026-11-05'
+  last_check: '2026-11-05'
+- id: action-conditioned-foresight-data
+  name: Action-Conditioned Latent Foresight Dataset
+  desc: 项目页声明的Unitree G1七任务2600条移动操作示范；HF入口受限，文件内容尚未核验。
+  links:
+    project: https://ju6276.github.io/Action-Grounded-Foresight/
+    data: https://huggingface.co/datasets/ju6276/Action-Conditioned-Latent-Foresight
+  subcategory: manipulation-demos
+  added: '2026-11-05'
+  last_check: '2026-11-05'
+- id: forceldm-data
+  name: ForceLDM Dataset
+  desc: 带标定六维力、机器人状态及未来光流可视化的接触操作示范，公开数据卡列474回合。
+  links:
+    paper: https://arxiv.org/abs/2611.03294
+    data: https://huggingface.co/datasets/PeiYuan001/forceldm-dataset
+    code: https://github.com/tpy001/ForceLDM-code
+  subcategory: manipulation-demos
+  added: '2026-11-05'
+  last_check: '2026-11-05'

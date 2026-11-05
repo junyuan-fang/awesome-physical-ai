@@ -278,3 +278,12 @@ benchmarks:
     project: https://robodojo-benchmark.com/
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: dexhotbench
+  name: DexHOTBench
+  desc: 120对象的手物联合构型迁移基准，区分训练对象、未见实例与未见类别，并评估邻近及远距离转移。
+  links:
+    paper: https://arxiv.org/abs/2611.05119
+    project: https://dex-hot.github.io/
+  subcategory: manipulation
+  added: '2026-11-05'
+  last_check: '2026-11-05'

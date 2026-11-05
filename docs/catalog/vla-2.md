@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**80 篇** · 第 **2 / 6** 页 · 每页最多 15 篇
+**84 篇** · 第 **2 / 6** 页 · 每页最多 15 篇
 
 [1](vla.md) · **2** · [3](vla-3.md) · [4](vla-4.md) · [5](vla-5.md) · [6](vla-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -81,20 +81,20 @@
 
     Zetta 为冻结的 VLA 演化代码化运行时 critic 与恢复技能，形成闭环具身 harness；作者报告在 LIBERO-Pro 与 RoboCasa 留出种子上分别达 90.8% 与 93.6%，并配套 Z-Infra 提升 rollout 吞吐。
 
-28. **[VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](../papers/2610.21306.md)**
+28. **[ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)**
+    2026-11-02 · 值得关注 · **71/100** · 实质代码
+
+    ForceLDM把未来力与光流蒸馏进VLA；作者报告五项xArm真机接触任务平均成功率87.1%，较最强基线Seer提高14.9个百分点。
+
+29. **[HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation](../papers/2611.02660.md)**
+    2026-11-02 · 值得关注 · **71/100** · 实质代码
+
+    HeLM用显式语言记忆追踪跨回合任务状态；作者报告五项回合内真机任务子任务成功率85.7%，较关键帧基线提高12.8个百分点。
+
+30. **[VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](../papers/2610.21306.md)**
     2026-10-15 · 值得关注 · **71/100** · 实质代码
 
     VLA-Δ 在预训练中用未来状态差文本、结构化转移槽与光流显式监督物理状态变化；作者报告 LIBERO 98.4%、RoboTwin 2.0 平均 90.06%，真机 68.0%。
-
-29. **[What Matters for Latent Actions in Robot Learning](../papers/2608.19613.md)**
-    2026-08-20 · 值得关注 · **71/100** · 实质代码
-
-    在统一框架下系统比较41种潜动作模型设计（建模范式、正则、集成方式），结论包括LAPO仍是强基线、正则强度比类型更关键，潜动作微调VLM可改善下游策略。
-
-30. **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](../papers/2608.09730.md)**
-    2026-08-10 · 值得关注 · **71/100** · 实质代码
-
-    world tokens 同时条件化训练期视频去噪器并作为动作专家唯一上下文，部署时移除视频分支；作者报告 LIBERO 98.2%、SIMPLER WidowX 71.5%，延迟约 62 ms。
 
 ---
 

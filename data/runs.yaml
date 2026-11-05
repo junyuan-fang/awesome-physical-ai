@@ -219,3 +219,32 @@ runs:
   - dataset:navanywhere
   digest: digests/daily/2026-11-03.md
   applied: '2026-11-05'
+- scan_date: '2026-11-05'
+  kind: daily
+  window_start: '2026-11-01'
+  window_end: '2026-11-05'
+  last_covered_end: '2026-11-03'
+  d: 2
+  cap: 10
+  stats:
+    fetched: 273
+    already_tracked_or_triaged: 18
+    out_of_scope: 53
+    below_pool_cut: 162
+    pool: 40
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 10
+  excluded: 3
+  deferred: 27
+  removed: 0
+  new_resources:
+  - dataset:airoa-yubi-data
+  - simulator:primesim
+  - benchmark:dexhotbench
+  - dataset:action-conditioned-foresight-data
+  - tool:beyondcontact
+  - dataset:forceldm-data
+  digest: digests/daily/2026-11-05.md
+  applied: '2026-11-05'

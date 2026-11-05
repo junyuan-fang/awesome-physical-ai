@@ -19725,3 +19725,657 @@ papers:
   source: arxiv
   digest: digests/daily/2026-11-03.md
   late_found: true
+- arxiv_id: '2611.05163'
+  title: 'RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On'
+  authors: Seungyong Lee et al.
+  affiliations:
+  - KAIST
+  - RLWRLD
+  date: '2026-11-03'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - human-video
+  - synthetic-data
+  - dexterous
+  - bimanual
+  abstract_short: 把人类视频转换为灵巧机器人示范；作者报告两机器人七项无目标任务遥操作示范的平均成功率由约2%升至60%。
+  summary: 为降低灵巧双臂新任务的遥操作成本，RoboTryOn先按手腕运动选取关键帧并替换人体外观，再以手部骨架引导视频插值，最后用深度逆动力学模型和手腕校正生成动作标签。在OpenArm与RB-Y1各十一项真实桌面任务上，作者统一策略骨干、训练步数及人类视频，与EgoMimic、Masquerade和仅遥操作训练比较；七项没有目标任务机器人示范的任务，加入合成数据后成功率分别由3.1%升至73.0%、由1.0%升至46.9%，每任务评估28次。组件消融支持运动引导与动作校正的作用，第二策略骨干也获益。结果提示合成示范能补充新技能及双臂协调，但生成器仍需该机器人的既有遥操作视频，固定机位、可达运动和伪动作精度限制了野外视频及精细接触任务的适用性。
+  links:
+    arxiv: https://arxiv.org/abs/2611.05163
+    code: https://github.com/ryan-seungyong-lee/RoboTryOn
+    project: https://ryan-seungyong-lee.github.io/RoboTryOn
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 将关键帧换形、骨架引导视频生成与深度逆动力学串联，针对灵巧双臂示范迁移提供明确增量。
+      E: 两种真实机器人、同数据基线、逐组件消融及第二策略骨干支撑结论，但任务与视角范围有限。
+      O: 官方仓库含训练及推理实现；本方法检查点尚未发布，未发现明确许可证，不能按基础模型权重计分。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - appendix
+    - code
+    pending_checks:
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/ryan-seungyong-lee/RoboTryOn
+    weights: none
+    data: unknown
+    license: unknown
+    note: 核对官方README及目录：三阶段训练/推理代码已发布，检查点标为coming soon；列出的FLUX/LTX/Depth Anything是基础模型，不是本文检查点。未见本仓库许可证。 作者单位按arXiv v1 PDF首页的KAIST、RLWRLD记录，未采用仓库新增的Korea
+      University。
+    stats:
+      files: 106
+      code_files: 87
+      config_files: 16
+      last_commit: '2026-11-04'
+      readme_says_coming_soon: true
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  added: '2026-11-05'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-05.md
+- arxiv_id: '2611.03815'
+  title: 'AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data'
+  authors: Yueh-Hua Wu et al.
+  affiliations:
+  - AIRoA
+  date: '2026-11-02'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - handheld-data
+  - bimanual
+  - cross-embodiment
+  - long-horizon
+  abstract_short: AIRoA-0仅采集手持夹爪示范；作者在未见场地的十项Franka任务报告含部分完成计分的平均成功率78%，最强基线27%。
+  summary: 为绕开机器人遥操作数据成本并支持长程双臂任务，AIRoA-0以16151小时YUBI手持夹爪示范训练，使用与部署一致的腕部相机和夹爪相对动作接口；视觉预算门控关注操作区域，阶段预测、本体历史及非均匀流式解码维持任务进度与连续运动。作者在未参与采集的场地评估十项Franka任务，每项15次并给予部分完成分，平均指标为78%，同任务示范后训练的四种VLA中最强为27%。相同任务权重还在装有同款夹爪的TX-G2、OpenArm和UR上展示迁移，数据缩放实验支持扩大手持语料。结果提示传感及动作接口一致性有助迁移，但跨本体展示不等同四平台完整统计；现有预训练骨干与本项目未采集机器人数据需区分，代码、语料及权重在项目页仍待发布。
+  links:
+    arxiv: https://arxiv.org/abs/2611.03815
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 大规模手持数据与本体无关接口、阶段预测及流式解码形成完整双臂方案。
+      E: 十项真机任务与四模型对照、数据规模研究及跨平台展示较充分，但主指标含部分完成计分。
+      O: 官方Release区将后训练代码、数据和权重均标为Coming soon，不能按摘要的释放承诺给高开放分。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    pending_checks:
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: none
+    license: unknown
+    note: https://a-0.airoa.io 的Release区明确Post-training code、Dataset、Pre-trained weights均Coming soon；YUBI硬件链接不等于本文模型已开放。机构由arXiv
+      v1 PDF首页核实为AIRoA。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: airoa-yubi-data
+    role: proposes
+  - resource: airoa-yubi-data
+    role: pretrain
+  - resource: airoa-yubi-data
+    role: finetune
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+  late_found: true
+- arxiv_id: '2611.05372'
+  title: 'PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning'
+  authors: Yuhan Liu et al.
+  affiliations:
+  - New York University Abu Dhabi
+  - New York University
+  date: '2026-11-03'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - inverse-kinematics
+  - precision
+  - reinforcement-learning
+  - openarm
+  abstract_short: PolicyIK学习到达并保持精确末端位姿；作者在4120项仿真测试报告单次93.5%严格成功，真机保持成功43/60。
+  summary: 为让位置控制机械臂达到并稳定保持毫米级末端目标，PolicyIK累积关节参考并反馈参考相对实测关节的偏差，以保留静态补偿；同时使用粗细两级位姿误差、自适应动作增益及进度、驻留奖励。在OpenArm的4120个未见仿真起终点对上，作者用三训练种子比较强化学习和经典IK控制器，最终一秒均值满足1毫米、0.2度的单次成功率为93.5%，允许重试的协议为98.9%，两者不能混用。另在真实机械臂直接训练，60项任务、25秒预算下达到目标54次、最终五秒保持43次，优于四个经典控制基线。结果支持将静态偏差和精度阶段显式纳入学习，但真实精度由编码器及模型正运动学计算，非外部计量；尚不能说明跨机械臂或复杂接触条件同样有效。
+  links:
+    arxiv: https://arxiv.org/abs/2611.05372
+    code: https://github.com/Tinaliu0123/PolicyIK
+  highlight: 👀
+  review:
+    scores:
+      C: 3
+      E: 4
+      O: 4
+      T: 3
+    rationale:
+      C: 以指令状态反馈、多尺度误差和驻留奖励解决RL逆运动学末端残差，是针对性方法改进。
+      E: 有4120个仿真任务、三训练种子、经典控制基线和60个真机任务；硬件精度来自编码器正运动学。
+      O: 修正URL尾部句点后核实Apache-2.0仓库，README给出训练/评估代码、数据及三种子检查点路径。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/Tinaliu0123/PolicyIK
+    weights: open
+    data: open
+    license: Apache-2.0
+    note: 原探测URL末尾多出句点；修正后仓库含simulation与hardware代码。官方README的Data and Checkpoints列出source_set、训练池、4120测试任务及policyik_s1/s2/s3.pth，附训练和评估命令。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: isaac-sim
+    role: eval
+  - resource: isaac-lab
+    role: eval
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+- arxiv_id: '2611.04870'
+  title: 'PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations'
+  authors: Travis Davies et al.
+  affiliations:
+  - PrimeBot Research
+  - Southeast University
+  - Shanghai Jiao Tong University
+  - The Chinese University of Hong Kong
+  - University of Chinese Academy of Sciences
+  - Beihang University
+  - Peking University
+  - Shanghai Innovation Institute
+  date: '2026-11-03'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - world-model
+  - multiview
+  - cross-embodiment
+  - simulation
+  abstract_short: PrimeSim用跨本体示范训练多视角动作条件世界模型；作者报告单A100约10.1 FPS，并在LIBERO验证策略评估及短预算优化。
+  summary: 为使机器人世界模型兼顾动作跟随、多视角一致性和长程滚动，PrimeSim从Wan视频骨干出发，用覆盖22个平台的30110小时示范进行中期训练，加入统一动作表示、帧对齐双通路条件和带相机身份的交错注意力，再通过因果蒸馏、自生成历史训练及分层记忆实现自回归模拟。作者比较多个开放世界模型，报告在WorldSimProbe五组测试中领先四组、EWMBench总体分数最佳，但局部精细校准仍落后。RoboTwin留出集上，四步模型单A100约10.12
+    FPS；LIBERO-Spatial实验进一步比较策略排序与短预算GRPO优化。结果支持视频模型用于策略交互的潜力，但部分训练语料私有，组件消融多限单本体，长期优化仍可能利用模型或奖励误差；官方仓库的代码和权重尚待发布。
+  links:
+    arxiv: https://arxiv.org/abs/2611.04870
+    project: https://primebottech.github.io/PrimeSim-website/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 统一动作与多视角条件，并以因果生成和分层记忆将视频模型改造成可交互仿真器。
+      E: 有世界模型基准、平台迁移、长程与组件消融及LIBERO策略实验，但真实物理校准仍有限。
+      O: 官方仓库仅README和许可，明确训练代码、推理代码与权重coming soon，按占位评分。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    - code
+    pending_checks:
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: placeholder
+    repo: https://github.com/PrimebotTech/PrimeSim
+    weights: none
+    data: unknown
+    license: Apache-2.0
+    note: 已读官方README，明确Code coming soon，训练/推理代码及权重尚待发布；项目页Weights Pending。30,110小时语料含私有来源，未核实完整数据公开。
+    stats:
+      files: 3
+      code_files: 0
+      config_files: 0
+      last_commit: '2026-11-04'
+      readme_says_coming_soon: true
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: primesim
+    role: proposes
+  - resource: libero
+    role: eval
+  - resource: robotwin-2
+    role: eval
+  added: '2026-11-05'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-05.md
+- arxiv_id: '2611.05119'
+  title: 'DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation'
+  authors: Zhewei Gui et al.
+  affiliations:
+  - CFCS, School of CS, PKU, China
+  - PrimeBot
+  - National Key Laboratory for Multimedia Information Processing, School of CS, PKU, China
+  - State Key Laboratory of General Artificial Intelligence, BIGAI
+  date: '2026-11-03'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous
+  - goal-conditioned
+  - sim2real
+  - hand-object
+  abstract_short: DexHOT学习手物联合构型迁移；作者报告120对象基准中未见对象成功率69.4%，200次真实迁移成功率61.5%。
+  summary: 为避免仅指定物体姿态而忽略后续操作所需手部接触构型，DexHOT以物体坐标系中的手部关键点描述手物联合目标，合成并筛选可行构型，在邻近目标之间训练共享强化学习策略，再通过闭环子目标串联完成较大变化。DexHOTBench包含40个训练对象及80个未见对象。作者报告近、远任意构型迁移的平均成功率在已见对象为80.5%、未见对象为69.4%，局部目标采样及探索算法消融支持各设计。真实Sharpa手与Franka平台上，十种物体共200次迁移成功率61.5%；六项由人类示范给子目标的任务报告90%。结果说明显式构型接口便于组合，但未见对象仍需离线生成的构型池，长程任务使用固定初始布局及示范手腕轨迹；贪心串联不保证每段转移动力学可行。
+  links:
+    arxiv: https://arxiv.org/abs/2611.05119
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 将手部姿态与腕部相对物体位姿共同作为目标，通过局部迁移及子目标组合复用灵巧控制。
+      E: 120对象分割、训练消融和200次真机迁移较扎实，但长程任务仅固定布局每任务五次。
+      O: 项目页链接的官方DexHOT-Code仓库明确Code is coming soon，不能按实现已发布评分。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    - code
+    pending_checks:
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: placeholder
+    repo: https://github.com/dex-hot/DexHOT-Code
+    weights: none
+    data: unknown
+    license: unknown
+    note: 已读取 https://dex-hot.github.io/ 及官方仓库README；后者仅说明Code is coming soon。项目网站CC BY-SA许可不当作方法代码许可。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: dexhotbench
+    role: proposes
+  - resource: dexhotbench
+    role: eval
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+- arxiv_id: '2611.04839'
+  title: Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight
+  authors: Ju Dong et al.
+  affiliations:
+  - TAMS (Technical Aspects of Multimodal Systems), Department of Informatics, University of Hamburg
+  - The University of Hong Kong
+  - Technical University of Munich
+  - Kinetix AI
+  - University of Science and Technology of China
+  date: '2026-11-03'
+  category: world-model
+  route: core
+  contribution: method
+  tags:
+  - loco-manipulation
+  - latent-foresight
+  - humanoid
+  - action-scoring
+  abstract_short: 以潜在视觉前瞻和联合时序先验筛选动作；作者报告SIMPLE平均89.7%，G1未见对象配置下65.7%成功率。
+  summary: 为减少人形移动操作中动作看似合理却掉落物体或未完成交互的问题，该方法先生成身体与手部联合命令，再预测命令前缀达到的视觉终点，并结合联合时序先验评估一致性，执行最优序列前段后重新规划。训练用动作重构约束保留控制相关特征。作者在SIMPLE十项任务、三级随机化中报告平均成功率89.7%，高于DiT4DiT的82.0%；七项G1真实任务每条件每任务十次，标准与未见物体配置下分别为85.7%、65.7%，GR00T
+    N1.7对应70.0%、48.6%。结果支持执行前比较候选的价值，但仍依赖任务示范子目标图像，细接触和软物体抓持会失败；主要成功率在RTX 4090D推理条件获得，额外机载Orin NX测试仅0.73 Hz，不能与桌面9.1 Hz混用。
+  links:
+    arxiv: https://arxiv.org/abs/2611.04839
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 用动作条件终点预测与身体/手部联合时序先验筛选候选，直接针对长程移动操作协调。
+      E: 十项SIMPLE、七项真机任务、未见物体配置及闭环消融支撑方法，但依赖任务子目标示范。
+      O: 项目页代码明确Coming soon；数据链接访问返回401受限，不能按开放数据或实质代码计分。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    pending_checks:
+    - 核实受限HF数据集的文件清单、2600条示范完整性及许可。
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: gated
+    license: unknown
+    note: https://ju6276.github.io/Action-Grounded-Foresight/ 明确训练/推理代码Coming soon；其HF数据 https://huggingface.co/datasets/ju6276/Action-Conditioned-Latent-Foresight
+      的README返回401 restricted/authentication required，未取得内容。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: action-conditioned-foresight-data
+    role: proposes
+  - resource: action-conditioned-foresight-data
+    role: finetune
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+- arxiv_id: '2611.05155'
+  title: Asynchronous Robot Policies
+  authors: Sombit Dey et al.
+  affiliations:
+  - INSAIT, Sofia University St. Kliment Ohridski
+  date: '2026-11-03'
+  category: vla
+  route: core
+  contribution: model
+  tags:
+  - asynchronous
+  - reactive-control
+  - semantic-memory
+  - latency
+  abstract_short: ARP把慢语义更新与快动作视觉回路分开；作者在LIBERO-Perturb报告成功率51.5%，同规模同步基线9.5%。
+  summary: 为减少大型VLM推理对机器人反应速度的限制，ARP以低频语义进程更新固定宽度记忆，高频动作专家读取实时多视角图像、本体状态和最新记忆；训练刻意错配观察时间，并提供记忆年龄与执行延迟。作者在LIBERO四套件和动态扰动任务比较同规模同步架构，LIBERO-Perturb中ARP-1B成功率51.5%，复现的同步基线9.5%；持续物理扰动任务也有提升。改变VLM刷新频率及过期时间分布的消融说明，仅缓存接口不足，必须训练模型适应旧语义。论文另报告Franka准静态操作收益。局限是同步仿真基线为作者复现，独立动作视觉也贡献性能；项目页披露一项预注册停滞指标未显示异步显著优势，因此不能把全部增益归于异步调度，更慢语义刷新界限仍未确定。
+  links:
+    arxiv: https://arxiv.org/abs/2611.05155
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 以独立快慢进程和过期语义训练解除动作频率对大VLM的直接依赖，具有可复用架构价值。
+      E: 有静态/动态仿真、语义更新频率及过期训练消融和真机对比；部分收益来自动作侧独立视觉。
+      O: 官方ARP页标Code/Models soon；原探测DINOv3只是视觉依赖，不是ARP实现或权重。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    pending_checks:
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: none
+    data: unknown
+    license: unknown
+    note: 已读 https://arp.insait.ai，Code和Models均soon；原facebookresearch/dinov3为依赖，已移除错误归属与其许可。项目页作者仍Anonymous，以论文署名为准。
+    stats:
+      files: 221
+      code_files: 188
+      config_files: 24
+      last_commit: '2026-07-15'
+      readme_says_coming_soon: false
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  - resource: droid
+    role: pretrain
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+- arxiv_id: '2611.03059'
+  title: 'BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation'
+  authors: Peiyu Yang et al.
+  affiliations:
+  - Dynamic Legged Systems Lab, Istituto Italiano di Tecnologia
+  date: '2026-11-02'
+  category: sim2real
+  route: core
+  contribution: system
+  tags:
+  - airflow
+  - non-contact
+  - reinforcement-learning
+  - sim2real
+  abstract_short: 以实测气流模型训练非接触操作策略；作者报告Piper-L零样本推吹任务16/20成功，四个朝向重定位平均误差2.6°。
+  summary: 为使机械臂利用气流操作超出直接接触范围的物体，BeyondContact将实测圆形射流的速度衰减与扩散模型转成表面力和力矩，在Isaac Lab中并行训练策略，并制作兼容夹爪的吹风模块。非对称actor–critic使用PPO联合输出关节目标和气流强度，随机化质量、摩擦及气流参数；推吹任务先接触推近再吹送，朝向任务则仅利用气流旋转长方体。作者报告Piper-L无需真机微调，在20次推吹实验中成功16次，四个目标朝向的平均绝对误差为2.6°。这支持气流建模作为特定操作的仿真到现实桥，但实验对象与任务数量有限，准稳态射流忽略瞬态湍流和邻近表面影响；朝向控制的小样本结果不能外推至任意形状或复杂气流环境。代码已有实质内容，机械设计仍待发布。
+  links:
+    arxiv: https://arxiv.org/abs/2611.03059
+    code: https://github.com/iit-DLSLab/BeyondContact
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 3
+      O: 3
+      T: 3
+    rationale:
+      C: 把实测气流模型、并行学习环境与夹爪共存的吹风器连接起来，扩展可学习的非接触操作方式。
+      E: 有气流辨识与零样本实体验证，但仅两任务；80%来自20次推吹试验，重定向只覆盖四个目标朝向。
+      O: 官方仓库具有气流模块和训练配置；未发现权重与独立数据发布，硬件设计声明出版后提供，许可未核实。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 核实仓库许可、辨识数据和训练检查点的正式发布范围。
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 66
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/iit-DLSLab/BeyondContact
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 去除原链接末尾句点后核实官方README、气流模型及PPO训练代码树。README称硬件设计在论文出版后发布；根LICENSE返回404，未核实权重或辨识数据下载。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: isaac-lab
+    role: eval
+  - resource: beyondcontact
+    role: proposes
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+  late_found: true
+- arxiv_id: '2611.03294'
+  title: 'ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation'
+  authors: Peiyuan Tang et al.
+  affiliations:
+  - School of Computer Science and Technology, Xi’an Jiaotong University
+  - School of Artificial Intelligence and Data Science, University of Science and Technology of China
+  - Suzhou Institute for Advanced Research, University of Science and Technology of China
+  - Suzhou Artificial Intelligence Laboratory
+  - School of Computer Science and Technology, University of Science and Technology of China
+  - Synkrotron, Inc.
+  date: '2026-11-02'
+  venue: NeurIPS 2026
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - force-sensing
+  - latent-dynamics
+  - distillation
+  - contact-rich
+  abstract_short: ForceLDM把未来力与光流蒸馏进VLA；作者报告五项xArm真机接触任务平均成功率87.1%，较最强基线Seer提高14.9个百分点。
+  summary: 为缓解VLA依赖视觉而忽略稀疏接触信息的问题，ForceLDM训练一个能读取未来六维力/力矩和光流的教师，通过多层表示对齐把动作相关动力学蒸馏给学生，并逐步给未来查询注入噪声。部署仅保留学生，使用当前图像、机器人状态及力历史，不需要未来真实观测。作者在xArm
+    7的USB插入、齿轮装配、翻盒、擦板和VGA插接上每任务采集80–100条示范，以20–30次实机试验比较多种强基线，报告平均成功率87.1%，比Seer高14.9个百分点；另在新物体、遮挡、材质和尺寸变化下评测，并消融模态与训练设计。结果支持学习接触潜变量，但齿轮任务仍受抓取感知失败限制，单平台样本不能代表跨机器人泛化。已发布代码与474回合数据，后者还包含额外削黄瓜任务，不宜与论文五任务评测集合直接等同。
+  links:
+    arxiv: https://arxiv.org/abs/2611.03294
+    code: https://github.com/tpy001/ForceLDM-code
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 将未来力和光流作为特权教师信号蒸馏到控制相关潜在表示，直接针对接触操作的视觉偏置。
+      E: 五项真机任务、强基线、六种OOD条件及模态/架构消融较充分；单一xArm平台，每条件试验规模仍有限。
+      O: forceldm默认分支有实质代码及Apache-2.0许可，HF数据开放；数据许可未明确、README权重仅上游基础模型，保守取3。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    - code
+    pending_checks:
+    - 核实公开数据许可证及论文任务与发布数据的精确对应关系。
+    - 核实是否另有ForceLDM训练后权重，而非README列出的上游基础模型。
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/tpy001/ForceLDM-code
+    weights: unknown
+    data: open
+    license: Apache-2.0
+    note: 默认分支是forceldm而非main；核实模型和训练代码树。README下载的是pi0与SDXL VAE上游权重，未确认为ForceLDM检查点。数据卡 https://huggingface.co/datasets/PeiYuan001/forceldm-dataset
+      描述474回合/362339帧，未声明license；光流字段为RGB可视化而非标定向量。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: forceldm-data
+    role: proposes
+  - resource: forceldm-data
+    role: finetune
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+  late_found: true
+- arxiv_id: '2611.02660'
+  title: 'HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation'
+  authors: Gyeonghun Kim et al.
+  affiliations:
+  - Seoul National University
+  date: '2026-11-02'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - memory
+  - hierarchical-policy
+  - long-horizon
+  - real-robot
+  abstract_short: HeLM用显式语言记忆追踪跨回合任务状态；作者报告五项回合内真机任务子任务成功率85.7%，较关键帧基线提高12.8个百分点。
+  summary: 为处理当前图像无法区分的计数、顺序和跨回合物体历史，HeLM将微调VLM高层与VLA低层分离，用工作记忆记录本回合进度，用情节上下文保存跨指令信息。高层在动作块边界检测预定义事件，仅有事件或指令变化时更新语言记忆；训练监督由TaskSpec和短子任务示范合成。作者在PiPER的10任务56变体中每任务测试15–45次，报告回合内平均子任务成功率85.7%，关键帧基线为72.9%，严格任务成功率分别81.3%与29.3%；跨回合平均子任务成功率为89.2%，新组合为78%。LIBERO-Mem消融支持记忆与高层微调均有作用。结果体现显式状态记录的价值，但依赖预设事件词表，误检造成错误记忆后不能自纠；同步检测会遗漏动作块内部瞬态事件，跨回合对照也未覆盖所有记忆策略。
+  links:
+    arxiv: https://arxiv.org/abs/2611.02660
+    code: https://github.com/kimspacehuni/HeLM
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 分离事件检测、记忆更新和低层执行，并显式评估跨回合历史依赖，增量超出单纯堆叠视觉历史。
+      E: 10真机任务56变体、同骨干对照、严格/子任务指标与消融较完整；跨回合强基线较少且需要任务特定事件定义。
+      O: Apache-2.0仓库提供TaskSpec、数据处理、训练和策略实现；未核实完整真机数据与训练权重发布。
+      T: 尚未独立核实团队近五年的相关研究积累，按规则暂取默认3分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    - code
+    pending_checks:
+    - 核实完整真机数据与HLP/LLP检查点发布；LIBERO-Mem未与普通LIBERO错误合并登记。
+    - 核对作者团队近五年与本方向直接相关的代表成果，当前T按信息不足默认3分。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/kimspacehuni/HeLM
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 官方项目指向HeLM仓库；已核实152个Python文件、TaskSpec/数据管线及训练目录和Apache-2.0许可。README无可验证的完整数据/模型下载；README对指标的简称以论文明确的子任务成功率为准。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-05.md
+  late_found: true
