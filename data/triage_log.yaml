@@ -1266,3 +1266,93 @@ entries:
   reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
   date: '2026-11-01'
   run: '2026-11-01'
+- arxiv_id: '2611.03103'
+  title: 'VLALagBench: Understanding When and Why VLA Inference Latency Matters'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.03648'
+  title: 'Pixel: A Co-Designed Full-Stack Robot System for Learning General-Purpose Mobile Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.01600'
+  title: 'SCOUT: Planning under Occlusion via Object-Centric World Model Rollouts'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02777'
+  title: 'Beyond Policy Patches: Distilling RL Specialists into Vision-Language-Action Policies'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.03138'
+  title: 'KlaskTron: An Open-Source Platform for Physical Adversarial Multi-Agent RL'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02968'
+  title: 'ReContact: Reconstruct and Retarget Human Contacts from Video for Contact-Rich Humanoid Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02629'
+  title: 'DexArena: A Unified Benchmark for Long-Horizon Dexterous Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02546'
+  title: Energy-Based Policy Orchestration
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02497'
+  title: 'RoboColosseum: Evaluating Physical Intelligence at Scale In-The-Wild'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.00513'
+  title: 'WorldSketch: Sketching World Models for Zero-Shot Mobile Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02871'
+  title: 'ReGATE: Recurrent Gated Visual Fusion for Reactive Humanoid-Object Interaction'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02462'
+  title: Learning Purposeful Co-designs of Bio-inspired Quadrupedal Robots
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.01815'
+  title: When Does Latent Prediction Error Support Physical Surprise Claims in Video World Models?
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.03163'
+  title: 'FineCraft: Enhancing VLA Models for Fine-Grained Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'
+- arxiv_id: '2611.02677'
+  title: Visuo-tactile Diffusion Policy for Robotic Manipulation with Auxiliary Tactile Dynamics Prediction
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-05'
+  run: '2026-11-03'

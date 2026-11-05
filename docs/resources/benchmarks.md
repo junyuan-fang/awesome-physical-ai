@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Benchmarks
 
-**27 项** · Standardized evaluations for embodied AI
+**28 项** · Standardized evaluations for embodied AI
 
 - [CALVIN](#resource-calvin)
 - [Meta-World](#resource-meta-world)
@@ -33,6 +33,7 @@
 - [EgoX-Bench](#resource-egox-bench)
 - [RoboCasa-Shift](#resource-robocasa-shift)
 - [Zero-HLM-Bench](#resource-zero-hlm-bench)
+- [RoboDojo](#resource-robodojo)
 
 ## <a id="resource-calvin"></a>CALVIN
 
@@ -74,7 +75,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 [项目](https://libero-project.github.io) [论文](https://arxiv.org/abs/2306.03310)
 标签：lifelong
 <details>
-<summary>关联论文 1–10 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring](../papers/2605.30834.md)
 - eval · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
@@ -90,7 +91,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 11–20 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](../papers/2606.04436.md)
 - eval · [VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training](../papers/2606.04708.md)
@@ -106,7 +107,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 21–30 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 21–30 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [Geometric Action Model for Robot Policy Learning](../papers/2606.17046.md)
 - eval · [WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)
@@ -122,7 +123,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 31–40 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 31–40 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation](../papers/2608.05369.md)
 - finetune · [DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](../papers/2608.06374.md)
@@ -138,7 +139,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 41–50 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 41–50 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models](../papers/2608.06729.md)
 - eval · [Keep the Future, Drop the Rollout: RIFT for World Action Models](../papers/2608.11521.md)
@@ -154,7 +155,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 51–60 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 51–60 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](../papers/2608.27384.md)
 - eval · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](../papers/2610.26855.md)
@@ -170,7 +171,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 61–70 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 61–70 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [Long-WAM: Scaling the Context of World-Action Models](../papers/2610.10528.md)
 - finetune · [Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)
@@ -186,7 +187,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 71–78 / 78（提出 / 训练 / 评测）</summary>
+<summary>关联论文 71–80 / 80（提出 / 训练 / 评测）</summary>
 
 - eval · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)
 - eval · [GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](../papers/2610.37091.md)
@@ -196,6 +197,8 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 - eval · [Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)
 - eval · [RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding](../papers/2610.36533.md)
 - eval · [Event2Reward: Learning Robotic Rewards from Progress Relations](../papers/2610.39212.md)
+- finetune · [ODE Policy: Robot Learning via Action Dynamics, Not Actions](../papers/2611.01729.md)
+- eval · [ODE Policy: Robot Learning via Action Dynamics, Not Actions](../papers/2611.01729.md)
 
 </details>
 
@@ -324,7 +327,7 @@ Reproducible real-to-sim eval suite — measures VLA gap between real and sim de
 [项目](https://robocasa.ai) [论文](https://arxiv.org/abs/2406.02523)
 标签：household / multi-skill
 <details>
-<summary>关联论文 1–10 / 17（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 18（提出 / 训练 / 评测）</summary>
 
 - eval · [Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](../papers/2601.12993.md)
 - eval · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](../papers/2503.14734.md)
@@ -340,7 +343,7 @@ Reproducible real-to-sim eval suite — measures VLA gap between real and sim de
 </details>
 
 <details>
-<summary>关联论文 11–17 / 17（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–18 / 18（提出 / 训练 / 评测）</summary>
 
 - eval · [GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives](../papers/2609.39601.md)
 - eval · [Long-WAM: Scaling the Context of World-Action Models](../papers/2610.10528.md)
@@ -349,6 +352,7 @@ Reproducible real-to-sim eval suite — measures VLA gap between real and sim de
 - eval · [Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)
 - eval · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](../papers/2610.30814.md)
 - eval · [From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)
+- eval · [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](../papers/2611.01112.md)
 
 </details>
 
@@ -487,6 +491,19 @@ IsaacLab三任务九阶段G1移动操作评测，共享SONIC接口；资源发�
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - proposes · [Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](../papers/2610.35075.md)
+
+</details>
+
+## <a id="resource-robodojo"></a>RoboDojo
+
+用于机器人工具调用智能体的模拟操作基准；本文评测其42项任务，报告任务成功率及分阶段得分。
+
+[项目](https://robodojo-benchmark.com/) 
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- eval · [Democratizing Robot-Use Agents: A Unified Harness with Open Models](../papers/2611.01560.md)
+- eval · [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](../papers/2611.01112.md)
 
 </details>
 

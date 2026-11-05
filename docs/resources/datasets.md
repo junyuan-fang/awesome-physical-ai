@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**23 项** · Robot trajectories, demonstrations, scene datasets
+**24 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -29,6 +29,7 @@
 - [ToolBook](#resource-toolbook)
 - [EgoX-Data-6M](#resource-egox-data-6m)
 - [BiHOI](#resource-bihoi)
+- [NavAnywhere](#resource-navanywhere)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -346,5 +347,18 @@ Real-world contact-rich industrial manipulation dataset, 25+ tasks, 5k+ teleoper
 多视角双手-物体交互数据集：1,575 段序列、229 个物体、约 14.77 小时，强调持续双手接触（双手同时接触率 65.91%），重建交互并重定向为灵巧手参考轨迹。
 
 [项目](https://ropedia.github.io/DONIC/) [论文](https://arxiv.org/abs/2610.29997)
+## <a id="resource-navanywhere"></a>NavAnywhere
+
+15来源、约1750万视觉帧的无动作导航预训练数据；同时含人类、地面机器人和无人机视角，非纯人类第一视角数据，需遵循上游许可。
+
+[代码](https://github.com/OpenSpace-Lab/OpenNWM) [论文](https://arxiv.org/abs/2611.01844)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- proposes · [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](../papers/2611.01844.md)
+- pretrain · [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](../papers/2611.01844.md)
+
+</details>
+
 
 [返回首页](../../README.md) · [全部论文](../index.md)

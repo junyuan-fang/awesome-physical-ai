@@ -9,12 +9,12 @@
 
 A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
 
-**278 papers** · 23 datasets · 8 simulators · 27 benchmarks · 8 tools
+**283 papers** · 24 datasets · 8 simulators · 28 benchmarks · 10 tools
 
 [Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
 
 > Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
-> Latest completed scan: **2026-11-02** · [Read the report](digests/daily/2026-11-02.md)
+> Latest completed scan: **2026-11-03** · [Read the report](digests/daily/2026-11-03.md)
 
 ## <a id="contents"></a>Start here
 
@@ -24,26 +24,26 @@ A curated guide to embodied intelligence, robotics foundation models, and physic
 | Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
 | Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
 | Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
-| Catch up on recent work | [Latest report](digests/daily/2026-11-02.md) · [Recent picks](#weekly-picks) |
+| Catch up on recent work | [Latest report](digests/daily/2026-11-03.md) · [Recent picks](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>Recent picks
 
 Up to 5 priority papers added in the 7-day window ending on the latest scan. [Browse the Top 20 →](docs/rankings.md)
 
-- **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](docs/papers/2610.33852.md)** · 2026-10-24 · 83/100
-  Manipulation · Must-read · Code released
+- **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](docs/papers/2611.01844.md)** · 2026-11-01 · 77/100
+  World Models · Notable · Code released
 
-- **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](docs/papers/2610.34356.md)** · 2026-10-25 · 77/100
-  Vision-Language-Action (VLA) · Notable · Code released
+- **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](docs/papers/2611.01729.md)** · 2026-11-01 · 76/100
+  RL & Imitation Learning · Notable · Code released
 
 - **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](docs/papers/2610.36791.md)** · 2026-10-27 · 72/100
   World Models · Notable · Code released
 
-- **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](docs/papers/2610.40016.md)** · 2026-10-29 · 71/100
-  Manipulation · Notable · Code released
+- **[Democratizing Robot-Use Agents: A Unified Harness with Open Models](docs/papers/2611.01560.md)** · 2026-11-01 · 71/100
+  Other Generalist Models · Notable · Partially released
 
-- **[GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](docs/papers/2610.37091.md)** · 2026-10-27 · 71/100
-  World Models · Notable · Partially released
+- **[Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](docs/papers/2611.01112.md)** · 2026-10-31 · 71/100
+  Other Generalist Models · Notable · Code released
 
 ## Research areas
 
@@ -51,14 +51,14 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 
 | Area | Browse | Papers |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 156 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 40 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 159 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 41 |
 | <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 24 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
 | <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 11 |
 | <a id="scene"></a>3D Scene Understanding | [3D Scene Understanding](docs/catalog/scene.md) | 5 |
 | <a id="navigation"></a>Navigation & Mobility | [Navigation & Mobility](docs/catalog/navigation.md) | 14 |
-| <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 10 |
+| <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 11 |
 | <a id="tutorials"></a>Tutorials & Surveys | [Tutorials & Surveys](docs/catalog/tutorials.md) | 6 |
 
 [Full catalog →](docs/index.md) · [All titles on one page for text search →](docs/all-papers.md)
@@ -67,10 +67,10 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 
 | Resource | Purpose | Count |
 |---|---|---:|
-| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 23 |
+| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 24 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 8 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 27 |
-| <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 8 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 28 |
+| <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 10 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 
 ## <a id="topics"></a>Topic guides

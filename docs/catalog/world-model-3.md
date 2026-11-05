@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**68 篇** · 第 **3 / 5** 页 · 每页最多 15 篇
+**69 篇** · 第 **3 / 5** 页 · 每页最多 15 篇
 
 [1](world-model.md) · [2](world-model-2.md) · **3** · [4](world-model-4.md) · [5](world-model-5.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-31. **[ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models](../papers/2608.14022.md)**
+31. **[WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression](../papers/2608.26239.md)**
+    2026-08-26 · 值得关注 · **68/100** · 占位仓库
+
+    WALL-SS 以动作条件的逐尺度自回归生成机器人多视角未来，配合尺度压缩长程记忆与在线对齐，作者报告可稳定生成分钟级流式推演，并在 600 对真机-生成闭环回放中与真实结果较一致。
+
+32. **[ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models](../papers/2608.14022.md)**
     2026-08-14 · 值得关注 · **66/100** · 实质代码
 
     四阶段渐进因果训练把双向动作条件视频生成器蒸馏为1/2/4步交互世界模型；作者报告在Minecraft配对轨迹上多项画质与控制指标领先，1步版约72 FPS。
 
-32. **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](../papers/2607.19191.md)**
+33. **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](../papers/2607.19191.md)**
     2026-07-21 · 值得关注 · **66/100** · 实质代码
 
     动作条件视频世界模型，经因果蒸馏与 LongForcing 抑制长程漂移，作者报告单张 RTX 5090 上 720P 最高 16 FPS、动作到首帧延迟 1.2 秒，并在 WorldRoamBench 上可控性有竞争力。
 
-33. **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](../papers/2607.18367.md)**
+34. **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](../papers/2607.18367.md)**
     2026-07-20 · 值得关注 · **66/100** · 实质代码
 
     基于 LTX-2.3 视频 DiT 的交互式长时视频世界模型，结合时空记忆、防漂移训练与 4 步蒸馏；作者报告在 iWorld-Bench 多数指标上优于 Matrix-Game 2.0、HY-World 1.5 等开源模型。
 
-34. **[DreamX-World 1.0: A General-Purpose Interactive World Model](../papers/2606.16993.md)**
+35. **[DreamX-World 1.0: A General-Purpose Interactive World Model](../papers/2606.16993.md)**
     2026-06-15 · 值得关注 · **66/100** · 实质代码
 
     基于 Wan2.2 的通用交互式视频世界模型，含 E-PRoPE 相机控制、场景记忆与可组合事件，作者报告 8 卡 RTX 5090 达 16 FPS，自建评测总分 84.76。
 
-35. **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](../papers/2608.20114.md)**
+36. **[DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](../papers/2608.20114.md)**
     2026-08-20 · 值得关注 · **65/100** · 实质代码
 
     DECOWAM 在冻结的 FastWAM 上加入残差适配器、未来信息瓶颈、底盘/机械臂解耦潜变量与底盘速度条件，作者报告在自建 ARMDOG 回放上动作 MSE 降 21.7%，79 次真机试验中全身协调性最好。
 
-36. **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](../papers/2606.20562.md)**
+37. **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](../papers/2606.20562.md)**
     2026-06-18 · 值得关注 · **65/100** · 未找到仓库
 
     以近期帧、事件边界锚帧与少量 gist token 组成混合记忆的世界-动作模型；作者报告 RMBench 平均成功率比 LingBot-VA 高 4.8 个百分点，且推理延迟与显存更低。
 
-37. **[Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning](../papers/2608.09926.md)**
+38. **[Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning](../papers/2608.09926.md)**
     2026-08-10 · 观察中 · **63/100** · 部分开放
 
     LDR 把隐状态转移写成显式运动学积分，只回归三阶及以上残差；作者报告在 PhyWorld 五类物理任务上，ID-OOD 误差差距比 DiT 基线小 20 倍以上，参数少 26 倍。
 
-38. **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](../papers/2607.25337.md)**
+39. **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](../papers/2607.25337.md)**
     2026-07-28 · 观察中 · **63/100** · 实质代码
 
     在 LeWM 的 JEPA 骨干上从无奖励示范中挖掘有向时序代价用于潜空间 MPC；作者报告 Two-Room 成功率 100%（LeWM 97.4%），OGB-Cube 提升 14.2 个百分点，四个环境均不低于 LeWM 与 RC-aux。
 
-39. **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](../papers/2606.25473.md)**
+40. **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](../papers/2606.25473.md)**
     2026-06-24 · 观察中 · **63/100** · 实质代码
 
     将 rCM 扩展到自回归视频扩散，用 teacher-forcing 一致性蒸馏初始化 self-forcing DMD；作者报告 2 步因果 Wan2.1-1.3B 在 VBench-T2V 达 84.63，并演示 Cosmos 3 交互式世界模型。
 
-40. **[World Value Models for Robotic Manipulation](../papers/2606.24742.md)**
+41. **[World Value Models for Robotic Manipulation](../papers/2606.24742.md)**
     2026-06-23 · 观察中 · **63/100** · 占位仓库
 
     以视频世界模型为骨干构建通用机器人价值模型 WVM，并发布含 800 条次优轨迹的 Suboptimal-Value-Bench；作者报告其在专家与次优数据上的 VOC 均优于 GVL、VLAC 等基线。
 
-41. **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](../papers/2606.20104.md)**
+42. **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](../papers/2606.20104.md)**
     2026-06-18 · 观察中 · **63/100** · 实质代码
 
     用单一逆动力学正则端到端训练 JEPA 式潜在世界模型，防止表征坍缩并偏向可控自由度；作者报告在四个仿真控制任务上规划成功率持平或优于 SIGReg 基线。
 
-42. **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)**
+43. **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)**
     2026-06-15 · 观察中 · **63/100** · 未找到仓库
 
     以自然语言为统一动作接口的 20B 具身视频世界模型，在 860 万视频-文本对上训练；作者报告 EWMBench 总分 4.60、DreamGen Bench 4.952 均居首。
 
-43. **[WorldOlympiad: Can Your World Model Survive a Triathlon?](../papers/2606.11129.md)**
+44. **[WorldOlympiad: Can Your World Model Survive a Triathlon?](../papers/2606.11129.md)**
     2026-06-09 · 观察中 · **63/100** · 实质代码
 
     提出覆盖机器人、游戏、真实视频的视频世界模型基准，从物理、几何、交互三条赛道评测 8 个模型，作者报告几何一致性普遍不足（最高 0.424）。
 
-44. **[Latent Spatial Memory for Video World Models](../papers/2606.09828.md)**
+45. **[Latent Spatial Memory for Video World Models](../papers/2606.09828.md)**
     2026-06-08 · 观察中 · **63/100** · 实质代码
 
     把视频世界模型的 3D 记忆从 RGB 点云搬到扩散潜空间，作者报告端到端生成最高提速 10.57 倍、显存降 55 倍，WorldScore 平均分 70.36 居对比方法首位。
-
-45. **[MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation](../papers/2606.09215.md)**
-    2026-06-08 · 观察中 · **62/100** · 占位仓库
-
-    以 Cosmos 视频 DiT 单次前向的中间去噪特征条件化动作 DiT，预测统一全身运动潜变量驱动人形移动操作；作者报告 G1 九项真机任务总体成功率比最强 VLA 基线高 30 个点以上。
 
 ---
 

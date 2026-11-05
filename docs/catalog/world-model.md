@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**68 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
+**69 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
 
 **1** · [2](world-model-2.md) · [3](world-model-3.md) · [4](world-model-4.md) · [5](world-model-5.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -86,15 +86,15 @@
 
     从异构视频自动提取事件级 3D 交互轨迹训练轨迹世界模型 μ0，冻结后接动作专家；作者报告 UR3 真机三任务平均 91.7%，RoboCasa365 上 30.25% 高于 π0。
 
-14. **[Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)**
+14. **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](../papers/2611.01844.md)**
+    2026-11-01 · 值得关注 · **77/100** · 实质代码
+
+    OpenNWM 以1750万帧异源视频学习潜动作，再对齐物理运动，改善导航视觉预测和离线路径规划指标。
+
+15. **[Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)**
     2026-10-21 · 值得关注 · **77/100** · 实质代码
 
     FRED 用未来表征自蒸馏增强单步世界动作模型，OpenArm 人类视频技能迁移成功率达 50.0%。
-
-15. **[Keep the Future, Drop the Rollout: RIFT for World Action Models](../papers/2608.11521.md)**
-    2026-08-12 · 值得关注 · **77/100** · 实质代码
-
-    RIFT 用可学习的预期 token 一次前向生成未来 K/V 缓存，取代世界动作模型的迭代视频 rollout；作者报告 LIBERO 98.8%、提速 3.1–9.2 倍，真机三任务平均成功率 45.3%。
 
 ---
 

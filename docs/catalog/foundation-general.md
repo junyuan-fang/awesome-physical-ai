@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Other Generalist Models
 
-**8 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
+**10 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
 
 **1**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -41,22 +41,32 @@
 
     在 5000 小时等规模下比较第一视角人类视频与遥操作机器人数据做 WAM 预训练；作者报告人类视频在未见任务上动作验证损失约低 20%，且随规模对数线性下降。
 
-5. **[Orca: The World is in Your Mind](../papers/2606.30534.md)**
+5. **[Democratizing Robot-Use Agents: A Unified Harness with Open Models](../papers/2611.01560.md)**
+    2026-11-01 · 值得关注 · **71/100** · 部分开放
+
+    统一感知、工具与执行协议，使开放模型在 RoboDojo 和19项真机任务中获得有竞争力的操作表现。
+
+6. **[Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](../papers/2611.01112.md)**
+    2026-10-31 · 值得关注 · **71/100** · 实质代码
+
+    Auriga 以几何校准、动作预览和执行回执组织冻结模型，在 RoboDojo 的6300次模拟评测中报告57.7%成功率。
+
+7. **[Orca: The World is in Your Mind](../papers/2606.30534.md)**
     2026-06-29 · 值得关注 · **69/100** · 实质代码
 
     BAAI 提出以“下一状态预测”学习统一世界隐空间的 Orca，用 12.5 万小时视频与 1.6 亿事件标注预训练；冻结主干后接文本、图像、动作读出头，作者报告优于同规模基线。
 
-6. **[EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](../papers/2610.26625.md)**
+8. **[EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](../papers/2610.26625.md)**
     2026-10-19 · 值得关注 · **68/100** · 占位仓库
 
     EgoXperience 构建 50 小时自我中心数据 EgoX-Data-6M 与基准 EgoX-Bench，EgoX 单次前向联合重建相机、深度、双手与物体 6DoF；作者报告 EgoX-Bench 手部误差降至 113.24 mm。
 
-7. **[PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](../papers/2609.14973.md)**
+9. **[PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](../papers/2609.14973.md)**
     2026-09-14 · 观察中 · **60/100** · 占位仓库
 
     PhysBrain 1.5 在 Qwen3-VL 上把语言、末端轨迹与未来 RGB/深度/机器人掩码统一为离散 token 联合自回归训练，8B 模型在 28 个具身理解基准上平均 72.5，为开源最高。
 
-8. **[Self-Evolving Embodied Agents via Skill-Harness Evolution](../papers/2608.11350.md)**
+10. **[Self-Evolving Embodied Agents via Skill-Harness Evolution](../papers/2608.11350.md)**
     2026-08-11 · 观察中 · **51/100** · 未找到仓库
 
     SHAPER 冻结规划器与执行器参数，只用少量 rollout 演化文本技能与上下文构造代码；作者报告 VLABench 自建四个划分平均成功率从 28.25% 升至 34.50%，ESI-Bench 子集准确率从 32.5% 升至 49.8%。

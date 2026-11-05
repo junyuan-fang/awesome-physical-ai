@@ -72,3 +72,19 @@ tools:
     paper: https://arxiv.org/abs/2610.39327
   added: '2026-11-01'
   last_check: '2026-11-01'
+- id: uni-robot-agent
+  name: Uni Robot Agent
+  desc: 分层机器人智能体框架，统一模型、观测、工具和动作执行；当前公开仿真支持，真机接口尚不完整。
+  links:
+    code: https://github.com/Open-RUA/uni-robot-agent
+    paper: https://arxiv.org/abs/2611.01560
+  added: '2026-11-05'
+  last_check: '2026-11-05'
+- id: auriga
+  name: Auriga
+  desc: 面向模拟机器人操作的基础模型执行系统，提供几何工具、动作预览、执行回执和程序化动作接口。
+  links:
+    code: https://github.com/lose4578/Auriga
+    paper: https://arxiv.org/abs/2611.01112
+  added: '2026-11-05'
+  last_check: '2026-11-05'

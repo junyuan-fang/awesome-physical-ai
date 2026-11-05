@@ -4,19 +4,19 @@
 
 [首页](../README.md) / 论文目录
 
-**278 篇** · 最近扫描 **2026-11-02** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
+**283 篇** · 最近扫描 **2026-11-03** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
 
 分类页每页最多 15 篇，按优先级 → 总分 → 首次公开日期排序。点击论文标题进入完整评审，包含作者单位、评分依据和开放状态。
 
 ## Foundation Models for Robotics
 
 - <a id="cat-vla"></a>[Vision-Language-Action (VLA)](catalog/vla.md) · **80 篇**
-- <a id="cat-world-model"></a>[World Models](catalog/world-model.md) · **68 篇**
-- <a id="cat-foundation-general"></a>[Other Generalist Models](catalog/foundation-general.md) · **8 篇**
+- <a id="cat-world-model"></a>[World Models](catalog/world-model.md) · **69 篇**
+- <a id="cat-foundation-general"></a>[Other Generalist Models](catalog/foundation-general.md) · **10 篇**
 
 ## Manipulation
 
-- <a id="cat-manipulation"></a>[Manipulation](catalog/manipulation.md) · **40 篇**
+- <a id="cat-manipulation"></a>[Manipulation](catalog/manipulation.md) · **41 篇**
 
 ## Locomotion
 
@@ -40,7 +40,7 @@
 
 ## RL & Imitation Learning
 
-- <a id="cat-rl-il"></a>[RL & Imitation Learning](catalog/rl-il.md) · **10 篇**
+- <a id="cat-rl-il"></a>[RL & Imitation Learning](catalog/rl-il.md) · **11 篇**
 
 ## Tutorials & Surveys
 
@@ -50,10 +50,10 @@
 
 资源页保留项目链接、使用条件，以及使用该资源的已收录论文。评测使用不代表训练使用。
 
-- [Datasets](resources/datasets.md) · 23 项
+- [Datasets](resources/datasets.md) · 24 项
 - [Simulators](resources/simulators.md) · 8 项
-- [Benchmarks](resources/benchmarks.md) · 27 项
-- [Tools & Libraries](resources/tools.md) · 8 项
+- [Benchmarks](resources/benchmarks.md) · 28 项
+- [Tools & Libraries](resources/tools.md) · 10 项
 - [Companies & Industry](resources/companies.md) · 19 项
 
 <details>
@@ -71,6 +71,7 @@
 - <a id="resource-physxverse"></a>[PhysXVerse](resources/datasets.md#resource-physxverse) · 1 篇论文
 - <a id="resource-ego2robot-data"></a>[Ego2Robot](resources/datasets.md#resource-ego2robot-data) · 1 篇论文
 - <a id="resource-egox-data-6m"></a>[EgoX-Data-6M](resources/datasets.md#resource-egox-data-6m) · 1 篇论文
+- <a id="resource-navanywhere"></a>[NavAnywhere](resources/datasets.md#resource-navanywhere) · 2 篇论文
 - <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 7 篇论文
 - <a id="resource-isaac-sim"></a>[Isaac Sim](resources/simulators.md#resource-isaac-sim) · 4 篇论文
 - <a id="resource-genesis"></a>[Genesis](resources/simulators.md#resource-genesis) · 1 篇论文
@@ -79,23 +80,26 @@
 - <a id="resource-maniskill-3"></a>[ManiSkill 3](resources/simulators.md#resource-maniskill-3) · 1 篇论文
 - <a id="resource-calvin"></a>[CALVIN](resources/benchmarks.md#resource-calvin) · 7 篇论文
 - <a id="resource-meta-world"></a>[Meta-World](resources/benchmarks.md#resource-meta-world) · 2 篇论文
-- <a id="resource-libero"></a>[LIBERO](resources/benchmarks.md#resource-libero) · 78 篇论文
+- <a id="resource-libero"></a>[LIBERO](resources/benchmarks.md#resource-libero) · 80 篇论文
 - <a id="resource-rlbench"></a>[RLBench](resources/benchmarks.md#resource-rlbench) · 4 篇论文
 - <a id="resource-aliasbench"></a>[AliasBench](resources/benchmarks.md#resource-aliasbench) · 1 篇论文
 - <a id="resource-simplerenv"></a>[SimplerEnv](resources/benchmarks.md#resource-simplerenv) · 16 篇论文
 - <a id="resource-physx-bench"></a>[PhysX-Bench](resources/benchmarks.md#resource-physx-bench) · 1 篇论文
 - <a id="resource-behavior-1k"></a>[BEHAVIOR-1K](resources/benchmarks.md#resource-behavior-1k) · 6 篇论文
-- <a id="resource-robocasa-bench"></a>[RoboCasa-Bench](resources/benchmarks.md#resource-robocasa-bench) · 17 篇论文
+- <a id="resource-robocasa-bench"></a>[RoboCasa-Bench](resources/benchmarks.md#resource-robocasa-bench) · 18 篇论文
 - <a id="resource-robotwin-2"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin-2) · 20 篇论文
 - <a id="resource-robotwin"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin) · 2 篇论文
 - <a id="resource-humanoidvln"></a>[HumanoidVLN](resources/benchmarks.md#resource-humanoidvln) · 1 篇论文
 - <a id="resource-h2r-bench"></a>[H2R-Bench](resources/benchmarks.md#resource-h2r-bench) · 1 篇论文
 - <a id="resource-egox-bench"></a>[EgoX-Bench](resources/benchmarks.md#resource-egox-bench) · 1 篇论文
 - <a id="resource-zero-hlm-bench"></a>[Zero-HLM-Bench](resources/benchmarks.md#resource-zero-hlm-bench) · 1 篇论文
+- <a id="resource-robodojo"></a>[RoboDojo](resources/benchmarks.md#resource-robodojo) · 2 篇论文
 - <a id="resource-lerobot"></a>[LeRobot](resources/tools.md#resource-lerobot) · 1 篇论文
 - <a id="resource-diffusion-policy"></a>[Diffusion Policy](resources/tools.md#resource-diffusion-policy) · 1 篇论文
 - <a id="resource-openvla"></a>[OpenVLA](resources/tools.md#resource-openvla) · 4 篇论文
 - <a id="resource-schedulegen"></a>[ScheduleGen](resources/tools.md#resource-schedulegen) · 1 篇论文
 - <a id="resource-sonic-k1"></a>[SONIC-K1](resources/tools.md#resource-sonic-k1) · 1 篇论文
+- <a id="resource-uni-robot-agent"></a>[Uni Robot Agent](resources/tools.md#resource-uni-robot-agent) · 1 篇论文
+- <a id="resource-auriga"></a>[Auriga](resources/tools.md#resource-auriga) · 1 篇论文
 
 </details>

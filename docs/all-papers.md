@@ -4,7 +4,7 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 278 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 283 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
 ## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 80
 
@@ -89,7 +89,7 @@
 - [HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](papers/2608.17584.md) · 2026-08-18
 - [Action with Visual Primitives](papers/2605.22183.md) · 2026-05-21
 
-## <a id="cat-world-model"></a>World Models · 68
+## <a id="cat-world-model"></a>World Models · 69
 
 - [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md) · 2026-10-19 · 92/100
 - [Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md) · 2025-01-07 · 89/100
@@ -104,6 +104,7 @@
 - [RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](papers/2607.06559.md) · 2026-07-07 · 80/100
 - [$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](papers/2606.13672.md) · 2026-06-11 · 80/100
 - [$\mu_0$: A Scalable 3D Interaction-Trace World Model](papers/2606.13769.md) · 2026-06-11 · 80/100
+- [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](papers/2611.01844.md) · 2026-11-01 · 77/100
 - [Self-Distilling Future Video Representations for World Action Models](papers/2610.30320.md) · 2026-10-21 · 77/100
 - [Keep the Future, Drop the Rollout: RIFT for World Action Models](papers/2608.11521.md) · 2026-08-12 · 77/100
 - [$N_0$-TWAM: Scaling Tactile-Native World-Action Model for Contact-Rich Manipulation](papers/2607.23783.md) · 2026-07-26 · 77/100
@@ -160,18 +161,20 @@
 - [One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](papers/2607.28443.md) · 2026-07-30 · 48/100
 - [WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](papers/2607.23909.md) · 2026-07-27 · 37/100
 
-## <a id="cat-foundation-general"></a>Other Generalist Models · 8
+## <a id="cat-foundation-general"></a>Other Generalist Models · 10
 
 - [GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives](papers/2609.39601.md) · 2026-09-30 · 80/100
 - [Grounded Action Model: 3D Grounding as a Foundation for Robotics](papers/2609.23863.md) · 2026-09-20 · 80/100
 - [RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](papers/2608.09853.md) · 2026-08-10 · 80/100
 - [HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](papers/2606.20521.md) · 2026-06-18 · 75/100
+- [Democratizing Robot-Use Agents: A Unified Harness with Open Models](papers/2611.01560.md) · 2026-11-01 · 71/100
+- [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](papers/2611.01112.md) · 2026-10-31 · 71/100
 - [Orca: The World is in Your Mind](papers/2606.30534.md) · 2026-06-29 · 69/100
 - [EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](papers/2610.26625.md) · 2026-10-19 · 68/100
 - [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](papers/2609.14973.md) · 2026-09-14 · 60/100
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](papers/2608.11350.md) · 2026-08-11 · 51/100
 
-## <a id="cat-manipulation"></a>Manipulation · 40
+## <a id="cat-manipulation"></a>Manipulation · 41
 
 - [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md) · 2026-10-01 · 86/100
 - [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md) · 2026-10-24 · 83/100
@@ -185,6 +188,7 @@
 - [MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](papers/2609.38078.md) · 2026-09-29 · 71/100
 - [TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](papers/2609.05266.md) · 2026-09-04 · 71/100
 - [Robots Acquire Manipulation Skills in Seconds from a Single Human Video](papers/2607.20033.md) · 2026-07-22 · 71/100
+- [GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](papers/2611.02171.md) · 2026-11-01 · 68/100
 - [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](papers/2608.02580.md) · 2026-08-03 · 68/100
 - [VISTA: Active Exploration for Self-Improvement in Embodied Agents](papers/2610.35051.md) · 2026-10-26 · 66/100
 - [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](papers/2610.27861.md) · 2026-10-20 · 66/100
@@ -295,10 +299,11 @@
 - [Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](papers/2608.12198.md) · 2026-08-12 · 52/100
 - [NavWM: A Unified Navigation World Model for Foresight-Driven Planning](papers/2606.24101.md) · 2026-06-23 · 48/100
 
-## <a id="cat-rl-il"></a>RL & Imitation Learning · 10
+## <a id="cat-rl-il"></a>RL & Imitation Learning · 11
 
 - [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](papers/2303.04137.md) · 2023-03-07 · 100/100
 - [Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](papers/2608.15938.md) · 2026-08-16 · 77/100
+- [ODE Policy: Robot Learning via Action Dynamics, Not Actions](papers/2611.01729.md) · 2026-11-01 · 76/100
 - [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](papers/2610.32093.md) · 2026-10-23 · 71/100
 - [Event2Reward: Learning Robotic Rewards from Progress Relations](papers/2610.39212.md) · 2026-10-29 · 65/100
 - [Asymmetric On-Policy Distillation Learns In-Context Exploration](papers/2610.30105.md) · 2026-10-21 · 65/100

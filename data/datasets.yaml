@@ -236,3 +236,13 @@ datasets:
   subcategory: manipulation-demos
   added: '2026-10-23'
   last_check: '2026-10-23'
+- id: navanywhere
+  name: NavAnywhere
+  subcategory: egocentric-human
+  desc: 15来源、约1750万视觉帧的无动作导航预训练数据；同时含人类、地面机器人和无人机视角，非纯人类第一视角数据，需遵循上游许可。
+  links:
+    paper: https://arxiv.org/abs/2611.01844
+    data: https://huggingface.co/datasets/LittleB0sS/NavAnywhere
+    code: https://github.com/OpenSpace-Lab/OpenNWM
+  added: '2026-11-05'
+  last_check: '2026-11-05'

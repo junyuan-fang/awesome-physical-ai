@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**40 篇** · 第 **1 / 3** 页 · 每页最多 15 篇
+**41 篇** · 第 **1 / 3** 页 · 每页最多 15 篇
 
 **1** · [2](manipulation-2.md) · [3](manipulation-3.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -81,20 +81,20 @@
 
     HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
 
-13. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+13. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
+    2026-11-01 · 值得关注 · **68/100** · 未找到仓库
+
+    以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
+
+14. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
     2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
     将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
 
-14. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
+15. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
     2026-10-26 · 值得关注 · **66/100** · 部分开放
 
     VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
-
-15. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
-    2026-10-20 · 值得关注 · **66/100** · 实质代码
-
-    基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
 
 ---
 

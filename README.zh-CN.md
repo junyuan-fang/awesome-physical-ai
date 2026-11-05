@@ -9,11 +9,11 @@
 
 具身智能、机器人基础模型与物理 AI 的论文和资源导航。以中文评审说明贡献、证据与复现条件。
 
-**278 篇论文** · 23 个数据集 · 8 个仿真器 · 27 个基准 · 8 个工具
+**283 篇论文** · 24 个数据集 · 8 个仿真器 · 28 个基准 · 10 个工具
 
 [论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [如何看评分](#scoring)
 
-> 最近完成扫描：**2026-11-02** · [查看本次报告](digests/daily/2026-11-02.md)。
+> 最近完成扫描：**2026-11-03** · [查看本次报告](digests/daily/2026-11-03.md)。
 
 ## <a id="contents"></a>从哪里开始
 
@@ -23,26 +23,26 @@
 | 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
 | 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
 | 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-02.md) · [近期精选](#weekly-picks) |
+| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-03.md) · [近期精选](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>近期精选
 
 最近一次扫描日前 7 天新收录的重点论文，首页最多展示 5 篇。[阅读优先级 Top 20 →](docs/rankings.md)
 
-- **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](docs/papers/2610.33852.md)** · 2026-10-24 · 83/100
-  AdaDexTrack动态调制参考、物体表示与位置目标，在未见轨迹和物体上优于固定跟踪器，并实现零样本真机迁移。
+- **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](docs/papers/2611.01844.md)** · 2026-11-01 · 77/100
+  OpenNWM 以1750万帧异源视频学习潜动作，再对齐物理运动，改善导航视觉预测和离线路径规划指标。
 
-- **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](docs/papers/2610.34356.md)** · 2026-10-25 · 77/100
-  RynnVLA以三维潜在动作利用异构视频预训练，作者报告4B模型在LIBERO成功率98.8%，并验证六项真机任务。
+- **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](docs/papers/2611.01729.md)** · 2026-11-01 · 76/100
+  学习动作随物理时间的导数并积分生成轨迹，在 LIBERO、多类策略和14项真机任务中验证效率与连续性。
 
 - **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](docs/papers/2610.36791.md)** · 2026-10-27 · 72/100
   RynnWorld-Latent用通用潜动作联合学习多形态视频动力学，并研究合成数据对操作策略的作用。
 
-- **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](docs/papers/2610.40016.md)** · 2026-10-29 · 71/100
-  LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
+- **[Democratizing Robot-Use Agents: A Unified Harness with Open Models](docs/papers/2611.01560.md)** · 2026-11-01 · 71/100
+  统一感知、工具与执行协议，使开放模型在 RoboDojo 和19项真机任务中获得有竞争力的操作表现。
 
-- **[GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](docs/papers/2610.37091.md)** · 2026-10-27 · 71/100
-  GAWM用小型潜空间预测器辅助动作生成；补查原文还报告黄瓶交接真机46/50次成功。
+- **[Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](docs/papers/2611.01112.md)** · 2026-10-31 · 71/100
+  Auriga 以几何校准、动作预览和执行回执组织冻结模型，在 RoboDojo 的6300次模拟评测中报告57.7%成功率。
 
 ## 研究方向
 
@@ -50,14 +50,14 @@
 
 | 方向 | 内容 | 篇数 |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 156 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 40 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 159 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 41 |
 | <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 24 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
 | <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 11 |
 | <a id="scene"></a>3D Scene Understanding | [3D Scene Understanding](docs/catalog/scene.md) | 5 |
 | <a id="navigation"></a>Navigation & Mobility | [Navigation & Mobility](docs/catalog/navigation.md) | 14 |
-| <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 10 |
+| <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 11 |
 | <a id="tutorials"></a>Tutorials & Surveys | [Tutorials & Surveys](docs/catalog/tutorials.md) | 6 |
 
 [全部论文目录 →](docs/index.md) · [一页式标题索引（便于全文搜索）→](docs/all-papers.md)
@@ -66,10 +66,10 @@
 
 | 资源 | 用途 | 数量 |
 |---|---|---:|
-| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 23 |
+| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 24 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 8 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 27 |
-| <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 8 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 28 |
+| <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 10 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 
 ## <a id="topics"></a>专题阅读

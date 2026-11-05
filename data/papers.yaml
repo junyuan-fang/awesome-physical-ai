@@ -19382,3 +19382,346 @@ papers:
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
+- arxiv_id: '2611.01560'
+  title: 'Democratizing Robot-Use Agents: A Unified Harness with Open Models'
+  authors: Jiarui Yuan et al.
+  affiliations:
+  - Tsinghua University
+  - UC Berkeley
+  date: '2026-11-01'
+  category: foundation-general
+  route: core
+  contribution: system
+  tags:
+  - robot-use
+  - tool-use
+  - zero-shot
+  - manipulation
+  abstract_short: 统一感知、工具与执行协议，使开放模型在 RoboDojo 和19项真机任务中获得有竞争力的操作表现。
+  summary: 为降低机器人智能体对封闭模型和特制工具链的依赖，本文把模型接入、任务循环、工具语义、执行管理与机器人适配分层。框架将图像、标定和状态绑定为观测快照，以执行记录避免重复动作，并支持运动与夹爪协同、进度检查及异步调度。在 RoboDojo
+    的42项任务、252次评测中，作者报告 Qwen3.8-Flash-Next 成功率25.00%、综合得分31.39，高于论文引用的 GPT6 Astra–RoboProbe 结果22.48%、28.97。19项双臂真机任务中，该模型得分49.50/100，微调
+    π0.5 为47.75。结果提示执行框架显著影响模型表现，但真机智能体使用深度信息而策略基线仅用 RGB，不能把差异全归因于推理能力；得分也不等于成功率。当前公开实现主要支持仿真，真实机器人适配仍待发布。
+  links:
+    arxiv: https://arxiv.org/abs/2611.01560
+    code: https://github.com/Open-RUA/uni-robot-agent
+    project: https://openrua.ai/uni-robot-agent
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 第2节以观测快照、统一动作语义和执行管理解决跨模型、跨机器人复用中的实际问题，系统增量明确。
+      E: 第3节有42项模拟任务、19项真机任务及框架对照；真机深度输入与 RGB 策略的条件不同，限制因果归因。
+      O: 官方 MIT 仓库有实质框架和仿真实现，但 README 将真实 ARX/Franka 接入列为待开放，按部分代码计分。
+      T: 未完成近五年相关成果的独立核验，按信息不足默认 3；不以单位声誉加分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 尚未逐项核验作者近五年在本方向的代表性成果，T 暂按信息不足默认 3。
+    - 论文真机演示数据是否公开及其下载、许可范围尚未确认。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: partial
+    repo: https://github.com/Open-RUA/uni-robot-agent
+    weights: n/a
+    data: unknown
+    license: MIT
+    note: 已读官方 README 与代码目录；模拟任务可运行，真实 ARXOne/Franka 接入标为 coming soon，故将探测的 substantive 修正为 partial。方法本身不训练新基础模型；上游模型权重不计作本工作的权重发布。
+    stats:
+      files: 387
+      code_files: 239
+      config_files: 20
+      last_commit: '2026-11-04'
+      readme_says_coming_soon: true
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: robodojo
+    role: eval
+  - resource: uni-robot-agent
+    role: proposes
+  added: '2026-11-05'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-03.md
+  late_found: true
+- arxiv_id: '2611.01729'
+  title: 'ODE Policy: Robot Learning via Action Dynamics, Not Actions'
+  authors: Jindou Jia et al.
+  affiliations:
+  - MARS Lab, Nanyang Technological University
+  date: '2026-11-01'
+  category: rl-il
+  route: core
+  contribution: method
+  tags:
+  - neural-ode
+  - imitation-learning
+  - action-chunking
+  - continuous-control
+  abstract_short: 学习动作随物理时间的导数并积分生成轨迹，在 LIBERO、多类策略和14项真机任务中验证效率与连续性。
+  summary: 为缓解动作块不连续及迭代生成的计算成本，ODE Policy 学习动作随物理时间演化的向量场，从当前动作积分得到后续轨迹，以整段路径误差监督而不直接拟合带噪导数。收缩性正则和跨块延续进一步约束初值扰动，并通过混合速度头容纳多模态行为。作者在
+    LIBERO、扰动测试、强化学习以及 VLA/WAM 适配中比较多种策略，并在四类平台的14项真机任务上验证。在 Franka 每任务40条演示、20次测试的条件下，袜子折叠成功15/20，最佳对照8/20；插入为14/20，对照4/20。结果支持连续时间参数化改善学习效率及接触任务执行，但小样本真机结果仍有统计不确定性，摄像机变化会使部分视觉策略失败；动作头加速不能直接等同于完整系统延迟下降，也没有保证真实机械系统始终平滑稳定。
+  links:
+    arxiv: https://arxiv.org/abs/2611.01729
+    code: https://github.com/NTUMARS/ODE-POLICY
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 5
+      O: 3
+      T: 3
+    rationale:
+      C: 方法将动作导数学习、路径监督与跨块积分统一，并可嵌入 IL、RL、VLA 和 WAM，方法增量清晰。
+      E: 第5至7节覆盖多基准、强基线、结构消融、扰动泛化及四类平台14项真机任务，证据广度达到高档；真机单项次数仍有限。
+      O: Apache-2.0 仓库包含训练、基线、评测及部分真机/VLA 分支；未确认作者模型检查点和新增真机数据可下载。
+      T: 近五年相关成果尚未独立梳理，默认 3，不把实验广度重复计入团队分。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 尚未逐项核验作者近五年在本方向的代表性成果，T 暂按信息不足默认 3。
+    - 与论文各实验对应的已训练检查点及新增真机演示数据的发布范围尚未确认。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 76
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/NTUMARS/ODE-POLICY
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 已核对主分支的训练/基线/LIBERO 评测说明，以及 real-r1lite、vla-pi05 分支说明；未把公开上游 LIBERO 数据误计为作者新增数据已开放。README 未确认论文全部检查点下载。
+    stats:
+      files: 135
+      code_files: 90
+      config_files: 20
+      last_commit: '2026-11-03'
+      readme_says_coming_soon: false
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: libero
+    role: finetune
+  - resource: libero
+    role: eval
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-03.md
+  late_found: true
+- arxiv_id: '2611.02171'
+  title: 'GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation'
+  authors: Arjun Bhardwaj et al.
+  affiliations:
+  - ETH Zurich
+  - NVIDIA
+  date: '2026-11-01'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - image-goal
+  - teacher-student
+  - sim-to-real
+  abstract_short: 以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
+  summary: 为摆脱部署时精确估计物体姿态的依赖，GoalDex 用目标图像描述所需朝向，先训练读取特权物理状态的强化学习教师，再把技能蒸馏给仅接收视觉与本体感觉的循环学生。目标编码器通过连续姿态对比学习区分相近方向，学生同时重建物体物理状态，以记忆补偿遮挡和接触歧义。作者在模拟中比较姿态控制、通用视觉特征及记忆、重建等消融，并在五种真实物体各20个目标上测试：图像目标策略合计成功80/100，最强姿态对照27/100。结果提示直接学习目标相关视觉表示有助于绕过姿态估计误差，但目标图像生成仍依赖物体几何与分割，验证集中于掌心向上的手内重定向；扩大到25种模拟物体需要增加训练规模，尚未解决完全未见物体类别泛化。项目入口存在，但本次未能核实代码和资产发布。
+  links:
+    arxiv: https://arxiv.org/abs/2611.02171
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 4
+    rationale:
+      C: 目标姿态对比表征与特权教师、循环视觉学生结合，针对遮挡下图像目标手内重定向给出明确方法增量。
+      E: 方法和实验含多种视觉/姿态基线、组件消融、模拟扩展及五物体100次真机测试；未见类别仍是边界。
+      O: 论文给出项目入口及发布承诺，但本次项目访问未成功，未核实实质代码、权重或数据，按承诺档计 2。
+      T: 论文明确承接同作者在 ViserDex（RSS 2026）的视觉灵巧操作工作，可核实相关方向积累，给 4。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    pending_checks:
+    - 项目 https://rffr.leggedrobotics.com/works/goaldex/ 本次无法访问，待确认官方代码、检查点和数据的实际发布状态及许可。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 68
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原文项目地址为 https://rffr.leggedrobotics.com/works/goaldex/；本次访问失败，未获得可验证的官方代码仓库。开放状态仅反映本次核验，不能据此断言作者没有发布。
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-03.md
+  late_found: true
+- arxiv_id: '2611.01112'
+  title: 'Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation'
+  authors: Chengcheng Wang et al.
+  affiliations:
+  - StellarEdge AI Technical Team
+  date: '2026-10-31'
+  category: foundation-general
+  route: core
+  contribution: system
+  tags:
+  - robot-use
+  - tool-use
+  - zero-shot
+  - manipulation
+  abstract_short: Auriga 以几何校准、动作预览和执行回执组织冻结模型，在 RoboDojo 的6300次模拟评测中报告57.7%成功率。
+  summary: 为减少机器人语言智能体的几何误解和未经验证的长动作，Auriga 维护任务信念与观测证据，把指尖参照的动作命令、标定几何、执行前预览和执行后回执纳入统一接口，并通过单一执行入口约束停止误差与抓取状态。系统不依靠目标任务微调或演示，开发中经历多轮跨任务诊断。作者使用
+    GPT6 Astra，在 RoboDojo 的42项任务、6300次模拟评测中报告57.7%成功率和64.0分，所引参考系统为22.5%和29.0分；在 RoboCasa365 的 Target50 子集250次测试中成功率73.2%，组合与未见任务仍弱于原子任务。移除预览或程序化工具会降低表现，支持执行设计的重要性。但推理期间模拟物理暂停，结果没有验证真实时间约束或真机鲁棒性；开发任务与评测诊断的边界也限制零样本泛化解读，且系统依赖闭源模型服务。
+  links:
+    arxiv: https://arxiv.org/abs/2611.01112
+    code: https://github.com/lose4578/Auriga
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 技术报告把几何参照、程序化工具、预览与回执串成机器人执行系统，并给出跨任务复用机制。
+      E: 第6节有6300次 RoboDojo 评测、RoboCasa 子集及工具消融；全部在暂停推理时物理演化的仿真设置中完成。
+      O: 官方 MIT 仓库包含核心执行、工具、配置和环境安装说明，构成实质代码；外部模型服务及完整评测资产不属于可复现权重发布。
+      T: 未核实该技术团队近五年的独立相关产出，按默认 3 记录。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 尚未逐项核验作者近五年在本方向的代表性成果，T 暂按信息不足默认 3。
+    - 论文完整逐回合评测记录的可下载范围尚未确认。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/lose4578/Auriga
+    weights: n/a
+    data: unknown
+    license: MIT
+    note: 已读官方 README、工具与核心代码目录及固定环境安装说明。论文使用冻结外部模型，无新模型权重；仓库默认模型设置与论文 GPT6 Astra 不同，复现时需显式匹配。
+    stats:
+      files: 661
+      code_files: 450
+      config_files: 38
+      last_commit: '2026-11-01'
+      readme_says_coming_soon: false
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: auriga
+    role: proposes
+  - resource: robodojo
+    role: eval
+  - resource: robocasa-bench
+    role: eval
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-03.md
+  late_found: true
+- arxiv_id: '2611.01844'
+  title: 'OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining'
+  authors: Dujun Nie et al.
+  affiliations:
+  - CASIA
+  - UCAS
+  - HKUST(GZ)
+  - UC Berkeley
+  - Tongji University
+  date: '2026-11-01'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - navigation
+  - latent-action
+  - video-pretraining
+  - world-model
+  abstract_short: OpenNWM 以1750万帧异源视频学习潜动作，再对齐物理运动，改善导航视觉预测和离线路径规划指标。
+  summary: 为利用缺少机器人动作标注的导航视频，OpenNWM 先以视觉预测和物理运动监督共同学习潜动作，再训练潜动作条件的扩散世界模型，最后适配可执行的路径点动作；在线规划变量仍是真实动作，并非任意潜向量。作者整理来自15种来源、1750万帧的
+    NavAnywhere，覆盖人、地面机器人和无人机视角，在四种域内及多种域外数据上比较预测和规划。报告的域内平均 LPIPS 为0.368，NWM 为0.405；SCAND 路径绝对误差为0.98，对照 NWM 为1.01，另有预训练和监督形式消融。结果支持异源视频改善动力学表征，但视觉质量与导航控制成功并不等价，部分域外指标并非最优，论文轨迹评估也不构成新真机闭环成功率。代码、检查点和数据目录已公开；不同组件及上游数据许可各异，真实
+    Go2 部署仍列在项目后续工作中。
+  links:
+    arxiv: https://arxiv.org/abs/2611.01844
+    code: https://github.com/OpenSpace-Lab/OpenNWM
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 3
+    rationale:
+      C: 视觉和物理联合监督的潜动作预训练连接异源无动作视频与导航规划，并提供有规模的 NavAnywhere 数据资源。
+      E: 第4节有域内/域外预测、轨迹规划、监督和预训练消融；证据覆盖多个数据来源，但未将离线轨迹结果夸大为真机闭环可靠性。
+      O: 已核对训练代码、官方 HF 检查点和数据文件目录；NWM/LAM 许可明确，数据保留上游条件，未做全量下载复现故不评 5。
+      T: 未独立核验作者近五年的完整相关成果序列，默认 3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 尚未逐项核验作者近五年在本方向的代表性成果，T 暂按信息不足默认 3。
+    - 原文署名 Ruiqi Song 带单位编号6，但可读署名表只列1至5；第6单位待正式来源补证，不自行推断。
+    - NavAnywhere 全部归档与论文15种来源、1750万帧规模的逐项对应关系尚未通过全量下载验证。
+    reviewed: '2026-11-05'
+    reviewer: codex (agent review, human-auditable)
+    total: 77
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/OpenSpace-Lab/OpenNWM
+    weights: open
+    data: open
+    license: CC-BY-NC-4.0 AND Apache-2.0
+    note: 官方仓库有 LAM/NWM 训练与评测实现。https://huggingface.co/LittleB0sS/OpenNWM API 确认 ungated、检查点/配置/校验和；https://huggingface.co/datasets/LittleB0sS/NavAnywhere
+      为 ungated 且有266个文件条目。NWM 为 CC-BY-NC-4.0，LAM 为 Apache-2.0；数据卡列 other 并要求遵循上游许可，非统一无限制商用。未执行全量下载或复现。
+    stats:
+      files: 995
+      code_files: 164
+      config_files: 163
+      last_commit: '2026-11-03'
+      readme_says_coming_soon: false
+    first_check: '2026-11-05'
+    last_check: '2026-11-05'
+  uses:
+  - resource: navanywhere
+    role: proposes
+  - resource: navanywhere
+    role: pretrain
+  added: '2026-11-05'
+  source: arxiv
+  digest: digests/daily/2026-11-03.md
+  late_found: true

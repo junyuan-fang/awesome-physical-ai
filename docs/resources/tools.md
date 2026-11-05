@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Tools & Libraries
 
-**8 项** · Open-source frameworks for building embodied AI
+**10 项** · Open-source frameworks for building embodied AI
 
 - [LeRobot](#resource-lerobot)
 - [Diffusion Policy](#resource-diffusion-policy)
@@ -14,6 +14,8 @@
 - [nvdiffrast](#resource-nvdiffrast)
 - [ScheduleGen](#resource-schedulegen)
 - [SONIC-K1](#resource-sonic-k1)
+- [Uni Robot Agent](#resource-uni-robot-agent)
+- [Auriga](#resource-auriga)
 
 ## <a id="resource-lerobot"></a>LeRobot
 
@@ -96,6 +98,30 @@ K1人形机器人动作跟踪训练与部署复现，提供代码和权重；动
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - proposes · [SONIC-K1: Porting a Universal Humanoid Motion Tracker to a Small Humanoid on a Single GPU](../papers/2610.39327.md)
+
+</details>
+
+## <a id="resource-uni-robot-agent"></a>Uni Robot Agent
+
+分层机器人智能体框架，统一模型、观测、工具和动作执行；当前公开仿真支持，真机接口尚不完整。
+
+[代码](https://github.com/Open-RUA/uni-robot-agent) [论文](https://arxiv.org/abs/2611.01560)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [Democratizing Robot-Use Agents: A Unified Harness with Open Models](../papers/2611.01560.md)
+
+</details>
+
+## <a id="resource-auriga"></a>Auriga
+
+面向模拟机器人操作的基础模型执行系统，提供几何工具、动作预览、执行回执和程序化动作接口。
+
+[代码](https://github.com/lose4578/Auriga) [论文](https://arxiv.org/abs/2611.01112)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](../papers/2611.01112.md)
 
 </details>
 
