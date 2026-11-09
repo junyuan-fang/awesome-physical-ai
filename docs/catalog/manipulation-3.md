@@ -4,9 +4,9 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**43 篇** · 第 **3 / 3** 页 · 每页最多 15 篇
+**47 篇** · 第 **3 / 4** 页 · 每页最多 15 篇
 
-[1](manipulation.md) · [2](manipulation-2.md) · **3**
+[1](manipulation.md) · [2](manipulation-2.md) · **3** · [4](manipulation-4.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
 
 **评分速查** · 每项 1–5 分，按权重合计为 100 分制，用于安排阅读顺序。
@@ -21,72 +21,82 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-31. **[CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning](../papers/2608.19776.md)**
+31. **[Affordance2Action: Task-Conditioned Scene-level Affordance Grounding for Real-Time Manipulation](../papers/2606.04172.md)**
+    2026-06-02 · 观察中 · **62/100** · 未找到仓库
+
+    面向任务条件、场景级、一对多的部件 affordance 定位，构建 A2A-Bench 与智能体辅助标注流水线，并以 SAM3 适配的实时定位模型为扩散策略提供空间先验；TRPS 上作者报告 55.41 gIoU、约 9.7 FPS。
+
+32. **[Latent RL Priors for Data-Efficient Dexterous Manipulation](../papers/2611.08458.md)**
+    2026-11-05 · 观察中 · **60/100** · 未找到仓库
+
+    Latent RL Prior 冻结仿真 RL 动作解码器，作者报告门抬升和双臂装配分别用少 10 倍、5 倍演示超过所测全量 VLA。
+
+33. **[GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation](../papers/2608.19759.md)**
+    2026-08-20 · 观察中 · **60/100** · 实质代码
+
+    训练时只用夹爪自身几何与抓取分类学学习接触分布的CVAE抓取规划器，推理时才引入物体；作者报告MultiDex三种灵巧手平均成功率86.93%，且无需物体抓取数据。
+
+34. **[CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning](../papers/2608.19776.md)**
     2026-08-20 · 观察中 · **60/100** · 实质代码
 
     以21种接触拓扑模板为条件、在夹爪规范工作空间中物体无关训练的灵巧抓取生成器；作者报告在DexGraspNet上稳定性与拓扑符合度优于分类学感知基线Dexonomy。
 
-32. **[PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing](../papers/2608.17962.md)**
+35. **[PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing](../papers/2608.17962.md)**
     2026-08-18 · 观察中 · **60/100** · 占位仓库
 
     面向工业精密装配的多模态接触丰富操作数据集：25+任务、5000+条遥操作轨迹（45小时），同步RGB-D、力/力矩、触觉与本体状态，覆盖3种机器人与3种遥操作方式。
 
-33. **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](../papers/2608.21031.md)**
+36. **[Time-Indexed Skill Success Models for Latency-Aware Skill Selection and Timing in Dynamic Manipulation](../papers/2611.07964.md)**
+    2026-11-05 · 观察中 · **59/100** · 未找到仓库
+
+    时间索引技能成功模型在动态抓取中联合选择技能与启动时机，减少延迟造成的过时决策。
+
+37. **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](../papers/2608.21031.md)**
     2026-08-21 · 观察中 · **57/100** · 未找到仓库
 
     PhysCaP 为代码即策略智能体加入由关节力矩与夹爪形变估计质量、刚度的模块及规划/排序双智能体，作者报告在三个真机任务和 LIBERO 中以更少交互与更短时间达到相当或更高成功率。
 
-34. **[DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use](../papers/2606.05699.md)**
+38. **[DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use](../papers/2606.05699.md)**
     2026-06-04 · 观察中 · **57/100** · 未找到仓库
 
     高层从视觉-本体历史预测未来手-工具-物体目标轨迹，低层目标条件策略高频跟踪；作者报告 OakInk2 双手工具任务上达到特权目标策略约 90% 表现，比 DexWM 式 CEM 规划快约 250 倍。
 
-35. **[Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum](../papers/2605.21133.md)**
+39. **[Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum](../papers/2605.21133.md)**
     2026-05-20 · 观察中 · **57/100** · 未找到仓库
 
     以 VLM 驱动的“主动空间大脑”负责主动视角感知与任务分解、多智能体“动作小脑”生成全身动作，无需任务真机数据；作者报告 G1 人形五类空间操作困难设定成功率 55–70%，高于 TrajBooster、CaP 等基线。
 
-36. **[H2R-Grounder: A Paired-Data-Free Paradigm for Translating Human Interaction Videos into Physically Grounded Robot Videos](../papers/2512.09406.md)**
+40. **[H2R-Grounder: A Paired-Data-Free Paradigm for Translating Human Interaction Videos into Physically Grounded Robot Videos](../papers/2512.09406.md)**
     2025-12-10 · 观察中 · **57/100** · 占位仓库
 
     H2R-Grounder 将机械臂从机器人视频中抹除并叠加夹爪位姿标记，微调 Wan2.2 学会"放回"机械臂，测试时把人手视频转成机器人视频，无需配对数据；作者报告在 DexYCB 人评中多数维度优于基线。
 
-37. **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](../papers/2606.23085.md)**
+41. **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](../papers/2606.23085.md)**
     2026-06-22 · 观察中 · **56/100** · 占位仓库
 
     用 V-JEPA 2-AC 动作条件预测潜变量+因果 Transformer 做长时程操作失败检测，仅需轨迹级成败标签并用函数型共形预测定阈；作者报告 BEHAVIOR-1K 上 ROC-AUC 0.76、平衡准确率 0.78。
 
-38. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
+42. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
     2026-08-19 · 观察中 · **54/100** · 未找到仓库
 
     化学实验室灵巧操作的分层真机+仿真基准，含原子技能、组合技能与长时程流程三级；作者报告π0.5原子技能最佳，但三种策略均无法完成完整实验流程。
 
-39. **[PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views](../papers/2608.19188.md)**
+43. **[PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views](../papers/2608.19188.md)**
     2026-08-19 · 观察中 · **54/100** · 未找到仓库
 
     从单视角部分点云生成力封闭双臂抓取对，用卷积占据网络推断隐藏局部几何并做占据引导细化；作者报告DG16M测试集力封闭率55.2%，显著高于各基线。
 
-40. **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](../papers/2605.21811.md)**
+44. **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](../papers/2605.21811.md)**
     2026-05-20 · 观察中 · **51/100** · 未找到仓库
 
     SafePBDS 用 pullback 控制屏障函数把任务流形安全约束转为构型空间加速度线性约束，并提供残差动作接口；作者报告 Franka-Allegro 真机抓取成功率 92.5%，手内旋转超 360°。
 
-41. **[Throwing a Tight Spiral American Football by a Humanoid Robot](../papers/2608.16642.md)**
+45. **[Throwing a Tight Spiral American Football by a Humanoid Robot](../papers/2608.16642.md)**
     2026-08-17 · 观察中 · **43/100** · 未找到仓库
 
     首次让 Unitree G1 人形机器人投出旋转稳定的橄榄球螺旋传球：轨迹优化完成投掷段，查表式 MPC 调控手指释放段，作者报告旋转效率最高 93.6%。
 
-42. **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](../papers/2606.03268.md)**
-    2026-06-02 · 观察中 · **37/100** · 未找到仓库
-
-    EaDex 用单个 RGB-D 相机采集人手示范、经 MANO 拟合与重定向生成跨灵巧手示范，并按接触奖励动态退火示范权重；作者报告 3 种灵巧手×3 个铰接物体仿真平均成功率 23.5%→36.5%。
-
-43. **[Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning](../papers/2608.13422.md)**
-    2026-08-13 · 暂不评级 · 实质代码
-
-    Seeker 仅用动作监督从冻结 DINOv3 特征中学出随任务进度变化的关注区域，用于裁剪、背景增强与点云过滤，作者报告真机平均成功率由最佳基线 48.3% 提升到 76.7%。
-
 ---
 
-[第 1 页](manipulation.md) · [第 2 页](manipulation-2.md) · **第 3 页**
+[第 1 页](manipulation.md) · [第 2 页](manipulation-2.md) · **第 3 页** · [第 4 页](manipulation-4.md)
 [返回论文目录](../index.md)

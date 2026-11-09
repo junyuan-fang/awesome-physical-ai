@@ -275,3 +275,29 @@ runs:
   - simulator:cosmos3-interactive-sim
   digest: digests/daily/2026-11-06.md
   applied: '2026-11-09'
+- scan_date: '2026-11-09'
+  kind: daily
+  window_start: '2026-11-04'
+  window_end: '2026-11-09'
+  last_covered_end: '2026-11-06'
+  d: 3
+  cap: 15
+  stats:
+    fetched: 181
+    already_tracked_or_triaged: 17
+    out_of_scope: 23
+    below_pool_cut: 81
+    pool: 60
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 15
+  excluded: 16
+  deferred: 29
+  removed: 0
+  new_resources:
+  - benchmark:robomme
+  - benchmark:robotwin-umi
+  - benchmark:navsim-v2
+  digest: digests/daily/2026-11-09.md
+  applied: '2026-11-09'

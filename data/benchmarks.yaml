@@ -304,3 +304,30 @@ benchmarks:
     project: https://allenai.github.io/molmospaces/
   added: '2026-11-09'
   last_check: '2026-11-09'
+- id: robomme
+  name: RoboMME
+  desc: 16 项长时程操作任务，覆盖时间、空间、物体与程序记忆，用于记忆增强通用策略评测。
+  subcategory: manipulation
+  links:
+    paper: https://arxiv.org/abs/2603.04639
+    homepage: https://robomme.github.io/
+  added: '2026-11-09'
+  last_check: '2026-11-09'
+- id: robotwin-umi
+  name: RoboTwin-UMI
+  desc: 含 20 项双臂 UMI 操作任务，固定示范后测试本体与光照独立及联合偏移。
+  subcategory: manipulation
+  links:
+    paper: https://arxiv.org/abs/2611.07229
+    code: https://github.com/ZeYuan06/RoboTwin-UMI
+    homepage: https://weiduoyuan.com/spatial-umi-dream/
+  added: '2026-11-09'
+  last_check: '2026-11-09'
+- id: navsim-v2
+  name: NAVSIM v2
+  desc: 自动驾驶两阶段伪仿真基准，以真实及扰动渲染场景评估 EPDMS；非连续交互闭环。
+  subcategory: navigation
+  links:
+    code: https://github.com/autonomousvision/navsim
+  added: '2026-11-09'
+  last_check: '2026-11-09'

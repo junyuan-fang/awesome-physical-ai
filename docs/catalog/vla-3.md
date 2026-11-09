@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**88 篇** · 第 **3 / 6** 页 · 每页最多 15 篇
+**90 篇** · 第 **3 / 6** 页 · 每页最多 15 篇
 
 [1](vla.md) · [2](vla-2.md) · **3** · [4](vla-4.md) · [5](vla-5.md) · [6](vla-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -81,20 +81,20 @@
 
     在 BridgeVLA 的多视图热力图 3D VLA 上加入时序记忆与可重渲染的点云空间记忆，支持记忆依赖与双臂任务；作者报告 RMBench、MemoryBench 上达到最优，并在两种真机平台验证。
 
-43. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
+43. **[Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)**
+    2026-11-04 · 值得关注 · **66/100** · 实质代码
+
+    三级 Astra 系统在 RoboMME 上获作者报告的 79.13% 成功率、每回合 3.63 次规划调用，但规划时暂停仿真。
+
+44. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
     2026-08-20 · 值得关注 · **66/100** · 实质代码
 
     EXIMO 以「VLM 编排探索→蒸馏 SFT→残差离策略 RL」三阶段微调 VLA，作者报告在 ALOHA 仿真 22 个长程/推理任务上样本效率与最终成功率均优于直接 RL 基线。
 
-44. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
+45. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
     2026-07-02 · 值得关注 · **66/100** · 实质代码
 
     面向 VLA 与世界-动作模型的可移植 C++ 推理运行时，五层架构支持多速率执行与量化；作者报告相对 Python 基线推理加速 1.05–2.70 倍、显存降低 7%–77%，成功率多数接近基线。
-
-45. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
-    2025-06-16 · 值得关注 · **66/100** · 未找到仓库
-
-    人形全身控制的视觉-语言基准 LeVERB-Bench（150+ 任务/10 类）与分层潜动作框架 LeVERB；作者报告零样本总成功率 58.5%，约为朴素分层 VLA 的 7.8 倍。
 
 ---
 

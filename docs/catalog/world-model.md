@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**72 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
+**75 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
 
 **1** · [2](world-model-2.md) · [3](world-model-3.md) · [4](world-model-4.md) · [5](world-model-5.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -91,10 +91,10 @@
 
     Cosmos以因果蒸馏实现流式交互模拟；作者在单GB300、8帧分块配置报告48.1 FPS，闭环收益仍受校准设置限制。
 
-15. **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](../papers/2611.01844.md)**
-    2026-11-01 · 值得关注 · **77/100** · 实质代码
+15. **[Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](../papers/2611.07229.md)**
+    2026-11-04 · 值得关注 · **77/100** · 实质代码
 
-    OpenNWM 以1750万帧异源视频学习潜动作，再对齐物理运动，改善导航视觉预测和离线路径规划指标。
+    Spatial-UMI-Dream 联合预测 RGB、深度与动作，在 RoboTwin-UMI 联合偏移下成功率达 72.15%。
 
 ---
 

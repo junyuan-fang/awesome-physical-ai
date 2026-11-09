@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Navigation & Mobility
 
-**14 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
+**15 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
 
 **1**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -66,27 +66,32 @@
 
     视觉四旋翼的几何感知世界模型 MAD：以机体中心占据/可见性栅格和本体状态代替原图重建作为监督，作者报告仿真最高 9.66 m/s、真实森林飞行 5.05 m/s。
 
-10. **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)**
+10. **[MessyNav: Zero-Shot Navigation via Manipulation in Messy Environments](../papers/2611.07417.md)**
+    2026-11-05 · 观察中 · **54/100** · 未找到仓库
+
+    MessyNav 结合物理与语义可供性选择清障动作，真机 15 场景完成 10 个。
+
+11. **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)**
     2026-07-22 · 观察中 · **54/100** · 未找到仓库
 
     基于 Isaac Sim 的室内到室外连续物理导航基准，含 ObjNav/VLN/PlaceNav 共 1 万 episode 与安全指标；作者报告最好的零样本基线 UniNaVid 成功率仅约 11%。
 
-11. **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](../papers/2606.13494.md)**
+12. **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](../papers/2606.13494.md)**
     2026-06-11 · 观察中 · **54/100** · 未找到仓库
 
     在 Cosmos Predict2 潜画布中联合去噪未来视角、目标进度值与动作块，免去 CEM 规划；作者报告 Diablo 真机 24 次图像目标导航成功率 79.2%。
 
-12. **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](../papers/2605.21935.md)**
+13. **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](../papers/2605.21935.md)**
     2026-05-21 · 观察中 · **54/100** · 未找到仓库
 
     面向人形机器人的多模态交互场 MIF：置信度感知语义 3DGS 抑制步态抖动、差异触发局部记忆更新、按需网格重建做交互位姿安全校验；作者报告 Unitree G1 真实动态办公室中重定位成功率 12%→94%。
 
-13. **[Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](../papers/2608.12198.md)**
+14. **[Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](../papers/2608.12198.md)**
     2026-08-12 · 观察中 · **52/100** · 部分开放
 
     混合规划架构：模仿学习的行为规划网络提出参考轨迹，优化式监督层施加可行驶与安全约束并保留规则式兜底；作者报告开环评测结果并在 RWTH 研究车辆 karl. 上完成试验场部署。
 
-14. **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](../papers/2606.24101.md)**
+15. **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](../papers/2606.24101.md)**
     2026-06-23 · 观察中 · **48/100** · 未找到仓库
 
     以 Mamba 骨干统一潜在世界推理、锚点式多模态轨迹提议与 CDiT 视觉前瞻，用世界模型挑选候选轨迹；作者报告图像目标导航已见环境 SR 0.72，高于 UniWM 的 0.66。

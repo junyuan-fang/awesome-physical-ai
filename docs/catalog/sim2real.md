@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Sim-to-Real
 
-**12 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
+**13 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
 
 **1**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -71,12 +71,17 @@
 
     从单段人类 RGB-D 视频重建数字孪生、以物体中心关键帧优化重定向轨迹，再用 IL 校准感知误差与残差 RL 微调手指；作者报告 7 个真机灵巧任务平均成功率 95.7%，FoundationPose 基线 15.7%。
 
-11. **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](../papers/2606.23444.md)**
+11. **[TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics](../papers/2611.06442.md)**
+    2026-11-04 · 观察中 · **59/100** · 未找到仓库
+
+    TwinBridge 联合迁移策略与视觉过程奖励，作者报告五项实验室任务最终十回合平均自主成功率 98%。
+
+12. **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](../papers/2606.23444.md)**
     2026-06-22 · 观察中 · **59/100** · 未找到仓库
 
     JEPA 式潜在动力学模型+物理启发探针+MPPI 用于四旋翼实时控制，仅用域随机化仿真数据训练并零样本上机；作者报告长时程开环预测误差低于直接预测模型，户外负载/换桨下仍稳定跟踪。
 
-12. **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](../papers/2606.18953.md)**
+13. **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](../papers/2606.18953.md)**
     2026-06-17 · 观察中 · **56/100** · 未找到仓库
 
     以 6-DoF 物体位姿+本体状态+VLA 基础动作为观测，在 MuJoCo 中训练残差 RL 并零样本迁移到 FR3；作者报告五项真机任务平均成功率 42%→76%。

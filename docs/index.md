@@ -4,23 +4,23 @@
 
 [首页](../README.md) / 论文目录
 
-**298 篇** · 最近扫描 **2026-11-06** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
+**313 篇** · 最近扫描 **2026-11-09** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
 
 分类页每页最多 15 篇，按优先级 → 总分 → 首次公开日期排序。点击论文标题进入完整评审，包含作者单位、评分依据和开放状态。
 
 ## Foundation Models for Robotics
 
-- <a id="cat-vla"></a>[Vision-Language-Action (VLA)](catalog/vla.md) · **88 篇**
-- <a id="cat-world-model"></a>[World Models](catalog/world-model.md) · **72 篇**
+- <a id="cat-vla"></a>[Vision-Language-Action (VLA)](catalog/vla.md) · **90 篇**
+- <a id="cat-world-model"></a>[World Models](catalog/world-model.md) · **75 篇**
 - <a id="cat-foundation-general"></a>[Other Generalist Models](catalog/foundation-general.md) · **10 篇**
 
 ## Manipulation
 
-- <a id="cat-manipulation"></a>[Manipulation](catalog/manipulation.md) · **43 篇**
+- <a id="cat-manipulation"></a>[Manipulation](catalog/manipulation.md) · **47 篇**
 
 ## Locomotion
 
-- <a id="cat-locomotion"></a>[Locomotion](catalog/locomotion.md) · **24 篇**
+- <a id="cat-locomotion"></a>[Locomotion](catalog/locomotion.md) · **28 篇**
 
 ## Teleoperation
 
@@ -28,7 +28,7 @@
 
 ## Sim-to-Real
 
-- <a id="cat-sim2real"></a>[Sim-to-Real](catalog/sim2real.md) · **12 篇**
+- <a id="cat-sim2real"></a>[Sim-to-Real](catalog/sim2real.md) · **13 篇**
 
 ## 3D Scene Understanding
 
@@ -36,7 +36,7 @@
 
 ## Navigation & Mobility
 
-- <a id="cat-navigation"></a>[Navigation & Mobility](catalog/navigation.md) · **14 篇**
+- <a id="cat-navigation"></a>[Navigation & Mobility](catalog/navigation.md) · **15 篇**
 
 ## RL & Imitation Learning
 
@@ -52,7 +52,7 @@
 
 - [Datasets](resources/datasets.md) · 28 项
 - [Simulators](resources/simulators.md) · 10 项
-- [Benchmarks](resources/benchmarks.md) · 31 项
+- [Benchmarks](resources/benchmarks.md) · 34 项
 - [Tools & Libraries](resources/tools.md) · 11 项
 - [Companies & Industry](resources/companies.md) · 19 项
 
@@ -76,8 +76,8 @@
 - <a id="resource-action-conditioned-foresight-data"></a>[Action-Conditioned Latent Foresight Dataset](resources/datasets.md#resource-action-conditioned-foresight-data) · 2 篇论文
 - <a id="resource-forceldm-data"></a>[ForceLDM Dataset](resources/datasets.md#resource-forceldm-data) · 2 篇论文
 - <a id="resource-neo-vla-action-pretrain"></a>[NEO-VLA Action Pretrain](resources/datasets.md#resource-neo-vla-action-pretrain) · 2 篇论文
-- <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 10 篇论文
-- <a id="resource-isaac-sim"></a>[Isaac Sim](resources/simulators.md#resource-isaac-sim) · 5 篇论文
+- <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 12 篇论文
+- <a id="resource-isaac-sim"></a>[Isaac Sim](resources/simulators.md#resource-isaac-sim) · 6 篇论文
 - <a id="resource-genesis"></a>[Genesis](resources/simulators.md#resource-genesis) · 1 篇论文
 - <a id="resource-habitat-3-0"></a>[Habitat 3.0](resources/simulators.md#resource-habitat-3-0) · 1 篇论文
 - <a id="resource-robocasa"></a>[RoboCasa](resources/simulators.md#resource-robocasa) · 3 篇论文
@@ -103,8 +103,11 @@
 - <a id="resource-dexhotbench"></a>[DexHOTBench](resources/benchmarks.md#resource-dexhotbench) · 2 篇论文
 - <a id="resource-libero-plus"></a>[LIBERO-Plus](resources/benchmarks.md#resource-libero-plus) · 3 篇论文
 - <a id="resource-molmospaces"></a>[MolmoSpaces](resources/benchmarks.md#resource-molmospaces) · 1 篇论文
+- <a id="resource-robomme"></a>[RoboMME](resources/benchmarks.md#resource-robomme) · 2 篇论文
+- <a id="resource-robotwin-umi"></a>[RoboTwin-UMI](resources/benchmarks.md#resource-robotwin-umi) · 3 篇论文
+- <a id="resource-navsim-v2"></a>[NAVSIM v2](resources/benchmarks.md#resource-navsim-v2) · 2 篇论文
 - <a id="resource-lerobot"></a>[LeRobot](resources/tools.md#resource-lerobot) · 1 篇论文
-- <a id="resource-diffusion-policy"></a>[Diffusion Policy](resources/tools.md#resource-diffusion-policy) · 1 篇论文
+- <a id="resource-diffusion-policy"></a>[Diffusion Policy](resources/tools.md#resource-diffusion-policy) · 2 篇论文
 - <a id="resource-openvla"></a>[OpenVLA](resources/tools.md#resource-openvla) · 4 篇论文
 - <a id="resource-schedulegen"></a>[ScheduleGen](resources/tools.md#resource-schedulegen) · 1 篇论文
 - <a id="resource-sonic-k1"></a>[SONIC-K1](resources/tools.md#resource-sonic-k1) · 1 篇论文

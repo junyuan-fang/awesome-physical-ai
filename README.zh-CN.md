@@ -9,11 +9,11 @@
 
 具身智能、机器人基础模型与物理 AI 的论文和资源导航。以中文评审说明贡献、证据与复现条件。
 
-**298 篇论文** · 28 个数据集 · 10 个仿真器 · 31 个基准 · 11 个工具
+**313 篇论文** · 28 个数据集 · 10 个仿真器 · 34 个基准 · 11 个工具
 
 [论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [如何看评分](#scoring)
 
-> 最近完成扫描：**2026-11-06** · [查看本次报告](digests/daily/2026-11-06.md)。
+> 最近完成扫描：**2026-11-09** · [查看本次报告](digests/daily/2026-11-09.md)。
 
 ## <a id="contents"></a>从哪里开始
 
@@ -23,7 +23,7 @@
 | 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
 | 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
 | 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-06.md) · [近期精选](#weekly-picks) |
+| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-09.md) · [近期精选](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>近期精选
 
@@ -35,14 +35,14 @@
 - **[Interactive World Simulation with Cosmos for Physical AI](docs/papers/2611.06627.md)** · 2026-11-04 · 77/100
   Cosmos以因果蒸馏实现流式交互模拟；作者在单GB300、8帧分块配置报告48.1 FPS，闭环收益仍受校准设置限制。
 
+- **[Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](docs/papers/2611.07229.md)** · 2026-11-04 · 77/100
+  Spatial-UMI-Dream 联合预测 RGB、深度与动作，在 RoboTwin-UMI 联合偏移下成功率达 72.15%。
+
 - **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](docs/papers/2611.01844.md)** · 2026-11-01 · 77/100
   OpenNWM 以1750万帧异源视频学习潜动作，再对齐物理运动，改善导航视觉预测和离线路径规划指标。
 
 - **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](docs/papers/2611.01729.md)** · 2026-11-01 · 76/100
   学习动作随物理时间的导数并积分生成轨迹，在 LIBERO、多类策略和14项真机任务中验证效率与连续性。
-
-- **[Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](docs/papers/2611.07513.md)** · 2026-11-05 · 72/100
-  Concertina在共享扩散VLM内生成连续动作；作者报告LIBERO成功率98.15%、LIBERO-Plus为85.9%、CALVIN ABC-D链长4.142。
 
 ## 研究方向
 
@@ -50,13 +50,13 @@
 
 | 方向 | 内容 | 篇数 |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 170 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 43 |
-| <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 24 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 175 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 47 |
+| <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 28 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
-| <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 12 |
+| <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 13 |
 | <a id="scene"></a>3D Scene Understanding | [3D Scene Understanding](docs/catalog/scene.md) | 5 |
-| <a id="navigation"></a>Navigation & Mobility | [Navigation & Mobility](docs/catalog/navigation.md) | 14 |
+| <a id="navigation"></a>Navigation & Mobility | [Navigation & Mobility](docs/catalog/navigation.md) | 15 |
 | <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 12 |
 | <a id="tutorials"></a>Tutorials & Surveys | [Tutorials & Surveys](docs/catalog/tutorials.md) | 6 |
 
@@ -68,7 +68,7 @@
 |---|---|---:|
 | <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 28 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 10 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 31 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 34 |
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 11 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 

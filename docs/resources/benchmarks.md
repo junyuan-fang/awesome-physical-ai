@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Benchmarks
 
-**31 项** · Standardized evaluations for embodied AI
+**34 项** · Standardized evaluations for embodied AI
 
 - [CALVIN](#resource-calvin)
 - [Meta-World](#resource-meta-world)
@@ -37,6 +37,9 @@
 - [DexHOTBench](#resource-dexhotbench)
 - [LIBERO-Plus](#resource-libero-plus)
 - [MolmoSpaces](#resource-molmospaces)
+- [RoboMME](#resource-robomme)
+- [RoboTwin-UMI](#resource-robotwin-umi)
+- [NAVSIM v2](#resource-navsim-v2)
 
 ## <a id="resource-calvin"></a>CALVIN
 
@@ -573,6 +576,46 @@ IsaacLab三任务九阶段G1移动操作评测，共享SONIC接口；资源发�
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - eval · [VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](../papers/2611.08449.md)
+
+</details>
+
+## <a id="resource-robomme"></a>RoboMME
+
+16 项长时程操作任务，覆盖时间、空间、物体与程序记忆，用于记忆增强通用策略评测。
+
+[论文](https://arxiv.org/abs/2603.04639)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- finetune · [Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)
+- eval · [Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)
+
+</details>
+
+## <a id="resource-robotwin-umi"></a>RoboTwin-UMI
+
+含 20 项双臂 UMI 操作任务，固定示范后测试本体与光照独立及联合偏移。
+
+[代码](https://github.com/ZeYuan06/RoboTwin-UMI) [论文](https://arxiv.org/abs/2611.07229)
+<details>
+<summary>关联论文 1–3 / 3（提出 / 训练 / 评测）</summary>
+
+- proposes · [Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](../papers/2611.07229.md)
+- finetune · [Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](../papers/2611.07229.md)
+- eval · [Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](../papers/2611.07229.md)
+
+</details>
+
+## <a id="resource-navsim-v2"></a>NAVSIM v2
+
+自动驾驶两阶段伪仿真基准，以真实及扰动渲染场景评估 EPDMS；非连续交互闭环。
+
+[代码](https://github.com/autonomousvision/navsim) 
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- finetune · [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](../papers/2611.08111.md)
+- eval · [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](../papers/2611.08111.md)
 
 </details>
 

@@ -9,12 +9,12 @@
 
 A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
 
-**298 papers** · 28 datasets · 10 simulators · 31 benchmarks · 11 tools
+**313 papers** · 28 datasets · 10 simulators · 34 benchmarks · 11 tools
 
 [Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
 
 > Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
-> Latest completed scan: **2026-11-06** · [Read the report](digests/daily/2026-11-06.md)
+> Latest completed scan: **2026-11-09** · [Read the report](digests/daily/2026-11-09.md)
 
 ## <a id="contents"></a>Start here
 
@@ -24,7 +24,7 @@ A curated guide to embodied intelligence, robotics foundation models, and physic
 | Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
 | Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
 | Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
-| Catch up on recent work | [Latest report](digests/daily/2026-11-06.md) · [Recent picks](#weekly-picks) |
+| Catch up on recent work | [Latest report](digests/daily/2026-11-09.md) · [Recent picks](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>Recent picks
 
@@ -36,14 +36,14 @@ Up to 5 priority papers added in the 7-day window ending on the latest scan. [Br
 - **[Interactive World Simulation with Cosmos for Physical AI](docs/papers/2611.06627.md)** · 2026-11-04 · 77/100
   World Models · Notable · Code released
 
+- **[Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](docs/papers/2611.07229.md)** · 2026-11-04 · 77/100
+  World Models · Notable · Code released
+
 - **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](docs/papers/2611.01844.md)** · 2026-11-01 · 77/100
   World Models · Notable · Code released
 
 - **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](docs/papers/2611.01729.md)** · 2026-11-01 · 76/100
   RL & Imitation Learning · Notable · Code released
-
-- **[Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](docs/papers/2611.07513.md)** · 2026-11-05 · 72/100
-  Vision-Language-Action (VLA) · Notable · Code released
 
 ## Research areas
 
@@ -51,13 +51,13 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 
 | Area | Browse | Papers |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 170 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 43 |
-| <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 24 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 175 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 47 |
+| <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 28 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
-| <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 12 |
+| <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 13 |
 | <a id="scene"></a>3D Scene Understanding | [3D Scene Understanding](docs/catalog/scene.md) | 5 |
-| <a id="navigation"></a>Navigation & Mobility | [Navigation & Mobility](docs/catalog/navigation.md) | 14 |
+| <a id="navigation"></a>Navigation & Mobility | [Navigation & Mobility](docs/catalog/navigation.md) | 15 |
 | <a id="rl-il"></a>RL & Imitation Learning | [RL & Imitation Learning](docs/catalog/rl-il.md) | 12 |
 | <a id="tutorials"></a>Tutorials & Surveys | [Tutorials & Surveys](docs/catalog/tutorials.md) | 6 |
 
@@ -69,7 +69,7 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 |---|---|---:|
 | <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 28 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 10 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 31 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 34 |
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 11 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 

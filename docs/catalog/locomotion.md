@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Locomotion
 
-**24 篇** · 第 **1 / 2** 页 · 每页最多 15 篇
+**28 篇** · 第 **1 / 2** 页 · 每页最多 15 篇
 
 **1** · [2](locomotion-2.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -56,45 +56,45 @@
 
     SONIC-K1 复现全身动作跟踪并开放代码与权重，在1985段留出动作上报告97.4%的宽松标准通过率。
 
-8. **[GRAFT: Geometry-Aware Residual Adaptation for Foundation Trackers](../papers/2610.36507.md)**
+8. **[Social Humanoid: Socially Responsive Human-Humanoid Interaction](../papers/2611.08407.md)**
+    2026-11-05 · 值得关注 · **65/100** · 未找到仓库
+
+    Social Humanoid 用共享动作码本生成 G1 对人的全身响应，构建 260 小时 HHI 数据，但尚无互动质量用户研究。
+
+9. **[Perceptive Humanoid Motion from Simulation](../papers/2611.06908.md)**
+    2026-11-04 · 值得关注 · **65/100** · 未找到仓库
+
+    HALO 从千个合成家庭学习视觉语言运动，作者报告六个未映射真实环境中 360 次单技能试验平均成功率 91%。
+
+10. **[GRAFT: Geometry-Aware Residual Adaptation for Foundation Trackers](../papers/2610.36507.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     GRAFT冻结全身跟踪器，仅学习地形条件下肢残差，在四种基础控制器及真实G1上验证。
 
-9. **[Watch Your Step: Anticipated Perception for Humanoid Locomotion](../papers/2610.29612.md)**
+11. **[Watch Your Step: Anticipated Perception for Humanoid Locomotion](../papers/2610.29612.md)**
     2026-10-21 · 值得关注 · **65/100** · 未找到仓库
 
     预测未来落脚点并只观察局部地形，作者报告约三分之一训练迭代达到相同难度，且零样本部署 G1。
 
-10. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
+12. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
     2026-08-20 · 值得关注 · **65/100** · 实质代码
 
     MILD 用离散单元颗粒介质接触模型在仿真中刻画脚-软地非均匀交互并训练地形感知 RL 双足控制器，作者报告真机在泡沫、沙地等六类软地面上成功率与能效优于对比方法。
 
-11. **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](../papers/2608.18234.md)**
+13. **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](../papers/2608.18234.md)**
     2026-08-18 · 值得关注 · **65/100** · 未找到仓库
 
     行为世界模型式人形全身跟踪控制器，联合预测动作、下一状态与行为分布；作者报告地形交互成功率81.3%（最佳基线4.3倍）、摔倒恢复率99.3%。
 
-12. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
+14. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
     2026-06-03 · 值得关注 · **65/100** · 实质代码
 
     用模态专属编码器把机器人关节角、人体姿态、末端位姿映射到共享潜空间，单阶段 RL 训练一个人形全身控制器 M3imic；作者报告在未见 OMOMO 测试集上末端模态成功率 98.42%，并在 G1 上真机验证。
 
-13. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
+15. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
     2026-06-04 · 观察中 · **62/100** · 未找到仓库
 
     人形主动“注视”感知行走框架 TAGA：用深度图与本体感知预测高度图中的关注区域并裁剪编码，经 RL 自然涌现注视行为；作者报告 G1 真机跨越 1.2 m 沟壑并通过稀疏落脚点。
-
-14. **[Humanoid Mobility via Attention-based Contacts](../papers/2610.31608.md)**
-    2026-10-22 · 观察中 · **59/100** · 未找到仓库
-
-    以接触规划连接运动先验与强化学习，作者在 G1 展示无参考轨迹的攀爬、穿越及失败恢复。
-
-15. **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](../papers/2606.25765.md)**
-    2026-06-24 · 观察中 · **59/100** · 未找到仓库
-
-    三阶段强化学习框架 StairMaster 结合交叉注意力视觉编码、空间感知循环记忆与深度噪声建模；作者报告 Unitree Go2 零样本迁移后在 37°/55° 镂空楼梯真机成功率 93.3%/63.3%。
 
 ---
 

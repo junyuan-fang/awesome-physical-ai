@@ -38,9 +38,10 @@ Reference implementation of action-space diffusion policies.
 [代码](https://github.com/real-stanford/diffusion_policy) [论文](https://arxiv.org/abs/2303.04137)
 标签：diffusion / imitation
 <details>
-<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
 
 - proposes · [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](../papers/2303.04137.md)
+- finetune · [MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)
 
 </details>
 

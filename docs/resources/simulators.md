@@ -24,7 +24,7 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 [项目](https://isaac-sim.github.io/IsaacLab) [代码](https://github.com/isaac-sim/IsaacLab) 
 标签：rl / gpu-accelerated / nvidia
 <details>
-<summary>关联论文 1–10 / 10（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 12（提出 / 训练 / 评测）</summary>
 
 - eval · [PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)
 - pretrain · [Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)
@@ -39,6 +39,14 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 
 </details>
 
+<details>
+<summary>关联论文 11–12 / 12（提出 / 训练 / 评测）</summary>
+
+- eval · [Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors](../papers/2611.06564.md)
+- eval · [STEP: Spatiotemporal Training with Explicit Prediction for Perceptive Humanoid Locomotion](../papers/2611.08097.md)
+
+</details>
+
 ## <a id="resource-isaac-sim"></a>Isaac Sim
 
 NVIDIA's full robot simulator with photorealistic rendering.
@@ -46,13 +54,14 @@ NVIDIA's full robot simulator with photorealistic rendering.
 [项目](https://developer.nvidia.com/isaac/sim) 
 标签：photorealistic / gpu / nvidia
 <details>
-<summary>关联论文 1–5 / 5（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–6 / 6（提出 / 训练 / 评测）</summary>
 
 - eval · [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)
 - eval · [NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)
 - eval · [HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](../papers/2608.12860.md)
 - eval · [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](../papers/2610.32093.md)
 - eval · [PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)
+- pretrain · [TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics](../papers/2611.06442.md)
 
 </details>
 
