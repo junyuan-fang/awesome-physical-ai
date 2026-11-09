@@ -66,25 +66,25 @@
 
     T2G 在冻结 JEPA 表征上学习时间到达距离，四类仿真任务平均成功率从 32.7% 升至 63.0%。
 
-55. **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](../papers/2608.01397.md)**
+55. **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](../papers/2608.18484.md)**
+    2026-08-19 · 观察中 · **59/100** · 占位仓库
+
+    SparsePR 以响应耦合分组与探针拟合残差重建实现免训练块稀疏注意力，作者报告在 Cosmos-Predict2.5 等四个视频/世界模型上端到端加速 1.48–2.61 倍且保真度优于 SVG2 等基线。
+
+56. **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](../papers/2608.01397.md)**
     2026-08-02 · 观察中 · **59/100** · 占位仓库
 
     在策略自身表征空间中用可学习动态 token 与 EMA 目标预测动作条件下的未来潜状态，并以 VGGT 几何监督塑形；0.9B 模型作者报告 LIBERO 98.5%、LIBERO-Plus 零样本 73.0%。
 
-56. **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](../papers/2606.13877.md)**
+57. **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](../papers/2606.13877.md)**
     2026-06-11 · 观察中 · **59/100** · 未找到仓库
 
     固定世界模型与 MPC 规划框架，系统比较视觉与触觉表征在 12 个接触密集任务上的作用；作者报告点云+触觉力场仿真平均成功率 36.1% 最高，并做 900 次真机验证。
 
-57. **[WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)**
+58. **[WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)**
     2026-06-16 · 观察中 · **58/100** · 实质代码
 
     在 Genie Envisioner-ACT 上对世界模型做在线视频 SFT（KL 约束）、对动作头用重建奖励做 RL；作者报告 LIBERO-Object 成功率 68%→82%，RLBench Water Plants 19%→22%。
-
-58. **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](../papers/2608.13049.md)**
-    2026-08-13 · 观察中 · **57/100** · 占位仓库
-
-    H2R-Bench 用 120 条 EgoDex 人类视频构造 240 个人到机器人（夹爪/灵巧手）视频迁移案例，从目标、动作、接触、具身、画质五个维度评测 11 个视频生成模型；作者报告 Seedance 2.0 居首，多数模型在具身与接触上失败。
 
 59. **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](../papers/2608.02603.md)**
     2026-08-03 · 观察中 · **57/100** · 占位仓库

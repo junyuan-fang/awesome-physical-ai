@@ -54,7 +54,7 @@ papers:
     license: unknown
     note: 论文与 arXiv 页面均未给出代码链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -123,7 +123,7 @@ papers:
       last_commit: '2026-09-24'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -197,7 +197,7 @@ papers:
       last_commit: '2026-05-29'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -270,7 +270,7 @@ papers:
     license: unknown
     note: 仅有匿名项目页 https://anonymous.4open.science/w/SPRINT-138A/。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -336,7 +336,7 @@ papers:
     license: unknown
     note: 论文未给出代码或数据链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -406,7 +406,7 @@ papers:
       last_commit: '2026-05-22'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -474,7 +474,7 @@ papers:
       last_commit: '2026-09-13'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: amass
     role: pretrain
@@ -524,7 +524,7 @@ papers:
     license: unknown
     note: 未找到代码仓库；论文已撤稿。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -594,7 +594,7 @@ papers:
       last_commit: '2026-10-02'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -666,7 +666,7 @@ papers:
       last_commit: '2026-06-11'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: physxverse
     role: proposes
@@ -735,7 +735,7 @@ papers:
     license: unknown
     note: 仅项目页 https://leungchaos.github.io/Humanoid-Whole-Body-Manipulation-via-Active-Spatial-Brain-and-Generalizable-Action-Cerebellum/。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -800,7 +800,7 @@ papers:
     license: unknown
     note: 仅项目页 https://simpson-li.github.io/Hand-in-the-Loop/。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -875,13 +875,13 @@ papers:
     license: none-found
     note: 探测为 13 个代码文件且 README 含 coming soon。
     stats:
-      files: 28
-      code_files: 13
+      files: 30
+      code_files: 14
       config_files: 14
-      last_commit: '2026-09-25'
+      last_commit: '2026-11-06'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: aliasbench
     role: proposes
@@ -949,7 +949,7 @@ papers:
     license: unknown
     note: 综述，无代码。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1018,7 +1018,7 @@ papers:
     license: unknown
     note: 论文未给出代码链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: pretrain
@@ -1080,7 +1080,7 @@ papers:
       last_commit: '2026-09-06'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1152,7 +1152,7 @@ papers:
       last_commit: '2026-10-04'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -1225,7 +1225,7 @@ papers:
       last_commit: '2026-09-27'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: open-x-embodiment
     role: pretrain
@@ -1301,7 +1301,7 @@ papers:
       last_commit: '2026-06-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: bridgedata-v2
     role: eval
@@ -1368,13 +1368,13 @@ papers:
     license: Apache-2.0
     note: 权重在 HF nvidia 组织下（后续版本已到 N1.7）；论文给出仿真数据集 nvidia/PhysicalAI-Robotics-GR00T-X-Embodiment-Sim，真机自采数据未公开。
     stats:
-      files: 448
-      code_files: 197
+      files: 455
+      code_files: 204
       config_files: 44
-      last_commit: '2026-10-28'
+      last_commit: '2026-11-08'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: open-x-embodiment
     role: pretrain
@@ -1464,7 +1464,7 @@ papers:
       last_commit: '2025-03-23'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: openvla
     role: proposes
@@ -1541,7 +1541,7 @@ papers:
       last_commit: '2026-01-21'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1610,7 +1610,7 @@ papers:
       last_commit: '2026-10-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1680,7 +1680,7 @@ papers:
       last_commit: '2024-09-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1747,7 +1747,7 @@ papers:
       last_commit: '2024-01-03'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1814,7 +1814,7 @@ papers:
       last_commit: '2024-10-30'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: seed
   digest: digests/migration-2026-10-22.md
@@ -1883,7 +1883,7 @@ papers:
       last_commit: '2024-12-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: diffusion-policy
     role: proposes
@@ -1955,7 +1955,7 @@ papers:
       last_commit: '2025-05-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-sim
     role: eval
@@ -2017,7 +2017,7 @@ papers:
     license: unknown
     note: 论文未给出项目页或仓库链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: eval
@@ -2082,7 +2082,7 @@ papers:
     license: unknown
     note: 仅有项目主页 https://sites.google.com/view/mode-vla。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2153,7 +2153,7 @@ papers:
       last_commit: '2021-06-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2216,7 +2216,7 @@ papers:
     license: unknown
     note: 摘要写 "Project page and code"，但探测未发现代码仓库，暂按无仓库处理。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2281,7 +2281,7 @@ papers:
     license: unknown
     note: 摘要称 "Code will be released soon"。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: simplerenv
     role: eval
@@ -2345,7 +2345,7 @@ papers:
     license: unknown
     note: 仅有项目页 https://bimanual-monoduo.github.io。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2406,7 +2406,7 @@ papers:
     data: n/a
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: simplerenv
     role: eval
@@ -2472,7 +2472,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2534,7 +2534,7 @@ papers:
     license: unknown
     note: 仅有项目页。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2603,7 +2603,7 @@ papers:
       last_commit: '2026-06-18'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-03'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -2669,7 +2669,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: simplerenv
     role: eval
@@ -2737,7 +2737,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -2814,7 +2814,7 @@ papers:
     license: unknown
     note: 仅有项目网站。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -2881,7 +2881,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: genesis
     role: eval
@@ -2959,7 +2959,7 @@ papers:
       last_commit: '2026-08-20'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: amass
     role: pretrain
@@ -3037,7 +3037,7 @@ papers:
       last_commit: '2021-05-13'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-05'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3104,7 +3104,7 @@ papers:
     license: unknown
     note: 仅见项目页 https://arc-l.github.io/a2a/，未找到代码仓库
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -3176,7 +3176,7 @@ papers:
     license: unknown
     note: 论文称 code will be made public，未找到仓库
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -3256,7 +3256,7 @@ papers:
       last_commit: '2026-06-16'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: finetune
@@ -3331,7 +3331,7 @@ papers:
     license: unknown
     note: 未找到官方仓库或项目页
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-05'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3410,7 +3410,7 @@ papers:
       last_commit: '2026-06-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -3477,7 +3477,7 @@ papers:
     license: unknown
     note: 正文提及项目主页但缓存未给出链接，未找到代码
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: amass
     role: pretrain
@@ -3547,7 +3547,7 @@ papers:
     license: none-found
     note: 项目页 haptile-dataset.github.io 提供 HF 数据集 HapTile2026/HapTile；仅有数据下载/可视化 quickstart，主代码 Coming Soon
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 4
       code_files: 1
@@ -3625,7 +3625,7 @@ papers:
       last_commit: '2026-06-16'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-05'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3695,10 +3695,10 @@ papers:
       files: 3512
       code_files: 1565
       config_files: 369
-      last_commit: '2026-11-01'
+      last_commit: '2026-11-04'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-05'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3762,7 +3762,7 @@ papers:
     license: unknown
     note: 未找到官方仓库
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-08'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3827,7 +3827,7 @@ papers:
     license: unknown
     note: 仅见项目页 pil-world.github.io
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-08'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3901,7 +3901,7 @@ papers:
       last_commit: '2026-10-21'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-08'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -3967,7 +3967,7 @@ papers:
     license: unknown
     note: 仅见项目页 https://marmotlab.github.io/taga-humanoid/
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: amass
     role: pretrain
@@ -4044,7 +4044,7 @@ papers:
       last_commit: '2026-09-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -4113,7 +4113,7 @@ papers:
     license: unknown
     note: 仅有 YouTube 补充视频
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-08'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -4189,7 +4189,7 @@ papers:
       last_commit: '2026-10-20'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -4260,7 +4260,7 @@ papers:
     license: unknown
     note: 论文与 arXiv 元数据均未给出代码或项目页链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -4334,7 +4334,7 @@ papers:
       last_commit: '2026-06-11'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-08'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -4396,7 +4396,7 @@ papers:
     license: unknown
     note: 仅有项目网站 https://blarklee.github.io/DexFuture_official_website/ 。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-09'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -4468,7 +4468,7 @@ papers:
       last_commit: '2026-10-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-09'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -4531,7 +4531,7 @@ papers:
     license: none-found
     note: 该仓库此前被误挂在 MotionWAM 条目下；项目页 https://kairos-homeworld.github.io/ 指向本文，仓库目前仅 README 且注明 coming soon。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 4
       code_files: 0
@@ -4601,7 +4601,7 @@ papers:
     license: unknown
     note: 仅有项目网站 https://elpislab.org/projects/strips-wm/ 。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-10'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -4665,7 +4665,7 @@ papers:
     license: unknown
     note: 仅有项目页 https://showlab.github.io/ActionMap/ 。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -4731,7 +4731,7 @@ papers:
     license: unknown
     note: 论文未给出代码或项目页链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-10'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -4795,7 +4795,7 @@ papers:
     license: unknown
     note: 项目页 https://adawam.github.io/ 为匿名评审页，仅有论文与补充材料 PDF，未见代码链接（2026-10-22 核查）。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -4872,7 +4872,7 @@ papers:
       last_commit: '2026-08-03'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -4951,7 +4951,7 @@ papers:
       last_commit: '2026-09-29'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-11'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5023,7 +5023,7 @@ papers:
       last_commit: '2026-06-22'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-11'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5090,7 +5090,7 @@ papers:
     license: unknown
     note: 论文称去匿名后将上传 LIBERO 微调的 Cosmos 模型，目前未见链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -5168,7 +5168,7 @@ papers:
       last_commit: '2026-06-21'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-11'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5241,7 +5241,7 @@ papers:
       last_commit: '2026-08-27'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-11'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5316,7 +5316,7 @@ papers:
       last_commit: '2026-07-16'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-17'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5379,7 +5379,7 @@ papers:
     license: unknown
     note: 论文与 arXiv 页面未给出仓库链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-17'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5450,7 +5450,7 @@ papers:
       last_commit: '2025-10-06'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-17'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5525,7 +5525,7 @@ papers:
       last_commit: '2026-06-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: pretrain
@@ -5594,7 +5594,7 @@ papers:
     license: unknown
     note: 仅项目页 https://zhaohengyin.github.io/mana
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: pretrain
@@ -5668,7 +5668,7 @@ papers:
       last_commit: '2026-10-27'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robocasa-bench
     role: eval
@@ -5740,7 +5740,7 @@ papers:
       last_commit: '2026-10-11'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-17'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5807,7 +5807,7 @@ papers:
     license: MIT
     note: 探测未发现仓库；核对 GitHub 组织 orcahand，含 orca_core（MIT）、orca_sim、orca_teleop、orca_retargeter、硬件 CAD 等仓库。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 220
       code_files: 174
@@ -5882,7 +5882,7 @@ papers:
       last_commit: '2026-07-23'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -5948,7 +5948,7 @@ papers:
     license: unknown
     note: 仅项目页 https://xpeng-robotics.github.io/rove
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6018,7 +6018,7 @@ papers:
       last_commit: '2026-01-06'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: pretrain
@@ -6102,7 +6102,7 @@ papers:
       last_commit: '2026-08-23'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: open-x-embodiment
     role: pretrain
@@ -6189,7 +6189,7 @@ papers:
       last_commit: '2026-10-15'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6250,7 +6250,7 @@ papers:
     license: unknown
     note: 原链接末尾多一个句点导致探测失败，已去掉句点但仍未核实可访问；数据集 https://huggingface.co/datasets/huggingdas/erqa-plus
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6323,7 +6323,7 @@ papers:
       last_commit: '2026-08-23'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -6402,7 +6402,7 @@ papers:
       last_commit: '2026-06-30'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6463,7 +6463,7 @@ papers:
     license: unknown
     note: 论文仅给出项目页 wenxichen2746.github.io/DREAM-Chunk。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-23'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6530,7 +6530,7 @@ papers:
     license: unknown
     note: 项目页为 Microsoft Research 文章页，无代码链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-23'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6592,7 +6592,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: finetune
@@ -6659,7 +6659,7 @@ papers:
     license: unknown
     note: 论文仅给出项目页 swap-parkour.github.io。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6726,10 +6726,10 @@ papers:
       files: 99
       code_files: 34
       config_files: 33
-      last_commit: '2026-06-30'
+      last_commit: '2026-11-03'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6800,10 +6800,10 @@ papers:
       files: 248
       code_files: 176
       config_files: 28
-      last_commit: '2026-05-26'
+      last_commit: '2026-11-08'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: finetune
@@ -6873,7 +6873,7 @@ papers:
     license: unknown
     note: 论文仅给出项目页 yangsizhe.github.io/MemoryWAM。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -6938,7 +6938,7 @@ papers:
       last_commit: '2026-10-27'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-26'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7012,7 +7012,7 @@ papers:
       last_commit: '2025-09-04'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -7082,7 +7082,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-26'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7141,7 +7141,7 @@ papers:
     data: n/a
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-26'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7201,7 +7201,7 @@ papers:
     data: n/a
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-26'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7268,7 +7268,7 @@ papers:
     license: Apache-2.0
     note: 项目页链接的仓库标注 Coming Soon；权重与 Suboptimal-Value-Bench 暂无发布链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 2
       code_files: 0
@@ -7352,7 +7352,7 @@ papers:
       last_commit: '2026-06-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-29'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7416,7 +7416,7 @@ papers:
     license: unknown
     note: 仅有项目页 https://sivan666666.github.io/StairMaster/ 。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-06-29'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7498,7 +7498,7 @@ papers:
       last_commit: '2026-07-01'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: simplerenv
     role: eval
@@ -7571,7 +7571,7 @@ papers:
       last_commit: '2026-08-21'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-02'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7639,7 +7639,7 @@ papers:
     license: unknown
     note: 仅有项目页 https://yujiwen.github.io/memlearner/ ；主实验基于内部 1B 模型。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-02'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7710,7 +7710,7 @@ papers:
       last_commit: '2026-09-23'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-09'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7786,7 +7786,7 @@ papers:
       last_commit: '2026-08-03'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-09'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -7860,7 +7860,7 @@ papers:
       last_commit: '2026-07-16'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -7930,7 +7930,7 @@ papers:
     license: none-found
     note: 探测为 no-repo，项目页链接仓库 Susie-Lu/driftworld；README 提供 HF 检查点，RT-1/Bridge 需另下 DINOv3 与 SD3 VAE；未见 LICENSE 文件。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 248
       code_files: 200
@@ -8007,7 +8007,7 @@ papers:
     license: Apache-2.0
     note: 探测为 no-repo，项目页链接 XiaomiRobotics/Xiaomi-Robotics-1；已发布 5B 权重与 RoboCasa/RoboCasa365/VLABench 微调权重，2B/10B 与预训练检查点未列出。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 112
       code_files: 40
@@ -8087,7 +8087,7 @@ papers:
       last_commit: '2026-10-28'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-23'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -8157,7 +8157,7 @@ papers:
       last_commit: '2026-10-09'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-23'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -8225,7 +8225,7 @@ papers:
     license: Apache-2.0
     note: 仅有项目页 masked-visual-actions.github.io；附录称将发布代码、数据与权重，当前未见仓库。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 6
       code_files: 2
@@ -8313,7 +8313,7 @@ papers:
       last_commit: '2026-10-14'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-sim
     role: eval
@@ -8389,7 +8389,7 @@ papers:
       last_commit: '2026-07-29'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: maniskill-3
     role: eval
@@ -8465,7 +8465,7 @@ papers:
       last_commit: '2026-09-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -8532,7 +8532,7 @@ papers:
       last_commit: '2026-09-15'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -8611,7 +8611,7 @@ papers:
       last_commit: '2026-10-17'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-29'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -8679,7 +8679,7 @@ papers:
       last_commit: '2026-10-17'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-29'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -8743,7 +8743,7 @@ papers:
     license: unknown
     note: 论文未给出代码或项目链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -8814,7 +8814,7 @@ papers:
     license: MIT
     note: 探测时仓库链接不可达（可能已删除或私有）。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 129
       code_files: 14
@@ -8886,7 +8886,7 @@ papers:
     license: unknown
     note: 仅有项目页 wonder-world-model.github.io。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-07-30'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -8961,7 +8961,7 @@ papers:
       last_commit: '2026-10-05'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: amass
     role: pretrain
@@ -9032,10 +9032,10 @@ papers:
       files: 110
       code_files: 76
       config_files: 9
-      last_commit: '2026-10-10'
+      last_commit: '2026-11-03'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -9112,7 +9112,7 @@ papers:
       last_commit: '2026-08-18'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-04'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -9185,7 +9185,7 @@ papers:
       last_commit: '2026-08-11'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-04'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -9254,7 +9254,7 @@ papers:
     license: Apache-2.0
     note: 探测漏掉了项目页链接的官方仓库；README 显示已发布 SIMPLER 评测与 SAFE/QAM 数据准备脚本，PolaRiS 版本在待办列表中。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 1276
       code_files: 333
@@ -9330,7 +9330,7 @@ papers:
     license: unknown
     note: 论文未给出代码或项目链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-04'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -9399,7 +9399,7 @@ papers:
       last_commit: '2026-08-02'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -9480,7 +9480,7 @@ papers:
       last_commit: '2026-08-04'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-05'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -9555,7 +9555,7 @@ papers:
       last_commit: '2026-09-29'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: ego2robot-data
     role: proposes
@@ -9629,7 +9629,7 @@ papers:
     license: unknown
     note: 论文仅给出项目页 https://nevsnev.github.io/Worldcycle/，摘要称发布 CycleBench 但未见下载链接。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-07'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -9696,7 +9696,7 @@ papers:
     license: unknown
     note: 仅有项目页 https://bridgevla-plus.github.io/；前作 BridgeVLA 的开源情况不计入本文。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: rlbench
     role: finetune
@@ -9767,7 +9767,7 @@ papers:
     license: unknown
     note: 综述论文，无配套仓库。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-10'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -9841,7 +9841,7 @@ papers:
     license: MIT
     note: 仅有项目页 https://yyyyu120.github.io/W2-VLA/。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 183
       code_files: 105
@@ -9919,7 +9919,7 @@ papers:
     license: unknown
     note: 仅有项目页 https://livfour.github.io/DyPES-VLA_RELEASE/。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -9995,7 +9995,7 @@ papers:
       last_commit: '2026-08-14'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -10078,7 +10078,7 @@ papers:
       last_commit: '2026-08-14'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -10160,7 +10160,7 @@ papers:
       last_commit: '2026-10-09'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -10230,13 +10230,13 @@ papers:
     license: Apache-2.0
     note: 基础设施项目；策略权重来自各上游仓库，不由本项目发布
     stats:
-      files: 9507
-      code_files: 6515
-      config_files: 850
-      last_commit: '2026-10-31'
+      files: 9813
+      code_files: 6774
+      config_files: 863
+      last_commit: '2026-11-04'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robotwin
     role: eval
@@ -10305,7 +10305,7 @@ papers:
     license: Apache-2.0
     note: 探测漏掉了论文正文给出的仓库；README 写明包含遥操作、数据集和 DDPM 训练/推理代码。数据只附了样例，完整数据在百度网盘，限非商业研究使用
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 983
       code_files: 42
@@ -10375,7 +10375,7 @@ papers:
     data: n/a
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -10449,7 +10449,7 @@ papers:
       last_commit: '2025-03-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: bridgedata-v2
     role: finetune
@@ -10516,7 +10516,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-13'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -10581,7 +10581,7 @@ papers:
     license: unknown
     note: 项目页 https://zjw4321.github.io/neural-introspection-gating-page/
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -10653,7 +10653,7 @@ papers:
     license: MIT
     note: 探测未发现仓库，项目页链接到 geyan21/flex-pi；HF 已有 flexpi-robotwin、flexpi-libero 权重，README 写明大规模预训练 checkpoint 计划后续发布
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 930
       code_files: 220
@@ -10733,7 +10733,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: openvla
     role: finetune
@@ -10809,7 +10809,7 @@ papers:
       last_commit: '2026-08-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-14'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -10872,7 +10872,7 @@ papers:
     license: unknown
     note: 论文未给出代码链接；方法本身不训练权重。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-14'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -10937,7 +10937,7 @@ papers:
     license: MIT
     note: 探针未发现仓库；论文首页给出该 GitHub 地址，README 含训练与 LIBERO/LIBERO-Plus/RoboTwin 评测命令，检查点托管于 HF PoopBear/RIFT（2026-10-22 核对）。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 104
       code_files: 75
@@ -11008,7 +11008,7 @@ papers:
     license: unknown
     note: 论文仅给出博客链接 stelledge.com/blog/stellavla，未见代码仓库。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -11080,7 +11080,7 @@ papers:
       last_commit: '2026-08-13'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: finetune
@@ -11158,7 +11158,7 @@ papers:
       last_commit: '2026-10-30'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-14'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -11227,7 +11227,7 @@ papers:
       last_commit: '2025-12-12'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: finetune
@@ -11301,7 +11301,7 @@ papers:
       last_commit: '2025-08-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-sim
     role: eval
@@ -11367,7 +11367,7 @@ papers:
     data: n/a
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -11402,12 +11402,13 @@ papers:
   links:
     arxiv: https://arxiv.org/abs/2608.13049
     project: https://rongdingyi.github.io/H2R-Bench/
-  highlight: ''
+    code: https://github.com/Rongdingyi/H2R-Bench
+  highlight: 👀
   review:
     scores:
       C: 3
       E: 3
-      O: 2
+      O: 4
       T: 4
     rationale:
       C: 首个针对人到机器人视频迁移的评测基准，维度设计有针对性，但规模和影响面有限。
@@ -11424,23 +11425,23 @@ papers:
     - 评测代码与 240 个案例标注是否发布
     reviewed: '2026-10-22'
     reviewer: claude (agent review, human-auditable)
-    total: 57
-    priority: watching
+    total: 69
+    priority: notable
   open:
-    code: placeholder
+    code: substantive
     repo: https://github.com/Rongdingyi/H2R-Bench
     weights: n/a
     data: none
     license: none-found
     note: 探针显示 91 个文件、0 个代码文件，为项目页内容。
     stats:
-      files: 91
-      code_files: 0
-      config_files: 0
-      last_commit: '2026-08-22'
+      files: 114
+      code_files: 12
+      config_files: 2
+      last_commit: '2026-11-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: h2r-bench
     role: proposes
@@ -11452,6 +11453,8 @@ papers:
     change: category foundation-models → world-model
   - date: '2026-10-22'
     change: priority unrated → watching (re-review)
+  - date: '2026-11-09'
+    change: open.code placeholder → substantive; O 2 → 4; priority watching → notable (recheck)
 - arxiv_id: '2608.13362'
   title: 'NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation'
   authors: Zhao, James et al.
@@ -11504,7 +11507,7 @@ papers:
     license: unknown
     note: 项目网站 https://aus.bot/research/nestdex 仅有视频演示。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-17'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -11564,7 +11567,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-17'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -11636,7 +11639,7 @@ papers:
       last_commit: '2026-09-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: ego4d
     role: pretrain
@@ -11712,7 +11715,7 @@ papers:
       last_commit: '2026-04-13'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -11782,7 +11785,7 @@ papers:
       last_commit: '2026-09-09'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -11846,7 +11849,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: eval
@@ -11920,7 +11923,7 @@ papers:
       last_commit: '2026-09-09'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -11987,7 +11990,7 @@ papers:
     license: unknown
     note: 论文给出项目页 https://icr-lab.github.io/SparkVLA，未见代码仓库
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -12055,7 +12058,7 @@ papers:
     license: unknown
     note: 摘要称代码可在项目页获取，但未给出可核实链接；缓存中的项目页字段（HAF）与本文无关
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12122,7 +12125,7 @@ papers:
       last_commit: '2026-10-21'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: lerobot
     role: eval
@@ -12191,7 +12194,7 @@ papers:
     license: Apache-2.0
     note: 官方项目页 https://air-embodied-brain.github.io/zetta ；缓存项目页字段（HAF）有误
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 585
       code_files: 483
@@ -12259,7 +12262,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12333,7 +12336,7 @@ papers:
       last_commit: '2026-10-13'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12411,7 +12414,7 @@ papers:
       last_commit: '2026-10-13'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-19'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12477,7 +12480,7 @@ papers:
       last_commit: '2026-09-28'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-20'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12541,7 +12544,7 @@ papers:
     license: unknown
     note: 缓存中的项目页字段（unireflex）与本文无关
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-20'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12607,7 +12610,7 @@ papers:
     license: unknown
     note: 项目页 https://unireflex.github.io/
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-20'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12674,7 +12677,7 @@ papers:
       last_commit: '2026-09-28'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robocasa-bench
     role: eval
@@ -12752,7 +12755,7 @@ papers:
       last_commit: '2026-10-27'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-20'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12796,7 +12799,7 @@ papers:
     license: unknown
     note: 论文已撤回，无项目页或仓库
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-20'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -12853,7 +12856,7 @@ papers:
     data: unknown
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -12927,7 +12930,7 @@ papers:
       last_commit: '2026-09-28'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-20'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13000,7 +13003,7 @@ papers:
       last_commit: '2026-10-21'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: pretrain
@@ -13033,12 +13036,13 @@ papers:
   links:
     arxiv: https://arxiv.org/abs/2608.18234
     project: https://adept-dexterity.github.io/
+    code: https://github.com/open-gigaai/giga-brain-wbc
   highlight: 👀
   review:
     scores:
       C: 4
       E: 4
-      O: 2
+      O: 4
       T: 3
     rationale:
       C: 将行为世界模型目标与自动地形标注引入通用全身跟踪，统一交互与鲁棒性，对人形控制子方向有明确增量。
@@ -13056,17 +13060,23 @@ papers:
     - 是否计划开源代码/权重
     reviewed: '2026-10-22'
     reviewer: claude (agent review, human-auditable)
-    total: 65
+    total: 77
     priority: notable
   open:
-    code: no-repo
-    repo: ''
+    code: substantive
+    repo: https://github.com/open-gigaai/giga-brain-wbc
     weights: none
     data: none
-    license: unknown
+    license: Apache-2.0
     note: 项目页 https://shepherd1226.github.io/gigabrain-wbc-0.5/ ；未见代码仓库。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
+    stats:
+      files: 530
+      code_files: 269
+      config_files: 35
+      last_commit: '2026-11-05'
+      readme_says_coming_soon: false
   uses:
   - resource: amass
     role: eval
@@ -13078,6 +13088,8 @@ papers:
     change: category teleoperation → locomotion
   - date: '2026-10-22'
     change: priority unrated → notable (re-review)
+  - date: '2026-11-09'
+    change: open.code no-repo → substantive; O 2 → 4 (recheck)
 - arxiv_id: '2608.18433'
   title: The Embodiment Gap in Robot Foundation Models
   authors: Domae, Yukiyasu et al.
@@ -13098,12 +13110,13 @@ papers:
   links:
     arxiv: https://arxiv.org/abs/2608.18433
     project: https://shepherd1226.github.io/gigabrain-wbc-0.5/
+    code: https://github.com/open-gigaai/giga-brain-wbc
   highlight: ''
   review:
     scores:
       C: 3
       E: 2
-      O: 1
+      O: 3
       T: 3
     rationale:
       C: 本体差距视角与报告卡对跨本体评估有参考价值，但作为综述增量有限。
@@ -13117,17 +13130,23 @@ papers:
     - appendix
     reviewed: '2026-10-22'
     reviewer: claude (agent review, human-auditable)
-    total: 43
+    total: 55
     priority: watching
   open:
-    code: no-repo
-    repo: ''
+    code: substantive
+    repo: https://github.com/open-gigaai/giga-brain-wbc
     weights: n/a
     data: n/a
-    license: unknown
+    license: Apache-2.0
     note: 综述论文，无代码。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
+    stats:
+      files: 530
+      code_files: 269
+      config_files: 35
+      last_commit: '2026-11-05'
+      readme_says_coming_soon: false
   added: '2026-08-21'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13136,6 +13155,8 @@ papers:
     change: category foundation-models → tutorials
   - date: '2026-10-22'
     change: priority unrated → watching (re-review)
+  - date: '2026-11-09'
+    change: open.code no-repo → substantive; O 1 → 3 (recheck)
 - arxiv_id: '2608.18618'
   title: 'LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories'
   authors: Tang, Zhipeng et al.
@@ -13160,12 +13181,13 @@ papers:
   links:
     arxiv: https://arxiv.org/abs/2608.18618
     project: https://shepherd1226.github.io/gigabrain-wbc-0.5/
-  highlight: ''
+    code: https://github.com/open-gigaai/giga-brain-wbc
+  highlight: 👀
   review:
     scores:
       C: 3
       E: 3
-      O: 2
+      O: 4
       T: 3
     rationale:
       C: 填补实验室灵巧操作分层基准空白，但任务与平台单一，增量中等。
@@ -13181,23 +13203,31 @@ papers:
     - 数据集主页 https://zhipeng-tang.github.io/LabDex/ 是否提供数据下载与评测代码
     reviewed: '2026-10-22'
     reviewer: claude (agent review, human-auditable)
-    total: 54
-    priority: watching
+    total: 66
+    priority: notable
   open:
-    code: no-repo
-    repo: ''
+    code: substantive
+    repo: https://github.com/open-gigaai/giga-brain-wbc
     weights: none
     data: unknown
-    license: unknown
+    license: Apache-2.0
     note: 论文给出数据集主页 https://zhipeng-tang.github.io/LabDex/ ，未见代码仓库。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
+    stats:
+      files: 530
+      code_files: 269
+      config_files: 35
+      last_commit: '2026-11-05'
+      readme_says_coming_soon: false
   added: '2026-08-21'
   source: news_archive
   digest: digests/migration-2026-10-22.md
   history:
   - date: '2026-10-22'
     change: priority unrated → watching (re-review)
+  - date: '2026-11-09'
+    change: open.code no-repo → substantive; O 2 → 4; priority watching → notable (recheck)
 - arxiv_id: '2608.18701'
   title: 'SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation'
   authors: Jing, Bowen et al.
@@ -13270,7 +13300,7 @@ papers:
       last_commit: '2026-07-22'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-21'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13328,7 +13358,7 @@ papers:
     data: none
     license: unknown
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: open-x-embodiment
     role: pretrain
@@ -13403,7 +13433,7 @@ papers:
       last_commit: '2026-10-22'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-21'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13465,7 +13495,7 @@ papers:
     license: unknown
     note: 论文仅给项目页。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-21'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13521,7 +13551,7 @@ papers:
     license: unknown
     note: 项目页 https://partialbigrasp.github.io
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-21'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13593,7 +13623,7 @@ papers:
       last_commit: '2026-08-19'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13662,7 +13692,7 @@ papers:
       last_commit: '2026-09-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13734,7 +13764,7 @@ papers:
       last_commit: '2026-09-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -13808,7 +13838,7 @@ papers:
       last_commit: '2026-08-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13878,7 +13908,7 @@ papers:
       last_commit: '2026-08-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -13946,7 +13976,7 @@ papers:
       last_commit: '2026-09-26'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14019,7 +14049,7 @@ papers:
       last_commit: '2026-08-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14092,7 +14122,7 @@ papers:
       last_commit: '2026-08-21'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14163,7 +14193,7 @@ papers:
       last_commit: '2026-08-21'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-24'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14225,7 +14255,7 @@ papers:
       last_commit: '2026-10-08'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-25'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14293,7 +14323,7 @@ papers:
       last_commit: '2026-08-20'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-25'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14326,12 +14356,12 @@ papers:
     arxiv: https://arxiv.org/abs/2608.18484
     code: https://github.com/PardisTaghavi/SparsePR
     project: https://pardistaghavi.github.io/SparsePR-website/
-  highlight: 👀
+  highlight: ''
   review:
     scores:
       C: 3
       E: 4
-      O: 4
+      O: 2
       T: 3
     rationale:
       C: 免训练稀疏注意力的扎实改进，对具身方向属间接支撑
@@ -14346,23 +14376,23 @@ papers:
     - appendix
     reviewed: '2026-10-22'
     reviewer: claude (agent review, human-auditable)
-    total: 71
-    priority: notable
+    total: 59
+    priority: watching
   open:
-    code: substantive
+    code: placeholder
     repo: https://github.com/PardisTaghavi/SparsePR
     weights: n/a
     data: n/a
     license: Apache-2.0
     note: 免训练方法，仓库含实现代码
     stats:
-      files: 70
-      code_files: 47
-      config_files: 10
-      last_commit: '2026-09-09'
-      readme_says_coming_soon: false
+      files: 1
+      code_files: 0
+      config_files: 0
+      last_commit: '2026-11-07'
+      readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-25'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14371,6 +14401,8 @@ papers:
     change: category foundation-models → world-model
   - date: '2026-10-22'
     change: priority unrated → notable (re-review)
+  - date: '2026-11-09'
+    change: open.code substantive → placeholder; O 4 → 2; priority notable → watching (recheck)
 - arxiv_id: '2608.20546'
   title: 'Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning'
   authors: Hajj-Ahmad, Amar et al.
@@ -14428,7 +14460,7 @@ papers:
       last_commit: '2026-09-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-25'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14495,7 +14527,7 @@ papers:
     license: unknown
     note: 只有项目页 physcap.github.io
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -14567,7 +14599,7 @@ papers:
       last_commit: '2026-08-28'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -14648,7 +14680,7 @@ papers:
       last_commit: '2026-08-28'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-08-31'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14718,7 +14750,7 @@ papers:
       last_commit: '2026-10-24'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -14790,7 +14822,7 @@ papers:
       last_commit: '2026-08-25'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: open-x-embodiment
     role: pretrain
@@ -14872,7 +14904,7 @@ papers:
       last_commit: '2026-09-11'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-09-08'
   source: news_archive
   digest: digests/migration-2026-10-22.md
@@ -14939,7 +14971,7 @@ papers:
     license: MIT
     note: 探测链接多了句号导致失效；实际仓库含模型、训练、预处理与部署代码，README 称数据与检查点待发布
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 297
       code_files: 174
@@ -15019,7 +15051,7 @@ papers:
       last_commit: '2026-10-09'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: meta-world
     role: eval
@@ -15099,7 +15131,7 @@ papers:
       last_commit: '2026-10-20'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: agibot-world
     role: pretrain
@@ -15179,7 +15211,7 @@ papers:
       last_commit: '2026-10-14'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robotwin-2
     role: eval
@@ -15252,13 +15284,13 @@ papers:
     note: 仓库为 RoboRSI harness（272 个代码文件，含 bench 评测入口），README 仍标 “code release coming soon” 且 RoboDojo/RoboLab/LHVLN/VLN-CE/SIMPLE
       等基准组件未放；HF 提供 27B preview 权重与按基准组织的 ICL experience packages，GPT-6-Astra 本体为闭源 API。
     stats:
-      files: 570
-      code_files: 379
-      config_files: 69
-      last_commit: '2026-10-30'
+      files: 638
+      code_files: 405
+      config_files: 85
+      last_commit: '2026-11-03'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -15331,13 +15363,13 @@ papers:
     license: Apache-2.0
     note: 代码含训练/微调、推理部署与基准评测，HF 放出 46 个 checkpoint；6,369 小时预训练语料与 data recipe 只在论文与配置中描述，未见数据本体发布，故 data 记为 none。
     stats:
-      files: 542
-      code_files: 415
+      files: 567
+      code_files: 439
       config_files: 51
-      last_commit: '2026-10-29'
+      last_commit: '2026-11-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -15412,7 +15444,7 @@ papers:
       last_commit: '2026-10-07'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -15480,13 +15512,13 @@ papers:
     note: 训练/推理/评测代码与 gam-robotwin、gam-libero-pro、gam-wilddet3d 三个 checkpoint 齐备；数据侧只放 LIBERO-PRO 任务资产（bddl+初始状态）与预计算特征，RoboTwin/LIBERO
       原始演示需按脚本自行准备。底层 WildDet3D/SAM 3 权重为 SAM License，CoTracker 为 CC BY-NC 4.0。
     stats:
-      files: 198
-      code_files: 164
-      config_files: 20
-      last_commit: '2026-10-17'
+      files: 242
+      code_files: 165
+      config_files: 63
+      last_commit: '2026-11-04'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robotwin-2
     role: finetune
@@ -15570,7 +15602,7 @@ papers:
       last_commit: '2026-10-31'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robotwin-2
     role: eval
@@ -15645,7 +15677,7 @@ papers:
       last_commit: '2026-10-20'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: habitat-3-0
     role: eval
@@ -15717,7 +15749,7 @@ papers:
       last_commit: '2026-09-25'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-22'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-22.md
@@ -15787,7 +15819,7 @@ papers:
       last_commit: '2026-10-16'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: pretrain
@@ -15864,7 +15896,7 @@ papers:
       last_commit: '2026-10-23'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-22'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-22.md
@@ -15926,7 +15958,7 @@ papers:
     license: unknown
     note: 缓存探测无仓库；正文明确“We will release our code, models, and data”，但截至评审无链接或许可，按现状记 none，而非 unknown。
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: hoi4d
     role: pretrain
@@ -15997,7 +16029,7 @@ papers:
       last_commit: '2026-09-29'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -16070,7 +16102,7 @@ papers:
       last_commit: '2026-10-17'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -16142,7 +16174,7 @@ papers:
       last_commit: '2026-10-29'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-22'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-22.md
@@ -16214,7 +16246,7 @@ papers:
       last_commit: '2026-10-15'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-22'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-22.md
@@ -16279,13 +16311,13 @@ papers:
     note: 代码位于 NVlabs/LongLive 仓库的 Long-WAM 子项目；HF 公开 LIBERO、RoboTwin、RoboCasa、YAM 等 checkpoint，19.2 s GR-1 checkpoint 标注待更新；预训练语料为公开数据集与自有数据混合，未随发布，故
       data 记 partial。
     stats:
-      files: 1925
-      code_files: 1540
+      files: 1927
+      code_files: 1542
       config_files: 90
-      last_commit: '2026-10-30'
+      last_commit: '2026-11-09'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -16360,13 +16392,13 @@ papers:
     note: 探针命中的 RLinf 是通用具身/agentic RL 框架（项目页亦如此链接），README 与算法列表支持 RECAP、RLT 等但未提及 CEL/FERT；HF 上的 WideSeek-R1 数据集与本工作无关，属组织匹配误报；未找到权重与机队数据，按现状
       O 记 2。
     stats:
-      files: 2245
-      code_files: 968
-      config_files: 565
-      last_commit: '2026-11-02'
+      files: 2311
+      code_files: 994
+      config_files: 588
+      last_commit: '2026-11-09'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-22'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-22.md
@@ -16440,7 +16472,7 @@ papers:
       last_commit: '2026-10-20'
       readme_says_coming_soon: true
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: egox-data-6m
     role: proposes
@@ -16516,7 +16548,7 @@ papers:
       last_commit: '2026-09-15'
       readme_says_coming_soon: false
     first_check: '2026-10-22'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: ego4d
     role: pretrain
@@ -16593,7 +16625,7 @@ papers:
       last_commit: '2026-10-22'
       readme_says_coming_soon: true
     first_check: '2026-10-23'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-23'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-23.md
@@ -16663,7 +16695,7 @@ papers:
       last_commit: '2026-10-24'
       readme_says_coming_soon: false
     first_check: '2026-10-23'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-23'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-23.md
@@ -16727,13 +16759,13 @@ papers:
     license: Apache-2.0
     note: HF 可见 AgenticRoboRL-Qwen3.5-9B 规划器权重；teacher 轨迹承诺发布、目前未见。
     stats:
-      files: 78
+      files: 80
       code_files: 43
       config_files: 4
-      last_commit: '2026-10-21'
+      last_commit: '2026-11-06'
       readme_says_coming_soon: false
     first_check: '2026-10-23'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-23'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-23.md
@@ -16800,7 +16832,7 @@ papers:
       last_commit: '2026-10-23'
       readme_says_coming_soon: false
     first_check: '2026-10-23'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: robocasa-bench
     role: eval
@@ -16867,13 +16899,13 @@ papers:
     license: Apache-2.0
     note: 论文基于 GR00T-N1.7 等；HF 可见基座权重，AW-0 专有权重与训练数据未见单独公开。
     stats:
-      files: 448
-      code_files: 197
+      files: 455
+      code_files: 204
       config_files: 44
-      last_commit: '2026-10-28'
+      last_commit: '2026-11-08'
       readme_says_coming_soon: false
     first_check: '2026-10-23'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-23'
   source: arxiv+hf-daily
   digest: digests/daily/2026-10-23.md
@@ -16936,7 +16968,7 @@ papers:
       last_commit: '2026-10-23'
       readme_says_coming_soon: false
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: pretrain
@@ -17011,7 +17043,7 @@ papers:
       last_commit: '2026-10-21'
       readme_says_coming_soon: false
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -17074,7 +17106,7 @@ papers:
     license: none-found
     note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 1170
       code_files: 113
@@ -17144,7 +17176,7 @@ papers:
     license: unknown
     note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -17205,7 +17237,7 @@ papers:
     license: unknown
     note: 依据本地论文缓存及仓库探测记录；未直接阅读作者代码，资源状态仅按明确证据填写。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -17283,7 +17315,7 @@ papers:
       last_commit: '2026-11-02'
       readme_says_coming_soon: false
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: finetune
@@ -17355,7 +17387,7 @@ papers:
       last_commit: '2026-10-26'
       readme_says_coming_soon: false
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-sim
     role: eval
@@ -17412,7 +17444,7 @@ papers:
     license: unknown
     note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-26'
   source: arxiv
   digest: digests/daily/2026-10-26.md
@@ -17469,7 +17501,7 @@ papers:
     license: unknown
     note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-26'
   source: arxiv
   digest: digests/daily/2026-10-26.md
@@ -17529,7 +17561,7 @@ papers:
     license: none-found
     note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
     stats:
       files: 57
       code_files: 33
@@ -17600,7 +17632,7 @@ papers:
     license: unknown
     note: 缓存未提供作者仓库、权重或数据的公开入口，不根据实验展示推定开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: eval
@@ -17667,7 +17699,7 @@ papers:
       last_commit: '2026-10-21'
       readme_says_coming_soon: true
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-26'
   source: arxiv
   digest: digests/daily/2026-10-26.md
@@ -17724,7 +17756,7 @@ papers:
     license: unknown
     note: 缓存提供项目入口或开放承诺，未核实本文实质实现，不把展示视为代码开放。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -17792,7 +17824,7 @@ papers:
       last_commit: '2026-10-25'
       readme_says_coming_soon: false
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: eval
@@ -17852,7 +17884,7 @@ papers:
     license: unknown
     note: 缓存正文明确称代码和模型将开源；未核实已发布，O=2。
     first_check: '2026-10-26'
-    last_check: '2026-11-02'
+    last_check: '2026-11-09'
   added: '2026-10-26'
   source: arxiv
   digest: digests/daily/2026-10-26.md
@@ -17915,10 +17947,10 @@ papers:
       files: 167
       code_files: 121
       config_files: 24
-      last_commit: '2026-10-23'
+      last_commit: '2026-10-28'
       readme_says_coming_soon: false
     first_check: '2026-10-27'
-    last_check: '2026-10-27'
+    last_check: '2026-11-09'
   uses:
   - resource: droid
     role: pretrain
@@ -17985,7 +18017,7 @@ papers:
     license: unknown
     note: 依据本次正文缓存和仓库探测；未把引用资源或承诺发布视为已开放。
     first_check: '2026-10-27'
-    last_check: '2026-10-27'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: eval
@@ -18020,12 +18052,13 @@ papers:
   summary: 为把丰富的人类第一人称经验迁移到人形全身控制，HuGe把三种已有VLA架构接入SONIC潜在运动接口，输出全身运动码和双手开合信号，再依次进行第一人称预训练、人形适配和下游微调。其关键处理是为人类示范构建伪本体状态，并通过手臂去除、补绘和机器人手渲染减小外观差异。作者使用超过两千小时的人类与机器人数据，在HumanoidArena七项任务上分析训练策略和数据规模；在真实G1可乐瓶取放任务中，固定110条机器人示范，加入400条原始人类示范使成功率由13/30升至18/30，视觉适配后为20/30。结果支持人类经验的补充价值，但视觉适配相对原始视频仅多两次成功，尚需更大样本确认。真实评测仅一个任务，外观分布距离缩小也不能直接代表因果迁移机制或跨场景稳定性。
   links:
     arxiv: https://arxiv.org/abs/2610.34186
+    code: https://github.com/yliu-cs/HuGe
   highlight: 👀
   review:
     scores:
       C: 4
       E: 4
-      O: 2
+      O: 4
       T: 3
     rationale:
       C: 伪本体状态和视觉适配支持三类人形VLA的人类经验迁移。
@@ -18041,17 +18074,23 @@ papers:
     - 复核HuGe官方仓库可用性及代码、权重发布范围。
     reviewed: '2026-10-27'
     reviewer: codex (agent review, human-auditable)
-    total: 65
+    total: 77
     priority: notable
   open:
-    code: no-repo
+    code: substantive
     repo: https://github.com/yliu-cs/HuGe
     weights: unknown
     data: unknown
-    license: unknown
+    license: none-found
     note: 缓存署名尾部发现官方仓库链接，本次访问cache miss，未验证可用性；不据地址认定实质代码开放。
     first_check: '2026-10-27'
-    last_check: '2026-10-27'
+    last_check: '2026-11-09'
+    stats:
+      files: 112
+      code_files: 98
+      config_files: 3
+      last_commit: '2026-10-27'
+      readme_says_coming_soon: false
   uses:
   - resource: behavior-1k
     role: pretrain
@@ -18059,6 +18098,9 @@ papers:
   source: arxiv
   digest: digests/daily/2026-10-27.md
   late_found: true
+  history:
+  - date: '2026-11-09'
+    change: open.code no-repo → substantive; O 2 → 4 (recheck)
 - arxiv_id: '2610.33852'
   title: 'AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking'
   authors: Jianibieke Adalibieke et al.
@@ -18113,7 +18155,13 @@ papers:
     license: BSD-3-Clause
     note: 官方项目和README确认训练部署代码、2765参考动作、物体资源及预训练跟踪器和调制器，公开下载无需登录，第三方资源沿用原条款。https://github.com/Janebek/AdaDexTrack
     first_check: '2026-10-27'
-    last_check: '2026-10-27'
+    last_check: '2026-11-09'
+    stats:
+      files: 816
+      code_files: 132
+      config_files: 140
+      last_commit: '2026-10-27'
+      readme_says_coming_soon: false
   added: '2026-10-27'
   source: arxiv
   digest: digests/daily/2026-10-27.md
@@ -18142,7 +18190,7 @@ papers:
     scores:
       C: 4
       E: 3
-      O: 3
+      O: 4
       T: 3
     rationale:
       C: 执行证据、主动诊断及版本图谱驱动可执行编排改进，增量明确。
@@ -18158,23 +18206,32 @@ papers:
     - 核实团队近五年本方向代表性成果，以校准T分。
     reviewed: '2026-10-27'
     reviewer: codex (agent review, human-auditable)
-    total: 66
+    total: 72
     priority: notable
   open:
-    code: partial
+    code: substantive
     repo: https://github.com/AgenticEI/VISTA
     weights: unknown
     data: unknown
     license: Apache-2.0
     note: 官方README提供LIBERO-Pro T/S运行时、初始编排和配置；RoboCasa/RoboTwin集成后续发布。https://github.com/AgenticEI/VISTA
     first_check: '2026-10-27'
-    last_check: '2026-10-27'
+    last_check: '2026-11-09'
+    stats:
+      files: 191
+      code_files: 150
+      config_files: 12
+      last_commit: '2026-10-28'
+      readme_says_coming_soon: false
   uses:
   - resource: robotwin-2
     role: eval
   added: '2026-10-27'
   source: arxiv
   digest: digests/daily/2026-10-27.md
+  history:
+  - date: '2026-11-09'
+    change: open.code partial → substantive; O 3 → 4 (recheck)
 - arxiv_id: '2610.38199'
   title: 'Embodied at Sea: Imitation Learning for Multi-Task Underwater Manipulation'
   authors: Greta Perez-Haiek et al.
@@ -18226,7 +18283,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -18254,7 +18311,7 @@ papers:
     scores:
       C: 4
       E: 4
-      O: 3
+      O: 4
       T: 3
     rationale:
       C: 紧凑潜空间预测为低延迟多任务控制提供明确方法增量。
@@ -18272,17 +18329,23 @@ papers:
     - 核对附加条款下的实际许可范围及后续训练代码发布。
     reviewed: '2026-11-01'
     reviewer: codex (agent review, human-auditable)
-    total: 71
+    total: 77
     priority: notable
   open:
-    code: partial
+    code: substantive
     repo: https://github.com/gaoxiang12/ga-wm
     weights: open
     data: unknown
-    license: unknown
+    license: MIT
     note: 已读官方README与LICENSE：推理、评测及模型入口已发布，训练代码仍标为coming soon。LICENSE自称MIT但附加提交保留条款，未按标准MIT登记。来源：https://github.com/gaoxiang12/ga-wm
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
+    stats:
+      files: 80
+      code_files: 55
+      config_files: 3
+      last_commit: '2026-10-28'
+      readme_says_coming_soon: true
   uses:
   - resource: libero
     role: eval
@@ -18292,6 +18355,9 @@ papers:
   source: arxiv
   digest: digests/daily/2026-11-01.md
   late_found: true
+  history:
+  - date: '2026-11-09'
+    change: open.code partial → substantive; O 3 → 4 (recheck)
 - arxiv_id: '2610.36539'
   title: 'CARD: Contact-Anchored Retargeting for Dexterous Manipulation'
   authors: Cunxi Dai et al.
@@ -18344,7 +18410,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: hoi4d
     role: pretrain
@@ -18410,7 +18476,7 @@ papers:
       last_commit: '2026-10-28'
       readme_says_coming_soon: false
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -18466,7 +18532,7 @@ papers:
     license: unknown
     note: 原探测链接指向依赖或基线 HumanoidVerse，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -18522,7 +18588,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: robocasa-bench
     role: eval
@@ -18581,7 +18647,7 @@ papers:
     license: unknown
     note: 原探测链接指向依赖或基线 sim2real，不能作为本论文代码开放证据；资源状态仅记录已核实内容。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -18636,7 +18702,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: isaac-lab
     role: eval
@@ -18665,6 +18731,7 @@ papers:
   summary: 为避免离线敏感度指标与机器人任务成功不一致，QbD-VLA直接用短时闭环评估选择各层组的权重和激活位宽，并在当前其他组件精度下测量候选，考虑组件相互作用。算法按置信区间分配试验，再把选定配置冻结到独立初始状态完整评估。作者在四种VLA与LIBERO四套任务中获得约四位权重、低于六位激活的配置，部分统一低位量化失效时仍保持较强成功率。SIMPLER上的收益较小；真实Franka平台中，仿真配置在X-VLA未检测到成功率损失，却在π0.5上失败，不能宣称普遍无损迁移。分配每次需数百次模拟运行且采用贪心搜索，名义位宽也不直接等价于实际内存和延迟。代码入口存在，但缓存克隆超时，尚需核实实现与部署测量范围。
   links:
     arxiv: https://arxiv.org/abs/2610.38661
+    code: https://github.com/jiuyixu25/QbD-VLA
   highlight: 👀
   review:
     scores:
@@ -18690,14 +18757,20 @@ papers:
     total: 65
     priority: notable
   open:
-    code: unknown
+    code: substantive
     repo: https://github.com/jiuyixu25/QbD-VLA
     weights: unknown
     data: unknown
-    license: unknown
+    license: MIT
     note: 缓存仓库探测超时，不能据此判为占位或实质开放；代码与资产待核实。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
+    stats:
+      files: 387
+      code_files: 44
+      config_files: 48
+      last_commit: '2026-10-28'
+      readme_says_coming_soon: false
   uses:
   - resource: libero
     role: eval
@@ -18755,7 +18828,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -18816,7 +18889,7 @@ papers:
       last_commit: '2026-10-30'
       readme_says_coming_soon: true
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -18878,7 +18951,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -18933,14 +19006,20 @@ papers:
     total: 65
     priority: notable
   open:
-    code: unknown
+    code: placeholder
     repo: https://github.com/Ideal-ljl/AeroBrain
     weights: unknown
     data: unknown
-    license: unknown
+    license: none-found
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。 原探测URL带末尾句号，已清理；该探测失败不足以判断规范URL失效，保留unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
+    stats:
+      files: 7
+      code_files: 0
+      config_files: 0
+      last_commit: '2026-10-30'
+      readme_says_coming_soon: true
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -19008,7 +19087,7 @@ papers:
       last_commit: '2026-08-24'
       readme_says_coming_soon: false
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -19067,7 +19146,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: libero
     role: eval
@@ -19128,7 +19207,7 @@ papers:
     repo: https://github.com/Enqiao-Lu/LOGIV
     weights: unknown
     data: unknown
-    license: unknown
+    license: none-found
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     stats:
       files: 40
@@ -19137,7 +19216,7 @@ papers:
       last_commit: '2026-10-29'
       readme_says_coming_soon: false
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: robotwin-2
     role: eval
@@ -19196,7 +19275,7 @@ papers:
     license: unknown
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -19257,7 +19336,7 @@ papers:
       last_commit: '2026-10-28'
       readme_says_coming_soon: false
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
@@ -19312,13 +19391,13 @@ papers:
     license: Apache-2.0
     note: 官方仓库README提供实质实现、模型权重和使用说明；未再分发动作数据，BONES等来源需自行获得访问权。来源：https://github.com/Kyk0/sonic-k1
     stats:
-      files: 3472
-      code_files: 1528
-      config_files: 299
-      last_commit: '2026-10-23'
+      files: 3489
+      code_files: 1539
+      config_files: 300
+      last_commit: '2026-11-05'
       readme_says_coming_soon: true
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
   uses:
   - resource: sonic-k1
     role: proposes
@@ -19343,12 +19422,13 @@ papers:
   summary: 为缓解机器人强化学习仅靠终点成功信号难以判断进展和恢复的问题，Event2Reward从真实交互记录中构造事件监督，学习带时间锚点的任务进度表示，并将停滞、倒退与恢复纳入相对势函数奖励。方法以事件变化而非静态画面相似度衡量进展，减少策略重复触发同一视觉状态获取奖励的机会。作者使用约十万条原始真实记录构建训练材料，在LIBERO四十项任务上报告相对稀疏奖励平均提高18.16个百分点；六项真机任务采用每项约三十分钟在线学习，精细操作与物体操作的汇总结果分别约60%和90%。同预算对照与组件消融支持事件表示的作用，不能把不同任务组的增益互换。方法仍依赖事件标注质量、任务时序结构与奖励模型的分布覆盖，未排除新环境中的奖励误判。论文给出资源入口，但本次未核实完整代码、数据及训练资产可下载性。
   links:
     arxiv: https://arxiv.org/abs/2610.39212
+    code: https://github.com/niejunnan25/Event2Reward
   highlight: 👀
   review:
     scores:
       C: 4
       E: 4
-      O: 2
+      O: 4
       T: 3
     rationale:
       C: 事件时序与恢复过程进入奖励建模，针对稀疏反馈形成明确增量。
@@ -19365,23 +19445,32 @@ papers:
     - 核验论文官方资源入口的实质代码、权重、数据及各自许可；开放声明不作为完整发布证据。
     reviewed: '2026-11-01'
     reviewer: codex (agent review, human-auditable)
-    total: 65
+    total: 77
     priority: notable
   open:
-    code: no-repo
+    code: substantive
     repo: https://github.com/niejunnan25/Event2Reward
     weights: unknown
     data: unknown
-    license: unknown
+    license: Apache-2.0
     note: 依据本次论文缓存及仓库探测；未明确验证的权重、数据与许可保留 unknown。
     first_check: '2026-11-01'
-    last_check: '2026-11-01'
+    last_check: '2026-11-09'
+    stats:
+      files: 103
+      code_files: 44
+      config_files: 26
+      last_commit: '2026-11-02'
+      readme_says_coming_soon: false
   uses:
   - resource: libero
     role: eval
   added: '2026-11-01'
   source: arxiv
   digest: digests/daily/2026-11-01.md
+  history:
+  - date: '2026-11-09'
+    change: open.code no-repo → substantive; O 2 → 4 (recheck)
 - arxiv_id: '2611.01560'
   title: 'Democratizing Robot-Use Agents: A Unified Harness with Open Models'
   authors: Jiarui Yuan et al.

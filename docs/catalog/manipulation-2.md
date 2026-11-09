@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-16. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
-    2026-10-26 · 值得关注 · **66/100** · 部分开放
+16. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+    2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
-    VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
+    将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
 
 17. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
     2026-10-20 · 值得关注 · **66/100** · 实质代码
 
     基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
 
-18. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
+18. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
+    2026-08-19 · 值得关注 · **66/100** · 实质代码
+
+    化学实验室灵巧操作的分层真机+仿真基准，含原子技能、组合技能与长时程流程三级；作者报告π0.5原子技能最佳，但三种策略均无法完成完整实验流程。
+
+19. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
     2026-08-11 · 值得关注 · **66/100** · 实质代码
 
     用遥操作采集的真机多模态数据训练 DDPM，从单视角点云生成双臂灵巧手的抓取关节构型，再结合运动规划和力引导微调执行；作者报告在未见过的大物体上总成功率为 61.9%。
 
-19. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
+20. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     MoMaSplat 重渲染含接触后物体运动的完整演示，作者报告五项真机任务未见底座位姿平均成功率 37%，最强基线 17%。
 
-20. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
+21. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     S2C 结合 VLM 定位、力反馈残差 RL 与物体中心增强，作者报告六项真机接触任务在位置变化下平均成功率 94.17%。
 
-21. **[DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation](../papers/2611.05119.md)**
+22. **[DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation](../papers/2611.05119.md)**
     2026-11-03 · 值得关注 · **65/100** · 占位仓库
 
     DexHOT学习手物联合构型迁移；作者报告120对象基准中未见对象成功率69.4%，200次真实迁移成功率61.5%。
 
-22. **[Embodied at Sea: Imitation Learning for Multi-Task Underwater Manipulation](../papers/2610.38199.md)**
+23. **[Embodied at Sea: Imitation Learning for Multi-Task Underwater Manipulation](../papers/2610.38199.md)**
     2026-10-28 · 值得关注 · **65/100** · 未找到仓库
 
     水下模仿学习比较观测配置和模型，泳池最高93.3%含部分成功，海试ACT表现优于SmolVLA。
 
-23. **[Catch It All!: Generalizable Dynamic Catching with a Dexterous Hand](../papers/2610.39044.md)**
+24. **[Catch It All!: Generalizable Dynamic Catching with a Dexterous Hand](../papers/2610.39044.md)**
     2026-10-28 · 值得关注 · **65/100** · 未找到仓库
 
     Catch It All!用单个自视角相机接取未见物体，真机下手与上手接球成功率约39%和36%。
 
-24. **[RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding](../papers/2610.36533.md)**
+25. **[RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding](../papers/2610.36533.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     RoboAuto用对象知识、场景接地与主动试验搜索机器人程序，在多基准及真实长任务中验证。
 
-25. **[Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well](../papers/2610.37652.md)**
+26. **[Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well](../papers/2610.37652.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     DexSafe 结合触觉状态与安全过滤进行持续手内操作，作者在13.3小时真机评估中报告较高目标达成率。
 
-26. **[Learning Force-Reactive Humanoid Loco-Manipulation](../papers/2610.35862.md)**
+27. **[Learning Force-Reactive Humanoid Loco-Manipulation](../papers/2610.35862.md)**
     2026-10-26 · 值得关注 · **65/100** · 未找到仓库
 
     FLoRe统一力标注示教、扩散策略和全身控制，三项真机任务成功率80%，位置基线26.7%。
 
-27. **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](../papers/2608.19574.md)**
+28. **[HiTac-WAM: A Hierarchical Tactile World Action Model for Contact-Rich Robot Manipulation](../papers/2608.19574.md)**
     2026-08-20 · 值得关注 · **65/100** · 实质代码
 
     为世界动作模型的每个候选动作块预测接触→形变→滑移的分层触觉未来，用于候选排序与执行中偏差重规划；作者报告三项真机任务平均成功率由31.1%升至72.2%。
 
-28. **[UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](../papers/2608.17432.md)**
+29. **[UniReflex: Plug-and-Play Force Control for Pretrained Generative Policies via Fast-Slow Reflex](../papers/2608.17432.md)**
     2026-08-18 · 值得关注 · **65/100** · 未找到仓库
 
     UniReflex 截取冻结生成式策略（DP、π0、DreamZero）动作头的隐表示，驱动快速反射网络输出变阻抗与参考力；作者报告在 5 项真机接触任务的接触阶段成功率提升 20–60 个百分点。
 
-29. **[ALOHA Unleashed: A Simple Recipe for Robot Dexterity](../papers/2410.13126.md)**
+30. **[ALOHA Unleashed: A Simple Recipe for Robot Dexterity](../papers/2410.13126.md)**
     2024-10-17 · 值得关注 · **65/100** · 未找到仓库 · 经典工作
 
     在 ALOHA 2 上采集 2.6 万条示范并训练 Transformer 扩散策略，首次端到端完成系鞋带、挂衬衫等灵巧双臂任务；作者报告扩散损失明显优于 ACT 式 L1 回归。
-
-30. **[RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience](../papers/2608.18948.md)**
-    2026-08-19 · 观察中 · **63/100** · 未找到仓库
-
-    将人手操作视频编辑为多种机器人手的物理合理视频并解码3D手部状态，构建17.4万对、1410万帧配对数据集RoboEdit-14M；作者报告编辑质量优于8种视频编辑基线。
 
 ---
 

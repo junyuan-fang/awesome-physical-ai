@@ -26,15 +26,15 @@
 
     世界-动作模型（WAM）综述：界定其与 VLA、视频世界模型的边界，按“渲染后解码/仅潜空间/无视频生成”三类及四轴结构梳理现有工作与数据、评测和开放问题。
 
-2. **[Progress Reward Modeling for Robotic Learning: A Comprehensive Survey](../papers/2607.21655.md)**
+2. **[The Embodiment Gap in Robot Foundation Models](../papers/2608.18433.md)**
+    2026-08-19 · 观察中 · **55/100** · 实质代码
+
+    围绕“本体差距”的机器人基础模型综述：用双轴图定位跨本体共享结构与目标机器人剩余工作，并提出报告卡与本体适配曲线（EAC）补充成功率之外的报告。
+
+3. **[Progress Reward Modeling for Robotic Learning: A Comprehensive Survey](../papers/2607.21655.md)**
     2026-07-22 · 观察中 · **55/100** · 占位仓库
 
     机器人学习中进度奖励建模的综述，按接口（输入/目标/输出）、构造方法（冻结基础模型、时序监督、指令微调、程序化奖励）与数据/基准三层梳理，并讨论局限与方向。
-
-3. **[The Embodiment Gap in Robot Foundation Models](../papers/2608.18433.md)**
-    2026-08-19 · 观察中 · **43/100** · 未找到仓库
-
-    围绕“本体差距”的机器人基础模型综述：用双轴图定位跨本体共享结构与目标机器人剩余工作，并提出报告卡与本体适配曲线（EAC）补充成功率之外的报告。
 
 4. **[Weights or Skills? A Survey of Robot-Learning Techniques: from Action-Predicting Weights to Robots that Write their Own Skills](../papers/2608.01851.md)**
     2026-08-03 · 观察中 · **43/100** · 未找到仓库

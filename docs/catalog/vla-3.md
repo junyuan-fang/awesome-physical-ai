@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-31. **[VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](../papers/2611.08449.md)**
+31. **[SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)**
+    2026-11-05 · 值得关注 · **71/100** · 实质代码
+
+    SLA以三维教师对齐持续预训练VLA；作者报告在LIBERO-Plus上成功率87.4%，推理架构保持不变。
+
+32. **[VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](../papers/2611.08449.md)**
     2026-11-05 · 值得关注 · **71/100** · 实质代码
 
     VFlash并行解码结构化视觉计划；作者报告MolmoSpaces四套任务平均成功率由62.6%升至70.2%。
 
-32. **[ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)**
+33. **[ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)**
     2026-11-02 · 值得关注 · **71/100** · 实质代码
 
     ForceLDM把未来力与光流蒸馏进VLA；作者报告五项xArm真机接触任务平均成功率87.1%，较最强基线Seer提高14.9个百分点。
 
-33. **[HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation](../papers/2611.02660.md)**
+34. **[HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation](../papers/2611.02660.md)**
     2026-11-02 · 值得关注 · **71/100** · 实质代码
 
     HeLM用显式语言记忆追踪跨回合任务状态；作者报告五项回合内真机任务子任务成功率85.7%，较关键帧基线提高12.8个百分点。
 
-34. **[VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](../papers/2610.21306.md)**
+35. **[VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](../papers/2610.21306.md)**
     2026-10-15 · 值得关注 · **71/100** · 实质代码
 
     VLA-Δ 在预训练中用未来状态差文本、结构化转移槽与光流显式监督物理状态变化；作者报告 LIBERO 98.4%、RoboTwin 2.0 平均 90.06%，真机 68.0%。
 
-35. **[What Matters for Latent Actions in Robot Learning](../papers/2608.19613.md)**
+36. **[What Matters for Latent Actions in Robot Learning](../papers/2608.19613.md)**
     2026-08-20 · 值得关注 · **71/100** · 实质代码
 
     在统一框架下系统比较41种潜动作模型设计（建模范式、正则、集成方式），结论包括LAPO仍是强基线、正则强度比类型更关键，潜动作微调VLM可改善下游策略。
 
-36. **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](../papers/2608.09730.md)**
+37. **[World Tokens: Enhancing Embodied Policies with Training-Time World Modeling](../papers/2608.09730.md)**
     2026-08-10 · 值得关注 · **71/100** · 实质代码
 
     world tokens 同时条件化训练期视频去噪器并作为动作专家唯一上下文，部署时移除视频分支；作者报告 LIBERO 98.2%、SIMPLER WidowX 71.5%，延迟约 62 ms。
 
-37. **[World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation](../papers/2608.05369.md)**
+38. **[World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation](../papers/2608.05369.md)**
     2026-08-05 · 值得关注 · **71/100** · 实质代码
 
     以 VLM 中的潜在建模 token 为接口、结合腕部历史预测未来腕部 V-JEPA 潜变量并注入动作头，辅以 W2-CoT 结构化标注；作者报告 LIBERO 98.5%、LIBERO-Plus 84.0%，推理超 80 Hz。
 
-38. **[T-Rex: Tactile-Reactive Dexterous Manipulation](../papers/2606.17055.md)**
+39. **[T-Rex: Tactile-Reactive Dexterous Manipulation](../papers/2606.17055.md)**
     2026-06-15 · 值得关注 · **71/100** · 未找到仓库
 
     100 小时触觉同步双臂灵巧数据中训练+低频动作专家/高频触觉专家级联流匹配的 VLA；作者报告 12 项真机触觉任务平均成功率 65%，比最强基线高 30 个百分点。
 
-39. **[IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation](../papers/2605.14712.md)**
+40. **[IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation](../papers/2605.14712.md)**
     2026-05-14 · 值得关注 · **71/100** · 部分开放
 
     IntentVLA 用冻结 VGGT 编码近期视觉历史并融入 VLA，抑制观测混叠下的意图切换；作者报告自建 AliasBench 平均成功率 45.8%（基线 9.0%），SimplerEnv 72.9%、LIBERO 98.6%。
 
-40. **[G0.5: One Autoregressive Stream for Robot Reasoning and Action](../papers/2608.11739.md)**
+41. **[G0.5: One Autoregressive Stream for Robot Reasoning and Action](../papers/2608.11739.md)**
     2026-08-12 · 值得关注 · **68/100** · 占位仓库
 
     Galaxea G0.5 用单一自回归解码器在同一 token 流中生成推理与动作，配合跨具身 RVQ 动作分词与视觉记忆；作者报告 R1 真机微调 76.7%、BEHAVIOR 挑战 31.4%、LIBERO 98.9%。
 
-41. **[Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)**
+42. **[Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)**
     2026-05-28 · 值得关注 · **68/100** · 占位仓库
 
     Qwen-VLA 以 Qwen3.5-4B 加 DiT 动作专家统一操作、导航与轨迹预测；作者报告单一模型 LIBERO 97.9%、Simpler-WidowX 73.7%、RoboTwin 86.1/87.2%、R2R OSR 69.0%。
 
-42. **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](../papers/2608.05042.md)**
+43. **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](../papers/2608.05042.md)**
     2026-08-05 · 值得关注 · **67/100** · 未找到仓库
 
     在 BridgeVLA 的多视图热力图 3D VLA 上加入时序记忆与可重渲染的点云空间记忆，支持记忆依赖与双臂任务；作者报告 RMBench、MemoryBench 上达到最优，并在两种真机平台验证。
 
-43. **[Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)**
+44. **[Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)**
     2026-11-04 · 值得关注 · **66/100** · 实质代码
 
     三级 Astra 系统在 RoboMME 上获作者报告的 79.13% 成功率、每回合 3.63 次规划调用，但规划时暂停仿真。
 
-44. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
+45. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
     2026-08-20 · 值得关注 · **66/100** · 实质代码
 
     EXIMO 以「VLM 编排探索→蒸馏 SFT→残差离策略 RL」三阶段微调 VLA，作者报告在 ALOHA 仿真 22 个长程/推理任务上样本效率与最终成功率均优于直接 RL 基线。
-
-45. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
-    2026-07-02 · 值得关注 · **66/100** · 实质代码
-
-    面向 VLA 与世界-动作模型的可移植 C++ 推理运行时，五层架构支持多速率执行与量化；作者报告相对 Python 基线推理加速 1.05–2.70 倍、显存降低 7%–77%，成功率多数接近基线。
 
 ---
 

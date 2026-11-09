@@ -26,30 +26,30 @@
 
     把视觉运动策略表示为动作空间的条件去噪扩散过程，配合滚动时域控制与时序扩散 Transformer；作者报告在 4 个基准 15 项任务上平均提升 46.9%。
 
-2. **[Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](../papers/2608.15938.md)**
+2. **[Event2Reward: Learning Robotic Rewards from Progress Relations](../papers/2610.39212.md)**
+    2026-10-29 · 值得关注 · **77/100** · 实质代码
+
+    Event2Reward 将视频事件转为时序奖励，在LIBERO及真机在线学习中评估稀疏奖励改进。
+
+3. **[Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](../papers/2608.15938.md)**
     2026-08-16 · 值得关注 · **77/100** · 占位仓库
 
     通过受控实验指出长开环执行主要在弥补短上下文策略模仿非马尔可夫示教的缺陷，作者报告在 4 个仿真和 2 个真机任务上加长上下文后最具反应性的闭环策略表现最好。
 
-3. **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](../papers/2611.01729.md)**
+4. **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](../papers/2611.01729.md)**
     2026-11-01 · 值得关注 · **76/100** · 实质代码
 
     学习动作随物理时间的导数并积分生成轨迹，在 LIBERO、多类策略和14项真机任务中验证效率与连续性。
 
-4. **[PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)**
+5. **[PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)**
     2026-11-03 · 值得关注 · **71/100** · 实质代码
 
     PolicyIK学习到达并保持精确末端位姿；作者在4120项仿真测试报告单次93.5%严格成功，真机保持成功43/60。
 
-5. **[DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](../papers/2610.32093.md)**
+6. **[DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](../papers/2610.32093.md)**
     2026-10-23 · 值得关注 · **71/100** · 实质代码
 
     DiscoDemo 用特权 RL 生成多样成功示范，四项任务下游真机平均成功率为 78%，最强基线为 39%。
-
-6. **[Event2Reward: Learning Robotic Rewards from Progress Relations](../papers/2610.39212.md)**
-    2026-10-29 · 值得关注 · **65/100** · 未找到仓库
-
-    Event2Reward 将视频事件转为时序奖励，在LIBERO及真机在线学习中评估稀疏奖励改进。
 
 7. **[Asymmetric On-Policy Distillation Learns In-Context Exploration](../papers/2610.30105.md)**
     2026-10-21 · 值得关注 · **65/100** · 未找到仓库

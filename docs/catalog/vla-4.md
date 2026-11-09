@@ -21,55 +21,55 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
+46. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
+    2026-07-02 · 值得关注 · **66/100** · 实质代码
+
+    面向 VLA 与世界-动作模型的可移植 C++ 推理运行时，五层架构支持多速率执行与量化；作者报告相对 Python 基线推理加速 1.05–2.70 倍、显存降低 7%–77%，成功率多数接近基线。
+
+47. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
     2025-06-16 · 值得关注 · **66/100** · 未找到仓库
 
     人形全身控制的视觉-语言基准 LeVERB-Bench（150+ 任务/10 类）与分层潜动作框架 LeVERB；作者报告零样本总成功率 58.5%，约为朴素分层 VLA 的 7.8 倍。
 
-47. **[HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](../papers/2611.08039.md)**
+48. **[HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](../papers/2611.08039.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     HITCH 用主动三维感知和全身执行接口训练 VLM，基础任务迁移至 SIMPLE 达 51.1% 成功率。
 
-48. **[Asynchronous Robot Policies](../papers/2611.05155.md)**
+49. **[Asynchronous Robot Policies](../papers/2611.05155.md)**
     2026-11-03 · 值得关注 · **65/100** · 未找到仓库
 
     ARP把慢语义更新与快动作视觉回路分开；作者在LIBERO-Perturb报告成功率51.5%，同规模同步基线9.5%。
 
-49. **[AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)**
+50. **[AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)**
     2026-11-02 · 值得关注 · **65/100** · 未找到仓库
 
     AIRoA-0仅采集手持夹爪示范；作者在未见场地的十项Franka任务报告含部分完成计分的平均成功率78%，最强基线27%。
 
-50. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
+51. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
     2026-10-29 · 值得关注 · **65/100** · 未找到仓库
 
     CoRAct把运动意图和未来路标转成奖励，在动作噪声空间优化推理与执行的一致性。
 
-51. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
-    2026-10-29 · 值得关注 · **65/100** · 未核查
+52. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
+    2026-10-29 · 值得关注 · **65/100** · 占位仓库
 
     OpenFlyV2在Orin NX全机载运行视觉语言动作模型，真实四场景导航成功率48%。
 
-52. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
-    2026-10-28 · 值得关注 · **65/100** · 未核查
+53. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
+    2026-10-28 · 值得关注 · **65/100** · 实质代码
 
     QbD-VLA以短闭环成功率选择混合精度；仿真选出的配置在真实X-VLA有效，在π0.5上失败。
 
-53. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
+54. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     ThinkWorld以预测未来与实测未来的吻合强化运动令牌推理，研究人类视频技能组合迁移。
 
-54. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
+55. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     R2A以运动原语图检索修正冻结VLA，研究视觉扰动下的执行稳定性与真实迁移。
-
-55. **[HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](../papers/2610.34186.md)**
-    2026-10-25 · 值得关注 · **65/100** · 未找到仓库
-
-    HuGe结合第一人称预训练、伪本体状态和视觉适配，在G1取放任务中作者报告成功率从43.3%提高至66.7%。
 
 56. **[Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](../papers/2610.32102.md)**
     2026-10-23 · 值得关注 · **65/100** · 未找到仓库
