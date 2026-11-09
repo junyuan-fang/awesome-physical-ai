@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**84 篇** · 第 **1 / 6** 页 · 每页最多 15 篇
+**88 篇** · 第 **1 / 6** 页 · 每页最多 15 篇
 
 **1** · [2](vla-2.md) · [3](vla-3.md) · [4](vla-4.md) · [5](vla-5.md) · [6](vla-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -86,15 +86,15 @@
 
     以人类交互轨迹为「母语」的跨本体 VLA：3.5 万小时 UniHand-2.0 语料、30 种本体统一动作空间；作者报告 LIBERO 98.9%、RoboCasa 53.9%，单一检查点控制 5 种真机。
 
-14. **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)**
+14. **[From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)**
+    2026-11-04 · 值得关注 · **77/100** · 实质代码
+
+    NEO-VLA直接从像素与语言学习连续控制；作者报告LIBERO-Plus成功率89.7%，并给出跨层视觉读取消融。
+
+15. **[RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)**
     2026-10-25 · 值得关注 · **77/100** · 实质代码
 
     RynnVLA以三维潜在动作利用异构视频预训练，作者报告4B模型在LIBERO成功率98.8%，并验证六项真机任务。
-
-15. **[Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](../papers/2610.31569.md)**
-    2026-10-22 · 值得关注 · **77/100** · 实质代码
-
-    Echo 将停止与失败信号同动作共同去噪，作者在五项真机任务及 LIBERO-Recovery 中报告收益。
 
 ---
 

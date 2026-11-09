@@ -1536,3 +1536,93 @@ entries:
   reason: over cap（本轮上限 10，按核心优先+总分排序未入选）
   date: '2026-11-05'
   run: '2026-11-05'
+- arxiv_id: '2611.06817'
+  title: 'Open-HumanWAM: An Open Recipe for Scaling Human and Robot Experience for Embodied Foundation Models'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.07712'
+  title: 'AffectiveVLA: Safe and Intent-Aware VLA Control for Human-Humanoid Social Interaction'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.05376'
+  title: 'From Autonomous Agents to Cognitive Symbionts: Toward AI-Augmented Human Intelligence'
+  decision: exclude
+  reason: 超出范围：主要讨论个人认知增强助手及其治理框架，未提供直接面向机器人感知、控制或具身学习的可验证方法或评测资源。
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.08156'
+  title: 'La-JEPA: Compact Robot Policies with Latent World Modeling'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.07881'
+  title: 'TactileLab: Sim-to-Real Dexterous Robot Manipulation with Efficient Shear-Sensitive Tactile Simulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.04391'
+  title: Human-to-Robot Transfer via Bridging Representation and Action Space in VLAs
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.05979'
+  title: Learning Object-Centric Motion Priors from Human for Robotic Dexterous Manipulation
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.07850'
+  title: Learning Robotic World Models with Semantic and Visual Feedback
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.07275'
+  title: Efficient Diffusion Policy Fine Tuning with Latent Noise Representation Bridging
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.06447'
+  title: '$A^3$-VLA: Automatic Perception-Guided Attention Alignment for Robot Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.05567'
+  title: 'MESA: An Evaluation Framework for Compositional, Semantic, and Spatial Generalization in Robotics'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.06768'
+  title: 'PyRUA-REAL: Robot Exploration and Adaptive Learning through RSI in the Real World'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.08462'
+  title: 'OopsieRecover: Learning Transferable VLA Corrections from Semantic Interventions'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.08425'
+  title: Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'
+- arxiv_id: '2611.07515'
+  title: 'LMGN: A Unified Policy Learning Model for Last-Mile Grasp-Navigation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-09'
+  run: '2026-11-06'

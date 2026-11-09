@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**71 篇** · 第 **5 / 5** 页 · 每页最多 15 篇
+**72 篇** · 第 **5 / 5** 页 · 每页最多 15 篇
 
 [1](world-model.md) · [2](world-model-2.md) · [3](world-model-3.md) · [4](world-model-4.md) · **5**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,57 +21,62 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-61. **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](../papers/2608.04964.md)**
+61. **[DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](../papers/2608.13489.md)**
+    2026-08-13 · 观察中 · **54/100** · 占位仓库
+
+    DreamX-Phi 1.0 在 Wan2.2-5B 上用逐臂 SE(3) 的 PRoPE 注意力编码动作、加深度分支与 SAM3+V-JEPA 物体一致性监督，并做 DMD 少步蒸馏；作者报告在 WorldArena 2.0 快照中 Track 1 第一、Track 2 并列第二。
+
+62. **[WorldCycle: Self-Verifiable Reinforcement Learning for Long-Horizon Video World Models](../papers/2608.04964.md)**
     2026-08-05 · 观察中 · **54/100** · 未找到仓库
 
     利用可逆动作循环必然回到初始状态这一约束，为交互式视频世界模型构造免标注的空间闭合与时间一致奖励做 RL 后训练；作者报告在自建 CycleBench 上回归漂移最多降 44%。
 
-62. **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](../papers/2606.06832.md)**
+63. **[STRIPS-WM: Learning Grounded Propositional STRIPS-style World Models from Images](../papers/2606.06832.md)**
     2026-06-05 · 观察中 · **54/100** · 未找到仓库
 
     仅从“图像-高层动作-图像”转移中学出抽象任务图，再用 CP-SAT 学二值谓词与 STRIPS 算子并蒸馏到视觉分类器，实现由起止图像做经典规划；作者报告在视觉重排任务上规划成功率优于 LatPlan 等基线。
 
-63. **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](../papers/2606.05773.md)**
+64. **[PiL-World: A Chunk-Wise World Model for VLA Policy-in-the-Loop Evaluation](../papers/2606.05773.md)**
     2026-06-04 · 观察中 · **54/100** · 未找到仓库
 
     面向 VLA 闭环评测的分块世界模型 PiL-World，交替 VLA 推理与多视角未来观测生成；作者报告在三个双臂真机任务上将真机与想象评测的成功率误差从 63.2%（Ctrl-World）降到 12.0%。
 
-64. **[Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation](../papers/2606.18960.md)**
+65. **[Mem-World: Memory-Augmented Action-Conditioned World Models for Persistent Robot Manipulation](../papers/2606.18960.md)**
     2026-06-17 · 观察中 · **53/100** · 未找到仓库
 
     以腕部视角 4D surfel 记忆按未来动作检索历史帧，增强多视角动作条件世界模型；作者报告策略评估与真机相关性比 Ctrl-World 高 14.5%，合成数据使长时程任务成功率 58%→72%。
 
-65. **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](../papers/2606.05645.md)**
+66. **[Discrete-WAM: Unified Discrete Vision-Action Token Editing for World-Policy Learning](../papers/2606.05645.md)**
     2026-06-04 · 观察中 · **53/100** · 未找到仓库
 
     自动驾驶世界-策略统一模型 Discrete-WAM：视觉、决策与加速度动作共享离散 token 空间，层级决策+并行 token 编辑规划；作者报告 NAVSIM v2 EPDMS 90.4、v1 PDMS 92.2，生成 FVD 80.0。
 
-66. **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](../papers/2606.03188.md)**
+67. **[GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](../papers/2606.03188.md)**
     2026-06-02 · 观察中 · **53/100** · 未找到仓库
 
     GeoSem-WAM 在 Fast-WAM 训练中加入未来几何与语义预测辅助头、推理时丢弃；作者报告 LIBERO 98.55%、RoboTwin 2.0 92.52%，Franka 真机平均 88.9%→95.4%。
 
-67. **[ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models](../papers/2608.13438.md)**
+68. **[ContactGuard: Pre-Contact Execution Monitoring with Action-Conditioned Latent World Models](../papers/2608.13438.md)**
     2026-08-13 · 观察中 · **51/100** · 未找到仓库
 
     ContactGuard 用多视角动作条件潜在世界模型在夹爪闭合前推演策略动作块的后果，以线性探针判断是否中止；作者报告在四个真机抓取场景中优于单视角、当前状态和 FAIL-Detect 等失败检测基线。
 
-68. **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](../papers/2608.10618.md)**
+69. **[Toward the Cognitive--Physical Limits of Embodied Intelligence through a World-Model-Centric Autonomous Racing Agent](../papers/2608.10618.md)**
     2026-08-11 · 观察中 · **51/100** · 未找到仓库
 
     以世界模型为中心的自动驾驶赛车智能体，从接近极限的成功与失败数据中学习交互演化和动力学边界；作者报告真车定位感知在 256.3 km/h 下稳定，仿真对抗场景交互成功率为 88.3%。
 
-69. **[CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization](../papers/2606.04130.md)**
+70. **[CLAW: Learning Continuous Latent Action World Models via Adversarial Latent Regularization](../papers/2606.04130.md)**
     2026-06-02 · 观察中 · **51/100** · 未找到仓库
 
     CLAW 从无动作标注视频端到端联合学习连续潜动作与扩散世界模型，用梯度反转的对抗正则防止未来信息泄漏；作者报告在 VP2 六任务中四项、Crafter/Procgen 四任务中三项规划成功率最高，并用于真机 UR5 策略预训练。
 
-70. **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](../papers/2607.28443.md)**
+71. **[One Future, Every Robot: Label-Efficient Collective-State Prediction with Decentralized JEPA](../papers/2607.28443.md)**
     2026-07-30 · 观察中 · **48/100** · 未找到仓库
 
     CS-JEPA 让每台机器人仅凭本地历史与邻居消息预测同一潜空间集体未来，无一致性损失；作者报告仿真中集体状态误差较重建基线降 28.4%，拓扑/规模迁移下降 64–76%。
 
-71. **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](../papers/2607.23909.md)**
+72. **[WorldDiT: A Unified Diffusion Architecture for World and Action Modeling](../papers/2607.23909.md)**
     2026-07-27 · 观察中 · **37/100** · 未找到仓库
 
     单个 DiT 同时以流匹配生成动作块并预测未来 RGB patch（仅训练期辅助），不用大 VLM 骨干；作者报告 399M 参数在 LIBERO 四套件平均 94.9%，位于参数-成功率帕累托前沿。

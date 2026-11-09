@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**27 项** · Robot trajectories, demonstrations, scene datasets
+**28 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -33,6 +33,7 @@
 - [AIRoA YUBI Handheld Demonstrations](#resource-airoa-yubi-data)
 - [Action-Conditioned Latent Foresight Dataset](#resource-action-conditioned-foresight-data)
 - [ForceLDM Dataset](#resource-forceldm-data)
+- [NEO-VLA Action Pretrain](#resource-neo-vla-action-pretrain)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -42,7 +43,7 @@ Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories.
 规模：1M+ episodes
 标签：multi-embodiment
 <details>
-<summary>关联论文 1–10 / 12（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 13（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Reinforcing VLAs in Task-Agnostic World Models](../papers/2605.12334.md)
 - pretrain · [Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](../papers/2601.12993.md)
@@ -58,10 +59,11 @@ Cross-embodiment robot dataset spanning 22 robot types, 1M+ trajectories.
 </details>
 
 <details>
-<summary>关联论文 11–12 / 12（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–13 / 13（提出 / 训练 / 评测）</summary>
 
 - pretrain · [CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](../papers/2608.27406.md)
 - pretrain · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)
+- pretrain · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
 
 </details>
 
@@ -73,7 +75,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 规模：76k demonstrations
 标签：real-world / multi-institution
 <details>
-<summary>关联论文 1–10 / 21（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 24（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
 - pretrain · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](../papers/2503.14734.md)
@@ -89,7 +91,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 11–20 / 21（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 24（提出 / 训练 / 评测）</summary>
 
 - finetune · [RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)
 - pretrain · [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)
@@ -105,9 +107,12 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 21–21 / 21（提出 / 训练 / 评测）</summary>
+<summary>关联论文 21–24 / 24（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Asynchronous Robot Policies](../papers/2611.05155.md)
+- pretrain · [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)
+- pretrain · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
+- pretrain · [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](../papers/2611.07513.md)
 
 </details>
 
@@ -156,7 +161,7 @@ Large-scale humanoid manipulation dataset from AgiBot's real-world deployments.
 [项目](https://agibot-world.com) 
 标签：humanoid / manipulation / china
 <details>
-<summary>关联论文 1–10 / 19（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 24（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
 - pretrain · [HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](../papers/2604.07993.md)
@@ -172,7 +177,7 @@ Large-scale humanoid manipulation dataset from AgiBot's real-world deployments.
 </details>
 
 <details>
-<summary>关联论文 11–19 / 19（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 24（提出 / 训练 / 评测）</summary>
 
 - pretrain · [RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](../papers/2608.09853.md)
 - pretrain · [Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](../papers/2608.10860.md)
@@ -183,6 +188,17 @@ Large-scale humanoid manipulation dataset from AgiBot's real-world deployments.
 - eval · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](../papers/2610.26855.md)
 - pretrain · [Long-WAM: Scaling the Context of World-Action Models](../papers/2610.10528.md)
 - finetune · [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](../papers/2609.14973.md)
+- pretrain · [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)
+
+</details>
+
+<details>
+<summary>关联论文 21–24 / 24（提出 / 训练 / 评测）</summary>
+
+- pretrain · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
+- finetune · [Interactive World Simulation with Cosmos for Physical AI](../papers/2611.06627.md)
+- eval · [Interactive World Simulation with Cosmos for Physical AI](../papers/2611.06627.md)
+- pretrain · [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](../papers/2611.07513.md)
 
 </details>
 
@@ -407,6 +423,19 @@ AIRoA-0报告的16151小时双手手持夹爪示范，含任务与子任务语�
 
 - proposes · [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)
 - finetune · [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](../papers/2611.03294.md)
+
+</details>
+
+## <a id="resource-neo-vla-action-pretrain"></a>NEO-VLA Action Pretrain
+
+NEO-VLA处理后的约223万回合动作语料，提供Arrow动作行、相机帧引用及元数据；不包含相机视频，需另按上游许可获取和组装。
+
+[代码](https://github.com/EvolvingLMMs-Lab/NEO/tree/main/VLAKit) [论文](https://arxiv.org/abs/2611.06918)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- proposes · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
+- pretrain · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
 
 </details>
 

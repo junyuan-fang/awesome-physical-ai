@@ -9,11 +9,11 @@
 
 具身智能、机器人基础模型与物理 AI 的论文和资源导航。以中文评审说明贡献、证据与复现条件。
 
-**293 篇论文** · 27 个数据集 · 9 个仿真器 · 29 个基准 · 11 个工具
+**298 篇论文** · 28 个数据集 · 10 个仿真器 · 31 个基准 · 11 个工具
 
 [论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [如何看评分](#scoring)
 
-> 最近完成扫描：**2026-11-05** · [查看本次报告](digests/daily/2026-11-05.md)。
+> 最近完成扫描：**2026-11-06** · [查看本次报告](digests/daily/2026-11-06.md)。
 
 ## <a id="contents"></a>从哪里开始
 
@@ -23,11 +23,17 @@
 | 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
 | 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
 | 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-05.md) · [近期精选](#weekly-picks) |
+| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-06.md) · [近期精选](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>近期精选
 
 最近一次扫描日前 7 天新收录的重点论文，首页最多展示 5 篇。[阅读优先级 Top 20 →](docs/rankings.md)
+
+- **[From Pixels to Actions - Towards Native Vision-Language-Action Policies](docs/papers/2611.06918.md)** · 2026-11-04 · 77/100
+  NEO-VLA直接从像素与语言学习连续控制；作者报告LIBERO-Plus成功率89.7%，并给出跨层视觉读取消融。
+
+- **[Interactive World Simulation with Cosmos for Physical AI](docs/papers/2611.06627.md)** · 2026-11-04 · 77/100
+  Cosmos以因果蒸馏实现流式交互模拟；作者在单GB300、8帧分块配置报告48.1 FPS，闭环收益仍受校准设置限制。
 
 - **[OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](docs/papers/2611.01844.md)** · 2026-11-01 · 77/100
   OpenNWM 以1750万帧异源视频学习潜动作，再对齐物理运动，改善导航视觉预测和离线路径规划指标。
@@ -35,14 +41,8 @@
 - **[ODE Policy: Robot Learning via Action Dynamics, Not Actions](docs/papers/2611.01729.md)** · 2026-11-01 · 76/100
   学习动作随物理时间的导数并积分生成轨迹，在 LIBERO、多类策略和14项真机任务中验证效率与连续性。
 
-- **[RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions](docs/papers/2610.36791.md)** · 2026-10-27 · 72/100
-  RynnWorld-Latent用通用潜动作联合学习多形态视频动力学，并研究合成数据对操作策略的作用。
-
-- **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](docs/papers/2611.05163.md)** · 2026-11-03 · 71/100
-  把人类视频转换为灵巧机器人示范；作者报告两机器人七项无目标任务遥操作示范的平均成功率由约2%升至60%。
-
-- **[PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](docs/papers/2611.05372.md)** · 2026-11-03 · 71/100
-  PolicyIK学习到达并保持精确末端位姿；作者在4120项仿真测试报告单次93.5%严格成功，真机保持成功43/60。
+- **[Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](docs/papers/2611.07513.md)** · 2026-11-05 · 72/100
+  Concertina在共享扩散VLM内生成连续动作；作者报告LIBERO成功率98.15%、LIBERO-Plus为85.9%、CALVIN ABC-D链长4.142。
 
 ## 研究方向
 
@@ -50,7 +50,7 @@
 
 | 方向 | 内容 | 篇数 |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 165 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 170 |
 | <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 43 |
 | <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 24 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
@@ -66,9 +66,9 @@
 
 | 资源 | 用途 | 数量 |
 |---|---|---:|
-| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 27 |
-| <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 9 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 29 |
+| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 28 |
+| <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 10 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 31 |
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 11 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 

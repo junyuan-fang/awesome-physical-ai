@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**84 篇** · 第 **6 / 6** 页 · 每页最多 15 篇
+**88 篇** · 第 **6 / 6** 页 · 每页最多 15 篇
 
 [1](vla.md) · [2](vla-2.md) · [3](vla-3.md) · [4](vla-4.md) · [5](vla-5.md) · **6**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,47 +21,67 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-76. **[LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models](../papers/2608.17600.md)**
+76. **[ElegantVLA: Learning When to Think for Efficient Vision-Language-Action Models](../papers/2605.29438.md)**
+    2026-05-28 · 观察中 · **53/100** · 未找到仓库
+
+    ElegantVLA 用 RL 调度器按表征稳定性与运动线索为 VLA 骨干和动作头选择计算复用档位，无需重训；作者报告 SimplerEnv 上 CogACT 加速 3.77×，真机控制频率 13.8→26.3 Hz。
+
+77. **[Lost in Reconstruction: Aligning Action Representations with Language in Vision-Language-Action Models](../papers/2608.10484.md)**
+    2026-08-11 · 观察中 · **51/100** · 未找到仓库
+
+    SALT 在 VQ-VAE 动作 tokenizer 中加入“让冻结语言模型从量化动作隐变量还原指令”的对齐损失；作者报告 SimplerEnv 平均成功率为 71.9%，VQ-VAE 和 FAST 分别为 42.7% 和 31.2%。
+
+78. **[TempoVLA: Learning Speed-Controllable Vision-Language-Action Policies](../papers/2606.06491.md)**
+    2026-06-04 · 观察中 · **51/100** · 未找到仓库
+
+    通过合并/拆分动作对示教重定时（VSTA）并把速度作为条件输入，使单个 VLA 可双向调速；作者报告 LIBERO 上默认速度成功率不降反升，并可借 GPT-4o 动态调度速度。
+
+79. **[TTT-VLA: Test-Time Latent Prompt Optimization for Vision-Language-Action Models](../papers/2606.03127.md)**
+    2026-06-02 · 观察中 · **51/100** · 未找到仓库
+
+    TTT-VLA 训练时为 VLA 学习一个由状态接地代理任务约束的潜在提示，部署时只用自监督信号在环境交互数据上优化该提示；作者报告 SimplerEnv WidowX 平均成功率 51.1%→67.4%。
+
+80. **[LIBERO-VIFO: Benchmarking the Capability and Safety of Visual Cue Following in Vision-Language-Action Models](../papers/2608.17600.md)**
     2026-08-18 · 观察中 · **48/100** · 未找到仓库
 
     LIBERO-VIFO 在 40 个 LIBERO 任务上构建 8 类、1,347 个视觉提示实例，同时评测 VLA 跟随授权提示的能力与受未授权提示诱导的风险；作者报告无语言指令时 7 个模型仍有 32–60% 会执行提示所指任务。
 
-77. **[NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation](../papers/2608.16503.md)**
+81. **[NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation](../papers/2608.16503.md)**
     2026-08-17 · 观察中 · **48/100** · 未找到仓库
 
     NebulaVLA 采用 10 Hz 语义规划 + 20 Hz DiT 控制的异步双频架构，配合 GESTURE-7 动作表示与 Guide Action 平滑拼接，作者报告 LIBERO-Plus 总成功率 85.5%，真机延迟降至 42 ms。
 
-78. **[Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning](../papers/2608.13026.md)**
+82. **[Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning](../papers/2608.13026.md)**
     2026-08-13 · 观察中 · **48/100** · 未找到仓库
 
     Temporal GRPO 将任务拆成可检测阶段，只在进入同一阶段的 rollout 间比较，并把阶段优势分配到对应动作区间，缓解 VLA 强化后训练中的轨迹级信用混叠；作者报告 RoboTwin 2.0 各时域组均取得最高成功率。
 
-79. **[DREAM-Chunk: Reactive Action Chunking with Latent World Model](../papers/2606.18589.md)**
+83. **[DREAM-Chunk: Reactive Action Chunking with Latent World Model](../papers/2606.18589.md)**
     2026-06-17 · 观察中 · **48/100** · 未找到仓库
 
     测试时采样多条动作块并用轻量潜在世界模型推演，按观测潜态最接近者切换执行块，无需微调 VLA；作者报告 SO-101 上 USB 插拔 75%→95% 等真机提升。
 
-80. **[Can VLA Models Learn from Real-World Data Continually without Forgetting?](../papers/2605.26820.md)**
+84. **[Can VLA Models Learn from Real-World Data Continually without Forgetting?](../papers/2605.26820.md)**
     2026-05-26 · 观察中 · **48/100** · 未找到仓库
 
     构建 10 个真机单臂/双臂任务的 VLA 持续学习基准，作者报告朴素顺序微调严重遗忘（单臂 AS 31.4、BWT -81.0），而配置得当的经验回放 AS 达 97.2，并优于同算力的多任务联合训练。
 
-81. **[Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models](../papers/2608.10824.md)**
+85. **[Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models](../papers/2608.10824.md)**
     2026-08-11 · 观察中 · **45/100** · 未找到仓库
 
     Gated VLA-Cache 用 top-2 动作 token 的 logit 间隔作为置信度，在低置信时让 KV 缓存失效并完整重算；作者报告在 LIBERO-Goal/Long 上收回了 VLA-Cache 损失的全部精度，同时保留约 80% 的算力节省。
 
-82. **[PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)**
+86. **[PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)**
     2026-03-05 · 观察中 · **42/100** · 未找到仓库
 
     仿生「多脑」人形全身 VLA：CVAE 语义潜变量 + flow matching 动作生成 + RL 跟踪器；作者报告 Isaac Lab 9 项任务平均成功率 74.9%，复现的 LeVERB 为 65.0%。
 
-83. **[HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](../papers/2608.17584.md)**
+87. **[HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](../papers/2608.17584.md)**
     2026-08-18 · 暂不评级 · 未找到仓库
 
     HODAgent 是面向服务场景的人形机器人 System-2 智能体（交互器、规划器、执行器与分层记忆）；摘要称仿真 164 例联合成功率 84.8%/91.5%，但论文已被作者撤回，结论无法核验。
 
-84. **[Action with Visual Primitives](../papers/2605.22183.md)**
+88. **[Action with Visual Primitives](../papers/2605.22183.md)**
     2026-05-21 · 暂不评级 · 未找到仓库
 
     AVP 让 VLM 先推断下一阶段目标并输出视觉基元 token，再条件化 flow-matching 动作专家；摘要称真机抓放比 π0.5 成功率高 37.04%，但该论文已于 v4 撤稿，结果无法核验。

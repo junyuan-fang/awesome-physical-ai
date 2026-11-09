@@ -4,14 +4,14 @@
 
 [首页](../README.md) / 论文目录
 
-**293 篇** · 最近扫描 **2026-11-05** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
+**298 篇** · 最近扫描 **2026-11-06** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
 
 分类页每页最多 15 篇，按优先级 → 总分 → 首次公开日期排序。点击论文标题进入完整评审，包含作者单位、评分依据和开放状态。
 
 ## Foundation Models for Robotics
 
-- <a id="cat-vla"></a>[Vision-Language-Action (VLA)](catalog/vla.md) · **84 篇**
-- <a id="cat-world-model"></a>[World Models](catalog/world-model.md) · **71 篇**
+- <a id="cat-vla"></a>[Vision-Language-Action (VLA)](catalog/vla.md) · **88 篇**
+- <a id="cat-world-model"></a>[World Models](catalog/world-model.md) · **72 篇**
 - <a id="cat-foundation-general"></a>[Other Generalist Models](catalog/foundation-general.md) · **10 篇**
 
 ## Manipulation
@@ -50,19 +50,19 @@
 
 资源页保留项目链接、使用条件，以及使用该资源的已收录论文。评测使用不代表训练使用。
 
-- [Datasets](resources/datasets.md) · 27 项
-- [Simulators](resources/simulators.md) · 9 项
-- [Benchmarks](resources/benchmarks.md) · 29 项
+- [Datasets](resources/datasets.md) · 28 项
+- [Simulators](resources/simulators.md) · 10 项
+- [Benchmarks](resources/benchmarks.md) · 31 项
 - [Tools & Libraries](resources/tools.md) · 11 项
 - [Companies & Industry](resources/companies.md) · 19 项
 
 <details>
 <summary>按资源名直达使用关系（兼容旧索引链接）</summary>
 
-- <a id="resource-open-x-embodiment"></a>[Open X-Embodiment (RT-X)](resources/datasets.md#resource-open-x-embodiment) · 12 篇论文
-- <a id="resource-droid"></a>[DROID](resources/datasets.md#resource-droid) · 21 篇论文
+- <a id="resource-open-x-embodiment"></a>[Open X-Embodiment (RT-X)](resources/datasets.md#resource-open-x-embodiment) · 13 篇论文
+- <a id="resource-droid"></a>[DROID](resources/datasets.md#resource-droid) · 24 篇论文
 - <a id="resource-bridgedata-v2"></a>[BridgeData V2](resources/datasets.md#resource-bridgedata-v2) · 13 篇论文
-- <a id="resource-agibot-world"></a>[AgiBot World](resources/datasets.md#resource-agibot-world) · 19 篇论文
+- <a id="resource-agibot-world"></a>[AgiBot World](resources/datasets.md#resource-agibot-world) · 24 篇论文
 - <a id="resource-ego4d"></a>[Ego4D](resources/datasets.md#resource-ego4d) · 4 篇论文
 - <a id="resource-epic-kitchens-100"></a>[EPIC-KITCHENS-100](resources/datasets.md#resource-epic-kitchens-100) · 2 篇论文
 - <a id="resource-hoi4d"></a>[HOI4D](resources/datasets.md#resource-hoi4d) · 4 篇论文
@@ -75,23 +75,25 @@
 - <a id="resource-airoa-yubi-data"></a>[AIRoA YUBI Handheld Demonstrations](resources/datasets.md#resource-airoa-yubi-data) · 3 篇论文
 - <a id="resource-action-conditioned-foresight-data"></a>[Action-Conditioned Latent Foresight Dataset](resources/datasets.md#resource-action-conditioned-foresight-data) · 2 篇论文
 - <a id="resource-forceldm-data"></a>[ForceLDM Dataset](resources/datasets.md#resource-forceldm-data) · 2 篇论文
-- <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 9 篇论文
+- <a id="resource-neo-vla-action-pretrain"></a>[NEO-VLA Action Pretrain](resources/datasets.md#resource-neo-vla-action-pretrain) · 2 篇论文
+- <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 10 篇论文
 - <a id="resource-isaac-sim"></a>[Isaac Sim](resources/simulators.md#resource-isaac-sim) · 5 篇论文
 - <a id="resource-genesis"></a>[Genesis](resources/simulators.md#resource-genesis) · 1 篇论文
 - <a id="resource-habitat-3-0"></a>[Habitat 3.0](resources/simulators.md#resource-habitat-3-0) · 1 篇论文
 - <a id="resource-robocasa"></a>[RoboCasa](resources/simulators.md#resource-robocasa) · 3 篇论文
 - <a id="resource-maniskill-3"></a>[ManiSkill 3](resources/simulators.md#resource-maniskill-3) · 1 篇论文
 - <a id="resource-primesim"></a>[PrimeSim](resources/simulators.md#resource-primesim) · 1 篇论文
-- <a id="resource-calvin"></a>[CALVIN](resources/benchmarks.md#resource-calvin) · 7 篇论文
+- <a id="resource-cosmos3-interactive-sim"></a>[Cosmos 3 Interactive Simulation](resources/simulators.md#resource-cosmos3-interactive-sim) · 1 篇论文
+- <a id="resource-calvin"></a>[CALVIN](resources/benchmarks.md#resource-calvin) · 9 篇论文
 - <a id="resource-meta-world"></a>[Meta-World](resources/benchmarks.md#resource-meta-world) · 2 篇论文
-- <a id="resource-libero"></a>[LIBERO](resources/benchmarks.md#resource-libero) · 83 篇论文
+- <a id="resource-libero"></a>[LIBERO](resources/benchmarks.md#resource-libero) · 88 篇论文
 - <a id="resource-rlbench"></a>[RLBench](resources/benchmarks.md#resource-rlbench) · 4 篇论文
 - <a id="resource-aliasbench"></a>[AliasBench](resources/benchmarks.md#resource-aliasbench) · 1 篇论文
 - <a id="resource-simplerenv"></a>[SimplerEnv](resources/benchmarks.md#resource-simplerenv) · 16 篇论文
 - <a id="resource-physx-bench"></a>[PhysX-Bench](resources/benchmarks.md#resource-physx-bench) · 1 篇论文
 - <a id="resource-behavior-1k"></a>[BEHAVIOR-1K](resources/benchmarks.md#resource-behavior-1k) · 6 篇论文
 - <a id="resource-robocasa-bench"></a>[RoboCasa-Bench](resources/benchmarks.md#resource-robocasa-bench) · 18 篇论文
-- <a id="resource-robotwin-2"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin-2) · 21 篇论文
+- <a id="resource-robotwin-2"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin-2) · 25 篇论文
 - <a id="resource-robotwin"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin) · 2 篇论文
 - <a id="resource-humanoidvln"></a>[HumanoidVLN](resources/benchmarks.md#resource-humanoidvln) · 1 篇论文
 - <a id="resource-h2r-bench"></a>[H2R-Bench](resources/benchmarks.md#resource-h2r-bench) · 1 篇论文
@@ -99,6 +101,8 @@
 - <a id="resource-zero-hlm-bench"></a>[Zero-HLM-Bench](resources/benchmarks.md#resource-zero-hlm-bench) · 1 篇论文
 - <a id="resource-robodojo"></a>[RoboDojo](resources/benchmarks.md#resource-robodojo) · 2 篇论文
 - <a id="resource-dexhotbench"></a>[DexHOTBench](resources/benchmarks.md#resource-dexhotbench) · 2 篇论文
+- <a id="resource-libero-plus"></a>[LIBERO-Plus](resources/benchmarks.md#resource-libero-plus) · 3 篇论文
+- <a id="resource-molmospaces"></a>[MolmoSpaces](resources/benchmarks.md#resource-molmospaces) · 1 篇论文
 - <a id="resource-lerobot"></a>[LeRobot](resources/tools.md#resource-lerobot) · 1 篇论文
 - <a id="resource-diffusion-policy"></a>[Diffusion Policy](resources/tools.md#resource-diffusion-policy) · 1 篇论文
 - <a id="resource-openvla"></a>[OpenVLA](resources/tools.md#resource-openvla) · 4 篇论文

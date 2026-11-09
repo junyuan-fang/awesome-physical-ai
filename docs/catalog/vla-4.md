@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**84 篇** · 第 **4 / 6** 页 · 每页最多 15 篇
+**88 篇** · 第 **4 / 6** 页 · 每页最多 15 篇
 
 [1](vla.md) · [2](vla-2.md) · [3](vla-3.md) · **4** · [5](vla-5.md) · [6](vla-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
+46. **[Asynchronous Robot Policies](../papers/2611.05155.md)**
+    2026-11-03 · 值得关注 · **65/100** · 未找到仓库
+
+    ARP把慢语义更新与快动作视觉回路分开；作者在LIBERO-Perturb报告成功率51.5%，同规模同步基线9.5%。
+
+47. **[AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)**
+    2026-11-02 · 值得关注 · **65/100** · 未找到仓库
+
+    AIRoA-0仅采集手持夹爪示范；作者在未见场地的十项Franka任务报告含部分完成计分的平均成功率78%，最强基线27%。
+
+48. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
+    2026-10-29 · 值得关注 · **65/100** · 未找到仓库
+
+    CoRAct把运动意图和未来路标转成奖励，在动作噪声空间优化推理与执行的一致性。
+
+49. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
+    2026-10-29 · 值得关注 · **65/100** · 未核查
+
+    OpenFlyV2在Orin NX全机载运行视觉语言动作模型，真实四场景导航成功率48%。
+
+50. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
     2026-10-28 · 值得关注 · **65/100** · 未核查
 
     QbD-VLA以短闭环成功率选择混合精度；仿真选出的配置在真实X-VLA有效，在π0.5上失败。
 
-47. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
+51. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     ThinkWorld以预测未来与实测未来的吻合强化运动令牌推理，研究人类视频技能组合迁移。
 
-48. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
+52. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     R2A以运动原语图检索修正冻结VLA，研究视觉扰动下的执行稳定性与真实迁移。
 
-49. **[HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](../papers/2610.34186.md)**
+53. **[HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](../papers/2610.34186.md)**
     2026-10-25 · 值得关注 · **65/100** · 未找到仓库
 
     HuGe结合第一人称预训练、伪本体状态和视觉适配，在G1取放任务中作者报告成功率从43.3%提高至66.7%。
 
-50. **[Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](../papers/2610.32102.md)**
+54. **[Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](../papers/2610.32102.md)**
     2026-10-23 · 值得关注 · **65/100** · 未找到仓库
 
     联合调节流匹配 VLA 的采样深度和执行时域，在 LIBERO、RoboTwin 及 Franka 上报告免训练部署收益。
 
-51. **[When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](../papers/2610.30735.md)**
+55. **[When One Step Is Enough: An Empirical Study of Euler Integration in Flow-Matching Policies](../papers/2610.30735.md)**
     2026-10-22 · 值得关注 · **65/100** · 未找到仓库
 
     充分训练的大型流匹配 VLA 常能直接单步采样，作者在 36 个仿真单元中判定 23 个等效。
 
-52. **[EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](../papers/2609.01281.md)**
+56. **[EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](../papers/2609.01281.md)**
     2026-09-01 · 观察中 · **63/100** · 实质代码
 
     EmbodiedSkills 以三个独立世界动作模型预测冻结 VLA 候选动作的潜在后果并据分歧与效应一致性选优，作者报告 MetaWorld MT50 成功率由 76.28% 升至 78.64%、CLIPort 由 33.94% 升至 36.83%。
 
-53. **[ActionMap: Robot Policy Learning via Voxel Action Heatmap](../papers/2606.06904.md)**
+57. **[ActionMap: Robot Policy Learning via Voxel Action Heatmap](../papers/2606.06904.md)**
     2026-06-05 · 观察中 · **62/100** · 未找到仓库
 
     用预测平移/旋转体素热力图的动作头替换 VLA 原生解码器，以高斯软标签交叉熵训练；作者报告 LIBERO 上相对 OpenVLA-OFT 的 L1 头同步数提升 8.2 个点，并在低数据下更高效。
 
-54. **[GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models](../papers/2606.03240.md)**
+58. **[GeoAlign: Beyond Semantics with State-Guided Spatial Alignment in VLA Models](../papers/2606.03240.md)**
     2026-06-02 · 观察中 · **62/100** · 未找到仓库
 
     GeoAlign 以本体状态生成查询，从 RGB-D 后训练的几何编码器提取 8 个几何 token 条件化 GR00T 动作头；作者报告 LIBERO 99.0%、Fractal 85.3%、ALOHA 真机 78.8%。
 
-55. **[Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation](../papers/2606.02486.md)**
+59. **[Intercepting the Future: Latent-Space Predictive World Model for Dynamic VLA Manipulation](../papers/2606.02486.md)**
     2026-06-01 · 观察中 · **62/100** · 未找到仓库
 
     AHEAD 给冻结 OpenVLA 外挂 4.9M 参数潜空间世界模型以预测未来特征；作者报告 20 个动态仿真场景成功率 79–97%（最强基线 31–58%），真机接抛射物 19/30，基线全为 0。
 
-56. **[Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring](../papers/2605.30834.md)**
+60. **[Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring](../papers/2605.30834.md)**
     2026-05-29 · 观察中 · **62/100** · 占位仓库
 
     Hide-and-Seek 仅用轨迹级成败标签，以轨迹间/内对比损失训练 VLA 运行时失败检测器；作者报告在 LIBERO-10、VLABench 与真机上对 OpenVLA、π0、π0.5 均优于 SAFE 等基线。
-
-57. **[From VLM Planners to Robotic Agents: Self-Evolving Harnesses for History-Dependent Manipulation](../papers/2610.29560.md)**
-    2026-10-21 · 观察中 · **60/100** · 实质代码
-
-    用可编辑 harness 把高层 VLM 组织成自进化机器人 agent（SERA），配固定 VLA 执行器；RoboMME 上作者报告 51.38% 成功率（无自进化 44.38%）。
-
-58. **[Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence](../papers/2609.35432.md)**
-    2026-09-28 · 观察中 · **60/100** · 占位仓库
-
-    提出 Physical Coding（Code as World + Code as Policy）与 HexaAnything 智能体；在 RoboCasa365 上把 XR-1 的总体成功率从 56.6% 提到 61.1%。
-
-59. **[Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models](../papers/2606.19297.md)**
-    2026-06-17 · 观察中 · **60/100** · 实质代码
-
-    提出 Act2Answer 协议，把 VLM 知识基准改造成“放方块选答案”的桌面操作回合；作者评测 7 个 VLA 后报告其在颜色、形状等简单概念上表现好，而在更丰富语义类别上多接近随机。
-
-60. **[GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models](../papers/2605.22812.md)**
-    2026-05-21 · 观察中 · **60/100** · 实质代码
-
-    GesVLA 把指点手势作为与语言并行的指令模态，双 VLM 结构加半合成手势数据；作者报告 ARX5 真机三项挑选任务平均成功率 83.3%，纯文本 VLA 为 31.7%，手势意图识别准确率 94.3%。
 
 ---
 

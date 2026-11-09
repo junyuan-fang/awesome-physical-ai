@@ -4,9 +4,9 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 293 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 298 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
-## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 84
+## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 88
 
 - [OpenVLA: An Open-Source Vision-Language-Action Model](papers/2406.09246.md) · 2024-06-13 · 100/100
 - [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](papers/2503.14734.md) · 2025-03-18 · 95/100
@@ -21,6 +21,7 @@
 - [TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](papers/2607.27205.md) · 2026-07-29 · 80/100
 - [Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](papers/2607.15330.md) · 2026-07-16 · 80/100
 - [Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](papers/2601.12993.md) · 2026-01-19 · 80/100
+- [From Pixels to Actions - Towards Native Vision-Language-Action Policies](papers/2611.06918.md) · 2026-11-04 · 77/100
 - [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](papers/2610.34356.md) · 2026-10-25 · 77/100
 - [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](papers/2610.31569.md) · 2026-10-22 · 77/100
 - [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](papers/2610.29866.md) · 2026-10-21 · 77/100
@@ -33,8 +34,11 @@
 - [LARA: Latent Action Representation Alignment for Vision-Language-Action Models](papers/2606.07100.md) · 2026-06-05 · 74/100
 - [AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding](papers/2606.06155.md) · 2026-06-04 · 74/100
 - [HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](papers/2604.07993.md) · 2026-04-09 · 74/100
+- [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](papers/2611.07513.md) · 2026-11-05 · 72/100
 - [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](papers/2610.28589.md) · 2026-10-20 · 72/100
 - [Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](papers/2608.16590.md) · 2026-08-17 · 72/100
+- [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](papers/2611.08373.md) · 2026-11-05 · 71/100
+- [VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](papers/2611.08449.md) · 2026-11-05 · 71/100
 - [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](papers/2611.03294.md) · 2026-11-02 · 71/100
 - [HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation](papers/2611.02660.md) · 2026-11-02 · 71/100
 - [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](papers/2610.21306.md) · 2026-10-15 · 71/100
@@ -93,7 +97,7 @@
 - [HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](papers/2608.17584.md) · 2026-08-18
 - [Action with Visual Primitives](papers/2605.22183.md) · 2026-05-21
 
-## <a id="cat-world-model"></a>World Models · 71
+## <a id="cat-world-model"></a>World Models · 72
 
 - [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md) · 2026-10-19 · 92/100
 - [Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md) · 2025-01-07 · 89/100
@@ -108,6 +112,7 @@
 - [RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](papers/2607.06559.md) · 2026-07-07 · 80/100
 - [$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](papers/2606.13672.md) · 2026-06-11 · 80/100
 - [$\mu_0$: A Scalable 3D Interaction-Trace World Model](papers/2606.13769.md) · 2026-06-11 · 80/100
+- [Interactive World Simulation with Cosmos for Physical AI](papers/2611.06627.md) · 2026-11-04 · 77/100
 - [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](papers/2611.01844.md) · 2026-11-01 · 77/100
 - [Self-Distilling Future Video Representations for World Action Models](papers/2610.30320.md) · 2026-10-21 · 77/100
 - [Keep the Future, Drop the Rollout: RIFT for World Action Models](papers/2608.11521.md) · 2026-08-12 · 77/100

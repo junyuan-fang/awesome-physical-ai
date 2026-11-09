@@ -274,3 +274,13 @@ datasets:
   subcategory: manipulation-demos
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: neo-vla-action-pretrain
+  name: NEO-VLA Action Pretrain
+  subcategory: manipulation-demos
+  desc: NEO-VLA处理后的约223万回合动作语料，提供Arrow动作行、相机帧引用及元数据；不包含相机视频，需另按上游许可获取和组装。
+  links:
+    data: https://huggingface.co/datasets/weepiess2383/NEO-VLA-Action-Pretrain
+    code: https://github.com/EvolvingLMMs-Lab/NEO/tree/main/VLAKit
+    paper: https://arxiv.org/abs/2611.06918
+  added: '2026-11-09'
+  last_check: '2026-11-09'

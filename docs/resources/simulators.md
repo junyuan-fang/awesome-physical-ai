@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Simulators
 
-**9 项** · Isaac Sim, MuJoCo, Genesis, and friends
+**10 项** · Isaac Sim, MuJoCo, Genesis, and friends
 
 - [Isaac Lab](#resource-isaac-lab)
 - [Isaac Sim](#resource-isaac-sim)
@@ -15,6 +15,7 @@
 - [ManiSkill 3](#resource-maniskill-3)
 - [MotrixSim (Motphys / 谋先飞)](#resource-motrixsim)
 - [PrimeSim](#resource-primesim)
+- [Cosmos 3 Interactive Simulation](#resource-cosmos3-interactive-sim)
 
 ## <a id="resource-isaac-lab"></a>Isaac Lab
 
@@ -23,7 +24,7 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 [项目](https://isaac-sim.github.io/IsaacLab) [代码](https://github.com/isaac-sim/IsaacLab) 
 标签：rl / gpu-accelerated / nvidia
 <details>
-<summary>关联论文 1–9 / 9（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 10（提出 / 训练 / 评测）</summary>
 
 - eval · [PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)
 - pretrain · [Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)
@@ -34,6 +35,7 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 - eval · [ScheduleGen: Demonstration Generation via Skill Scheduling for Multi-Arm Imitation Learning](../papers/2610.39429.md)
 - eval · [PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)
 - eval · [BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation](../papers/2611.03059.md)
+- eval · [Interactive World Simulation with Cosmos for Physical AI](../papers/2611.06627.md)
 
 </details>
 
@@ -129,6 +131,18 @@ Homegrown Chinese real-time physics engine for multibody dynamics & robotics —
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - proposes · [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](../papers/2611.04870.md)
+
+</details>
+
+## <a id="resource-cosmos3-interactive-sim"></a>Cosmos 3 Interactive Simulation
+
+以因果蒸馏和有状态流式推理构造动作/空间条件交互视觉模拟；可结合外部物理状态生成观察，不能等同完整物理引擎。
+
+[代码](https://github.com/nvidia/cosmos-framework) [论文](https://arxiv.org/abs/2611.06627)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [Interactive World Simulation with Cosmos for Physical AI](../papers/2611.06627.md)
 
 </details>
 

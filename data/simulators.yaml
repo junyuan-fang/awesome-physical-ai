@@ -92,3 +92,13 @@ simulators:
   subcategory: world-model
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: cosmos3-interactive-sim
+  name: Cosmos 3 Interactive Simulation
+  subcategory: world-model
+  desc: 以因果蒸馏和有状态流式推理构造动作/空间条件交互视觉模拟；可结合外部物理状态生成观察，不能等同完整物理引擎。
+  links:
+    code: https://github.com/nvidia/cosmos-framework
+    paper: https://arxiv.org/abs/2611.06627
+    weights: https://huggingface.co/nvidia/Cosmos3-Nano-Sim-Bimanual
+  added: '2026-11-09'
+  last_check: '2026-11-09'

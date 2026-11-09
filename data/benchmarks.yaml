@@ -287,3 +287,20 @@ benchmarks:
   subcategory: manipulation
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: libero-plus
+  name: LIBERO-Plus
+  subcategory: vla-generalization
+  desc: 基于LIBERO构造的七类扰动泛化评测，共10030回合；不同论文的原始及指令修正协议需区分。
+  links:
+    code: https://github.com/sylvestf/LIBERO-plus
+  added: '2026-11-09'
+  last_check: '2026-11-09'
+- id: molmospaces
+  name: MolmoSpaces
+  subcategory: manipulation
+  desc: 面向机器人学习的开放场景、资产和任务生态；VFlash用其中四套闭环操作任务比较视觉计划条件，不能视为覆盖整个生态。
+  links:
+    code: https://github.com/allenai/molmospaces
+    project: https://allenai.github.io/molmospaces/
+  added: '2026-11-09'
+  last_check: '2026-11-09'
