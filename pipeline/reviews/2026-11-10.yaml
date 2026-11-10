@@ -1,0 +1,18 @@
+run:
+  scan_date: '2026-11-10'
+  kind: daily
+  window_start: '2026-11-07'
+  window_end: '2026-11-10'
+  last_covered_end: '2026-11-09'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 0
+    already_tracked_or_triaged: 0
+    out_of_scope: 0
+    below_pool_cut: 0
+    pool: 0
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items: []
