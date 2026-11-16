@@ -36,15 +36,15 @@
 
     RynnValue 以“到目标的时间距离”为监督，在 7000+ 小时异构数据上训练价值基础模型，作者报告 RBM-EVAL-OOD 上 Kendall τ 为 0.704，并在真机 RL、数据筛选和推理引导中带来提升。
 
-4. **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](../papers/2606.20521.md)**
+4. **[Democratizing Robot-Use Agents: A Unified Harness with Open Models](../papers/2611.01560.md)**
+    2026-11-01 · 值得关注 · **77/100** · 实质代码
+
+    统一感知、工具与执行协议，使开放模型在 RoboDojo 和19项真机任务中获得有竞争力的操作表现。
+
+5. **[HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](../papers/2606.20521.md)**
     2026-06-18 · 值得关注 · **75/100** · 实质代码
 
     在 5000 小时等规模下比较第一视角人类视频与遥操作机器人数据做 WAM 预训练；作者报告人类视频在未见任务上动作验证损失约低 20%，且随规模对数线性下降。
-
-5. **[Democratizing Robot-Use Agents: A Unified Harness with Open Models](../papers/2611.01560.md)**
-    2026-11-01 · 值得关注 · **71/100** · 部分开放
-
-    统一感知、工具与执行协议，使开放模型在 RoboDojo 和19项真机任务中获得有竞争力的操作表现。
 
 6. **[Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](../papers/2611.01112.md)**
     2026-10-31 · 值得关注 · **71/100** · 实质代码

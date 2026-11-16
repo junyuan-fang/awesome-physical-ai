@@ -21,70 +21,70 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-31. **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](../papers/2608.13049.md)**
+31. **[Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](../papers/2611.08111.md)**
+    2026-11-05 · 值得关注 · **71/100** · 实质代码
+
+    NegWAM 用近专家负轨迹后训练驾驶世界动作模型，NAVSIM navhard 的 EPDMS 达 40.4。
+
+32. **[Hydra-0: Action Flow for Generalist World Modeling and Control](../papers/2608.18077.md)**
+    2026-08-18 · 值得关注 · **71/100** · 未找到仓库
+
+    以“动作流”（像素平面轨迹）统一表示跨本体动作的视频世界模型，作者报告机器人/物体运动误差较动作条件基线降90.4%/60.2%，RoboLab开环评测成功率相关r=0.96。
+
+33. **[H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](../papers/2608.13049.md)**
     2026-08-13 · 值得关注 · **69/100** · 实质代码
 
     H2R-Bench 用 120 条 EgoDex 人类视频构造 240 个人到机器人（夹爪/灵巧手）视频迁移案例，从目标、动作、接触、具身、画质五个维度评测 11 个视频生成模型；作者报告 Seedance 2.0 居首，多数模型在具身与接触上失败。
 
-32. **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](../papers/2607.19876.md)**
+34. **[KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](../papers/2607.19876.md)**
     2026-07-22 · 值得关注 · **69/100** · 实质代码
 
     不依赖逆动力学模型，用分割+深度+FoundationPose 从生成视频直接提取末端 6D 位姿并在 ManiSkill3 中闭环执行，评测具身视频世界模型；含 20 任务、4 个评测套件与 SPARC/可操作度指标。
 
-33. **[iMaC: Translating Actions into Motion and Contact Images for Embodied World Models](../papers/2606.09813.md)**
+35. **[iMaC: Translating Actions into Motion and Contact Images for Embodied World Models](../papers/2606.09813.md)**
     2026-06-08 · 值得关注 · **69/100** · 实质代码
 
     把未来关节动作经 URDF/FK 渲染为运动图像、结合预测深度构建机器人-场景接触图像，作为视频世界模型的稠密控制；作者报告八项真机任务中六项的世界模型评分与真实策略表现强相关。
 
-34. **[Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models](../papers/2605.31158.md)**
+36. **[Light Interaction: Training-Free Inference Acceleration for Interactive Video World Models](../papers/2605.31158.md)**
     2026-05-29 · 值得关注 · **69/100** · 实质代码
 
     Light Interaction 按相机位姿相似度裁剪空间记忆、自适应时间窗、复用去噪步输出，并以 Triton 融合的 3D 块稀疏注意力加速交互式视频世界模型；作者报告 HY-WorldPlay 免训练加速 2.59×。
 
-35. **[WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression](../papers/2608.26239.md)**
+37. **[WALL-SS: Scaling Long-horizon World Models via Next-Scale Autoregression](../papers/2608.26239.md)**
     2026-08-26 · 值得关注 · **68/100** · 占位仓库
 
     WALL-SS 以动作条件的逐尺度自回归生成机器人多视角未来，配合尺度压缩长程记忆与在线对齐，作者报告可稳定生成分钟级流式推演，并在 600 对真机-生成闭环回放中与真实结果较一致。
 
-36. **[ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models](../papers/2608.14022.md)**
+38. **[ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models](../papers/2608.14022.md)**
     2026-08-14 · 值得关注 · **66/100** · 实质代码
 
     四阶段渐进因果训练把双向动作条件视频生成器蒸馏为1/2/4步交互世界模型；作者报告在Minecraft配对轨迹上多项画质与控制指标领先，1步版约72 FPS。
 
-37. **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](../papers/2607.19191.md)**
+39. **[ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](../papers/2607.19191.md)**
     2026-07-21 · 值得关注 · **66/100** · 实质代码
 
     动作条件视频世界模型，经因果蒸馏与 LongForcing 抑制长程漂移，作者报告单张 RTX 5090 上 720P 最高 16 FPS、动作到首帧延迟 1.2 秒，并在 WorldRoamBench 上可控性有竞争力。
 
-38. **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](../papers/2607.18367.md)**
+40. **[AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](../papers/2607.18367.md)**
     2026-07-20 · 值得关注 · **66/100** · 实质代码
 
     基于 LTX-2.3 视频 DiT 的交互式长时视频世界模型，结合时空记忆、防漂移训练与 4 步蒸馏；作者报告在 iWorld-Bench 多数指标上优于 Matrix-Game 2.0、HY-World 1.5 等开源模型。
 
-39. **[DreamX-World 1.0: A General-Purpose Interactive World Model](../papers/2606.16993.md)**
+41. **[DreamX-World 1.0: A General-Purpose Interactive World Model](../papers/2606.16993.md)**
     2026-06-15 · 值得关注 · **66/100** · 实质代码
 
     基于 Wan2.2 的通用交互式视频世界模型，含 E-PRoPE 相机控制、场景记忆与可组合事件，作者报告 8 卡 RTX 5090 达 16 FPS，自建评测总分 84.76。
 
-40. **[AFTER: A World Model with Adaptive Fast--Slow Timescales for Error-Driven Retention](../papers/2611.15215.md)**
+42. **[AFTER: A World Model with Adaptive Fast--Slow Timescales for Error-Driven Retention](../papers/2611.15215.md)**
     2026-11-11 · 值得关注 · **65/100** · 未找到仓库
 
     AFTER-WM以误差驱动快慢记忆调整冻结专家，在五模拟机器人与真实无人机数据比较动力学变化。
 
-41. **[BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model](../papers/2611.14815.md)**
+43. **[BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model](../papers/2611.14815.md)**
     2026-11-10 · 值得关注 · **65/100** · 未找到仓库
 
     BirdDreams联合预测透视与BEV视频，在PhysicalAI-AV和nuScenes上改善自车轨迹控制。
-
-42. **[Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](../papers/2611.08111.md)**
-    2026-11-05 · 值得关注 · **65/100** · 部分开放
-
-    NegWAM 用近专家负轨迹后训练驾驶世界动作模型，NAVSIM navhard 的 EPDMS 达 40.4。
-
-43. **[PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](../papers/2611.04870.md)**
-    2026-11-03 · 值得关注 · **65/100** · 占位仓库
-
-    PrimeSim用跨本体示范训练多视角动作条件世界模型；作者报告单A100约10.1 FPS，并在LIBERO验证策略评估及短预算优化。
 
 44. **[Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight](../papers/2611.04839.md)**
     2026-11-03 · 值得关注 · **65/100** · 未找到仓库

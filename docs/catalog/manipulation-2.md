@@ -36,65 +36,65 @@
 
     HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
 
-19. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
+19. **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](../papers/2608.21031.md)**
+    2026-08-21 · 值得关注 · **69/100** · 实质代码
+
+    PhysCaP 为代码即策略智能体加入由关节力矩与夹爪形变估计质量、刚度的模块及规划/排序双智能体，作者报告在三个真机任务和 LIBERO 中以更少交互与更短时间达到相当或更高成功率。
+
+20. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
     2026-11-01 · 值得关注 · **68/100** · 未找到仓库
 
     以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
 
-20. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+21. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
     2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
     将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
 
-21. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
+22. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
     2026-10-20 · 值得关注 · **66/100** · 实质代码
 
     基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
 
-22. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
+23. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
     2026-08-19 · 值得关注 · **66/100** · 实质代码
 
     化学实验室灵巧操作的分层真机+仿真基准，含原子技能、组合技能与长时程流程三级；作者报告π0.5原子技能最佳，但三种策略均无法完成完整实验流程。
 
-23. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
+24. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
     2026-08-11 · 值得关注 · **66/100** · 实质代码
 
     用遥操作采集的真机多模态数据训练 DDPM，从单视角点云生成双臂灵巧手的抓取关节构型，再结合运动规划和力引导微调执行；作者报告在未见过的大物体上总成功率为 61.9%。
 
-24. **[DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)**
+25. **[DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)**
     2026-11-10 · 值得关注 · **65/100** · 实质代码
 
     DexSeed把19段人手交互扩展为25270条机器人示范；真机八种抓法各10次测试成功率为20%至80%。
 
-25. **[From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation](../papers/2611.14274.md)**
+26. **[From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation](../papers/2611.14274.md)**
     2026-11-10 · 值得关注 · **65/100** · 未找到仓库
 
     GPF将抓点选择与动作生成分离，470组配对模拟显示交互历史对执行有益，参数预测更准却未必有用。
 
-26. **[PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)**
+27. **[PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)**
     2026-11-09 · 值得关注 · **65/100** · 未找到仓库
 
     PAIR用本体状态对齐图像与相机射线，在仿真和真实相机变化测试中改善未见视角操作。
 
-27. **[DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](../papers/2611.11166.md)**
+28. **[DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](../papers/2611.11166.md)**
     2026-11-08 · 值得关注 · **65/100** · 未找到仓库
 
     DexForesight训练时对齐空间世界模型与策略潜变量；作者报告DexJoCo成功率由49.4%升至60.5%。
 
-28. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
+29. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     MoMaSplat 重渲染含接触后物体运动的完整演示，作者报告五项真机任务未见底座位姿平均成功率 37%，最强基线 17%。
 
-29. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
+30. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     S2C 结合 VLM 定位、力反馈残差 RL 与物体中心增强，作者报告六项真机接触任务在位置变化下平均成功率 94.17%。
-
-30. **[DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation](../papers/2611.05119.md)**
-    2026-11-03 · 值得关注 · **65/100** · 占位仓库
-
-    DexHOT学习手物联合构型迁移；作者报告120对象基准中未见对象成功率69.4%，200次真实迁移成功率61.5%。
 
 ---
 

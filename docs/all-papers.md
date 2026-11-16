@@ -42,7 +42,6 @@
 - [VLA-MOPD: On-Policy Distillation for Multi-Task VLA Policy Consolidation](papers/2611.12286.md) · 2026-11-09 · 71/100
 - [AutoVLA-D: Learn a Trajectory-Geometric Condition from Reasoning for Autonomous Driving VLA](papers/2611.12382.md) · 2026-11-09 · 71/100
 - [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](papers/2611.08373.md) · 2026-11-05 · 71/100
-- [VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](papers/2611.08449.md) · 2026-11-05 · 71/100
 - [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](papers/2611.03294.md) · 2026-11-02 · 71/100
 - [HeLM: Hierarchical Explicit Language Memory for Non-Markovian Manipulation](papers/2611.02660.md) · 2026-11-02 · 71/100
 - [VLA-$Δ$: Learning Physical State Transition for Vision-Language-Action Models](papers/2610.21306.md) · 2026-10-15 · 71/100
@@ -79,6 +78,7 @@
 - [Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence](papers/2609.35432.md) · 2026-09-28 · 60/100
 - [Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models](papers/2606.19297.md) · 2026-06-17 · 60/100
 - [GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models](papers/2605.22812.md) · 2026-05-21 · 60/100
+- [VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](papers/2611.08449.md) · 2026-11-05 · 59/100
 - [SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation](papers/2608.16172.md) · 2026-08-17 · 59/100
 - [DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](papers/2608.06374.md) · 2026-08-06 · 59/100
 - [3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](papers/2606.04436.md) · 2026-06-03 · 59/100
@@ -122,6 +122,7 @@
 - [OnlyAct: Extracting Action Representations from Foundation Models for World Models](papers/2611.14420.md) · 2026-11-10 · 77/100
 - [Interactive World Simulation with Cosmos for Physical AI](papers/2611.06627.md) · 2026-11-04 · 77/100
 - [Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](papers/2611.07229.md) · 2026-11-04 · 77/100
+- [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](papers/2611.04870.md) · 2026-11-03 · 77/100
 - [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](papers/2611.01844.md) · 2026-11-01 · 77/100
 - [GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](papers/2610.37091.md) · 2026-10-27 · 77/100
 - [Self-Distilling Future Video Representations for World Action Models](papers/2610.30320.md) · 2026-10-21 · 77/100
@@ -135,6 +136,7 @@
 - [Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](papers/2606.16533.md) · 2026-06-15 · 72/100
 - [stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](papers/2605.21800.md) · 2026-05-20 · 72/100
 - [SWAM: Scaling World Action Models with Cross-Modal Alignment](papers/2611.12870.md) · 2026-11-09 · 71/100
+- [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](papers/2611.08111.md) · 2026-11-05 · 71/100
 - [Hydra-0: Action Flow for Generalist World Modeling and Control](papers/2608.18077.md) · 2026-08-18 · 71/100
 - [H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](papers/2608.13049.md) · 2026-08-13 · 69/100
 - [KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](papers/2607.19876.md) · 2026-07-22 · 69/100
@@ -147,8 +149,6 @@
 - [DreamX-World 1.0: A General-Purpose Interactive World Model](papers/2606.16993.md) · 2026-06-15 · 66/100
 - [AFTER: A World Model with Adaptive Fast--Slow Timescales for Error-Driven Retention](papers/2611.15215.md) · 2026-11-11 · 65/100
 - [BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model](papers/2611.14815.md) · 2026-11-10 · 65/100
-- [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](papers/2611.08111.md) · 2026-11-05 · 65/100
-- [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](papers/2611.04870.md) · 2026-11-03 · 65/100
 - [Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight](papers/2611.04839.md) · 2026-11-03 · 65/100
 - [DECOWAM: Decoupled Whole-Body World-Action Model for Legged Mobile Manipulation](papers/2608.20114.md) · 2026-08-20 · 65/100
 - [MemoryWAM: Efficient World Action Modeling with Persistent Memory](papers/2606.20562.md) · 2026-06-18 · 65/100
@@ -191,8 +191,8 @@
 - [GroundingPI: A Grounding Foundation Model towards Physical Intelligence with Visual Primitives](papers/2609.39601.md) · 2026-09-30 · 80/100
 - [Grounded Action Model: 3D Grounding as a Foundation for Robotics](papers/2609.23863.md) · 2026-09-20 · 80/100
 - [RynnValue: Scaling Robotic Value Foundation Models with Temporal Distance](papers/2608.09853.md) · 2026-08-10 · 80/100
+- [Democratizing Robot-Use Agents: A Unified Harness with Open Models](papers/2611.01560.md) · 2026-11-01 · 77/100
 - [HumanScale: Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining](papers/2606.20521.md) · 2026-06-18 · 75/100
-- [Democratizing Robot-Use Agents: A Unified Harness with Open Models](papers/2611.01560.md) · 2026-11-01 · 71/100
 - [Auriga Technical Report: A Task-Agnostic Agent Harness for Zero-Shot Embodied Manipulation](papers/2611.01112.md) · 2026-10-31 · 71/100
 - [Orca: The World is in Your Mind](papers/2606.30534.md) · 2026-06-29 · 69/100
 - [EgoXperience: Learning World-Grounded Egocentric Representations from Human Experience](papers/2610.26625.md) · 2026-10-19 · 68/100
@@ -219,6 +219,7 @@
 - [MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](papers/2609.38078.md) · 2026-09-29 · 71/100
 - [TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](papers/2609.05266.md) · 2026-09-04 · 71/100
 - [Robots Acquire Manipulation Skills in Seconds from a Single Human Video](papers/2607.20033.md) · 2026-07-22 · 71/100
+- [PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](papers/2608.21031.md) · 2026-08-21 · 69/100
 - [GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](papers/2611.02171.md) · 2026-11-01 · 68/100
 - [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](papers/2608.02580.md) · 2026-08-03 · 68/100
 - [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](papers/2610.27861.md) · 2026-10-20 · 66/100
@@ -246,7 +247,6 @@
 - [CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning](papers/2608.19776.md) · 2026-08-20 · 60/100
 - [PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing](papers/2608.17962.md) · 2026-08-18 · 60/100
 - [Time-Indexed Skill Success Models for Latency-Aware Skill Selection and Timing in Dynamic Manipulation](papers/2611.07964.md) · 2026-11-05 · 59/100
-- [PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](papers/2608.21031.md) · 2026-08-21 · 57/100
 - [DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use](papers/2606.05699.md) · 2026-06-04 · 57/100
 - [Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum](papers/2605.21133.md) · 2026-05-20 · 57/100
 - [H2R-Grounder: A Paired-Data-Free Paradigm for Translating Human Interaction Videos into Physically Grounded Robot Videos](papers/2512.09406.md) · 2025-12-10 · 57/100

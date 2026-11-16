@@ -21,10 +21,10 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](../papers/2608.21031.md)**
-    2026-08-21 · 观察中 · **57/100** · 未找到仓库
+46. **[Time-Indexed Skill Success Models for Latency-Aware Skill Selection and Timing in Dynamic Manipulation](../papers/2611.07964.md)**
+    2026-11-05 · 观察中 · **59/100** · 未找到仓库
 
-    PhysCaP 为代码即策略智能体加入由关节力矩与夹爪形变估计质量、刚度的模块及规划/排序双智能体，作者报告在三个真机任务和 LIBERO 中以更少交互与更短时间达到相当或更高成功率。
+    时间索引技能成功模型在动态抓取中联合选择技能与启动时机，减少延迟造成的过时决策。
 
 47. **[DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use](../papers/2606.05699.md)**
     2026-06-04 · 观察中 · **57/100** · 未找到仓库
