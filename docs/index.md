@@ -4,7 +4,7 @@
 
 [首页](../README.md) / 论文目录
 
-**313 篇** · 最近扫描 **2026-11-10** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
+**318 篇** · 最近扫描 **2026-11-11** · [Top 20](rankings.md) · [一页式标题索引](all-papers.md)
 
 分类页每页最多 15 篇，按优先级 → 总分 → 首次公开日期排序。点击论文标题进入完整评审，包含作者单位、评分依据和开放状态。
 
@@ -16,11 +16,11 @@
 
 ## Manipulation
 
-- <a id="cat-manipulation"></a>[Manipulation](catalog/manipulation.md) · **47 篇**
+- <a id="cat-manipulation"></a>[Manipulation](catalog/manipulation.md) · **51 篇**
 
 ## Locomotion
 
-- <a id="cat-locomotion"></a>[Locomotion](catalog/locomotion.md) · **28 篇**
+- <a id="cat-locomotion"></a>[Locomotion](catalog/locomotion.md) · **29 篇**
 
 ## Teleoperation
 
@@ -50,9 +50,9 @@
 
 资源页保留项目链接、使用条件，以及使用该资源的已收录论文。评测使用不代表训练使用。
 
-- [Datasets](resources/datasets.md) · 28 项
+- [Datasets](resources/datasets.md) · 31 项
 - [Simulators](resources/simulators.md) · 10 项
-- [Benchmarks](resources/benchmarks.md) · 34 项
+- [Benchmarks](resources/benchmarks.md) · 36 项
 - [Tools & Libraries](resources/tools.md) · 11 项
 - [Companies & Industry](resources/companies.md) · 19 项
 
@@ -76,7 +76,10 @@
 - <a id="resource-action-conditioned-foresight-data"></a>[Action-Conditioned Latent Foresight Dataset](resources/datasets.md#resource-action-conditioned-foresight-data) · 2 篇论文
 - <a id="resource-forceldm-data"></a>[ForceLDM Dataset](resources/datasets.md#resource-forceldm-data) · 2 篇论文
 - <a id="resource-neo-vla-action-pretrain"></a>[NEO-VLA Action Pretrain](resources/datasets.md#resource-neo-vla-action-pretrain) · 2 篇论文
-- <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 12 篇论文
+- <a id="resource-dexseed-demonstrations"></a>[DexSeed demonstrations](resources/datasets.md#resource-dexseed-demonstrations) · 2 篇论文
+- <a id="resource-hiw-500"></a>[HIW-500](resources/datasets.md#resource-hiw-500) · 1 篇论文
+- <a id="resource-humanoid-everyday"></a>[Humanoid Everyday](resources/datasets.md#resource-humanoid-everyday) · 1 篇论文
+- <a id="resource-isaac-lab"></a>[Isaac Lab](resources/simulators.md#resource-isaac-lab) · 13 篇论文
 - <a id="resource-isaac-sim"></a>[Isaac Sim](resources/simulators.md#resource-isaac-sim) · 6 篇论文
 - <a id="resource-genesis"></a>[Genesis](resources/simulators.md#resource-genesis) · 1 篇论文
 - <a id="resource-habitat-3-0"></a>[Habitat 3.0](resources/simulators.md#resource-habitat-3-0) · 1 篇论文
@@ -93,7 +96,7 @@
 - <a id="resource-physx-bench"></a>[PhysX-Bench](resources/benchmarks.md#resource-physx-bench) · 1 篇论文
 - <a id="resource-behavior-1k"></a>[BEHAVIOR-1K](resources/benchmarks.md#resource-behavior-1k) · 6 篇论文
 - <a id="resource-robocasa-bench"></a>[RoboCasa-Bench](resources/benchmarks.md#resource-robocasa-bench) · 18 篇论文
-- <a id="resource-robotwin-2"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin-2) · 25 篇论文
+- <a id="resource-robotwin-2"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin-2) · 26 篇论文
 - <a id="resource-robotwin"></a>[RoboTwin 2.0](resources/benchmarks.md#resource-robotwin) · 2 篇论文
 - <a id="resource-humanoidvln"></a>[HumanoidVLN](resources/benchmarks.md#resource-humanoidvln) · 1 篇论文
 - <a id="resource-h2r-bench"></a>[H2R-Bench](resources/benchmarks.md#resource-h2r-bench) · 1 篇论文
@@ -106,6 +109,8 @@
 - <a id="resource-robomme"></a>[RoboMME](resources/benchmarks.md#resource-robomme) · 2 篇论文
 - <a id="resource-robotwin-umi"></a>[RoboTwin-UMI](resources/benchmarks.md#resource-robotwin-umi) · 3 篇论文
 - <a id="resource-navsim-v2"></a>[NAVSIM v2](resources/benchmarks.md#resource-navsim-v2) · 2 篇论文
+- <a id="resource-humanoidarena"></a>[HumanoidArena](resources/benchmarks.md#resource-humanoidarena) · 2 篇论文
+- <a id="resource-simple-humanoid"></a>[SIMPLE](resources/benchmarks.md#resource-simple-humanoid) · 1 篇论文
 - <a id="resource-lerobot"></a>[LeRobot](resources/tools.md#resource-lerobot) · 1 篇论文
 - <a id="resource-diffusion-policy"></a>[Diffusion Policy](resources/tools.md#resource-diffusion-policy) · 2 篇论文
 - <a id="resource-openvla"></a>[OpenVLA](resources/tools.md#resource-openvla) · 4 篇论文

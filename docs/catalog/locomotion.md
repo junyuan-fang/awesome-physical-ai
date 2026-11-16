@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Locomotion
 
-**28 篇** · 第 **1 / 2** 页 · 每页最多 15 篇
+**29 篇** · 第 **1 / 2** 页 · 每页最多 15 篇
 
 **1** · [2](locomotion-2.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -36,65 +36,65 @@
 
     Humanoid-GPT 把约 300 个 PPO 专家蒸馏进因果 Transformer，基于 20 亿帧动作语料做人形零样本全身跟踪；作者报告 AMASS 测试成功率随规模升至 92.6%，G1 真机零样本跟踪舞蹈。
 
-4. **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](../papers/2608.18234.md)**
+4. **[Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)**
+    2026-11-08 · 值得关注 · **77/100** · 实质代码
+
+    Kimodo-Policy将冻结动作生成器变为闭环人形策略；作者报告HumanoidArena多任务72.14%、八项真机平均60%。
+
+5. **[GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](../papers/2608.18234.md)**
     2026-08-18 · 值得关注 · **77/100** · 实质代码
 
     行为世界模型式人形全身跟踪控制器，联合预测动作、下一状态与行为分布；作者报告地形交互成功率81.3%（最佳基线4.3倍）、摔倒恢复率99.3%。
 
-5. **[HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](../papers/2606.06493.md)**
+6. **[HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](../papers/2606.06493.md)**
     2026-06-04 · 值得关注 · **74/100** · 实质代码
 
     把动作跟踪、行走、摔倒恢复三个教师按动作切片与上下文蒸馏进单个 MoE 学生，以 10 维任务空间指令驱动 29 自由度 G1；作者报告匹配对比中鲁棒工作空间最大并完成 VLM 驱动的真机移动操作。
 
-6. **[LadderMan: Learning Humanoid Perceptive Ladder Climbing](../papers/2606.05873.md)**
+7. **[LadderMan: Learning Humanoid Perceptive Ladder Climbing](../papers/2606.05873.md)**
     2026-06-04 · 值得关注 · **71/100** · 未找到仓库
 
     人形感知爬梯系统 LadderMan：单条动捕参考经混合运动跟踪学多个爬梯专家，再以 DAgger+RL 蒸馏为深度视觉策略，借立体深度基础模型零样本上真机；G1 在三种真实梯子上爬梯并可在梯上遥操作作业。
 
-7. **[Towards a General Humanoid Loco-Manipulation Model via Egocentric Whole-Body Human Data Pretraining](../papers/2610.00438.md)**
+8. **[Towards a General Humanoid Loco-Manipulation Model via Egocentric Whole-Body Human Data Pretraining](../papers/2610.00438.md)**
     2026-09-30 · 值得关注 · **68/100** · 未找到仓库
 
     用 500 小时第一视角人体全身运动数据 HumanVerse-500 做三阶段预训练得到人形全身 VLA λ0；SIMPLE 六任务报告 90.0% 成功率，4 个真机任务平均 62.5%。
 
-8. **[SONIC-K1: Porting a Universal Humanoid Motion Tracker to a Small Humanoid on a Single GPU](../papers/2610.39327.md)**
+9. **[SONIC-K1: Porting a Universal Humanoid Motion Tracker to a Small Humanoid on a Single GPU](../papers/2610.39327.md)**
     2026-10-29 · 值得关注 · **66/100** · 实质代码
 
     SONIC-K1 复现全身动作跟踪并开放代码与权重，在1985段留出动作上报告97.4%的宽松标准通过率。
 
-9. **[Social Humanoid: Socially Responsive Human-Humanoid Interaction](../papers/2611.08407.md)**
+10. **[Social Humanoid: Socially Responsive Human-Humanoid Interaction](../papers/2611.08407.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     Social Humanoid 用共享动作码本生成 G1 对人的全身响应，构建 260 小时 HHI 数据，但尚无互动质量用户研究。
 
-10. **[Perceptive Humanoid Motion from Simulation](../papers/2611.06908.md)**
+11. **[Perceptive Humanoid Motion from Simulation](../papers/2611.06908.md)**
     2026-11-04 · 值得关注 · **65/100** · 未找到仓库
 
     HALO 从千个合成家庭学习视觉语言运动，作者报告六个未映射真实环境中 360 次单技能试验平均成功率 91%。
 
-11. **[GRAFT: Geometry-Aware Residual Adaptation for Foundation Trackers](../papers/2610.36507.md)**
+12. **[GRAFT: Geometry-Aware Residual Adaptation for Foundation Trackers](../papers/2610.36507.md)**
     2026-10-27 · 值得关注 · **65/100** · 未找到仓库
 
     GRAFT冻结全身跟踪器，仅学习地形条件下肢残差，在四种基础控制器及真实G1上验证。
 
-12. **[Watch Your Step: Anticipated Perception for Humanoid Locomotion](../papers/2610.29612.md)**
+13. **[Watch Your Step: Anticipated Perception for Humanoid Locomotion](../papers/2610.29612.md)**
     2026-10-21 · 值得关注 · **65/100** · 未找到仓库
 
     预测未来落脚点并只观察局部地形，作者报告约三分之一训练迭代达到相同难度，且零样本部署 G1。
 
-13. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
+14. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
     2026-08-20 · 值得关注 · **65/100** · 实质代码
 
     MILD 用离散单元颗粒介质接触模型在仿真中刻画脚-软地非均匀交互并训练地形感知 RL 双足控制器，作者报告真机在泡沫、沙地等六类软地面上成功率与能效优于对比方法。
 
-14. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
+15. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
     2026-06-03 · 值得关注 · **65/100** · 实质代码
 
     用模态专属编码器把机器人关节角、人体姿态、末端位姿映射到共享潜空间，单阶段 RL 训练一个人形全身控制器 M3imic；作者报告在未见 OMOMO 测试集上末端模态成功率 98.42%，并在 G1 上真机验证。
-
-15. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
-    2026-06-04 · 观察中 · **62/100** · 未找到仓库
-
-    人形主动“注视”感知行走框架 TAGA：用深度图与本体感知预测高度图中的关注区域并裁剪编码，经 RL 自然涌现注视行为；作者报告 G1 真机跨越 1.2 m 沟壑并通过稀疏落脚点。
 
 ---
 

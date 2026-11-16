@@ -21835,3 +21835,351 @@ papers:
   source: arxiv
   digest: digests/daily/2026-11-09.md
   late_found: true
+- arxiv_id: '2611.12806'
+  title: Learning Heterogeneous Tactile Representation for General Dexterous Manipulation
+  authors: Bing Han et al.
+  date: '2026-11-09'
+  category: manipulation
+  route: core
+  contribution: model
+  tags:
+  - tactile
+  - dexterous
+  - representation
+  abstract_short: LingBot-Touch统一异构触觉表示；作者报告在26项真机任务中将π0.5平均成功率从48.1%提高至69.9%。
+  summary: 为缓解触觉经验被传感原理和布局割裂的问题，LingBot-Touch把压阻、磁和视触觉信号映射至规范指尖坐标，通过模态专属分词器、共享Transformer与JEPA潜在预测学习接触表示。原始PDF方法部分记录4983小时预训练数据，冻结编码器后将触觉token接入策略。在26项真机任务、每项20次测试的协议下，作者报告π0.5平均成功率由48.1%升至69.9%，并比较直接加入原始触觉的对照；另有两种手型的探针、12项仿真强化学习任务及数据规模消融。结果支持跨传感器表征迁移，但尚未覆盖电容触觉、掌面和更多手型。当前仓库明确是推理编码器发布，不能把已有实质代码标记解释为完整预训练流水线开放。各项数字仅适用于论文所述测试协议。
+  links:
+    arxiv: https://arxiv.org/abs/2611.12806
+    code: https://github.com/Robbyant/lingbot-touch
+    project: https://technology.robbyant.com/lingbot-touch
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 5
+      O: 3
+      T: 3
+    rationale:
+      C: 跨传感器共享触觉表征及冻结策略接入形成明确方法增量。
+      E: 已读原始PDF第3至6节：26项真机、12项仿真、探针、原始触觉对照和规模消融覆盖较广。
+      O: 官方README仅开放冻结触觉编码器推理与特征工具，HF非门控文件清单确认encoder.pt及Apache-2.0；未确认预训练实现及4983小时数据，按部分开放给3。
+      T: 论文署名可记录，但未独立核实团队近五年相关成果积累，默认3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 团队近五年与本方向相关的代表成果尚未独立核验，T暂按3。
+    - 需核实论文完整机构署名；不从作者、仓库归属或致谢推断单位。
+    - 已核验HF文件清单；完整训练数据/权重覆盖范围和各上游资产许可仍未逐项审计。
+    reviewed: '2026-11-16'
+    reviewer: codex (agent review, human-auditable)
+    total: 76
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/Robbyant/lingbot-touch
+    weights: open
+    data: unknown
+    license: Apache-2.0
+    note: 原始PDF：https://arxiv.org/pdf/2611.12806；官方README明确为冻结target encoder推理发布，非完整预训练代码。预填substantive保留，但对应完整方法的代码应保守理解为partial；检查点需具备仓库权限，未核验实际下载与训练数据。
+      HF API确认robbyant/lingbot-touch-small为非gated，实际列config.json与encoder.pt，模型卡Apache-2.0；README权限提示不代表此检查点当前受门控。
+    stats:
+      files: 169
+      code_files: 23
+      config_files: 5
+      last_commit: '2026-11-11'
+      readme_says_coming_soon: false
+    first_check: '2026-11-16'
+    last_check: '2026-11-16'
+  added: '2026-11-16'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-11.md
+  late_found: true
+- arxiv_id: '2611.12885'
+  title: World In-Context Learning for Agentic Robot Manipulation
+  authors: Heng Fang et al.
+  affiliations:
+  - Huazhong University of Science and Technology
+  - ArcheOne AI
+  date: '2026-11-09'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - agents
+  - in-context
+  - bimanual
+  abstract_short: RoboScript以单示范和仿真排练更新任务记忆；作者报告RoboTwin 2.0两种设置平均成功率83.4%。
+  summary: 为减少操作技能对固定训练分布和权重更新的依赖，WICL让冻结基础模型从单条示范出发，在可重置世界中排练并把反馈写入语义任务记忆。原始PDF的方法说明RoboScript分离技能构建、记忆学习、部署和反思，并用数据隔离及记忆检查器限制部署阶段获取仿真特权信息。在RoboTwin
+    2.0全部50项任务、每种设置每项10回合下，作者报告干净与随机化成功率83.6%和83.2%，平均83.4%；结果需与使用更多示范训练的策略区分计算和交互预算。四项PiPER真机任务各10回合成功数为10、7、7、6，但采用离线完整动作序列而非在线重规划。结果支持语义记忆迁移，仍依赖仿真排练、外部模型与工具，真实部署代码尚列为待发布。
+  links:
+    arxiv: https://arxiv.org/abs/2611.12885
+    code: https://github.com/ArcheOne-AI/RoboScript
+    project: https://archeone-ai.github.io/RoboScript/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 3
+      T: 3
+    rationale:
+      C: 把世界反馈写入冻结模型上下文，并隔离学习与部署数据，方法增量明确。
+      E: 原始PDF第3至5节含50任务、模型比较与组件消融及四项小规模真机迁移。
+      O: 已读原始PDF第3至6节及官方README：仿真核心、WICL与技能构建公开，真机部署代码仍为TODO；预填substantive不表示整个真机管线开放。基础模型API和仿真资产另有条件。 因此O=3。
+      T: 论文署名可记录，但未独立核实团队近五年相关成果积累，默认3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 团队近五年与本方向相关的代表成果尚未独立核验，T暂按3。
+    reviewed: '2026-11-16'
+    reviewer: codex (agent review, human-auditable)
+    total: 71
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/ArcheOne-AI/RoboScript
+    weights: n/a
+    data: n/a
+    license: Apache-2.0
+    note: 已读原始PDF第3至6节及官方README：仿真核心、WICL与技能构建公开，真机部署代码仍为TODO；预填substantive不表示整个真机管线开放。基础模型API和仿真资产另有条件。
+    stats:
+      files: 948
+      code_files: 753
+      config_files: 85
+      last_commit: '2026-11-10'
+      readme_says_coming_soon: false
+    first_check: '2026-11-16'
+    last_check: '2026-11-16'
+  uses:
+  - resource: robotwin-2
+    role: eval
+  added: '2026-11-16'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-11.md
+  late_found: true
+- arxiv_id: '2611.11166'
+  title: 'DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight'
+  authors: Zhongxi Chen et al.
+  affiliations:
+  - 'Affiliation: ['
+  - Sharpa Robotics
+  - SJTU–Sharpa Joint Lab for Embodied AI, SJTU
+  - The Chinese University of Hong Kong
+  - Fudan University
+  date: '2026-11-08'
+  updated: '2026-11-10'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous
+  - world-model
+  - distillation
+  abstract_short: DexForesight训练时对齐空间世界模型与策略潜变量；作者报告DexJoCo成功率由49.4%升至60.5%。
+  summary: 为让灵巧策略获取手与场景的动态信息而不增加部署时的未来生成开销，DexForesight先用离线深度、手部运动学点云和示范动作训练空间世界模型，预测三维手点位移及视觉特征变化，再冻结教师并对齐策略查询。部署只保留RGB、语言和机器人状态策略。在11项DexJoCo任务、每项100次测试中，作者报告基于GR00T
+    N1.7的成功率由49.4%升至60.5%；三项真机任务各20次测试，总成功率58.3%，最强对照50.0%。深度、预测目标和表示转移消融，以及冻结特征线性探针支持其机制解释。真机样本较少，训练仍需深度与高质量运动学监督，尚不能说明广泛跨本体泛化；项目页可读但未见对应公开实现或训练资源。
+  links:
+    arxiv: https://arxiv.org/abs/2611.11166
+    project: https://dexforesight.github.io/
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 将训练期手场景预测知识蒸馏到策略查询，避免在线世界模型开销。
+      E: 11项仿真及三项真机有基线、消融与表示探针，真机每项20次仍较有限。
+      O: 项目页https://dexforesight.github.io/可访问并列方法和结果；未见官方代码入口。原始署名列Sharpa Robotics、SJTU–Sharpa Joint Lab for Embodied AI,
+        SJTU、The Chinese University of Hong Kong、Fudan University；预填异常单位值按要求保留。 因此O=2。
+      T: 论文署名可记录，但未独立核实团队近五年相关成果积累，默认3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    pending_checks:
+    - 团队近五年与本方向相关的代表成果尚未独立核验，T暂按3。
+    - 需后续确认本文官方实现与训练资源入口；预填探测值与核查差异详见open.note。
+    - DexJoCo明确用于世界模型微调及11任务评估，但资源未登记且未核实原始公开入口，uses暂不杜撰ID。
+    - 原始异常单位字符串按用户要求保留；本次核实的独立机构已补列，后续规范化应另行处理。
+    reviewed: '2026-11-16'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 项目页https://dexforesight.github.io/可访问并列方法和结果；未见官方代码入口。原始署名列Sharpa Robotics、SJTU–Sharpa Joint Lab for Embodied AI,
+      SJTU、The Chinese University of Hong Kong、Fudan University；预填异常单位值按要求保留。
+    first_check: '2026-11-16'
+    last_check: '2026-11-16'
+  added: '2026-11-16'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-11.md
+  late_found: true
+- arxiv_id: '2611.14092'
+  title: 'DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning'
+  authors: Huaijin Pi et al.
+  affiliations:
+  - 'Affiliation: The University of Hong Kong Robbyant Zhejiang University'
+  - The University of Hong Kong
+  - Robbyant
+  - Zhejiang University
+  date: '2026-11-10'
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - dexterous
+  - synthetic-data
+  - human-to-robot
+  abstract_short: DexSeed把19段人手交互扩展为25270条机器人示范；真机八种抓法各10次测试成功率为20%至80%。
+  summary: 为降低灵巧操作示范采集成本，DexSeed先按抓握模式整理人手物体交互，再用InteractionMesh保持局部接触关系，跨物体和位置扩展手臂轨迹。手臂在物理仿真中跟踪轨迹，强化学习手指残差补偿跟踪误差，成功回合渲染成带抓法语言的VLA训练数据。作者从GRAB的19段序列构造8类抓法、25270条机器人轨迹，并以接触误差、穿透和执行成功率对比重定向及浮动手基线。仅用合成数据微调的策略在Franka加Wuji真机上，每类抓法一个物体、各10次试验，成功率20%至80%。结果表明生成数据可支持真实抓放，但不是广泛开放词汇操作验证，接触精确的穿柄仍困难。预填mink仓库是第三方IK依赖，不能作为DexSeed代码已公开的证据。
+  links:
+    arxiv: https://arxiv.org/abs/2611.14092
+    code: https://github.com/kevinzakka/mink
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 2
+      T: 3
+    rationale:
+      C: 由人手交互系统扩展可执行灵巧数据，包含接触保持及臂跟踪闭环。
+      E: 有重定向、物理执行及VLA数据消融，真机八抓法各十次但物体覆盖有限。
+      O: 项目页https://robbyant-research.github.io/DexSeed/可访问；预填mink是第三方IK工具，其Apache-2.0不代表DexSeed许可，substantive不代表本文代码。原文与项目页署名为The
+        University of Hong Kong、Robbyant、Zhejiang University；原有合并字符串保留。 因此O=2。
+      T: 论文署名可记录，但未独立核实团队近五年相关成果积累，默认3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    pending_checks:
+    - 团队近五年与本方向相关的代表成果尚未独立核验，T暂按3。
+    - 需后续确认本文官方实现与训练资源入口；预填探测值与核查差异详见open.note。
+    - GRAB明确提供19个源序列，但源资源未登记且未核对官方公共入口，未臆造对应uses。
+    - 原始异常单位字符串按用户要求保留；本次核实的独立机构已补列，后续规范化应另行处理。
+    reviewed: '2026-11-16'
+    reviewer: codex (agent review, human-auditable)
+    total: 65
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/kevinzakka/mink
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 项目页https://robbyant-research.github.io/DexSeed/可访问；预填mink是第三方IK工具，其Apache-2.0不代表DexSeed许可，substantive不代表本文代码。原文与项目页署名为The
+      University of Hong Kong、Robbyant、Zhejiang University；原有合并字符串保留。
+    stats:
+      files: 949
+      code_files: 97
+      config_files: 72
+      last_commit: '2026-11-01'
+      readme_says_coming_soon: false
+    first_check: '2026-11-16'
+    last_check: '2026-11-16'
+  uses:
+  - resource: dexseed-demonstrations
+    role: proposes
+  - resource: dexseed-demonstrations
+    role: finetune
+  - resource: isaac-lab
+    role: finetune
+  added: '2026-11-16'
+  source: arxiv
+  digest: digests/daily/2026-11-11.md
+- arxiv_id: '2611.11554'
+  title: 'Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation'
+  authors: Yunheng Wang et al.
+  affiliations:
+  - HKUST(GZ)
+  - JD Explore Academy
+  - BJUT
+  - Cambridge
+  date: '2026-11-08'
+  category: locomotion
+  route: core
+  contribution: model
+  tags:
+  - humanoid
+  - motion-prior
+  - loco-manipulation
+  abstract_short: Kimodo-Policy将冻结动作生成器变为闭环人形策略；作者报告HumanoidArena多任务72.14%、八项真机平均60%。
+  summary: 为利用人形全身运动结构先验，Kimodo-Policy以冻结Kimodo动作生成骨干为基础，加入视觉ControlNet、手部预测器和根部—身体—手层级，通过运动历史约束与动作块重规划实现闭环交互。作者用419小时机器人示范训练条件模块；原始PDF第5节报告HumanoidArena七任务联合训练成功率72.14%，SIMPLE八任务三个扰动级别合计182/240成功，八项真机各10次合计48/80成功。SIMPLE最强完整覆盖基线为181/240，且基线来自不同发布结果，不能解读为显著统一复测优势。运动骨干随机初始化、解冻、损失和梯度分离消融支持运动先验与适配设计的作用，但额外预训练并非所有单任务均提升。真机系统使用RTC却未单独消融，试验量有限。公开仓库和HF清单确认训练入口、部分策略检查点与数据资产存在，上游跟踪器及资源许可仍需分别遵循。
+  links:
+    arxiv: https://arxiv.org/abs/2611.11554
+    code: https://github.com/kimodo-policy/kimodo-policy
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 3
+    rationale:
+      C: 以预训练运动生成器为动作骨干，为全身策略提供区别于视觉语义的先验。
+      E: 补读原始PDF第5.2至5.6节：两仿真平台、80次真机及骨干和适配消融；SIMPLE基线为跨报告汇编而非统一复测。
+      O: 官方README可读，训练、HumanoidArena/SIMPLE评测和真机采集部署列已发布；另两基准coming soon不代表全仓占位。提供HF骨干、策略与数据下载说明，未逐项核验所有文件及上游许可。 因此O=4。
+      T: 论文署名可记录，但未独立核实团队近五年相关成果积累，默认3。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    pending_checks:
+    - 团队近五年与本方向相关的代表成果尚未独立核验，T暂按3。
+    - UniFoLM-WBT的14个子集明确用于预训练，但尚未核对独立官方资源入口，未臆造登记ID。
+    - 已核验HF文件清单；完整训练数据/权重覆盖范围和各上游资产许可仍未逐项审计。
+    reviewed: '2026-11-16'
+    reviewer: codex (agent review, human-auditable)
+    total: 77
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/kimodo-policy/kimodo-policy
+    weights: partial
+    data: partial
+    license: MIT
+    note: 官方README可读，训练、HumanoidArena/SIMPLE评测和真机采集部署列已发布；另两基准coming soon不代表全仓占位。提供HF骨干、策略与数据下载说明，未逐项核验所有文件及上游许可。 本次另查HF API，模型和数据仓库均非gated，清单含HumanoidArena训练状态、配置及场景资产；完整策略权重覆盖范围和资产许可未逐项审计。
+    stats:
+      files: 3878
+      code_files: 2096
+      config_files: 342
+      last_commit: '2026-11-11'
+      readme_says_coming_soon: true
+    first_check: '2026-11-16'
+    last_check: '2026-11-16'
+  uses:
+  - resource: humanoidarena
+    role: finetune
+  - resource: humanoidarena
+    role: eval
+  - resource: simple-humanoid
+    role: eval
+  - resource: hiw-500
+    role: pretrain
+  - resource: humanoid-everyday
+    role: pretrain
+  added: '2026-11-16'
+  source: arxiv
+  digest: digests/daily/2026-11-11.md
+  late_found: true

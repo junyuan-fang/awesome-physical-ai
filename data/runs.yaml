@@ -324,3 +324,31 @@ runs:
   new_resources: []
   digest: digests/daily/2026-11-10.md
   applied: '2026-11-10'
+- scan_date: '2026-11-11'
+  kind: daily
+  window_start: '2026-11-08'
+  window_end: '2026-11-11'
+  last_covered_end: '2026-11-10'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 306
+    already_tracked_or_triaged: 0
+    out_of_scope: 32
+    below_pool_cut: 254
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 5
+  excluded: 0
+  deferred: 15
+  removed: 0
+  new_resources:
+  - dataset:dexseed-demonstrations
+  - benchmark:humanoidarena
+  - benchmark:simple-humanoid
+  - dataset:hiw-500
+  - dataset:humanoid-everyday
+  digest: digests/daily/2026-11-11.md
+  applied: '2026-11-16'

@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**47 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
+**51 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
 
 **1** · [2](manipulation-2.md) · [3](manipulation-3.md) · [4](manipulation-4.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -46,55 +46,55 @@
 
     CausGround 提取动作前置条件与效果，作者报告 VirtualHome 平均成功率从 24.9% 提高至 53.3%。
 
-6. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
+6. **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](../papers/2611.12806.md)**
+    2026-11-09 · 值得关注 · **76/100** · 实质代码
+
+    LingBot-Touch统一异构触觉表示；作者报告在26项真机任务中将π0.5平均成功率从48.1%提高至69.9%。
+
+7. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
     2026-10-19 · 值得关注 · **74/100** · 实质代码
 
     用机队部署经验替代专家纠正：FERT 从成功轨迹检索与失败相关的片段，96 台真机 5 个任务达 93.3–99.2% 成功率。
 
-7. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
+8. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
     2026-10-26 · 值得关注 · **72/100** · 实质代码
 
     VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
 
-8. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
+9. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
     2026-08-19 · 值得关注 · **72/100** · 实质代码
 
     可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。
 
-9. **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](../papers/2611.05163.md)**
+10. **[World In-Context Learning for Agentic Robot Manipulation](../papers/2611.12885.md)**
+    2026-11-09 · 值得关注 · **71/100** · 实质代码
+
+    RoboScript以单示范和仿真排练更新任务记忆；作者报告RoboTwin 2.0两种设置平均成功率83.4%。
+
+11. **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](../papers/2611.05163.md)**
     2026-11-03 · 值得关注 · **71/100** · 实质代码
 
     把人类视频转换为灵巧机器人示范；作者报告两机器人七项无目标任务遥操作示范的平均成功率由约2%升至60%。
 
-10. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
+12. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
     2026-10-29 · 值得关注 · **71/100** · 实质代码
 
     LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
 
-11. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
+13. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
     2026-10-21 · 值得关注 · **71/100** · 实质代码
 
     首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。
 
-12. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
+14. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
     2026-09-29 · 值得关注 · **71/100** · 实质代码
 
     MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。
 
-13. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
+15. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
     2026-09-04 · 值得关注 · **71/100** · 实质代码
 
     TacPAC 在预测视觉与触觉的世界-动作模型上加入触觉专家，执行中将实时触觉与缓存的预期接触对照来修正剩余动作，作者报告五个真机接触密集任务平均成功率由 22% 升至 64%。
-
-14. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
-    2026-07-22 · 值得关注 · **71/100** · 实质代码
-
-    HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
-
-15. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
-    2026-11-01 · 值得关注 · **68/100** · 未找到仓库
-
-    以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
 
 ---
 

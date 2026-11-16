@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Benchmarks
 
-**34 项** · Standardized evaluations for embodied AI
+**36 项** · Standardized evaluations for embodied AI
 
 - [CALVIN](#resource-calvin)
 - [Meta-World](#resource-meta-world)
@@ -40,6 +40,8 @@
 - [RoboMME](#resource-robomme)
 - [RoboTwin-UMI](#resource-robotwin-umi)
 - [NAVSIM v2](#resource-navsim-v2)
+- [HumanoidArena](#resource-humanoidarena)
+- [SIMPLE](#resource-simple-humanoid)
 
 ## <a id="resource-calvin"></a>CALVIN
 
@@ -384,7 +386,7 @@ Reproducible real-to-sim eval suite — measures VLA gap between real and sim de
 
 [代码](https://github.com/RoboTwin-Platform/RoboTwin) [论文](https://arxiv.org/abs/2506.18088)
 <details>
-<summary>关联论文 1–10 / 25（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 26（提出 / 训练 / 评测）</summary>
 
 - eval · [GeoSem-WAM: Geometry- and Semantic-Aware World Action Models](../papers/2606.03188.md)
 - eval · [FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](../papers/2608.27384.md)
@@ -400,7 +402,7 @@ Reproducible real-to-sim eval suite — measures VLA gap between real and sim de
 </details>
 
 <details>
-<summary>关联论文 11–20 / 25（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 26（提出 / 训练 / 评测）</summary>
 
 - eval · [Coupling Execution Horizon and Sampling Depth in Flow-Matching VLA Policies](../papers/2610.32102.md)
 - finetune · [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](../papers/2610.29866.md)
@@ -416,13 +418,14 @@ Reproducible real-to-sim eval suite — measures VLA gap between real and sim de
 </details>
 
 <details>
-<summary>关联论文 21–25 / 25（提出 / 训练 / 评测）</summary>
+<summary>关联论文 21–26 / 26（提出 / 训练 / 评测）</summary>
 
 - eval · [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](../papers/2611.04870.md)
 - finetune · [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)
 - eval · [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)
 - finetune · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
 - eval · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
+- eval · [World In-Context Learning for Agentic Robot Manipulation](../papers/2611.12885.md)
 
 </details>
 
@@ -616,6 +619,31 @@ IsaacLab三任务九阶段G1移动操作评测，共享SONIC接口；资源发�
 
 - finetune · [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](../papers/2611.08111.md)
 - eval · [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](../papers/2611.08111.md)
+
+</details>
+
+## <a id="resource-humanoidarena"></a>HumanoidArena
+
+七项依赖腿部和全身协调的人形操作任务；本文同时用其示范微调和闭环成功率及跌倒率评估。
+
+[代码](https://github.com/William-wAng618/HumanoidArena) 
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- finetune · [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)
+- eval · [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)
+
+</details>
+
+## <a id="resource-simple-humanoid"></a>SIMPLE
+
+结合MuJoCo接触与Isaac渲染的人形移动操作基准；本文选择八项任务，须与SimplerEnv区分。
+
+[代码](https://github.com/physical-superintelligence-lab/SIMPLE) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)
 
 </details>
 

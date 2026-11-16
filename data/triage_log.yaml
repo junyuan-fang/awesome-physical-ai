@@ -1898,3 +1898,96 @@ entries:
   reason: over cap（本轮上限 15，按核心优先+总分排序未入选）
   date: '2026-11-09'
   run: '2026-11-09'
+- arxiv_id: '2611.12177'
+  title: Embodied First Exam
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.11854'
+  title: 'Decoupled Asynchronous System for Humanoids (DASH): Latency-Agnostic Scaling of Vision-Language-Action Models for
+    Humanoid Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.12676'
+  title: 'VLA Adaptation with Real and Simulated Data: A Case Study on Robotic Chess'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.11123'
+  title: 'HARP-Bench: Benchmarking Robot Manipulation Around Active Humans'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.15491'
+  title: What Makes a VLA Reactive? A Study of Execution Strategies for Dynamic Manipulation
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.15117'
+  title: 'PolyMorphWBC: Whole-Body Control from End-Effector Trajectories for Quadrupedal Mobile Manipulation across Arm Morphologies
+    with Extended Reach'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.14488'
+  title: Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.14969'
+  title: Scaling VLA Serving Under Robotic Execution Constraints
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.11665'
+  title: 'HINT-VLM: Humanoid Interactive Navigation over Rough Terrain with Embodiment-Grounded Vision-Language Model'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.13929'
+  title: 'ReACT: Reflection-Consistent Modulation and Cross-Load Consistency for Humanoid Velocity Tracking Under Asymmetric
+    Loads'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.13160'
+  title: How Much of Your VLA Is kNN
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.15317'
+  title: 'BiPOP: Partial-Order Planning for Long-Horizon Bimanual Robotic Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.13610'
+  title: From Egocentric Human Video to Robot Manipulation in the Era of Embodied Intelligence
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.12175'
+  title: 'GeoMind: A Benchmark for Spatial Understanding in Robotic Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'
+- arxiv_id: '2611.15937'
+  title: 'MOSAIC: Modular Obstacle and Spatial-Aware Framework for Manipulation In Cluttered Scenes'
+  decision: defer
+  reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-11'

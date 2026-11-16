@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**47 篇** · 第 **4 / 4** 页 · 每页最多 15 篇
+**51 篇** · 第 **4 / 4** 页 · 每页最多 15 篇
 
 [1](manipulation.md) · [2](manipulation-2.md) · [3](manipulation-3.md) · **4**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,12 +21,32 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](../papers/2606.03268.md)**
+46. **[Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents](../papers/2606.23085.md)**
+    2026-06-22 · 观察中 · **56/100** · 占位仓库
+
+    用 V-JEPA 2-AC 动作条件预测潜变量+因果 Transformer 做长时程操作失败检测，仅需轨迹级成败标签并用函数型共形预测定阈；作者报告 BEHAVIOR-1K 上 ROC-AUC 0.76、平衡准确率 0.78。
+
+47. **[PartialBiGrasp: Inferring Hidden Local Geometry for Bimanual Grasping from Partial Views](../papers/2608.19188.md)**
+    2026-08-19 · 观察中 · **54/100** · 未找到仓库
+
+    从单视角部分点云生成力封闭双臂抓取对，用卷积占据网络推断隐藏局部几何并做占据引导细化；作者报告DG16M测试集力封闭率55.2%，显著高于各基线。
+
+48. **[Safe and Steerable Geometric Motion Policies for Robotic Dexterous Manipulation](../papers/2605.21811.md)**
+    2026-05-20 · 观察中 · **51/100** · 未找到仓库
+
+    SafePBDS 用 pullback 控制屏障函数把任务流形安全约束转为构型空间加速度线性约束，并提供残差动作接口；作者报告 Franka-Allegro 真机抓取成功率 92.5%，手内旋转超 360°。
+
+49. **[Throwing a Tight Spiral American Football by a Humanoid Robot](../papers/2608.16642.md)**
+    2026-08-17 · 观察中 · **43/100** · 未找到仓库
+
+    首次让 Unitree G1 人形机器人投出旋转稳定的橄榄球螺旋传球：轨迹优化完成投掷段，查表式 MPC 调控手指释放段，作者报告旋转效率最高 93.6%。
+
+50. **[EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](../papers/2606.03268.md)**
     2026-06-02 · 观察中 · **37/100** · 未找到仓库
 
     EaDex 用单个 RGB-D 相机采集人手示范、经 MANO 拟合与重定向生成跨灵巧手示范，并按接触奖励动态退火示范权重；作者报告 3 种灵巧手×3 个铰接物体仿真平均成功率 23.5%→36.5%。
 
-47. **[Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning](../papers/2608.13422.md)**
+51. **[Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning](../papers/2608.13422.md)**
     2026-08-13 · 暂不评级 · 实质代码
 
     Seeker 仅用动作监督从冻结 DINOv3 特征中学出随任务进度变化的关注区域，用于裁剪、背景增强与点云过滤，作者报告真机平均成功率由最佳基线 48.3% 提升到 76.7%。

@@ -4,7 +4,7 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 313 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 318 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
 ## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 90
 
@@ -190,16 +190,18 @@
 - [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](papers/2609.14973.md) · 2026-09-14 · 60/100
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](papers/2608.11350.md) · 2026-08-11 · 51/100
 
-## <a id="cat-manipulation"></a>Manipulation · 47
+## <a id="cat-manipulation"></a>Manipulation · 51
 
 - [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md) · 2026-10-01 · 86/100
 - [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md) · 2026-10-24 · 83/100
 - [RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](papers/2609.03199.md) · 2026-09-02 · 80/100
 - [Pre-training Visual Dexterity in Simulation](papers/2608.15917.md) · 2026-08-16 · 78/100
 - [CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](papers/2610.29702.md) · 2026-10-21 · 77/100
+- [Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](papers/2611.12806.md) · 2026-11-09 · 76/100
 - [Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](papers/2610.25736.md) · 2026-10-19 · 74/100
 - [VISTA: Active Exploration for Self-Improvement in Embodied Agents](papers/2610.35051.md) · 2026-10-26 · 72/100
 - [SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](papers/2608.18701.md) · 2026-08-19 · 72/100
+- [World In-Context Learning for Agentic Robot Manipulation](papers/2611.12885.md) · 2026-11-09 · 71/100
 - [RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](papers/2611.05163.md) · 2026-11-03 · 71/100
 - [LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](papers/2610.40016.md) · 2026-10-29 · 71/100
 - [DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](papers/2610.29997.md) · 2026-10-21 · 71/100
@@ -211,6 +213,8 @@
 - [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](papers/2610.27861.md) · 2026-10-20 · 66/100
 - [LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](papers/2608.18618.md) · 2026-08-19 · 66/100
 - [Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](papers/2608.10383.md) · 2026-08-11 · 66/100
+- [DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](papers/2611.14092.md) · 2026-11-10 · 65/100
+- [DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](papers/2611.11166.md) · 2026-11-08 · 65/100
 - [MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](papers/2611.08372.md) · 2026-11-05 · 65/100
 - [Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](papers/2611.07532.md) · 2026-11-05 · 65/100
 - [DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation](papers/2611.05119.md) · 2026-11-03 · 65/100
@@ -240,11 +244,12 @@
 - [EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](papers/2606.03268.md) · 2026-06-02 · 37/100
 - [Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning](papers/2608.13422.md) · 2026-08-13
 
-## <a id="cat-locomotion"></a>Locomotion · 28
+## <a id="cat-locomotion"></a>Locomotion · 29
 
 - [GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](papers/2606.05160.md) · 2026-06-03 · 83/100
 - [Reflex: Visually Grounded Reactive Humanoid Control](papers/2610.12772.md) · 2026-10-08 · 80/100
 - [Humanoid-GPT: Scaling Data and Structure for Zero-Shot Motion Tracking](papers/2606.03985.md) · 2026-06-02 · 80/100
+- [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](papers/2611.11554.md) · 2026-11-08 · 77/100
 - [GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](papers/2608.18234.md) · 2026-08-18 · 77/100
 - [HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](papers/2606.06493.md) · 2026-06-04 · 74/100
 - [LadderMan: Learning Humanoid Perceptive Ladder Climbing](papers/2606.05873.md) · 2026-06-04 · 71/100

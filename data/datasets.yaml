@@ -284,3 +284,28 @@ datasets:
     paper: https://arxiv.org/abs/2611.06918
   added: '2026-11-09'
   last_check: '2026-11-09'
+- id: dexseed-demonstrations
+  name: DexSeed demonstrations
+  desc: 19个人手源序列扩展为8种抓法25270条物理验证机器人轨迹；尚未核验数据发布。
+  links:
+    paper: https://arxiv.org/abs/2611.14092
+    project: https://robbyant-research.github.io/DexSeed/
+  subcategory: sim-generated
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: hiw-500
+  name: HIW-500
+  desc: 真实家庭中遥操作Unitree G1示范，本文419小时策略预训练语料来源之一。
+  links:
+    data: https://huggingface.co/datasets/BitRobot/HIW-500-LeRobot
+  subcategory: manipulation-demos
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: humanoid-everyday
+  name: Humanoid Everyday
+  desc: 人形全身交互数据；本文使用其示范作为419小时策略预训练语料的一部分。
+  links:
+    data: https://huggingface.co/datasets/USC-PSI-Lab/humanoid-everyday
+  subcategory: manipulation-demos
+  added: '2026-11-16'
+  last_check: '2026-11-16'

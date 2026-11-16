@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**28 项** · Robot trajectories, demonstrations, scene datasets
+**31 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -34,6 +34,9 @@
 - [Action-Conditioned Latent Foresight Dataset](#resource-action-conditioned-foresight-data)
 - [ForceLDM Dataset](#resource-forceldm-data)
 - [NEO-VLA Action Pretrain](#resource-neo-vla-action-pretrain)
+- [DexSeed demonstrations](#resource-dexseed-demonstrations)
+- [HIW-500](#resource-hiw-500)
+- [Humanoid Everyday](#resource-humanoid-everyday)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -436,6 +439,43 @@ NEO-VLA处理后的约223万回合动作语料，提供Arrow动作行、相机�
 
 - proposes · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
 - pretrain · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
+
+</details>
+
+## <a id="resource-dexseed-demonstrations"></a>DexSeed demonstrations
+
+19个人手源序列扩展为8种抓法25270条物理验证机器人轨迹；尚未核验数据发布。
+
+[项目](https://robbyant-research.github.io/DexSeed/) [论文](https://arxiv.org/abs/2611.14092)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- proposes · [DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)
+- finetune · [DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)
+
+</details>
+
+## <a id="resource-hiw-500"></a>HIW-500
+
+真实家庭中遥操作Unitree G1示范，本文419小时策略预训练语料来源之一。
+
+
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- pretrain · [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)
+
+</details>
+
+## <a id="resource-humanoid-everyday"></a>Humanoid Everyday
+
+人形全身交互数据；本文使用其示范作为419小时策略预训练语料的一部分。
+
+
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- pretrain · [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)
 
 </details>
 
