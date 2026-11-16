@@ -1,5 +1,11 @@
 # Reviewer guide (for humans and agents)
 
+Read [retention policy](RETENTION_POLICY.md) as well as the scoring methodology.
+Do not fill the daily cap merely to increase the collection. A failed fetch, low score,
+old publication date or lack of open code alone is not a removal reason. Do not use
+`exclude` or `defer` on already collected papers in a daily review: the existing apply
+script removes those entries. Lifecycle maintenance requires a separate evidenced change.
+
 How to fill a review file (`pipeline/reviews/<date>.yaml` or a part `pipeline/reviews/parts/<stem>-NN.yaml`).
 The rules behind every field are in [METHODOLOGY.md](METHODOLOGY.md) — read it first.
 

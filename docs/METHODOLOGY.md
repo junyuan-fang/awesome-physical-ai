@@ -100,3 +100,7 @@ apply_reviews.py ──► data/papers.yaml · data/triage_log.yaml · data/runs
 ## 7. 质量自查（每轮结束前）
 
 范围与时间边界写明；每篇结论能追溯到 `evidence_read`；summary 覆盖问题/方法/结果与条件/局限；开放状态有 `last_check`；无跨基准比较；`uses` 有依据；`python scripts/validate.py` 通过。
+
+## 8. 长期维护
+
+遵循[论文保留、归档与删除规则](RETENTION_POLICY.md)：默认目录以阅读价值为准，不以总量、年龄或单次低评分自动淘汰。重复、误收录与版本替代需要核实；经典工作保留；归档与删除须有证据、变更记录且可追溯。周一整理规则及当前实施边界见该文件；普通日报不执行批量删除。

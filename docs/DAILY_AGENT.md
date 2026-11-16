@@ -1,5 +1,9 @@
 # Daily Codex runbook (08:00 Asia/Shanghai)
 
+For all reviews, also read [retention policy](RETENTION_POLICY.md). Daily scans must
+not fill quotas or delete existing papers; lifecycle decisions follow that policy's
+evidence requirements and implementation boundary.
+
 The Windows task `awesome-physical-ai daily` is the single automatic daily entry point.
 It runs `scripts/daily_agent_task.ps1` from the durable clone at
 `D:\Neura\awesome-physical-ai-daily`, using the Administrator user's Codex ChatGPT login.
