@@ -102,3 +102,10 @@ simulators:
     weights: https://huggingface.co/nvidia/Cosmos3-Nano-Sim-Bimanual
   added: '2026-11-09'
   last_check: '2026-11-09'
+- id: mujoco-warp
+  name: MuJoCo Warp
+  desc: MuJoCo的Warp GPU并行后端，BlinkMimic用于G1动作跟踪训练和模拟评测。
+  links:
+    code: https://github.com/google-deepmind/mujoco_warp
+  added: '2026-11-16'
+  last_check: '2026-11-16'

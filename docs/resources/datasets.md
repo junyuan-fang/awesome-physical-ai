@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**31 项** · Robot trajectories, demonstrations, scene datasets
+**35 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -37,6 +37,10 @@
 - [DexSeed demonstrations](#resource-dexseed-demonstrations)
 - [HIW-500](#resource-hiw-500)
 - [Humanoid Everyday](#resource-humanoid-everyday)
+- [LAFAN1](#resource-lafan1)
+- [Habitat Synthetic Scenes Dataset](#resource-hssd)
+- [nuScenes](#resource-nuscenes)
+- [SWAM Pretrain](#resource-swam-pretrain)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -78,7 +82,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 规模：76k demonstrations
 标签：real-world / multi-institution
 <details>
-<summary>关联论文 1–10 / 24（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 26（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
 - pretrain · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](../papers/2503.14734.md)
@@ -94,7 +98,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 11–20 / 24（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 26（提出 / 训练 / 评测）</summary>
 
 - finetune · [RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)
 - pretrain · [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)
@@ -110,12 +114,14 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 21–24 / 24（提出 / 训练 / 评测）</summary>
+<summary>关联论文 21–26 / 26（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Asynchronous Robot Policies](../papers/2611.05155.md)
 - pretrain · [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)
 - pretrain · [From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)
 - pretrain · [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](../papers/2611.07513.md)
+- pretrain · [OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)
+- eval · [OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)
 
 </details>
 
@@ -476,6 +482,56 @@ NEO-VLA处理后的约223万回合动作语料，提供Arrow动作行、相机�
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](../papers/2611.11554.md)
+
+</details>
+
+## <a id="resource-lafan1"></a>LAFAN1
+
+人类动作捕捉库；本轮运动跟踪工作使用重定向参考动作，需另遵循原数据许可。
+
+[代码](https://github.com/ubisoft/ubisoft-laforge-animation-dataset) 
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- pretrain · [BlinkMimic: Training a Humanoid Motion Tracker in Minutes on a Single GPU](../papers/2611.16422.md)
+- eval · [BlinkMimic: Training a Humanoid Motion Tracker in Minutes on a Single GPU](../papers/2611.16422.md)
+
+</details>
+
+## <a id="resource-hssd"></a>Habitat Synthetic Scenes Dataset
+
+室内合成场景；BAMOS在42栋房屋1248个找物回合上评估。
+
+[项目](https://3dlg-hcvc.github.io/hssd/) [论文](https://arxiv.org/abs/2306.11290)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [What World Model Does Active Object Search Need? A Study under Imperfect Detection](../papers/2611.15689.md)
+
+</details>
+
+## <a id="resource-nuscenes"></a>nuScenes
+
+多传感驾驶数据集，本轮用于开放环轨迹或驾驶视频评估；具体输入与分割按论文设置。
+
+[项目](https://www.nuscenes.org/) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [AutoVLA-D: Learn a Trajectory-Geometric Condition from Reasoning for Autonomous Driving VLA](../papers/2611.12382.md)
+
+</details>
+
+## <a id="resource-swam-pretrain"></a>SWAM Pretrain
+
+约4.7万小时多来源预训练池；公开HF包含分片，完整覆盖与上游许可仍需单独核实。
+
+[代码](https://github.com/shaaaaron/SWAM) [论文](https://arxiv.org/abs/2611.12870)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- proposes · [SWAM: Scaling World Action Models with Cross-Modal Alignment](../papers/2611.12870.md)
+- pretrain · [SWAM: Scaling World Action Models with Cross-Modal Alignment](../papers/2611.12870.md)
 
 </details>
 

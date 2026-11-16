@@ -352,3 +352,37 @@ runs:
   - dataset:humanoid-everyday
   digest: digests/daily/2026-11-11.md
   applied: '2026-11-16'
+- scan_date: '2026-11-16'
+  kind: daily
+  window_start: '2026-11-09'
+  window_end: '2026-11-16'
+  last_covered_end: '2026-11-11'
+  d: 5
+  cap: 20
+  stats:
+    fetched: 398
+    already_tracked_or_triaged: 16
+    out_of_scope: 66
+    below_pool_cut: 236
+    pool: 80
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 20
+  excluded: 6
+  deferred: 54
+  removed: 0
+  new_resources:
+  - dataset:lafan1
+  - simulator:mujoco-warp
+  - dataset:hssd
+  - benchmark:navsim-navtest
+  - dataset:nuscenes
+  - benchmark:neuroncap
+  - tool:semmap
+  - dataset:swam-pretrain
+  - benchmark:locus-bench
+  - benchmark:viki-l2
+  - tool:actioncodec2
+  digest: digests/daily/2026-11-16.md
+  applied: '2026-11-16'

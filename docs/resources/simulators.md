@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Simulators
 
-**10 项** · Isaac Sim, MuJoCo, Genesis, and friends
+**11 项** · Isaac Sim, MuJoCo, Genesis, and friends
 
 - [Isaac Lab](#resource-isaac-lab)
 - [Isaac Sim](#resource-isaac-sim)
@@ -16,6 +16,7 @@
 - [MotrixSim (Motphys / 谋先飞)](#resource-motrixsim)
 - [PrimeSim](#resource-primesim)
 - [Cosmos 3 Interactive Simulation](#resource-cosmos3-interactive-sim)
+- [MuJoCo Warp](#resource-mujoco-warp)
 
 ## <a id="resource-isaac-lab"></a>Isaac Lab
 
@@ -24,7 +25,7 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 [项目](https://isaac-sim.github.io/IsaacLab) [代码](https://github.com/isaac-sim/IsaacLab) 
 标签：rl / gpu-accelerated / nvidia
 <details>
-<summary>关联论文 1–10 / 13（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 14（提出 / 训练 / 评测）</summary>
 
 - eval · [PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)
 - pretrain · [Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)
@@ -40,11 +41,12 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 </details>
 
 <details>
-<summary>关联论文 11–13 / 13（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–14 / 14（提出 / 训练 / 评测）</summary>
 
 - eval · [Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors](../papers/2611.06564.md)
 - eval · [STEP: Spatiotemporal Training with Explicit Prediction for Perceptive Humanoid Locomotion](../papers/2611.08097.md)
 - finetune · [DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)
+- eval · [PROOF: Perceptive Robustness via Out-of-Distribution Fallback for Legged Locomotion](../papers/2611.18305.md)
 
 </details>
 
@@ -55,7 +57,7 @@ NVIDIA's full robot simulator with photorealistic rendering.
 [项目](https://developer.nvidia.com/isaac/sim) 
 标签：photorealistic / gpu / nvidia
 <details>
-<summary>关联论文 1–6 / 6（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–7 / 7（提出 / 训练 / 评测）</summary>
 
 - eval · [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)
 - eval · [NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)
@@ -63,6 +65,7 @@ NVIDIA's full robot simulator with photorealistic rendering.
 - eval · [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](../papers/2610.32093.md)
 - eval · [PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](../papers/2611.05372.md)
 - pretrain · [TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics](../papers/2611.06442.md)
+- eval · [What World Model Does Active Object Search Need? A Study under Imperfect Detection](../papers/2611.15689.md)
 
 </details>
 
@@ -153,6 +156,18 @@ Homegrown Chinese real-time physics engine for multibody dynamics & robotics —
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - proposes · [Interactive World Simulation with Cosmos for Physical AI](../papers/2611.06627.md)
+
+</details>
+
+## <a id="resource-mujoco-warp"></a>MuJoCo Warp
+
+MuJoCo的Warp GPU并行后端，BlinkMimic用于G1动作跟踪训练和模拟评测。
+
+[代码](https://github.com/google-deepmind/mujoco_warp) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [BlinkMimic: Training a Humanoid Motion Tracker in Minutes on a Single GPU](../papers/2611.16422.md)
 
 </details>
 

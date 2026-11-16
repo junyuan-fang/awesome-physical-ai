@@ -97,3 +97,20 @@ tools:
   subcategory: training
   added: '2026-11-05'
   last_check: '2026-11-05'
+- id: semmap
+  name: SemMap
+  desc: 将视觉语义、置信度与LiDAR融合为机器人可通行性高程图；研究用途许可，非完整自行车策略。
+  links:
+    code: https://github.com/rai-opensource/sem_map
+    paper: https://arxiv.org/abs/2611.15280
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: actioncodec2
+  name: ActionCodec2
+  desc: 有界误差反馈量化和Set-BPE流式动作编码；代码Apache-2.0，G0.5派生策略另有许可限制。
+  links:
+    paper: https://arxiv.org/abs/2611.15490
+    project: https://zibindong.github.io/actioncodec2-page/
+    code: https://github.com/ZibinDong/actioncodec2
+  added: '2026-11-16'
+  last_check: '2026-11-16'

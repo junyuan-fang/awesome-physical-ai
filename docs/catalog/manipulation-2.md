@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**51 篇** · 第 **2 / 4** 页 · 每页最多 15 篇
+**55 篇** · 第 **2 / 4** 页 · 每页最多 15 篇
 
 [1](manipulation.md) · **2** · [3](manipulation-3.md) · [4](manipulation-4.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-16. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
+16. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
+    2026-09-29 · 值得关注 · **71/100** · 实质代码
+
+    MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。
+
+17. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
+    2026-09-04 · 值得关注 · **71/100** · 实质代码
+
+    TacPAC 在预测视觉与触觉的世界-动作模型上加入触觉专家，执行中将实时触觉与缓存的预期接触对照来修正剩余动作，作者报告五个真机接触密集任务平均成功率由 22% 升至 64%。
+
+18. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
     2026-07-22 · 值得关注 · **71/100** · 实质代码
 
     HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
 
-17. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
+19. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
     2026-11-01 · 值得关注 · **68/100** · 未找到仓库
 
     以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
 
-18. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+20. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
     2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
     将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
 
-19. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
+21. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
     2026-10-20 · 值得关注 · **66/100** · 实质代码
 
     基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
 
-20. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
+22. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
     2026-08-19 · 值得关注 · **66/100** · 实质代码
 
     化学实验室灵巧操作的分层真机+仿真基准，含原子技能、组合技能与长时程流程三级；作者报告π0.5原子技能最佳，但三种策略均无法完成完整实验流程。
 
-21. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
+23. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
     2026-08-11 · 值得关注 · **66/100** · 实质代码
 
     用遥操作采集的真机多模态数据训练 DDPM，从单视角点云生成双臂灵巧手的抓取关节构型，再结合运动规划和力引导微调执行；作者报告在未见过的大物体上总成功率为 61.9%。
 
-22. **[DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)**
+24. **[DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)**
     2026-11-10 · 值得关注 · **65/100** · 实质代码
 
     DexSeed把19段人手交互扩展为25270条机器人示范；真机八种抓法各10次测试成功率为20%至80%。
 
-23. **[DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](../papers/2611.11166.md)**
+25. **[From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation](../papers/2611.14274.md)**
+    2026-11-10 · 值得关注 · **65/100** · 未找到仓库
+
+    GPF将抓点选择与动作生成分离，470组配对模拟显示交互历史对执行有益，参数预测更准却未必有用。
+
+26. **[PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)**
+    2026-11-09 · 值得关注 · **65/100** · 未找到仓库
+
+    PAIR用本体状态对齐图像与相机射线，在仿真和真实相机变化测试中改善未见视角操作。
+
+27. **[DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](../papers/2611.11166.md)**
     2026-11-08 · 值得关注 · **65/100** · 未找到仓库
 
     DexForesight训练时对齐空间世界模型与策略潜变量；作者报告DexJoCo成功率由49.4%升至60.5%。
 
-24. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
+28. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     MoMaSplat 重渲染含接触后物体运动的完整演示，作者报告五项真机任务未见底座位姿平均成功率 37%，最强基线 17%。
 
-25. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
+29. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     S2C 结合 VLM 定位、力反馈残差 RL 与物体中心增强，作者报告六项真机接触任务在位置变化下平均成功率 94.17%。
 
-26. **[DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation](../papers/2611.05119.md)**
+30. **[DexHOT: Learning Hand-Object Configuration Transfer for Dexterous Manipulation](../papers/2611.05119.md)**
     2026-11-03 · 值得关注 · **65/100** · 占位仓库
 
     DexHOT学习手物联合构型迁移；作者报告120对象基准中未见对象成功率69.4%，200次真实迁移成功率61.5%。
-
-27. **[Embodied at Sea: Imitation Learning for Multi-Task Underwater Manipulation](../papers/2610.38199.md)**
-    2026-10-28 · 值得关注 · **65/100** · 未找到仓库
-
-    水下模仿学习比较观测配置和模型，泳池最高93.3%含部分成功，海试ACT表现优于SmolVLA。
-
-28. **[Catch It All!: Generalizable Dynamic Catching with a Dexterous Hand](../papers/2610.39044.md)**
-    2026-10-28 · 值得关注 · **65/100** · 未找到仓库
-
-    Catch It All!用单个自视角相机接取未见物体，真机下手与上手接球成功率约39%和36%。
-
-29. **[RoboAuto: Autonomous Robot Program Search through Multi-Level Physical Understanding](../papers/2610.36533.md)**
-    2026-10-27 · 值得关注 · **65/100** · 未找到仓库
-
-    RoboAuto用对象知识、场景接地与主动试验搜索机器人程序，在多基准及真实长任务中验证。
-
-30. **[Pushing Dexterity and Safety for In-Hand Object Pose Reaching That Works Remarkably Well](../papers/2610.37652.md)**
-    2026-10-27 · 值得关注 · **65/100** · 未找到仓库
-
-    DexSafe 结合触觉状态与安全过滤进行持续手内操作，作者在13.3小时真机评估中报告较高目标达成率。
 
 ---
 

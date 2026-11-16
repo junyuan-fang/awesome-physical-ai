@@ -4,9 +4,9 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Locomotion
 
-**29 篇** · 第 **2 / 2** 页 · 每页最多 15 篇
+**32 篇** · 第 **2 / 3** 页 · 每页最多 15 篇
 
-[1](locomotion.md) · **2**
+[1](locomotion.md) · **2** · [3](locomotion-3.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
 
 **评分速查** · 每项 1–5 分，按权重合计为 100 分制，用于安排阅读顺序。
@@ -21,77 +21,82 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-16. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
+16. **[MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](../papers/2608.19955.md)**
+    2026-08-20 · 值得关注 · **65/100** · 实质代码
+
+    MILD 用离散单元颗粒介质接触模型在仿真中刻画脚-软地非均匀交互并训练地形感知 RL 双足控制器，作者报告真机在泡沫、沙地等六类软地面上成功率与能效优于对比方法。
+
+17. **[M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](../papers/2606.04829.md)**
+    2026-06-03 · 值得关注 · **65/100** · 实质代码
+
+    用模态专属编码器把机器人关节角、人体姿态、末端位姿映射到共享潜空间，单阶段 RL 训练一个人形全身控制器 M3imic；作者报告在未见 OMOMO 测试集上末端模态成功率 98.42%，并在 G1 上真机验证。
+
+18. **[TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](../papers/2606.05880.md)**
     2026-06-04 · 观察中 · **62/100** · 未找到仓库
 
     人形主动“注视”感知行走框架 TAGA：用深度图与本体感知预测高度图中的关注区域并裁剪编码，经 RL 自然涌现注视行为；作者报告 G1 真机跨越 1.2 m 沟壑并通过稀疏落脚点。
 
-17. **[STEP: Spatiotemporal Training with Explicit Prediction for Perceptive Humanoid Locomotion](../papers/2611.08097.md)**
+19. **[BlinkMimic: Training a Humanoid Motion Tracker in Minutes on a Single GPU](../papers/2611.16422.md)**
+    2026-11-12 · 观察中 · **60/100** · 实质代码
+
+    BlinkMimic在单张4090上用3.4分钟训练G1跟踪40段LAFAN1，证据仅限仿真。
+
+20. **[STEP: Spatiotemporal Training with Explicit Prediction for Perceptive Humanoid Locomotion](../papers/2611.08097.md)**
     2026-11-05 · 观察中 · **59/100** · 未找到仓库
 
     STEP 联合学习深度—本体感觉预测表征，作者报告 E1 在五类地形设置下完成 98/100 次真机穿越。
 
-18. **[Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors](../papers/2611.06564.md)**
+21. **[Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors](../papers/2611.06564.md)**
     2026-11-04 · 观察中 · **59/100** · 未找到仓库
 
     SoccerBot 以冻结动作先验统一四种足球技能，作者报告 G1 零样本部署，但踢球速度误差明显高于仿真。
 
-19. **[Humanoid Mobility via Attention-based Contacts](../papers/2610.31608.md)**
+22. **[Humanoid Mobility via Attention-based Contacts](../papers/2610.31608.md)**
     2026-10-22 · 观察中 · **59/100** · 未找到仓库
 
     以接触规划连接运动先验与强化学习，作者在 G1 展示无参考轨迹的攀爬、穿越及失败恢复。
 
-20. **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](../papers/2606.25765.md)**
+23. **[StairMaster: Learning to Conquer Risky Hollow Stairs for Agile Quadrupedal Robots](../papers/2606.25765.md)**
     2026-06-24 · 观察中 · **59/100** · 未找到仓库
 
     三阶段强化学习框架 StairMaster 结合交叉注意力视觉编码、空间感知循环记忆与深度噪声建模；作者报告 Unitree Go2 零样本迁移后在 37°/55° 镂空楼梯真机成功率 93.3%/63.3%。
 
-21. **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](../papers/2606.19928.md)**
+24. **[SWAP: Symmetric Equivariant World-Model for Agile Robot Parkour](../papers/2606.19928.md)**
     2026-06-18 · 观察中 · **59/100** · 未找到仓库
 
     把左右镜像等变性硬嵌入 RSSM 世界模型与 actor-critic，用于四足跑酷；作者报告真机跨越 2.13 m 间隙、攀上 1.63 m 平台，并对镜像地形零样本泛化。
 
-22. **[MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation](../papers/2606.06139.md)**
+25. **[MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation](../papers/2606.06139.md)**
     2026-06-04 · 观察中 · **57/100** · 未找到仓库
 
     不依赖遥操作或人类动作重定向，用 LLM 引导的进化程序搜索接触序列、配合分层运动学/动力学轨迹优化，发现长时程人形 loco-manipulation 动作，并经 RL 跟踪策略零样本部署到真机。
 
-23. **[Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion](../papers/2608.15766.md)**
+26. **[Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion](../papers/2608.15766.md)**
     2026-08-16 · 观察中 · **54/100** · 未找到仓库
 
     Tac4Loco 把每只脚 60 单元的足底压力阵列量化为保拓扑的序数表示，经时空双分支编码后输入人形机器人行走策略；作者报告仿真坡面存活率从 22.0% 升至 77.9%，并在 G1 真机零样本走过泡沫平台与碎石路。
 
-24. **[CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation](../papers/2606.04718.md)**
+27. **[CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation](../papers/2606.04718.md)**
     2026-06-03 · 观察中 · **54/100** · 未找到仓库
 
     两阶段 RL 框架 CoRe-MoE：先用双 AMP 专家学走跑平滑切换，再加以 SwAV 对比学习训练门控的深度感知 MoE 残差分支适应多地形，作者报告 Unitree G1 零样本部署走跑过台阶、坡道、障碍。
 
-25. **[SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints](../papers/2605.28549.md)**
+28. **[SPRINT: Efficient Spectral Priors for Humanoid Athletic Sprints](../papers/2605.28549.md)**
     2026-05-27 · 观察中 · **53/100** · 未找到仓库
 
     SPRINT 仅用 5 段（14 秒）人体步态训练频率自适应谱先验，生成参考关节轨迹再由残差 RL 稳定；作者报告 Unitree G1 零样本实机冲刺在 6 m/s 指令下实测约 5.9 m/s，并可平滑切换步态。
 
-26. **[Robust Brachiation on a Life-Sized Dual-Arm Robot Using Waypoint-Guided Reinforcement Learning](../papers/2608.17320.md)**
+29. **[Robust Brachiation on a Life-Sized Dual-Arm Robot Using Waypoint-Guided Reinforcement Learning](../papers/2608.17320.md)**
     2026-08-18 · 观察中 · **51/100** · 占位仓库
 
     提出路点引导强化学习 WGRL，用稀疏末端路点加任务成功与机械能奖励，在真人尺寸双臂机器人上零样本实现单杠悬臂摆荡移动，真机穿越 4 根横杆并出现失败后加大摆幅重试的恢复行为。
 
-27. **[Imagine2Real: Towards Zero-shot Humanoid-Object Interaction via Video Generative Priors](../papers/2605.22272.md)**
+30. **[Imagine2Real: Towards Zero-shot Humanoid-Object Interaction via Video Generative Priors](../papers/2605.22272.md)**
     2026-05-21 · 观察中 · **51/100** · 未找到仓库
 
     Imagine2Real 用视频生成模型合成人形-物体交互视频，提取机器人基座、双手与物体的稀疏 4D 关键点，在行为基础模型潜空间内跟踪；作者报告 MuJoCo 中搬箱成功率 82.65%，并在动捕环境下零样本实机演示。
 
-28. **[DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs](../papers/2606.24089.md)**
-    2026-06-23 · 观察中 · **48/100** · 未找到仓库
-
-    在并发师生框架中以世界模型状态预测正则教师编码器、以动量目标编码器稳定学生蒸馏，用于双足轮式机器人连续楼梯；作者报告 20 cm 宽台阶成功率 89.3%，CTS 等基线失败。
-
-29. **[T-GMP: Terrain-conditioned Generative Motion Priors for Versatile and Natural Humanoid Locomotion](../papers/2606.06944.md)**
-    2026-06-05 · 观察中 · **48/100** · 未找到仓库
-
-    用 CVAE 从少量地形配对的动捕-状态数据学习地形条件运动先验，并以地形条件判别器做对抗式 RL；作者报告七类地形通过率均高于 AMP 与纯 RL 基线，并在 Kuavo 人形真机上部署。
-
 ---
 
-[第 1 页](locomotion.md) · **第 2 页**
+[第 1 页](locomotion.md) · **第 2 页** · [第 3 页](locomotion-3.md)
 [返回论文目录](../index.md)

@@ -4,9 +4,9 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Navigation & Mobility
 
-**15 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
+**17 篇** · 第 **1 / 2** 页 · 每页最多 15 篇
 
-**1**
+**1** · [2](navigation-2.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
 
 **评分速查** · 每项 1–5 分，按权重合计为 100 分制，用于安排阅读顺序。
@@ -46,57 +46,57 @@
 
     HumanoidVLN 在 Isaac Sim 中用 RL 行走策略加 PD/MPC 跟踪器驱动四种人形机器人做 VLN，含 87 个场景、933 条回合；作者报告 JanusVLN 平均成功率最高（43.55%），H1 上跌倒率最高达 71%。
 
-6. **[RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon](../papers/2610.39267.md)**
+6. **[LHNav: Long-Horizon Humanoid Navigation via Multirate Coordination and Physics-Grounded Action Data](../papers/2611.12136.md)**
+    2026-11-09 · 值得关注 · **65/100** · 占位仓库
+
+    LHNav以三速率规划、运动生成和控制协调多目标导航，模拟长程任务成功75.56%。
+
+7. **[RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon](../papers/2610.39267.md)**
     2026-10-29 · 值得关注 · **65/100** · 未找到仓库
 
     RAIBO-Wagon以流匹配初始化MPPI并用学习动力学细化，40次室外拖车导航成功34次。
 
-7. **[See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space](../papers/2610.31762.md)**
+8. **[See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space](../papers/2610.31762.md)**
     2026-10-22 · 值得关注 · **65/100** · 占位仓库
 
     RepresentNav 联合学习导航表征与未来潜变量；正文单目干扰跟踪成功率为 68.3%，85.5% 是跟踪率。
 
-8. **[RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation](../papers/2610.29845.md)**
+9. **[RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation](../papers/2610.29845.md)**
     2026-10-21 · 值得关注 · **65/100** · 未找到仓库
 
     RangeNav 以 18.3 万参数 LiDAR 编码器导航，未见仿真场景成功率比仅重建预训练平均高 23.73 个百分点。
 
-9. **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](../papers/2606.04534.md)**
+10. **[What World Model Does Active Object Search Need? A Study under Imperfect Detection](../papers/2611.15689.md)**
+    2026-11-11 · 观察中 · **60/100** · 实质代码
+
+    BAMOS在两种模拟搜索环境分析漏检与误检，显示目标信念及其更新比单纯占用表示更关键。
+
+11. **[MAD: Mapping-Aware World Models for Agile Quadrotor Flight](../papers/2606.04534.md)**
     2026-06-03 · 观察中 · **56/100** · 未找到仓库
 
     视觉四旋翼的几何感知世界模型 MAD：以机体中心占据/可见性栅格和本体状态代替原图重建作为监督，作者报告仿真最高 9.66 m/s、真实森林飞行 5.05 m/s。
 
-10. **[MessyNav: Zero-Shot Navigation via Manipulation in Messy Environments](../papers/2611.07417.md)**
+12. **[MessyNav: Zero-Shot Navigation via Manipulation in Messy Environments](../papers/2611.07417.md)**
     2026-11-05 · 观察中 · **54/100** · 未找到仓库
 
     MessyNav 结合物理与语义可供性选择清障动作，真机 15 场景完成 10 个。
 
-11. **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)**
+13. **[NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](../papers/2607.19695.md)**
     2026-07-22 · 观察中 · **54/100** · 未找到仓库
 
     基于 Isaac Sim 的室内到室外连续物理导航基准，含 ObjNav/VLN/PlaceNav 共 1 万 episode 与安全指标；作者报告最好的零样本基线 UniNaVid 成功率仅约 11%。
 
-12. **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](../papers/2606.13494.md)**
+14. **[NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation](../papers/2606.13494.md)**
     2026-06-11 · 观察中 · **54/100** · 未找到仓库
 
     在 Cosmos Predict2 潜画布中联合去噪未来视角、目标进度值与动作块，免去 CEM 规划；作者报告 Diablo 真机 24 次图像目标导航成功率 79.2%。
 
-13. **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](../papers/2605.21935.md)**
+15. **[Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments](../papers/2605.21935.md)**
     2026-05-21 · 观察中 · **54/100** · 未找到仓库
 
     面向人形机器人的多模态交互场 MIF：置信度感知语义 3DGS 抑制步态抖动、差异触发局部记忆更新、按需网格重建做交互位姿安全校验；作者报告 Unitree G1 真实动态办公室中重定位成功率 12%→94%。
 
-14. **[Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](../papers/2608.12198.md)**
-    2026-08-12 · 观察中 · **52/100** · 部分开放
-
-    混合规划架构：模仿学习的行为规划网络提出参考轨迹，优化式监督层施加可行驶与安全约束并保留规则式兜底；作者报告开环评测结果并在 RWTH 研究车辆 karl. 上完成试验场部署。
-
-15. **[NavWM: A Unified Navigation World Model for Foresight-Driven Planning](../papers/2606.24101.md)**
-    2026-06-23 · 观察中 · **48/100** · 未找到仓库
-
-    以 Mamba 骨干统一潜在世界推理、锚点式多模态轨迹提议与 CDiT 视觉前瞻，用世界模型挑选候选轨迹；作者报告图像目标导航已见环境 SR 0.72，高于 UniWM 的 0.66。
-
 ---
 
-**第 1 页**
+**第 1 页** · [第 2 页](navigation-2.md)
 [返回论文目录](../index.md)

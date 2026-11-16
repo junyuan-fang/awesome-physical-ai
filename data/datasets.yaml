@@ -309,3 +309,38 @@ datasets:
   subcategory: manipulation-demos
   added: '2026-11-16'
   last_check: '2026-11-16'
+- id: lafan1
+  name: LAFAN1
+  desc: 人类动作捕捉库；本轮运动跟踪工作使用重定向参考动作，需另遵循原数据许可。
+  links:
+    code: https://github.com/ubisoft/ubisoft-laforge-animation-dataset
+  subcategory: mocap-motion
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: hssd
+  name: Habitat Synthetic Scenes Dataset
+  desc: 室内合成场景；BAMOS在42栋房屋1248个找物回合上评估。
+  links:
+    project: https://3dlg-hcvc.github.io/hssd/
+    paper: https://arxiv.org/abs/2306.11290
+  subcategory: scene-3d
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: nuscenes
+  name: nuScenes
+  desc: 多传感驾驶数据集，本轮用于开放环轨迹或驾驶视频评估；具体输入与分割按论文设置。
+  links:
+    project: https://www.nuscenes.org/
+  subcategory: scene-3d
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: swam-pretrain
+  name: SWAM Pretrain
+  desc: 约4.7万小时多来源预训练池；公开HF包含分片，完整覆盖与上游许可仍需单独核实。
+  links:
+    paper: https://arxiv.org/abs/2611.12870
+    data: https://huggingface.co/datasets/FreDERicia/SWAM-Pretrain
+    code: https://github.com/shaaaaron/SWAM
+  subcategory: egocentric-human
+  added: '2026-11-16'
+  last_check: '2026-11-16'

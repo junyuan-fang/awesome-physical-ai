@@ -4,9 +4,9 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**75 篇** · 第 **4 / 5** 页 · 每页最多 15 篇
+**79 篇** · 第 **4 / 6** 页 · 每页最多 15 篇
 
-[1](world-model.md) · [2](world-model-2.md) · [3](world-model-3.md) · **4** · [5](world-model-5.md)
+[1](world-model.md) · [2](world-model-2.md) · [3](world-model-3.md) · **4** · [5](world-model-5.md) · [6](world-model-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
 
 **评分速查** · 每项 1–5 分，按权重合计为 100 分制，用于安排阅读顺序。
@@ -21,82 +21,82 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[World Value Models for Robotic Manipulation](../papers/2606.24742.md)**
+46. **[MemoryWAM: Efficient World Action Modeling with Persistent Memory](../papers/2606.20562.md)**
+    2026-06-18 · 值得关注 · **65/100** · 未找到仓库
+
+    以近期帧、事件边界锚帧与少量 gist token 组成混合记忆的世界-动作模型；作者报告 RMBench 平均成功率比 LingBot-VA 高 4.8 个百分点，且推理延迟与显存更低。
+
+47. **[Learning How the World Evolves: Extrapolative Video World Models via Latent Dynamics Reasoning](../papers/2608.09926.md)**
+    2026-08-10 · 观察中 · **63/100** · 部分开放
+
+    LDR 把隐状态转移写成显式运动学积分，只回归三阶及以上残差；作者报告在 PhyWorld 五类物理任务上，ID-OOD 误差差距比 DiT 基线小 20 倍以上，参数少 26 倍。
+
+48. **[Temporal-Distance JEPA: Plan-Aware Representation Learning for Latent World Model Predictive Control](../papers/2607.25337.md)**
+    2026-07-28 · 观察中 · **63/100** · 实质代码
+
+    在 LeWM 的 JEPA 骨干上从无奖励示范中挖掘有向时序代价用于潜空间 MPC；作者报告 Two-Room 成功率 100%（LeWM 97.4%），OGB-Cube 提升 14.2 个百分点，四个环境均不低于 LeWM 与 RC-aux。
+
+49. **[Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models](../papers/2606.25473.md)**
+    2026-06-24 · 观察中 · **63/100** · 实质代码
+
+    将 rCM 扩展到自回归视频扩散，用 teacher-forcing 一致性蒸馏初始化 self-forcing DMD；作者报告 2 步因果 Wan2.1-1.3B 在 VBench-T2V 达 84.63，并演示 Cosmos 3 交互式世界模型。
+
+50. **[World Value Models for Robotic Manipulation](../papers/2606.24742.md)**
     2026-06-23 · 观察中 · **63/100** · 占位仓库
 
     以视频世界模型为骨干构建通用机器人价值模型 WVM，并发布含 800 条次优轨迹的 Suboptimal-Value-Bench；作者报告其在专家与次优数据上的 VOC 均优于 GVL、VLAC 等基线。
 
-47. **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](../papers/2606.20104.md)**
+51. **[Sensorimotor World Models: Perception for Action via Inverse Dynamics](../papers/2606.20104.md)**
     2026-06-18 · 观察中 · **63/100** · 实质代码
 
     用单一逆动力学正则端到端训练 JEPA 式潜在世界模型，防止表征坍缩并偏向可控自由度；作者报告在四个仿真控制任务上规划成功率持平或优于 SIGReg 基线。
 
-48. **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)**
+52. **[Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)**
     2026-06-15 · 观察中 · **63/100** · 未找到仓库
 
     以自然语言为统一动作接口的 20B 具身视频世界模型，在 860 万视频-文本对上训练；作者报告 EWMBench 总分 4.60、DreamGen Bench 4.952 均居首。
 
-49. **[WorldOlympiad: Can Your World Model Survive a Triathlon?](../papers/2606.11129.md)**
+53. **[WorldOlympiad: Can Your World Model Survive a Triathlon?](../papers/2606.11129.md)**
     2026-06-09 · 观察中 · **63/100** · 实质代码
 
     提出覆盖机器人、游戏、真实视频的视频世界模型基准，从物理、几何、交互三条赛道评测 8 个模型，作者报告几何一致性普遍不足（最高 0.424）。
 
-50. **[Latent Spatial Memory for Video World Models](../papers/2606.09828.md)**
+54. **[Latent Spatial Memory for Video World Models](../papers/2606.09828.md)**
     2026-06-08 · 观察中 · **63/100** · 实质代码
 
     把视频世界模型的 3D 记忆从 RGB 点云搬到扩散潜空间，作者报告端到端生成最高提速 10.57 倍、显存降 55 倍，WorldScore 平均分 70.36 居对比方法首位。
 
-51. **[MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation](../papers/2606.09215.md)**
+55. **[MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation](../papers/2606.09215.md)**
     2026-06-08 · 观察中 · **62/100** · 占位仓库
 
     以 Cosmos 视频 DiT 单次前向的中间去噪特征条件化动作 DiT，预测统一全身运动潜变量驱动人形移动操作；作者报告 G1 九项真机任务总体成功率比最强 VLA 基线高 30 个点以上。
 
-52. **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](../papers/2606.07089.md)**
+56. **[Dreaming when Necessary: Advancing World Action Models with Adaptive Multi-Modal Reasoning](../papers/2606.07089.md)**
     2026-06-05 · 观察中 · **62/100** · 未找到仓库
 
     用轻量路由器按执行阶段决定是否调用文本子任务推理与视频想象，其余步骤只解码动作；作者报告 LIBERO-Long 99.1%、RoboTwin 2.0 困难子集最优，推理效率接近纯动作 WAM。
 
-53. **[Reinforcing VLAs in Task-Agnostic World Models](../papers/2605.12334.md)**
+57. **[Reinforcing VLAs in Task-Agnostic World Models](../papers/2605.12334.md)**
     2026-05-12 · 观察中 · **62/100** · 未找到仓库
 
     RAW-Dream 在任务无关视频世界模型中用 VLM 零样本奖励 RL 微调 VLA，并以双噪声验证过滤幻觉；作者报告 LIBERO 四个未见套件平均成功率从 1-shot SFT 的 43.4% 提至 52.3–57.1%。
 
-54. **[Time-to-Goal: Learned Temporal Metrics for Long-Horizon Planning with JEPA World Models](../papers/2611.05847.md)**
+58. **[Time-to-Goal: Learned Temporal Metrics for Long-Horizon Planning with JEPA World Models](../papers/2611.05847.md)**
     2026-11-04 · 观察中 · **60/100** · 实质代码
 
     T2G 在冻结 JEPA 表征上学习时间到达距离，四类仿真任务平均成功率从 32.7% 升至 63.0%。
 
-55. **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](../papers/2608.18484.md)**
+59. **[Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models](../papers/2608.18484.md)**
     2026-08-19 · 观察中 · **59/100** · 占位仓库
 
     SparsePR 以响应耦合分组与探针拟合残差重建实现免训练块稀疏注意力，作者报告在 Cosmos-Predict2.5 等四个视频/世界模型上端到端加速 1.48–2.61 倍且保真度优于 SVG2 等基线。
 
-56. **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](../papers/2608.01397.md)**
+60. **[SG-WAM: Self-Guided World Modeling in Geometry-Aware Policy Space](../papers/2608.01397.md)**
     2026-08-02 · 观察中 · **59/100** · 占位仓库
 
     在策略自身表征空间中用可学习动态 token 与 EMA 目标预测动作条件下的未来潜状态，并以 VGGT 几何监督塑形；0.9B 模型作者报告 LIBERO 98.5%、LIBERO-Plus 零样本 73.0%。
 
-57. **[ContactWorld: What Matters in Vision-Tactile World Models for Contact-Rich Manipulation](../papers/2606.13877.md)**
-    2026-06-11 · 观察中 · **59/100** · 未找到仓库
-
-    固定世界模型与 MPC 规划框架，系统比较视觉与触觉表征在 12 个接触密集任务上的作用；作者报告点云+触觉力场仿真平均成功率 36.1% 最高，并做 900 次真机验证。
-
-58. **[WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)**
-    2026-06-16 · 观察中 · **58/100** · 实质代码
-
-    在 Genie Envisioner-ACT 上对世界模型做在线视频 SFT（KL 约束）、对动作头用重建奖励做 RL；作者报告 LIBERO-Object 成功率 68%→82%，RLBench Water Plants 19%→22%。
-
-59. **[WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity](../papers/2608.02603.md)**
-    2026-08-03 · 观察中 · **57/100** · 占位仓库
-
-    分四层（视觉质量、控制遵循、空间一致、世界反应性）评测视频世界模型的基准，含 8 项任务 1,474 个用例；作者评测 20 个相机/动作/语言驱动模型，发现无一兼顾覆盖与表现。
-
-60. **[Wonder: Video World Model Done Better](../papers/2607.26037.md)**
-    2026-07-28 · 观察中 · **57/100** · 未找到仓库
-
-    实时相机可控视频世界模型，用像素空间坐标场做相机条件、稀疏注意力检索长时记忆并改进自蒸馏；作者报告 16 FPS 分钟级生成，在自建 I2V/V2V 基准上视觉质量与相机跟随误差优于近期流式世界模型。
-
 ---
 
-[第 1 页](world-model.md) · [第 2 页](world-model-2.md) · [第 3 页](world-model-3.md) · **第 4 页** · [第 5 页](world-model-5.md)
+[第 1 页](world-model.md) · [第 2 页](world-model-2.md) · [第 3 页](world-model-3.md) · **第 4 页** · [第 5 页](world-model-5.md) · [第 6 页](world-model-6.md)
 [返回论文目录](../index.md)

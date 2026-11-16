@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Tools & Libraries
 
-**11 项** · Open-source frameworks for building embodied AI
+**13 项** · Open-source frameworks for building embodied AI
 
 - [LeRobot](#resource-lerobot)
 - [Diffusion Policy](#resource-diffusion-policy)
@@ -17,6 +17,8 @@
 - [Uni Robot Agent](#resource-uni-robot-agent)
 - [Auriga](#resource-auriga)
 - [BeyondContact](#resource-beyondcontact)
+- [SemMap](#resource-semmap)
+- [ActionCodec2](#resource-actioncodec2)
 
 ## <a id="resource-lerobot"></a>LeRobot
 
@@ -136,6 +138,30 @@ K1人形机器人动作跟踪训练与部署复现，提供代码和权重；动
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - proposes · [BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation](../papers/2611.03059.md)
+
+</details>
+
+## <a id="resource-semmap"></a>SemMap
+
+将视觉语义、置信度与LiDAR融合为机器人可通行性高程图；研究用途许可，非完整自行车策略。
+
+[代码](https://github.com/rai-opensource/sem_map) [论文](https://arxiv.org/abs/2611.15280)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [Autonomous Trail Racing with a Bicycle Robot](../papers/2611.15280.md)
+
+</details>
+
+## <a id="resource-actioncodec2"></a>ActionCodec2
+
+有界误差反馈量化和Set-BPE流式动作编码；代码Apache-2.0，G0.5派生策略另有许可限制。
+
+[项目](https://zibindong.github.io/actioncodec2-page/) [代码](https://github.com/ZibinDong/actioncodec2) [论文](https://arxiv.org/abs/2611.15490)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [ActionCodec2: A Streaming Action Tokenizer](../papers/2611.15490.md)
 
 </details>
 

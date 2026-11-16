@@ -4,9 +4,9 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 318 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 338 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
-## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 90
+## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 95
 
 - [OpenVLA: An Open-Source Vision-Language-Action Model](papers/2406.09246.md) · 2024-06-13 · 100/100
 - [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](papers/2503.14734.md) · 2025-03-18 · 95/100
@@ -21,6 +21,7 @@
 - [TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](papers/2607.27205.md) · 2026-07-29 · 80/100
 - [Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](papers/2607.15330.md) · 2026-07-16 · 80/100
 - [Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](papers/2601.12993.md) · 2026-01-19 · 80/100
+- [ActionCodec2: A Streaming Action Tokenizer](papers/2611.15490.md) · 2026-11-11 · 77/100
 - [From Pixels to Actions - Towards Native Vision-Language-Action Policies](papers/2611.06918.md) · 2026-11-04 · 77/100
 - [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](papers/2610.34356.md) · 2026-10-25 · 77/100
 - [HuGe: Scaling Humanoid Generalist Vision-Language-Action Models with Egocentric Experience](papers/2610.34186.md) · 2026-10-25 · 77/100
@@ -38,6 +39,8 @@
 - [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](papers/2611.07513.md) · 2026-11-05 · 72/100
 - [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](papers/2610.28589.md) · 2026-10-20 · 72/100
 - [Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](papers/2608.16590.md) · 2026-08-17 · 72/100
+- [VLA-MOPD: On-Policy Distillation for Multi-Task VLA Policy Consolidation](papers/2611.12286.md) · 2026-11-09 · 71/100
+- [AutoVLA-D: Learn a Trajectory-Geometric Condition from Reasoning for Autonomous Driving VLA](papers/2611.12382.md) · 2026-11-09 · 71/100
 - [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](papers/2611.08373.md) · 2026-11-05 · 71/100
 - [VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](papers/2611.08449.md) · 2026-11-05 · 71/100
 - [ForceLDM: A Force-aware Latent Dynamics Model for Contact-Rich Manipulation](papers/2611.03294.md) · 2026-11-02 · 71/100
@@ -51,10 +54,12 @@
 - [G0.5: One Autoregressive Stream for Robot Reasoning and Action](papers/2608.11739.md) · 2026-08-12 · 68/100
 - [Qwen-VLA: Alibaba's Embodied Foundation Model](papers/2605.30280.md) · 2026-05-28 · 68/100
 - [BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](papers/2608.05042.md) · 2026-08-05 · 67/100
+- [One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge](papers/2611.14432.md) · 2026-11-10 · 66/100
 - [Can Astra Solve RoboMME without Breaking the Bank?](papers/2611.06184.md) · 2026-11-04 · 66/100
 - [EXIMO: VLM Guided Exploration of VLA Policies](papers/2608.19891.md) · 2026-08-20 · 66/100
 - [Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](papers/2607.02501.md) · 2026-07-02 · 66/100
 - [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](papers/2506.13751.md) · 2025-06-16 · 66/100
+- [SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models](papers/2611.17110.md) · 2026-11-12 · 65/100
 - [HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](papers/2611.08039.md) · 2026-11-05 · 65/100
 - [Asynchronous Robot Policies](papers/2611.05155.md) · 2026-11-03 · 65/100
 - [AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](papers/2611.03815.md) · 2026-11-02 · 65/100
@@ -99,7 +104,7 @@
 - [HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](papers/2608.17584.md) · 2026-08-18
 - [Action with Visual Primitives](papers/2605.22183.md) · 2026-05-21
 
-## <a id="cat-world-model"></a>World Models · 75
+## <a id="cat-world-model"></a>World Models · 79
 
 - [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md) · 2026-10-19 · 92/100
 - [Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md) · 2025-01-07 · 89/100
@@ -114,6 +119,7 @@
 - [RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](papers/2607.06559.md) · 2026-07-07 · 80/100
 - [$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](papers/2606.13672.md) · 2026-06-11 · 80/100
 - [$\mu_0$: A Scalable 3D Interaction-Trace World Model](papers/2606.13769.md) · 2026-06-11 · 80/100
+- [OnlyAct: Extracting Action Representations from Foundation Models for World Models](papers/2611.14420.md) · 2026-11-10 · 77/100
 - [Interactive World Simulation with Cosmos for Physical AI](papers/2611.06627.md) · 2026-11-04 · 77/100
 - [Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](papers/2611.07229.md) · 2026-11-04 · 77/100
 - [OpenNWM: A Generalist Navigation World Model with Latent Action Pretraining](papers/2611.01844.md) · 2026-11-01 · 77/100
@@ -128,6 +134,7 @@
 - [ALPS: Visual State Encoders for World Models](papers/2610.30120.md) · 2026-10-21 · 72/100
 - [Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](papers/2606.16533.md) · 2026-06-15 · 72/100
 - [stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](papers/2605.21800.md) · 2026-05-20 · 72/100
+- [SWAM: Scaling World Action Models with Cross-Modal Alignment](papers/2611.12870.md) · 2026-11-09 · 71/100
 - [Hydra-0: Action Flow for Generalist World Modeling and Control](papers/2608.18077.md) · 2026-08-18 · 71/100
 - [H2R-Bench: Benchmarking Human-to-Robot Manipulation Video Generation in World Models](papers/2608.13049.md) · 2026-08-13 · 69/100
 - [KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding](papers/2607.19876.md) · 2026-07-22 · 69/100
@@ -138,6 +145,8 @@
 - [ABot-World-0: Infinite Interactive World Rollout on a Single Desktop GPU](papers/2607.19191.md) · 2026-07-21 · 66/100
 - [AlayaWorld: Interactive Long-Horizon World Modeling -- Full Technical Report](papers/2607.18367.md) · 2026-07-20 · 66/100
 - [DreamX-World 1.0: A General-Purpose Interactive World Model](papers/2606.16993.md) · 2026-06-15 · 66/100
+- [AFTER: A World Model with Adaptive Fast--Slow Timescales for Error-Driven Retention](papers/2611.15215.md) · 2026-11-11 · 65/100
+- [BirdDreams: Joint Perspective and BEV Video Generation for a Plausible, Reactive Driving World Model](papers/2611.14815.md) · 2026-11-10 · 65/100
 - [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](papers/2611.08111.md) · 2026-11-05 · 65/100
 - [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](papers/2611.04870.md) · 2026-11-03 · 65/100
 - [Coordinating Humanoid Loco-Manipulation through Action-Conditioned Latent Foresight](papers/2611.04839.md) · 2026-11-03 · 65/100
@@ -190,7 +199,7 @@
 - [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](papers/2609.14973.md) · 2026-09-14 · 60/100
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](papers/2608.11350.md) · 2026-08-11 · 51/100
 
-## <a id="cat-manipulation"></a>Manipulation · 51
+## <a id="cat-manipulation"></a>Manipulation · 55
 
 - [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md) · 2026-10-01 · 86/100
 - [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md) · 2026-10-24 · 83/100
@@ -201,6 +210,8 @@
 - [Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](papers/2610.25736.md) · 2026-10-19 · 74/100
 - [VISTA: Active Exploration for Self-Improvement in Embodied Agents](papers/2610.35051.md) · 2026-10-26 · 72/100
 - [SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](papers/2608.18701.md) · 2026-08-19 · 72/100
+- [EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming](papers/2611.16728.md) · 2026-11-12 · 71/100
+- [FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation](papers/2611.17142.md) · 2026-11-12 · 71/100
 - [World In-Context Learning for Agentic Robot Manipulation](papers/2611.12885.md) · 2026-11-09 · 71/100
 - [RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](papers/2611.05163.md) · 2026-11-03 · 71/100
 - [LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](papers/2610.40016.md) · 2026-10-29 · 71/100
@@ -214,6 +225,8 @@
 - [LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](papers/2608.18618.md) · 2026-08-19 · 66/100
 - [Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](papers/2608.10383.md) · 2026-08-11 · 66/100
 - [DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](papers/2611.14092.md) · 2026-11-10 · 65/100
+- [From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation](papers/2611.14274.md) · 2026-11-10 · 65/100
+- [PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](papers/2611.11798.md) · 2026-11-09 · 65/100
 - [DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](papers/2611.11166.md) · 2026-11-08 · 65/100
 - [MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](papers/2611.08372.md) · 2026-11-05 · 65/100
 - [Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](papers/2611.07532.md) · 2026-11-05 · 65/100
@@ -244,7 +257,7 @@
 - [EaDex: A Cross-Embodiment Dexterous Manipulation Framework from Low-Cost Demonstrations](papers/2606.03268.md) · 2026-06-02 · 37/100
 - [Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning](papers/2608.13422.md) · 2026-08-13
 
-## <a id="cat-locomotion"></a>Locomotion · 29
+## <a id="cat-locomotion"></a>Locomotion · 32
 
 - [GRAIL: Generating Humanoid Loco-Manipulation from 3D Assets and Video Priors](papers/2606.05160.md) · 2026-06-03 · 83/100
 - [Reflex: Visually Grounded Reactive Humanoid Control](papers/2610.12772.md) · 2026-10-08 · 80/100
@@ -252,6 +265,8 @@
 - [Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](papers/2611.11554.md) · 2026-11-08 · 77/100
 - [GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction](papers/2608.18234.md) · 2026-08-18 · 77/100
 - [HANDOFF: Humanoid Agentic Task-Space Whole-Body Control via Distilled Complementary Teachers](papers/2606.06493.md) · 2026-06-04 · 74/100
+- [PROOF: Perceptive Robustness via Out-of-Distribution Fallback for Legged Locomotion](papers/2611.18305.md) · 2026-11-13 · 71/100
+- [Autonomous Trail Racing with a Bicycle Robot](papers/2611.15280.md) · 2026-11-11 · 71/100
 - [LadderMan: Learning Humanoid Perceptive Ladder Climbing](papers/2606.05873.md) · 2026-06-04 · 71/100
 - [Towards a General Humanoid Loco-Manipulation Model via Egocentric Whole-Body Human Data Pretraining](papers/2610.00438.md) · 2026-09-30 · 68/100
 - [SONIC-K1: Porting a Universal Humanoid Motion Tracker to a Small Humanoid on a Single GPU](papers/2610.39327.md) · 2026-10-29 · 66/100
@@ -262,6 +277,7 @@
 - [MILD: Tractable Terrain Modeling for Learning Improved Bipedal Locomotion on Deformable Surfaces](papers/2608.19955.md) · 2026-08-20 · 65/100
 - [M3imic: Learning a Versatile Whole-Body Controller for Multimodal Motion Mimicking](papers/2606.04829.md) · 2026-06-03 · 65/100
 - [TAGA: Terrain-aware Active Gaze Learning for Generalizable Agile Humanoid Locomotion](papers/2606.05880.md) · 2026-06-04 · 62/100
+- [BlinkMimic: Training a Humanoid Motion Tracker in Minutes on a Single GPU](papers/2611.16422.md) · 2026-11-12 · 60/100
 - [STEP: Spatiotemporal Training with Explicit Prediction for Perceptive Humanoid Locomotion](papers/2611.08097.md) · 2026-11-05 · 59/100
 - [Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors](papers/2611.06564.md) · 2026-11-04 · 59/100
 - [Humanoid Mobility via Attention-based Contacts](papers/2610.31608.md) · 2026-10-22 · 59/100
@@ -315,16 +331,18 @@
 - [ERQA-Plus: A Diagnostic Benchmark for Reasoning in Embodied AI](papers/2606.17639.md) · 2026-06-16 · 54/100
 - [VISA: VLM-Guided Instance Semantic Auditing for 3D Occupancy World Models](papers/2606.13460.md) · 2026-06-11 · 45/100
 
-## <a id="cat-navigation"></a>Navigation & Mobility · 15
+## <a id="cat-navigation"></a>Navigation & Mobility · 17
 
 - [ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation](papers/2610.25690.md) · 2026-10-19 · 86/100
 - [Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation](papers/2608.17512.md) · 2026-08-18 · 80/100
 - [HumanCLAW: Can Vision-Language Models Act Through a Body?](papers/2607.27180.md) · 2026-07-29 · 75/100
 - [Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](papers/2606.18112.md) · 2026-06-16 · 68/100
 - [HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments](papers/2608.12860.md) · 2026-08-13 · 66/100
+- [LHNav: Long-Horizon Humanoid Navigation via Multirate Coordination and Physics-Grounded Action Data](papers/2611.12136.md) · 2026-11-09 · 65/100
 - [RAIBO-Wagon: Real-Time Navigation System for a Legged Robot Towing a Wagon](papers/2610.39267.md) · 2026-10-29 · 65/100
 - [See What I Need, Dream What I Want: A Navigation Foundation Model on a Self-Constructed Representation Space](papers/2610.31762.md) · 2026-10-22 · 65/100
 - [RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation](papers/2610.29845.md) · 2026-10-21 · 65/100
+- [What World Model Does Active Object Search Need? A Study under Imperfect Detection](papers/2611.15689.md) · 2026-11-11 · 60/100
 - [MAD: Mapping-Aware World Models for Agile Quadrotor Flight](papers/2606.04534.md) · 2026-06-03 · 56/100
 - [MessyNav: Zero-Shot Navigation via Manipulation in Messy Environments](papers/2611.07417.md) · 2026-11-05 · 54/100
 - [NavVerse: Benchmarking Indoor-to-Outdoor Embodied Navigation in Continuous Robot Simulation](papers/2607.19695.md) · 2026-07-22 · 54/100
@@ -333,14 +351,16 @@
 - [Learning-Based Behavior Planning for Automated Driving: Real-World Integration and Deployment](papers/2608.12198.md) · 2026-08-12 · 52/100
 - [NavWM: A Unified Navigation World Model for Foresight-Driven Planning](papers/2606.24101.md) · 2026-06-23 · 48/100
 
-## <a id="cat-rl-il"></a>RL & Imitation Learning · 12
+## <a id="cat-rl-il"></a>RL & Imitation Learning · 14
 
 - [Diffusion Policy: Visuomotor Policy Learning via Action Diffusion](papers/2303.04137.md) · 2023-03-07 · 100/100
 - [Event2Reward: Learning Robotic Rewards from Progress Relations](papers/2610.39212.md) · 2026-10-29 · 77/100
 - [Revisiting Open-Loop Execution in Robotics: Toward Reactive, Higher-Performing Policies](papers/2608.15938.md) · 2026-08-16 · 77/100
 - [ODE Policy: Robot Learning via Action Dynamics, Not Actions](papers/2611.01729.md) · 2026-11-01 · 76/100
+- [ExRL: Sample-Efficient Online Adaptation of Long-Chunk Policies via Execution Length Control](papers/2611.13482.md) · 2026-11-10 · 71/100
 - [PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning](papers/2611.05372.md) · 2026-11-03 · 71/100
 - [DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning](papers/2610.32093.md) · 2026-10-23 · 71/100
+- [NSDL: Neuro-Symbolic Division of Labor for Multi-Robot Task Planning](papers/2611.16671.md) · 2026-11-12 · 66/100
 - [Asymmetric On-Policy Distillation Learns In-Context Exploration](papers/2610.30105.md) · 2026-10-21 · 65/100
 - [RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing](papers/2608.16195.md) · 2026-08-17 · 63/100
 - [Training in Deployment: Human-in-the-loop Online Post-Training for Robot Manipulation](papers/2610.29264.md) · 2026-10-21 · 60/100

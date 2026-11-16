@@ -1991,3 +1991,365 @@ entries:
   reason: over cap（本轮上限 5，按核心优先+总分排序未入选）
   date: '2026-11-16'
   run: '2026-11-11'
+- arxiv_id: '2611.18397'
+  title: 'Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent'
+  decision: exclude
+  reason: 超出范围：主要研究键鼠驱动的电子游戏智能体，未给出物理机器人感知与控制验证。
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18359'
+  title: 'Envisioning Agentic Robotics: A New Era of Robotic Systems'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18346'
+  title: 'VLAN: Vision-Language Accessible Navigation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.17060'
+  title: 'Ropedia Xperience 2: A Gold Standard for Scaling Physical AI Environments and Behaviors'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16439'
+  title: 'HALO: Human-Aligned Data Collection for WhoLe-body MObile Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18372'
+  title: 'Vision-Language-Action Models: A Life-Cycle Survey of Design, Training and Deployment'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15131'
+  title: 'Duo: A Reciprocal World Model for Full-Duplex Interaction'
+  decision: exclude
+  reason: 超出范围：主要贡献是全双工音视频交互生成，未评估用于物理决策、控制或机器人仿真的世界模型。
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18176'
+  title: 'ESI: An Embodied Self-Improvement Flywheel for LLM-VLA Agents'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15524'
+  title: 'Reading the Table: Sim-to-Real Game State Detection for the Chef''s Hat Card Game'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15381'
+  title: Low-Cost Mobile Bimanual Manipulation for Long-Horizon Toilet Cleaning
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14834'
+  title: Learning Low-Latency Action Verification for Frozen Vision-Language-Action Models
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14115'
+  title: 'LEASH: Stay Safe in Agentic Robotics'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12409'
+  title: Bridging Task Planning and Execution for Language-Conditioned Bimanual Manipulation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18003'
+  title: Reusing Locomotion Training Recipes Across Humanoids via Body-Aligned Virtual Joints
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16374'
+  title: 'ManiLadder: Benchmarking Robot Manipulation Through a Categorized and Multi-Difficulty Level Task Ladder'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15443'
+  title: 'SPARC: RoboCup Standard Platform for Autonomous Rescue Competition with Initial Datasets, Software, and Simulation
+    Environments'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12383'
+  title: 'PCTac: Mechanochromic Photonic-Crystal Tactile Sensor for Dexterous Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11981'
+  title: 'Thermo-VLA: A Thermal-Aware Vision-Language-Action Model with Gated Residual Modulation for Robotic Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16589'
+  title: 'STVLA: Spatial-aware and Temporal-memory forVision-Language-Action Models'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16423'
+  title: 'VOKE: Visual Object Kinematics Estimator for Dexterous In-Hand Manipulation'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16246'
+  title: What Can a VLA Learn from the Agent That Calls It? Task-Level Experience Distillation for Embodied Navigation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15974'
+  title: Video-Action Models for Data-Efficient Industrial Manipulation
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15802'
+  title: 'RUMI: A Robotiq-Matched Universal Manipulation Interface for Robot Learning with Augmented Reality and Haptic Feedback'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14186'
+  title: Koopman Model-Based Reinforcement Learning
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12732'
+  title: '$Σ$-LeWM: Learning World Models via S-Information for Robot Control'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12087'
+  title: 'Compass 1: Towards Open-World and Persistent Embodied Navigation from Monocular RGB Videos'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.17619'
+  title: 'TouchTwin: Scaling Human Touch Data via Real-to-Sim-to-Real'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16419'
+  title: 'I See What You Want: Decoding Hierarchical Operator Intent from Visual Teleoperation History'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14048'
+  title: 'LaST0.5: A Generalist World Action Model with Interaction-Centric Latent Reasoning'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11894'
+  title: 'Distilling Instructions into Weights: Closed-Form Edits Fix a Robot Policy''s Misreading'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11868'
+  title: Fade to... Red? Scheduling Coloured Noise Exploration Supports Efficient Robot Learning with Reduced Movement Jerk
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.17775'
+  title: 'Beyond Prediction Gain: LASR as a Metric for Action-Grounded Latents in World Models'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.17598'
+  title: 'X-Nav Technical Report: Real-World Long-Horizon Indoor-to-Outdoor Navigation on a Humanoid Robot'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12804'
+  title: Benchmarking Real-World Robotic Manipulation through Stochastic Challenges
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16424'
+  title: 'PhysCapBench: A Cross-Domain Benchmark for Physically Grounded Video Captioning'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.13030'
+  title: 'APS-VLA: Action-Guided and Future-Aware Token Pruning for Efficient Vision-Language-Action Models'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18110'
+  title: 'PoliMop: Policy-in-the-Loop Motion Planning in 3D Spaces for Mobile Robots'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16009'
+  title: 'JustRUA: A Controlled Study of GPT-6 Robot-Use Agents'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15651'
+  title: 'Recover, Don''t Just Continue: Learning from Feedback for Physical Failure Understanding and Correction'
+  decision: defer
+  reason: 材料待核：摘要OPD与正文NEPO/熵门控的实验归属未统一；公开实现采用工程默认且无完整训练集、判分器和检查点，暂不评分。
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15112'
+  title: 'Elastra: A Simulation Framework for Elastic Bodies'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14985'
+  title: 'ILA: A Transferable Interface-Level Adapter for Compliant Humanoid Motion Tracking'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14729'
+  title: 'SunLightBots: Turning sunlight into self-sustained, high-power motion in soft robots'
+  decision: exclude
+  reason: 超出范围：依靠材料与机械反馈实现自主运动，没有学习系统或直接服务机器人学习的评测。
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12102'
+  title: 'SPARK: Simple Post-training for Adapting pRetrained Knowledge to Robot Control'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11921'
+  title: An Evaluation of Tabular Foundation Models as Training-Free World Models
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12324'
+  title: How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time
+  decision: exclude
+  reason: 超出范围：ARC-AGI-3网格游戏规则学习，未建立物理机器人任务或控制证据。
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.17238'
+  title: 'HEIR: Harness Egocentric Intent for Human-Robot Interactions'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15928'
+  title: 'Runtime Safety and Emergency Stops on a Full-Size Humanoid: Deployment Lessons and a Case for Graduated Force Authority'
+  decision: exclude
+  reason: 超出范围：经典MPC与关节安全停机部署经验，正文未呈现学习组件或机器人学习专用资源。
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.13039'
+  title: 'Robo-MLT: Dual-System Robotic Manipulation for Long-Horizon Medical Laboratory Tasks'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.12017'
+  title: Grasp-Taxonomy Conditioning as a Mode Switch for Dexterous Grasping of Climbing Holds
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11941'
+  title: Flip Anything with Agentic Robotics Self-Learning
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11869'
+  title: Action Representation for Spatial Generalization in Robot World Models
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.11856'
+  title: 'DeltaForge: A Post-hoc Mixture-of-Experts VLA for Multi-Domain Autonomous Driving'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15101'
+  title: 'CFGComposer: Compositional Audio-Text-to-Motion Generation via Copula Score Correction'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.18562'
+  title: Training Reasoning Models in Simulation to Natively Use Real Robots
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.17720'
+  title: 'Ego2Flow: Benchmarking the Traffic-System Impact of Autonomous Driving on Maps Distilled from Real-World Roads'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.16188'
+  title: 'PERA: Plug-in Experts for Robotic Actions in Continual Whole-Body Control'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15650'
+  title: Single-View RGB-D Force--Deformation Estimation for Robotic Manipulation of Elasto-Plastic Materials
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15078'
+  title: 'CrowdMAPS: Crowdsourcing Multiple Actions per State for Real-World Imitation Learning'
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.15048'
+  title: Does Your World Model Know Actions Have Consequences?
+  decision: defer
+  reason: over cap（本轮上限 20，按核心优先+总分排序未入选）
+  date: '2026-11-16'
+  run: '2026-11-16'
+- arxiv_id: '2611.14062'
+  title: 'A human-in-the-loop Control Paradigm for Construction Robotics: From VR-Guided Teleoperation to Semi-Autonomous
+    Dual-Arm Operation'
+  decision: exclude
+  reason: 超出范围：手工技能库和规则式共享控制，未包含学习策略或学习评测。
+  date: '2026-11-16'
+  run: '2026-11-16'

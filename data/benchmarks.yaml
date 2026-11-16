@@ -348,3 +348,37 @@ benchmarks:
   subcategory: multi-skill
   added: '2026-11-16'
   last_check: '2026-11-16'
+- id: navsim-navtest
+  name: NAVSIM navtest
+  desc: 日志驱动非反应式驾驶伪闭环基准；与连续交互闭环和NAVSIM v2协议需区分。
+  links:
+    code: https://github.com/autonomousvision/navsim
+  subcategory: navigation
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: neuroncap
+  name: NeuroNCAP
+  desc: 基于nuScenes场景重建的驾驶闭环仿真评测。
+  links:
+    code: https://github.com/wljungbergh/NeuroNCAP
+  subcategory: navigation
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: locus-bench
+  name: LOCUS-Bench
+  desc: 分别按场景状态判断和结构规划难度分级的异构多机器人计划基准。
+  links:
+    paper: https://arxiv.org/abs/2611.16671
+    code: https://github.com/Xincheng-Tan/NSDL
+    data: https://huggingface.co/datasets/XinchengTan/locus-bench
+  subcategory: multi-skill
+  added: '2026-11-16'
+  last_check: '2026-11-16'
+- id: viki-l2
+  name: VIKI-L2
+  desc: 异构多机器人视觉任务规划基准；本次NSDL报告离线计划准确率而非真机成功率。
+  links:
+    paper: https://arxiv.org/abs/2611.16671
+  subcategory: multi-skill
+  added: '2026-11-16'
+  last_check: '2026-11-16'
