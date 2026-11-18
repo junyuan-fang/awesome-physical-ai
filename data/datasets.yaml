@@ -344,3 +344,28 @@ datasets:
   subcategory: egocentric-human
   added: '2026-11-16'
   last_check: '2026-11-16'
+- id: dexycb
+  name: DexYCB
+  desc: 人手抓取 YCB 物体的多视角 RGB-D 数据，含手部、物体姿态标注。
+  links:
+    project: https://dex-ycb.github.io/
+  subcategory: egocentric-human
+  added: '2026-11-18'
+  last_check: '2026-11-18'
+- id: h2o-hand-object
+  name: H2O
+  desc: 含第一视角及多视角的双手物体交互数据，提供手部与物体运动标注。
+  links:
+    paper: https://openaccess.thecvf.com/content/ICCV2021/html/Kwon_H2O_Two_Hands_Manipulating_Objects_for_First_Person_Interaction_Recognition_ICCV_2021_paper.html
+  subcategory: egocentric-human
+  added: '2026-11-18'
+  last_check: '2026-11-18'
+- id: sharpadex-v1
+  name: SharpaDex v1.0
+  desc: 约 300 小时的双手灵巧遥操作示范，包括头腕视觉、指尖触觉、关节与动作信号。
+  links:
+    project: https://sharpadex.sharpa.com.cn/
+    data: https://huggingface.co/datasets/Sharpa-Robotics/SharpaDex-v1.0
+  subcategory: manipulation-demos
+  added: '2026-11-18'
+  last_check: '2026-11-18'

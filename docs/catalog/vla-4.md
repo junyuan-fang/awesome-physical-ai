@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**97 篇** · 第 **4 / 7** 页 · 每页最多 15 篇
+**99 篇** · 第 **4 / 7** 页 · 每页最多 15 篇
 
 [1](vla.md) · [2](vla-2.md) · [3](vla-3.md) · **4** · [5](vla-5.md) · [6](vla-6.md) · [7](vla-7.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-46. **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](../papers/2608.05042.md)**
+46. **[Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)**
+    2026-05-28 · 值得关注 · **68/100** · 占位仓库
+
+    Qwen-VLA 以 Qwen3.5-4B 加 DiT 动作专家统一操作、导航与轨迹预测；作者报告单一模型 LIBERO 97.9%、Simpler-WidowX 73.7%、RoboTwin 86.1/87.2%、R2R OSR 69.0%。
+
+47. **[BridgeVLA++: A Data-Efficient, Generalizable, and Memory-Augmented Vision-Language-Action Framework for 3D Manipulation](../papers/2608.05042.md)**
     2026-08-05 · 值得关注 · **67/100** · 未找到仓库
 
     在 BridgeVLA 的多视图热力图 3D VLA 上加入时序记忆与可重渲染的点云空间记忆，支持记忆依赖与双臂任务；作者报告 RMBench、MemoryBench 上达到最优，并在两种真机平台验证。
 
-47. **[One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge](../papers/2611.14432.md)**
+48. **[One Policy for 100 Household Tasks: Our Solution for the 2026 BEHAVIOR Challenge](../papers/2611.14432.md)**
     2026-11-10 · 值得关注 · **66/100** · 实质代码
 
     单一VLA覆盖100项BEHAVIOR任务；混合智能体公开提交Q为0.446，成功率27.3%。
 
-48. **[Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)**
+49. **[Can Astra Solve RoboMME without Breaking the Bank?](../papers/2611.06184.md)**
     2026-11-04 · 值得关注 · **66/100** · 实质代码
 
     三级 Astra 系统在 RoboMME 上获作者报告的 79.13% 成功率、每回合 3.63 次规划调用，但规划时暂停仿真。
 
-49. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
+50. **[EXIMO: VLM Guided Exploration of VLA Policies](../papers/2608.19891.md)**
     2026-08-20 · 值得关注 · **66/100** · 实质代码
 
     EXIMO 以「VLM 编排探索→蒸馏 SFT→残差离策略 RL」三阶段微调 VLA，作者报告在 ALOHA 仿真 22 个长程/推理任务上样本效率与最终成功率均优于直接 RL 基线。
 
-50. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
+51. **[Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](../papers/2607.02501.md)**
     2026-07-02 · 值得关注 · **66/100** · 实质代码
 
     面向 VLA 与世界-动作模型的可移植 C++ 推理运行时，五层架构支持多速率执行与量化；作者报告相对 Python 基线推理加速 1.05–2.70 倍、显存降低 7%–77%，成功率多数接近基线。
 
-51. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
+52. **[LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](../papers/2506.13751.md)**
     2025-06-16 · 值得关注 · **66/100** · 未找到仓库
 
     人形全身控制的视觉-语言基准 LeVERB-Bench（150+ 任务/10 类）与分层潜动作框架 LeVERB；作者报告零样本总成功率 58.5%，约为朴素分层 VLA 的 7.8 倍。
 
-52. **[SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models](../papers/2611.17110.md)**
+53. **[EgoSwarm: Learning Decentralized Robot Swarm Intelligence from Human Swarm Demonstrations](../papers/2611.20100.md)**
+    2026-11-15 · 值得关注 · **65/100** · 未找到仓库
+
+    EgoSwarm 将多人第一视角示范转为去中心化策略监督，三项多机器人真机协作任务平均成功率为 72.2%，标准消息基线为 50.0%。
+
+54. **[SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models](../papers/2611.17110.md)**
     2026-11-12 · 值得关注 · **65/100** · 未找到仓库
 
     SALA以语言语义软邻域对齐无配对人机视频动作，检验人类视频预训练与任务后训练双轴扩展。
 
-53. **[HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](../papers/2611.08039.md)**
+55. **[HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](../papers/2611.08039.md)**
     2026-11-05 · 值得关注 · **65/100** · 未找到仓库
 
     HITCH 用主动三维感知和全身执行接口训练 VLM，基础任务迁移至 SIMPLE 达 51.1% 成功率。
 
-54. **[Asynchronous Robot Policies](../papers/2611.05155.md)**
+56. **[Asynchronous Robot Policies](../papers/2611.05155.md)**
     2026-11-03 · 值得关注 · **65/100** · 未找到仓库
 
     ARP把慢语义更新与快动作视觉回路分开；作者在LIBERO-Perturb报告成功率51.5%，同规模同步基线9.5%。
 
-55. **[AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)**
+57. **[AIRoA-0: Long-Horizon, Precise, Cross-Embodiment Manipulation from Handheld Data](../papers/2611.03815.md)**
     2026-11-02 · 值得关注 · **65/100** · 未找到仓库
 
     AIRoA-0仅采集手持夹爪示范；作者在未见场地的十项Franka任务报告含部分完成计分的平均成功率78%，最强基线27%。
 
-56. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
+58. **[From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models](../papers/2610.39543.md)**
     2026-10-29 · 值得关注 · **65/100** · 未找到仓库
 
     CoRAct把运动意图和未来路标转成奖励，在动作噪声空间优化推理与执行的一致性。
 
-57. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
+59. **[OpenFlyV2: An onboard vision-language-action model for aerial perception and navigation](../papers/2610.39287.md)**
     2026-10-29 · 值得关注 · **65/100** · 占位仓库
 
     OpenFlyV2在Orin NX全机载运行视觉语言动作模型，真实四场景导航成功率48%。
 
-58. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
+60. **[Quantize by Doing: Task-Guided Mixed-Precision Quantization of Vision-Language-Action Models](../papers/2610.38661.md)**
     2026-10-28 · 值得关注 · **65/100** · 实质代码
 
     QbD-VLA以短闭环成功率选择混合精度；仿真选出的配置在真实X-VLA有效，在π0.5上失败。
-
-59. **[ThinkWorld: World Imagination Reinforces Chain-of-Dynamics Reasoning](../papers/2610.37666.md)**
-    2026-10-27 · 值得关注 · **65/100** · 未找到仓库
-
-    ThinkWorld以预测未来与实测未来的吻合强化运动令牌推理，研究人类视频技能组合迁移。
-
-60. **[Retrieve to Act: Motion Primitive Graph Retrieval for Robust VLA Execution](../papers/2610.37215.md)**
-    2026-10-27 · 值得关注 · **65/100** · 未找到仓库
-
-    R2A以运动原语图检索修正冻结VLA，研究视觉扰动下的执行稳定性与真实迁移。
 
 ---
 

@@ -9,12 +9,12 @@
 
 A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
 
-**343 papers** · 35 datasets · 11 simulators · 42 benchmarks · 13 tools
+**348 papers** · 38 datasets · 11 simulators · 46 benchmarks · 13 tools
 
 [Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
 
 > Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
-> Latest completed scan: **2026-11-17** · [Read the report](digests/daily/2026-11-17.md)
+> Latest completed scan: **2026-11-18** · [Read the report](digests/daily/2026-11-18.md)
 
 ## <a id="contents"></a>Start here
 
@@ -24,11 +24,14 @@ A curated guide to embodied intelligence, robotics foundation models, and physic
 | Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
 | Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
 | Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
-| Catch up on recent work | [Latest report](digests/daily/2026-11-17.md) · [Recent picks](#weekly-picks) |
+| Catch up on recent work | [Latest report](digests/daily/2026-11-18.md) · [Recent picks](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>Recent picks
 
 Up to 5 priority papers added in the 7-day window ending on the latest scan. [Browse the Top 20 →](docs/rankings.md)
+
+- **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](docs/papers/2611.20481.md)** · 2026-11-16 · 77/100
+  Manipulation · Notable · Partially released
 
 - **[ActionCodec2: A Streaming Action Tokenizer](docs/papers/2611.15490.md)** · 2026-11-11 · 77/100
   Vision-Language-Action (VLA) · Notable · Code released
@@ -42,17 +45,14 @@ Up to 5 priority papers added in the 7-day window ending on the latest scan. [Br
 - **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](docs/papers/2611.12806.md)** · 2026-11-09 · 76/100
   Manipulation · Notable · Code released
 
-- **[Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](docs/papers/2611.20460.md)** · 2026-11-16 · 71/100
-  Vision-Language-Action (VLA) · Notable · Code released
-
 ## Research areas
 
 Choose a direction below. Each catalog page has up to 15 papers; select a title for its full review.
 
 | Area | Browse | Papers |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 187 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 56 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 189 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 59 |
 | <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 32 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
 | <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 14 |
@@ -67,9 +67,9 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 
 | Resource | Purpose | Count |
 |---|---|---:|
-| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 35 |
+| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 38 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 11 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 42 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 46 |
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 13 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 

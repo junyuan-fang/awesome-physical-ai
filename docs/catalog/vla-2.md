@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**97 篇** · 第 **2 / 7** 页 · 每页最多 15 篇
+**99 篇** · 第 **2 / 7** 页 · 每页最多 15 篇
 
 [1](vla.md) · **2** · [3](vla-3.md) · [4](vla-4.md) · [5](vla-5.md) · [6](vla-6.md) · [7](vla-7.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -61,40 +61,40 @@
 
     LingBot-VLA 2.0 用约 6 万小时数据（5 万小时 20 种机器人轨迹+1 万小时人类第一视角视频）预训练，加入动作专家 MoE 与深度/视频双教师未来预测蒸馏；作者报告 GM-100 通才设置下优于 1.0 版。
 
-24. **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](../papers/2608.09771.md)**
+24. **[WiTac: Wrist-Informed Tactile Representations for Contact-Rich Manipulation](../papers/2611.21057.md)**
+    2026-11-16 · 值得关注 · **74/100** · 未找到仓库
+
+    WiTac 先融合腕部视觉与指尖触觉，Sharpa North 四项真机任务中，GR00T N1.7 平均成功率由 37.5% 提升至 66.3%。
+
+25. **[SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](../papers/2608.09771.md)**
     2026-08-10 · 值得关注 · **74/100** · 实质代码
 
     0.5B 紧凑策略 SLIM 用掩码轨迹预测学习动作锚定的观测隐变量，作者报告 LIBERO 97.5%、LIBERO-Plus 零样本 77.45%、CALVIN 平均长度 4.556，并做了真机验证。
 
-25. **[RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)**
+26. **[RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)**
     2026-07-29 · 值得关注 · **74/100** · 实质代码
 
     在冻结 VLA 推理时，用基于动作专家潜变量训练的离线 RL 流策略组合引导动作采样，且仅在失败检测器报警时启用；作者报告 SIMPLER/PolaRiS 分布外任务最高提升 17.3%。
 
-26. **[LARA: Latent Action Representation Alignment for Vision-Language-Action Models](../papers/2606.07100.md)**
+27. **[LARA: Latent Action Representation Alignment for Vision-Language-Action Models](../papers/2606.07100.md)**
     2026-06-05 · 值得关注 · **74/100** · 实质代码
 
     以 REPA 式表征对齐联合训练潜动作模型与扩散 VLA，可用于预训练、后训练增强与潜动作精炼；作者报告 OXE 约束下 LIBERO 88.6%，G1 真机少样本适配平均提升约 32%。
 
-27. **[AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding](../papers/2606.06155.md)**
+28. **[AffordanceVLA: A Vision-Language-Action Model Empowering Action Generation through Affordance-Aware Understanding](../papers/2606.06155.md)**
     2026-06-04 · 值得关注 · **74/100** · 实质代码
 
     在 MoT 架构中加入 Which2Act/Where2Act/How2Act 结构化可供性预测作为中间监督，用 8.8M 定位/指点样本三阶段训练；作者报告 LIBERO 平均 95.8%，真机复杂任务 82.9% 对 π0 44.8%。
 
-28. **[HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](../papers/2604.07993.md)**
+29. **[HEX: Humanoid-Aligned Experts for Cross-Embodiment Whole-Body Manipulation](../papers/2604.07993.md)**
     2026-04-09 · 值得关注 · **74/100** · 实质代码
 
     面向全尺寸双足人形的全身操作 VLA：人形对齐的统一状态表示 + MoE 本体感知预测器 + 历史 token；作者报告在天工 2.0/3.0 真机 7 项任务上优于 π0、GR00T N1.5 等基线。
 
-29. **[Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](../papers/2611.07513.md)**
+30. **[Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](../papers/2611.07513.md)**
     2026-11-05 · 值得关注 · **72/100** · 实质代码
 
     Concertina在共享扩散VLM内生成连续动作；作者报告LIBERO成功率98.15%、LIBERO-Plus为85.9%、CALVIN ABC-D链长4.142。
-
-30. **[AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](../papers/2610.28589.md)**
-    2026-10-20 · 值得关注 · **72/100** · 实质代码
-
-    把编码智能体的 SFT+多轮 RL 后训练搬给机器人 planner；9B 规划器在 LIBERO-PRO 成功率 18.1%→71.0%（无外部记忆），逼近带记忆 Codex(GPT-5.5) 的 72.1%，并开源框架与 checkpoint。
 
 ---
 

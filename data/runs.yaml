@@ -411,3 +411,33 @@ runs:
   - benchmark:cortexbench
   digest: digests/daily/2026-11-17.md
   applied: '2026-11-18'
+- scan_date: '2026-11-18'
+  kind: daily
+  window_start: '2026-11-15'
+  window_end: '2026-11-18'
+  last_covered_end: '2026-11-17'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 135
+    already_tracked_or_triaged: 14
+    out_of_scope: 17
+    below_pool_cut: 84
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 5
+  excluded: 9
+  deferred: 6
+  removed: 0
+  new_resources:
+  - benchmark:dexart
+  - benchmark:adroit
+  - dataset:dexycb
+  - dataset:h2o-hand-object
+  - benchmark:ycb-object-set
+  - dataset:sharpadex-v1
+  - benchmark:univtac
+  digest: digests/daily/2026-11-18.md
+  applied: '2026-11-18'

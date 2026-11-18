@@ -25,7 +25,7 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 [项目](https://isaac-sim.github.io/IsaacLab) [代码](https://github.com/isaac-sim/IsaacLab) 
 标签：rl / gpu-accelerated / nvidia
 <details>
-<summary>关联论文 1–10 / 15（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 16（提出 / 训练 / 评测）</summary>
 
 - eval · [PhysiFlow: Physics-Aware Humanoid Whole-Body VLA via Multi-Brain Latent Flow Matching and Robust Tracking](../papers/2603.05410.md)
 - pretrain · [Mana: Dexterous Manipulation of Articulated Tools](../papers/2606.13677.md)
@@ -41,13 +41,14 @@ NVIDIA's modular RL training framework built on Isaac Sim.
 </details>
 
 <details>
-<summary>关联论文 11–15 / 15（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–16 / 16（提出 / 训练 / 评测）</summary>
 
 - eval · [Playing Soccer Like Humans Do: Learning Versatile and Agile Humanoid Soccer via Latent Motion Priors](../papers/2611.06564.md)
 - eval · [STEP: Spatiotemporal Training with Explicit Prediction for Perceptive Humanoid Locomotion](../papers/2611.08097.md)
 - finetune · [DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)
 - eval · [PROOF: Perceptive Robustness via Out-of-Distribution Fallback for Legged Locomotion](../papers/2611.18305.md)
 - pretrain · [DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use](../papers/2611.20202.md)
+- eval · [DexFormer 2.0: Towards a Cross-Embodiment Foundation Policy for Dexterous Grasping](../papers/2611.20273.md)
 
 </details>
 

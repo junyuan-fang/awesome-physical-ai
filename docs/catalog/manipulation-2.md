@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**56 篇** · 第 **2 / 4** 页 · 每页最多 15 篇
+**59 篇** · 第 **2 / 4** 页 · 每页最多 15 篇
 
 [1](manipulation.md) · **2** · [3](manipulation-3.md) · [4](manipulation-4.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -21,80 +21,80 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-16. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
+16. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
+    2026-10-21 · 值得关注 · **71/100** · 实质代码
+
+    首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。
+
+17. **[MotorMind: Scaffolding General Vision Language Models for Zero-Shot Robot Manipulation](../papers/2609.38078.md)**
     2026-09-29 · 值得关注 · **71/100** · 实质代码
 
     MotorMind 让冻结通用 VLM 经中层级动作与异步监控直接控制机器人；作者报告 LIBERO-PRO 基础 66.7%、扰动 53.8%，真机 xArm6 平均 95%。
 
-17. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
+18. **[TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](../papers/2609.05266.md)**
     2026-09-04 · 值得关注 · **71/100** · 实质代码
 
     TacPAC 在预测视觉与触觉的世界-动作模型上加入触觉专家，执行中将实时触觉与缓存的预期接触对照来修正剩余动作，作者报告五个真机接触密集任务平均成功率由 22% 升至 64%。
 
-18. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
+19. **[Robots Acquire Manipulation Skills in Seconds from a Single Human Video](../papers/2607.20033.md)**
     2026-07-22 · 值得关注 · **71/100** · 实质代码
 
     HOST 推理时从单条人类视频获得新操作技能、无需参数更新；作者报告 50 个新任务平均约 29 秒习得、成功率 62%，高于用 50 条示教微调的 Wall-OSS（56%）且不遗忘旧技能。
 
-19. **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](../papers/2608.21031.md)**
+20. **[PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](../papers/2608.21031.md)**
     2026-08-21 · 值得关注 · **69/100** · 实质代码
 
     PhysCaP 为代码即策略智能体加入由关节力矩与夹爪形变估计质量、刚度的模块及规划/排序双智能体，作者报告在三个真机任务和 LIBERO 中以更少交互与更短时间达到相当或更高成功率。
 
-20. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
+21. **[TaF-Foundation: Wrench-Grounded Cross-Sensor Tactile Representations](../papers/2611.20718.md)**
+    2026-11-16 · 值得关注 · **68/100** · 未找到仓库
+
+    TaF-Foundation 用同步六维力和力矩对齐 24 个触觉传感器，TaF-Policy 在四项真机任务上平均成功率为 46.25%，最佳对照为 23.75%。
+
+22. **[DexFormer 2.0: Towards a Cross-Embodiment Foundation Policy for Dexterous Grasping](../papers/2611.20273.md)**
+    2026-11-15 · 值得关注 · **68/100** · 占位仓库
+
+    DexFormer 2.0 在 Isaac Lab 的六种保留臂手组合上取得 51.18% 稳定抓取成功率，同协议下 GRU 为 31.28%。
+
+23. **[GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](../papers/2611.02171.md)**
     2026-11-01 · 值得关注 · **68/100** · 未找到仓库
 
     以图像目标、特权教师蒸馏和记忆重建学习手内重定向，五种真机物体共100次测试成功80次。
 
-21. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
+24. **[Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)**
     2026-08-03 · 值得关注 · **68/100** · 未找到仓库
 
     将第一人称人手操作视频经动作重定向、机械臂渲染替换与多级筛选转为 15 种机械臂数据，共 18,561 小时；作者报告与真机数据 1:1 联合预训练提升 RoboTwin 扰动泛化与真机表现。
 
-22. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
+25. **[RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](../papers/2610.27861.md)**
     2026-10-20 · 值得关注 · **66/100** · 实质代码
 
     基于 RoboCasa365 的诊断式鲁棒性基准：配对 clean-perturbed 反事实 + 阶段感知诊断；作者报告相同端到端退化可对应不同失败深度，并开源代码与数据集。
 
-23. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
+26. **[LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories](../papers/2608.18618.md)**
     2026-08-19 · 值得关注 · **66/100** · 实质代码
 
     化学实验室灵巧操作的分层真机+仿真基准，含原子技能、组合技能与长时程流程三级；作者报告π0.5原子技能最佳，但三种策略均无法完成完整实验流程。
 
-24. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
+27. **[Real-World Cooperative Bimanual Dexterous Grasp of Large Objects from Single-View Observations](../papers/2608.10383.md)**
     2026-08-11 · 值得关注 · **66/100** · 实质代码
 
     用遥操作采集的真机多模态数据训练 DDPM，从单视角点云生成双臂灵巧手的抓取关节构型，再结合运动规划和力引导微调执行；作者报告在未见过的大物体上总成功率为 61.9%。
 
-25. **[DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)**
+28. **[DexSeed: Expanding Human Hand-Object Interactions into Robot Demonstrations for Dexterous Policy Learning](../papers/2611.14092.md)**
     2026-11-10 · 值得关注 · **65/100** · 实质代码
 
     DexSeed把19段人手交互扩展为25270条机器人示范；真机八种抓法各10次测试成功率为20%至80%。
 
-26. **[From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation](../papers/2611.14274.md)**
+29. **[From Prediction to Action: Learning Physical Context for Deformable Linear Object Manipulation](../papers/2611.14274.md)**
     2026-11-10 · 值得关注 · **65/100** · 未找到仓库
 
     GPF将抓点选择与动作生成分离，470组配对模拟显示交互历史对执行有益，参数预测更准却未必有用。
 
-27. **[PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)**
+30. **[PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)**
     2026-11-09 · 值得关注 · **65/100** · 未找到仓库
 
     PAIR用本体状态对齐图像与相机射线，在仿真和真实相机变化测试中改善未见视角操作。
-
-28. **[DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight](../papers/2611.11166.md)**
-    2026-11-08 · 值得关注 · **65/100** · 未找到仓库
-
-    DexForesight训练时对齐空间世界模型与策略潜变量；作者报告DexJoCo成功率由49.4%升至60.5%。
-
-29. **[MOMASPLAT: Dynamic Novel-View Demonstration Augmentation for Mobile Manipulation](../papers/2611.08372.md)**
-    2026-11-05 · 值得关注 · **65/100** · 未找到仓库
-
-    MoMaSplat 重渲染含接触后物体运动的完整演示，作者报告五项真机任务未见底座位姿平均成功率 37%，最强基线 17%。
-
-30. **[Semantics-to-Contact: A Stagewise Framework for Robust Contact-Rich Manipulation](../papers/2611.07532.md)**
-    2026-11-05 · 值得关注 · **65/100** · 未找到仓库
-
-    S2C 结合 VLM 定位、力反馈残差 RL 与物体中心增强，作者报告六项真机接触任务在位置变化下平均成功率 94.17%。
 
 ---
 

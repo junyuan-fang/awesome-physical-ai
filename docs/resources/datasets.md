@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**35 项** · Robot trajectories, demonstrations, scene datasets
+**38 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -41,6 +41,9 @@
 - [Habitat Synthetic Scenes Dataset](#resource-hssd)
 - [nuScenes](#resource-nuscenes)
 - [SWAM Pretrain](#resource-swam-pretrain)
+- [DexYCB](#resource-dexycb)
+- [H2O](#resource-h2o-hand-object)
+- [SharpaDex v1.0](#resource-sharpadex-v1)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -243,12 +246,13 @@ Synthetic indoor scenes with high-quality furniture CAD models (Alibaba).
 规模：3,670 hours
 标签：egocentric / large-scale
 <details>
-<summary>关联论文 1–4 / 4（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–5 / 5（提出 / 训练 / 评测）</summary>
 
 - pretrain · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](../papers/2503.14734.md)
 - pretrain · [Qwen-RobotWorld Technical Report: Unifying Embodied World Modeling through Language-Conditioned Video Generation](../papers/2606.17030.md)
 - pretrain · [DreamX-Phi 1.0: Action-Conditioned Video World Model for Robotic Manipulation](../papers/2608.13489.md)
 - pretrain · [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](../papers/2609.14973.md)
+- pretrain · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
 
 </details>
 
@@ -532,6 +536,44 @@ NEO-VLA处理后的约223万回合动作语料，提供Arrow动作行、相机�
 
 - proposes · [SWAM: Scaling World Action Models with Cross-Modal Alignment](../papers/2611.12870.md)
 - pretrain · [SWAM: Scaling World Action Models with Cross-Modal Alignment](../papers/2611.12870.md)
+
+</details>
+
+## <a id="resource-dexycb"></a>DexYCB
+
+人手抓取 YCB 物体的多视角 RGB-D 数据，含手部、物体姿态标注。
+
+[项目](https://dex-ycb.github.io/) 
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- pretrain · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
+- eval · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
+
+</details>
+
+## <a id="resource-h2o-hand-object"></a>H2O
+
+含第一视角及多视角的双手物体交互数据，提供手部与物体运动标注。
+
+[论文](https://openaccess.thecvf.com/content/ICCV2021/html/Kwon_H2O_Two_Hands_Manipulating_Objects_for_First_Person_Interaction_Recognition_ICCV_2021_paper.html)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- pretrain · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
+- eval · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
+
+</details>
+
+## <a id="resource-sharpadex-v1"></a>SharpaDex v1.0
+
+约 300 小时的双手灵巧遥操作示范，包括头腕视觉、指尖触觉、关节与动作信号。
+
+[项目](https://sharpadex.sharpa.com.cn/) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- pretrain · [WiTac: Wrist-Informed Tactile Representations for Contact-Rich Manipulation](../papers/2611.21057.md)
 
 </details>
 

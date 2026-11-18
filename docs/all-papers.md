@@ -4,9 +4,9 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 343 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 348 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
-## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 97
+## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 99
 
 - [OpenVLA: An Open-Source Vision-Language-Action Model](papers/2406.09246.md) · 2024-06-13 · 100/100
 - [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](papers/2503.14734.md) · 2025-03-18 · 95/100
@@ -31,6 +31,7 @@
 - [GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture](papers/2608.15875.md) · 2026-08-16 · 75/100
 - [XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment](papers/2608.09892.md) · 2026-08-10 · 75/100
 - [From Foundation to Application: Improving VLA Models in Practice](papers/2607.06403.md) · 2026-07-07 · 75/100
+- [WiTac: Wrist-Informed Tactile Representations for Contact-Rich Manipulation](papers/2611.21057.md) · 2026-11-16 · 74/100
 - [SLIM-0.5B: Learning Action-Grounded Predictive Latents for Robot Manipulation](papers/2608.09771.md) · 2026-08-10 · 74/100
 - [RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](papers/2607.26991.md) · 2026-07-29 · 74/100
 - [LARA: Latent Action Representation Alignment for Vision-Language-Action Models](papers/2606.07100.md) · 2026-06-05 · 74/100
@@ -59,6 +60,7 @@
 - [EXIMO: VLM Guided Exploration of VLA Policies](papers/2608.19891.md) · 2026-08-20 · 66/100
 - [Embodied.cpp: A Portable Inference Runtime of Embodied AI Models on Heterogeneous Robots](papers/2607.02501.md) · 2026-07-02 · 66/100
 - [LeVERB: Humanoid Whole-Body Control with Latent Vision-Language Instruction](papers/2506.13751.md) · 2025-06-16 · 66/100
+- [EgoSwarm: Learning Decentralized Robot Swarm Intelligence from Human Swarm Demonstrations](papers/2611.20100.md) · 2026-11-15 · 65/100
 - [SALA: Semantically Aligned Latent Actions Enable Dual-Axis Scaling of Embodied Foundation Models](papers/2611.17110.md) · 2026-11-12 · 65/100
 - [HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness](papers/2611.08039.md) · 2026-11-05 · 65/100
 - [Asynchronous Robot Policies](papers/2611.05155.md) · 2026-11-03 · 65/100
@@ -202,12 +204,13 @@
 - [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](papers/2609.14973.md) · 2026-09-14 · 60/100
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](papers/2608.11350.md) · 2026-08-11 · 51/100
 
-## <a id="cat-manipulation"></a>Manipulation · 56
+## <a id="cat-manipulation"></a>Manipulation · 59
 
 - [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md) · 2026-10-01 · 86/100
 - [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md) · 2026-10-24 · 83/100
 - [RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](papers/2609.03199.md) · 2026-09-02 · 80/100
 - [Pre-training Visual Dexterity in Simulation](papers/2608.15917.md) · 2026-08-16 · 78/100
+- [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](papers/2611.20481.md) · 2026-11-16 · 77/100
 - [CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](papers/2610.29702.md) · 2026-10-21 · 77/100
 - [Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](papers/2611.12806.md) · 2026-11-09 · 76/100
 - [Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](papers/2610.25736.md) · 2026-10-19 · 74/100
@@ -223,6 +226,8 @@
 - [TacPAC: Tactile Prediction and Real-Time Action Correction in World-Action Models for Contact-Rich Manipulation](papers/2609.05266.md) · 2026-09-04 · 71/100
 - [Robots Acquire Manipulation Skills in Seconds from a Single Human Video](papers/2607.20033.md) · 2026-07-22 · 71/100
 - [PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration](papers/2608.21031.md) · 2026-08-21 · 69/100
+- [TaF-Foundation: Wrench-Grounded Cross-Sensor Tactile Representations](papers/2611.20718.md) · 2026-11-16 · 68/100
+- [DexFormer 2.0: Towards a Cross-Embodiment Foundation Policy for Dexterous Grasping](papers/2611.20273.md) · 2026-11-15 · 68/100
 - [GoalDex: Learning Image-Goal-Conditioned Policies for Dexterous In-Hand Manipulation](papers/2611.02171.md) · 2026-11-01 · 68/100
 - [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](papers/2608.02580.md) · 2026-08-03 · 68/100
 - [RoboCasa-Shift: Stage-Aware Robustness Evaluation of Vision-Language-Action Policies in Long-Horizon Household Manipulation](papers/2610.27861.md) · 2026-10-20 · 66/100

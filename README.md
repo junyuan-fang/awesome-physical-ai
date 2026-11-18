@@ -9,11 +9,11 @@
 
 具身智能、机器人基础模型与物理 AI 的论文和资源导航。以中文评审说明贡献、证据与复现条件。
 
-**343 篇论文** · 35 个数据集 · 11 个仿真器 · 42 个基准 · 13 个工具
+**348 篇论文** · 38 个数据集 · 11 个仿真器 · 46 个基准 · 13 个工具
 
 [论文目录](docs/index.md) · [阅读优先级 Top 20](docs/rankings.md) · [日报 / 周报 / 月报](digests/README.md) · [专题](topics/README.md) · [如何看评分](#scoring)
 
-> 最近完成扫描：**2026-11-17** · [查看本次报告](digests/daily/2026-11-17.md)。
+> 最近完成扫描：**2026-11-18** · [查看本次报告](digests/daily/2026-11-18.md)。
 
 ## <a id="contents"></a>从哪里开始
 
@@ -23,11 +23,14 @@
 | 做操作与策略学习 | [操作](docs/catalog/manipulation.md) → [RL / 模仿学习](docs/catalog/rl-il.md) → [示教数据](docs/resources/datasets.md) |
 | 做人形与移动机器人 | [运动控制](docs/catalog/locomotion.md) → [导航](docs/catalog/navigation.md) → [评测基准](docs/resources/benchmarks.md) |
 | 把方法部署到真机 | [仿真器](docs/resources/simulators.md) → [Sim-to-Real](docs/catalog/sim2real.md) → [工具](docs/resources/tools.md) |
-| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-17.md) · [近期精选](#weekly-picks) |
+| 快速跟进近期工作 | [最近扫描报告](digests/daily/2026-11-18.md) · [近期精选](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>近期精选
 
 最近一次扫描日前 7 天新收录的重点论文，首页最多展示 5 篇。[阅读优先级 Top 20 →](docs/rankings.md)
+
+- **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](docs/papers/2611.20481.md)** · 2026-11-16 · 77/100
+  LSA 用人类视频中的三维监督预训练视觉编码器，在 Franka 四项任务及两种换色设置上平均成功率为 68.3%，HRP 为 41.7%。
 
 - **[ActionCodec2: A Streaming Action Tokenizer](docs/papers/2611.15490.md)** · 2026-11-11 · 77/100
   ActionCodec2以误差反馈量化和Set-BPE逐步释放动作，减少整块解码等待并检验连续时钟控制。
@@ -41,17 +44,14 @@
 - **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](docs/papers/2611.12806.md)** · 2026-11-09 · 76/100
   LingBot-Touch统一异构触觉表示；作者报告在26项真机任务中将π0.5平均成功率从48.1%提高至69.9%。
 
-- **[Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](docs/papers/2611.20460.md)** · 2026-11-16 · 71/100
-  VLA-SSD 将迭代动作流蒸馏为单步随机生成器，作者报告 GRPO 后 LIBERO 四套任务平均成功率为 93.0%。
-
 ## 研究方向
 
 选择一个方向进入分页目录；每页最多 15 篇，点击论文标题查看完整评审。
 
 | 方向 | 内容 | 篇数 |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 187 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 56 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 189 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 59 |
 | <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 32 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
 | <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 14 |
@@ -66,9 +66,9 @@
 
 | 资源 | 用途 | 数量 |
 |---|---|---:|
-| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 35 |
+| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 38 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 11 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 42 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 46 |
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 13 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 

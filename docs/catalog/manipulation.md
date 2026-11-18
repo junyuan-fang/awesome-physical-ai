@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**56 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
+**59 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
 
 **1** · [2](manipulation-2.md) · [3](manipulation-3.md) · [4](manipulation-4.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -41,60 +41,60 @@
 
     SPD 用 VR 在 MuJoCo 中遥操作采集 75 小时双手灵巧操作数据预训练扩散 Transformer，再用 1–2 小时真机数据微调；作者报告在 5 项 56 自由度真机任务上均优于从零训练的 BC。
 
-5. **[CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](../papers/2610.29702.md)**
+5. **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)**
+    2026-11-16 · 值得关注 · **77/100** · 部分开放
+
+    LSA 用人类视频中的三维监督预训练视觉编码器，在 Franka 四项任务及两种换色设置上平均成功率为 68.3%，HRP 为 41.7%。
+
+6. **[CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](../papers/2610.29702.md)**
     2026-10-21 · 值得关注 · **77/100** · 实质代码
 
     CausGround 提取动作前置条件与效果，作者报告 VirtualHome 平均成功率从 24.9% 提高至 53.3%。
 
-6. **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](../papers/2611.12806.md)**
+7. **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](../papers/2611.12806.md)**
     2026-11-09 · 值得关注 · **76/100** · 实质代码
 
     LingBot-Touch统一异构触觉表示；作者报告在26项真机任务中将π0.5平均成功率从48.1%提高至69.9%。
 
-7. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
+8. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
     2026-10-19 · 值得关注 · **74/100** · 实质代码
 
     用机队部署经验替代专家纠正：FERT 从成功轨迹检索与失败相关的片段，96 台真机 5 个任务达 93.3–99.2% 成功率。
 
-8. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
+9. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
     2026-10-26 · 值得关注 · **72/100** · 实质代码
 
     VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
 
-9. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
+10. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
     2026-08-19 · 值得关注 · **72/100** · 实质代码
 
     可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。
 
-10. **[EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming](../papers/2611.16728.md)**
+11. **[EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming](../papers/2611.16728.md)**
     2026-11-12 · 值得关注 · **71/100** · 实质代码
 
     EgoX共享模态接口并预测未来本体潜变量，13个任务与本体组合的平均进度由0.63至0.80。
 
-11. **[FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation](../papers/2611.17142.md)**
+12. **[FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation](../papers/2611.17142.md)**
     2026-11-12 · 值得关注 · **71/100** · 部分开放
 
     FORGE统一导航、落脚、腕姿与力条件，在G1全身操作中验证无腕力传感器接触适应。
 
-12. **[World In-Context Learning for Agentic Robot Manipulation](../papers/2611.12885.md)**
+13. **[World In-Context Learning for Agentic Robot Manipulation](../papers/2611.12885.md)**
     2026-11-09 · 值得关注 · **71/100** · 实质代码
 
     RoboScript以单示范和仿真排练更新任务记忆；作者报告RoboTwin 2.0两种设置平均成功率83.4%。
 
-13. **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](../papers/2611.05163.md)**
+14. **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](../papers/2611.05163.md)**
     2026-11-03 · 值得关注 · **71/100** · 实质代码
 
     把人类视频转换为灵巧机器人示范；作者报告两机器人七项无目标任务遥操作示范的平均成功率由约2%升至60%。
 
-14. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
+15. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
     2026-10-29 · 值得关注 · **71/100** · 实质代码
 
     LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
-
-15. **[DONIC: Generalist Dexterous Bimanual Tracking Control from Human Demonstrations](../papers/2610.29997.md)**
-    2026-10-21 · 值得关注 · **71/100** · 实质代码
-
-    首个通用双手灵巧跟踪器 DONIC 与多视角双手交互数据集 BiHOI；单 checkpoint 无需微调在未见轨迹/未见物体成功率 86.79%/57.32%，比最强双手基线分别高 77.36/45.73 个百分点（仿真）。
 
 ---
 

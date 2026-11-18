@@ -398,3 +398,37 @@ benchmarks:
   subcategory: manipulation
   added: '2026-11-18'
   last_check: '2026-11-18'
+- id: dexart
+  name: DexArt
+  desc: 使用多指手操作铰接物体的仿真评测，包含水龙头、水桶、笔记本电脑及马桶任务。
+  links:
+    code: https://github.com/Kami-code/dexart-release
+  subcategory: manipulation
+  added: '2026-11-18'
+  last_check: '2026-11-18'
+- id: adroit
+  name: Adroit Hand
+  desc: 多指 Shadow Hand 模拟操作任务，包括开门、锤钉、旋笔和移动物体。
+  links:
+    project: https://robotics.farama.org/envs/adroit_hand/
+  subcategory: manipulation
+  added: '2026-11-18'
+  last_check: '2026-11-18'
+- id: ycb-object-set
+  name: YCB Object and Model Set
+  desc: 日常物体及其模型组成的标准物体集合，支持构建机器人抓取与操作评测。
+  links:
+    project: https://www.ycbbenchmarks.com/
+    paper: https://arxiv.org/abs/1502.03143
+  subcategory: manipulation
+  added: '2026-11-18'
+  last_check: '2026-11-18'
+- id: univtac
+  name: UniVTAC
+  desc: 八项视触觉仿真操作任务，覆盖位姿推理、形状辨别及接触丰富的插拔操作。
+  links:
+    project: https://univtac.github.io/
+    code: https://github.com/univtac/UniVTAC
+  subcategory: manipulation
+  added: '2026-11-18'
+  last_check: '2026-11-18'

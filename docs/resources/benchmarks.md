@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Benchmarks
 
-**42 项** · Standardized evaluations for embodied AI
+**46 项** · Standardized evaluations for embodied AI
 
 - [CALVIN](#resource-calvin)
 - [Meta-World](#resource-meta-world)
@@ -48,6 +48,10 @@
 - [VIKI-L2](#resource-viki-l2)
 - [OGBench](#resource-ogbench)
 - [CortexBench](#resource-cortexbench)
+- [DexArt](#resource-dexart)
+- [Adroit Hand](#resource-adroit)
+- [YCB Object and Model Set](#resource-ycb-object-set)
+- [UniVTAC](#resource-univtac)
 
 ## <a id="resource-calvin"></a>CALVIN
 
@@ -77,13 +81,14 @@ Long-horizon, language-conditioned manipulation benchmark.
 [项目](https://meta-world.github.io) [代码](https://github.com/Farama-Foundation/Metaworld) [论文](https://arxiv.org/abs/1910.10897)
 标签：multi-task / meta-rl
 <details>
-<summary>关联论文 1–5 / 5（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–6 / 6（提出 / 训练 / 评测）</summary>
 
 - eval · [EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](../papers/2609.01281.md)
 - eval · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](../papers/2610.30814.md)
 - eval · [JEPA4R: Embodied JEPA World Models with 4D Point Planning](../papers/2611.19771.md)
 - eval · [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](../papers/2611.20460.md)
 - finetune · [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](../papers/2611.20460.md)
+- eval · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
 
 </details>
 
@@ -758,6 +763,54 @@ IsaacLab三任务九阶段G1移动操作评测，共享SONIC接口；资源发�
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - eval · [JEPA4R: Embodied JEPA World Models with 4D Point Planning](../papers/2611.19771.md)
+
+</details>
+
+## <a id="resource-dexart"></a>DexArt
+
+使用多指手操作铰接物体的仿真评测，包含水龙头、水桶、笔记本电脑及马桶任务。
+
+[代码](https://github.com/Kami-code/dexart-release) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
+
+</details>
+
+## <a id="resource-adroit"></a>Adroit Hand
+
+多指 Shadow Hand 模拟操作任务，包括开门、锤钉、旋笔和移动物体。
+
+[项目](https://robotics.farama.org/envs/adroit_hand/) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)
+
+</details>
+
+## <a id="resource-ycb-object-set"></a>YCB Object and Model Set
+
+日常物体及其模型组成的标准物体集合，支持构建机器人抓取与操作评测。
+
+[项目](https://www.ycbbenchmarks.com/) [论文](https://arxiv.org/abs/1502.03143)
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [DexFormer 2.0: Towards a Cross-Embodiment Foundation Policy for Dexterous Grasping](../papers/2611.20273.md)
+
+</details>
+
+## <a id="resource-univtac"></a>UniVTAC
+
+八项视触觉仿真操作任务，覆盖位姿推理、形状辨别及接触丰富的插拔操作。
+
+[项目](https://univtac.github.io/) [代码](https://github.com/univtac/UniVTAC) 
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [TaF-Foundation: Wrench-Grounded Cross-Sensor Tactile Representations](../papers/2611.20718.md)
 
 </details>
 

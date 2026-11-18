@@ -2443,3 +2443,93 @@ entries:
   reason: 增量有限：将已有房间共现 ObjectNav 策略移植到 ROS 2 与两种底盘，贡献主要是现场部署和差距分析，未提出新的学习策略。
   date: '2026-11-18'
   run: '2026-11-17'
+- arxiv_id: '2611.19774'
+  title: 'When Backdoors Can Be Switched Off: Suppression-Aware Backdoor Attacks on Vision-Language-Action Models'
+  decision: exclude
+  reason: 收录优先级：工作重点是攻击设计，摘要未提出可独立评估的防护方法。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.19979'
+  title: 'Practice Is Not Free: Measuring the Embodied Cost of Reset-Free Robot Practice'
+  decision: exclude
+  reason: 验证范围有限：两种调度对照仅在单台 SO-101 上运行，成本感知调度器只有日志回放，缺少在线能力提升证据。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.20971'
+  title: 'FAVR: Flow-Aware Visual Residual Alignment for Vision-Language-Action Policies'
+  decision: defer
+  reason: 超过本轮新增上限：按证据和方法优先级后排；RoboTwin 增益已有量化，待复核适配实现与真机泛化。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.20888'
+  title: 'Driving the Style: Velocity-Conditioned Whole-Body Control from Motion Demonstrations'
+  decision: defer
+  reason: 超过本轮新增上限：保留步态和单台 G1 的迁移可复查，优先级低于覆盖多任务或多形态的收录项。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.20196'
+  title: DoF-Query Transformer for Adaptive Fusion of Egocentric Vision and Forearm HD-sEMG in Continuous Hand Kinematics
+  decision: exclude
+  reason: 验证范围有限：原文仅用十名参与者离线估计手关节角，未验证示范经重定向后能否用于机器人学习。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.21115'
+  title: 'ReuseMem: One Memory, Multiple Goals in Robot Manipulation'
+  decision: defer
+  reason: 超过本轮新增上限：多目标记忆有定量收益，真机仅覆盖两个场景，留待后续复评。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.20137'
+  title: 'Cleanly-DINO: Efficiently Learning Visual Task Spaces for Robotics'
+  decision: exclude
+  reason: 验证范围有限：主要验证擦拭和清洁进度，实机指导依赖预设任务区域，迁移到其他操作的证据有限。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.19932'
+  title: 'From Companion to Guardian: Designing an Emergency Support System Using a Quadruped Robot for Older Adults'
+  decision: exclude
+  reason: 超出范围：以固定规则驱动四足陪伴机器人的应急升级流程，未提出具身学习方法。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.20950'
+  title: 'ROSE: A Shared Cross-Embodiment Facial-Motion Latent Space for Humanoid Robot Expression'
+  decision: exclude
+  reason: 收录优先级：主要验证紧凑仿生头的表情生成与执行，和机器人任务学习及操作的关联有限。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.20011'
+  title: 'ReactBench-AD: Do Driving VLAs and World-Action Models React to Imminent Hazards in Their Path?'
+  decision: defer
+  reason: 材料待核：原文称代码和数据将公开，现有仓库探测不足以确认完整编辑集与评估脚本。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.19775'
+  title: Recovery-Guided Model-Based Diffusion for Safety-Critical Legged Locomotion
+  decision: defer
+  reason: 超过本轮新增上限：恢复价值估计和采样规划已有避障对照，验证集中于 Go2 的单类任务。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.21198'
+  title: Cooperative Mobile Manipulation using Learned Dynamical Systems
+  decision: defer
+  reason: 超过本轮新增上限：协同复用和时间调整有应用示例，留待复评对比基线和规模扩展。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.21163'
+  title: 'Polygraph: Large-Scale Multi-Session Trajectory Optimization using Pose Graphs'
+  decision: exclude
+  reason: 超出范围：主要贡献是多会话位姿图优化，学习组件属于上游输入，未训练具身策略。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.21059'
+  title: 'Multi-CONDOR: Learning Multistable Motion Primitives from Demonstration'
+  decision: exclude
+  reason: 验证范围有限：多目标收敛的量化集中在仿真，连续目标轮廓以定性例子为主，真机仅展示双把手抓取。
+  date: '2026-11-18'
+  run: '2026-11-18'
+- arxiv_id: '2611.19894'
+  title: 'EasyNav: A Modular Architecture for Real-Time Navigation Across Heterogeneous Robot Environments'
+  decision: exclude
+  reason: 超出范围：主要贡献是 ROS 2 模块接口与实时性工程，真机评估侧重导航栈延迟与资源占用。
+  date: '2026-11-18'
+  run: '2026-11-18'
