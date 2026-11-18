@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**79 篇** · 第 **2 / 6** 页 · 每页最多 15 篇
+**80 篇** · 第 **2 / 6** 页 · 每页最多 15 篇
 
 [1](world-model.md) · **2** · [3](world-model-3.md) · [4](world-model-4.md) · [5](world-model-5.md) · [6](world-model-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -91,10 +91,10 @@
 
     世界模型开源统一平台 swm：Lance 数据层、DINO-WM/LeWM/TD-MPC2 等基线、CEM/MPPI 规划器与可控扰动环境；作者在 Push-T 上复现基线，并显示轻微分布偏移即令规划成功率骤降。
 
-30. **[SWAM: Scaling World Action Models with Cross-Modal Alignment](../papers/2611.12870.md)**
-    2026-11-09 · 值得关注 · **71/100** · 实质代码
+30. **[JEPA4R: Embodied JEPA World Models with 4D Point Planning](../papers/2611.19771.md)**
+    2026-11-15 · 值得关注 · **71/100** · 实质代码
 
-    SWAM研究视频动作跨模态监督配方，在RoboTwin Clean训练后Hard测试报告61.56%成功率。
+    JEPA4R 用单深度相机点云学习可解码世界模型，作者报告在 OGBench Scene 上成功率为 64.8%。
 
 ---
 

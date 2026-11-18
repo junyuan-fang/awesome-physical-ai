@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Sim-to-Real
 
-**13 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
+**14 篇** · 第 **1 / 1** 页 · 每页最多 15 篇
 
 **1**
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -51,37 +51,42 @@
 
     把灵巧铰接工具操作当作"动画"问题：程序化抓取关键帧+运动规划+RL 生成仿真数据训练点云扩散策略，作者报告四类工具零样本真机抓取与操作约 70% 成功。
 
-7. **[SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery](../papers/2610.38234.md)**
+7. **[DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use](../papers/2611.20202.md)**
+    2026-11-15 · 值得关注 · **65/100** · 占位仓库
+
+    DAPPT 在刚体仿真中训练灵巧工具策略并零样本迁移，作者报告真机铲沙成功 14/20 次。
+
+8. **[SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery](../papers/2610.38234.md)**
     2026-10-28 · 值得关注 · **65/100** · 未找到仓库
 
     SimRetract仅用仿真示教学习接替牵开器，模型手术场景50次呈递中抓取90%、保持牵拉78%。
 
-8. **[Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](../papers/2610.35075.md)**
+9. **[Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](../papers/2610.35075.md)**
     2026-10-26 · 值得关注 · **65/100** · 未找到仓库
 
     Zero-HLM用实景重建和仿真示范训练人形策略，三项G1任务平均成功率66.7%，真实数据训练对照为46.7%。
 
-9. **[Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](../papers/2608.15897.md)**
+10. **[Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](../papers/2608.15897.md)**
     2026-08-16 · 观察中 · **62/100** · 未找到仓库
 
     SBLR 在仿真中用点云加指尖力的"神谕传感器"训练策略，用整流流网络在潜空间对齐真实触觉，并以瓶颈重建适应信息损失；作者报告 GelSight Mini 与 DIGIT 真机零样本成功率 85%–97.5%，高于物理触觉仿真基线 7.5–15 个百分点。
 
-10. **[Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video](../papers/2606.08828.md)**
+11. **[Video2Sim2Real: Full-Stack Autonomous Dexterous Skill Acquisition from a Single Human Video](../papers/2606.08828.md)**
     2026-06-07 · 观察中 · **62/100** · 未找到仓库
 
     从单段人类 RGB-D 视频重建数字孪生、以物体中心关键帧优化重定向轨迹，再用 IL 校准感知误差与残差 RL 微调手指；作者报告 7 个真机灵巧任务平均成功率 95.7%，FoundationPose 基线 15.7%。
 
-11. **[TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics](../papers/2611.06442.md)**
+12. **[TwinBridge: Digital Twin-Driven Policy and Reward Transfer for Real-World Reinforcement Learning in Laboratory Robotics](../papers/2611.06442.md)**
     2026-11-04 · 观察中 · **59/100** · 未找到仓库
 
     TwinBridge 联合迁移策略与视觉过程奖励，作者报告五项实验室任务最终十回合平均自主成功率 98%。
 
-12. **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](../papers/2606.23444.md)**
+13. **[SkyJEPA: Learning Long-Horizon World Models for Zero-Shot Sim-to-Real Control of Quadrotors](../papers/2606.23444.md)**
     2026-06-22 · 观察中 · **59/100** · 未找到仓库
 
     JEPA 式潜在动力学模型+物理启发探针+MPPI 用于四旋翼实时控制，仅用域随机化仿真数据训练并零样本上机；作者报告长时程开环预测误差低于直接预测模型，户外负载/换桨下仍稳定跟踪。
 
-13. **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](../papers/2606.18953.md)**
+14. **[Object-Centric Residual RL for Zero-Shot Sim-to-Real VLA Enhancement](../papers/2606.18953.md)**
     2026-06-17 · 观察中 · **56/100** · 未找到仓库
 
     以 6-DoF 物体位姿+本体状态+VLA 基础动作为观测，在 MuJoCo 中训练残差 RL 并零样本迁移到 FR3；作者报告五项真机任务平均成功率 42%→76%。

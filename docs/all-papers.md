@@ -4,9 +4,9 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 338 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 343 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
-## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 95
+## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 97
 
 - [OpenVLA: An Open-Source Vision-Language-Action Model](papers/2406.09246.md) · 2024-06-13 · 100/100
 - [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](papers/2503.14734.md) · 2025-03-18 · 95/100
@@ -39,6 +39,7 @@
 - [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](papers/2611.07513.md) · 2026-11-05 · 72/100
 - [AgenticRoboRL: Bringing Coding-Agent Post-Training to Agentic Robotics](papers/2610.28589.md) · 2026-10-20 · 72/100
 - [Zetta $\zeta$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence](papers/2608.16590.md) · 2026-08-17 · 72/100
+- [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](papers/2611.20460.md) · 2026-11-16 · 71/100
 - [VLA-MOPD: On-Policy Distillation for Multi-Task VLA Policy Consolidation](papers/2611.12286.md) · 2026-11-09 · 71/100
 - [AutoVLA-D: Learn a Trajectory-Geometric Condition from Reasoning for Autonomous Driving VLA](papers/2611.12382.md) · 2026-11-09 · 71/100
 - [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](papers/2611.08373.md) · 2026-11-05 · 71/100
@@ -78,6 +79,7 @@
 - [Self-Evolving Coding Agents: From Digital Programs to Physical-World Intelligence](papers/2609.35432.md) · 2026-09-28 · 60/100
 - [Does VLA Even Know the Basics? Measuring Commonsense and World Knowledge Retention in Vision-Language-Action Models](papers/2606.19297.md) · 2026-06-17 · 60/100
 - [GesVLA: Pointing Gesture Grounding for Vision-Language-Action Models](papers/2605.22812.md) · 2026-05-21 · 60/100
+- [Ego2Sim2Humanoid: Agentic Real-to-Sim for Learning Loco-Manipulation VLAs without Robot Demonstrations](papers/2611.19196.md) · 2026-11-14 · 59/100
 - [VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding](papers/2611.08449.md) · 2026-11-05 · 59/100
 - [SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation](papers/2608.16172.md) · 2026-08-17 · 59/100
 - [DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](papers/2608.06374.md) · 2026-08-06 · 59/100
@@ -104,7 +106,7 @@
 - [HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](papers/2608.17584.md) · 2026-08-18
 - [Action with Visual Primitives](papers/2605.22183.md) · 2026-05-21
 
-## <a id="cat-world-model"></a>World Models · 79
+## <a id="cat-world-model"></a>World Models · 80
 
 - [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md) · 2026-10-19 · 92/100
 - [Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md) · 2025-01-07 · 89/100
@@ -135,6 +137,7 @@
 - [ALPS: Visual State Encoders for World Models](papers/2610.30120.md) · 2026-10-21 · 72/100
 - [Kairos: A Regret-Aware Native World-Action Model Stack for Physical AI](papers/2606.16533.md) · 2026-06-15 · 72/100
 - [stable-worldmodel: A Platform for Reproducible World Modeling Research and Evaluation](papers/2605.21800.md) · 2026-05-20 · 72/100
+- [JEPA4R: Embodied JEPA World Models with 4D Point Planning](papers/2611.19771.md) · 2026-11-15 · 71/100
 - [SWAM: Scaling World Action Models with Cross-Modal Alignment](papers/2611.12870.md) · 2026-11-09 · 71/100
 - [Reinforcing End-to-End Autonomous Driving Safety via Negative-Aware Planning in a Unified World-Action Model](papers/2611.08111.md) · 2026-11-05 · 71/100
 - [Hydra-0: Action Flow for Generalist World Modeling and Control](papers/2608.18077.md) · 2026-08-18 · 71/100
@@ -199,7 +202,7 @@
 - [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](papers/2609.14973.md) · 2026-09-14 · 60/100
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](papers/2608.11350.md) · 2026-08-11 · 51/100
 
-## <a id="cat-manipulation"></a>Manipulation · 55
+## <a id="cat-manipulation"></a>Manipulation · 56
 
 - [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md) · 2026-10-01 · 86/100
 - [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md) · 2026-10-24 · 83/100
@@ -246,6 +249,7 @@
 - [GOAG: Generative and Object-Agnostic Grasp Planner for Dexterous Robotic Manipulation](papers/2608.19759.md) · 2026-08-20 · 60/100
 - [CoToGrasp: Contact-Topology-Conditioned Dexterous Grasp Synthesis via Canonical Workspace Learning](papers/2608.19776.md) · 2026-08-20 · 60/100
 - [PRISM: Precision and contact-rich Real-world Industrial Skill dataset with Multimodal sensing](papers/2608.17962.md) · 2026-08-18 · 60/100
+- [AsymEEF: Bimanual Manipulation with Asymmetric End Effectors](papers/2611.20557.md) · 2026-11-16 · 59/100
 - [Time-Indexed Skill Success Models for Latency-Aware Skill Selection and Timing in Dynamic Manipulation](papers/2611.07964.md) · 2026-11-05 · 59/100
 - [DexFuture: Hierarchical Future-State Visuomotor Targeting for Bimanual Dexterous Tool Use](papers/2606.05699.md) · 2026-06-04 · 57/100
 - [Humanoid Whole-Body Manipulation via Active Spatial Brain and Generalizable Action Cerebellum](papers/2605.21133.md) · 2026-05-20 · 57/100
@@ -307,7 +311,7 @@
 - [NestDex: Nested Policy Learning with Copilot Assisted Teleoperation for Dexterous Manipulation](papers/2608.13362.md) · 2026-08-13 · 48/100
 - [Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning](papers/2608.20546.md) · 2026-08-20 · 43/100
 
-## <a id="cat-sim2real"></a>Sim-to-Real · 13
+## <a id="cat-sim2real"></a>Sim-to-Real · 14
 
 - [Towards Professional Tennis Styles for Humanoid Robots with Adaptive Motion Planning and Tracking](papers/2608.20087.md) · 2026-08-20 · 74/100
 - [ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning](papers/2608.19182.md) · 2026-08-19 · 71/100
@@ -315,6 +319,7 @@
 - [RoboGesture: Real-Time Semantic-aligned Co-Speech Gestures Generation for Humanoid Interaction](papers/2608.28693.md) · 2026-08-27 · 69/100
 - [BeyondContact: A Reinforcement Learning Framework for Airflow-Based Non-Contact Manipulation](papers/2611.03059.md) · 2026-11-02 · 66/100
 - [Mana: Dexterous Manipulation of Articulated Tools](papers/2606.13677.md) · 2026-06-11 · 66/100
+- [DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use](papers/2611.20202.md) · 2026-11-15 · 65/100
 - [SimRetract: Zero-Shot Sim-to-Real Robotic Assistance for Retractor Take-Over in Open Surgery](papers/2610.38234.md) · 2026-10-28 · 65/100
 - [Zero-HLM: Generalizable Humanoid Loco-Manipulation without Real Robot Data](papers/2610.35075.md) · 2026-10-26 · 65/100
 - [Tactile Sim2Real without Tactile Simulation via Bottlenecked Latent Reconstruction](papers/2608.15897.md) · 2026-08-16 · 62/100

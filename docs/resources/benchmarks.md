@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Benchmarks
 
-**40 项** · Standardized evaluations for embodied AI
+**42 项** · Standardized evaluations for embodied AI
 
 - [CALVIN](#resource-calvin)
 - [Meta-World](#resource-meta-world)
@@ -46,6 +46,8 @@
 - [NeuroNCAP](#resource-neuroncap)
 - [LOCUS-Bench](#resource-locus-bench)
 - [VIKI-L2](#resource-viki-l2)
+- [OGBench](#resource-ogbench)
+- [CortexBench](#resource-cortexbench)
 
 ## <a id="resource-calvin"></a>CALVIN
 
@@ -75,10 +77,13 @@ Long-horizon, language-conditioned manipulation benchmark.
 [项目](https://meta-world.github.io) [代码](https://github.com/Farama-Foundation/Metaworld) [论文](https://arxiv.org/abs/1910.10897)
 标签：multi-task / meta-rl
 <details>
-<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–5 / 5（提出 / 训练 / 评测）</summary>
 
 - eval · [EmbodiedSkills: A Unified Framework for Orchestrating, Training, and Deploying VLA Agents](../papers/2609.01281.md)
 - eval · [DRILL: Training World Models to Improve Policies, Not Predict Pixels](../papers/2610.30814.md)
+- eval · [JEPA4R: Embodied JEPA World Models with 4D Point Planning](../papers/2611.19771.md)
+- eval · [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](../papers/2611.20460.md)
+- finetune · [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](../papers/2611.20460.md)
 
 </details>
 
@@ -89,7 +94,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 [项目](https://libero-project.github.io) [论文](https://arxiv.org/abs/2306.03310)
 标签：lifelong
 <details>
-<summary>关联论文 1–10 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [Hide-and-Seek in Trajectories: Discovering Failure Signals for VLA Runtime Monitoring](../papers/2605.30834.md)
 - eval · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
@@ -105,7 +110,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 11–20 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training](../papers/2606.04436.md)
 - eval · [VISTA: Vision-Grounded and Physics-Validated Adaptation of UMI data for VLA Training](../papers/2606.04708.md)
@@ -121,7 +126,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 21–30 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 21–30 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [Geometric Action Model for Robot Policy Learning](../papers/2606.17046.md)
 - eval · [WAM-RL: World-Action Model Reinforcement Learning with Reconstruction Rewards and Online Video SFT](../papers/2606.17906.md)
@@ -137,7 +142,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 31–40 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 31–40 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation](../papers/2608.05369.md)
 - finetune · [DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation](../papers/2608.06374.md)
@@ -153,7 +158,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 41–50 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 41–50 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models](../papers/2608.06729.md)
 - eval · [Keep the Future, Drop the Rollout: RIFT for World Action Models](../papers/2608.11521.md)
@@ -169,7 +174,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 51–60 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 51–60 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](../papers/2608.27384.md)
 - eval · [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](../papers/2610.26855.md)
@@ -185,7 +190,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 61–70 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 61–70 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [Long-WAM: Scaling the Context of World-Action Models](../papers/2610.10528.md)
 - finetune · [Self-Distilling Future Video Representations for World Action Models](../papers/2610.30320.md)
@@ -201,7 +206,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 71–80 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 71–80 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [RynnVLA-Latent: Scaling Robotic Manipulation Foundation Models with 3D-Grounded Latent Actions](../papers/2610.34356.md)
 - eval · [GAWM: A Compact Latent World-Action Model for Multi-Task Robot Manipulation](../papers/2610.37091.md)
@@ -217,7 +222,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 81–90 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 81–90 / 98（提出 / 训练 / 评测）</summary>
 
 - eval · [PrimeSim: A Generalist World Model Simulator from Large-Scale Cross-Embodiment Demonstrations](../papers/2611.04870.md)
 - finetune · [Asynchronous Robot Policies](../papers/2611.05155.md)
@@ -233,7 +238,7 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 </details>
 
 <details>
-<summary>关联论文 91–96 / 96（提出 / 训练 / 评测）</summary>
+<summary>关联论文 91–98 / 98（提出 / 训练 / 评测）</summary>
 
 - finetune · [PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)
 - eval · [PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation](../papers/2611.11798.md)
@@ -241,6 +246,8 @@ Lifelong robot learning benchmark — 130 manipulation tasks across 4 suites.
 - eval · [ActionCodec2: A Streaming Action Tokenizer](../papers/2611.15490.md)
 - pretrain · [OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)
 - eval · [OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)
+- eval · [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](../papers/2611.20460.md)
+- finetune · [Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models](../papers/2611.20460.md)
 
 </details>
 
@@ -727,6 +734,30 @@ IsaacLab三任务九阶段G1移动操作评测，共享SONIC接口；资源发�
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - eval · [NSDL: Neuro-Symbolic Division of Labor for Multi-Robot Task Planning](../papers/2611.16671.md)
+
+</details>
+
+## <a id="resource-ogbench"></a>OGBench
+
+离线目标条件强化学习基准，涵盖操作、导航及移动任务。
+
+
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [JEPA4R: Embodied JEPA World Models with 4D Point Planning](../papers/2611.19771.md)
+
+</details>
+
+## <a id="resource-cortexbench"></a>CortexBench
+
+评估具身视觉表征的下游控制任务集合，含 MetaWorld 和 Adroit。
+
+
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [JEPA4R: Embodied JEPA World Models with 4D Point Planning](../papers/2611.19771.md)
 
 </details>
 

@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**55 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
+**56 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
 
 **1** · [2](manipulation-2.md) · [3](manipulation-3.md) · [4](manipulation-4.md)
 按阅读优先级 → 总分 → 首次公开日期排序。

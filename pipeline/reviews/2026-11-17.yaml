@@ -1,0 +1,873 @@
+run:
+  scan_date: '2026-11-17'
+  kind: daily
+  window_start: '2026-11-14'
+  window_end: '2026-11-17'
+  last_covered_end: '2026-11-16'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 164
+    already_tracked_or_triaged: 0
+    out_of_scope: 12
+    below_pool_cut: 132
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items:
+- arxiv_id: '2611.19196'
+  title: 'Ego2Sim2Humanoid: Agentic Real-to-Sim for Learning Loco-Manipulation VLAs without Robot Demonstrations'
+  prefilter_score: 21.5
+  triage: include
+  reason: null
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - egocentric-video
+  - humanoid
+  - loco-manipulation
+  - real-to-sim
+  affiliations:
+  - 'Affiliation: University of Notre Dame'
+  one_liner: Ego2Sim2Humanoid 仅用眼镜记录转换训练数据，微调后的 G1 在真机举瓶和戴帽试验中分别成功 9/20 和 5/20 次。
+  summary: |
+    为减少全身行走操作对机器人遥操作的依赖，Ego2Sim2Humanoid 从第一视角眼镜取得 RGB-D、头部轨迹和可见手部姿态。系统逐段重建碰撞场景及目标接触带，规划可达的抓取与站位，并用运动学过渡和强化学习跟踪修正动作。通过物理筛选的轨迹从机器人视角渲染，与本体状态和控制同步，再用于微调 GR00T N1.7。戴帽录像的仿真对照中，作者报告接触带规划把指节穿透的中位数从直接复制掌姿的 1.8 厘米降至 0.8 厘米。Unitree G1 的两项任务各做二十次自主试验，举瓶成功九次，戴帽成功五次。结果展示了无需目标任务真机示范的训练路径；实际失败主要发生在抓取，薄壁物体也让多数戴帽录像未通过轨迹筛选。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 将眼镜示范重建为经接触物理验证、可用于全身 VLA 的训练轨迹。
+    E: 有重定向和抓取对照，以及每个任务二十次 G1 真机测试，验证限于两项任务。
+    O: 原文和缓存均未给出本方法代码仓库或可下载工件。
+    T: 作者在该方向的近期成果待核，暂按默认分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核对本方法是否另行发布转换轨迹或微调权重，并确认作者在具身示范转换方向的既有成果。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原文与缓存未发现本方法官方仓库；原文提到的 GR00T 和 SONIC 为外部组件。
+    last_check: '2026-11-18'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.21607'
+  title: 'ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters'
+  prefilter_score: 18.2
+  triage: defer
+  reason: 材料待核验：实验正文可读，但预填开源仓库指向外部基线 Isaac-GR00T，且官方项目页未能核实，须确认本论文工件归属。
+  category: vla
+  route: core
+  contribution: model
+  tags: []
+  affiliations:
+  - 'Affiliation: ['
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核查 https://galaxygeneralrobotics.github.io/scalevla/ 是否公布 ScaleVLA 自身代码、动作头权重和机器人训练数据；预填链接属于 NVIDIA GR00T。
+  open:
+    code: substantive
+    repo: https://github.com/NVIDIA/Isaac-GR00T
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19131'
+  title: Wireless Edge-Assisted Adaptive Latent Reasoning for Vision-Language-Action Models in Physical AI
+  prefilter_score: 18.0
+  triage: exclude
+  reason: 增量有限：将约束强化学习用于边缘卸载与推理阈值调节，验证依赖离线策略成本测量和射线追踪信道，缺少端到端控制部署。
+  category: vla
+  route: adjacent
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: School of Electrical Engineering and Computer Science, University of Ottawa, Ottawa, Canada Emails: {ftemi033,
+    melike.erolkantarci}@uottawa.ca'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19771'
+  title: 'JEPA4R: Embodied JEPA World Models with 4D Point Planning'
+  prefilter_score: 15.6
+  triage: include
+  reason: null
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - jepa
+  - point-cloud
+  - latent-dynamics
+  - sim-to-real
+  affiliations:
+  - 'Affiliation: Brown University'
+  - 'Affiliation: University of Oulu'
+  - 'Affiliation: Peking University'
+  - 'Affiliation: UC Berkeley BAIR'
+  one_liner: JEPA4R 用单深度相机点云学习可解码世界模型，作者报告在 OGBench Scene 上成功率为 64.8%。
+  summary: |
+    为让机器人在决策前检查潜空间中预测的度量几何，JEPA4R 将单台深度相机的观测转换成工作坐标系点云，用点集编码器与动作条件 JEPA 预测未来表征。在冻结表征上独立训练策略头和点云解码器，分别用于控制与可视化预测。作者用相同仿真轨迹生成点云和像素输入，并固定下游策略和评测回合。在 OGBench Scene 上作者报告成功率为 64.8%，LeWM 为 40.8%，但所有方法在 Cube-Quadruple 上均为零。按 CortexBench 取多次评估最佳值的协议，五项 MetaWorld 任务平均成功率为 98.4%，R3M 为 96.0%。仿真训练的模型在 RM75-B 上完成夹取、推块与灵巧手取物，各展示一次，跨场景泛化和真机可靠性仍缺少重复试验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 把度量点云预测、冻结表征控制与可解码的未来几何接到同一个 JEPA 框架。
+    E: 有配对观测对照、多基准和消融，真机每项仅展示一次。
+    O: 官方仓库提供训练、数据采集和复现脚本，完整本方法权重及数据包未独立核实。
+    T: 作者团队在具身预测方面的相关积累待确认，暂按默认分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 核实 Hugging Face 上本方法权重的实际访问条件及本论文生成的数据包。
+  - 核对作者在具身预测模型方面的既有成果。
+  open:
+    code: substantive
+    repo: https://github.com/AIGeeksGroup/JEPA4R
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 官方仓库有训练、评估和仿真复现配置；真机运行未纳入仓库，Hugging Face 权重链接未能打开。
+    last_check: '2026-11-18'
+  uses:
+  - resource: ogbench
+    role: eval
+  - resource: cortexbench
+    role: eval
+  - resource: meta-world
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: ogbench
+    name: OGBench
+    desc: 离线目标条件强化学习基准，涵盖操作、导航及移动任务。
+    links:
+      website: https://seohong.me/projects/ogbench/
+    subcategory: manipulation
+  - kind: benchmark
+    id: cortexbench
+    name: CortexBench
+    desc: 评估具身视觉表征的下游控制任务集合，含 MetaWorld 和 Adroit。
+    links:
+      website: https://github.com/facebookresearch/eai-vc
+    subcategory: manipulation
+- arxiv_id: '2611.20710'
+  title: 'SG-ODOM: Event-Driven Proprioceptive State Estimation with Stability-Gated Contact Updates for Legged Robots'
+  prefilter_score: 14.5
+  triage: exclude
+  reason: 超出范围：用规则式接触稳定门控和事件触发修正做本体里程计，未提出学习方法或面向具身学习的资源。
+  category: locomotion
+  route: adjacent
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Centro di Ricerca “Enrico Piaggio” and Dipartimento di Ingegneria dell’Informazione, Università di Pisa,
+    Pisa, Italy.'
+  - 'Affiliation: Department of Mechanical Engineering, Seoul National University, Seoul, Republic of Korea.'
+  - 'Affiliation: Dept. of Engineering Science, University of Oxford, Oxford, UK.'
+  - 'Affiliation: College of Computing, Georgia Inst. of Technology, Atlanta, GA, USA.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: https://github.com/ori-drs/SG-ODOM.
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.21143'
+  title: 'WinDEX: Metric 3D Hand Motion Reconstruction in the Wild for Dexterous Teleoperation and Policy Learning'
+  prefilter_score: 14.0
+  triage: defer
+  reason: 材料待核验：预填仓库是下游重定向工具，WinDEX-Net 和 WinDEX-Hand 的独立发布与访问条件待确认。
+  category: teleoperation
+  route: adjacent
+  contribution: data
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 从原文和作者发布页确认 WinDEX-Hand 数据入口、许可及 WinDEX-Net 的代码和权重。
+  open:
+    code: substantive
+    repo: https://github.com/wuji-technology/wuji-retargeting
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19324'
+  title: 'MARS: Dynamic Routing of Reinforcement-Learned Atomic Skills for Multi-Stage Robotic Manipulation'
+  prefilter_score: 14.0
+  triage: exclude
+  reason: 增量有限：冻结通用 VLA 后训练并路由专用技能，主要分诊信号是技能选择分类指标，真机验证集中于管件搬运。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: School of Automation, Chongqing University, Chongqing, 400044, China.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.20314'
+  title: 'NF-VLA: A Normalizing-Flow Baseline for Vision-Language-Action Learning'
+  prefilter_score: 13.5
+  triage: defer
+  reason: 本轮排序：保留为连续动作密度基线候选。实验限于 LIBERO 及其扰动版本，本轮优先覆盖证据更广的操作方法。
+  category: vla
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Department of Computer and Information Science'
+  - 'Affiliation: University of Pennsylvania'
+  - 'Email: ruichend@seas.upenn.edu'
+  - 'Affiliation: School of Computing'
+  - 'Affiliation: Australian National University'
+  - 'Email: qinyu.zhao@anu.edu.au'
+  - 'Email: park19@seas.upenn.edu'
+  - 'Email: mutiant@seas.upenn.edu'
+  - 'Email: liang.zheng@anu.edu.au'
+  - 'Email: jgu32@seas.upenn.edu'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19138'
+  title: 'SuperGlance: Driving at a Glance with a Vision-Language Model'
+  prefilter_score: 13.5
+  triage: defer
+  reason: 材料待核验：已有驾驶评测和官方仓库线索，缓存未给出作者单位，待按原文署名及仓库发布清单补核。
+  category: vla
+  route: core
+  contribution: model
+  tags: []
+  affiliations: []
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 从原论文 PDF 核对完整署名单位，核对官方仓库中各阶段权重和数据的用途及许可。
+  open:
+    code: substantive
+    repo: https://github.com/GuobaPei/SuperGlance
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19998'
+  title: 'MoViC: Real-Time Humanoid Whole-Body Control from Monocular Video Streams'
+  prefilter_score: 13.0
+  triage: defer
+  reason: 材料待核验：缓存的项目字段为空，但摘要列出项目入口，需要核实实时控制的发布工件和复现条件。
+  category: teleoperation
+  route: core
+  contribution: system
+  tags: []
+  affiliations:
+  - 'Affiliation: The University of Hong Kong, Hong Kong, China.'
+  - 'Affiliation: National University of Singapore, Singapore.'
+  - 'Affiliation: Beijing Institute of Technology, Beijing, China.'
+  - 'Affiliation: EngineAI, Shenzhen, China.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 核查 https://movicproject.github.io/ 是否提供单目估计与控制代码、跟踪模型和配套数据。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.20452'
+  title: 'XMimic and XSoma: Learning Humanoid Motion Tracking and Locomotion in Under a Minute'
+  prefilter_score: 12.5
+  triage: defer
+  reason: 材料待核验：预填仓库名为 instantTrack，待核实是否包含 XMimic 和 XSoma 本身及对应的训练计时配置。
+  category: locomotion
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Department of Computer Science, Technical University of Darmstadt, Germany.'
+  - 'Affiliation: Robotics Institute Germany (RIG); German Research Center for AI (DFKI); hessian.AI. Corresponding author:
+    nico.bohlinger@tu-darmstadt.de'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 从原文、作者页面和仓库核实两种方法的复现入口，以及多 GPU 与单 GPU 计时边界。
+  open:
+    code: substantive
+    repo: https://github.com/Huy-Quang-Dao/instantTrack
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19616'
+  title: 'Towards Probabilistically Safe Reinforcement Learning: Theory and Deployment on Humanoid and Aerial Robots'
+  prefilter_score: 12.0
+  triage: defer
+  reason: 材料待核验：缓存探测到通用安全强化学习仓库，仍需核实该仓库与 RSGF 实现的关系及实机约束验证协议。
+  category: rl-il
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Email: mestres@caltech.edu'
+  - 'Email: vgabbita@caltech.edu'
+  - 'Email: jasonsiu@caltech.edu'
+  - 'Email: sesteban@caltech.edu'
+  - 'Email: hserneke@caltech.edu'
+  - 'Email: jburdick@caltech.edu'
+  - 'Affiliation: Department of Mechanical and Civil Engineering, Caltech, Pasadena, CA, USA'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 核对概率约束、实际违规统计与置信区间，并确认本论文实现是否单独发布。
+  open:
+    code: substantive
+    repo: https://github.com/openai/safety-starter-agents
+    weights: unknown
+    data: unknown
+    license: MIT
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.19100'
+  title: Leaning Over to Reach Far-Away Objects
+  prefilter_score: 12.0
+  triage: exclude
+  reason: 超出范围：使用采样式模型预测控制和局部感知进行支撑伸手，未使用学习策略。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: 1University of Colorado Boulder 2University of Notre Dame'
+  - 'Affiliation:'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.20557'
+  title: 'AsymEEF: Bimanual Manipulation with Asymmetric End Effectors'
+  prefilter_score: 11.5
+  triage: include
+  reason: null
+  category: manipulation
+  route: core
+  contribution: method
+  tags:
+  - bimanual
+  - cross-embodiment
+  - demonstration-transfer
+  - imitation-learning
+  affiliations:
+  - 'Affiliation: Georgia Institute of Technology'
+  - 'Affiliation: Tsinghua University'
+  - 'Affiliation: Equal contribution'
+  - 'Affiliation: University of California San Diego'
+  one_liner: AsymEEF 对齐异构双手并筛选可执行示范，作者报告三项仿真任务的有效示范平均扩增 16.6 倍。
+  summary: |
+    为减少同一双臂平台换用不同末端执行器后重采示范的成本，AsymEEF 在机器人模型上标注功能接触点，并用少量实机抓取标定修正跨手型差异。共享编码器把腕姿与执行器状态映射到同一潜空间，由按目标形态条件化的解码器生成控制命令。候选轨迹通过整段回放检验接触顺序、碰撞和任务完成情况，成功示范再与源数据一起训练闭环策略。作者在四项仿真及六项真机桌面任务上对比 LAD 和 CEI，报告真机 CPU 安装的直接回放成功率为 79%，两种基线分别为 31% 和 0%。三项仿真任务的渐进扩增共接受 4,959 条轨迹。效果依赖目标执行器具备相应交互能力，以及手工采集的标定帧，跨机械臂及非桌面任务仍待检验。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 1
+    T: 3
+  rationale:
+    C: 功能接触锚点与共享状态接口支持异构双手示范复用及统一策略训练。
+    E: 含四项仿真和六项真机操作、同条件回放基线及表示消融。
+    O: 原文提供项目链接，本次无法打开核验，未确认可用实现或工件。
+    T: 作者在跨形态策略方向的既有积累待核，暂按默认分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  pending_checks:
+  - 核实项目页及其示范、训练代码和权重发布条件。
+  - 核对作者在跨末端执行器操作方向的既有成果。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 原文列出 https://asymeef.vercel.app/，本次未能访问，未找到可核实的官方仓库。
+    last_check: '2026-11-18'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.20460'
+  title: Stochastic Self-Distillation for Flow-Based Vision-Language-Action Models
+  prefilter_score: 11.5
+  triage: include
+  reason: null
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - stochastic-flow
+  - distillation
+  - grpo
+  - action-generation
+  affiliations:
+  - 'Affiliation: Imperial College London'
+  one_liner: VLA-SSD 将迭代动作流蒸馏为单步随机生成器，作者报告 GRPO 后 LIBERO 四套任务平均成功率为 93.0%。
+  summary: |
+    为降低流式 VLA 在线强化学习的采样成本，并避免同一初始状态的回报组缺少变化，VLA-SSD 将预训练动作头蒸馏为由布朗路径条件化的单步 Itô 映射。方法分离可逆高斯增量，在给定剩余路径随机性时计算动作密度，从而直接用似然比运行 GRPO。以同一少样本监督检查点为起点，作者报告 LIBERO 四套任务平均成功率从蒸馏后的 68.6% 升至 93.0%，高于四步 GRPO 的 91.5%，四步 PPO 达 98.3%。A100 上动作头每块耗时由十步 ODE 的 58.4 毫秒降至 7.6 毫秒。MetaWorld MT50 上，单步后训练策略成功率为 72.0%。结果支持以单次生成进行在线探索；计时只涵盖动作头，实验限于仿真，效果仍受初始检查点和蒸馏目标影响。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 3
+    T: 3
+  rationale:
+    C: 单步 Itô 映射同时保留路径随机性和可用于策略优化的条件密度。
+    E: 两个仿真基准和多步基线、蒸馏与随机性消融支持结论，尚缺真机。
+    O: Apache-2.0 仓库提供方法实现与训练评估入口，需要自行准备权重和数据。
+    T: 作者在具身强化后训练方面的持续成果待核，暂按默认分。
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - 核对作者在具身策略强化后训练方面的既有成果。
+  open:
+    code: substantive
+    repo: https://github.com/llexieguo/VLA-SSD
+    weights: none
+    data: none
+    license: Apache-2.0
+    note: 官方仓库提供流映射实现及蒸馏、GRPO 和评估脚本，README 明确需要自行准备权重、归一化统计和数据。
+    last_check: '2026-11-18'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: libero
+    role: finetune
+  - resource: meta-world
+    role: eval
+  - resource: meta-world
+    role: finetune
+  new_resources: []
+- arxiv_id: '2611.20648'
+  title: Competent Autonomous Driving Through Fine Tuning Vision Language Action Models with Symbolic Traffic Rules
+  prefilter_score: 11.5
+  triage: exclude
+  reason: 增量有限：以少量编码交通规则给驾驶策略优化提供反馈，主要以 CARLA 留出样本离线评估，无法检验规则反馈在闭环驾驶中的效果。
+  category: vla
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Barkin Dagda, Vinal Asodia, and Saber Fallah are with the Connected and Autonomous Vehicles Lab (CAV-Lab),
+    University of Surrey, Guildford, GU2 7XH, UK.[bd00242, va00191, s.fallah]@surrey.ac.uk'
+  - 'Affiliation: Iman Sharifi and Peng Wei are with the Department of Mechanical and Aerospace Engineering, George Washington
+    University, Washington, DC 20052, USA.[i.sharifi, pwei]@gwu.edu'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.20244'
+  title: 'Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift'
+  prefilter_score: 11.0
+  triage: defer
+  reason: 材料待核验：仿真执行器偏移结果明确，官方项目入口未能访问，待核实代码及真机执行器变化证据。
+  category: vla
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Department of Electrical and Computer Engineering'
+  - 'Affiliation: University of Texas at San Antonio, United States'
+  - 'Email: muhammadumer.siddique@my.utsa.edu'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks:
+  - 核对项目页的实质实现及是否有物理机器人复现实验。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.21517'
+  title: 'Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models'
+  prefilter_score: 10.5
+  triage: defer
+  reason: 本轮排序：学习技能效果以减少规划中的物理仿真调用，证据集中于拥挤货架取物，待复核更广泛的任务验证。
+  category: world-model
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Robotics Institute, School of Computer Science, Carnegie Mellon University, Pittsburgh, PA, United States.
+    {mukundkr, imishani, maxim}@cs.cmu.edu'
+  - 'Affiliation: Department of Computer Science, Technion, Israel Institute of Technology, Haifa, Israel. osalzman@cs.technion.ac.il'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.20202'
+  title: 'DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use'
+  prefilter_score: 10.5
+  triage: include
+  reason: null
+  category: sim2real
+  route: core
+  contribution: method
+  tags:
+  - dexterous-manipulation
+  - tool-use
+  - domain-randomization
+  - policy-distillation
+  affiliations:
+  - 'Affiliation: Princeton Unversity'
+  one_liner: DAPPT 在刚体仿真中训练灵巧工具策略并零样本迁移，作者报告真机铲沙成功 14/20 次。
+  summary: |
+    为降低粒子和可变形材料仿真带来的强化学习成本，DAPPT 在 Isaac Lab 的刚体环境中按参数生成工具姿态或关节参考轨迹。教师策略用强化学习依次完成工具搬运和接触跟踪，再通过 DAgger 蒸馏成输入点云和轨迹参数的视觉运动策略。测试时在可模拟材料的 Genesis 中搜索表现最佳的参数，无需重新训练策略。作者报告铲沙任务在 Genesis 中的最佳参数配置得到 13.9 克，SimToolReal 对照得到 9.2 克。将选出的参数用于 Franka 与 XHand1 实机，六项任务各测二十次，铲沙达到任务阈值十四次，滚压面团十一次。方法依赖各任务预先设计的参考轨迹和参数搜索；真机喷雾与按压测试未验证实际排水量。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 2
+    T: 3
+  rationale:
+    C: 以可搜索参数的程序化轨迹替代强化训练中的非刚体仿真。
+    E: 包含六项真机实验、跨仿真器对照和训练消融，真机没有匹配的基线对比。
+    O: 原文链接的官方仓库只有 README，训练代码未发布。
+    T: 作者团队在相关灵巧工具操作方面的代表性成果待核，暂按默认分。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 核对作者在灵巧工具操作方面的既有成果。
+  open:
+    code: placeholder
+    repo: https://github.com/princeton-vl/DAPPT
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 官方 GitHub 仓库仅有 README 和后续发布承诺，未提供训练实现、权重或示范入口。
+    last_check: '2026-11-18'
+  uses:
+  - resource: isaac-lab
+    role: pretrain
+  - resource: genesis
+    role: eval
+  new_resources: []
+- arxiv_id: '2611.19720'
+  title: Sim-to-Real Room-Mediated Object-Goal Navigation with ROS 2 and Nav2
+  prefilter_score: 10.5
+  triage: exclude
+  reason: 增量有限：将已有房间共现 ObjectNav 策略移植到 ROS 2 与两种底盘，贡献主要是现场部署和差距分析，未提出新的学习策略。
+  category: navigation
+  route: core
+  contribution: system
+  tags: []
+  affiliations:
+  - 'Affiliation: Robotics Institute, Faculty of Engineering and Information Technology'
+  - 'Affiliation: University of Technology Sydney, Sydney, Australia'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: https://github.com/Matthew-K-Chua/rpv-ros2-bridge.
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []

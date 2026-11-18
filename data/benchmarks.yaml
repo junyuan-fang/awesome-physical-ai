@@ -382,3 +382,19 @@ benchmarks:
   subcategory: multi-skill
   added: '2026-11-16'
   last_check: '2026-11-16'
+- id: ogbench
+  name: OGBench
+  desc: 离线目标条件强化学习基准，涵盖操作、导航及移动任务。
+  links:
+    website: https://seohong.me/projects/ogbench/
+  subcategory: manipulation
+  added: '2026-11-18'
+  last_check: '2026-11-18'
+- id: cortexbench
+  name: CortexBench
+  desc: 评估具身视觉表征的下游控制任务集合，含 MetaWorld 和 Adroit。
+  links:
+    website: https://github.com/facebookresearch/eai-vc
+  subcategory: manipulation
+  added: '2026-11-18'
+  last_check: '2026-11-18'

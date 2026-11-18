@@ -2353,3 +2353,93 @@ entries:
   reason: 超出范围：手工技能库和规则式共享控制，未包含学习策略或学习评测。
   date: '2026-11-16'
   run: '2026-11-16'
+- arxiv_id: '2611.21607'
+  title: 'ScaleVLA: Scaling Vision-Language-Action Models to 552 Billion Parameters'
+  decision: defer
+  reason: 材料待核验：实验正文可读，但预填开源仓库指向外部基线 Isaac-GR00T，且官方项目页未能核实，须确认本论文工件归属。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19131'
+  title: Wireless Edge-Assisted Adaptive Latent Reasoning for Vision-Language-Action Models in Physical AI
+  decision: exclude
+  reason: 增量有限：将约束强化学习用于边缘卸载与推理阈值调节，验证依赖离线策略成本测量和射线追踪信道，缺少端到端控制部署。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.20710'
+  title: 'SG-ODOM: Event-Driven Proprioceptive State Estimation with Stability-Gated Contact Updates for Legged Robots'
+  decision: exclude
+  reason: 超出范围：用规则式接触稳定门控和事件触发修正做本体里程计，未提出学习方法或面向具身学习的资源。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.21143'
+  title: 'WinDEX: Metric 3D Hand Motion Reconstruction in the Wild for Dexterous Teleoperation and Policy Learning'
+  decision: defer
+  reason: 材料待核验：预填仓库是下游重定向工具，WinDEX-Net 和 WinDEX-Hand 的独立发布与访问条件待确认。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19324'
+  title: 'MARS: Dynamic Routing of Reinforcement-Learned Atomic Skills for Multi-Stage Robotic Manipulation'
+  decision: exclude
+  reason: 增量有限：冻结通用 VLA 后训练并路由专用技能，主要分诊信号是技能选择分类指标，真机验证集中于管件搬运。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.20314'
+  title: 'NF-VLA: A Normalizing-Flow Baseline for Vision-Language-Action Learning'
+  decision: defer
+  reason: 本轮排序：保留为连续动作密度基线候选。实验限于 LIBERO 及其扰动版本，本轮优先覆盖证据更广的操作方法。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19138'
+  title: 'SuperGlance: Driving at a Glance with a Vision-Language Model'
+  decision: defer
+  reason: 材料待核验：已有驾驶评测和官方仓库线索，缓存未给出作者单位，待按原文署名及仓库发布清单补核。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19998'
+  title: 'MoViC: Real-Time Humanoid Whole-Body Control from Monocular Video Streams'
+  decision: defer
+  reason: 材料待核验：缓存的项目字段为空，但摘要列出项目入口，需要核实实时控制的发布工件和复现条件。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.20452'
+  title: 'XMimic and XSoma: Learning Humanoid Motion Tracking and Locomotion in Under a Minute'
+  decision: defer
+  reason: 材料待核验：预填仓库名为 instantTrack，待核实是否包含 XMimic 和 XSoma 本身及对应的训练计时配置。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19616'
+  title: 'Towards Probabilistically Safe Reinforcement Learning: Theory and Deployment on Humanoid and Aerial Robots'
+  decision: defer
+  reason: 材料待核验：缓存探测到通用安全强化学习仓库，仍需核实该仓库与 RSGF 实现的关系及实机约束验证协议。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19100'
+  title: Leaning Over to Reach Far-Away Objects
+  decision: exclude
+  reason: 超出范围：使用采样式模型预测控制和局部感知进行支撑伸手，未使用学习策略。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.20648'
+  title: Competent Autonomous Driving Through Fine Tuning Vision Language Action Models with Symbolic Traffic Rules
+  decision: exclude
+  reason: 增量有限：以少量编码交通规则给驾驶策略优化提供反馈，主要以 CARLA 留出样本离线评估，无法检验规则反馈在闭环驾驶中的效果。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.20244'
+  title: 'Right Goal, Wrong Body: Re-grounding Frozen VLAs under Actuation Shift'
+  decision: defer
+  reason: 材料待核验：仿真执行器偏移结果明确，官方项目入口未能访问，待核实代码及真机执行器变化证据。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.21517'
+  title: 'Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models'
+  decision: defer
+  reason: 本轮排序：学习技能效果以减少规划中的物理仿真调用，证据集中于拥挤货架取物，待复核更广泛的任务验证。
+  date: '2026-11-18'
+  run: '2026-11-17'
+- arxiv_id: '2611.19720'
+  title: Sim-to-Real Room-Mediated Object-Goal Navigation with ROS 2 and Nav2
+  decision: exclude
+  reason: 增量有限：将已有房间共现 ObjectNav 策略移植到 ROS 2 与两种底盘，贡献主要是现场部署和差距分析，未提出新的学习策略。
+  date: '2026-11-18'
+  run: '2026-11-17'

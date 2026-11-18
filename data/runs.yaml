@@ -386,3 +386,28 @@ runs:
   - tool:actioncodec2
   digest: digests/daily/2026-11-16.md
   applied: '2026-11-16'
+- scan_date: '2026-11-17'
+  kind: daily
+  window_start: '2026-11-14'
+  window_end: '2026-11-17'
+  last_covered_end: '2026-11-16'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 164
+    already_tracked_or_triaged: 0
+    out_of_scope: 12
+    below_pool_cut: 132
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 5
+  excluded: 6
+  deferred: 9
+  removed: 0
+  new_resources:
+  - benchmark:ogbench
+  - benchmark:cortexbench
+  digest: digests/daily/2026-11-17.md
+  applied: '2026-11-18'
