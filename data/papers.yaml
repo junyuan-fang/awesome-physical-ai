@@ -24196,3 +24196,386 @@ papers:
   source: arxiv
   digest: digests/daily/2026-11-18.md
   late_found: true
+- arxiv_id: '2611.21099'
+  title: 'ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models'
+  authors: Ke Sun et al.
+  affiliations:
+  - Show Lab, National University of Singapore
+  date: '2026-11-16'
+  category: manipulation
+  route: core
+  contribution: system
+  tags:
+  - force-feedback
+  - contact-rich
+  - frozen-models
+  - real-robot
+  abstract_short: ForceHarness 把接触力转成可调用的技能和物理量，作者报告冻结模型在 FR3 六项实机任务中由 2/60 次成功升至 54/60 次。
+  summary: 仅凭图像很难分辨外观相同的瓶子孰轻孰重，而等待云端模型决定下一步也赶不上插接时的接触变化。ForceHarness 让机器人在本地调节力，并在接触事件发生时结束技能。上层模型收到带不确定度的质量、刚度或插入位移，再决定是否需要重试。作者在没有腕部力传感器的
+    Franka FR3 上由关节力矩估力，每种设置测试六项任务、每项十次。同一个冻结的 GPT-6 Astra 使用该接口成功 54/60 次，移除力工具和读数后为 2/60 次。在 HiddenPhys 七项任务的相同测试种子上，作者报告该模型成功
+    135/140 次，手写专家为 136/140 次。消融显示，仅报告接触事件就有助于完成插接，而判断负载还需要可比较的物理量。真机多数任务的指令带有操作提示，HiddenPhys 也提供带噪物体位姿，结果对开放场景感知的覆盖仍有限。
+  links:
+    arxiv: https://arxiv.org/abs/2611.21099
+    code: https://github.com/showlab/ForceHarness
+    project: https://showlab.github.io/ForceHarness/
+  highlight: 🔥
+  review:
+    scores:
+      C: 4
+      E: 5
+      O: 4
+      T: 4
+    rationale:
+      C: 把快速接触控制与可供冻结模型推理的力反馈接在一起，并给出可单独评测这两部分的基准。
+      E: 有六项真机任务、两个仿真基准、同模型无力对照，以及反馈格式和决策循环消融。
+      O: MIT 仓库提供力控原语、实机后端和复现实验入口，公开了专家示范，端到端实验依赖外部模型服务。
+      T: 同一署名实验室先前发表过机器人策略 ActionMap 和人机视频转换工作 H2R-Grounder，有相关研究积累。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - code
+    reviewed: '2026-11-19'
+    reviewer: codex (agent review, human-auditable)
+    total: 85
+    priority: must-read
+  open:
+    code: substantive
+    repo: https://github.com/showlab/ForceHarness
+    weights: n/a
+    data: open
+    license: MIT
+    note: 原语本身无需训练权重；官方仓库提供 MuJoCo、ForceBench 和 FR3 的评测入口。作者数据卡列有 1,423 条 HiddenPhys 专家示范，可下载逐回合 Parquet 文件。
+    stats:
+      files: 323
+      code_files: 220
+      config_files: 32
+      last_commit: '2026-11-18'
+      readme_says_coming_soon: false
+    first_check: '2026-11-19'
+    last_check: '2026-11-19'
+  uses:
+  - resource: hiddenphys
+    role: proposes
+  - resource: hiddenphys
+    role: eval
+  - resource: hiddenphys-demos
+    role: proposes
+  - resource: forcebench
+    role: eval
+  - resource: isaac-lab
+    role: eval
+  added: '2026-11-19'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-19.md
+  late_found: true
+- arxiv_id: '2611.23143'
+  title: 'TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation'
+  authors: Haosong Peng et al.
+  affiliations:
+  - The Hong Kong University of Science and Technology
+  - Beijing Institute of Technology
+  - National University of Singapore
+  - The Hong Kong Polytechnic University
+  - Sun Yat-sen University
+  - Zhejiang University
+  date: '2026-11-17'
+  category: manipulation
+  route: core
+  contribution: model
+  tags:
+  - tcp-tracking
+  - cross-embodiment
+  - trajectory-generation
+  - real-robot
+  abstract_short: TCP4D 从单目视频恢复末端位姿并生成动作，作者报告在 RoboTwin 2.0 的 48 项任务上，同分布成功率为 69.19%，环境随机化后为 10.94%。
+  summary: 许多操作视频保留了机器人如何移动的画面，却缺少能直接用于训练的动作标签。TCP4D 以工具中心点作为不同机械臂共享的动作表示，从首帧给定的二维位置出发，联合恢复场景几何、末端六自由度位姿和夹爪开合状态。生成器沿恢复的轨迹读取局部特征，结合语言和本体观测预测下一段动作；同一条轨迹还可通过逆运动学转到另一机械臂，用于合成示范。作者在
+    DROID 和 RoboLab 上分别报告 7.60 和 16.07 毫米的绝对轨迹误差。在 RoboTwin 2.0 的 48 项任务上，每项用 50 条干净示范训练，同分布测试平均成功率为 69.19%，测试环境随机化后降至 10.94%。在
+    CoBoT Magic 上，用相同示范微调后，放笔和叠碗各测 30 次，成功率分别为 83.33% 和 73.33%，均高于 ACT 和 DP3。跨构型复用显示了视频标注的价值，场景外观变化仍是明显短板。
+  links:
+    arxiv: https://arxiv.org/abs/2611.23143
+    code: https://github.com/Livioni/TCP4D
+    project: https://livioni.github.io/TCP4D/
+  highlight: 🔥
+  review:
+    scores:
+      C: 4
+      E: 5
+      O: 5
+      T: 3
+    rationale:
+      C: 在同一四维场景表示中连接末端轨迹恢复、动作生成和跨机械臂示范合成。
+      E: 覆盖独立采集的真实视频、48 项仿真任务、跨构型训练对照和两项有同协议基线的实机试验。
+      O: 官方仓库提供训练与推理入口、两阶段权重、训练数据和评测分集，代码及模型采用 CC-BY-4.0。
+      T: 已核对论文署名和本项目交付，尚缺作者团队此前在跨构型轨迹学习上的独立成果核验。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - appendix
+    - code
+    pending_checks:
+    - 核对主要作者在跨构型轨迹跟踪或动作生成方面的既往论文与公开项目。
+    reviewed: '2026-11-19'
+    reviewer: codex (agent review, human-auditable)
+    total: 88
+    priority: must-read
+  open:
+    code: substantive
+    repo: https://github.com/Livioni/TCP4D
+    weights: open
+    data: open
+    license: CC-BY-4.0
+    note: 仓库 LICENSE 与 README 明确代码及所发权重采用 CC-BY-4.0；第三方数据沿用原许可。官方模型与数据集合列出两阶段检查点、DROID 处理集、UR5 数据及评测集。
+    stats:
+      files: 1904
+      code_files: 115
+      config_files: 17
+      last_commit: '2026-11-18'
+      readme_says_coming_soon: false
+    first_check: '2026-11-19'
+    last_check: '2026-11-19'
+  uses:
+  - resource: droid
+    role: pretrain
+  - resource: droid
+    role: eval
+  - resource: robotwin-2
+    role: pretrain
+  - resource: robotwin-2
+    role: finetune
+  - resource: robotwin-2
+    role: eval
+  - resource: curobo
+    role: eval
+  - resource: tcp4d-benchmark
+    role: proposes
+  - resource: tcp4d-benchmark
+    role: eval
+  added: '2026-11-19'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-19.md
+  late_found: true
+- arxiv_id: '2611.22584'
+  title: 'InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation'
+  authors: Chen Zhao et al.
+  affiliations:
+  - Key Laboratory of Data Engineering and Knowledge Engineering, MOE, China
+  - Renmin University of China, Beijing 100872, China
+  - Meituan, Beijing 100102, China
+  date: '2026-11-17'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - geometric-guidance
+  - flow-matching
+  - test-time-guidance
+  - real-robot
+  abstract_short: InteractVLA 让智能体指定接触位姿并检查动作轨迹，作者报告在 LIBERO-Plus 在线操作中，成功率由纯语言调用的 93.1% 升至 98.3%。
+  summary: 机器人抓取偏离目标时，上层智能体若只能重新下达语言指令，底层策略可能反复做出相同动作。InteractVLA 让智能体指定末端位置、朝向和夹爪状态，经由可微的动作到位姿映射引导流模型去噪。系统根据候选轨迹估计最合适的到达时刻，并把动作段投影回相机画面，供智能体区分目标位置错误和抓取过早，进而修改后续动作。作者报告，在
+    LIBERO-Plus 的在线实验中，语言调用基线成功率为 93.1%，加入双向几何接口后为 98.3%；另在独立练习场景中积累策略后才达到 99.4%。在 Dexmal 平台上，四项任务各用 50 条示范训练同一骨干，每种方法各测 30
+    次；倒水任务平均得分由 38.5 升至 79.2。软时间对齐和轨迹回投均有消融支持，但移植到新平台仍需相机标定、动作映射和兼容的策略权重。
+  links:
+    arxiv: https://arxiv.org/abs/2611.22584
+    code: https://github.com/LingwuPro/InteractVLA
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 5
+      O: 3
+      T: 3
+    rationale:
+      C: 让上层智能体以几何目标干预已有 VLA 的生成过程，并能依据回投轨迹诊断和局部修订动作。
+      E: 三个仿真基准、四项有匹配基线的实体任务及目标时间和反馈形式消融，分别评价成功、任务得分与调用开销。
+      O: 官方实现含 PyTorch/JAX 引导、动作反馈和平台配置；需自备上游模型及部署参数，未核实本文代码的统一许可。
+      T: 已核对作者与三个署名单位，尚未核对该合作团队此前直接相关的机器人策略成果。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    - code
+    pending_checks:
+    - 核对官方实现自有代码的许可证，以及 Dexmal 微调权重和四项真机示范的公开入口。
+    - 核查主要作者此前在动作引导或机器人策略方面的代表作。
+    reviewed: '2026-11-19'
+    reviewer: codex (agent review, human-auditable)
+    total: 76
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/LingwuPro/InteractVLA
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 作者项目页指向 LingwuPro/InteractVLA，已核对 sampling.py、反馈模块及平台配置。预填 PhysicalRSI/PhysicalRSI 的 Apache-2.0 不能用于该实现；仓库要求另备模型和标定。
+    stats:
+      files: 235
+      code_files: 210
+      config_files: 2
+      last_commit: '2026-11-02'
+      readme_says_coming_soon: false
+    first_check: '2026-11-19'
+    last_check: '2026-11-19'
+  uses:
+  - resource: libero-plus
+    role: eval
+  - resource: robodojo
+    role: eval
+  - resource: robocasa365
+    role: eval
+  added: '2026-11-19'
+  source: arxiv
+  digest: digests/daily/2026-11-19.md
+  late_found: true
+- arxiv_id: '2611.22001'
+  title: 'DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects'
+  authors: Yiming Dou et al.
+  affiliations:
+  - Amazon FAR
+  - Cornell University
+  - University of Maryland, College Park
+  - University of Pennsylvania
+  date: '2026-11-16'
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - action-conditioned
+  - world-model
+  - contact-memory
+  - policy-evaluation
+  - bimanual
+  abstract_short: DreamFAR 以接触关键帧维持双臂操作的长时预测，作者报告在三项任务、两个策略检查点上，仿真与实机平均进度的相关系数为 0.71。
+  summary: 用视频世界模型评估机器人策略时，物体一旦离开视野，预测器可能忘记它被放在哪里。DreamFAR 在短期视觉窗口之外，根据预测的接触开始或结束时刻保存关键帧。流式动力学模型读取双臂关节指令，联合预测三路画面、本体状态及接触，再将记忆用于后续预测。在公开
+    ABC 数据上重训各比较模型后，作者以 1,000 条留出轨迹的前 15 秒为条件，评测随后 60 秒的自回归预测，并单独比较接触记忆、等间隔记忆与无记忆设置。对收盘子、投瓶和叠衣三个任务，两个策略检查点分别在模型和真机上各跑 32 回合。作者报告六组平均进度的
+    Pearson 相关系数为 0.71，但模型普遍高估完成进度。该实验支持在固定 YAM 工作站上用模型初筛策略；六个比较点和单一双臂构型仍限制了排序结果的适用范围。
+  links:
+    arxiv: https://arxiv.org/abs/2611.22001
+    code: https://github.com/amazon-far/dreamfar
+  highlight: 👀
+  review:
+    scores:
+      C: 4
+      E: 5
+      O: 3
+      T: 4
+    rationale:
+      C: 以接触变化选择长期记忆，在固定推理预算下连接长时视频预测、交互式遥操作和策略评测。
+      E: 有 ABC 同划分的长时预测对照、记忆消融、三项仿真与实机配对试验，且报告了仿真对实际进度的高估。
+      O: 官方仓库提供训练配置和滚动评测实现，主模型检查点、起始场景和内部主训练数据尚不能直接下载复现。
+      T: 合作团队已有 ABC 开放机器人示范与训练栈，Amazon FAR 也发布过 DeltaWorld 世界模型权重。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - project
+    - code
+    pending_checks:
+    - 跟进 Amazon-FAR 发布页核对分词器、动力学检查点和示例起始场景。
+    reviewed: '2026-11-19'
+    reviewer: codex (agent review, human-auditable)
+    total: 79
+    priority: notable
+  open:
+    code: substantive
+    repo: https://github.com/amazon-far/dreamfar
+    weights: none
+    data: none
+    license: Apache-2.0
+    note: 原作者主页已迁至 https://amazon-far.github.io/dreamfar/，项目链接到含训练脚本与滚动评测实现的官方仓库。README 将权重与少量起始场景标为待发；公开 ABC 是对比实验的数据，主模型训练集为内部数据。
+    first_check: '2026-11-19'
+    last_check: '2026-11-19'
+  uses:
+  - resource: abc-130k
+    role: pretrain
+  - resource: abc-130k
+    role: eval
+  added: '2026-11-19'
+  source: arxiv
+  digest: digests/daily/2026-11-19.md
+  late_found: true
+- arxiv_id: '2611.22666'
+  title: 'VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models'
+  authors: Suho Yoo et al.
+  affiliations:
+  - KAIST
+  - VGG, University of Oxford
+  date: '2026-11-17'
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - speculative-decoding
+  - action-tokens
+  - inference-efficiency
+  - autoregressive
+  abstract_short: VSpark 复用被拒绝分支上的动作预测并重新逐词元核验，作者报告四种 VLA 在 LIBERO 上的平均解码加速为 1.28–2.10 倍。
+  summary: 自回归 VLA 逐个生成动作词元，即使两个词元对应的动作几乎相同，草稿猜错一个也会中断整段验证。VSpark 在训练时按草稿与目标模型的动作偏差校准噪声，用带噪执行访问到的状态收集标签，同时让草稿拟合目标模型的隐藏特征。推理时，被拒绝分支上的后续预测仍可作为下一轮候选，由目标模型在新前缀下重新验证，因此保留原有贪心输出。作者在单张
+    RTX 4090 上比较五种推测解码基线；在 LIBERO 四套任务中，相对各自的逐词元解码，四种冻结 VLA 的平均加速为 1.28–2.10 倍。在 SimplerEnv 的 WidowX 四项任务上，StarVLA-FAST 的解码加速为
+    1.95 倍，DSpark 为 1.75 倍。实验还覆盖语言与布局扰动。计时只衡量动作解码，生成出错的回合计入任务失败、未纳入效率指标，不能直接换算为真机完成任务的用时。
+  links:
+    arxiv: https://arxiv.org/abs/2611.22666
+    code: https://github.com/suho-yoo/VSpark
+    project: https://suho-yoo.github.io/VSpark/
+  highlight: 🔥
+  review:
+    scores:
+      C: 4
+      E: 4
+      O: 4
+      T: 4
+    rationale:
+      C: 将动作误差校准、隐藏特征监督和拒绝分支复用结合到草稿模型，保留目标动作序列的精确核验。
+      E: 在两类分词器、四种目标模型和扰动套件上比较五种方法并做消融，延迟测量集中于单卡仿真解码。
+      O: Apache-2.0 仓库提供采集、训练和评测入口，已发布三个草稿检查点；四种目标模型的权重覆盖尚不完整。
+      T: 作者既有 OmniKVQuant 多模态推理压缩研究，主要成员亦共同参与 OmniSmartHome 多模态智能体基准。
+    evidence_read:
+    - abstract
+    - intro
+    - method
+    - experiments
+    - appendix
+    - project
+    - code
+    pending_checks:
+    - 跟进是否公开 G0.5 草稿检查点及论文使用的带噪 rollout 样本。
+    reviewed: '2026-11-19'
+    reviewer: codex (agent review, human-auditable)
+    total: 80
+    priority: must-read
+  open:
+    code: substantive
+    repo: https://github.com/suho-yoo/VSpark
+    weights: partial
+    data: unknown
+    license: Apache-2.0
+    note: 已核对 training/train.py、评测说明及 https://huggingface.co/suhoyoo/VSpark 的文件清单。三个草稿权重分别适配 π0-FAST、ActionCodec 和 StarVLA，依各自目标模型许可；LIBERO
+      示范可获取，本文带噪样本有重采脚本。
+    stats:
+      files: 37
+      code_files: 14
+      config_files: 3
+      last_commit: '2026-11-18'
+      readme_says_coming_soon: false
+    first_check: '2026-11-19'
+    last_check: '2026-11-19'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: libero-plus
+    role: eval
+  - resource: libero-pro
+    role: eval
+  - resource: simplerenv
+    role: eval
+  added: '2026-11-19'
+  source: arxiv+hf-daily
+  digest: digests/daily/2026-11-19.md
+  late_found: true

@@ -432,3 +432,47 @@ benchmarks:
   subcategory: manipulation
   added: '2026-11-18'
   last_check: '2026-11-18'
+- id: hiddenphys
+  name: HiddenPhys
+  desc: MuJoCo 上七项隐藏物理量的操作任务，提供配对种子、专家力控对照和损坏判据。
+  links:
+    code: https://github.com/showlab/ForceHarness
+    paper: https://arxiv.org/abs/2611.21099
+  subcategory: manipulation
+  added: '2026-11-19'
+  last_check: '2026-11-19'
+- id: forcebench
+  name: ForceBench
+  desc: 基于 Isaac Lab 的接触操作基准，八项任务配有统一的成功判据。
+  links:
+    code: https://github.com/forcebench-platform/ForceBench
+    paper: https://arxiv.org/abs/2610.19604
+  subcategory: manipulation
+  added: '2026-11-19'
+  last_check: '2026-11-19'
+- id: tcp4d-benchmark
+  name: TCP4D Benchmark
+  desc: 以 DROID 留出片段和另采的 RoboLab 视频评估场景几何、工具中心点轨迹及夹爪状态。
+  links:
+    data: https://huggingface.co/datasets/HarrisonPENG/TCP4D-Benchmark
+    code: https://github.com/Livioni/TCP4D
+  subcategory: manipulation
+  added: '2026-11-19'
+  last_check: '2026-11-19'
+- id: robocasa365
+  name: RoboCasa365
+  desc: 在模拟家庭厨房中评测通用操作策略和智能体的多任务基准，提供任务定义和官方排行榜。
+  links:
+    project: https://robocasa.ai
+    evaluation: https://robocasa.ai/leaderboard
+  subcategory: manipulation
+  added: '2026-11-19'
+  last_check: '2026-11-19'
+- id: libero-pro
+  name: LIBERO-PRO
+  desc: 对 LIBERO 操作任务施加环境、语义、物体、位置及任务变化，用于评估分布偏移下的策略。
+  links:
+    code: https://github.com/Zxy-MLlab/LIBERO-PRO
+  subcategory: vla-generalization
+  added: '2026-11-19'
+  last_check: '2026-11-19'

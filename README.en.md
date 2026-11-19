@@ -9,12 +9,12 @@
 
 A curated guide to embodied intelligence, robotics foundation models, and physical AI. Find papers, inspect the evidence, and explore resources for reproduction.
 
-**348 papers** · 38 datasets · 11 simulators · 46 benchmarks · 13 tools
+**353 papers** · 40 datasets · 11 simulators · 51 benchmarks · 13 tools
 
 [Paper catalog](docs/index.md) · [Top 20](docs/rankings.md) · [Digests](digests/README.md) · [Topics](topics/README.md) · [Score guide](#scoring)
 
 > Detailed reviews, catalog descriptions, topic notes, and digests are currently in Chinese.
-> Latest completed scan: **2026-11-18** · [Read the report](digests/daily/2026-11-18.md)
+> Latest completed scan: **2026-11-19** · [Read the report](digests/daily/2026-11-19.md)
 
 ## <a id="contents"></a>Start here
 
@@ -24,26 +24,26 @@ A curated guide to embodied intelligence, robotics foundation models, and physic
 | Learn manipulation and robot policies | [Manipulation](docs/catalog/manipulation.md) → [RL / imitation learning](docs/catalog/rl-il.md) → [Demonstrations](docs/resources/datasets.md) |
 | Work on humanoids and mobile robots | [Locomotion](docs/catalog/locomotion.md) → [Navigation](docs/catalog/navigation.md) → [Benchmarks](docs/resources/benchmarks.md) |
 | Deploy on real robots | [Simulators](docs/resources/simulators.md) → [Sim-to-real](docs/catalog/sim2real.md) → [Tools](docs/resources/tools.md) |
-| Catch up on recent work | [Latest report](digests/daily/2026-11-18.md) · [Recent picks](#weekly-picks) |
+| Catch up on recent work | [Latest report](digests/daily/2026-11-19.md) · [Recent picks](#weekly-picks) |
 
 ## <a id="weekly-picks"></a>Recent picks
 
 Up to 5 priority papers added in the 7-day window ending on the latest scan. [Browse the Top 20 →](docs/rankings.md)
 
-- **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](docs/papers/2611.20481.md)** · 2026-11-16 · 77/100
-  Manipulation · Notable · Partially released
+- **[TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](docs/papers/2611.23143.md)** · 2026-11-17 · 88/100
+  Manipulation · Must-read · Code released
 
-- **[ActionCodec2: A Streaming Action Tokenizer](docs/papers/2611.15490.md)** · 2026-11-11 · 77/100
-  Vision-Language-Action (VLA) · Notable · Code released
+- **[ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models](docs/papers/2611.21099.md)** · 2026-11-16 · 85/100
+  Manipulation · Must-read · Code released
 
-- **[OnlyAct: Extracting Action Representations from Foundation Models for World Models](docs/papers/2611.14420.md)** · 2026-11-10 · 77/100
+- **[VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models](docs/papers/2611.22666.md)** · 2026-11-17 · 80/100
+  Vision-Language-Action (VLA) · Must-read · Code released
+
+- **[DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects](docs/papers/2611.22001.md)** · 2026-11-16 · 79/100
   World Models · Notable · Code released
 
-- **[Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation](docs/papers/2611.11554.md)** · 2026-11-08 · 77/100
-  Locomotion · Notable · Code released
-
-- **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](docs/papers/2611.12806.md)** · 2026-11-09 · 76/100
-  Manipulation · Notable · Code released
+- **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](docs/papers/2611.20481.md)** · 2026-11-16 · 77/100
+  Manipulation · Notable · Partially released
 
 ## Research areas
 
@@ -51,8 +51,8 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 
 | Area | Browse | Papers |
 |---|---|---:|
-| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 189 |
-| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 59 |
+| <a id="foundation-models"></a>Foundation Models for Robotics | [Vision-Language-Action (VLA)](docs/catalog/vla.md) / [World Models](docs/catalog/world-model.md) / [Other Generalist Models](docs/catalog/foundation-general.md) | 192 |
+| <a id="manipulation"></a>Manipulation | [Manipulation](docs/catalog/manipulation.md) | 61 |
 | <a id="locomotion"></a>Locomotion | [Locomotion](docs/catalog/locomotion.md) | 32 |
 | <a id="teleoperation"></a>Teleoperation | [Teleoperation](docs/catalog/teleoperation.md) | 12 |
 | <a id="sim2real"></a>Sim-to-Real | [Sim-to-Real](docs/catalog/sim2real.md) | 14 |
@@ -67,9 +67,9 @@ Choose a direction below. Each catalog page has up to 15 papers; select a title 
 
 | Resource | Purpose | Count |
 |---|---|---:|
-| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 38 |
+| <a id="datasets"></a>[Datasets](docs/resources/datasets.md) | Robot trajectories, demonstrations, scene datasets | 40 |
 | <a id="simulators"></a>[Simulators](docs/resources/simulators.md) | Isaac Sim, MuJoCo, Genesis, and friends | 11 |
-| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 46 |
+| <a id="benchmarks"></a>[Benchmarks](docs/resources/benchmarks.md) | Standardized evaluations for embodied AI | 51 |
 | <a id="tools"></a>[Tools & Libraries](docs/resources/tools.md) | Open-source frameworks for building embodied AI | 13 |
 | <a id="companies"></a>[Companies & Industry](docs/resources/companies.md) | Humanoid and embodied AI startups with valuation tracker | 19 |
 

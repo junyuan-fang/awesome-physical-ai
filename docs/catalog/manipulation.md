@@ -4,9 +4,9 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Manipulation
 
-**59 篇** · 第 **1 / 4** 页 · 每页最多 15 篇
+**61 篇** · 第 **1 / 5** 页 · 每页最多 15 篇
 
-**1** · [2](manipulation-2.md) · [3](manipulation-3.md) · [4](manipulation-4.md)
+**1** · [2](manipulation-2.md) · [3](manipulation-3.md) · [4](manipulation-4.md) · [5](manipulation-5.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
 
 **评分速查** · 每项 1–5 分，按权重合计为 100 分制，用于安排阅读顺序。
@@ -21,82 +21,82 @@
 🔥 **重点阅读**：≥80 且 E≥3 · 👀 **值得关注**：≥65 且未满足重点阅读条件。<br>
 **观察中**：<65 · **暂不评级**：证据不足，未完成评分。[完整评分细则 →](../METHODOLOGY.md)
 
-1. **[HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](../papers/2610.02089.md)**
+1. **[TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](../papers/2611.23143.md)**
+    2026-11-17 · 重点阅读 · **88/100** · 实质代码
+
+    TCP4D 从单目视频恢复末端位姿并生成动作，作者报告在 RoboTwin 2.0 的 48 项任务上，同分布成功率为 69.19%，环境随机化后为 10.94%。
+
+2. **[HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](../papers/2610.02089.md)**
     2026-10-01 · 重点阅读 · **86/100** · 实质代码
 
     发布 HumanoidToolBench：18 个人形工具使用任务（3 场景×3 执行层级×2 工具集模式）与 3.1k 条仿真/真机 G1 示教；7 个策略仿真、3 个真机评测，移动使用阶段成功率大幅下降。
 
-2. **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](../papers/2610.33852.md)**
+3. **[ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models](../papers/2611.21099.md)**
+    2026-11-16 · 重点阅读 · **85/100** · 实质代码
+
+    ForceHarness 把接触力转成可调用的技能和物理量，作者报告冻结模型在 FR3 六项实机任务中由 2/60 次成功升至 54/60 次。
+
+4. **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](../papers/2610.33852.md)**
     2026-10-24 · 重点阅读 · **83/100** · 实质代码
 
     AdaDexTrack动态调制参考、物体表示与位置目标，在未见轨迹和物体上优于固定跟踪器，并实现零样本真机迁移。
 
-3. **[RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](../papers/2609.03199.md)**
+5. **[RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](../papers/2609.03199.md)**
     2026-09-02 · 重点阅读 · **80/100** · 实质代码
 
     RoboTok 以躯干中心 3D 手轨迹学习运动嵌入，从网络视频检索演示；作者报告真机灵巧操作平均成功率比最强基线高 42.2 个百分点。
 
-4. **[Pre-training Visual Dexterity in Simulation](../papers/2608.15917.md)**
+6. **[Pre-training Visual Dexterity in Simulation](../papers/2608.15917.md)**
     2026-08-16 · 值得关注 · **78/100** · 实质代码
 
     SPD 用 VR 在 MuJoCo 中遥操作采集 75 小时双手灵巧操作数据预训练扩散 Transformer，再用 1–2 小时真机数据微调；作者报告在 5 项 56 自由度真机任务上均优于从零训练的 BC。
 
-5. **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)**
+7. **[Lift, See, Act: Hierarchical Robot Policy Pretraining with 3D Foundation Models](../papers/2611.20481.md)**
     2026-11-16 · 值得关注 · **77/100** · 部分开放
 
     LSA 用人类视频中的三维监督预训练视觉编码器，在 Franka 四项任务及两种换色设置上平均成功率为 68.3%，HRP 为 41.7%。
 
-6. **[CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](../papers/2610.29702.md)**
+8. **[CausGround: Causal Interaction Grounding for Adaptive Embodied Planning](../papers/2610.29702.md)**
     2026-10-21 · 值得关注 · **77/100** · 实质代码
 
     CausGround 提取动作前置条件与效果，作者报告 VirtualHome 平均成功率从 24.9% 提高至 53.3%。
 
-7. **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](../papers/2611.12806.md)**
+9. **[Learning Heterogeneous Tactile Representation for General Dexterous Manipulation](../papers/2611.12806.md)**
     2026-11-09 · 值得关注 · **76/100** · 实质代码
 
     LingBot-Touch统一异构触觉表示；作者报告在26项真机任务中将π0.5平均成功率从48.1%提高至69.9%。
 
-8. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
+10. **[Learning from Fleet Experience: Collective Experience Learning Across 96 Robots](../papers/2610.25736.md)**
     2026-10-19 · 值得关注 · **74/100** · 实质代码
 
     用机队部署经验替代专家纠正：FERT 从成功轨迹检索与失败相关的片段，96 台真机 5 个任务达 93.3–99.2% 成功率。
 
-9. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
+11. **[VISTA: Active Exploration for Self-Improvement in Embodied Agents](../papers/2610.35051.md)**
     2026-10-26 · 值得关注 · **72/100** · 实质代码
 
     VISTA让元智能体主动试验并修改机器人编排，在三套仿真基准上报告优于静态反思的成功率与交互效率。
 
-10. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
+12. **[SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation](../papers/2608.18701.md)**
     2026-08-19 · 值得关注 · **72/100** · 实质代码
 
     可变形物体视触觉仿真数据集与基准（4000条示范、50+资产），提出形变感知成功率DSR；作者报告12个分布内配置中均存在完成任务但超形变容限的成功回合。
 
-11. **[EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming](../papers/2611.16728.md)**
+13. **[EgoX: Egocentric Cross-Embodiment Manipulation with Embodiment Dreaming](../papers/2611.16728.md)**
     2026-11-12 · 值得关注 · **71/100** · 实质代码
 
     EgoX共享模态接口并预测未来本体潜变量，13个任务与本体组合的平均进度由0.63至0.80。
 
-12. **[FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation](../papers/2611.17142.md)**
+14. **[FORGE: Force-Aware Multi-Granularity Control for Efficient Humanoid Loco-Manipulation](../papers/2611.17142.md)**
     2026-11-12 · 值得关注 · **71/100** · 部分开放
 
     FORGE统一导航、落脚、腕姿与力条件，在G1全身操作中验证无腕力传感器接触适应。
 
-13. **[World In-Context Learning for Agentic Robot Manipulation](../papers/2611.12885.md)**
+15. **[World In-Context Learning for Agentic Robot Manipulation](../papers/2611.12885.md)**
     2026-11-09 · 值得关注 · **71/100** · 实质代码
 
     RoboScript以单示范和仿真排练更新任务记忆；作者报告RoboTwin 2.0两种设置平均成功率83.4%。
 
-14. **[RoboTryOn: Synthesizing Dexterous Robot Demonstrations from Human Videos via Virtual Try-On](../papers/2611.05163.md)**
-    2026-11-03 · 值得关注 · **71/100** · 实质代码
-
-    把人类视频转换为灵巧机器人示范；作者报告两机器人七项无目标任务遥操作示范的平均成功率由约2%升至60%。
-
-15. **[LOGIV: Graph-Verified Execution with Causal Local Repair for Long-Horizon Robot Tasks](../papers/2610.40016.md)**
-    2026-10-29 · 值得关注 · **71/100** · 实质代码
-
-    LOGIV持续检查任务依赖并局部修复，三项真实任务成功试验由12/30增至17/30。
-
 ---
 
-**第 1 页** · [第 2 页](manipulation-2.md) · [第 3 页](manipulation-3.md) · [第 4 页](manipulation-4.md)
+**第 1 页** · [第 2 页](manipulation-2.md) · [第 3 页](manipulation-3.md) · [第 4 页](manipulation-4.md) · [第 5 页](manipulation-5.md)
 [返回论文目录](../index.md)

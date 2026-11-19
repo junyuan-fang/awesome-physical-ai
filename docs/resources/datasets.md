@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [目录](../index.md) / Datasets
 
-**38 项** · Robot trajectories, demonstrations, scene datasets
+**40 项** · Robot trajectories, demonstrations, scene datasets
 
 - [Open X-Embodiment (RT-X)](#resource-open-x-embodiment)
 - [DROID](#resource-droid)
@@ -44,6 +44,8 @@
 - [DexYCB](#resource-dexycb)
 - [H2O](#resource-h2o-hand-object)
 - [SharpaDex v1.0](#resource-sharpadex-v1)
+- [HiddenPhys Expert Demonstrations](#resource-hiddenphys-demos)
+- [ABC-130K](#resource-abc-130k)
 
 ## <a id="resource-open-x-embodiment"></a>Open X-Embodiment (RT-X)
 
@@ -85,7 +87,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 规模：76k demonstrations
 标签：real-world / multi-institution
 <details>
-<summary>关联论文 1–10 / 26（提出 / 训练 / 评测）</summary>
+<summary>关联论文 1–10 / 28（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Qwen-VLA: Alibaba's Embodied Foundation Model](../papers/2605.30280.md)
 - pretrain · [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](../papers/2503.14734.md)
@@ -101,7 +103,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 11–20 / 26（提出 / 训练 / 评测）</summary>
+<summary>关联论文 11–20 / 28（提出 / 训练 / 评测）</summary>
 
 - finetune · [RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models](../papers/2607.26991.md)
 - pretrain · [Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data](../papers/2608.02580.md)
@@ -117,7 +119,7 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 </details>
 
 <details>
-<summary>关联论文 21–26 / 26（提出 / 训练 / 评测）</summary>
+<summary>关联论文 21–28 / 28（提出 / 训练 / 评测）</summary>
 
 - pretrain · [Asynchronous Robot Policies](../papers/2611.05155.md)
 - pretrain · [SLA: Scaling Spatial-Language-Action Model via Continual Pre-training](../papers/2611.08373.md)
@@ -125,6 +127,8 @@ Diverse real-world manipulation dataset from 564 scenes, 13 institutions.
 - pretrain · [Concertina: Embodying Manipulation and Cognition in One Diffusion Vision-Language Model](../papers/2611.07513.md)
 - pretrain · [OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)
 - eval · [OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)
+- pretrain · [TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](../papers/2611.23143.md)
+- eval · [TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](../papers/2611.23143.md)
 
 </details>
 
@@ -574,6 +578,31 @@ NEO-VLA处理后的约223万回合动作语料，提供Arrow动作行、相机�
 <summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
 
 - pretrain · [WiTac: Wrist-Informed Tactile Representations for Contact-Rich Manipulation](../papers/2611.21057.md)
+
+</details>
+
+## <a id="resource-hiddenphys-demos"></a>HiddenPhys Expert Demonstrations
+
+专家力控制器在七项 HiddenPhys 任务上的 1,423 条成功示范，记录动作、力信号和状态。
+
+
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- proposes · [ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models](../papers/2611.21099.md)
+
+</details>
+
+## <a id="resource-abc-130k"></a>ABC-130K
+
+约 3,500 小时、超过 13 万段的机器人遥操作示范，随 ABC 行为克隆训练与评测栈发布。
+
+[项目](https://abc.bot) [论文](https://arxiv.org/abs/2606.27375)
+<details>
+<summary>关联论文 1–2 / 2（提出 / 训练 / 评测）</summary>
+
+- pretrain · [DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects](../papers/2611.22001.md)
+- eval · [DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects](../papers/2611.22001.md)
 
 </details>
 

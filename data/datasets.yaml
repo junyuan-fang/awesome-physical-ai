@@ -369,3 +369,20 @@ datasets:
   subcategory: manipulation-demos
   added: '2026-11-18'
   last_check: '2026-11-18'
+- id: hiddenphys-demos
+  name: HiddenPhys Expert Demonstrations
+  desc: 专家力控制器在七项 HiddenPhys 任务上的 1,423 条成功示范，记录动作、力信号和状态。
+  links:
+    data: https://huggingface.co/datasets/Jack97/ForceHarness-Data
+  subcategory: sim-generated
+  added: '2026-11-19'
+  last_check: '2026-11-19'
+- id: abc-130k
+  name: ABC-130K
+  desc: 约 3,500 小时、超过 13 万段的机器人遥操作示范，随 ABC 行为克隆训练与评测栈发布。
+  links:
+    project: https://abc.bot
+    paper: https://arxiv.org/abs/2606.27375
+  subcategory: manipulation-demos
+  added: '2026-11-19'
+  last_check: '2026-11-19'

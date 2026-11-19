@@ -75,6 +75,13 @@ NVIDIA's GPU-accelerated motion planning library.
 
 [项目](https://curobo.org) [代码](https://github.com/NVlabs/curobo) 
 标签：motion-planning / gpu / nvidia
+<details>
+<summary>关联论文 1–1 / 1（提出 / 训练 / 评测）</summary>
+
+- eval · [TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](../papers/2611.23143.md)
+
+</details>
+
 ## <a id="resource-nvdiffrast"></a>nvdiffrast
 
 Modular differentiable rendering primitives from NVIDIA.

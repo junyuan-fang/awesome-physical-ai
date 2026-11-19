@@ -4,9 +4,9 @@
 
 [首页](../README.md) / [分页目录](index.md) / 一页式索引
 
-全部 348 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
+全部 353 篇的紧凑列表，便于用浏览器查找标题。详细评审在单篇页，按方向浏览请用[分页目录](index.md)。
 
-## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 99
+## <a id="cat-vla"></a>Vision-Language-Action (VLA) · 101
 
 - [OpenVLA: An Open-Source Vision-Language-Action Model](papers/2406.09246.md) · 2024-06-13 · 100/100
 - [GR00T N1: An Open Foundation Model for Generalist Humanoid Robots](papers/2503.14734.md) · 2025-03-18 · 95/100
@@ -15,6 +15,7 @@
 - [Has GPT-6-Astra Achieved Embodied Intelligence?](papers/2610.22471.md) · 2026-10-15 · 85/100
 - [Geometric Action Model for Robot Policy Learning](papers/2606.17046.md) · 2026-06-15 · 83/100
 - [World-Language-Action Model for Unified World Modeling, Language Reasoning, and Action Synthesis](papers/2606.05979.md) · 2026-06-04 · 83/100
+- [VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models](papers/2611.22666.md) · 2026-11-17 · 80/100
 - [FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](papers/2608.27384.md) · 2026-08-27 · 80/100
 - [HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](papers/2608.16837.md) · 2026-08-17 · 80/100
 - [$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](papers/2608.16885.md) · 2026-08-17 · 80/100
@@ -28,6 +29,7 @@
 - [Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models](papers/2610.31569.md) · 2026-10-22 · 77/100
 - [GeoMem-VLA: Internalizing 3D Scene Understanding into Temporal Memory for Vision-Language-Action Models](papers/2610.29866.md) · 2026-10-21 · 77/100
 - [$N_0$-VTLA: Scaling Vision-Tactile-Language-Action Model with Latent Tactile Tokens](papers/2607.23782.md) · 2026-07-26 · 77/100
+- [InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation](papers/2611.22584.md) · 2026-11-17 · 76/100
 - [GigaBrain-0.7: Scaling Embodied Foundation Models to Emergent Capabilities with a Three-System Architecture](papers/2608.15875.md) · 2026-08-16 · 75/100
 - [XPolicyLab: A Unified Standard and Open Ecosystem for Robot Policy Evaluation and Deployment](papers/2608.09892.md) · 2026-08-10 · 75/100
 - [From Foundation to Application: Improving VLA Models in Practice](papers/2607.06403.md) · 2026-07-07 · 75/100
@@ -108,7 +110,7 @@
 - [HODAgent: Towards On-Demand, Responsive Humanoids for Physical World Human Interaction](papers/2608.17584.md) · 2026-08-18
 - [Action with Visual Primitives](papers/2605.22183.md) · 2026-05-21
 
-## <a id="cat-world-model"></a>World Models · 80
+## <a id="cat-world-model"></a>World Models · 81
 
 - [Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience](papers/2610.26855.md) · 2026-10-19 · 92/100
 - [Cosmos World Foundation Model Platform for Physical AI](papers/2501.03575.md) · 2025-01-07 · 89/100
@@ -123,6 +125,7 @@
 - [RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation](papers/2607.06559.md) · 2026-07-07 · 80/100
 - [$\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation](papers/2606.13672.md) · 2026-06-11 · 80/100
 - [$\mu_0$: A Scalable 3D Interaction-Trace World Model](papers/2606.13769.md) · 2026-06-11 · 80/100
+- [DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects](papers/2611.22001.md) · 2026-11-16 · 79/100
 - [OnlyAct: Extracting Action Representations from Foundation Models for World Models](papers/2611.14420.md) · 2026-11-10 · 77/100
 - [Interactive World Simulation with Cosmos for Physical AI](papers/2611.06627.md) · 2026-11-04 · 77/100
 - [Spatial-UMI-Dream: Scaling World Action Models with Metric Geometry for UMI Manipulation](papers/2611.07229.md) · 2026-11-04 · 77/100
@@ -204,9 +207,11 @@
 - [PhysBrain 1.5: From Vision-Language Models to Physical Foundation Models](papers/2609.14973.md) · 2026-09-14 · 60/100
 - [Self-Evolving Embodied Agents via Skill-Harness Evolution](papers/2608.11350.md) · 2026-08-11 · 51/100
 
-## <a id="cat-manipulation"></a>Manipulation · 59
+## <a id="cat-manipulation"></a>Manipulation · 61
 
+- [TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](papers/2611.23143.md) · 2026-11-17 · 88/100
 - [HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md) · 2026-10-01 · 86/100
+- [ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models](papers/2611.21099.md) · 2026-11-16 · 85/100
 - [AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md) · 2026-10-24 · 83/100
 - [RoboTok: A Scalable Data Engine for Internet Demonstration Video Retrieval and Dexterous Manipulation Learning](papers/2609.03199.md) · 2026-09-02 · 80/100
 - [Pre-training Visual Dexterity in Simulation](papers/2608.15917.md) · 2026-08-16 · 78/100

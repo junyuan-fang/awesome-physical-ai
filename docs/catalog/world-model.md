@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / World Models
 
-**80 篇** · 第 **1 / 6** 页 · 每页最多 15 篇
+**81 篇** · 第 **1 / 6** 页 · 每页最多 15 篇
 
 **1** · [2](world-model-2.md) · [3](world-model-3.md) · [4](world-model-4.md) · [5](world-model-5.md) · [6](world-model-6.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -86,15 +86,15 @@
 
     从异构视频自动提取事件级 3D 交互轨迹训练轨迹世界模型 μ0，冻结后接动作专家；作者报告 UR3 真机三任务平均 91.7%，RoboCasa365 上 30.25% 高于 π0。
 
-14. **[OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)**
+14. **[DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects](../papers/2611.22001.md)**
+    2026-11-16 · 值得关注 · **79/100** · 实质代码
+
+    DreamFAR 以接触关键帧维持双臂操作的长时预测，作者报告在三项任务、两个策略检查点上，仿真与实机平均进度的相关系数为 0.71。
+
+15. **[OnlyAct: Extracting Action Representations from Foundation Models for World Models](../papers/2611.14420.md)**
     2026-11-10 · 值得关注 · **77/100** · 实质代码
 
     OnlyAct从V-JEPA 2提取去场景的动作表征，在机器人、导航、游戏和驾驶视频检查跨域控制条件。
-
-15. **[Interactive World Simulation with Cosmos for Physical AI](../papers/2611.06627.md)**
-    2026-11-04 · 值得关注 · **77/100** · 实质代码
-
-    Cosmos以因果蒸馏实现流式交互模拟；作者在单GB300、8帧分块配置报告48.1 FPS，闭环收益仍受校准设置限制。
 
 ---
 

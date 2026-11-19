@@ -36,73 +36,73 @@
 
     NVIDIA 开放的世界基础模型平台：视频数据筛选管线、因果视频 tokenizer、扩散与自回归预训练 WFM 及后训练示例，权重以宽松许可发布。
 
-7. **[Long-WAM: Scaling the Context of World-Action Models](papers/2610.10528.md)** · **88/100**
+7. **[TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation](papers/2611.23143.md)** · **88/100**
+    Manipulation · 2026-11-17 · 实质代码
+
+    TCP4D 从单目视频恢复末端位姿并生成动作，作者报告在 RoboTwin 2.0 的 48 项任务上，同分布成功率为 69.19%，环境随机化后为 10.94%。
+
+8. **[Long-WAM: Scaling the Context of World-Action Models](papers/2610.10528.md)** · **88/100**
     World Models · 2026-10-07 · 实质代码
 
     自回归视频预训练 + 因果世界-动作模型：GR-1 上 19.2 s 上下文把成功率从 63.3% 提到 78.7%，RTX 5090 每动作块 107.4 ms。
 
-8. **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](papers/2608.10860.md)** · **88/100**
+9. **[Flex-$\pi$: A Multi-Stream World-Action Model with Compute Flexibility](papers/2608.10860.md)** · **88/100**
     World Models · 2026-08-11 · 实质代码
 
     Flex-π 用冻结的 Wan VAE 同时编码 RGB 与 3D 点图，加上 DINO 语义，与动作联合去噪，单个 checkpoint 支持从纯动作到全联合生成；作者报告在真机双臂灵巧任务上比最强基线高 2–7 倍。
 
-9. **[ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation](papers/2610.25690.md)** · **86/100**
+10. **[ScaleNav: Scalable Internet Video Pretraining for Language-Conditioned Local Navigation](papers/2610.25690.md)** · **86/100**
     Navigation & Mobility · 2026-10-19 · 实质代码
 
     ScaleNav 用互联网自我中心视频做指令条件视频预训练再对齐动作；作者报告 Short-Horizon OVON 86.5%、HabitatGS-LN 94.9%，Go2 真机 83.3%。
 
-10. **[LeWAM: End-to-End World and Action Modeling with JEPAs](papers/2610.12818.md)** · **86/100**
+11. **[LeWAM: End-to-End World and Action Modeling with JEPAs](papers/2610.12818.md)** · **86/100**
     World Models · 2026-10-08 · 实质代码
 
     首个端到端 JEPA：联合潜状态预测与动作 flow matching，在 10 个仿真任务上把接触密集/长程任务的规划成功率做到 89.7%/46.2%，规划快 32.3 倍。
 
-11. **[HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md)** · **86/100**
+12. **[HumanoidToolBench: Benchmarking Humanoid Tool Use from Selection to Mobile Execution](papers/2610.02089.md)** · **86/100**
     Manipulation · 2026-10-01 · 实质代码
 
     发布 HumanoidToolBench：18 个人形工具使用任务（3 场景×3 执行层级×2 工具集模式）与 3.1k 条仿真/真机 G1 示教；7 个策略仿真、3 个真机评测，移动使用阶段成功率大幅下降。
 
-12. **[Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models](papers/2609.12641.md)** · **86/100**
+13. **[Breaking the Vision-Action Shortcut: Latent Interface Training for Generalizable Robotics Foundation Models](papers/2609.12641.md)** · **86/100**
     Vision-Language-Action (VLA) · 2026-09-11 · 实质代码
 
     提出 Latent Interface Training 两阶段训练：先学无图像的空间目标动作先验，再经位姿监督潜接口注入视觉；4 个 VLA/WAM 架构上 LIBERO-Plus 总体提升 3.87–10.70 点。
 
-13. **[OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining](papers/2609.07398.md)** · **86/100**
+14. **[OpenWAM: An Open, Modular Exploration Towards Systematic World-Action Model Pretraining](papers/2609.07398.md)** · **86/100**
     World Models · 2026-09-07 · 实质代码
 
     OpenWAM 把世界-动作模型拆成可组合模块并系统消融，用 6,369 小时数据训练 OpenWAM-α；作者报告 LIBERO 99.3%、EBench 49.4、真机 RoboDojo 24.4% 成功率。
 
-14. **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](papers/2606.04463.md)** · **86/100**
+15. **[OSCAR: Omni-Embodiment Skeleton-Conditioned World Action Model for Robotics](papers/2606.04463.md)** · **86/100**
     World Models · 2026-06-03 · 实质代码
 
     用 2D 运动学骨架渲染统一条件化多种机械臂与人手的动作条件视频世界模型 OSCAR（微调 Cosmos-Predict2.5-2B），作者报告在 RoboArena 7 个策略上虚拟评测与真机结果显著相关。
 
-15. **[RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation](papers/2410.07864.md)** · **86/100**
+16. **[RDT-1B: A Diffusion Foundation Model for Bimanual Manipulation](papers/2410.07864.md)** · **86/100**
     Vision-Language-Action (VLA) · 2024-10-10 · 实质代码
 
     1.2B 参数扩散 Transformer 双臂操作基础模型，用物理可解释的统一动作空间在多机器人数据上预训练；作者报告在 ALOHA 真机上零样本泛化与 1–5 次示范学新技能均优于 ACT、OpenVLA、Octo。
 
-16. **[Has GPT-6-Astra Achieved Embodied Intelligence?](papers/2610.22471.md)** · **85/100**
+17. **[ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models](papers/2611.21099.md)** · **85/100**
+    Manipulation · 2026-11-16 · 实质代码
+
+    ForceHarness 把接触力转成可调用的技能和物理量，作者报告冻结模型在 FR3 六项实机任务中由 2/60 次成功升至 54/60 次。
+
+18. **[Has GPT-6-Astra Achieved Embodied Intelligence?](papers/2610.22471.md)** · **85/100**
     Vision-Language-Action (VLA) · 2026-10-15 · 实质代码
 
     该报告在 12 个基准上用 ICL+扩展步数协议评测 GPT-6-Astra，并在 8 类真机平台验证；作者报告 LIBERO-Ultra-Long 98.8%、RoboDojo 81.9%，但成本与实体验证仍是瓶颈。
 
-17. **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md)** · **83/100**
+19. **[AdaDexTrack: Dynamic Modulation for Adaptive and Generalizable Dexterous Manipulation Tracking](papers/2610.33852.md)** · **83/100**
     Manipulation · 2026-10-24 · 实质代码
 
     AdaDexTrack动态调制参考、物体表示与位置目标，在未见轨迹和物体上优于固定跟踪器，并实现零样本真机迁移。
 
-18. **[Agentic World Action Models](papers/2610.30136.md)** · **83/100**
+20. **[Agentic World Action Models](papers/2610.30136.md)** · **83/100**
     World Models · 2026-10-21 · 实质代码
 
     把代码规划与视频/动作预测统一进一个 MoT 世界动作模型（AW-0）；RoboTwin 2.0 平均成功率 50.7%（clean 80.8%），真机 8 任务平均 rubric 71.1%，超过 VLA/WAM 基线。
-
-19. **[GreenWAM: A World Foundation Model for Robotics](papers/2610.18774.md)** · **83/100**
-    World Models · 2026-10-13 · 实质代码
-
-    GreenWAM 以 79 维解剖动作空间统一 20 类双臂机器人，世界模型与策略共用一套权重；作者报告 RoboTwin 2.0 平均 67.54%、人形真机 ID 95.6%。
-
-20. **[CLAP: Cross-Embodiment Video World Models are Zero-Shot Physical Simulators](papers/2608.27406.md)** · **83/100**
-    World Models · 2026-08-27 · 实质代码
-
-    CLAP 用末端位姿、语言与潜动作统一异构动作空间并以课程式训练跨具身视频世界模型，作者报告在 DROID 上接近或超过单具身 Ctrl-World，并可零样本用于多策略规划。
 

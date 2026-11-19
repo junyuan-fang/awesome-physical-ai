@@ -2533,3 +2533,93 @@ entries:
   reason: 超出范围：主要贡献是 ROS 2 模块接口与实时性工程，真机评估侧重导航栈延迟与资源占用。
   date: '2026-11-18'
   run: '2026-11-18'
+- arxiv_id: '2611.22275'
+  title: 'Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration'
+  decision: defer
+  reason: 名额限制：多机搬运是真机证据充分的核心候选。作者报告实机合计成功 92/100 次，十台 G1 扩展仅在仿真验证；官方仓库目前仅介绍方法，HH-Bench 与策略实现发布后可复核。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.23118'
+  title: 'Auditing a Learned Simulator for Legged Robots: The Robotic World Model on ANYmal D'
+  decision: defer
+  reason: 名额限制：这项复现揭示 ANYmal D 的单步预测误差会误导长时滚动评估，值得作为审计研究保留线索。本轮优先核心模型与策略；审计基于单一仿真步态，预注册的策略排序检验也未得出确定结论。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22713'
+  title: 'Body Schema Policy: Body as the Vision-Action Interface for Efficient Robot Loco-Manipulation'
+  decision: defer
+  reason: 待复核：BSP 在 SIMPLE 九项任务上用运动树引导各关节读取视觉信息，另有 G1 与 Fetch 实验。作者项目页仍标示代码待发，当前探测到的是下游全身控制依赖，复现策略及对照配置尚缺。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22231'
+  title: From Temperature-Limited to Battery-Limited Legged Locomotion
+  decision: defer
+  reason: 名额限制：以步态稳态热负荷构造奖励，在 Go2 负载 5 千克、指令速度 1 米/秒的实机耐力试验中，基线 19 分钟热停，新策略 174 分钟耗尽电池。已有公开测温数据，本轮暂缓收录这一单平台研究。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.21908'
+  title: 'From Human Videos to Bimanual Dexterous Manipulation Data: Confidence-Guided RL Refinement of Video Priors'
+  decision: defer
+  reason: 名额限制：PriDex 按物体跟踪置信度在物体和双腕先验间调整监督，三项真机任务比较了相同实机示范下有无仿真预训练，但物体与初始位置固定。未核实作者发布的生成示范或训练实现。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22880'
+  title: Learning Agent-Centric Vision-Language-Action World Models for Autonomous Driving
+  decision: defer
+  reason: 名额限制：AgentWorld 在 nuScenes 开环及 Bench2Drive 闭环检验以交通参与者为单位的状态表示，并有同骨干表示消融。作者项目页已确认 NeurIPS 录用，但代码入口尚未启用，训练配方和模型待复核。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.23070'
+  title: 'PAIR: Bringing Household Robots into the Smart Home'
+  decision: defer
+  reason: 资源待发：PAIR 为 84 个智能设备资产统一面板、API 和环境状态；端到端评测及理想执行对照能区分规划与操作失败。原文说明代码和数据将于发表时发布，目前尚缺可下载的环境及示范。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.23056'
+  title: 'RFW-S: Everyday Deformable Objects with Independent Simulation Verification'
+  decision: defer
+  reason: 资源待发：作者报告 10 万份候选资产中有 83,365 份同时通过物理与运行检查；项目页提供样例展示，完整资产和代码均标为待发布。Genesis 是所用仿真器，尚不能据此核验整套数据。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22258'
+  title: 'ALERT: Extending Humanoid Motion Trackers with a General and Lightweight Human Avoidance Pipeline'
+  decision: defer
+  reason: 名额限制：ALERT 用激光雷达人体包络与条件低秩适配为三种运动跟踪器加入避人能力，实体评测聚焦 G1 的四类动作；当前无法由引用的 Isaac Sim 仓库复核适配器与评测配置。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22797'
+  title: Zero-Shot Compositional Generalization for Embodied Manipulation
+  decision: defer
+  reason: 名额限制：用标定的正向运动学把源动作转成其他机械臂可达的监督目标，三种策略骨干在 RoboTwin 和 ManiSkill3 上均有留出组合对照。本轮优先有实机验证或已提供可复现实验包的核心方法。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22395'
+  title: 'CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation'
+  decision: defer
+  reason: 名额限制：离散步骤码使指令释义错误可定位，但 LIBERO-Para 的改写都来自十条底层指令，双步骤之间还使用脚本复位。论文另报了去除 DAgger 重叠初态后的子集结果，值得以同协议复核。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22878'
+  title: Outcome-Balanced PPO and Policy-Induced Flow Rectification for Flow-Based VLA Policies
+  decision: defer
+  reason: 名额限制：完整的平衡 PPO 与流校正方法在四个仿真基准获得提升；FR3 的 43/100 对 32/100 则来自优势归一化加失败状态重放，与完整方法的比较条件不同。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22695'
+  title: Learning Accurate End-Effector Trajectory Tracking with Inertial Feedback for a Quadruped Manipulator
+  decision: exclude
+  reason: 增量有限：在保持机身姿态与足端支撑的四足机械臂上，为残差策略增加末端 IMU。动捕对照显示两种分布内指令的跟踪误差下降，但贡献集中于固定支撑下的局部轨迹补偿。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22453'
+  title: 'VoxelSBFL: Voxel-Level Spectrum-Based Failure Prediction for Vision-Language-Action Models'
+  decision: defer
+  reason: 名额限制：VoxelSBFL 用成功与失败轨迹的体素覆盖预测后续执行结果，四种 VLA 共 96,000 条轨迹的宏平均 ROC-AUC 为 0.704。评估集中在 SimplerEnv 单一拾取任务，本轮优先核心策略。
+  date: '2026-11-19'
+  run: '2026-11-19'
+- arxiv_id: '2611.22314'
+  title: Inertial Video World Models
+  decision: defer
+  reason: 名额限制：InertialWorld 将场景网格与可随动作移动的局部记忆结合；开关抽屉评测比较四种 RT-1 策略与真实参照的成功率差距。官方仓库当前只有标题，尚缺实现与检查点供复核。
+  date: '2026-11-19'
+  run: '2026-11-19'

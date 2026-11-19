@@ -441,3 +441,33 @@ runs:
   - benchmark:univtac
   digest: digests/daily/2026-11-18.md
   applied: '2026-11-18'
+- scan_date: '2026-11-19'
+  kind: daily
+  window_start: '2026-11-16'
+  window_end: '2026-11-19'
+  last_covered_end: '2026-11-18'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 211
+    already_tracked_or_triaged: 18
+    out_of_scope: 27
+    below_pool_cut: 146
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+  included: 5
+  excluded: 1
+  deferred: 14
+  removed: 0
+  new_resources:
+  - benchmark:hiddenphys
+  - dataset:hiddenphys-demos
+  - benchmark:forcebench
+  - benchmark:tcp4d-benchmark
+  - benchmark:robocasa365
+  - dataset:abc-130k
+  - benchmark:libero-pro
+  digest: digests/daily/2026-11-19.md
+  applied: '2026-11-19'

@@ -1,0 +1,1002 @@
+run:
+  scan_date: '2026-11-19'
+  kind: daily
+  window_start: '2026-11-16'
+  window_end: '2026-11-19'
+  last_covered_end: '2026-11-18'
+  d: 1
+  cap: 5
+  stats:
+    fetched: 211
+    already_tracked_or_triaged: 18
+    out_of_scope: 27
+    below_pool_cut: 146
+    pool: 20
+  sources:
+  - arXiv API (cs.RO all; cs.CV/cs.AI/cs.LG keyword query)
+  - HuggingFace daily papers
+items:
+- arxiv_id: '2611.22275'
+  title: 'Heave-Ho: Decentralized Long-Horizon Multi-Humanoid Collaboration'
+  prefilter_score: 16.7
+  triage: defer
+  reason: 名额限制：多机搬运是真机证据充分的核心候选。作者报告实机合计成功 92/100 次，十台 G1 扩展仅在仿真验证；官方仓库目前仅介绍方法，HH-Bench 与策略实现发布后可复核。
+  category: locomotion
+  route: core
+  contribution: system
+  tags: []
+  affiliations:
+  - 'Affiliation: University of Southern California'
+  - 'Affiliation: VinMotion*Equal contribution †Corresponding author ‡Project lead Project Page'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - project
+  - code
+  pending_checks:
+  - 官方 README 预计 2026 年 12 月底发布代码，届时核查 HH-Bench 的十二项任务、训练脚本及两机策略权重。
+  open:
+    code: placeholder
+    repo: https://github.com/heaveho-humanoid/Heave-Ho
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 官方项目页有实机视频；仓库 README 公告计划于 2026 年 12 月底发布代码，尚未看到控制器实现。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.21099'
+  title: 'ForceHarness: Turning Force into Action and Physics for Frozen Frontier Models'
+  prefilter_score: 16.6
+  triage: include
+  reason: null
+  category: manipulation
+  route: core
+  contribution: system
+  tags:
+  - force-feedback
+  - contact-rich
+  - frozen-models
+  - real-robot
+  affiliations:
+  - Show Lab, National University of Singapore
+  one_liner: ForceHarness 把接触力转成可调用的技能和物理量，作者报告冻结模型在 FR3 六项实机任务中由 2/60 次成功升至 54/60 次。
+  summary: |-
+    仅凭图像很难分辨外观相同的瓶子孰轻孰重，而等待云端模型决定下一步也赶不上插接时的接触变化。ForceHarness 让机器人在本地调节力，并在接触事件发生时结束技能。上层模型收到带不确定度的质量、刚度或插入位移，再决定是否需要重试。作者在没有腕部力传感器的 Franka FR3 上由关节力矩估力，每种设置测试六项任务、每项十次。同一个冻结的 GPT-6 Astra 使用该接口成功 54/60 次，移除力工具和读数后为 2/60 次。在 HiddenPhys 七项任务的相同测试种子上，作者报告该模型成功 135/140 次，手写专家为 136/140 次。消融显示，仅报告接触事件就有助于完成插接，而判断负载还需要可比较的物理量。真机多数任务的指令带有操作提示，HiddenPhys 也提供带噪物体位姿，结果对开放场景感知的覆盖仍有限。
+  venue: ''
+  scores:
+    C: 4
+    E: 5
+    O: 4
+    T: 4
+  rationale:
+    C: 把快速接触控制与可供冻结模型推理的力反馈接在一起，并给出可单独评测这两部分的基准。
+    E: 有六项真机任务、两个仿真基准、同模型无力对照，以及反馈格式和决策循环消融。
+    O: MIT 仓库提供力控原语、实机后端和复现实验入口，公开了专家示范，端到端实验依赖外部模型服务。
+    T: 同一署名实验室先前发表过机器人策略 ActionMap 和人机视频转换工作 H2R-Grounder，有相关研究积累。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - code
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/showlab/ForceHarness
+    weights: n/a
+    data: open
+    license: MIT
+    note: 原语本身无需训练权重；官方仓库提供 MuJoCo、ForceBench 和 FR3 的评测入口。作者数据卡列有 1,423 条 HiddenPhys 专家示范，可下载逐回合 Parquet 文件。
+    last_check: '2026-11-19'
+  uses:
+  - resource: hiddenphys
+    role: proposes
+  - resource: hiddenphys
+    role: eval
+  - resource: hiddenphys-demos
+    role: proposes
+  - resource: forcebench
+    role: eval
+  - resource: isaac-lab
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: hiddenphys
+    name: HiddenPhys
+    desc: MuJoCo 上七项隐藏物理量的操作任务，提供配对种子、专家力控对照和损坏判据。
+    links:
+      code: https://github.com/showlab/ForceHarness
+      paper: https://arxiv.org/abs/2611.21099
+    subcategory: manipulation
+  - kind: dataset
+    id: hiddenphys-demos
+    name: HiddenPhys Expert Demonstrations
+    desc: 专家力控制器在七项 HiddenPhys 任务上的 1,423 条成功示范，记录动作、力信号和状态。
+    links:
+      data: https://huggingface.co/datasets/Jack97/ForceHarness-Data
+    subcategory: sim-generated
+  - kind: benchmark
+    id: forcebench
+    name: ForceBench
+    desc: 基于 Isaac Lab 的接触操作基准，八项任务配有统一的成功判据。
+    links:
+      code: https://github.com/forcebench-platform/ForceBench
+      paper: https://arxiv.org/abs/2610.19604
+    subcategory: manipulation
+- arxiv_id: '2611.23143'
+  title: 'TCP4D: A Unified Tool-Center-Point Tracking and Generation Model for Robot Manipulation'
+  prefilter_score: 15.6
+  triage: include
+  reason: null
+  category: manipulation
+  route: core
+  contribution: model
+  tags:
+  - tcp-tracking
+  - cross-embodiment
+  - trajectory-generation
+  - real-robot
+  affiliations:
+  - The Hong Kong University of Science and Technology
+  - Beijing Institute of Technology
+  - National University of Singapore
+  - The Hong Kong Polytechnic University
+  - Sun Yat-sen University
+  - Zhejiang University
+  one_liner: TCP4D 从单目视频恢复末端位姿并生成动作，作者报告在 RoboTwin 2.0 的 48 项任务上，同分布成功率为 69.19%，环境随机化后为 10.94%。
+  summary: |-
+    许多操作视频保留了机器人如何移动的画面，却缺少能直接用于训练的动作标签。TCP4D 以工具中心点作为不同机械臂共享的动作表示，从首帧给定的二维位置出发，联合恢复场景几何、末端六自由度位姿和夹爪开合状态。生成器沿恢复的轨迹读取局部特征，结合语言和本体观测预测下一段动作；同一条轨迹还可通过逆运动学转到另一机械臂，用于合成示范。作者在 DROID 和 RoboLab 上分别报告 7.60 和 16.07 毫米的绝对轨迹误差。在 RoboTwin 2.0 的 48 项任务上，每项用 50 条干净示范训练，同分布测试平均成功率为 69.19%，测试环境随机化后降至 10.94%。在 CoBoT Magic 上，用相同示范微调后，放笔和叠碗各测 30 次，成功率分别为 83.33% 和 73.33%，均高于 ACT 和 DP3。跨构型复用显示了视频标注的价值，场景外观变化仍是明显短板。
+  venue: ''
+  scores:
+    C: 4
+    E: 5
+    O: 5
+    T: 3
+  rationale:
+    C: 在同一四维场景表示中连接末端轨迹恢复、动作生成和跨机械臂示范合成。
+    E: 覆盖独立采集的真实视频、48 项仿真任务、跨构型训练对照和两项有同协议基线的实机试验。
+    O: 官方仓库提供训练与推理入口、两阶段权重、训练数据和评测分集，代码及模型采用 CC-BY-4.0。
+    T: 已核对论文署名和本项目交付，尚缺作者团队此前在跨构型轨迹学习上的独立成果核验。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - code
+  pending_checks:
+  - 核对主要作者在跨构型轨迹跟踪或动作生成方面的既往论文与公开项目。
+  open:
+    code: substantive
+    repo: https://github.com/Livioni/TCP4D
+    weights: open
+    data: open
+    license: CC-BY-4.0
+    note: 仓库 LICENSE 与 README 明确代码及所发权重采用 CC-BY-4.0；第三方数据沿用原许可。官方模型与数据集合列出两阶段检查点、DROID 处理集、UR5 数据及评测集。
+    last_check: '2026-11-19'
+  uses:
+  - resource: droid
+    role: pretrain
+  - resource: droid
+    role: eval
+  - resource: robotwin-2
+    role: pretrain
+  - resource: robotwin-2
+    role: finetune
+  - resource: robotwin-2
+    role: eval
+  - resource: curobo
+    role: eval
+  - resource: tcp4d-benchmark
+    role: proposes
+  - resource: tcp4d-benchmark
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: tcp4d-benchmark
+    name: TCP4D Benchmark
+    desc: 以 DROID 留出片段和另采的 RoboLab 视频评估场景几何、工具中心点轨迹及夹爪状态。
+    links:
+      data: https://huggingface.co/datasets/HarrisonPENG/TCP4D-Benchmark
+      code: https://github.com/Livioni/TCP4D
+    subcategory: manipulation
+- arxiv_id: '2611.23118'
+  title: 'Auditing a Learned Simulator for Legged Robots: The Robotic World Model on ANYmal D'
+  prefilter_score: 15.5
+  triage: defer
+  reason: 名额限制：这项复现揭示 ANYmal D 的单步预测误差会误导长时滚动评估，值得作为审计研究保留线索。本轮优先核心模型与策略；审计基于单一仿真步态，预注册的策略排序检验也未得出确定结论。
+  category: world-model
+  route: adjacent
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Independent Researcher'
+  - 'Affiliation: Chandigarh, India'
+  - 'Email: joyjeetsingh1@gmail.com'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/joyjeet-singh/rwm
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22713'
+  title: 'Body Schema Policy: Body as the Vision-Action Interface for Efficient Robot Loco-Manipulation'
+  prefilter_score: 15.0
+  triage: defer
+  reason: 待复核：BSP 在 SIMPLE 九项任务上用运动树引导各关节读取视觉信息，另有 G1 与 Fetch 实验。作者项目页仍标示代码待发，当前探测到的是下游全身控制依赖，复现策略及对照配置尚缺。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Mohamed bin Zayed University of Artificial Intelligence'
+  - 'Affiliation: https://www.lechen-zhang.com/BSP/'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 跟进 https://www.lechen-zhang.com/BSP/ 上 BSP 策略代码、SIMPLE 训练配置和检查点的发布。
+  open:
+    code: substantive
+    repo: https://github.com/NVlabs/GR00T-WholeBodyControl
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 预填的 GR00T-WholeBodyControl 及其许可属于外部仓库。BSP 项目页仅展示方法和结果，代码标为 coming soon。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22584'
+  title: 'InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation'
+  prefilter_score: 14.0
+  triage: include
+  reason: null
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - geometric-guidance
+  - flow-matching
+  - test-time-guidance
+  - real-robot
+  affiliations:
+  - Key Laboratory of Data Engineering and Knowledge Engineering, MOE, China
+  - Renmin University of China, Beijing 100872, China
+  - Meituan, Beijing 100102, China
+  one_liner: InteractVLA 让智能体指定接触位姿并检查动作轨迹，作者报告在 LIBERO-Plus 在线操作中，成功率由纯语言调用的 93.1% 升至 98.3%。
+  summary: |-
+    机器人抓取偏离目标时，上层智能体若只能重新下达语言指令，底层策略可能反复做出相同动作。InteractVLA 让智能体指定末端位置、朝向和夹爪状态，经由可微的动作到位姿映射引导流模型去噪。系统根据候选轨迹估计最合适的到达时刻，并把动作段投影回相机画面，供智能体区分目标位置错误和抓取过早，进而修改后续动作。作者报告，在 LIBERO-Plus 的在线实验中，语言调用基线成功率为 93.1%，加入双向几何接口后为 98.3%；另在独立练习场景中积累策略后才达到 99.4%。在 Dexmal 平台上，四项任务各用 50 条示范训练同一骨干，每种方法各测 30 次；倒水任务平均得分由 38.5 升至 79.2。软时间对齐和轨迹回投均有消融支持，但移植到新平台仍需相机标定、动作映射和兼容的策略权重。
+  venue: ''
+  scores:
+    C: 4
+    E: 5
+    O: 3
+    T: 3
+  rationale:
+    C: 让上层智能体以几何目标干预已有 VLA 的生成过程，并能依据回投轨迹诊断和局部修订动作。
+    E: 三个仿真基准、四项有匹配基线的实体任务及目标时间和反馈形式消融，分别评价成功、任务得分与调用开销。
+    O: 官方实现含 PyTorch/JAX 引导、动作反馈和平台配置；需自备上游模型及部署参数，未核实本文代码的统一许可。
+    T: 已核对作者与三个署名单位，尚未核对该合作团队此前直接相关的机器人策略成果。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 核对官方实现自有代码的许可证，以及 Dexmal 微调权重和四项真机示范的公开入口。
+  - 核查主要作者此前在动作引导或机器人策略方面的代表作。
+  open:
+    code: substantive
+    repo: https://github.com/LingwuPro/InteractVLA
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 作者项目页指向 LingwuPro/InteractVLA，已核对 sampling.py、反馈模块及平台配置。预填 PhysicalRSI/PhysicalRSI 的 Apache-2.0 不能用于该实现；仓库要求另备模型和标定。
+    last_check: '2026-11-19'
+  uses:
+  - resource: libero-plus
+    role: eval
+  - resource: robodojo
+    role: eval
+  - resource: robocasa365
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: robocasa365
+    name: RoboCasa365
+    desc: 在模拟家庭厨房中评测通用操作策略和智能体的多任务基准，提供任务定义和官方排行榜。
+    links:
+      project: https://robocasa.ai
+      evaluation: https://robocasa.ai/leaderboard
+    subcategory: manipulation
+- arxiv_id: '2611.22231'
+  title: From Temperature-Limited to Battery-Limited Legged Locomotion
+  prefilter_score: 13.0
+  triage: defer
+  reason: 名额限制：以步态稳态热负荷构造奖励，在 Go2 负载 5 千克、指令速度 1 米/秒的实机耐力试验中，基线 19 分钟热停，新策略 174 分钟耗尽电池。已有公开测温数据，本轮暂缓收录这一单平台研究。
+  category: locomotion
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - Woven by Toyota, Inc., Tokyo, Japan
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 核查是否发布与实机试验相对应的热模型拟合程序、奖励配置和策略检查点。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: open
+    license: unknown
+    note: Zenodo 记录 24274994 提供原始 Go2 热测数据压缩包及说明，论文首页只注明已投稿。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.21908'
+  title: 'From Human Videos to Bimanual Dexterous Manipulation Data: Confidence-Guided RL Refinement of Video Priors'
+  prefilter_score: 13.0
+  triage: defer
+  reason: 名额限制：PriDex 按物体跟踪置信度在物体和双腕先验间调整监督，三项真机任务比较了相同实机示范下有无仿真预训练，但物体与初始位置固定。未核实作者发布的生成示范或训练实现。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: University of California, Berkeley General Motors'
+  - 'Affiliation:'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks:
+  - 跟进 PriDex 的视频到示范转换代码、任务划分及双手示范下载入口。
+  open:
+    code: substantive
+    repo: https://github.com/isaac-sim/IsaacSim
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 论文引用的 Isaac Sim 为仿真依赖，预填仓库及许可均不代表 PriDex 自身开放。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22880'
+  title: Learning Agent-Centric Vision-Language-Action World Models for Autonomous Driving
+  prefilter_score: 13.0
+  triage: defer
+  reason: 名额限制：AgentWorld 在 nuScenes 开环及 Bench2Drive 闭环检验以交通参与者为单位的状态表示，并有同骨干表示消融。作者项目页已确认 NeurIPS 录用，但代码入口尚未启用，训练配方和模型待复核。
+  category: world-model
+  route: core
+  contribution: model
+  tags: []
+  affiliations:
+  - 'Affiliation: MoE Key Lab of Artificial Intelligence, Institute of AI'
+  - 'Affiliation: Shanghai Jiao Tong University, Shanghai, China'
+  - 'Affiliation: Project page: https://AgentWorld-AD.github.io'
+  one_liner: null
+  summary: null
+  venue: NeurIPS 2026
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 核查 https://AgentWorld-AD.github.io 启用代码入口后的 agent token 训练配置、权重及闭环评测脚本。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: 作者项目页标注 NeurIPS 2026，Code 按钮禁用；其列出的 VLA-World 是比较工作。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.23070'
+  title: 'PAIR: Bringing Household Robots into the Smart Home'
+  prefilter_score: 12.5
+  triage: defer
+  reason: 资源待发：PAIR 为 84 个智能设备资产统一面板、API 和环境状态；端到端评测及理想执行对照能区分规划与操作失败。原文说明代码和数据将于发表时发布，目前尚缺可下载的环境及示范。
+  category: manipulation
+  route: adjacent
+  contribution: benchmark
+  tags: []
+  affiliations:
+  - 'Affiliation: Graduate School of Data Science, Seoul National University'
+  - 'Affiliation: {junseongpyo, gudwls5789, johnhan00, cacu5615, saint7451, yohan.jo}@snu.ac.kr'
+  - 'Affiliation: *Corresponding author'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks:
+  - 核验作者发布的 PAIR 模拟环境、40 项任务和 340 条示范是否可下载并对应论文评测划分。
+  open:
+    code: substantive
+    repo: https://github.com/Vector-Wangel/XLeRobot
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 预填 XLeRobot 是论文引用的机器人平台；PAIR 原文明确将代码与数据列为发表时发布。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.23056'
+  title: 'RFW-S: Everyday Deformable Objects with Independent Simulation Verification'
+  prefilter_score: 11.5
+  triage: defer
+  reason: 资源待发：作者报告 10 万份候选资产中有 83,365 份同时通过物理与运行检查；项目页提供样例展示，完整资产和代码均标为待发布。Genesis 是所用仿真器，尚不能据此核验整套数据。
+  category: sim2real
+  route: adjacent
+  contribution: data
+  tags: []
+  affiliations:
+  - 'Affiliation: ['
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  - project
+  pending_checks:
+  - 核对 https://sjijs.github.io/RFW-S_website/ 后续发布的资产清单、逐实例检验记录和再分发许可。
+  open:
+    code: substantive
+    repo: https://github.com/Genesis-Embodied-AI/genesis-world
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 预填仓库为 Genesis 仿真器；作者项目页的代码与数据入口均标为 SOON。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22258'
+  title: 'ALERT: Extending Humanoid Motion Trackers with a General and Lightweight Human Avoidance Pipeline'
+  prefilter_score: 11.5
+  triage: defer
+  reason: 名额限制：ALERT 用激光雷达人体包络与条件低秩适配为三种运动跟踪器加入避人能力，实体评测聚焦 G1 的四类动作；当前无法由引用的 Isaac Sim 仓库复核适配器与评测配置。
+  category: locomotion
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Institute of Automation, Chinese Academy of Sciences'
+  - 'Affiliation: University of Chinese Academy of Sciences'
+  - 'Affiliation: Beijing Institute of Technology'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks:
+  - 跟进 ALERT 官方适配器、感知模块及三种骨干的训练配置。
+  open:
+    code: substantive
+    repo: https://github.com/isaac-sim/IsaacSim
+    weights: unknown
+    data: unknown
+    license: Apache-2.0
+    note: 自动探测命中 Isaac Sim；该仓库提供仿真环境，未提供本文的 ALERT 适配器。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22001'
+  title: 'DreamFAR: Real-Time and Long-Horizon Interaction with Diverse Objects'
+  prefilter_score: 11.5
+  triage: include
+  reason: null
+  category: world-model
+  route: core
+  contribution: model
+  tags:
+  - action-conditioned
+  - world-model
+  - contact-memory
+  - policy-evaluation
+  - bimanual
+  affiliations:
+  - Amazon FAR
+  - Cornell University
+  - University of Maryland, College Park
+  - University of Pennsylvania
+  one_liner: DreamFAR 以接触关键帧维持双臂操作的长时预测，作者报告在三项任务、两个策略检查点上，仿真与实机平均进度的相关系数为 0.71。
+  summary: |-
+    用视频世界模型评估机器人策略时，物体一旦离开视野，预测器可能忘记它被放在哪里。DreamFAR 在短期视觉窗口之外，根据预测的接触开始或结束时刻保存关键帧。流式动力学模型读取双臂关节指令，联合预测三路画面、本体状态及接触，再将记忆用于后续预测。在公开 ABC 数据上重训各比较模型后，作者以 1,000 条留出轨迹的前 15 秒为条件，评测随后 60 秒的自回归预测，并单独比较接触记忆、等间隔记忆与无记忆设置。对收盘子、投瓶和叠衣三个任务，两个策略检查点分别在模型和真机上各跑 32 回合。作者报告六组平均进度的 Pearson 相关系数为 0.71，但模型普遍高估完成进度。该实验支持在固定 YAM 工作站上用模型初筛策略；六个比较点和单一双臂构型仍限制了排序结果的适用范围。
+  venue: ''
+  scores:
+    C: 4
+    E: 5
+    O: 3
+    T: 4
+  rationale:
+    C: 以接触变化选择长期记忆，在固定推理预算下连接长时视频预测、交互式遥操作和策略评测。
+    E: 有 ABC 同划分的长时预测对照、记忆消融、三项仿真与实机配对试验，且报告了仿真对实际进度的高估。
+    O: 官方仓库提供训练配置和滚动评测实现，主模型检查点、起始场景和内部主训练数据尚不能直接下载复现。
+    T: 合作团队已有 ABC 开放机器人示范与训练栈，Amazon FAR 也发布过 DeltaWorld 世界模型权重。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - project
+  - code
+  pending_checks:
+  - 跟进 Amazon-FAR 发布页核对分词器、动力学检查点和示例起始场景。
+  open:
+    code: substantive
+    repo: https://github.com/amazon-far/dreamfar
+    weights: none
+    data: none
+    license: Apache-2.0
+    note: 原作者主页已迁至 https://amazon-far.github.io/dreamfar/，项目链接到含训练脚本与滚动评测实现的官方仓库。README 将权重与少量起始场景标为待发；公开 ABC 是对比实验的数据，主模型训练集为内部数据。
+    last_check: '2026-11-19'
+  uses:
+  - resource: abc-130k
+    role: pretrain
+  - resource: abc-130k
+    role: eval
+  new_resources:
+  - kind: dataset
+    id: abc-130k
+    name: ABC-130K
+    desc: 约 3,500 小时、超过 13 万段的机器人遥操作示范，随 ABC 行为克隆训练与评测栈发布。
+    links:
+      project: https://abc.bot
+      paper: https://arxiv.org/abs/2606.27375
+    subcategory: manipulation-demos
+- arxiv_id: '2611.22797'
+  title: Zero-Shot Compositional Generalization for Embodied Manipulation
+  prefilter_score: 11.0
+  triage: defer
+  reason: 名额限制：用标定的正向运动学把源动作转成其他机械臂可达的监督目标，三种策略骨干在 RoboTwin 和 ManiSkill3 上均有留出组合对照。本轮优先有实机验证或已提供可复现实验包的核心方法。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - Peking University
+  - D-Robotics
+  - Shenzhen Institute for Advanced Study, University of Electronic Science and Technology of China
+  - Hong Kong Embodied AI Lab, The Chinese University of Hong Kong (CUHK)
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks:
+  - 核查作者是否公开两套仿真器的机器人–技能留出清单、可达性判据和对应训练配置。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22395'
+  title: 'CoBoVLA: Decoupling Language from Action with Discrete Codes for Robust and Interpretable Robot Manipulation'
+  prefilter_score: 11.0
+  triage: defer
+  reason: 名额限制：离散步骤码使指令释义错误可定位，但 LIBERO-Para 的改写都来自十条底层指令，双步骤之间还使用脚本复位。论文另报了去除 DAgger 重叠初态后的子集结果，值得以同协议复核。
+  category: vla
+  route: core
+  contribution: model
+  tags: []
+  affiliations:
+  - 'Affiliation: University of California San Diego'
+  - 'Affiliation: Carnegie Mellon University'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks:
+  - 核查有无公开的码本、复述划分和去重初态清单，以复核语言改写对照。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22878'
+  title: Outcome-Balanced PPO and Policy-Induced Flow Rectification for Flow-Based VLA Policies
+  prefilter_score: 11.0
+  triage: defer
+  reason: 名额限制：完整的平衡 PPO 与流校正方法在四个仿真基准获得提升；FR3 的 43/100 对 32/100 则来自优势归一化加失败状态重放，与完整方法的比较条件不同。
+  category: rl-il
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Tsinghua University'
+  - 'Affiliation: The Hong Kong University of Science and Technology'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks:
+  - 核查作者是否发布四基准的 PPO 与流校正训练配置及相应检查点。
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22695'
+  title: Learning Accurate End-Effector Trajectory Tracking with Inertial Feedback for a Quadruped Manipulator
+  prefilter_score: 10.0
+  triage: exclude
+  reason: 增量有限：在保持机身姿态与足端支撑的四足机械臂上，为残差策略增加末端 IMU。动捕对照显示两种分布内指令的跟踪误差下降，但贡献集中于固定支撑下的局部轨迹补偿。
+  category: manipulation
+  route: core
+  contribution: method
+  tags: []
+  affiliations:
+  - 'Affiliation: Graduate School of Mechanical-Aerospace-Electric Convergence Engineering, Jeonbuk National University, Jeollabuk-do
+    54896, Republic of Korea.'
+  - 'Affiliation: Department of Mechanical System Engineering, Jeonbuk National University, Jeollabuk-do 54896, Republic of
+    Korea.'
+  - 'Affiliation: Advanced Transportation Machinery Research Center, Jeonbuk National University, Jeollabuk-do 54896, Republic
+    of Korea.'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  pending_checks: []
+  open:
+    code: no-repo
+    repo: ''
+    weights: unknown
+    data: unknown
+    license: unknown
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22666'
+  title: 'VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models'
+  prefilter_score: 10.0
+  triage: include
+  reason: null
+  category: vla
+  route: core
+  contribution: method
+  tags:
+  - speculative-decoding
+  - action-tokens
+  - inference-efficiency
+  - autoregressive
+  affiliations:
+  - KAIST
+  - VGG, University of Oxford
+  one_liner: VSpark 复用被拒绝分支上的动作预测并重新逐词元核验，作者报告四种 VLA 在 LIBERO 上的平均解码加速为 1.28–2.10 倍。
+  summary: |-
+    自回归 VLA 逐个生成动作词元，即使两个词元对应的动作几乎相同，草稿猜错一个也会中断整段验证。VSpark 在训练时按草稿与目标模型的动作偏差校准噪声，用带噪执行访问到的状态收集标签，同时让草稿拟合目标模型的隐藏特征。推理时，被拒绝分支上的后续预测仍可作为下一轮候选，由目标模型在新前缀下重新验证，因此保留原有贪心输出。作者在单张 RTX 4090 上比较五种推测解码基线；在 LIBERO 四套任务中，相对各自的逐词元解码，四种冻结 VLA 的平均加速为 1.28–2.10 倍。在 SimplerEnv 的 WidowX 四项任务上，StarVLA-FAST 的解码加速为 1.95 倍，DSpark 为 1.75 倍。实验还覆盖语言与布局扰动。计时只衡量动作解码，生成出错的回合计入任务失败、未纳入效率指标，不能直接换算为真机完成任务的用时。
+  venue: ''
+  scores:
+    C: 4
+    E: 4
+    O: 4
+    T: 4
+  rationale:
+    C: 将动作误差校准、隐藏特征监督和拒绝分支复用结合到草稿模型，保留目标动作序列的精确核验。
+    E: 在两类分词器、四种目标模型和扰动套件上比较五种方法并做消融，延迟测量集中于单卡仿真解码。
+    O: Apache-2.0 仓库提供采集、训练和评测入口，已发布三个草稿检查点；四种目标模型的权重覆盖尚不完整。
+    T: 作者既有 OmniKVQuant 多模态推理压缩研究，主要成员亦共同参与 OmniSmartHome 多模态智能体基准。
+  evidence_read:
+  - abstract
+  - intro
+  - method
+  - experiments
+  - appendix
+  - project
+  - code
+  pending_checks:
+  - 跟进是否公开 G0.5 草稿检查点及论文使用的带噪 rollout 样本。
+  open:
+    code: substantive
+    repo: https://github.com/suho-yoo/VSpark
+    weights: partial
+    data: unknown
+    license: Apache-2.0
+    note: 已核对 training/train.py、评测说明及 https://huggingface.co/suhoyoo/VSpark 的文件清单。三个草稿权重分别适配 π0-FAST、ActionCodec 和 StarVLA，依各自目标模型许可；LIBERO
+      示范可获取，本文带噪样本有重采脚本。
+    last_check: '2026-11-19'
+  uses:
+  - resource: libero
+    role: eval
+  - resource: libero-plus
+    role: eval
+  - resource: libero-pro
+    role: eval
+  - resource: simplerenv
+    role: eval
+  new_resources:
+  - kind: benchmark
+    id: libero-pro
+    name: LIBERO-PRO
+    desc: 对 LIBERO 操作任务施加环境、语义、物体、位置及任务变化，用于评估分布偏移下的策略。
+    links:
+      code: https://github.com/Zxy-MLlab/LIBERO-PRO
+    subcategory: vla-generalization
+- arxiv_id: '2611.22453'
+  title: 'VoxelSBFL: Voxel-Level Spectrum-Based Failure Prediction for Vision-Language-Action Models'
+  prefilter_score: 10.0
+  triage: defer
+  reason: 名额限制：VoxelSBFL 用成功与失败轨迹的体素覆盖预测后续执行结果，四种 VLA 共 96,000 条轨迹的宏平均 ROC-AUC 为 0.704。评估集中在 SimplerEnv 单一拾取任务，本轮优先核心策略。
+  category: vla
+  route: adjacent
+  contribution: method
+  tags: []
+  affiliations:
+  - Mondragon University
+  - Mondragon
+  - Guipuzcoa
+  - Spain
+  - Simula Research Laboratory
+  - Oslo
+  - Norway
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  - code
+  pending_checks: []
+  open:
+    code: substantive
+    repo: https://github.com/ArusaKanwal1225/VLA_SBFL_Coverage
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: ''
+  uses: []
+  new_resources: []
+- arxiv_id: '2611.22314'
+  title: Inertial Video World Models
+  prefilter_score: 10.0
+  triage: defer
+  reason: 名额限制：InertialWorld 将场景网格与可随动作移动的局部记忆结合；开关抽屉评测比较四种 RT-1 策略与真实参照的成功率差距。官方仓库当前只有标题，尚缺实现与检查点供复核。
+  category: world-model
+  route: core
+  contribution: model
+  tags: []
+  affiliations:
+  - 'Affiliation: Tsinghua University'
+  - 'Affiliation: City University of Hong Kong'
+  - 'Affiliation: Hong Kong Polytechnic University'
+  - 'Affiliation: The Hong Kong University of Science and Technology'
+  - 'Affiliation: University of Science and Technology of China'
+  one_liner: null
+  summary: null
+  venue: ''
+  scores:
+    C: null
+    E: null
+    O: null
+    T: null
+  rationale:
+    C: null
+    E: null
+    O: null
+    T: null
+  evidence_read:
+  - abstract
+  - method
+  - experiments
+  - code
+  pending_checks:
+  - 跟进 YuanGao-YG/InertialWorld 的模型代码、训练权重和闭环抽屉评测配置。
+  open:
+    code: placeholder
+    repo: https://github.com/YuanGao-YG/InertialWorld
+    weights: unknown
+    data: unknown
+    license: none-found
+    note: 官方仓库 README 当前仅有项目名，结合缓存仓库探测未见实现文件。
+    last_check: '2026-11-19'
+  uses: []
+  new_resources: []

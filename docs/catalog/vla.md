@@ -4,7 +4,7 @@
 
 [首页](../../README.md) / [论文目录](../index.md) / Vision-Language-Action (VLA)
 
-**99 篇** · 第 **1 / 7** 页 · 每页最多 15 篇
+**101 篇** · 第 **1 / 7** 页 · 每页最多 15 篇
 
 **1** · [2](vla-2.md) · [3](vla-3.md) · [4](vla-4.md) · [5](vla-5.md) · [6](vla-6.md) · [7](vla-7.md)
 按阅读优先级 → 总分 → 首次公开日期排序。
@@ -56,45 +56,45 @@
 
     提出世界-语言-动作模型 WLA：自回归 VLM 骨干同时预测文本子任务与经 World Expert 监督的物理动态，推理可关闭世界分支；WLA-0（2B 激活）作者报告 RoboTwin2.0 Clean 92.94%、RMBench 56.5%、单次推理 40 ms。
 
-8. **[FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](../papers/2608.27384.md)**
+8. **[VSpark: Speculative Decoding for Autoregressive Vision-Language-Action Models](../papers/2611.22666.md)**
+    2026-11-17 · 重点阅读 · **80/100** · 实质代码
+
+    VSpark 复用被拒绝分支上的动作预测并重新逐词元核验，作者报告四种 VLA 在 LIBERO 上的平均解码加速为 1.28–2.10 倍。
+
+9. **[FlashVLA: Streaming Action Decoding for Fast and Asynchronous VLA Inference](../papers/2608.27384.md)**
     2026-08-27 · 重点阅读 · **80/100** · 实质代码
 
     FlashVLA 让多个动作块以错开的噪声水平在流式缓冲区中联合去噪，每步产出一个可执行块，作者报告 LIBERO 上异步执行 2.43 倍提速且成功率升至 97.8%，真机 30 Hz 控制。
 
-9. **[HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](../papers/2608.16837.md)**
+10. **[HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL](../papers/2608.16837.md)**
     2026-08-17 · 重点阅读 · **80/100** · 实质代码
 
     HAF 将通用流匹配 VLA 改为"行走/头部→腰部→双臂"三阶段分层去噪，并在冻结骨干上做 DCT 低维噪声空间离线到在线 SAC；作者报告 7 项真机人形任务平均分 70.5%，高于最强基线 53.3%。
 
-10. **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](../papers/2608.16885.md)**
+11. **[$\tau_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation](../papers/2608.16885.md)**
     2026-08-17 · 重点阅读 · **80/100** · 实质代码
 
     τ0-VLA 用 40,115 小时真机数据训练分层机器人基础模型，高层以世界模型预测子任务结果并做束搜索；作者报告真机长程任务平均成功率 45%（π0.5 为 22.5%），测试时计算进一步提升，代码与权重已开源。
 
-11. **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](../papers/2607.27205.md)**
+12. **[TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM](../papers/2607.27205.md)**
     2026-07-29 · 重点阅读 · **80/100** · 实质代码
 
     去掉 LLM 主干、以 BERT 文本编码与双向视觉-语言交叉注意力直接映射到动作块的紧凑 VLA；作者报告 0.2B 参数在 LIBERO 平均 97.6%、RTX 4090 上 31.2 ms 与 0.9 GiB 显存，0.4B 版 RoboTwin 2.0 达 88.06%。
 
-12. **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](../papers/2607.15330.md)**
+13. **[Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories](../papers/2607.15330.md)**
     2026-07-16 · 重点阅读 · **80/100** · 实质代码
 
     小米以 10 万+小时 UMI 真实轨迹（VLM 自动标注状态转移）预训练 2.6B–10.5B VLA，再用约 1 万小时跨本体数据后训练；作者报告 RoboCasa365 成功率 57.4%（此前最佳 46.6%）。
 
-13. **[Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](../papers/2601.12993.md)**
+14. **[Being-H0.5: Scaling Human-Centric Robot Learning for Cross-Embodiment Generalization](../papers/2601.12993.md)**
     2026-01-19 · 重点阅读 · **80/100** · 实质代码
 
     以人类交互轨迹为「母语」的跨本体 VLA：3.5 万小时 UniHand-2.0 语料、30 种本体统一动作空间；作者报告 LIBERO 98.9%、RoboCasa 53.9%，单一检查点控制 5 种真机。
 
-14. **[ActionCodec2: A Streaming Action Tokenizer](../papers/2611.15490.md)**
+15. **[ActionCodec2: A Streaming Action Tokenizer](../papers/2611.15490.md)**
     2026-11-11 · 值得关注 · **77/100** · 实质代码
 
     ActionCodec2以误差反馈量化和Set-BPE逐步释放动作，减少整块解码等待并检验连续时钟控制。
-
-15. **[From Pixels to Actions - Towards Native Vision-Language-Action Policies](../papers/2611.06918.md)**
-    2026-11-04 · 值得关注 · **77/100** · 实质代码
-
-    NEO-VLA直接从像素与语言学习连续控制；作者报告LIBERO-Plus成功率89.7%，并给出跨层视觉读取消融。
 
 ---
 
